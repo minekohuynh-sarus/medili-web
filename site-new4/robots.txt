@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /gio-hang.html
+
+Sitemap: https://www.medili.vn/sitemap.xml

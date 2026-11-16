@@ -25,7 +25,7 @@ const only = process.argv[2];
     await p.route(/fonts\.gstatic\.com/, r => r.abort());
     await p.goto('http://localhost:8144/' + (url === 'index.html' ? '' : url)); await p.waitForTimeout(450); return p;
   };
-  const over = p => p.evaluate(() => { const W = document.documentElement.clientWidth; const bad = [...document.querySelectorAll('body *')].filter(e => { const r = e.getBoundingClientRect(); return r.width && r.right > W + 1 && !e.closest('.tw,.scroller,.trip,.mh-pan,.histw,.strip,.pfs') }).slice(0, 4).map(e => e.tagName + '.' + (e.className.baseVal ?? e.className)); return [document.documentElement.scrollWidth - W, bad] });
+  const over = p => p.evaluate(() => { const W = document.documentElement.clientWidth; const bad = [...document.querySelectorAll('body *')].filter(e => { const r = e.getBoundingClientRect(); return r.width && r.right > W + 1 && !e.closest('.tw,.scroller,.trip,.mh-pan,.histw,.strip,.pfs,.sh-tabs') }).slice(0, 4).map(e => e.tagName + '.' + (e.className.baseVal ?? e.className)); return [document.documentElement.scrollWidth - W, bad] });
   const links = new Set();
   for (const f of pages) {
     if (only && f !== only) continue;
@@ -40,7 +40,7 @@ const only = process.argv[2];
     }
   }
   // link nội bộ
-  const bad = [...links].filter(x => { const h = x.split(' -> ')[1]; if (/^(https?:|tel:|mailto:|#)/.test(h)) return false; const f = h.split('#')[0]; if (f === './' || f === '') return false; return !fs.existsSync(path.join(NEW, f)) && !fs.existsSync(path.join(LIVE, f)) });
+  const bad = [...links].filter(x => { const h = x.split(' -> ')[1]; if (/^(https?:|tel:|mailto:|#)/.test(h)) return false; const f = h.split('#')[0].split('?')[0]; if (f === './' || f === '') return false; return !fs.existsSync(path.join(NEW, f)) && !fs.existsSync(path.join(LIVE, f)) });
   console.log('link hỏng', bad.length, bad.slice(0, 10));
   console.log('link ngoài', [...new Set([...links].map(x => x.split(' -> ')[1]).filter(h => /^https?:/.test(h)).map(h => h.replace(/(\?|#).*/, '')))].join(' | '));
   await b.close(); srv.close();

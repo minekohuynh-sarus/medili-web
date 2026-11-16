@@ -1,0 +1,377 @@
+{
+ "medili-fine-robusta-di-linh": {
+  "name": "MeDili Fine Robusta – Di Linh",
+  "short": "Fine Robusta Di Linh",
+  "kind": "existing",
+  "species": "robusta",
+  "processing": "unknown",
+  "blend": null,
+  "price": null,
+  "tier": "premium",
+  "brews": [
+   "phin",
+   "espresso",
+   "v60",
+   "coldbrew"
+  ],
+  "profile": {
+   "intensity": 4,
+   "bitterness": 3,
+   "acidity": 2,
+   "sweetness": 3,
+   "body": 4,
+   "complexity": 3
+  }
+ },
+ "medili-fine-robusta-honey-di-linh": {
+  "name": "MeDili Fine Robusta Honey – Di Linh",
+  "short": "Robusta Honey Di Linh",
+  "kind": "existing",
+  "species": "robusta",
+  "processing": "honey",
+  "blend": null,
+  "price": null,
+  "tier": "premium",
+  "brews": [
+   "phin",
+   "espresso",
+   "v60",
+   "coldbrew"
+  ],
+  "profile": {
+   "intensity": 4,
+   "bitterness": 3,
+   "acidity": 2,
+   "sweetness": 3,
+   "body": 4,
+   "complexity": 3
+  }
+ },
+ "medili-arabica-cau-dat": {
+  "name": "MeDili Arabica – Cầu Đất",
+  "short": "Arabica Cầu Đất",
+  "kind": "existing",
+  "species": "arabica",
+  "processing": "unknown",
+  "blend": null,
+  "price": null,
+  "tier": "premium",
+  "brews": [
+   "phin",
+   "espresso",
+   "v60",
+   "coldbrew"
+  ],
+  "profile": {
+   "intensity": 3,
+   "bitterness": 2,
+   "acidity": 3,
+   "sweetness": 3,
+   "body": 3,
+   "complexity": 3
+  }
+ },
+ "medili-signature-coffee": {
+  "name": "MeDili Signature Coffee",
+  "short": "MeDili Signature",
+  "kind": "existing",
+  "species": "blend",
+  "processing": "unknown",
+  "blend": null,
+  "price": null,
+  "tier": "signature",
+  "brews": [
+   "phin",
+   "espresso",
+   "v60",
+   "coldbrew"
+  ],
+  "profile": {
+   "intensity": 4,
+   "bitterness": 3,
+   "acidity": 2,
+   "sweetness": 3,
+   "body": 4,
+   "complexity": 3
+  }
+ },
+ "medili-phin-robusta-classic": {
+  "name": "Phin Robusta Classic",
+  "short": "Robusta Classic Phin",
+  "kind": "merchant-menu",
+  "species": "robusta",
+  "processing": "unknown",
+  "blend": null,
+  "price": 280000,
+  "tier": "classic",
+  "brews": [
+   "phin"
+  ],
+  "profile": {
+   "intensity": 4,
+   "bitterness": 4,
+   "acidity": 1,
+   "sweetness": 2,
+   "body": 4,
+   "complexity": 2
+  }
+ },
+ "medili-phin-robusta-premium": {
+  "name": "Phin Robusta Premium",
+  "short": "Phin Robusta Premium",
+  "kind": "merchant-menu",
+  "species": "robusta",
+  "processing": "unknown",
+  "blend": null,
+  "price": 320000,
+  "tier": "premium",
+  "brews": [
+   "phin"
+  ],
+  "profile": {
+   "intensity": 4,
+   "bitterness": 3,
+   "acidity": 2,
+   "sweetness": 3,
+   "body": 4,
+   "complexity": 3
+  }
+ },
+ "medili-may-robusta-classic": {
+  "name": "Máy Robusta Classic",
+  "short": "Robusta Classic cho máy espresso",
+  "kind": "merchant-menu",
+  "species": "robusta",
+  "processing": "unknown",
+  "blend": null,
+  "price": 280000,
+  "tier": "classic",
+  "brews": [
+   "espresso"
+  ],
+  "profile": {
+   "intensity": 4,
+   "bitterness": 3,
+   "acidity": 1,
+   "sweetness": 2,
+   "body": 4,
+   "complexity": 2
+  }
+ },
+ "medili-may-robusta-premium": {
+  "name": "Máy Robusta Premium",
+  "short": "Robusta Premium Máy",
+  "kind": "merchant-menu",
+  "species": "robusta",
+  "processing": "unknown",
+  "blend": null,
+  "price": 320000,
+  "tier": "premium",
+  "brews": [
+   "espresso"
+  ],
+  "profile": {
+   "intensity": 4,
+   "bitterness": 3,
+   "acidity": 2,
+   "sweetness": 3,
+   "body": 4,
+   "complexity": 3
+  }
+ },
+ "medili-may-robusta-specialty": {
+  "name": "Máy Robusta Specialty",
+  "short": "Robusta Specialty Máy",
+  "kind": "merchant-menu",
+  "species": "robusta",
+  "processing": "unknown",
+  "blend": null,
+  "price": 550000,
+  "tier": "specialty",
+  "brews": [
+   "espresso"
+  ],
+  "profile": {
+   "intensity": 4,
+   "bitterness": 3,
+   "acidity": 2,
+   "sweetness": 3,
+   "body": 4,
+   "complexity": 3
+  }
+ },
+ "medili-phin-arabica-premium": {
+  "name": "Phin Arabica Premium",
+  "short": "Arabica Premium Phin",
+  "kind": "merchant-menu",
+  "species": "arabica",
+  "processing": "unknown",
+  "blend": null,
+  "price": 550000,
+  "tier": "premium",
+  "brews": [
+   "phin"
+  ],
+  "profile": {
+   "intensity": 3,
+   "bitterness": 2,
+   "acidity": 3,
+   "sweetness": 3,
+   "body": 3,
+   "complexity": 4
+  }
+ },
+ "medili-may-arabica-premium": {
+  "name": "Máy Arabica Premium",
+  "short": "Arabica Premium (Máy)",
+  "kind": "merchant-menu",
+  "species": "arabica",
+  "processing": "unknown",
+  "blend": null,
+  "price": 550000,
+  "tier": "premium",
+  "brews": [
+   "espresso"
+  ],
+  "profile": {
+   "intensity": 3,
+   "bitterness": 2,
+   "acidity": 3,
+   "sweetness": 3,
+   "body": 3,
+   "complexity": 3
+  }
+ },
+ "medili-may-blend-premium-9-1": {
+  "name": "Máy Blend Robusta - Arabica Premium 9:1",
+  "short": "Blend Máy Premium 9:1",
+  "kind": "merchant-menu",
+  "species": "blend",
+  "processing": "unknown",
+  "blend": "90% Robusta / 10% Arabica",
+  "price": 345000,
+  "tier": "premium",
+  "brews": [
+   "espresso"
+  ],
+  "profile": {
+   "intensity": 4,
+   "bitterness": 3,
+   "acidity": 2,
+   "sweetness": 3,
+   "body": 4,
+   "complexity": 3
+  }
+ },
+ "medili-may-blend-premium-8-2": {
+  "name": "Máy Blend Robusta - Arabica Premium 8:2",
+  "short": "Blend Máy Robusta–Arabica 8:2",
+  "kind": "merchant-menu",
+  "species": "blend",
+  "processing": "unknown",
+  "blend": "80% Robusta / 20% Arabica",
+  "price": 365000,
+  "tier": "premium",
+  "brews": [
+   "espresso"
+  ],
+  "profile": {
+   "intensity": 4,
+   "bitterness": 3,
+   "acidity": 2,
+   "sweetness": 3,
+   "body": 4,
+   "complexity": 3
+  }
+ },
+ "medili-may-blend-premium-7-3": {
+  "name": "Máy Blend Robusta - Arabica Premium 7:3",
+  "short": "Blend Máy Premium 7:3",
+  "kind": "merchant-menu",
+  "species": "blend",
+  "processing": "unknown",
+  "blend": "70% Robusta / 30% Arabica",
+  "price": 389000,
+  "tier": "premium",
+  "brews": [
+   "espresso"
+  ],
+  "profile": {
+   "intensity": 4,
+   "bitterness": 3,
+   "acidity": 2,
+   "sweetness": 3,
+   "body": 4,
+   "complexity": 3
+  }
+ },
+ "medili-may-blend-premium-5-5": {
+  "name": "Máy Blend Robusta - Arabica Premium 5:5",
+  "short": "Blend Máy Premium 5:5",
+  "kind": "merchant-menu",
+  "species": "blend",
+  "processing": "unknown",
+  "blend": "50% Robusta / 50% Arabica",
+  "price": 435000,
+  "tier": "premium",
+  "brews": [
+   "espresso"
+  ],
+  "profile": {
+   "intensity": 4,
+   "bitterness": 3,
+   "acidity": 2,
+   "sweetness": 3,
+   "body": 4,
+   "complexity": 3
+  }
+ },
+ "medili-arabica-natural-cau-dat": {
+  "name": "MeDili Arabica Natural – Cầu Đất",
+  "short": "Arabica Natural Cầu Đất",
+  "kind": "development",
+  "species": "arabica",
+  "processing": "natural",
+  "blend": null,
+  "price": null,
+  "tier": "premium",
+  "brews": [
+   "phin",
+   "espresso",
+   "v60",
+   "coldbrew"
+  ],
+  "profile": {
+   "intensity": 3,
+   "bitterness": 2,
+   "acidity": 3,
+   "sweetness": 4,
+   "body": 3,
+   "complexity": 4
+  }
+ },
+ "medili-arabica-washed-cau-dat": {
+  "name": "MeDili Arabica Washed – Cầu Đất",
+  "short": "Arabica Washed Cầu Đất",
+  "kind": "development",
+  "species": "arabica",
+  "processing": "washed",
+  "blend": null,
+  "price": null,
+  "tier": "premium",
+  "brews": [
+   "phin",
+   "espresso",
+   "v60",
+   "coldbrew"
+  ],
+  "profile": {
+   "intensity": 3,
+   "bitterness": 2,
+   "acidity": 3.5,
+   "sweetness": 3.5,
+   "body": 2.5,
+   "complexity": 4
+  }
+ }
+}

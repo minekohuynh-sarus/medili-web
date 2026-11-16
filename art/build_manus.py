@@ -3,7 +3,7 @@
 import os, re, json, shutil, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kit import *
-import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh
+import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh, cuahang
 
 os.makedirs(OUT, exist_ok=True)
 rd = lambda f: open(os.path.join(BASE, f), encoding='utf8').read()
@@ -86,6 +86,9 @@ NEW = {
 }
 for f, a_ in pages_b.ART.items():
     NEW[f] = pages_b.article(f, a_, CARDS)
+# Cửa hàng theo cấu trúc web medilinh.com: danh mục, 20 trang sản phẩm, giỏ hàng, tìm kiếm
+SHOP, CATALOG = cuahang.pages(P)
+NEW.update(SHOP)
 
 # ---------- trang cũ: menu, chân trang, màu ----------
 OLD = ['gia-ca-phe.html', 'vuon.html', 'trai-ca-phe.html', 'len-men-men-bia.html', 'len-men-trai-cay.html', 'rang.html',
@@ -108,6 +111,9 @@ for f in OLD:
     if f == 'mua-hang.html':
         assert s.count("col:'#2F6B4A'") == 2 and s.count("col:'#3F7F5A'") == 1
         s = s.replace("col:'#2F6B4A'", "col:'#B5832F'").replace("col:'#3F7F5A'", "col:'#C9A15B'")
+        assert s.count('</header>') == 1
+        s = s.replace('</header>', '</header>\n<p class="note" style="margin:0 0 14px">Mua lẻ từng gói? Vào <a href="cua-hang.html" '
+                      'style="color:var(--accent);font-weight:600">Cửa hàng MeDili</a>, thêm vào giỏ rồi gửi đơn. Phòng Chọn Mua giúp quán tính lượng dùng và giá sỉ.</p>', 1)
     UPD[f] = s
 
 # ---------- giá cà phê: không hiện tên nguồn cụ thể ----------
@@ -157,15 +163,16 @@ COLL = [
     ('#8A5A32', 'Premium · Robusta, Arabica', 'Blend 9:1 đến 5:5', 'Từ đậm cacao đến cân bằng, thơm, chua thanh', P['b73']['use'],
      f'Pha máy · <b>{fm(pr("b91"))}–{fm(pr("b55"))} đ/kg</b>'),
 ]
-coll = ''.join(f'<a class="box coll" href="mua-hang.html"><i class="bag" style="--c:{c}" aria-hidden="true"></i><span class="k">{k}</span><h3>{t}</h3>'
-               f'<p>{taste}.</p><p class="use">{use}</p><div class="ft">{ft}</div></a>' for c, k, t, taste, use, ft in COLL)
+COLL_HREF = ['cua-hang.html?q=classic', 'cua-hang.html?q=robusta%20premium', 'cua-hang.html?loai=arabica', 'cua-hang.html?loai=blend']
+coll = ''.join(f'<a class="box coll" href="{h}"><i class="bag" style="--c:{c}" aria-hidden="true"></i><span class="k">{k}</span><h3>{t}</h3>'
+               f'<p>{taste}.</p><p class="use">{use}</p><div class="ft">{ft}</div></a>' for h, (c, k, t, taste, use, ft) in zip(COLL_HREF, COLL))
 
 HOME_BODY = f'''{header('index.html')}
 <div class="hero"><div class="hwrap">
   <div>{logo()}<p class="eye">Chương 01 · Nhà rang cà phê chuyên nghiệp</p>
   <h1>Từ gốc Cà Sẻ.<br><em>Đến nghệ thuật rang.</em></h1>
   <p class="sub">MeDili là nhà rang cà phê ở cao nguyên Di Linh, lấy Cà Sẻ Di Linh làm gốc. Vùng trồng canh tác từ năm 2010, xưởng rang tại Thôn 11, Xã Di Linh. Cà phê rang cho gia đình, quán, nhà hàng và khách sạn.</p>
-  <div class="cta"><a class="btn main" href="mua-hang.html">Chọn cà phê</a><a class="btn" href="tim-gu.html">Tìm gu của bạn</a><a class="btn" href="horeca.html">Giải pháp HORECA</a></div>
+  <div class="cta"><a class="btn main" href="cua-hang.html">Chọn cà phê</a><a class="btn" href="tim-gu.html">Tìm gu của bạn</a><a class="btn" href="horeca.html">Giải pháp HORECA</a></div>
   <a class="tick" href="gia-ca-phe.html"><span class="k">Giá cà phê <span id="tk-d">{ddmm(dl['date'])}</span></span><span>Nhân xô Lâm Đồng <b id="tk-v">{fm(dl['vn']['lamdong'])} đ/kg</b></span><span>Robusta London <b id="tk-r">{fm(dw['world']['robusta'])} USD/tấn</b></span><i>Xem bảng giá</i></a>
   </div>
   <a class="heroimg" href="vung-trong.html"><img src="assets/p-robusta-tay.jpg" alt="Chùm Robusta chín đỏ trên tay người hái" width="1500" height="1000"></a>
@@ -176,7 +183,7 @@ HOME_BODY = f'''{header('index.html')}
  <h2 class="p-h2">Bốn hương vị. <em>Một niềm mê.</em></h2>
  <p class="lead">Bốn nhóm cà phê rang mộc trên kệ MeDili. Mỗi nhóm có bản cho phin, cho máy, và giá sỉ theo lượng dùng mỗi tháng.</p>
  <div class="g4">{coll}</div>
- <div class="box gu"><div>{icon('gu')}</div><div><p class="eye">Tìm gu cà phê của bạn</p><p>Sáu câu hỏi ngắn. Không có đáp án đúng, chỉ có ly cà phê đúng gu.</p></div><div class="cta" style="margin:0"><a class="btn main" href="tim-gu.html">Bắt đầu khám phá</a><a class="btn" href="mua-hang.html">Xem đủ 14 dòng</a></div></div>
+ <div class="box gu"><div>{icon('gu')}</div><div><p class="eye">Tìm gu cà phê của bạn</p><p>Sáu câu hỏi ngắn. Không có đáp án đúng, chỉ có ly cà phê đúng gu.</p></div><div class="cta" style="margin:0"><a class="btn main" href="tim-gu.html">Bắt đầu khám phá</a><a class="btn" href="cua-hang.html">Xem đủ 20 dòng</a></div></div>
  <p class="note">Bảng giá đề xuất, chưa gồm 8 % VAT và phí vận chuyển. MeDili xác nhận khi đặt hàng.</p>
 </section>
 
@@ -311,6 +318,10 @@ AM = os.path.join(HERE, '..', 'artifact-main')
 os.makedirs(AM, exist_ok=True)
 open(os.path.join(AM, 'index.html'), 'w', encoding='utf8').write(nguon_tong_hop(HOME))
 shutil.copy(os.path.join(HERE, '..', 'run-check', 'gia-ca-phe.json'), os.path.join(OUT, 'gia-ca-phe.json'))
+# chỉ mục cho trang Tìm kiếm, sơ đồ trang và robots cho medili.vn
+open(os.path.join(OUT, 'tim-kiem.json'), 'w', encoding='utf8').write(cuahang.search_index(OUT))
+open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf8').write(cuahang.sitemap(OUT))
+open(os.path.join(OUT, 'robots.txt'), 'w', encoding='utf8').write(cuahang.ROBOTS)
 open(os.path.join(HERE, '_new_pages.txt'), 'w').write('\n'.join(sorted(NEW)))
 tot = 0
 for f in sorted(os.listdir(OUT)):

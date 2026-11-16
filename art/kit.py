@@ -48,8 +48,9 @@ GROUPS = [
                                ('len-men-men-bia.html', 'Lên men men bia'), ('len-men-trai-cay.html', 'Lên men trái cây')]),
     ('Rang & pha', [('xuong-rang.html', 'Xưởng rang & năng lực'), ('rang.html', 'Phòng rang'), ('quay-pha.html', 'Quầy pha'),
                     ('cold-brew.html', 'Cỗ máy Cold Brew'), ('tim-gu.html', 'Tìm gu cà phê')]),
-    ('Mua & hợp tác', [('mua-hang.html', 'Phòng Chọn Mua'), ('horeca.html', 'Giải pháp HORECA'), ('nhan-xanh.html', 'Chọn nhân xanh · khách sỉ'),
-                       ('gia-ca-phe.html', 'Giá cà phê hôm nay'), ('giao-hang.html', 'Giao hàng & đổi trả')]),
+    ('Mua & hợp tác', [('cua-hang.html', 'Cửa hàng · 20 dòng cà phê'), ('mua-hang.html', 'Phòng Chọn Mua'), ('horeca.html', 'Giải pháp HORECA'),
+                       ('nhan-xanh.html', 'Chọn nhân xanh · khách sỉ'), ('gia-ca-phe.html', 'Giá cà phê hôm nay'), ('giao-hang.html', 'Giao hàng & đổi trả'),
+                       ('gio-hang.html', 'Giỏ hàng'), ('tim-kiem.html', 'Tìm kiếm')]),
     ('Kiến thức cà phê', [('journal.html', 'Tất cả bài viết'), ('chiet-xuat.html', 'Cỗ máy Chiết xuất'), ('phan-biet-ca-phe.html', 'Cỗ máy Phân biệt cà phê'), ('trai-chin.html', 'Cỗ máy Trái chín'),
                         ('vi-sinh.html', 'Cỗ máy Vi sinh'), ('tien-chat-huong.html', 'Cỗ máy Tiền chất hương'), ('banh-xe-huong.html', 'Bánh xe hương MeDili'),
                         ('journal-phin.html', 'Phin và nhịp rơi của thời gian'),
@@ -72,14 +73,20 @@ def header(current):
             f'<nav class="mh-p" aria-label="Mục chính">{prim}</nav>'
             f'<details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></summary>'
             f'<nav class="mh-pan" aria-label="Tất cả trang"><div class="mh-grid">{cols}</div></nav></details>'
-            f'<a class="mh-go" href="mua-hang.html"{_cur("mua-hang.html", current)}>Chọn mua</a></div></div>')
+            f'<a class="mh-i" href="tim-kiem.html" aria-label="Tìm kiếm"{_cur("tim-kiem.html", current)}>'
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a>'
+            f'<a class="mh-i" href="gio-hang.html" aria-label="Giỏ hàng"{_cur("gio-hang.html", current)}>'
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg>'
+            '<span class="mh-cn" hidden></span></a>'
+            f'<a class="mh-go" href="cua-hang.html"{_cur(current, current) if current == "cua-hang.html" or current.startswith("sp-") else ""}>Cửa hàng</a></div></div>')
 
 
 FOOT_EXPLORE = [('cau-chuyen.html', 'Câu chuyện MeDili'), ('doi-ngu.html', 'Đội ngũ MeDili'), ('vung-trong.html', 'Vùng trồng Di Linh'),
                 ('xuong-rang.html', 'Xưởng rang & năng lực'), ('rang.html', 'Phòng rang'), ('quay-pha.html', 'Quầy pha'),
                 ('tim-gu.html', 'Tìm gu cà phê'), ('chiet-xuat.html', 'Cỗ máy Chiết xuất'), ('cold-brew.html', 'Cỗ máy Cold Brew'),
                 ('journal.html', 'Kiến thức cà phê')]
-FOOT_YOU = [('mua-hang.html', 'Phòng Chọn Mua'), ('horeca.html', 'Giải pháp HORECA'), ('nhan-xanh.html', 'Nhân xanh cho khách sỉ'), ('gia-ca-phe.html', 'Giá cà phê hôm nay'),
+FOOT_YOU = [('cua-hang.html', 'Cửa hàng MeDili'), ('mua-hang.html', 'Phòng Chọn Mua'), ('horeca.html', 'Giải pháp HORECA'), ('nhan-xanh.html', 'Nhân xanh cho khách sỉ'),
+            ('gia-ca-phe.html', 'Giá cà phê hôm nay'),
             ('quan-medili.html', 'Quán MeDili Café'), ('lien-he.html', 'Liên hệ & bản đồ'), ('giao-hang.html', 'Giao hàng & đổi trả'),
             ('bao-mat.html', 'Chính sách bảo mật')]
 
@@ -232,9 +239,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
 .mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
 .mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.mh-i{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none}
+.mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
 @media (max-width:1260px){.mh-p{display:none}}
 @media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+@media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
 
 /* chân trang */
 .mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
@@ -435,6 +447,12 @@ document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=fa
 document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
 try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'Đã sao chép'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='Đã bôi đen, hãy sao chép'}
 setTimeout(()=>{b.textContent=o},2400)}))})();
+window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
+const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};
+const badge=()=>{const n=get().reduce((a,x)=>a+(+x.q||0),0);document.querySelectorAll('.mh-cn').forEach(e=>{e.textContent=n>99?'99+':n;e.hidden=!n})};
+const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badge()};
+const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
+badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
 '''
 
 
