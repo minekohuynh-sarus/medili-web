@@ -282,14 +282,34 @@ if(w)document.getElementById('tk-r').textContent=f(w.world.robusta)+' USD/tấn
 '''
 
 head_old = home_old[:home_old.index('<style>')]
-HOME = (head_old + '<style>' + HOME_CSS_OLD + '</style>\n<style>' + CORE_CSS + NEW_CSS + HOME_CSS + '</style>' +
-        nb(HOME_BODY) + '<script>' + COMMON_JS + HOME_JS + '</script>\n')
+HOME_HEAD = head_old + '<style>' + HOME_CSS_OLD + '</style>\n<style>' + CORE_CSS + NEW_CSS + HOME_CSS + '</style>'
+HOME_TAIL = nb(HOME_BODY) + '<script>' + COMMON_JS + HOME_JS + '</script>\n'
+HOME = HOME_HEAD + HOME_TAIL
 assert '<div class="mnav">' not in HOME
 
+# Trang chủ có hai bản:
+# - artifact-main/index.html: bản mảnh để đăng artifact; khung artifact tự thêm doctype, charset, viewport.
+# - site-new4/index.html: bản đầy đủ cho medili.vn. Phần đầu trang chép đúng khung artifact (như t5.js)
+#   để trang hiển thị y như trên artifact. Thiếu charset utf-8 thì tiếng Việt trên hosting bị lỗi phông.
+SKELETON_HEAD = ('<!doctype html><html lang="vi"><head><meta charset="utf-8">'
+                 '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
+                 '<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}'
+                 'html{scroll-padding-top:env(safe-area-inset-top,0px)}'
+                 'body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}'
+                 'img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>')
+HOME_DESC = ('MeDili là nhà rang cà phê ở cao nguyên Di Linh, lấy Cà Sẻ Di Linh làm gốc. '
+             'Cà phê rang cho gia đình, quán, nhà hàng và khách sạn.')
+HOME_FULL = (SKELETON_HEAD + f'<meta name="description" content="{esc(HOME_DESC)}">'
+             f'<meta property="og:title" content="MeDili Coffee Di Linh"><meta property="og:description" content="{esc(HOME_DESC)}">\n'
+             + HOME_HEAD + '</head><body>' + HOME_TAIL + '</body></html>\n')
+
 # ---------- ghi ra ----------
-for f, s in {**NEW, **UPD, 'index.html': HOME}.items():
+for f, s in {**NEW, **UPD, 'index.html': HOME_FULL}.items():
     s = nguon_tong_hop(s)
     open(os.path.join(OUT, f), 'w', encoding='utf8').write(s)
+AM = os.path.join(HERE, '..', 'artifact-main')
+os.makedirs(AM, exist_ok=True)
+open(os.path.join(AM, 'index.html'), 'w', encoding='utf8').write(nguon_tong_hop(HOME))
 shutil.copy(os.path.join(HERE, '..', 'run-check', 'gia-ca-phe.json'), os.path.join(OUT, 'gia-ca-phe.json'))
 open(os.path.join(HERE, '_new_pages.txt'), 'w').write('\n'.join(sorted(NEW)))
 tot = 0

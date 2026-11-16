@@ -3,3 +3,5 @@ __pycache__/
 *.bak*
 art/shots/
 *.tmp
+node_modules
+art/_new_pages.txt

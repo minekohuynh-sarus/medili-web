@@ -3,10 +3,11 @@ const {chromium} = require('playwright'), fs = require('fs'), http = require('ht
 const css = require('./fonts.js');
 const NEW = path.resolve(__dirname, '../site-new4'), LIVE = path.resolve(__dirname, '../site-live');
 const SK = p => `<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>${p}</body></html>`;
-const T = {'.html': 'text/html;charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.json': 'application/json'};
+// Như hosting medili.vn: HTML gửi đi không kèm charset, trang phải tự khai báo <meta charset="utf-8">.
+const T = {'.html': 'text/html', '.png': 'image/png', '.jpg': 'image/jpeg', '.json': 'application/json'};
 const srv = http.createServer((q, s) => {
   let f = decodeURIComponent(q.url.split('?')[0].split('#')[0]);
-  if (f === '/' || f === '/index.html') { s.writeHead(200, {'content-type': T['.html']}); return s.end(SK(fs.readFileSync(NEW + '/index.html', 'utf8'))); }
+  if (f === '/' || f === '/index.html') { const h = fs.readFileSync(NEW + '/index.html', 'utf8'); s.writeHead(200, {'content-type': T['.html']}); return s.end(/^\s*<!doctype/i.test(h) ? h : SK(h)); }
   for (const r of [NEW, LIVE]) { const p = path.join(r, f); if (fs.existsSync(p) && fs.statSync(p).isFile()) { s.writeHead(200, {'content-type': T[path.extname(p)] || 'application/octet-stream'}); return s.end(fs.readFileSync(p)); } }
   s.writeHead(404); s.end();
 }).listen(8144);
@@ -31,6 +32,8 @@ const only = process.argv[2];
     for (const [w, dark] of [[390, false], [1366, false], [360, true]]) {
       const p = await mk({viewport: {width: w, height: w < 600 ? 844 : 900}, deviceScaleFactor: 1, isMobile: w < 600, colorScheme: dark ? 'dark' : 'light'}, f);
       const o = await over(p);
+      const enc = await p.evaluate(() => [document.characterSet, document.compatMode]);
+      if (enc[0] !== 'UTF-8' || enc[1] !== 'CSS1Compat') p._e.push('bảng mã ' + enc.join(' '));
       if (o[0] > 0 || o[1].length || p._e.length) console.log('!!', f, w, dark ? 'dark' : '', JSON.stringify(o), p._e.slice(0, 4));
       if (w === 1366) (await p.evaluate(() => [...document.querySelectorAll('a[href]')].map(a => a.getAttribute('href')))).forEach(h => links.add(f + ' -> ' + h));
       await p.context().close();
