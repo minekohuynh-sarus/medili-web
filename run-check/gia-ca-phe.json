@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-14T13:37:00+07:00",
+ "updated": "2026-11-16T18:37:00+07:00",
  "days": [
   {
    "date": "2026-10-31",
@@ -282,6 +282,36 @@
      "url": "https://dantocphattrien.vietnamnet.vn/gia-ca-phe"
     }
    ]
+  },
+  {
+   "date": "2026-11-16",
+   "vn": {
+    "lamdong": 81300,
+    "daklak": 82000,
+    "gialai": 81800,
+    "daknong": 82000
+   },
+   "src": [
+    {
+     "name": "Báo Lâm Đồng",
+     "url": "https://baolamdong.vn/gia-ca-phe/tinh-lam-dong"
+    },
+    {
+     "name": "VietNamNet",
+     "url": "https://dantocphattrien.vietnamnet.vn/gia-ca-phe"
+    }
+   ],
+   "time": "18:37",
+   "world": {
+    "robusta": 3176,
+    "robustaChg": -20,
+    "robustaPct": -0.63,
+    "robustaTerm": "01/2027",
+    "arabica": 276.4,
+    "arabicaChg": 2.9,
+    "arabicaPct": 1.06,
+    "arabicaTerm": "03/2027"
+   }
   }
  ],
  "fresh": [
