@@ -1,0 +1,1215 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Phân biệt Robusta Cà Sẻ Di Linh với Robusta cao sản, Arabica, Catimor, Moka, Culi, Liberica và Excelsa: xem vườn, soi nhân, sàng, cân 100 nhân, phòng lab và nếm. Định tính, định lượng, cảm quan. Mô hình tương tác của MeDili, có nguồn."><meta property="og:title" content="Cỗ Máy Phân Biệt Cà Phê MeDili"><meta property="og:description" content="Phân biệt Robusta Cà Sẻ Di Linh với Robusta cao sản, Arabica, Catimor, Moka, Culi, Liberica và Excelsa: xem vườn, soi nhân, sàng, cân 100 nhân, phòng lab và nếm. Định tính, định lượng, cảm quan. Mô hình tương tác của MeDili, có nguồn."><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>Cỗ Máy Phân Biệt Cà Phê MeDili</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.inl{color:var(--moss);font-weight:600}
+.quiz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.q{border:0;padding:0;margin:0 0 14px;min-width:0}.q legend{padding:0;font-weight:600}
+.res{background:var(--tint);border-radius:14px;padding:16px}.res h3{font:800 2rem/1.1 var(--display);margin:2px 0 4px;color:var(--accent)}
+.res p{margin:6px 0}.rp{font-weight:600}.rp small{font-weight:400;color:var(--muted)}
+.tinyn{font-size:.78rem;color:var(--muted)}
+.gumap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gm{border-top:3px solid var(--copper);padding-top:8px}.gm h3{margin:0;font:800 1.3rem var(--display)}.gm small{color:var(--muted)}
+ol.steps{margin:0 0 8px;padding-left:20px}ol.steps li{margin-bottom:4px;font-size:.9rem}ol.steps li.on{font-weight:700;color:var(--accent)}
+.sop.tight li{grid-template-columns:36px minmax(0,1fr)}.sop.tight .n{font-size:1.5rem}
+.st.off{opacity:.45}
+@media (max-width:820px){.quiz{grid-template-columns:minmax(0,1fr)}}
+
+:root{--ground:#8FA65E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#5D7340}}
+:root[data-theme="dark"]{--ground:#5D7340}
+.mths button{min-width:52px}
+.sgn3{font:italic 600 13.5px var(--sign)!important;fill:var(--accent)!important}
+.sgn{font-size:18px}
+.calc.three{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-bottom:12px}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px}
+.calc input{font-size:.95rem}
+
+:root{--floor:#C69A62;--wall:#EFE3CD}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--floor:#6B4F31;--wall:#3A2D22}}
+:root[data-theme="dark"]{--floor:#6B4F31;--wall:#3A2D22}
+.shophead{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}.shophead>div:last-child{flex:1 1 320px;min-width:0}
+.logoP{background:#F6F0E4;border-radius:12px;padding:8px 12px;display:inline-block}.logoP img{display:block;height:auto;max-width:100%}
+.flow{list-style:none;display:flex;flex-wrap:wrap;gap:6px 24px;padding:0;margin:0;counter-reset:f;font-weight:600;font-size:.9rem;color:var(--muted)}
+.flow li{counter-increment:f}.flow li::before{content:counter(f) ". ";color:var(--accent)}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:0}
+.whob{text-align:left;padding:12px 16px;border:2px solid var(--rule);border-radius:12px;background:var(--panel);color:var(--ink);cursor:pointer;font:inherit}
+.whob b{display:block;font-size:1.02rem}.whob small{color:var(--muted)}.whob.on{border-color:var(--accent)}
+.ah{font:800 1.45rem var(--display);margin:0 0 8px}
+.ctl{min-width:0}.ctl .card{padding:14px}
+.recbox{background:var(--tint);border-radius:12px;padding:10px;margin-top:12px;display:grid;gap:6px}
+.recb{text-align:left;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:7px 10px;color:var(--ink);cursor:pointer;font:inherit}.recb b{display:block;font-size:.9rem}.recb small{color:var(--muted)}.recb.on{border-color:var(--accent)}
+.line{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule)}.line small{display:block;color:var(--muted)}
+.qty{display:flex;align-items:center;gap:6px;white-space:nowrap}.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+a.btn{text-decoration:none;display:inline-block}
+.bagn{font:italic 600 6.5px var(--sign)!important;fill:#4A2A1A!important}.bagn2{font:700 4.6px var(--body)!important;fill:#A23B24!important}
+.bag.off{opacity:.25}.bag.on polygon{stroke:var(--accent)!important;stroke-width:2.4}
+.bench{align-items:start}
+.sgn3{font:italic 600 13px var(--sign)!important;fill:var(--accent)!important}
+.tag.big rect{fill:var(--accent)}
+
+.sent{margin-top:10px;background:var(--tint);border-radius:12px;padding:12px}.sent>b{display:block;margin-bottom:4px}
+.ordertxt{white-space:pre-wrap;overflow-wrap:anywhere;font:500 .78rem/1.5 var(--mono);margin:6px 0 0;user-select:all}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}.qrs svg{display:block;width:100%;height:auto;border-radius:6px}.qrs small{display:block;text-align:center;margin-top:4px;color:var(--muted)}
+:root{--skin:#EBC9A6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--skin:#8C6A4D}}:root[data-theme="dark"]{--skin:#8C6A4D}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.ctl .card{padding:16px}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style>
+<style>
+/* Khung chung sau khi gộp Manus: menu nhóm, chân trang, màu phong thủy Thổ (nâu, vàng đất, đỏ; không xanh lá, không đen). */
+:root{--moss:#8D4E22;--good:#8D4E22;
+  --i-red:#B33A24;--i-red2:#7A2414;--i-gold:#D9B77E;--i-gold2:#B8894A;--i-coffee:#6B4226;--i-brown:#8D5A32;--i-milk:#E9D3AE;
+  --seg1:#9E3B26;--seg2:#B8894A;--seg3:#6B4226;--seg4:#D9B77E;--seg-t1:#FFF6EC;--seg-t2:#2E1C12;--cmp2:#C9A46A;
+  --cx1:#BB8526;--cx2:#7A348E;--cx3:#83470D;--cx4:#CB4D54}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--panel)}
+.mnav{display:none!important}
+
+/* menu */
+.mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
+.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p a:hover{color:var(--accent)}
+.mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-m{margin:0;font-size:inherit}
+.mh-m>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font:600 .86rem var(--body);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;white-space:nowrap;user-select:none}
+.mh-m>summary::-webkit-details-marker{display:none}
+.mh-m>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mh-m[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-m>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-pan{position:absolute;left:0;right:0;top:100%;background:var(--panel);border-bottom:1px solid var(--rule);box-shadow:0 18px 30px rgba(46,28,18,.16);max-height:calc(100vh - 60px - env(safe-area-inset-top,0px));overflow:auto;overscroll-behavior:contain}
+.mh-grid{max-width:1560px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 26px;padding-block:18px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-g{margin:0 0 6px;font:600 .72rem/1.3 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mh-c ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-c a{display:block;color:var(--ink);text-decoration:none;font:500 .95rem/1.35 var(--body);padding:6px 0;border-bottom:1px solid transparent}
+.mh-c a:hover{color:var(--accent)}
+.mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
+.mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
+.mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+
+/* chân trang */
+.mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
+.mf-in{max-width:1560px;margin:auto;padding-block:30px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:26px}
+.mf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border-bottom:1px solid var(--rule);padding-bottom:24px}
+.mf-k{flex-basis:100%;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mf-h{margin:0;font:italic 600 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sign);color:var(--ink);text-wrap:balance}
+.mf-h em{color:var(--accent)}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:22px 30px}
+.mf-brand b{display:block;font:italic 600 1.35rem/1.25 var(--sign);color:var(--accent)}
+.mf-brand span{display:block;margin-top:6px}.mf-brand small{display:block;margin-top:6px;color:var(--muted);letter-spacing:.06em}
+.mf-t{margin:0 0 6px;font:600 .72rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mf-col{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mf-col a{color:var(--ink);text-decoration:none;padding:2px 0}.mf-col a:hover{color:var(--accent);text-decoration:underline}
+.mf-col p{margin:0 0 6px}.mf-n{white-space:nowrap;user-select:all}
+.mf-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:.84rem}
+.mf-base i{font:italic 600 1rem var(--sign);color:var(--accent)}
+@media (max-width:980px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-brand{grid-column:1/-1}}
+@media (max-width:520px){.mf-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ảnh thật */
+.pf{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.pf img{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;border:1px solid var(--rule);background:var(--tint)}
+.pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.pfw img{aspect-ratio:3/1;object-fit:cover}
+.split .pf img{max-height:560px;object-fit:cover}
+@media (max-width:700px){.pfw img{aspect-ratio:2/1}}
+.pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
+.pgal{display:grid;gap:10px}
+.pgal>h2{margin:0}
+.pgal>p{margin:0;color:var(--muted);max-width:72ch}
+
+
+/* thành phần dùng chung cho trang mới */
+.wrap.art{max-width:980px}
+.k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.eye{font:600 .8rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0}
+section>h2 em,.p-h2 em{font-style:normal;color:var(--accent)}
+.p-h2{font:800 2.05rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em;text-wrap:balance}
+.p-head{display:grid;gap:4px}
+.p-head h1{margin:6px 0 0}
+.p-head .lead{font-size:1.06rem;color:var(--muted);max-width:68ch;margin:10px 0 0}
+.p-sig{font:italic 600 1.25rem var(--sign);color:var(--accent);margin:10px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+a.btn{text-decoration:none;display:inline-block}
+.btn.ghost{border-color:var(--rule)}
+.p-sec{display:grid;gap:10px}
+.p-sec>.lead{margin:0;max-width:72ch;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.facts>div{border-top:2px solid var(--accent);padding-top:8px;min-width:0}
+.facts b{display:block;font:800 2.4rem/1.05 var(--display);color:var(--accent)}
+.facts span{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.g3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.g2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.g4{grid-template-columns:minmax(0,1fr)}}
+.box{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:18px 20px;min-width:0}
+.box h3{font:800 1.45rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em}
+.box p{margin:0 0 8px}.box p:last-child{margin-bottom:0}
+.box .k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.box .ft{margin-top:10px;padding-top:10px;border-top:1px solid var(--rule);font-size:.88rem;color:var(--muted)}
+.box .ft b{color:var(--ink)}
+.box>svg.pi{width:34px;height:34px;color:var(--accent)}
+svg.pi{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+svg.pi .fi{fill:var(--accent);stroke:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font:600 .76rem var(--body);border:1px solid var(--rule);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.lnk{color:var(--accent);font-weight:600;text-decoration:none}.lnk:hover{text-decoration:underline}
+.lnks{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px}
+.quote{margin:0;font:italic 600 clamp(1.4rem,3vw,2.1rem)/1.3 var(--sign);color:var(--accent);max-width:34ch;text-wrap:balance}
+.split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:20px 30px;align-items:center}
+.split img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--rule)}
+.illw{max-width:320px;width:100%;justify-self:center}
+@media (max-width:820px){.split{grid-template-columns:minmax(0,1fr)}.illw{max-width:210px}}
+.pst{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:st}
+.pst>li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:4px 16px;align-items:start;background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 16px;min-width:0}
+.pst>li .n{grid-row:1/3;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--tint);color:var(--accent)}
+.pst>li .n svg{width:24px;height:24px}
+.pst h3{margin:0;font:700 1.05rem/1.3 var(--body)}
+.pst h3 small{font:600 .74rem var(--body);letter-spacing:.06em;color:var(--muted);margin-right:6px}
+.pst p{margin:0;font-size:.93rem}
+.pst.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pst.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.pst.three{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.pst.two{grid-template-columns:minmax(0,1fr)}}
+.trip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.trip a{display:flex;flex-direction:column;height:100%;background:var(--panel);border:1px solid var(--rule);border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none}
+.trip img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;max-width:100%}
+.trip b{font:800 1.25rem/1.15 var(--display);padding:10px 14px 0}
+.trip b small{display:block;font:600 .72rem var(--body);letter-spacing:.08em;color:var(--accent);margin-bottom:2px}
+.trip span{padding:4px 14px 14px;color:var(--muted);font-size:.88rem}
+.trip a:hover b{color:var(--accent)}
+@media (max-width:1180px){.trip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,32%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.trip li{scroll-snap-align:start}}
+@media (max-width:640px){.trip{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:minmax(0,1fr);overflow:visible}}
+.seg{display:flex;gap:2px;height:28px;margin:6px 0 4px}
+.seg i{display:flex;align-items:center;padding:0 8px;border-radius:4px;font:700 .78rem var(--mono);font-style:normal;white-space:nowrap;overflow:hidden;min-width:0}
+.seg i.s1{background:var(--seg1);color:var(--seg-t1)}.seg i.s2{background:var(--seg2);color:var(--seg-t2)}
+.seg i.s3{background:var(--seg3);color:var(--seg-t1)}.seg i.s4{background:var(--seg4);color:var(--seg-t2)}
+.areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:8px}
+.areas>div{border-top:1px solid var(--rule);padding-top:10px;min-width:0}
+.areas .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.areas b{font:700 1rem var(--body)}.areas span{display:block;color:var(--muted);font-size:.86rem}
+.areas strong{display:block;font:800 1.9rem/1.1 var(--display);margin-top:4px}
+.areas strong small{font:600 .8rem var(--body);color:var(--muted);margin-left:6px}
+@media (max-width:900px){.areas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cmp{display:grid;gap:10px;margin-top:8px}
+.cmp>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center}
+.cmp span{font-size:.88rem}.cmp span b{display:block;font-size:.95rem}
+.cmp .tr{position:relative;height:24px;margin-right:64px}
+.cmp .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0;background:var(--accent)}
+.cmp .tr i.b{background:var(--cmp2)}
+.cmp .tr em{position:absolute;top:50%;transform:translateY(-50%);font:700 .9rem var(--mono);font-style:normal;color:var(--ink);white-space:nowrap}
+@media (max-width:520px){.cmp>div{grid-template-columns:minmax(0,1fr)}}
+.loc{display:grid;gap:4px}
+.loc .ttl{display:flex;gap:10px;align-items:center}
+.loc .ttl svg{color:var(--accent)}
+.sel{user-select:all}
+.cp{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.cp strong{font:700 1.25rem var(--mono);user-select:all;overflow-wrap:anywhere}
+.note{font-size:.86rem;color:var(--muted);margin:0}
+.p-form{display:grid;gap:12px}
+.p-form .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:620px){.p-form .row2{grid-template-columns:minmax(0,1fr)}}
+.p-form label{display:grid;gap:4px;font:600 .9rem var(--body)}
+.p-form label small{font-weight:400;color:var(--muted)}
+.p-form input,.p-form select,.p-form textarea{font:500 1rem var(--body);padding:9px 11px;border:1px solid var(--rule);border-radius:10px;background:var(--bg);color:var(--ink);width:100%;min-width:0}
+.p-form textarea{resize:vertical}
+.p-form fieldset{border:0;margin:0;padding:0;min-width:0}
+.p-form legend{font:600 .9rem var(--body);padding:0;margin-bottom:6px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{display:inline-flex;flex-direction:row;align-items:center;gap:6px;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font:600 .86rem var(--body);cursor:pointer;background:var(--panel)}
+.opts input{width:auto;margin:0;accent-color:var(--accent)}
+.opts label:has(input:checked){border-color:var(--accent);background:var(--tint)}
+.msg{white-space:pre-wrap;font:500 .84rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:0;overflow-wrap:anywhere;user-select:all}
+.fstat{font:500 .86rem var(--body);color:var(--muted);min-height:1.3em;margin:0}
+.p-art{max-width:70ch;font-size:1.04rem;line-height:1.78}
+.p-art h2{font:800 1.75rem/1.2 var(--display);margin:30px 0 8px;letter-spacing:.01em}
+.p-art p{margin:0 0 14px}
+.p-art ul,.p-art ol{margin:0 0 14px;padding-left:22px}.p-art li{margin-bottom:6px}
+.p-art .rbox{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 18px;margin:18px 0}
+.p-art .rbox h3{margin:0 0 6px;font:700 1rem var(--body)}
+.p-art .rbox ol{margin:0}
+.p-art .pf,.p-art .pfs{margin:20px 0}
+.p-art blockquote{margin:22px 0;padding:0 0 0 18px;border-left:3px solid var(--accent);font:italic 600 1.3rem/1.45 var(--sign);color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font:600 .8rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.meta b{color:var(--accent)}
+.art-fig{max-width:880px}
+.art-fig svg{display:block;width:100%;height:auto;max-height:340px;background:var(--tint);border-radius:16px}
+.jcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.jcards a{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--rule);border-radius:16px;overflow:hidden;color:var(--ink);text-decoration:none;min-width:0}
+.jcards .th{background:var(--tint);display:grid;place-items:center;aspect-ratio:3/2;max-width:100%}
+.jcards .th svg{display:block;width:100%;height:100%}
+.jcards .bd{padding:12px 16px 16px;display:grid;gap:4px}
+.jcards .meta{font-size:.72rem}
+.jcards h3{margin:2px 0 0;font:800 1.35rem/1.15 var(--display);text-wrap:balance}
+.jcards p{margin:0;color:var(--muted);font-size:.9rem}
+.jcards a:hover h3{color:var(--accent)}
+@media (max-width:1000px){.jcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.jcards{grid-template-columns:minmax(0,1fr)}}
+.jfeat{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);padding:0;overflow:hidden;text-decoration:none;color:var(--ink)}
+.jfeat .th{background:var(--tint);display:grid;place-items:center;padding:14px;min-width:0}
+.jfeat .th svg{display:block;width:100%;max-width:340px;height:auto}
+.jfeat .bd{padding:20px 24px;display:grid;gap:6px;align-content:center;min-width:0}
+.jfeat h3{font:800 2.1rem/1.1 var(--display);margin:0;letter-spacing:.01em}
+.jfeat p{margin:0}.jfeat .bd>p:not(.meta){color:var(--muted);max-width:60ch}
+.jfeat:hover h3{color:var(--accent)}
+@media (max-width:760px){.jfeat{grid-template-columns:minmax(0,1fr)}.jfeat .th svg{max-width:280px}}
+.mdl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin-top:4px}
+.mdl a{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center;border-top:1px solid var(--rule);padding-top:10px;color:var(--ink);text-decoration:none;min-width:0}
+.mdl a svg.pi{width:30px;height:30px;color:var(--accent)}
+.mdl b{display:block;font:700 1rem var(--body)}.mdl small{display:block;color:var(--muted);font-size:.86rem}
+.mdl a:hover b{color:var(--accent)}
+.kser{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink)}
+.kser svg.pi{width:34px;height:34px;color:var(--accent);margin-bottom:4px}
+.kser p{color:var(--muted);font-size:.92rem}
+.kser .lnk{margin-top:auto;padding-top:6px}
+.kser:hover h3{color:var(--accent)}
+.g5k{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:1280px){.g5k{grid-template-columns:repeat(2,minmax(0,1fr))}.g5k>:first-child{grid-column:1/-1}}
+@media (max-width:560px){.g5k{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:1100px){.mdl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mdl{grid-template-columns:minmax(0,1fr)}}
+.ill .o{stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.ill text{font:600 12px var(--body);fill:var(--muted)}
+@media (max-width:620px){.p-h2{font-size:1.75rem}.facts b{font-size:2rem}}
+
+.mnote{font-size:.84rem;color:var(--muted);margin:8px 0 0;line-height:1.45}
+#scene .gl{fill:var(--panel);fill-opacity:.18}
+#scene .glt{fill:var(--panel);fill-opacity:.12}
+#scene .lcdb{fill:#2E1C12;stroke:none}
+#scene .lcd{font:700 7.6px var(--mono);fill:#F3D9A4}
+#scene .wtx{font:700 8px var(--body);fill:#3A2416}
+#scene .flowT{font-size:12.5px}
+#scene .ped{fill:#E6DCC8}#scene .ped2{fill:#CFC2A8}#scene .ped3{fill:#B7A98C}
+#scene .lcd.sm{font-size:6.5px}
+#scene .nowr{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-dasharray:4 3}
+#scene .flowL{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-dasharray:3 6;opacity:.75}
+.running #scene .flowL,#scene.running .flowL{animation:flowA .8s linear infinite}
+@keyframes flowA{to{stroke-dashoffset:-18}}
+#tok{display:none;fill:var(--accent);stroke:var(--panel);stroke-width:2}
+.running #tok{display:block}
+.lg{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.82rem;margin:2px 0 0;color:var(--muted)}
+.lg span{display:inline-flex;align-items:center;gap:6px}
+.sw2{display:inline-block;width:16px;height:0;border-top:2.5px solid;flex:none}.sw2.d{border-top-style:dashed}
+.sw3{display:inline-block;width:11px;height:11px;border-radius:3px;flex:none}
+#tip{color:var(--muted)}
+.rd{display:flex;flex-direction:column;gap:4px}
+.rd>svg.pi{width:30px;height:30px;color:var(--accent);margin-bottom:2px}
+.rd h3{font:800 1.4rem/1.15 var(--display);margin:2px 0 4px}
+.rd .ft{margin-top:auto}
+.src>h2{color:var(--ink)}.src>.lead{color:var(--muted);font-size:.95rem}
+.src ul{line-height:1.5}.src li{margin-bottom:4px}
+.src .lnks{margin-top:12px}
+.cpst{font-size:.84rem;color:var(--muted)}
+.chw{position:relative;margin-top:6px}
+.c2{display:block;width:100%;height:auto}
+.c2 text{font:500 12px var(--mono);fill:var(--muted)}
+.c2 .ttl{font:600 12.5px var(--body);fill:var(--ink)}
+.c2 .lab{font:600 12.5px var(--body);fill:var(--ink)}
+.c2 .val{font:700 12px var(--mono);fill:var(--ink);paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round}
+.flowx{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:fx;margin-top:6px}
+.flowx>div{background:var(--tint);border-radius:14px;padding:12px 14px;min-width:0;position:relative}
+.flowx b{display:block;font:800 1.15rem/1.15 var(--display);margin-bottom:4px}
+.flowx p{margin:0;font-size:.88rem}
+.flowx .k{margin-bottom:4px;color:var(--accent)}
+@media (max-width:980px){.flowx{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.flowx{grid-template-columns:minmax(0,1fr)}}
+.medili{background:var(--tint);border-radius:14px;padding:14px 16px}
+.medili h3{margin:0 0 6px;font:800 1.3rem var(--display)}
+.medili ul{margin:0;padding-left:18px}.medili li{margin-bottom:4px}
+@media (prefers-reduced-motion:reduce){.running #tok{display:none}#scene .flowL{animation:none!important}}
+
+/* Cỗ máy Phân biệt cà phê */
+:root{--k1:var(--accent);--k2:#B8862A;--k3:#7A348E;--k4:#C74B7A;--k5:#5E3A24;--k6:#D9782E;--k7:#8D5A32;--k8:#A0699A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--k2:#D9AE55;--k3:#A06BCD;--k4:#E07AA0;--k5:#C9A27A;--k6:#EE9A5A;--k7:#B5865A;--k8:#CFA0C8}}
+:root[data-theme="dark"]{--k2:#D9AE55;--k3:#A06BCD;--k4:#E07AA0;--k5:#C9A27A;--k6:#EE9A5A;--k7:#B5865A;--k8:#CFA0C8}
+#scene .soil{fill:#7A5233}#scene .soilT{fill:#8D6A45}#scene .soil2{fill:#5E3E24}
+#scene .can1{fill:#A9743F}#scene .can2{fill:#8D5A32}#scene .can3{fill:#C08A4E}
+#scene .trk{fill:#6B4226}#scene .grf{fill:#D9B77E}
+#scene .pnl{fill:#E6DCC8}#scene .pnl2{fill:#CFC2A8}#scene .pnl3{fill:#B7A98C}
+#scene .pnlF{fill:#F6EEDC;stroke:#B7A98C;stroke-width:1}
+#scene .lbx{fill:#F6EBCF}#scene .lbx2{fill:#D8C9A6}#scene .lbx3{fill:#BFAE88}
+#scene .sv1{fill:#B7A98C}#scene .sv1t{fill:#CFC2A8}#scene .sv2{fill:#A99878}#scene .sv2t{fill:#C2B089}
+#scene .plt{fill:#D8CBAE}
+#scene .bnf{fill:#B8894A}#scene .bnft{fill:#CFA05E}
+#scene .ins{fill:#E6DCC8}#scene .ins2{fill:#CFC2A8}#scene .ins3{fill:#B7A98C}
+#scene .vial{fill:#F6F0E4;fill-opacity:.55}#scene .vialT{fill:#F6F0E4;fill-opacity:.4}
+#scene .lampOn{fill:#E3B341}#scene .lampOff{fill:#8D7A63}
+#scene .cup{fill:#FFF6EC}#scene .cupT{fill:#6B4226}
+#scene .cab{fill:#E6DCC8}#scene .cab2{fill:#CFC2A8}#scene .cab3{fill:#B7A98C}
+#scene .belt{fill:#8D7A63}#scene .belt2{fill:#6F5E4A}#scene .beltT{fill:#A8957A}
+#scene .qm{font:800 26px var(--display);fill:#6B4226}
+#scene .bt{font:700 6.4px var(--body);fill:#3A2416}
+#scene .bbg{fill:#D8CBAE}
+#scene .m .cbn{stroke:#8D6A45;stroke-width:1.1}
+#scene .m .cbc{stroke:#6B4226;stroke-width:1.5}
+#scene .m .cbh{stroke:none}
+#scene .stm{opacity:.55}
+#scene.running .stm{animation:stmA 1.8s ease-in-out infinite}
+@keyframes stmA{0%{transform:translateY(3px);opacity:0}40%{opacity:.8}100%{transform:translateY(-8px);opacity:0}}
+.cbn{fill:#D8C79C;stroke:#8D6A45;stroke-width:1.2}
+.cbc{fill:none;stroke:#6B4226;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.cbh{fill:#F3EAD0;opacity:.55;stroke:none}
+.fl{display:inline-block;font:700 .62rem/1.5 var(--body);letter-spacing:.04em;padding:0 5px;border-radius:5px;margin-left:4px;vertical-align:1px;white-space:nowrap}
+.fN{background:var(--accent);color:var(--on-accent)}
+.fL{background:var(--panel);color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.fT{background:var(--panel);color:var(--muted);box-shadow:inset 0 0 0 1px var(--rule)}
+.fU{background:var(--panel);color:var(--muted);border:1px dashed var(--muted);padding:0 4px;line-height:1.35}
+.flg{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.84rem;color:var(--muted);margin:4px 0 10px}
+.flg .fl{margin:0 4px 0 0}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:0;flex:none}
+.qtab td:first-child{font-weight:700;white-space:nowrap}
+.qtab td{min-width:120px}
+tr.hl td{background:var(--tint)}
+.vs2 th:first-child{width:120px}
+.vs2 td{min-width:200px}
+@media (max-width:560px){.vs2 td,.pt td,.ten td,.ten td:first-child{min-width:160px}}
+.vs2 td.a{background:var(--tint)}
+.qual td{min-width:170px}.qual tbody th{white-space:nowrap}
+.ten td{min-width:180px}.ten td:first-child{min-width:200px}
+.seh{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.seh p{max-width:72ch}
+@media (max-width:900px){.seh{grid-template-columns:minmax(0,1fr)}}
+.h3s{font:800 1.4rem/1.2 var(--display);margin:22px 0 8px;letter-spacing:.01em}
+.signs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.signs li:last-child{grid-column:span 2}
+@media (max-width:1100px){.signs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.signs{grid-template-columns:minmax(0,1fr)}.signs li:last-child{grid-column:auto}}
+.signs li{background:var(--tint);border-radius:14px;padding:12px 14px 12px 52px;position:relative;counter-increment:sg;min-width:0}
+.signs{counter-reset:sg}
+.signs li::before{content:counter(sg);position:absolute;left:12px;top:12px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--on-accent);font:800 1rem/28px var(--display);text-align:center}
+.signs b{display:block;font:700 .98rem/1.3 var(--body)}
+.signs span{display:block;font-size:.88rem;margin-top:3px}
+.signs em{display:block;font:600 .68rem/1.3 var(--body);font-style:normal;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+.prow{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 12px;align-items:center;margin:8px 0 4px}
+.prow>span{font-weight:600;font-size:.88rem;white-space:nowrap}
+.prow .pill{font-size:.82rem;padding:7px 11px}
+@media (max-width:620px){.prow{grid-template-columns:minmax(0,1fr)}}
+.qzw{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:18px;align-items:start;margin-top:10px}
+@media (max-width:1100px){.qzw{grid-template-columns:minmax(0,1fr)}}
+.qgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@media (max-width:1250px){.qgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.qgrid>.qb:last-child{grid-column:1/-1}}
+@media (max-width:620px){.qgrid{grid-template-columns:minmax(0,1fr)}}
+.qb{border:1px solid var(--rule);border-radius:12px;padding:10px 12px;min-width:0}
+.qb b{display:block;font:700 .95rem var(--body)}
+.qb small{display:block;color:var(--muted);font-size:.8rem;line-height:1.35}
+.qb .row{margin-top:6px}
+.qb .pill{font-size:.8rem;padding:6px 10px;text-align:left;line-height:1.25}
+.qres{background:var(--tint);border-radius:14px;padding:14px 16px;position:sticky;top:76px;min-width:0}
+@media (max-width:1100px){.qres{position:static}}
+.qh{display:block;font:800 1.3rem/1.2 var(--display);margin:2px 0 4px}
+.pbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 8px;align-items:center;margin-top:8px;font-size:.88rem}
+.pbar span{font-weight:600;min-width:0}
+.pbar b{font:700 .88rem var(--mono);text-align:right}
+.pbar i{grid-column:1/-1;display:block;height:8px;border-radius:4px;background:var(--rule);overflow:hidden}
+.pbar i em{display:block;height:100%;border-radius:4px}
+#verdict .pbar b{color:var(--ink);display:inline}
+.why{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.why span{font-size:.78rem;background:var(--panel);border:1px solid var(--rule);border-radius:999px;padding:3px 9px}
+.bgal{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;margin-top:6px}
+@media (max-width:1250px){.bgal{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:560px){.bgal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.bgal figure{margin:0;background:var(--tint);border-radius:12px;padding:8px 8px 10px;text-align:center;min-width:0}
+.bgal svg{display:block;width:100%;height:auto;max-width:150px;margin:0 auto}
+.bgal figcaption b{display:block;font:700 .92rem var(--body)}
+.bgal figcaption span{display:block;font-size:.78rem;color:var(--muted);line-height:1.35}
+.pX{background:var(--tint);border-radius:12px;padding:10px 14px;margin:10px 0;font-size:.92rem;max-width:110ch}
+.pX b{display:block;font:700 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:3px}
+.pt td{min-width:200px}.pt tbody th{white-space:nowrap;color:var(--muted);font-weight:600}
+.radg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:18px 32px;align-items:center;margin-top:6px}
+@media (max-width:900px){.radg{grid-template-columns:minmax(0,1fr)}}
+.radw{max-width:420px;margin:0 auto}
+#cRad{display:block;width:100%;height:auto}
+#cRad text{font:600 12px var(--body);fill:var(--ink)}
+#cRad .grid{fill:none;stroke:var(--rule);stroke-width:1}
+.dots{margin:0;padding-left:18px}.dots li{margin-bottom:6px}
+.tg{display:flex;gap:8px;align-items:center;font-weight:600;margin-top:12px;cursor:pointer}
+.tg input{width:18px;height:18px;accent-color:var(--accent);margin:0}
+.ctl .row .pill{font-size:.82rem;padding:7px 11px}
+details.more{margin-top:10px}
+details.more summary{cursor:pointer;font-weight:600;color:var(--accent)}
+details.more[open] summary{margin-bottom:6px}
+#sheet{min-height:300px}
+@media (prefers-reduced-motion:reduce){#scene .stm{animation:none!important}}
+</style></head><body><div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a><nav class="mh-p" aria-label="Mục chính"><a href="cau-chuyen.html">Câu chuyện</a><a href="vung-trong.html">Vùng trồng</a><a href="xuong-rang.html">Xưởng rang</a><a href="horeca.html">HORECA</a><a href="quan-medili.html">Quán MeDili</a><a href="journal.html">Kiến thức</a><a href="gia-ca-phe.html">Giá cà phê</a></nav><details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></summary><nav class="mh-pan" aria-label="Tất cả trang"><div class="mh-grid"><div class="mh-c"><p class="mh-g">MeDili</p><ul><li><a href="./">Trang chủ</a></li><li><a href="cau-chuyen.html">Câu chuyện MeDili</a></li><li><a href="doi-ngu.html">Đội ngũ</a></li><li><a href="quan-medili.html">Quán MeDili Café</a></li><li><a href="lien-he.html">Liên hệ</a></li></ul></div><div class="mh-c"><p class="mh-g">Vùng trồng & sản xuất</p><ul><li><a href="vung-trong.html">Vùng trồng Di Linh</a></li><li><a href="vuon.html">Vườn 12 tháng</a></li><li><a href="trai-ca-phe.html">Cấu tạo trái</a></li><li><a href="len-men-men-bia.html">Lên men men bia</a></li><li><a href="len-men-trai-cay.html">Lên men trái cây</a></li></ul></div><div class="mh-c"><p class="mh-g">Rang & pha</p><ul><li><a href="xuong-rang.html">Xưởng rang & năng lực</a></li><li><a href="rang.html">Phòng rang</a></li><li><a href="quay-pha.html">Quầy pha</a></li><li><a href="cold-brew.html">Cỗ máy Cold Brew</a></li><li><a href="tim-gu.html">Tìm gu cà phê</a></li></ul></div><div class="mh-c"><p class="mh-g">Mua & hợp tác</p><ul><li><a href="mua-hang.html">Phòng Chọn Mua</a></li><li><a href="horeca.html">Giải pháp HORECA</a></li><li><a href="nhan-xanh.html">Chọn nhân xanh · khách sỉ</a></li><li><a href="gia-ca-phe.html">Giá cà phê hôm nay</a></li><li><a href="giao-hang.html">Giao hàng & đổi trả</a></li></ul></div><div class="mh-c"><p class="mh-g">Kiến thức cà phê</p><ul><li><a href="journal.html">Tất cả bài viết</a></li><li><a href="chiet-xuat.html">Cỗ máy Chiết xuất</a></li><li><a href="phan-biet-ca-phe.html" aria-current="page">Cỗ máy Phân biệt cà phê</a></li><li><a href="trai-chin.html">Cỗ máy Trái chín</a></li><li><a href="vi-sinh.html">Cỗ máy Vi sinh</a></li><li><a href="tien-chat-huong.html">Cỗ máy Tiền chất hương</a></li><li><a href="banh-xe-huong.html">Bánh xe hương MeDili</a></li><li><a href="journal-phin.html">Phin và nhịp rơi của thời gian</a></li><li><a href="journal-tu-qua.html">Từ quả cà phê đến hương vị</a></li><li><a href="journal-di-linh.html">Di Linh trong một tách cà phê</a></li><li><a href="tu-vuon-den-ly.html">Từ vườn đến ly</a></li><li><a href="suc-khoe.html">Cà phê và cơ thể</a></li></ul></div></div></nav></details><a class="mh-go" href="mua-hang.html">Chọn mua</a></div></div>
+<div class="wrap">
+<header>
+  <span class="lgw"><img class="lgL" src="assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div class="brandbar"><span>Mê vị Di Linh</span><span>Kiến thức cà phê</span><span>Zalo <a href="#lien-he">0966770788</a></span></div>
+  <h1>Cỗ máy <em>Phân biệt cà phê</em></h1>
+  <p>Tám mẫu cà phê đi qua tám trạm: vườn, trái chín, bàn soi nhân, sàng, cân, phòng thí nghiệm, bàn nếm và bộ quyết định. Nhìn và nếm là định tính; sàng, cân, phân tích là định lượng. Trọng tâm là Robusta Cà Sẻ Di Linh: nhận ra thế nào, và khác Robusta cao sản ở đâu.</p>
+</header>
+
+<div class="bench">
+  <div class="card">
+    <div class="fighead">
+      <div><b>Hình 1</b> <span id="figsub"></span></div>
+      <button class="btn small" id="run2" type="button">Chạy máy</button>
+    </div>
+    <div class="scroller"><svg id="scene" viewBox="0 0 1040 720" aria-label="Bàn mô hình tám trạm: vườn, trái chín, bàn soi nhân, sàng, cân 100 nhân, phòng thí nghiệm, bàn nếm, bộ quyết định. Bấm từng trạm để xem chi tiết."></svg></div>
+    <div class="strip" id="strip" role="group" aria-label="Chọn trạm"></div>
+    <div id="detail" aria-live="polite"></div>
+  </div>
+
+  <aside class="card ctl">
+    <div class="head2"><h3>Mẫu đưa vào máy</h3><small>8 mẫu</small></div>
+    <div class="row" id="samps"></div>
+    <p class="mnote" id="sNote"></p>
+    <div class="row" style="margin-top:12px"><button class="btn main" id="run" type="button">Chạy máy</button><button class="btn" id="myst" type="button">Mẫu bí ẩn</button><button class="btn" id="reveal" type="button" hidden>Lộ đáp án</button><button class="btn" id="back" type="button" hidden>Về hồ sơ chuẩn</button></div>
+    <hr>
+    <div class="head2"><h3>Số đo</h3><small id="modeL"></small></div>
+    <div class="sl" style="margin-top:6px"><label for="iW">Khối lượng 100 nhân <output id="oW"></output></label><input id="iW" type="range" min="9" max="31" step="0.1"><p>Nhân nguyên, ẩm từ 12,5 % trở xuống.</p></div>
+    <div class="sl"><label for="iS">Nhân trên sàng 16 <output id="oS"></output></label><input id="iS" type="range" min="10" max="100" step="1"><p>Lỗ sàng 6,30 mm, mẫu 300 g.</p></div>
+    <div class="sl"><label for="iC">Hạt tròn trong 100 hạt <output id="oC"></output></label><input id="iC" type="range" min="0" max="100" step="1"></div>
+    <span class="lbl" style="margin-top:12px">Rãnh giữa của nhân</span>
+    <div class="row" id="cuts"></div>
+    <label class="tg"><input type="checkbox" id="lab"> Có kết quả phòng lab</label>
+    <div id="labBox">
+      <div class="sl"><label for="iCa">Caffeine <output id="oCa"></output></label><input id="iCa" type="range" min="0.4" max="3" step="0.05"></div>
+      <div class="sl"><label for="iL">Chất béo <output id="oL"></output></label><input id="iL" type="range" min="6" max="19" step="0.5"></div>
+      <div class="sl"><label for="iSu">Sucrose <output id="oSu"></output></label><input id="iSu" type="range" min="1.5" max="10" step="0.1"><p>Tính trên chất khô của nhân xanh.</p></div>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div id="verdict" aria-live="polite"></div>
+    <hr>
+    <span class="lbl">Bản đồ hai chỉ số</span>
+    <div class="charts"><svg class="ch" id="cM" viewBox="0 0 340 200" role="img" aria-label="Caffeine theo khối lượng 100 nhân của tám mẫu"></svg></div>
+    <p class="mnote" id="mTip"></p>
+  </aside>
+</div>
+
+<section class="card sehero" id="ca-se">
+  <div class="seh">
+    <div>
+      <p class="eye">Trọng tâm · Robusta Cà Sẻ Di Linh</p>
+      <h2 class="p-h2" style="margin:0">Cà Sẻ là một giống, <em>không phải hình hạt hay hạng hàng.</em></h2>
+      <p>“Sẻ” là tên dân gian, không phải tên phân loại chính thức. Cà Sẻ, Robusta Sẻ, Ro Sẻ hay Robusta hạt nhỏ đều chỉ nhóm Robusta được đưa vào Việt Nam từ đầu thế kỷ XX và trồng phổ biến ở Tây Nguyên trước khi có các giống chọn lọc của Viện WASI. Cây được nhân bằng hạt nên quần thể không đồng đều: mỗi cây một dáng, trái và năng suất khác nhau. Tên gọi phản ánh nhân nhỏ, trái nhỏ và tán gọn.</p>
+      <p>Phân tích 126 mẫu trong ngân hàng gen của WASI cho thấy phần lớn vật liệu Robusta Việt Nam thuộc nhóm di truyền ER, từ lưu vực sông Congo. Từ năm 1976, WASI bắt đầu chọn giống quy mô lớn; các dòng TR4, TR9, TR11, rồi TR14, TR15 dần thay Cà Sẻ vì năng suất cao và nhân to. Cà Sẻ ít được trồng mới, nhưng là vật liệu nền của Robusta Việt Nam và giữ nhiều gen thích nghi với hạn, sâu bệnh.</p>
+    </div>
+    <div class="medili">
+      <h3>Vườn Cà Sẻ của MeDili</h3>
+      <ul>
+        <li>Cao nguyên Di Linh khoảng 1.000 m; Robusta trồng ở khoảng 900–1.000 m.</li>
+        <li>Canh tác từ năm 2010, cây 15 năm tuổi, chăm theo hướng tự nhiên.</li>
+        <li>Trời mát nên trái chín chậm: hái nhiều lượt từ tháng 11 tới đầu tháng 1, trái xanh tối đa 5 %.</li>
+        <li>MeDili ghi nhận: những cây Cà Sẻ cũ cho ly cà phê ngon và rất nhiều caffeine.</li>
+      </ul>
+    </div>
+  </div>
+  <h3 class="h3s">Bảy dấu hiệu nhận ra Cà Sẻ</h3>
+  <ol class="signs">
+    <li><b>Gốc không vết ghép</b><span>Cây mọc từ hạt. Đi một hàng 20 cây sẽ thấy dáng, lá, trái khác nhau.</span><em>Vườn · định tính</em></li>
+    <li><b>Trái nhỏ, chùm dày</b><span>Trái nhỏ hơn dòng ghép; màu và độ chín khác nhau giữa các cây.</span><em>Trái · định tính</em></li>
+    <li><b>Nhân nhỏ, chắc, lưng dày</b><span>Dáng tròn ngắn, rãnh giữa thẳng như mọi Robusta.</span><em>Nhân · định tính</em></li>
+    <li><b>Nhẹ khi cân</b><span>Ước 13–17 g mỗi 100 nhân; các dòng TR4, TR9, TR11 trồng ở Lâm Đồng nặng 21,6–29,6 g.</span><em>Cân · định lượng</em></li>
+    <li><b>Ít nhân sàng to</b><span>Phần lớn nằm ở sàng 13–16; dòng ghép ở Lâm Đồng có 87–99 % nằm trên sàng 16.</span><em>Sàng · định lượng</em></li>
+    <li><b>Đậm, đắng rõ, hậu dài</b><span>Socola đen, ca cao; thân dày, ít chua. Cao sản đắng nhưng vị nhẹ hơn.</span><em>Nếm · cảm quan</em></li>
+    <li><b>Có hồ sơ vườn</b><span>Mã vườn, năm trồng, nguồn hạt giống. Đây là bằng chứng mạnh nhất; cần chắc chắn thì xét nghiệm DNA.</span><em>Truy xuất</em></li>
+  </ol>
+  <h3 class="h3s">Cà Sẻ và Robusta cao sản, đặt cạnh nhau</h3>
+  
+  <div class="tw"><table class="rich vs2"><thead><tr><th></th><th><i class="sw" style="background:var(--k1)"></i>Cà Sẻ Di Linh</th><th><i class="sw" style="background:var(--k2)"></i>Robusta cao sản</th></tr></thead><tbody><tr><th>Nguồn gốc</th><td class="a">Robusta đưa vào Việt Nam từ đầu thế kỷ XX, trồng phổ biến ở Tây Nguyên trước khi có giống WASI</td><td>Các dòng WASI chọn lọc từ năm 1976: TR4, TR9, TR11, TR14, TR15; TRS1 lai từ TR4, TR9, TR11, TR12</td></tr><tr><th>Nhân giống</th><td class="a">Từ hạt, nên mỗi cây một khác</td><td>Ghép chồi, giâm cành, vườn đồng đều; phải trồng xen nhiều dòng</td></tr><tr><th>100 nhân</th><td class="a">Ước 13–17 g</td><td>15,3–29,6 g tùy dòng và vùng; ở Lâm Đồng 19,2–29,6 g</td></tr><tr><th>Trên sàng 16</th><td class="a">Ước 55–70 %</td><td>63–99 %; ở Lâm Đồng 86,9–99,2 %</td></tr><tr><th>Năng suất</th><td class="a">Ước 2–3 tấn nhân/ha</td><td>3,7–7,3 tấn nhân/ha trong thí nghiệm</td></tr><tr><th>Caffeine</th><td class="a">2,2–2,7 % theo tài liệu thương mại</td><td>Robusta nói chung khoảng 2,2 %</td></tr><tr><th>Ly cà phê</th><td class="a">Đậm, đắng rõ, hậu dài, thân dày; socola đen, ca cao</td><td>Đắng rõ, gỗ, ngũ cốc rang; vị nhẹ hơn</td></tr><tr><th>Điểm mạnh</th><td class="a">Nguồn gen thích nghi với hạn và sâu bệnh; câu chuyện của vùng</td><td>Năng suất cao, nhân to đều, kháng gỉ sắt</td></tr><tr><th>Điểm yếu</th><td class="a">Năng suất thấp, nhân nhỏ, ít hàng sàng to</td><td>Cần thâm canh; TRS1 chịu hạn kém</td></tr></tbody></table></div>
+  <p class="mnote">Cùng loài Robusta nên caffeine, chất béo, đường của hai nhóm chồng lên nhau; phân tích hoá học không tách được. Khác biệt nằm ở cây, cỡ nhân, năng suất và ly cà phê. Số “ước” của Cà Sẻ suy từ đối chứng Robusta trồng hạt đại trà trong thí nghiệm giống TRS1 (TRS1 hơn đối chứng 50,2 % năng suất và 25,4 % khối lượng 100 nhân), chưa phải số đo riêng của vườn Di Linh.</p>
+</section>
+
+<section class="card" id="robusta">
+  <h2>Hình 2: cỡ nhân của các dòng Robusta theo vùng</h2>
+  <p class="lead">Mỗi chấm là một dòng Robusta ở một vùng, theo số liệu thí nghiệm giống. Cùng dòng TR4: 15,3 g mỗi 100 nhân ở Gia Lai nhưng 21,6 g ở Lâm Đồng. Vì vậy chỉ so cỡ nhân khi cùng vùng, cùng vụ. Vùng tô viền đứt là khoảng ước của Cà Sẻ.</p>
+  <div class="lg" id="lgR"></div>
+  <div class="chw" id="wR"><svg id="cR" class="c2" role="img" aria-label="Khối lượng 100 nhân và phần trăm nhân trên sàng 16 của các dòng Robusta ở Đắk Lắk, Gia Lai, Lâm Đồng"></svg></div>
+  <details class="more"><summary>Xem số liệu của Hình 2</summary><div class="tw"><table class="rich"><thead><tr><th>Dòng</th><th>Vùng</th><th>100 nhân, g</th><th>Trên sàng 16</th></tr></thead><tbody><tr><td>TR4</td><td>Đắk Lắk</td><td>18,4</td><td>80,0 %</td></tr><tr><td>TR9</td><td>Đắk Lắk</td><td>22,5</td><td>94,3 %</td></tr><tr><td>TR11</td><td>Đắk Lắk</td><td>18,3</td><td>88,2 %</td></tr><tr><td>TR14</td><td>Đắk Lắk</td><td>20,9</td><td>97,8 %</td></tr><tr><td>TR15</td><td>Đắk Lắk</td><td>24,9</td><td>98,1 %</td></tr><tr><td>TR16</td><td>Đắk Lắk</td><td>20,0</td><td>94,3 %</td></tr><tr><td>TR6</td><td>Đắk Lắk</td><td>19,4</td><td>92,7 %</td></tr><tr><td>TR4</td><td>Gia Lai</td><td>15,3</td><td>63,2 %</td></tr><tr><td>TR9</td><td>Gia Lai</td><td>17,0</td><td>75,0 %</td></tr><tr><td>TR11</td><td>Gia Lai</td><td>15,7</td><td>65,0 %</td></tr><tr><td>TR14</td><td>Gia Lai</td><td>20,5</td><td>95,4 %</td></tr><tr><td>TR15</td><td>Gia Lai</td><td>22,0</td><td>97,9 %</td></tr><tr><td>TR16</td><td>Gia Lai</td><td>19,1</td><td>93,2 %</td></tr><tr><td>TR6</td><td>Gia Lai</td><td>18,4</td><td>91,5 %</td></tr><tr><td>TR4</td><td>Lâm Đồng</td><td>21,6</td><td>86,9 %</td></tr><tr><td>TR9</td><td>Lâm Đồng</td><td>29,6</td><td>99,2 %</td></tr><tr><td>TR11</td><td>Lâm Đồng</td><td>22,8</td><td>95,8 %</td></tr><tr><td>TR14</td><td>Lâm Đồng</td><td>22,4</td><td>95,7 %</td></tr><tr><td>TR15</td><td>Lâm Đồng</td><td>23,5</td><td>96,3 %</td></tr><tr><td>TR16</td><td>Lâm Đồng</td><td>20,2</td><td>91,2 %</td></tr><tr><td>TR6</td><td>Lâm Đồng</td><td>19,2</td><td>90,0 %</td></tr><tr><td>TRS1</td><td>TRS1, trung bình 4 vùng</td><td>19,1</td><td>85,3 %</td></tr></tbody></table></div></details>
+</section>
+
+<section class="card" id="nhan-dien">
+  <h2>Máy nhận diện bằng giác quan</h2>
+  <p class="lead">Chọn điều bạn nhìn, ngửi, nếm được. Máy cộng dồn bằng chứng và xếp hạng tám mẫu. Trọng số do MeDili đặt từ mô tả trong tài liệu, không phải mô hình đo đạc; dùng để luyện mắt, mũi, lưỡi. Bấm lại một lựa chọn để bỏ.</p>
+  <div class="prow"><span>Điền thử như mẫu</span><div class="row" id="qPre" style="margin-top:0"></div></div>
+  <div class="qzw">
+    <div class="qgrid" id="qz"></div>
+    <div class="qres" id="qzr" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="card" id="dinh-luong">
+  <h2>Định lượng: tám mẫu, tám chỉ số</h2>
+  <p class="lead">Số liệu tổng hợp từ tài liệu nghiên cứu và tài liệu ngành. Ô có chữ “Ước” là số MeDili ước cho mô hình; ô gạch ngang là chưa có số đáng tin, MeDili không điền bừa.</p>
+  
+  <div class="tw"><table class="rich qtab"><thead><tr><th>Mẫu</th><th>Caffeine, % chất khô</th><th>Chất béo, %</th><th>Sucrose, %</th><th>100 nhân, g</th><th>Trên sàng 16</th><th>Hạt tròn (culi)</th><th>Năng suất nhân</th><th>16-OMC</th></tr></thead><tbody><tr class="hl"><td><i class="sw" style="background:var(--k1)"></i>Cà Sẻ Di Linh</td><td>2,2–2,7</td><td>≈ 10</td><td>≈ 4</td><td>Ước 13–17</td><td>Ước 55–70 %</td><td>4–5 %</td><td>Ước 2–3 tấn/ha</td><td>Cao</td></tr><tr><td><i class="sw" style="background:var(--k2)"></i>Robusta cao sản</td><td>≈ 2,2</td><td>≈ 10</td><td>≈ 4</td><td>15,3–29,6; Lâm Đồng 19,2–29,6</td><td>63–99 %; Lâm Đồng 87–99 %</td><td>4–5 %</td><td>3,7–7,3 tấn/ha</td><td>Cao</td></tr><tr><td><i class="sw" style="background:var(--k3)"></i>Arabica (Typica, Bourbon)</td><td>≈ 1,2</td><td>≈ 16</td><td>≈ 8</td><td>Ước 18</td><td>Ước 80 %</td><td>4–5 %</td><td>Thấp</td><td>Vết</td></tr><tr><td><i class="sw" style="background:var(--k4)"></i>Catimor</td><td>≈ 1,2</td><td>≈ 16</td><td>≈ 8</td><td>Ước 16–18</td><td>Ước 70–85 %</td><td>4–5 %</td><td>1,67 tấn/ha</td><td>Vết</td></tr><tr><td><i class="sw" style="background:var(--k5)"></i>Moka Cầu Đất</td><td>Nếu là Mokka: khoảng ½ Arabica</td><td>≈ 16</td><td>≈ 8</td><td>Ước 10–13</td><td>Ước 20–40 %</td><td>—</td><td>1–2 kg/cây/năm</td><td>Vết</td></tr><tr><td><i class="sw" style="background:var(--k6)"></i>Culi (hạt tròn)</td><td>Theo cây mẹ</td><td>Theo cây mẹ</td><td>Theo cây mẹ</td><td>Theo cây mẹ</td><td>Sàng riêng</td><td>4–5 % một vụ; lô culi từ 90 %</td><td>—</td><td>Theo loài</td></tr><tr><td><i class="sw" style="background:var(--k7)"></i>Liberica (cà phê mít)</td><td>Gần Arabica</td><td>—</td><td>—</td><td>≈ 21 (0,212 g một nhân)</td><td>Hàng xuất khẩu từ 90 %</td><td>—</td><td>—</td><td>Chưa rõ</td></tr><tr><td><i class="sw" style="background:var(--k8)"></i>Excelsa (Chari)</td><td>Gần Arabica</td><td>—</td><td>—</td><td>Nhỏ hơn Liberica</td><td>—</td><td>—</td><td>Cao hơn Liberica</td><td>Chưa rõ</td></tr></tbody></table></div>
+  <p class="mnote">Caffeine, chất béo, sucrose tính trên chất khô của nhân xanh. 16-OMC (16-O-methylcafestol) là dấu vết hoá học của Robusta, dùng để phát hiện Robusta trộn vào Arabica.</p>
+  <details class="more"><summary>Tham số mà cỗ máy dùng (trung bình ± độ lệch)</summary><div class="tw"><table class="rich" id="pTab"></table></div>
+  <p class="mnote">Giá trị trung tâm chọn từ bảng trên. Ở chỗ chưa có số, như chất béo của Liberica, MeDili đặt khoảng rộng để máy không dựa nhiều vào đó.</p></details>
+</section>
+
+<section class="card" id="dinh-tinh">
+  <h2>Định tính: dáng nhân và từng cặp dễ nhầm</h2>
+  <p class="lead">Hình 3 vẽ nhân xanh của tám mẫu cùng một tỷ lệ, mặt phẳng hướng lên. Chiều dài ước theo khối lượng 100 nhân và dáng nhân; riêng Liberica theo số đo 11,46 mm. Đây là hình vẽ khái niệm.</p>
+  <div class="bgal" id="bgal"></div>
+  <h3 class="h3s">Đối chiếu từng cặp</h3>
+  <div class="prow"><span>Mẫu A</span><div class="row" id="pA" style="margin-top:0"></div><span>Mẫu B</span><div class="row" id="pB" style="margin-top:0"></div></div>
+  <div class="pX" id="pX"></div>
+  <div class="tw"><table class="rich pt" id="pT"></table></div>
+  <details class="more"><summary>Xem bảng định tính đầy đủ cả tám mẫu</summary><div class="tw"><table class="rich qual"><thead><tr><th></th><th><i class="sw" style="background:var(--k1)"></i>Cà Sẻ</th><th><i class="sw" style="background:var(--k2)"></i>Cao sản</th><th><i class="sw" style="background:var(--k3)"></i>Arabica</th><th><i class="sw" style="background:var(--k4)"></i>Catimor</th><th><i class="sw" style="background:var(--k5)"></i>Moka</th><th><i class="sw" style="background:var(--k6)"></i>Culi</th><th><i class="sw" style="background:var(--k7)"></i>Liberica</th><th><i class="sw" style="background:var(--k8)"></i>Excelsa</th></tr></thead><tbody><tr><th>Loài, nhóm</th><td>Robusta, giống cũ</td><td>Robusta, dòng chọn lọc</td><td>Arabica, giống cổ</td><td>Arabica, giống lai</td><td>Arabica, nhóm Bourbon</td><td>Hình dạng hạt, có ở mọi giống</td><td>Coffea liberica</td><td>Coffea dewevrei</td></tr><tr><th>Nhân giống</th><td>Thực sinh: trồng từ hạt qua nhiều thế hệ, quần thể không đồng đều</td><td>Ghép chồi, giâm cành: TR4, TR9, TR11, TR14, TR15; riêng TRS1 trồng bằng hạt lai</td><td>Trồng từ hạt; Arabica tự thụ phấn nên giống khá ổn định</td><td>Lai Timor Hybrid với Caturra, tạo ở Bồ Đào Nha năm 1959</td><td>Trồng từ hạt; thường được mô tả là dạng lùn của Bourbon</td><td>Không phải giống: trái chỉ nuôi một nhân thay vì hai</td><td>Loài riêng; cây gỗ thật, rễ cọc sâu</td><td>Từng được xếp là một thứ của Liberica; nghiên cứu gen năm 2025 tách thành loài riêng</td></tr><tr><th>Cây</th><td>Mỗi cây một dáng, lá và trái khác nhau; tán thường gọn; gốc không có vết ghép.</td><td>Vườn đồng đều như đúc, gốc có vết ghép; phải trồng xen nhiều dòng vì Robusta cần thụ phấn chéo. TR9 thấp, gọn, lá non màu đồng sẫm.</td><td>Typica cao, cành ngang, lá non màu đồng; lá nhỏ, bóng hơn Robusta.</td><td>Cây thấp, lóng đốt ngắn, tán gọn; kháng gỉ sắt nhờ gen Robusta trong Timor Hybrid.</td><td>Cây nhỏ, ít lá, nhìn gầy; dạng Mokka gốc mọc rậm như hàng rào.</td><td>Theo cây mẹ; vườn nào cũng có.</td><td>Cây gỗ lớn, lá to, dày, rễ cọc sâu.</td><td>Cây cao tới khoảng 15 m, lá dày dai, rễ sâu; chịu hạn, ít sâu bệnh.</td></tr><tr><th>Trái</th><td>Trái nhỏ, chùm dày; màu và độ chín khác nhau giữa các cây.</td><td>Trái to, đều trong cùng một dòng.</td><td>Trái đỏ, cỡ vừa; mỗi đốt ít trái hơn Robusta.</td><td>Trái đỏ, cỡ vừa, sai trái.</td><td>Trái nhỏ, tròn.</td><td>Nhìn ngoài như trái thường.</td><td>Trái to, vỏ dày, nhiều thịt quả: thịt và nhân khoảng 60 : 40.</td><td>Trái và nhân nhỏ hơn Liberica, vỏ trấu mỏng hơn.</td></tr><tr><th>Nhân xanh</th><td>Nhỏ, chắc, lưng dày, dáng tròn ngắn.</td><td>To, đều, dáng tròn hơi dài.</td><td>Dẹt, thuôn dài, mặt phẳng rộng.</td><td>Dẹt, thuôn, cỡ vừa đến to.</td><td>Rất nhỏ, tròn như hạt đậu.</td><td>Tròn đều, không có mặt phẳng.</td><td>To nhất trong các loài: dài khoảng 11,5 mm, dáng lệch, đầu nhọn có móc.</td><td>Cỡ vừa, dáng giọt nước hơi lệch.</td></tr><tr><th>Rãnh giữa</th><td>Thẳng</td><td>Thẳng</td><td>Cong chữ S</td><td>Cong chữ S</td><td>Cong, ngắn</td><td>Một đường dọc thân tròn</td><td>Nhăn, lệch</td><td>Hơi nhăn, lệch</td></tr><tr><th>Vùng, độ cao</th><td>Khoảng 900–1.000 m, cao nguyên Di Linh</td><td>Tùy vùng: Đắk Lắk, Gia Lai, Lâm Đồng; TR9 hợp khoảng 500–800 m</td><td>Vùng cao; Cầu Đất khoảng 1.500 m trở lên</td><td>Sơn La, Lâm Đồng, Quảng Trị…</td><td>Khoảng 1.500–1.600 m, Cầu Đất</td><td>Theo vườn</td><td>Kon Tum, Quảng Trị, Lâm Đồng; khoảng 800 m</td><td>Có trồng ở Việt Nam, Ấn Độ, Indonesia</td></tr><tr><th>Mùa hái</th><td>Tháng 11 tới đầu tháng 1, hái nhiều lượt</td><td>Tùy dòng; TR9, TR14, TR15 chín muộn</td><td>Tùy vùng</td><td>Tùy vùng</td><td>Tùy vụ</td><td>Theo vườn</td><td>Theo vùng</td><td>Theo vùng</td></tr><tr><th>Mùi vị</th><td>Đậm, đắng rõ, hậu dài, thân dày; socola đen, ca cao</td><td>Đắng rõ, gỗ, ngũ cốc rang; vị nhẹ hơn Cà Sẻ</td><td>Hoa, cam chanh, trái cây; chua sáng, ngọt</td><td>Hạt, thảo mộc, anh đào, quả mọng; chua vừa</td><td>Vỏ quýt, hạnh nhân, dâu, vani; có nguồn tả socola, trái khô, gia vị</td><td>Theo cây mẹ; hạt tròn rang đều hơn, vị có thể tròn hơn nhưng không bảo đảm</td><td>Mít chín, xoài, vải, chanh dây khi chế biến tốt; gỗ, da thuộc khi chế biến kém</td><td>Chua kiểu trái cây, trái sẫm, socola, gia vị, hạt phỉ; ít đắng</td></tr><tr><th>Thang chấm</th><td>Fine Robusta</td><td>Fine Robusta</td><td>SCA</td><td>SCA</td><td>SCA</td><td>Theo loài của cây mẹ</td><td>Chưa có thang riêng phổ biến</td><td>Chưa có thang riêng phổ biến</td></tr><tr><th>Năng suất</th><td>Ước 2–3 tấn nhân/ha</td><td>3,7–7,3 tấn nhân/ha trong thí nghiệm</td><td>Thấp; Typica Cầu Đất chỉ khoảng 2,5–3 tấn mỗi năm cả vùng</td><td>1,67 tấn nhân/ha, đối chứng trong thí nghiệm giống</td><td>Khoảng 1–2 kg mỗi cây mỗi năm</td><td>Khoảng 4–5 % sản lượng một vụ</td><td>Chưa có số tin cậy ở Việt Nam</td><td>Cao hơn Liberica khi điều kiện tốt</td></tr><tr><th>Dễ nhầm với</th><td>Robusta cao sản trồng ở vùng khó (nhân cũng nhỏ), hoặc lô đã sàng lấy nhân nhỏ.</td><td>Cà Sẻ, khi cao sản trồng ở vùng khó làm nhân nhỏ đi: TR4 ở Gia Lai chỉ 15,3 g mỗi 100 nhân.</td><td>Catimor: cùng loài, hình nhân gần như giống nhau.</td><td>Arabica giống cổ: hình nhân gần như giống nhau.</td><td>Arabica thường được gọi chung là “Moka” cho dễ bán.</td><td>Cà Sẻ: Sẻ là giống, Culi là hình hạt. Có Culi Sẻ, Culi cao sản, Culi Arabica.</td><td>Excelsa: cùng bị gọi chung là cà phê mít.</td><td>Liberica: cùng bị gọi chung là cà phê mít.</td></tr></tbody></table></div></details>
+</section>
+
+<section class="card" id="cam-quan">
+  <h2>Hình 4: hồ sơ cảm quan, Cà Sẻ đặt cạnh mẫu khác</h2>
+  <p class="lead">Cường độ tương đối trên thang 10, MeDili chuyển từ mô tả cảm quan trong tài liệu; không phải điểm cupping.</p>
+  <div class="prow"><span>So với</span><div class="row" id="rB" style="margin-top:0"></div></div>
+  <div class="radg">
+    <div><div class="radw"><svg id="cRad" viewBox="0 0 340 300" role="img" aria-label="Biểu đồ sáu trục: thơm, chua, ngọt, đắng, thể chất, hậu vị"></svg></div><div class="lg" id="lgRad" style="justify-content:center"></div><p class="mnote" id="radT" style="text-align:center"></p></div>
+    <div>
+      <h3 class="h3s" style="margin-top:0">Chấm điểm theo thang nào</h3>
+      <ul class="dots">
+        <li><b>Robusta:</b> thang Fine Robusta, gồm hương, vị, hậu vị, tỷ lệ mặn và chua, tỷ lệ đắng và ngọt, cảm giác miệng, cân bằng, độ đồng đều, độ sạch và tổng thể. Từ 80 điểm là Fine Robusta.</li>
+        <li><b>Arabica:</b> thang của SCA. Catimor, Typica, Moka đều chấm theo thang này.</li>
+        <li><b>Liberica, Excelsa:</b> chưa có thang riêng phổ biến; thường mượn phiếu của Arabica.</li>
+        <li><b>Muốn so giống:</b> rang nhạt đến vừa, cùng một hồ sơ, nghỉ 8–24 giờ, 5 ly mỗi mẫu, nếm mù. Rang đậm che mất khác biệt.</li>
+      </ul>
+      <p class="mnote">Ghi phiếu theo <a class="lnk" href="banh-xe-huong.html">Bánh xe hương MeDili</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="p-sec">
+  <p class="eye">Hiểu nhầm hay gặp</p>
+  <h2 class="p-h2" style="margin:0">Sáu điều <em>dễ nói sai khi bán cà phê.</em></h2>
+  <div class="g3"><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 4h9l-1.2 3c3 2.2 4 6 3.2 10.2A3 3 0 0 1 15.6 20H8.4a3 3 0 0 1-2.9-2.8C4.7 13 5.7 9.2 8.7 7z"/><path d="M8.6 7h6.8"/><ellipse class="fi" cx="12" cy="13.6" rx="2" ry="3"/></svg><h3>Cà Sẻ không phải Culi</h3><p>Sẻ là giống cây. Culi là hình hạt: trái chỉ nuôi một nhân tròn, giống nào cũng có, khoảng 4–5 % một vụ. Có Culi Sẻ, Culi cao sản, Culi Arabica.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 20h12M5 7h14"/><path d="M5 7l-3 6h6zM19 7l-3 6h6z"/></svg><h3>Nhân nhỏ chưa chắc là Sẻ</h3><p>Dòng TR4 trồng ở Gia Lai chỉ 15,3 g mỗi 100 nhân, ngang Cà Sẻ. Hạn, thiếu dinh dưỡng, hái non hay sàng lấy phần nhân nhỏ đều làm nhân nhỏ đi.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="16.5" r="2.6"/><circle cx="12" cy="6.5" r="2.6"/><circle class="fi" cx="18" cy="16.5" r="2.6"/><path d="M7.4 14.2l3.2-5.4M13.4 8.8l3.2 5.4M8.6 16.5h6.8"/></svg><h3>Caffeine không chứng minh được giống</h3><p>Robusta có caffeine gần gấp đôi Arabica, nhưng trong cùng loài, caffeine đổi theo vùng, độ chín, năm. Không có ngưỡng caffeine nào tách Sẻ khỏi cao sản.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11c0-4 3-6.5 7-8M15.5 9.5c.3-2.2-.2-4.2-1-6"/><circle cx="9" cy="15.5" r="4.2" class="fi"/><circle cx="16.5" cy="13.5" r="4"/></svg><h3>“Moka” không phải tên chung của Arabica ngon</h3><p>Moka Cầu Đất là một giống Arabica cụ thể, thường được mô tả là dạng lùn của Bourbon: nhân rất nhỏ, tròn, mỗi cây chỉ khoảng 1–2 kg mỗi năm.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.2"/><path d="M15 15l5.5 5.5"/><ellipse class="fi" cx="10.5" cy="10.5" rx="2" ry="3"/></svg><h3>Màu nhân xanh không nói lên giống</h3><p>Màu đổi theo cách sơ chế, độ ẩm, thời gian kho. Đọc dáng nhân và rãnh giữa thay vì màu.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l7.5 3V12c0 4.6-3.1 7.7-7.5 9.2C7.6 19.7 4.5 16.6 4.5 12V5.8z"/><path d="M8.8 12.2l2.3 2.3 4.3-4.6"/></svg><h3>Culi không “mạnh gấp đôi”</h3><p>Culi mang thành phần của cây mẹ. Hạt tròn lăn đều nên rang đều hơn, ly có thể tròn vị hơn, nhưng không bảo đảm.</p></div></div>
+</section>
+
+<section class="card" id="ten-goi">
+  <h2>Tên gọi trên thị trường</h2>
+  <p class="lead">Nhiều tên bán hàng là tên giống, nhiều tên lại là hình hạt, tên vùng, hạng hay cách sơ chế. Hỏi đúng câu thì bớt mua nhầm.</p>
+  <div class="tw"><table class="rich ten"><thead><tr><th>Tên gọi</th><th>Thật ra là gì</th><th>Kiểm thế nào</th></tr></thead><tbody><tr><td><b>Cà Sẻ, Robusta Sẻ, Ro Sẻ, Robusta hạt nhỏ</b></td><td>Giống Robusta cũ, trồng từ hạt, nhân nhỏ. Tên dân gian, không phải tên phân loại.</td><td>Hồ sơ vườn, cây không vết ghép; cân 100 nhân; sàng.</td></tr><tr><td><b>Robusta cao sản, Ro ghép, TR4, TR9, TR11, TR14, TRS1</b></td><td>Các dòng chọn lọc năng suất cao của Viện WASI, phần lớn nhân bằng ghép.</td><td>Nhân to, đều; ở Lâm Đồng thường trên 20 g mỗi 100 nhân.</td></tr><tr><td><b>Culi</b></td><td>Hình hạt: trái chỉ có một nhân tròn. Robusta hay Arabica đều có, khoảng 4–5 % một vụ.</td><td>Đếm hạt tròn trong 100 hạt; lô culi đã tách từ 90 % trở lên.</td></tr><tr><td><b>Moka</b></td><td>Giống Arabica thường được mô tả là dạng lùn của Bourbon; nhân rất nhỏ, tròn. Có nguồn cho rằng Cầu Đất chỉ còn khoảng 500 cây thuần.</td><td>Hỏi vườn, độ cao; cân 100 nhân; giá cao vì hiếm.</td></tr><tr><td><b>Arabica Cầu Đất</b></td><td>Tên vùng, không phải tên giống. Ở đó có Typica, Bourbon, Moka, Catimor.</td><td>Hỏi giống cụ thể của lô.</td></tr><tr><td><b>Catimor</b></td><td>Arabica lai Timor Hybrid với Caturra, giống trồng nhiều ở Việt Nam.</td><td>Cây thấp, lóng ngắn; hỏi vườn.</td></tr><tr><td><b>Cà phê mít, Cherry, Chari</b></td><td>Tên chợ gọi chung nhóm Liberica và Excelsa; nay là hai loài khác nhau.</td><td>Nhân to, lệch, có móc là Liberica; dáng giọt nước là Excelsa.</td></tr><tr><td><b>Fine Robusta</b></td><td>Hạng chất lượng: từ 80 điểm theo thang chấm Fine Robusta. Không phải giống.</td><td>Hỏi phiếu chấm điểm của lô.</td></tr><tr><td><b>Honey, Natural, Washed</b></td><td>Cách sơ chế, không phải giống.</td><td>Hỏi quy trình, xem nhân và nếm.</td></tr><tr><td><b>Rang bơ, tẩm hương</b></td><td>Cách tẩm, ướp khi rang. Không nói gì về giống.</td><td>Đọc thành phần trên bao bì.</td></tr></tbody></table></div>
+</section>
+
+<section class="card" id="quy-trinh">
+  <h2>Quy trình kiểm mẫu khi mua nhân</h2>
+  <p class="lead">Mười bước MeDili dùng khi nhận mẫu. Bước 1–6 làm ở xưởng trong một buổi; bước 7–8 cần lò rang mẫu và bàn nếm; bước 9 chỉ khi cần chứng nhận.</p>
+  <div class="flowx"><div><span class="k">Bước 1</span><b>Lấy mẫu</b><p>Khoảng 300 g, trộn từ nhiều bao. Ghi mã lô và tên gọi khi chào hàng.</p></div><div><span class="k">Bước 2</span><b>Đo ẩm</b><p>Tối đa 12,5 % theo TCVN 4193. Ẩm cao thì mọi số cân đều sai.</p></div><div><span class="k">Bước 3</span><b>Soi 100 nhân</b><p>Lật mặt phẳng lên, đếm rãnh thẳng, chữ S, nhăn lệch, hạt tròn.</p></div><div><span class="k">Bước 4</span><b>Sàng</b><p>Sàng 18 (7,10 mm), 16 (6,30 mm), 13 (5,00 mm). Cân từng tầng.</p></div><div><span class="k">Bước 5</span><b>Cân 100 nhân</b><p>Nhân nguyên, không vỡ. Cân 3 lần, lấy trung bình.</p></div><div><span class="k">Bước 6</span><b>Đếm lỗi</b><p>Hạt đen, nâu, non, vỡ, tạp chất, tính phần trăm khối lượng.</p></div><div><span class="k">Bước 7</span><b>Rang mẫu</b><p>Rang nhạt đến vừa, cùng một hồ sơ cho mọi mẫu.</p></div><div><span class="k">Bước 8</span><b>Nếm</b><p>Nghỉ 8–24 giờ, 5 ly mỗi mẫu, nếm mù. Thang Fine Robusta hoặc SCA.</p></div><div><span class="k">Bước 9</span><b>Lab khi cần</b><p>Caffeine, 16-OMC bằng HPLC hoặc NMR; DNA để định danh dòng.</p></div><div><span class="k">Bước 10</span><b>Lưu mẫu</b><p>Giữ một phần mẫu đối chứng tới khi hết lô, ghi phiếu.</p></div></div>
+  <div class="cols" style="margin-top:16px">
+    <div>
+      <h3 class="h3s" style="margin-top:0">TCVN 4193:2014 cho Robusta</h3>
+      <div class="tw"><table class="rich"><thead><tr><th>Hạng</th><th>Hạt lỗi tối đa</th><th>Tạp chất tối đa</th></tr></thead><tbody><tr><td>R1 18a</td><td>10 %</td><td>0,1 %</td></tr><tr><td>R1 18b</td><td>15 %</td><td>0,5 %</td></tr><tr><td>R1 16a</td><td>14 %</td><td>0,5 %</td></tr><tr><td>R1 16b</td><td>16 %</td><td>0,5 %</td></tr><tr><td>R1 16c</td><td>18 %</td><td>0,5 %</td></tr><tr><td>R2 13a</td><td>17 %</td><td>0,5 %</td></tr><tr><td>R2 13b</td><td>20 %</td><td>0,5 %</td></tr><tr><td>R2 13c</td><td>24 %</td><td>1,0 %</td></tr><tr><td>R3</td><td>70 %</td><td>5,0 %</td></tr></tbody></table></div>
+      <p class="mnote">Tính theo phần trăm khối lượng, mẫu khoảng 300 g. Độ ẩm tối đa 12,5 %. Robusta hạng 1 được lẫn tối đa 0,5 % cà phê mít và 3 % Arabica; hạng 2, 3 tối đa 1 % và 5 %. Arabica hạng 1 không được lẫn Robusta và cà phê mít. Lỗ sàng: số 18 là 7,10 mm, 16 là 6,30 mm, 14 là 5,60 mm, 13 là 5,00 mm.</p>
+    </div>
+    <div>
+      <h3 class="h3s" style="margin-top:0">Phiếu kiểm mẫu</h3>
+      <pre class="msg" id="sheet"></pre>
+      <button class="btn small" id="cpSh" type="button">Sao chép phiếu</button> <span class="cpst" id="cpShS" role="status"></span>
+    </div>
+  </div>
+</section>
+
+<section class="card src"><p style="margin:0;font-size:.88rem;color:var(--muted);max-width:110ch"><b style="color:var(--ink)">Nguồn tổng hợp.</b> Cỗ máy là mô hình minh hoạ. Mỗi mẫu có một khoảng giá trị điển hình cho sáu chỉ số và kiểu rãnh giữa; máy tính xem số đo khớp mẫu nào nhất, theo cách cộng dồn bằng chứng của bộ phân loại Bayes đơn giản. Số có chữ “Ước” là MeDili ước cho mô hình. Với hai giống cùng loài như Cà Sẻ và cao sản, chỉ hồ sơ vườn và xét nghiệm DNA mới cho câu trả lời chắc chắn.</p><div class="lnks"><a class="lnk" href="trai-chin.html">Cỗ máy Trái chín</a><a class="lnk" href="vi-sinh.html">Cỗ máy Vi sinh</a><a class="lnk" href="tien-chat-huong.html">Cỗ máy Tiền chất hương</a><a class="lnk" href="banh-xe-huong.html">Bánh xe hương MeDili</a><a class="lnk" href="trai-ca-phe.html">Giải phẫu trái Cà Sẻ</a><a class="lnk" href="journal.html">Tất cả kiến thức cà phê</a></div></section>
+
+<section class="contact" id="lien-he"><div><img class="lgK" src="assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83"><div class="tagline">Mê vị Di Linh</div><p>Phân phối: Công ty TNHH DSunfood, 143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM.<br>Farm và xưởng rang: Thôn 11, Xã Di Linh, Lâm Đồng.</p></div><div class="zalo"><span>Zalo MeDili</span><strong data-sel>0966 770 788</strong><div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Nhắn Zalo</a><button type="button" data-copy="0966770788" data-done="Đã sao chép số">Sao chép số</button></div><small>Email: cafe@medili.vn</small></div></section>
+</div>
+<footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">Luôn có thời gian cho <em>một tách cà phê ngon.</em></p><a class="btn main" href="quan-medili.html">Hẹn nhau ở MeDili</a></div><div class="mf-grid"><div class="mf-brand"><b>Mê Cà Phê, Mê Di Linh.</b><span>Gìn giữ di sản. Chắt chiu từng hương vị.</span><small>Di Linh · Lâm Đồng · Việt Nam</small></div><nav class="mf-col" aria-label="Khám phá"><p class="mf-t">Khám phá</p><a href="cau-chuyen.html">Câu chuyện MeDili</a><a href="doi-ngu.html">Đội ngũ MeDili</a><a href="vung-trong.html">Vùng trồng Di Linh</a><a href="xuong-rang.html">Xưởng rang & năng lực</a><a href="rang.html">Phòng rang</a><a href="quay-pha.html">Quầy pha</a><a href="tim-gu.html">Tìm gu cà phê</a><a href="chiet-xuat.html">Cỗ máy Chiết xuất</a><a href="cold-brew.html">Cỗ máy Cold Brew</a><a href="journal.html">Kiến thức cà phê</a></nav><nav class="mf-col" aria-label="MeDili và bạn"><p class="mf-t">MeDili &amp; bạn</p><a href="mua-hang.html">Phòng Chọn Mua</a><a href="horeca.html">Giải pháp HORECA</a><a href="nhan-xanh.html">Nhân xanh cho khách sỉ</a><a href="gia-ca-phe.html">Giá cà phê hôm nay</a><a href="quan-medili.html">Quán MeDili Café</a><a href="lien-he.html">Liên hệ & bản đồ</a><a href="giao-hang.html">Giao hàng & đổi trả</a><a href="bao-mat.html">Chính sách bảo mật</a></nav><div class="mf-col"><p class="mf-t">Phân phối · DSunfood</p><p>Công ty TNHH DSunfood<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>Farm &amp; xưởng rang<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">Chỉ đường đến MeDili ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Nhắn Zalo MeDili ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>Medili - Farm Robusta Cà Sẻ Di Linh</i></div></div></footer>
+<script>
+(()=>{const m=document.getElementById('mhm');
+if(m){document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'Đã sao chép'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='Đã bôi đen, hãy sao chép'}
+setTimeout(()=>{b.textContent=o},2400)}))})();
+
+const $=id=>document.getElementById(id);
+const vn=(n,d=1)=>(+n).toFixed(d).replace('.',',');
+const fm=n=>Math.round(n).toLocaleString('de-DE');
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const lerp=(a,b,t)=>a+(b-a)*t;
+const NB=' ';
+const g1=n=>Number.isInteger(+n)?String(n):vn(n,1);
+const f1=n=>(+n).toFixed(1);
+const P=(x,y,z=0)=>[OX+(x-y)*.866*U,OY+(x+y)*.5*U-z*U];
+const pts=a=>a.map(q=>q.map(f1).join(',')).join(' ');
+const pa=p=>!p?'':(p[0]==='#'||p.startsWith('rgb')||p.startsWith('var('))?` style="fill:${p}"`:` class="${p}"`;
+const poly=(a,p='')=>`<polygon points="${pts(a)}"${pa(p)}/>`;
+function box(x,y,z,w,d,h,c=['f1','f2','f3']){return poly([P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[1])+poly([P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)],c[2])+poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[0])}
+const RX=r=>r*U*1.2247,RY=r=>r*U*.7071;
+function cyl(cx,cy,z,r,h,c='f2',top='f1'){const [a,b]=P(cx,cy,z),[,t]=P(cx,cy,z+h),rx=RX(r),ry=RY(r);return `<path${pa(c)} d="M${f1(a-rx)} ${f1(t)}V${f1(b)}A${f1(rx)} ${f1(ry)} 0 0 0 ${f1(a+rx)} ${f1(b)}V${f1(t)}Z"/><ellipse${pa(top)} cx="${f1(a)}" cy="${f1(t)}" rx="${f1(rx)}" ry="${f1(ry)}"/>`}
+function frus(cx,cy,z0,r0,z1,r1,c,top){const [a,b0]=P(cx,cy,z0),[,b1]=P(cx,cy,z1),x0=RX(r0),y0=RY(r0),x1=RX(r1),y1=RY(r1);return `<path${pa(c)} d="M${f1(a-x1)} ${f1(b1)}L${f1(a-x0)} ${f1(b0)}A${f1(x0)} ${f1(y0)} 0 0 0 ${f1(a+x0)} ${f1(b0)}L${f1(a+x1)} ${f1(b1)}Z"/><ellipse${pa(top)} cx="${f1(a)}" cy="${f1(b1)}" rx="${f1(x1)}" ry="${f1(y1)}"/>`}
+const sph=(cx,cy,z,r,c,id)=>{const [a,b]=P(cx,cy,z);return `<circle${id?` id="${id}"`:''}${pa(c)} cx="${f1(a)}" cy="${f1(b-r*U)}" r="${f1(r*U)}"/>`};
+const disc=(cx,cy,z,r,c)=>{const [a,b]=P(cx,cy,z);return `<ellipse${pa(c)} cx="${f1(a)}" cy="${f1(b)}" rx="${f1(RX(r))}" ry="${f1(RY(r))}"/>`};
+const face=(x,y,z)=>{const q=P(x,y,z);return `matrix(.866 .5 0 1 ${f1(q[0])} ${f1(q[1])})`};
+const faceR=(x,y,z)=>{const q=P(x,y,z);return `matrix(.866 -.5 0 1 ${f1(q[0])} ${f1(q[1])})`};
+const lcd=(x,y,z,w,id,R)=>`<g transform="${(R?faceR:face)(x,y,z)}"><rect class="lcdb" x="0" y=".8" width="${w}" height="9" rx="1.4"/><text class="lcd" id="${id}" x="${w/2}" y="7.9" text-anchor="middle"></text></g>`;
+const stG=(i,inner)=>`<g class="st m" data-i="${i}" tabindex="0" role="button" aria-label="Trạm ${i}: ${ST[i-1].n}">${inner}</g>`;
+function bench(L,D,sign,sx){let h='<g class="m">';[[3,D-3],[L-3,D-3],[L-3,3]].forEach(([x,y])=>h+=cyl(x,y,-9,1.2,5,'cu2','cu2'));h+=box(0,0,-4,L,D,4,['wo','wo2','cu2'])+'</g>';
+ const pl=P(sx,D,-.6),w=sign.length*8.3+16;
+ return h+`<g transform="matrix(.866 .5 0 1 ${f1(pl[0])} ${f1(pl[1])})"><rect width="${f1(w)}" height="24" rx="3" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:1.2"/><circle cx="8" cy="12" r="1.8" style="fill:#2A1B16"/><circle cx="${f1(w-8)}" cy="12" r="1.8" style="fill:#2A1B16"/><text class="sgn" x="${f1(w/2)}" y="17.5" text-anchor="middle">${sign}</text></g>`}
+let isOff=()=>false;
+function drawChips(){let h='';
+ for(let i=1;i<=ST.length;i++){const C=CHIP[i],l=chipLabel(i),w=40+l.length*7,x=Math.min(C.x,VBW-w-8),q=P(...ANCH[i]),off=isOff(i);
+  h+=`<polyline class="lead-l${i===st.sel?' on':''}" points="${f1(q[0])},${f1(q[1])} ${f1(x+20)},${C.y+13}"/><g class="chip${i===st.sel?' on':''}${off?' off':''}" data-c="${i}"><rect x="${f1(x+6)}" y="${C.y}" rx="8" width="${f1(w)}" height="26"/><circle cx="${f1(x+6)}" cy="${C.y+13}" r="13"/><text class="num" x="${f1(x+6)}" y="${C.y+18.5}" text-anchor="middle">${i}</text><text class="lab" x="${f1(x+26)}" y="${C.y+18}">${l}</text></g>`}
+ const el=$('chips');el.innerHTML=h;el.querySelectorAll('.chip').forEach(g=>g.addEventListener('click',()=>select(+g.dataset.c)))}
+const vf=v=>typeof v==='function'?v():v;
+function renderStation(){const s=ST[st.sel-1],off=isOff(st.sel),kv=vf(s.kv)||[];
+ document.querySelectorAll('#scene .st').forEach(g=>{const i=+g.dataset.i;g.classList.toggle('on',i===st.sel);g.classList.toggle('off',isOff(i))});
+ document.querySelectorAll('#strip button').forEach((b,n)=>{b.classList.toggle('on',n+1===st.sel);b.classList.toggle('off',isOff(n+1));b.setAttribute('aria-pressed',n+1===st.sel)});
+ $('detail').innerHTML=`<div class="dh"><div class="dn">${st.sel}</div><h2>${s.n}<small>${vf(s.sub)}${off&&s.offNote?' · '+vf(s.offNote):''}</small></h2></div><div class="dgrid"><div><span class="lbl">${s.l1||'Chuyện gì xảy ra'}</span><p>${vf(s.mech)}</p>${s.check?`<span class="lbl">${s.l2||'Đo, nhìn thế nào'}</span><p>${vf(s.check)}</p>`:''}</div><div><span class="lbl">Thông số lúc này</span><dl class="kv">${kv.map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join('')}</dl>${s.fail?`<p style="margin-top:8px"></p><span class="lbl">${s.l3||'Hiểu nhầm hay gặp'}</span><p>${vf(s.fail)}</p>`:''}${s.tip?`<span class="lbl">${s.l4||'Ở MeDili'}</span><p>${vf(s.tip)}</p>`:''}</div></div>`}
+function select(i,noScroll){st.sel=i;renderStation();drawChips();if(noScroll)return;const sc=document.querySelector('.scroller'),q=P(...ANCH[i]);if(sc.scrollWidth>sc.clientWidth)sc.scrollLeft=q[0]/VBW*sc.scrollWidth-sc.clientWidth/2}
+function initStations(){$('strip').innerHTML=ST.map((s,i)=>`<button type="button" aria-pressed="false">${i+1} ${s.n}</button>`).join('');
+ $('strip').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>select(i+1));
+ document.querySelectorAll('#scene .st').forEach(g=>{g.addEventListener('click',()=>select(+g.dataset.i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(+g.dataset.i)}})})}
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;let timer=0;
+function stopRun(){clearTimeout(timer);timer=0;$('scene').classList.remove('running')}
+function tour(seq,ms,each){stopRun();if(still){each&&each(seq.length-1);select(seq[seq.length-1]);return}
+ $('scene').classList.add('running');let k=0;
+ const step=()=>{const i=seq[k],q=P(ANCH[i][0],ANCH[i][1],ANCH[i][2]-1),t=$('tok');t.setAttribute('cx',f1(q[0]));t.setAttribute('cy',f1(q[1]));each&&each(k);select(i);k++;
+  if(k<seq.length)timer=setTimeout(step,ms||650);else timer=setTimeout(()=>$('scene').classList.remove('running'),900)};step()}
+function pills(id,items,cur,cb){$(id).innerHTML=items.map(([k,n])=>`<button class="pill" type="button" data-k="${k}" aria-pressed="${String(cur)===String(k)}">${n}</button>`).join('');$(id).querySelectorAll('button').forEach(b=>b.onclick=()=>cb(b.dataset.k))}
+function interp(p,x){if(!p.length||x<p[0][0]||x>p[p.length-1][0])return null;for(let i=1;i<p.length;i++)if(x<=p[i][0]){const [x0,y0]=p[i-1],[x1,y1]=p[i];return y0+(y1-y0)*(x-x0)/((x1-x0)||1)}return p[p.length-1][1]}
+function lineSVG(o){const {W,H,l,r,t,b}=o,X=x=>l+(x-o.x0)/(o.x1-o.x0)*(W-l-r),Y=y=>t+(1-(y-o.y0)/(o.y1-o.y0))*(H-t-b);
+ let g=o.ttl?`<text class="ttl" x="${l}" y="12">${o.ttl}</text>`:'';
+ (o.bands||[]).forEach(([a,c,lab])=>g+=`<rect x="${f1(X(a))}" y="${t}" width="${f1(Math.max(0,X(c)-X(a)))}" height="${H-t-b}" style="fill:var(--good);fill-opacity:.13"/>`);
+ (o.hb||[]).forEach(([a,c])=>g+=`<rect x="${l}" y="${f1(Y(c))}" width="${W-l-r}" height="${f1(Math.max(0,Y(a)-Y(c)))}" style="fill:var(--good);fill-opacity:.13"/>`);
+ (o.yt||[]).forEach(v=>g+=`<line x1="${l}" x2="${W-r}" y1="${f1(Y(v))}" y2="${f1(Y(v))}" style="stroke:var(--rule);stroke-width:.8"/><text x="${l-5}" y="${f1(Y(v)+3.5)}" text-anchor="end">${o.yf?o.yf(v):v}</text>`);
+ (o.xt||[]).forEach(v=>g+=`<text x="${f1(X(v))}" y="${H-5}" text-anchor="middle">${o.xf?o.xf(v):v}</text>`);
+ (o.vl||[]).forEach(([x,lab])=>g+=`<line x1="${f1(X(x))}" x2="${f1(X(x))}" y1="${t}" y2="${H-b}" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3"/>${lab?`<text x="${f1(X(x)+3)}" y="${t+10}">${lab}</text>`:''}`);
+ (o.areas||[]).forEach(s=>g+=`<polygon points="${s.p.map(([x,y])=>f1(X(x))+','+f1(Y(y))).join(' ')}" style="fill:${s.c};fill-opacity:${s.o||.9}"/>`);
+ (o.ser||[]).forEach(s=>g+=`<polyline points="${s.p.map(([x,y])=>f1(X(x))+','+f1(Y(y))).join(' ')}" fill="none" style="stroke:${s.c};stroke-width:${s.w||2};stroke-linejoin:round${s.d?`;stroke-dasharray:${s.d}`:''}"/>`);
+ if(o.vx!=null){g+=`<line x1="${f1(X(o.vx))}" x2="${f1(X(o.vx))}" y1="${t}" y2="${H-b}" style="stroke:var(--ink);stroke-width:1.1"/>`;
+  (o.ser||[]).forEach(s=>{if(s.dot===false)return;const v=interp(s.p,o.vx);if(v!=null)g+=`<circle cx="${f1(X(o.vx))}" cy="${f1(Y(v))}" r="4" style="fill:${s.c};stroke:var(--panel);stroke-width:2"/>`})}
+ if(o.end){const L=(o.ser||[]).filter(s=>s.lab).map(s=>({y:Y(s.p[s.p.length-1][1]),s:s.lab})).sort((a,c)=>a.y-c.y);for(let i=1;i<L.length;i++)if(L[i].y-L[i-1].y<12)L[i].y=L[i-1].y+12;L.forEach(e=>g+=`<text x="${W-r+5}" y="${f1(e.y+3.5)}" style="fill:var(--ink)">${e.s}</text>`)}
+ (o.bands||[]).forEach(([a,c,lab])=>{if(lab)g+=`<text x="${f1((X(a)+X(c))/2)}" y="${H-b-6}" text-anchor="middle" style="paint-order:stroke;stroke:var(--panel);stroke-width:3px;stroke-linejoin:round;fill:var(--ink)">${lab}</text>`});
+ return g}
+const legend=(id,items)=>{$(id).innerHTML=items.map(s=>s.box?`<span><i class="sw3" style="background:${s.c}"></i>${s.n}</span>`:`<span><i class="sw2${s.d?' d':''}" style="border-color:${s.c}"></i>${s.n}</span>`).join('')};
+const cw=id=>{const e=$(id);return Math.max(300,Math.round((e&&e.clientWidth)||900))};
+const cp=async(txt,el)=>{try{await navigator.clipboard.writeText(txt);$(el).textContent='Đã sao chép.'}catch(e){$(el).textContent='Không sao chép được, hãy bôi đen để chép.'}setTimeout(()=>$(el).textContent='',2600)};
+function rng(seed){let s=seed>>>0;return ()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296}}
+function gauss(r){let u=0,v=0;while(!u)u=r();while(!v)v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+const SM={"se": {"k": "se", "n": "Cà Sẻ Di Linh", "s": "Cà Sẻ", "sp": "Robusta, giống cũ", "grp": "R", "c": "var(--k1)", "prop": "Thực sinh: trồng từ hạt qua nhiều thế hệ, quần thể không đồng đều", "tree": "Mỗi cây một dáng, lá và trái khác nhau; tán thường gọn; gốc không có vết ghép.", "tc": "cây thực sinh", "cher": "Trái nhỏ, chùm dày; màu và độ chín khác nhau giữa các cây.", "cc": "nhỏ, chùm dày", "bean": "Nhỏ, chắc, lưng dày, dáng tròn ngắn.", "cutT": "Thẳng", "alt": "Khoảng 900–1.000 m, cao nguyên Di Linh", "har": "Tháng 11 tới đầu tháng 1, hái nhiều lượt", "notes": "Đậm, đắng rõ, hậu dài, thân dày; socola đen, ca cao", "cupS": "đắng đậm, hậu dài", "scale": "Fine Robusta", "prof": [6, 3, 5, 8, 8, 8], "dist": [8, 54, 33, 5], "q": {"caf": [2.4, 0.25], "lip": [10, 1], "suc": [4, 0.8], "w": [15, 1.6], "s16": [62, 9], "cu": [4, 2]}, "sh": {"a": 1.2, "asym": 0.04, "hook": 0, "pt": 0, "cut": "t"}, "Lmm": 8.6, "omc": "Cao, như mọi Robusta", "omcS": "cao", "yld": "Ước 2–3 tấn nhân/ha", "conf": "Robusta cao sản trồng ở vùng khó (nhân cũng nhỏ), hoặc lô đã sàng lấy nhân nhỏ.", "lo": [-20, -20], "tv": {"t": 3, "h": 5.6, "cr": 4.6, "n": 14, "lr": 14, "ir": 1, "seed": 3}, "cv": {"n": 14, "r": 4.2, "cols": ["#B33A24", "#C8553D", "#D9782E", "#8E2418"], "cl": 3}}, "cs": {"k": "cs", "n": "Robusta cao sản", "s": "Cao sản", "sp": "Robusta, dòng chọn lọc", "grp": "R", "c": "var(--k2)", "prop": "Ghép chồi, giâm cành: TR4, TR9, TR11, TR14, TR15; riêng TRS1 trồng bằng hạt lai", "tree": "Vườn đồng đều như đúc, gốc có vết ghép; phải trồng xen nhiều dòng vì Robusta cần thụ phấn chéo. TR9 thấp, gọn, lá non màu đồng sẫm.", "tc": "cây ghép đồng đều", "cher": "Trái to, đều trong cùng một dòng.", "cc": "to, đều", "bean": "To, đều, dáng tròn hơi dài.", "cutT": "Thẳng", "alt": "Tùy vùng: Đắk Lắk, Gia Lai, Lâm Đồng; TR9 hợp khoảng 500–800 m", "har": "Tùy dòng; TR9, TR14, TR15 chín muộn", "notes": "Đắng rõ, gỗ, ngũ cốc rang; vị nhẹ hơn Cà Sẻ", "cupS": "đắng rõ, thân vừa", "scale": "Fine Robusta", "prof": [5, 2.5, 4, 7.5, 6, 5], "dist": [45, 43, 11, 1], "q": {"caf": [2.1, 0.25], "lip": [10, 1], "suc": [4, 0.8], "w": [21, 3], "s16": [88, 6], "cu": [4, 2]}, "sh": {"a": 1.28, "asym": 0.04, "hook": 0, "pt": 0, "cut": "t"}, "Lmm": 10.1, "omc": "Cao, như mọi Robusta", "omcS": "cao", "yld": "3,7–7,3 tấn nhân/ha trong thí nghiệm", "conf": "Cà Sẻ, khi cao sản trồng ở vùng khó làm nhân nhỏ đi: TR4 ở Gia Lai chỉ 15,3 g mỗi 100 nhân.", "lo": [0, -20], "tv": {"t": 1, "h": 5, "cr": 4, "n": 10, "lr": 15, "ir": 0, "gr": 1, "seed": 7}, "cv": {"n": 11, "r": 5.6, "cols": ["#8E2418", "#9E2A1C"], "cl": 3}}, "ara": {"k": "ara", "n": "Arabica (Typica, Bourbon)", "s": "Arabica", "sp": "Arabica, giống cổ", "grp": "A", "c": "var(--k3)", "prop": "Trồng từ hạt; Arabica tự thụ phấn nên giống khá ổn định", "tree": "Typica cao, cành ngang, lá non màu đồng; lá nhỏ, bóng hơn Robusta.", "tc": "cây cao, lá nhỏ", "cher": "Trái đỏ, cỡ vừa; mỗi đốt ít trái hơn Robusta.", "cc": "vừa, thưa", "bean": "Dẹt, thuôn dài, mặt phẳng rộng.", "cutT": "Cong chữ S", "alt": "Vùng cao; Cầu Đất khoảng 1.500 m trở lên", "har": "Tùy vùng", "notes": "Hoa, cam chanh, trái cây; chua sáng, ngọt", "cupS": "chua sáng, thơm", "scale": "SCA", "prof": [8, 7, 7, 3, 5, 6], "dist": [30, 50, 18, 2], "q": {"caf": [1.2, 0.15], "lip": [16, 1], "suc": [8, 1], "w": [18, 1.6], "s16": [80, 7], "cu": [4, 2]}, "sh": {"a": 1.45, "asym": 0.06, "hook": 0, "pt": 0, "cut": "s"}, "Lmm": 10.4, "omc": "Chỉ ở mức vết", "omcS": "vết", "yld": "Thấp; Typica Cầu Đất chỉ khoảng 2,5–3 tấn mỗi năm cả vùng", "conf": "Catimor: cùng loài, hình nhân gần như giống nhau.", "lo": [14, -15], "tv": {"t": 1, "h": 7.4, "cr": 3.8, "n": 10, "lr": 14, "tier": 1, "br": 1, "seed": 11}, "cv": {"n": 7, "r": 5.8, "cols": ["#B33A24", "#C0432A"], "cl": 2}}, "cat": {"k": "cat", "n": "Catimor", "s": "Catimor", "sp": "Arabica, giống lai", "grp": "A", "c": "var(--k4)", "prop": "Lai Timor Hybrid với Caturra, tạo ở Bồ Đào Nha năm 1959", "tree": "Cây thấp, lóng đốt ngắn, tán gọn; kháng gỉ sắt nhờ gen Robusta trong Timor Hybrid.", "tc": "cây thấp, lóng ngắn", "cher": "Trái đỏ, cỡ vừa, sai trái.", "cc": "vừa, sai", "bean": "Dẹt, thuôn, cỡ vừa đến to.", "cutT": "Cong chữ S", "alt": "Sơn La, Lâm Đồng, Quảng Trị…", "har": "Tùy vùng", "notes": "Hạt, thảo mộc, anh đào, quả mọng; chua vừa", "cupS": "chua vừa, thảo mộc", "scale": "SCA", "prof": [6, 6, 5, 4, 5, 5], "dist": [25, 53, 20, 2], "q": {"caf": [1.3, 0.15], "lip": [15, 1.2], "suc": [7, 1], "w": [17, 1.6], "s16": [78, 8], "cu": [4, 2]}, "sh": {"a": 1.42, "asym": 0.06, "hook": 0, "pt": 0, "cut": "s"}, "Lmm": 10.0, "omc": "Chỉ ở mức vết", "omcS": "vết", "yld": "1,67 tấn nhân/ha, đối chứng trong thí nghiệm giống", "conf": "Arabica giống cổ: hình nhân gần như giống nhau.", "lo": [-34, -12], "tv": {"t": 1, "h": 3.6, "cr": 3.5, "n": 14, "lr": 11, "seed": 13}, "cv": {"n": 9, "r": 5.4, "cols": ["#B33A24", "#C0432A"], "cl": 3}}, "mok": {"k": "mok", "n": "Moka Cầu Đất", "s": "Moka", "sp": "Arabica, nhóm Bourbon", "grp": "A", "c": "var(--k5)", "prop": "Trồng từ hạt; thường được mô tả là dạng lùn của Bourbon", "tree": "Cây nhỏ, ít lá, nhìn gầy; dạng Mokka gốc mọc rậm như hàng rào.", "tc": "cây lùn, nhỏ", "cher": "Trái nhỏ, tròn.", "cc": "nhỏ, tròn", "bean": "Rất nhỏ, tròn như hạt đậu.", "cutT": "Cong, ngắn", "alt": "Khoảng 1.500–1.600 m, Cầu Đất", "har": "Tùy vụ", "notes": "Vỏ quýt, hạnh nhân, dâu, vani; có nguồn tả socola, trái khô, gia vị", "cupS": "thơm nồng, chua thanh", "scale": "SCA", "prof": [9, 7, 8, 3, 6, 7], "dist": [3, 27, 55, 15], "q": {"caf": [0.9, 0.25], "lip": [16, 1], "suc": [8, 1], "w": [11.5, 1.5], "s16": [30, 10], "cu": [6, 3]}, "sh": {"a": 1.12, "asym": 0.03, "hook": 0, "pt": 0, "cut": "s"}, "Lmm": 7.5, "omc": "Chỉ ở mức vết", "omcS": "vết", "yld": "Khoảng 1–2 kg mỗi cây mỗi năm", "conf": "Arabica thường được gọi chung là “Moka” cho dễ bán.", "lo": [0, -20], "tv": {"t": 1, "h": 3.2, "cr": 2.8, "n": 7, "lr": 9, "ir": 0.5, "seed": 17}, "cv": {"n": 7, "r": 4.4, "cols": ["#B33A24", "#9E2A1C"], "cl": 2}}, "culi": {"k": "culi", "n": "Culi (hạt tròn)", "s": "Culi", "sp": "Hình dạng hạt, có ở mọi giống", "grp": "R", "c": "var(--k6)", "prop": "Không phải giống: trái chỉ nuôi một nhân thay vì hai", "tree": "Theo cây mẹ; vườn nào cũng có.", "tc": "theo cây mẹ", "cher": "Nhìn ngoài như trái thường.", "cc": "như thường", "bean": "Tròn đều, không có mặt phẳng.", "cutT": "Một đường dọc thân tròn", "alt": "Theo vườn", "har": "Theo vườn", "notes": "Theo cây mẹ; hạt tròn rang đều hơn, vị có thể tròn hơn nhưng không bảo đảm", "cupS": "theo cây mẹ", "scale": "Theo loài của cây mẹ", "prof": [6, 3, 5, 7.5, 7.5, 7], "dist": [10, 35, 45, 10], "q": {"caf": [2.3, 0.3], "lip": [10, 1], "suc": [4, 0.8], "w": [15.5, 2], "s16": [45, 15], "cu": [92, 5]}, "sh": {"a": 1.32, "asym": 0, "hook": 0, "pt": 0, "cut": "p"}, "Lmm": 8.0, "omc": "Theo loài của cây mẹ", "omcS": "theo cây mẹ", "yld": "Khoảng 4–5 % sản lượng một vụ", "conf": "Cà Sẻ: Sẻ là giống, Culi là hình hạt. Có Culi Sẻ, Culi cao sản, Culi Arabica.", "lo": [26, 24], "tv": {"t": 2, "h": 5.2, "cr": 4.2, "n": 12, "lr": 13, "ir": 0.6, "seed": 19}, "cv": {"n": 11, "r": 4.6, "cols": ["#B33A24", "#C8553D"], "cl": 3}}, "lib": {"k": "lib", "n": "Liberica (cà phê mít)", "s": "Liberica", "sp": "Coffea liberica", "grp": "L", "c": "var(--k7)", "prop": "Loài riêng; cây gỗ thật, rễ cọc sâu", "tree": "Cây gỗ lớn, lá to, dày, rễ cọc sâu.", "tc": "cây gỗ cao, lá to", "cher": "Trái to, vỏ dày, nhiều thịt quả: thịt và nhân khoảng 60 : 40.", "cc": "to, vỏ dày", "bean": "To nhất trong các loài: dài khoảng 11,5 mm, dáng lệch, đầu nhọn có móc.", "cutT": "Nhăn, lệch", "alt": "Kon Tum, Quảng Trị, Lâm Đồng; khoảng 800 m", "har": "Theo vùng", "notes": "Mít chín, xoài, vải, chanh dây khi chế biến tốt; gỗ, da thuộc khi chế biến kém", "cupS": "mít chín, nhiệt đới", "scale": "Chưa có thang riêng phổ biến", "prof": [7.5, 3, 6.5, 5, 7, 6], "dist": [60, 33, 6, 1], "q": {"caf": [1.2, 0.2], "lip": [12, 2.5], "suc": [5.5, 1.5], "w": [22, 2], "s16": [93, 4], "cu": [3, 2]}, "sh": {"a": 1.52, "asym": 0.32, "hook": 1, "pt": 0.5, "cut": "r"}, "Lmm": 11.5, "omc": "Chưa rõ", "omcS": "?", "yld": "Chưa có số tin cậy ở Việt Nam", "conf": "Excelsa: cùng bị gọi chung là cà phê mít.", "lo": [0, -16], "tv": {"t": 1, "h": 9.5, "cr": 5.2, "n": 10, "lr": 20, "tw": 0.6, "seed": 23}, "cv": {"n": 4, "r": 8.5, "cols": ["#C8553D", "#D9782E", "#B33A24"], "cl": 2}}, "exc": {"k": "exc", "n": "Excelsa (Chari)", "s": "Excelsa", "sp": "Coffea dewevrei", "grp": "L", "c": "var(--k8)", "prop": "Từng được xếp là một thứ của Liberica; nghiên cứu gen năm 2025 tách thành loài riêng", "tree": "Cây cao tới khoảng 15 m, lá dày dai, rễ sâu; chịu hạn, ít sâu bệnh.", "tc": "cây gỗ cao", "cher": "Trái và nhân nhỏ hơn Liberica, vỏ trấu mỏng hơn.", "cc": "vừa, đỏ sẫm", "bean": "Cỡ vừa, dáng giọt nước hơi lệch.", "cutT": "Hơi nhăn, lệch", "alt": "Có trồng ở Việt Nam, Ấn Độ, Indonesia", "har": "Theo vùng", "notes": "Chua kiểu trái cây, trái sẫm, socola, gia vị, hạt phỉ; ít đắng", "cupS": "chua trái cây, ít đắng", "scale": "Chưa có thang riêng phổ biến", "prof": [7, 7, 6, 3, 5, 6], "dist": [25, 50, 22, 3], "q": {"caf": [1.2, 0.25], "lip": [12, 2.5], "suc": [5.5, 1.5], "w": [17.5, 2], "s16": [75, 10], "cu": [3, 2]}, "sh": {"a": 1.36, "asym": 0.22, "hook": 0, "pt": 0.45, "cut": "r"}, "Lmm": 9.9, "omc": "Chưa rõ", "omcS": "?", "yld": "Cao hơn Liberica khi điều kiện tốt", "conf": "Liberica: cùng bị gọi chung là cà phê mít.", "lo": [22, 26], "tv": {"t": 1, "h": 8.6, "cr": 4.8, "n": 10, "lr": 18, "tw": 0.5, "seed": 29}, "cv": {"n": 6, "r": 6.6, "cols": ["#A8321F", "#B33A24"], "cl": 2}}};const QZ=[{"id": "hinh", "n": "Hình nhân xanh", "h": "Lật mặt phẳng lên, nhìn dáng nhân.", "o": [{"id": "tron", "t": "Tròn đều, không có mặt phẳng", "w": {"se": 0.05, "cs": 0.05, "ara": 0.03, "cat": 0.03, "mok": 0.25, "culi": 0.95, "lib": 0.02, "exc": 0.05}}, {"id": "gu", "t": "Dẹt một mặt, tròn ngắn, lưng dày", "w": {"se": 0.9, "cs": 0.85, "ara": 0.1, "cat": 0.15, "mok": 0.2, "culi": 0.1, "lib": 0.05, "exc": 0.2}}, {"id": "thuon", "t": "Dẹt, thuôn dài, mặt phẳng rộng", "w": {"se": 0.05, "cs": 0.15, "ara": 0.9, "cat": 0.85, "mok": 0.1, "culi": 0.05, "lib": 0.15, "exc": 0.3}}, {"id": "dau", "t": "Rất nhỏ, tròn như hạt đậu", "w": {"se": 0.15, "cs": 0.03, "ara": 0.03, "cat": 0.05, "mok": 0.9, "culi": 0.2, "lib": 0.01, "exc": 0.05}}, {"id": "moc", "t": "Rất to, lệch, đầu nhọn có móc", "w": {"se": 0.01, "cs": 0.03, "ara": 0.02, "cat": 0.02, "mok": 0.01, "culi": 0.02, "lib": 0.9, "exc": 0.25}}, {"id": "giot", "t": "Cỡ vừa, dáng giọt nước hơi lệch", "w": {"se": 0.05, "cs": 0.05, "ara": 0.1, "cat": 0.1, "mok": 0.05, "culi": 0.05, "lib": 0.3, "exc": 0.8}}]}, {"id": "ranh", "n": "Rãnh giữa", "h": "Đường rãnh trên mặt phẳng của nhân.", "o": [{"id": "t", "t": "Thẳng, gọn", "w": {"se": 0.9, "cs": 0.9, "ara": 0.1, "cat": 0.15, "mok": 0.25, "culi": 0.1, "lib": 0.1, "exc": 0.2}}, {"id": "s", "t": "Cong chữ S", "w": {"se": 0.1, "cs": 0.1, "ara": 0.9, "cat": 0.85, "mok": 0.7, "culi": 0.1, "lib": 0.15, "exc": 0.3}}, {"id": "r", "t": "Nhăn, lệch, không đều", "w": {"se": 0.05, "cs": 0.05, "ara": 0.05, "cat": 0.05, "mok": 0.05, "culi": 0.05, "lib": 0.85, "exc": 0.7}}, {"id": "p", "t": "Không có mặt phẳng", "w": {"se": 0.02, "cs": 0.02, "ara": 0.02, "cat": 0.02, "mok": 0.1, "culi": 0.95, "lib": 0.02, "exc": 0.02}}]}, {"id": "co", "n": "Cỡ nhân", "h": "Lỗ sàng 16 là 6,30 mm, sàng 13 là 5,00 mm.", "o": [{"id": "nho", "t": "Nhỏ: lọt sàng 16, nằm trên sàng 13", "w": {"se": 0.55, "cs": 0.12, "ara": 0.15, "cat": 0.2, "mok": 0.85, "culi": 0.5, "lib": 0.02, "exc": 0.15}}, {"id": "vua", "t": "Vừa: nằm trên sàng 16", "w": {"se": 0.4, "cs": 0.45, "ara": 0.5, "cat": 0.55, "mok": 0.15, "culi": 0.4, "lib": 0.1, "exc": 0.45}}, {"id": "to", "t": "To: nằm trên sàng 18", "w": {"se": 0.08, "cs": 0.45, "ara": 0.35, "cat": 0.25, "mok": 0.02, "culi": 0.15, "lib": 0.4, "exc": 0.35}}, {"id": "rto", "t": "Rất to: dài từ 11 mm", "w": {"se": 0.01, "cs": 0.03, "ara": 0.03, "cat": 0.02, "mok": 0.01, "culi": 0.02, "lib": 0.85, "exc": 0.15}}]}, {"id": "mui", "n": "Mùi bột vừa xay", "h": "Ngửi khô ngay sau khi xay.", "o": [{"id": "soco", "t": "Socola đen, ca cao, hạt rang", "w": {"se": 0.85, "cs": 0.55, "ara": 0.3, "cat": 0.35, "mok": 0.45, "culi": 0.7, "lib": 0.2, "exc": 0.3}}, {"id": "hoa", "t": "Hoa, cam chanh, trái cây tươi", "w": {"se": 0.15, "cs": 0.08, "ara": 0.85, "cat": 0.55, "mok": 0.8, "culi": 0.15, "lib": 0.2, "exc": 0.3}}, {"id": "mit", "t": "Mít chín, trái nhiệt đới, gỗ", "w": {"se": 0.05, "cs": 0.05, "ara": 0.05, "cat": 0.05, "mok": 0.05, "culi": 0.05, "lib": 0.9, "exc": 0.3}}, {"id": "sam", "t": "Trái sẫm, chua lên men, gia vị", "w": {"se": 0.1, "cs": 0.08, "ara": 0.25, "cat": 0.25, "mok": 0.35, "culi": 0.1, "lib": 0.3, "exc": 0.85}}, {"id": "coc", "t": "Ngũ cốc, đất, gỗ khô", "w": {"se": 0.3, "cs": 0.7, "ara": 0.05, "cat": 0.2, "mok": 0.03, "culi": 0.45, "lib": 0.15, "exc": 0.1}}, {"id": "tm", "t": "Thảo mộc, lá, hăng nhẹ", "w": {"se": 0.1, "cs": 0.25, "ara": 0.1, "cat": 0.6, "mok": 0.05, "culi": 0.15, "lib": 0.1, "exc": 0.15}}]}, {"id": "chua", "n": "Độ chua", "h": "Nếm khi ly nguội còn khoảng 60 °C.", "o": [{"id": "khong", "t": "Gần như không", "w": {"se": 0.3, "cs": 0.7, "ara": 0.03, "cat": 0.05, "mok": 0.05, "culi": 0.5, "lib": 0.5, "exc": 0.05}}, {"id": "thap", "t": "Thấp, chua thanh nhẹ", "w": {"se": 0.7, "cs": 0.3, "ara": 0.2, "cat": 0.35, "mok": 0.3, "culi": 0.5, "lib": 0.45, "exc": 0.25}}, {"id": "ro", "t": "Rõ, sáng", "w": {"se": 0.1, "cs": 0.05, "ara": 0.9, "cat": 0.7, "mok": 0.85, "culi": 0.1, "lib": 0.1, "exc": 0.45}}, {"id": "chat", "t": "Chua chát kiểu trái cây sẫm", "w": {"se": 0.05, "cs": 0.05, "ara": 0.2, "cat": 0.35, "mok": 0.2, "culi": 0.05, "lib": 0.15, "exc": 0.85}}]}, {"id": "dang", "n": "Vị đắng", "h": "", "o": [{"id": "rr", "t": "Rất rõ, kéo dài", "w": {"se": 0.75, "cs": 0.7, "ara": 0.03, "cat": 0.1, "mok": 0.03, "culi": 0.65, "lib": 0.2, "exc": 0.05}}, {"id": "ro", "t": "Rõ, vừa phải", "w": {"se": 0.3, "cs": 0.35, "ara": 0.3, "cat": 0.55, "mok": 0.3, "culi": 0.4, "lib": 0.65, "exc": 0.4}}, {"id": "nhe", "t": "Nhẹ", "w": {"se": 0.03, "cs": 0.03, "ara": 0.85, "cat": 0.5, "mok": 0.85, "culi": 0.05, "lib": 0.3, "exc": 0.75}}]}, {"id": "than", "n": "Thể chất", "h": "Cảm giác dày, sánh trong miệng.", "o": [{"id": "day", "t": "Dày, sánh", "w": {"se": 0.8, "cs": 0.4, "ara": 0.2, "cat": 0.2, "mok": 0.5, "culi": 0.65, "lib": 0.7, "exc": 0.2}}, {"id": "vua", "t": "Vừa", "w": {"se": 0.3, "cs": 0.6, "ara": 0.65, "cat": 0.65, "mok": 0.55, "culi": 0.45, "lib": 0.4, "exc": 0.55}}, {"id": "mong", "t": "Nhẹ, mỏng", "w": {"se": 0.05, "cs": 0.15, "ara": 0.45, "cat": 0.4, "mok": 0.2, "culi": 0.1, "lib": 0.1, "exc": 0.5}}]}, {"id": "hau", "n": "Hậu vị", "h": "Vị còn lại sau khi nuốt.", "o": [{"id": "dai", "t": "Dài, đậm", "w": {"se": 0.8, "cs": 0.3, "ara": 0.55, "cat": 0.3, "mok": 0.7, "culi": 0.6, "lib": 0.55, "exc": 0.45}}, {"id": "vua", "t": "Vừa", "w": {"se": 0.3, "cs": 0.5, "ara": 0.55, "cat": 0.55, "mok": 0.4, "culi": 0.45, "lib": 0.5, "exc": 0.55}}, {"id": "ngan", "t": "Ngắn, khô, chát", "w": {"se": 0.1, "cs": 0.45, "ara": 0.1, "cat": 0.35, "mok": 0.05, "culi": 0.2, "lib": 0.2, "exc": 0.2}}]}, {"id": "cay", "n": "Cây ngoài vườn", "h": "Nếu xem được vườn hay ảnh vườn.", "o": [{"id": "thuc", "t": "Thực sinh lâu năm, mỗi cây một dáng", "w": {"se": 0.9, "cs": 0.1, "ara": 0.15, "cat": 0.05, "mok": 0.1, "culi": 0.5, "lib": 0.1, "exc": 0.1}}, {"id": "ghep", "t": "Cây ghép đồng đều, trồng xen nhiều dòng", "w": {"se": 0.08, "cs": 0.9, "ara": 0.03, "cat": 0.05, "mok": 0.02, "culi": 0.5, "lib": 0.02, "exc": 0.02}}, {"id": "thap", "t": "Cây bụi thấp, lóng ngắn, lá nhỏ bóng", "w": {"se": 0.03, "cs": 0.05, "ara": 0.3, "cat": 0.9, "mok": 0.3, "culi": 0.15, "lib": 0.02, "exc": 0.02}}, {"id": "dong", "t": "Cây cao, cành ngang, lá non màu đồng", "w": {"se": 0.03, "cs": 0.03, "ara": 0.8, "cat": 0.05, "mok": 0.1, "culi": 0.05, "lib": 0.05, "exc": 0.05}}, {"id": "lun", "t": "Cây nhỏ, lùn, nhân rất nhỏ", "w": {"se": 0.02, "cs": 0.02, "ara": 0.05, "cat": 0.1, "mok": 0.9, "culi": 0.05, "lib": 0.02, "exc": 0.02}}, {"id": "go", "t": "Cây gỗ cao trên 5 m, lá to dày", "w": {"se": 0.03, "cs": 0.02, "ara": 0.02, "cat": 0.01, "mok": 0.01, "culi": 0.05, "lib": 0.9, "exc": 0.9}}]}];const PRE={"se": {"hinh": "gu", "ranh": "t", "co": "nho", "mui": "soco", "chua": "thap", "dang": "rr", "than": "day", "hau": "dai", "cay": "thuc"}, "cs": {"hinh": "gu", "ranh": "t", "co": "to", "mui": "coc", "chua": "khong", "dang": "rr", "than": "vua", "hau": "ngan", "cay": "ghep"}, "ara": {"hinh": "thuon", "ranh": "s", "co": "vua", "mui": "hoa", "chua": "ro", "dang": "nhe", "than": "vua", "hau": "dai", "cay": "dong"}, "cat": {"hinh": "thuon", "ranh": "s", "co": "vua", "mui": "tm", "chua": "ro", "dang": "ro", "than": "vua", "hau": "vua", "cay": "thap"}, "mok": {"hinh": "dau", "ranh": "s", "co": "nho", "mui": "hoa", "chua": "ro", "dang": "nhe", "than": "vua", "hau": "dai", "cay": "lun"}, "culi": {"hinh": "tron", "ranh": "p", "co": "nho", "mui": "soco", "chua": "thap", "dang": "rr", "than": "day", "hau": "dai"}, "lib": {"hinh": "moc", "ranh": "r", "co": "rto", "mui": "mit", "chua": "thap", "dang": "ro", "than": "day", "hau": "vua", "cay": "go"}, "exc": {"hinh": "giot", "ranh": "r", "co": "vua", "mui": "sam", "chua": "chat", "dang": "nhe", "than": "vua", "hau": "vua", "cay": "go"}};const ROB=[["TR4", "dl", 18.4, 80.0], ["TR9", "dl", 22.5, 94.3], ["TR11", "dl", 18.3, 88.2], ["TR14", "dl", 20.9, 97.8], ["TR15", "dl", 24.9, 98.1], ["TR16", "dl", 20.0, 94.3], ["TR6", "dl", 19.4, 92.7], ["TR4", "gl", 15.3, 63.2], ["TR9", "gl", 17.0, 75.0], ["TR11", "gl", 15.7, 65.0], ["TR14", "gl", 20.5, 95.4], ["TR15", "gl", 22.0, 97.9], ["TR16", "gl", 19.1, 93.2], ["TR6", "gl", 18.4, 91.5], ["TR4", "ld", 21.6, 86.9], ["TR9", "ld", 29.6, 99.2], ["TR11", "ld", 22.8, 95.8], ["TR14", "ld", 22.4, 95.7], ["TR15", "ld", 23.5, 96.3], ["TR16", "ld", 20.2, 91.2], ["TR6", "ld", 19.2, 90.0], ["TRS1", "all", 19.1, 85.3]];const RG={"dl": ["Đắk Lắk", "var(--k2)"], "gl": ["Gia Lai", "var(--k4)"], "ld": ["Lâm Đồng", "var(--k3)"], "all": ["TRS1, trung bình 4 vùng", "var(--k5)"]};
+
+const U=7,OX=196,OY=118,VBW=1040;
+const ORD=['se','cs','ara','cat','mok','culi','lib','exc'];
+const FE=['w','s16','cu','caf','lip','suc'];
+const FN={w:['100 nhân','g',1],s16:['Trên sàng 16','%',0],cu:['Hạt tròn','%',0],caf:['Caffeine','%',2],lip:['Chất béo','%',1],suc:['Sucrose','%',1]};
+const CUTN={t:'rãnh thẳng',s:'rãnh chữ S',r:'rãnh nhăn, lệch',p:'tròn, không mặt phẳng'},CUTS={t:'rãnh thẳng',s:'rãnh chữ S',r:'rãnh nhăn',p:'tròn, culi'};
+const CUTL={};QZ.find(q=>q.id==='ranh').o.forEach(o=>CUTL[o.id]=o.w);
+const pc=v=>clamp(Math.round(v*100),0,99);
+const st={k:'se',mode:'ref',hid:null,mm:null,am:11.8,rev:false,myN:0,own:null,cut:null,lab:true,step:8,sel:1,qa:{...PRE.se},pa:'se',pb:'cs',rb:'cs'};
+let R={};
+function means(k){const m={};FE.forEach(f=>m[f]=SM[k].q[f][0]);return m}
+function post(m,lab,cut){const lp={};
+ ORD.forEach(k=>{const q=SM[k].q;let l=0;
+  ['w','s16','cu'].concat(lab?['caf','lip','suc']:[]).forEach(f=>{const mu=q[f][0],sd=q[f][1],z=(m[f]-mu)/sd;l+=-.5*z*z-Math.log(sd)});
+  if(cut&&CUTL[cut])l+=Math.log(CUTL[cut][k]);lp[k]=l});
+ const mx=Math.max(...ORD.map(k=>lp[k]));let t=0;const e={};ORD.forEach(k=>{e[k]=Math.exp(lp[k]-mx);t+=e[k]});
+ return ORD.map(k=>({k,p:e[k]/t})).sort((a,b)=>b.p-a.p)}
+function calc(){let V;
+ if(st.mode==='ref')V={vis:st.k,m:means(st.k),cut:SM[st.k].sh.cut,lab:true,am:11.8,name:SM[st.k].n};
+ else if(st.mode==='myst')V={vis:st.hid,m:st.mm,cut:SM[st.hid].sh.cut,lab:true,am:st.am,name:st.rev?SM[st.hid].n:'Mẫu bí ẩn số '+st.myN};
+ else V={vis:null,m:st.own,cut:st.cut,lab:st.lab,am:12,name:'Lô của bạn'};
+ const P=post(V.m,V.lab,V.cut);R={V,P,t:P[0]};return R}
+const S_=()=>R.V.vis?SM[R.V.vis]:null;
+isOff=i=>st.mode==='own'&&(i===1||i===2||i===7||(i===6&&!st.lab)||(i===3&&!st.cut));
+function bins(){const V=R.V,m=V.m,b=V.vis?SM[V.vis].dist:null;
+ if(st.mode==='ref')return b.slice();
+ const r18=b?b[0]/(b[0]+b[1]):clamp((m.w-12)/16,.04,.75),r13=b?b[2]/((b[2]+b[3])||1):.85,s=clamp(m.s16,0,100);
+ return [s*r18,s*(1-r18),(100-s)*r13,(100-s)*(1-r13)]}
+
+/* ====== HÌNH NHÂN ====== */
+function beanG(sh,cx,cy,L){const a=sh.a,Wd=L/a,n=64,pt=sh.pt||0,p=[];
+ for(let i=0;i<n;i++){const t=i/n*Math.PI*2,c=Math.cos(t),s=Math.sin(t),pw=1+pt*Math.max(0,-s);
+  let x=Wd/2*Math.sign(c)*Math.pow(Math.abs(c),pw)*(1+.07*s)*(1+(sh.asym||0)*(c>0?1:-.6)*Math.max(0,-s));const y=L/2*s;
+  if(sh.hook)x+=Wd*.3*Math.pow(Math.max(0,-s),5)
+  p.push([cx+x,cy+y])}
+ let g=`<polygon class="cbn" points="${p.map(q=>q.map(f1).join(',')).join(' ')}"/>`;
+ const T=L*.37;
+ if(sh.cut==='p')g+=`<ellipse class="cbh" cx="${f1(cx-Wd*.12)}" cy="${f1(cy-L*.1)}" rx="${f1(Wd*.26)}" ry="${f1(L*.3)}"/><path class="cbc" d="M${f1(cx-Wd*.06)} ${f1(cy-L*.42)}C${f1(cx+Wd*.34)} ${f1(cy-L*.15)} ${f1(cx+Wd*.34)} ${f1(cy+L*.15)} ${f1(cx-Wd*.06)} ${f1(cy+L*.42)}"/>`;
+ else{g+=`<ellipse class="cbh" cx="${f1(cx-Wd*.22)}" cy="${f1(cy-L*.1)}" rx="${f1(Wd*.11)}" ry="${f1(L*.22)}"/>`;
+  if(sh.cut==='t')g+=`<path class="cbc" d="M${f1(cx+.4)} ${f1(cy-T)}Q${f1(cx+1.4)} ${f1(cy)} ${f1(cx+.4)} ${f1(cy+T)}"/>`;
+  else if(sh.cut==='s')g+=`<path class="cbc" d="M${f1(cx)} ${f1(cy-T)}C${f1(cx+Wd*.3)} ${f1(cy-T*.35)} ${f1(cx-Wd*.3)} ${f1(cy+T*.35)} ${f1(cx)} ${f1(cy+T)}"/>`;
+  else{const J=[.05,-.03,.045,-.05,.02,-.04,.05,-.02,.035,-.03,0];let d=`M${f1(cx+(sh.hook?Wd*.08:0))} ${f1(cy-T)}`;for(let k=1;k<=10;k++){const yy=cy-T+2*T*k/10,xx=cx+(sh.hook?Wd*.08*(1-k/10):0)+J[k]*Wd+(sh.asym||0)*Wd*.18*Math.sin(k/10*Math.PI);d+=`L${f1(xx)} ${f1(yy)}`}g+=`<path class="cbc" d="${d}"/>`}}
+ return g}
+
+/* ====== 8 TRẠM ====== */
+const ST=[
+ {n:'Vườn và cây',sub:()=>S_()?S_().tc:'chưa xem vườn',offNote:'chưa có quan sát',
+  mech:'Bằng chứng đầu tiên nằm ngoài vườn. Cây mọc từ hạt (thực sinh) mỗi cây một dáng, lá và trái khác nhau; cây ghép giống nhau như đúc vì cùng một dòng. Arabica là cây bụi lá nhỏ, bóng; Liberica và Excelsa là cây gỗ cao, lá to, dày.',
+  check:'Nhìn gốc: vết ghép là một gờ hay chỗ lệch thân gần mặt đất. Đi một hàng 20 cây: dáng, lá, trái khác nhau nhiều là dấu hiệu cây thực sinh.',
+  kv:()=>{const S=S_();return S?[['Nhân giống',S.prop],['Cây',S.tree],['Vùng',S.alt]]:[['Quan sát','Chưa có. Điền ở Máy nhận diện bằng giác quan.']]},
+  fail:'Tin lời “cây Sẻ” mà không xem vườn. Nhân đã rời vườn thì phân tích hoá học cũng khó tách Cà Sẻ với cao sản.',
+  tip:'Vườn MeDili canh tác từ năm 2010, cây 15 năm tuổi, chăm theo hướng tự nhiên; mỗi lô ghi mã vườn.'},
+ {n:'Trái chín',sub:()=>S_()?'Trái '+S_().cc:'chưa xem trái',offNote:'chưa có quan sát',
+  mech:'Trái cho thêm manh mối. Robusta trái nhỏ, mọc thành chùm dày dọc cành; Arabica mỗi đốt ít trái hơn; Liberica trái to, vỏ dày, nhiều thịt quả. Dòng ghép cao sản trái to và đều; cây thực sinh trái khác nhau giữa các cây.',
+  check:'Lấy 100 trái chín ngẫu nhiên, ghi màu, cỡ, số trái mỗi chùm. Trái xanh lẫn nhiều làm nhân nhỏ, nhẹ, dễ đoán sai giống.',
+  kv:()=>{const S=S_();return S?[['Trái',S.cher],['Mùa hái',S.har]]:[['Quan sát','Chưa có.']]},
+  fail:'Đoán giống theo màu trái: cùng một giống, màu khi chín đổi theo độ chín và nắng.',
+  tip:'MeDili hái nhiều lượt từ tháng 11 tới đầu tháng 1, trái xanh tối đa 5 %. Xem Cỗ máy Trái chín.'},
+ {n:'Bàn soi nhân',sub:()=>R.V.cut?CUTN[R.V.cut]:'chưa soi',offNote:'chọn kiểu rãnh ở khung bên phải',
+  mech:'Mặt phẳng của nhân là chỗ dễ đọc nhất. Robusta: nhân tròn ngắn, rãnh giữa thẳng. Arabica: nhân dẹt, thuôn, rãnh cong chữ S. Liberica: to, lệch, đầu nhọn có móc, rãnh nhăn. Culi: tròn đều, không có mặt phẳng.',
+  check:'Rải 100 nhân trên nền sáng, lật mặt phẳng lên, đếm theo bốn nhóm: rãnh thẳng, chữ S, nhăn lệch, hạt tròn.',
+  kv:()=>{const S=S_();return [['Dáng nhân',S?S.bean:'—'],['Rãnh giữa',R.V.cut?CUTN[R.V.cut]:'chưa soi'],['Dài, ước',S?vn(S.Lmm,1)+NB+'mm':'—']]},
+  fail:'Dựa vào màu nhân xanh: màu đổi theo sơ chế, độ ẩm và thời gian kho, không theo giống.',
+  tip:'Đếm luôn hạt lạ. Theo TCVN 4193, Robusta hạng 1 chỉ được lẫn tối đa 3 % Arabica và 0,5 % cà phê mít.'},
+ {n:'Sàng phân cỡ',sub:()=>`Trên sàng 16: ${vn(R.V.m.s16,0)}${NB}%`,
+  mech:'Sàng lỗ tròn chia nhân theo bề ngang: sàng 18 lỗ 7,10 mm, sàng 16 lỗ 6,30 mm, sàng 13 lỗ 5,00 mm. Các dòng TR trồng ở Lâm Đồng có 87–99 % nhân nằm trên sàng 16; Cà Sẻ nhân nhỏ nên phần lớn nằm ở sàng 13–16.',
+  check:'Mẫu 300 g, lắc chồng sàng 2–3 phút, cân từng tầng rồi chia cho tổng.',
+  kv:()=>{const d=bins();return [['Trên sàng 18',vn(d[0],0)+NB+'%'],['Sàng 16–18',vn(d[1],0)+NB+'%'],['Sàng 13–16',vn(d[2],0)+NB+'%'],['Lọt sàng 13',vn(d[3],0)+NB+'%']]},
+  fail:'Đem lô đã sàng lấy nhân nhỏ ra so: lô nhân nhỏ của cao sản cũng toàn nhân nhỏ.',
+  tip:'Ghi phân bố cỡ nhân mỗi vụ để có số chuẩn riêng cho Cà Sẻ của vườn.'},
+ {n:'Cân 100 nhân',sub:()=>`${vn(R.V.m.w,1)}${NB}g mỗi 100 nhân`,
+  mech:'Khối lượng 100 nhân gộp cả cỡ và độ chắc. Trong các thí nghiệm giống, các dòng TR trồng ở Lâm Đồng nặng 19,2–29,6 g; cũng các dòng TR4, TR9, TR11 ở Gia Lai chỉ 15,3–17 g. Cà Sẻ ước 13–17 g; Moka khoảng 10–13 g; Liberica khoảng 21 g.',
+  check:'Đếm 100 nhân nguyên, không vỡ, cân 3 lần lấy trung bình. Nhân phải khô tới 12,5 % ẩm trở xuống mới so được.',
+  kv:()=>{const w=R.V.m.w,ref=SM.se.q.w[0],d=(w/ref-1)*100;return [['100 nhân',vn(w,1)+NB+'g'],['So với Cà Sẻ',(d>=0?'+':'−')+vn(Math.abs(d),0)+NB+'%'],['Độ ẩm',vn(R.V.am,1)+NB+'% (tối đa 12,5)']]},
+  fail:'So nhân ẩm với nhân khô: nhân ẩm nặng hơn.',
+  tip:'Chỉ so với cao sản trồng cùng vùng, cùng vụ; khác vùng thì cỡ nhân đổi rất nhiều.'},
+ {n:'Phòng thí nghiệm',sub:()=>R.V.lab?`Caffeine ${vn(R.V.m.caf,1)}${NB}%`:'chưa gửi mẫu',offNote:'chưa có kết quả',
+  mech:'Phòng lab tách loài rất tốt: Robusta có caffeine gần gấp đôi Arabica, ít dầu và ít đường hơn. Chất 16-O-methylcafestol (16-OMC) có nhiều trong Robusta, khoảng 600–1.800 mg/kg, còn Arabica chỉ có vết, nên dùng để phát hiện Robusta trộn vào Arabica. Trong cùng loài, như Cà Sẻ với cao sản, các chỉ số này chồng lên nhau.',
+  check:'HPLC đo caffeine và 16-OMC; NMR phát hiện được từ khoảng 1–3 % Robusta trộn trong Arabica. Muốn định danh dòng thì xét nghiệm DNA.',
+  kv:()=>{const m=R.V.m,S=S_();return R.V.lab?[['Caffeine',vn(m.caf,2)+NB+'%'],['Chất béo',vn(m.lip,1)+NB+'%'],['Sucrose',vn(m.suc,1)+NB+'%'],['16-OMC',S?S.omc:(m.caf>1.7?'nhiều khả năng cao':'nhiều khả năng chỉ có vết')]]:[['Kết quả','Chưa có. Bật “Có kết quả phòng lab”.']]},
+  fail:'Dùng caffeine để chứng minh “Sẻ thật”. Caffeine của Robusta đổi theo vùng, độ chín, năm; không có ngưỡng nào tách giống trong cùng loài.',
+  tip:'Hằng ngày MeDili dùng cân, sàng và nếm; gửi lab khi khách cần chứng nhận.'},
+ {n:'Bàn nếm',sub:()=>{const S=S_();return S?(/^(Theo|Chưa)/.test(S.scale)?S.scale:'Thang '+S.scale):'chưa nếm'},offNote:'chưa có quan sát',
+  mech:'Nếm cho biết chất lượng, gu và gợi ý loài: Robusta đắng, thân dày, ít chua; Arabica chua sáng, thơm; Liberica mùi mít chín, trái nhiệt đới. Robusta chấm theo thang Fine Robusta, từ 80 điểm là Fine; Arabica chấm theo thang SCA.',
+  check:'Rang nhạt đến vừa, cùng một hồ sơ cho mọi mẫu, nghỉ 8–24 giờ, 5 ly mỗi mẫu, nếm mù.',
+  kv:()=>{const S=S_();if(!S)return [['Quan sát','Chưa có. Điền ở Máy nhận diện bằng giác quan.']];const p=S.prof;return [['Mùi vị',S.notes],['Thang chấm',S.scale],['Cường độ',`đắng ${g1(p[3])}, chua ${g1(p[1])}, thân ${g1(p[4])} trên 10`]]},
+  fail:'Nếm mẫu rang đậm: rang đậm che mất khác biệt giữa các giống.',
+  tip:'Ghi phiếu theo Bánh xe hương MeDili.'},
+ {n:'Bộ quyết định',sub:()=>`${SM[R.t.k].s} · ${pc(R.t.p)}${NB}%`,
+  mech:'Máy ghép mọi số đo lại. Mỗi mẫu có một khoảng giá trị điển hình cho từng chỉ số; mẫu nào khớp nhiều chỉ số nhất thì xác suất cao nhất. Đây là mô hình minh hoạ; số đo thật có sai số và có vùng chồng lấn.',
+  check:'Từ 80 % trở lên: khá chắc. Từ 50 đến 80 %: nghiêng về. Dưới 50 %: cần thêm bằng chứng. Máy làm tròn tối đa 99 %.',
+  kv:()=>R.P.slice(0,3).map(o=>[SM[o.k].s,pc(o.p)+NB+'%']),
+  fail:'Coi kết quả của máy là chứng nhận. Với hai giống cùng loài, chỉ hồ sơ vườn và DNA mới chắc chắn.',
+  tip:'Ghi kết quả vào Phiếu kiểm mẫu ở cuối trang.'}];
+ST.forEach(s=>{s.l1='Trạm này đọc gì';s.l2='Làm tay thế nào'});
+
+/* ====== DỰNG CẢNH ====== */
+const ANCH=[null,[7.5,14,11],[21,13,5],[36,8,10.4],[52.5,12,6.5],[64.5,13,3],[77.5,11,6.3],[93,13,4.6],[110,12,7.8]];
+const CHIP=[null,{x:150,y:12},{x:236,y:56},{x:330,y:100},{x:420,y:150},{x:500,y:196},{x:590,y:240},{x:676,y:290},{x:770,y:340}];
+function buildScene(){
+ let h=box(1,2.2,0,120,2.6,.6,['beltT','belt','belt2'])+`<polyline class="flowL" points="${pts([P(2,3.5,.62),P(120,3.5,.62)])}"/>`;
+ h=bench(124,24,'Cỗ máy Phân biệt · Farm Di Linh',44)+h;
+ /* 1 vườn */
+ let s=box(3,9.5,0,9,9,2,['soilT','soil','soil2'])+'<g id="tree"></g>';h+=stG(1,s);
+ /* 2 trái */
+ s=box(17,9,0,8,8,2.6,['ped','ped2','ped3'])+'<g id="cher"></g>'+lcd(17.4,17,2.4,54,'kTr');h+=stG(2,s);
+ /* 3 bàn soi */
+ s=box(30.5,7.2,0,11,1,10.6,['pnl','pnl2','pnl3'])+`<g transform="${face(31.1,8.2,10.1)}"><rect class="pnlF" x="0" y="0" width="64" height="52" rx="3"/><g id="bean"></g></g>`;
+ s+=box(29.5,9.4,0,14,8.6,2.2,['lbx','lbx2','lbx3'])+'<g id="beans"></g>'+lcd(30.2,18,1.95,66,'kSo');h+=stG(3,s);
+ /* 4 sàng */
+ s='';[0,1.1,2.2].forEach((z,i)=>s+=cyl(52.5,9.3,z,3.2,1.1,i%2?'sv2':'sv1',i%2?'sv2t':'sv1t'));
+ [47.8,51.2,54.6,58].forEach((x,i)=>{const q=P(x,14.8,6.3);s+=cyl(x,14.8,0,1,6,'gl','glt')+`<g id="bf${i}"></g>`+`<text class="wtx" x="${f1(q[0])}" y="${f1(q[1]-5)}" text-anchor="middle" style="font-size:8px">${['18','16','13','<13'][i]}</text>`});
+ s+=box(46.4,16.4,0,13.2,1.8,1.7,['ped','ped2','ped3'])+lcd(47.2,18.2,1.55,70,'kSa');h+=stG(4,s);
+ /* 5 cân */
+ s=box(61,10,0,7.5,6,1.6,['ped','ped2','ped3'])+cyl(64.75,13,1.6,2.3,.35,'cu2','plt')+'<g id="pile"></g>'+lcd(61.4,16,1.5,48,'kW');
+ s+=box(66.8,17,0,3.6,2.4,2.4,['ped','ped2','ped3'])+cyl(68.6,18.2,2.4,.2,2.4,'cu2','cu2')+lcd(66.95,19.4,2.2,24,'kAm');h+=stG(5,s);
+ /* 6 lab */
+ s=box(72,8,0,11,6,5.6,['ins','ins2','ins3'])+lcd(72.5,14,5.15,72,'kLab')+lcd(72.5,14,3.55,72,'kOMC')+'<g id="lampG"></g>';
+ s+=box(73.5,15.4,0,8,2.4,.9,['ped','ped2','ped3']);[0,1,2,3].forEach(i=>s+=cyl(74.8+i*1.9,16.6,.9,.42,2.3,'vial','vialT')+`<g id="vl${i}"></g>`);h+=stG(6,s);
+ /* 7 bàn nếm */
+ s=box(86.5,9,0,13,8,3,['wo','wo2','cu2']);[0,1,2,3,4].forEach(i=>{const x=88.4+i*2.35;s+=cyl(x,12.6,3,.85,1.15,'cup','cupT');const q=P(x,12.6,4.4);s+=`<path class="stm" d="M${f1(q[0]-2)} ${f1(q[1]-2)}c-3 -4 3 -6 0 -10s3 -6 0 -9" style="fill:none;stroke:#B9A274;stroke-width:1.3;animation-delay:${i*.3}s"/>`});
+ s+=lcd(87,17,2.8,62,'kCup');h+=stG(7,s);
+ /* 8 quyết định */
+ s=box(103.5,8,0,13,8,7.6,['cab','cab2','cab3'])+`<g transform="${face(104.2,16,7.1)}"><rect x="0" y="0" width="84" height="34" rx="3" style="fill:#2E1C12"/><g id="bars"></g></g>`+lcd(104.2,16,2.15,84,'kOut')+'<g id="lamp8"></g>';h+=stG(8,s);
+ h+='<g id="flow"></g><g id="chips"></g><circle id="tok" r="7"/>';
+ $('scene').innerHTML=h;['kTr','kSo','kSa','kW','kAm','kLab','kOMC','kCup','kOut'].forEach(i=>$(i).classList.add('sm'));initStations()}
+function treeSVG(k){const T=SM[k].tv,cx=7.5,cy=14,z0=2,g=rng(T.seed);let s='';
+ const offs=T.t===3?[[-1,.6],[.9,-.5],[.2,1.2]]:T.t===2?[[-.6,.3],[.6,-.3]]:[[0,0]];
+ offs.forEach(([dx,dy],i)=>s+=cyl(cx+dx,cy+dy,z0,T.tw||.3,T.h*(T.t>1?(.82+.12*i):1),'trk','trk'));
+ if(T.gr)s+=cyl(cx,cy,z0+.55,(T.tw||.3)+.18,.35,'grf','grf');
+ const top=P(cx,cy,z0+T.h),Rx=T.cr*U*1.05,bl=[];
+ if(T.tier){for(let j=0;j<3;j++){const yy=top[1]-6+j*13,w=Rx*(.5+j*.32);for(let i=-2;i<=2;i++)bl.push([top[0]+i*w/2.4,yy+Math.abs(i)*3.2,T.lr*(1-j*.06),T.lr*.5])}}
+ else if(T.hedge){for(let j=0;j<2;j++)for(let i=-3;i<=3;i++)bl.push([top[0]+i*Rx/3.3+(j?Rx/6.6:0),top[1]-2+j*8,T.lr,T.lr*.82])}
+ else{for(let i=0;i<T.n;i++){const a=i/T.n*Math.PI*2+g()*.6,rr=(T.ir?(.38+g()*.62):.6)*Rx;bl.push([top[0]+Math.cos(a)*rr,top[1]+Math.sin(a)*rr*.55-(T.ir?g()*T.lr*.6:0),T.lr*(.8+g()*.45),T.lr*(.8+g()*.45)*.8])}
+  bl.push([top[0],top[1]-5,T.lr*1.15,T.lr*.95])}
+ bl.sort((a,b)=>a[1]-b[1]).forEach(([x,y,rx,ry],i)=>s+=`<ellipse class="${['can1','can2','can3'][i%3]}" cx="${f1(x)}" cy="${f1(y)}" rx="${f1(rx)}" ry="${f1(ry)}"/>`);
+ if(T.br)bl.slice(0,5).forEach(([x,y,rx])=>s+=`<circle cx="${f1(x+rx*.6)}" cy="${f1(y-2)}" r="2.6" style="fill:#C9783A"/>`);
+ return s}
+function cherSVG(k){const C=SM[k].cv,q=P(21,13,2.6),g=rng(C.n*7+3);
+ let s=`<path d="M${f1(q[0]-26)} ${f1(q[1]-20)}Q${f1(q[0])} ${f1(q[1]-34)} ${f1(q[0]+26)} ${f1(q[1]-18)}" style="fill:none;stroke:#6B4226;stroke-width:3.2;stroke-linecap:round"/>`;
+ const nodes=C.cl===3?[.18,.5,.82]:[.3,.72];
+ nodes.forEach((t,j)=>{const nx=q[0]-26+52*t,ny=q[1]-20-11*Math.sin(t*Math.PI)+(t-.5)*4,cnt=Math.floor(C.n/nodes.length)+(j<C.n%nodes.length?1:0);
+  for(let c=0;c<cnt;c++){const a=c/cnt*Math.PI*2+g()*.5,rr=cnt>1?C.r*1.05:0,x=nx+Math.cos(a)*rr,y=ny+Math.sin(a)*rr*.75+C.r*.7;
+   s+=`<circle cx="${f1(x)}" cy="${f1(y)}" r="${C.r}" style="fill:${C.cols[Math.floor(g()*C.cols.length)]}"/><circle cx="${f1(x-C.r*.35)}" cy="${f1(y-C.r*.35)}" r="${f1(C.r*.28)}" style="fill:#FFF6EC;opacity:.55;stroke:none"/>`}});
+ return s}
+function renderScene(){const V=R.V,m=V.m,S=S_();
+ const qm=(x,y,z)=>{const q=P(x,y,z);return `<text class="qm" x="${f1(q[0])}" y="${f1(q[1])}" text-anchor="middle">?</text>`};
+ $('tree').innerHTML=S?treeSVG(V.vis):qm(7.5,14,5);
+ $('cher').innerHTML=S?cherSVG(V.vis):qm(21,13,5.4);
+ const sh=S?{...S.sh}:{a:1.3,asym:.04,hook:0,pt:0,cut:V.cut},Lmm=S?S.Lmm:clamp(11.46*Math.cbrt(m.w*1.69)/3.703,6,13);
+ if(V.cut)sh.cut=V.cut;
+ $('bean').innerHTML=(S||V.cut)&&st.step>=3?beanG(sh,32,26,Lmm*3.6):`<text x="32" y="36" text-anchor="middle" class="qm">?</text>`;
+ let bb='';if(S||V.cut){const g=rng(5),l=Lmm*.95,rx=l*.55,ry=l*.55/sh.a;for(let i=0;i<7;i++){const q=P(31.5+g()*10,10.6+g()*6,2.2);bb+=`<g transform="translate(${f1(q[0])} ${f1(q[1])}) rotate(${f1(-30+g()*60)}) scale(1 .62)"><ellipse rx="${f1(rx)}" ry="${f1(ry)}" style="fill:#D8C79C;stroke:#8D6A45;stroke-width:.9"/>${sh.cut==='p'?'':`<line x1="${f1(-rx*.7)}" x2="${f1(rx*.7)}" y1="0" y2="0" style="stroke:#6B4226;stroke-width:1"/>`}</g>`}}
+ $('beans').innerHTML=bb;
+ const d=bins();d.forEach((v,i)=>{const hgt=clamp(v/100*6*1.35,.05,6);$('bf'+i).innerHTML=st.step>=4?cyl(47.8+i*3.4,14.8,0,.86,hgt,'bnf','bnft'):''});
+ let pl='';const gp=rng(9);for(let i=0;i<9;i++){const q=P(64.75+(gp()-.5)*2.4,13+(gp()-.5)*2.4,1.95);pl+=`<ellipse cx="${f1(q[0])}" cy="${f1(q[1]-2)}" rx="3.2" ry="2.2" style="fill:#D8C79C"/>`}$('pile').innerHTML=pl;
+ const Lc=(id,t,i)=>{$(id).textContent=st.step>=i?t:'···'};
+ Lc('kTr',S?S.cc:'chưa xem',2);Lc('kSo',V.cut?CUTS[V.cut]:'chưa soi',3);Lc('kSa','trên S16: '+vn(m.s16,0)+'%',4);
+ Lc('kW',vn(m.w,1)+' g',5);Lc('kAm',vn(V.am,1)+'%',5);
+ Lc('kLab',V.lab?`caf ${vn(m.caf,1)} · béo ${vn(m.lip,0)}`:'chưa đo',6);
+ Lc('kOMC',V.lab?'16-OMC: '+(S?S.omcS:(m.caf>1.7?'cao':'vết')):'16-OMC: ?',6);
+ Lc('kCup',S?`đắng ${g1(S.prof[3])} · chua ${g1(S.prof[1])}`:'chưa nếm',7);
+ Lc('kOut',`${SM[R.t.k].s} ${pc(R.t.p)}%`,8);
+ const hi=V.lab&&(S?S.grp==='R':m.caf>1.7);$('lampG').innerHTML=sph(81.6,11,5.6,.72,hi&&st.step>=6?'lampOn':'lampOff');
+ [0,1,2,3].forEach(i=>$('vl'+i).innerHTML=V.lab&&st.step>=6?cyl(74.8+i*1.9,16.6,.95,.34,1.1+i*.2,'#8D5A32','#A9743F'):'');
+ let b='';if(st.step>=8)R.P.slice(0,3).forEach((o,i)=>{const y=4+i*10;b+=`<text class="bt" x="4" y="${y+6}" style="fill:#F3D9A4">${SM[o.k].s}</text><rect x="34" y="${y}" width="44" height="6.5" rx="2" class="bbg" style="fill:#5A3E2A"/><rect x="34" y="${y}" width="${f1(Math.max(1.5,o.p*44))}" height="6.5" rx="2" style="fill:${SM[o.k].c}"/>`});
+ $('bars').innerHTML=b;$('lamp8').innerHTML=sph(114.6,10,7.6,.6,st.step>=8?'lampOn':'lampOff');
+ drawFlow();drawChips()}
+function chipLabel(i){const V=R.V,m=V.m,S=S_();
+ if(st.step<i)return ['','Vườn','Trái','Bàn soi','Sàng','Cân','Phòng lab','Bàn nếm','Kết luận'][i]+' · ···';
+ return ['','Vườn · '+(S?S.tc:'chưa xem'),'Trái · '+(S?S.cc:'chưa xem'),'Nhân · '+(V.cut?CUTN[V.cut]:'chưa soi'),'Sàng 16+ · '+vn(m.s16,0)+NB+'%','100 nhân · '+vn(m.w,1)+NB+'g',
+  V.lab?'Caffeine · '+vn(m.caf,1)+NB+'%':'Lab · chưa đo','Nếm · '+(S?S.cupS:'chưa nếm'),'Kết luận · '+SM[R.t.k].s+' '+pc(R.t.p)+NB+'%'][i]}
+function drawFlow(){const V=R.V,m=V.m;
+ const rows=[['Chế độ',st.mode==='ref'?'Hồ sơ chuẩn':st.mode==='myst'?'Mẫu bí ẩn':'Số đo của bạn'],['Mẫu',V.name],['100 nhân',vn(m.w,1)+NB+'g'],['Trên sàng 16',vn(m.s16,0)+NB+'%'],['Hạt tròn',vn(m.cu,0)+NB+'%'],['Caffeine',V.lab?vn(m.caf,2)+NB+'%':'chưa đo'],['Máy kết luận',`${SM[R.t.k].s} · ${pc(R.t.p)}${NB}%`]];
+ const X=16,rh=27,h=50+rows.length*rh+20,y=712-h,w=330;
+ let g=`<rect x="${X}" y="${y}" width="${w}" height="${h}" rx="10" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="${X+16}" y="${y+26}" class="lab12" style="letter-spacing:.08em">MẪU TRONG MÁY</text>`;
+ rows.forEach(([a,b],i)=>{const yy=y+48+i*rh;g+=`<text class="flowT" x="${X+16}" y="${yy+4}">${a}</text><text x="${X+w-16}" y="${yy+4}" text-anchor="end" class="mono flowT">${b}</text>`});
+ g+=`<text x="${X+16}" y="${y+h-10}" class="tiny mutedt">Bản vẽ khái niệm · mô hình minh hoạ</text>`;$('flow').innerHTML=g}
+
+/* ====== ĐIỀU KHIỂN ====== */
+function halt(){stopRun();st.step=8}
+function toOwn(){if(st.mode!=='own'){st.own={...R.V.m};st.cut=R.V.cut;st.lab=R.V.lab;st.mode='own';st.rev=false}}
+function mystery(){const r=Math.random,k=ORD[Math.floor(r()*ORD.length)],q=SM[k].q,m={};
+ const lim={w:[9,31],s16:[10,100],cu:[0,100],caf:[.4,3],lip:[6,19],suc:[1.5,10]};
+ FE.forEach(f=>m[f]=clamp(q[f][0]+q[f][1]*gauss(r)*.9,lim[f][0],lim[f][1]));
+ st.hid=k;st.mm=m;st.am=10.8+r()*1.6;st.mode='myst';st.rev=false;st.myN++}
+function sliders(){const m=R.V.m;
+ [['iW','oW','w',1],['iS','oS','s16',0],['iC','oC','cu',0],['iCa','oCa','caf',2],['iL','oL','lip',1],['iSu','oSu','suc',1]].forEach(([i,o,f,d])=>{$(i).value=m[f];$(o).textContent=vn(m[f],d)+NB+'%'.replace('%',f==='w'?'g':'%')});
+ $('lab').checked=R.V.lab;$('labBox').hidden=!R.V.lab;
+ $('modeL').textContent=st.mode==='ref'?'hồ sơ chuẩn của '+SM[st.k].s:st.mode==='myst'?'máy đo mẫu bí ẩn':'bạn đang nhập'}
+function stats(){const m=R.V.m,t=(a,b)=>`<div class="stat"><span>${a}</span><b>${b}</b></div>`;
+ $('stats').innerHTML=t('100 nhân',vn(m.w,1)+NB+'g')+t('Trên sàng 16',vn(m.s16,0)+NB+'%')+t('Caffeine',R.V.lab?vn(m.caf,1)+NB+'%':'chưa đo')+t('Máy kết luận',SM[R.t.k].s)}
+function verdict(){const P=R.P,t=P[0],t2=P[1],S1=SM[t.k];let cls=t.p>=.8?'good':t.p>=.5?'warn':'bad',hd;
+ if(st.mode==='myst'&&st.rev){const ok=t.k===st.hid;cls=ok?'good':'bad';hd=(ok?'✓ Máy đoán đúng: ':'✕ Máy đoán sai: ')+'đáp án là '+SM[st.hid].n}
+ else hd=`${t.p>=.8?'✓':'!'} ${st.mode==='myst'?'Máy đoán':'Gần nhất'}: ${S1.n} · ${pc(t.p)}${NB}%`;
+ const bars=P.slice(0,3).map(o=>`<div class="pbar"><span>${SM[o.k].n}</span><b>${pc(o.p)}${NB}%</b><i><em style="width:${f1(Math.max(1,o.p*100))}%;background:${SM[o.k].c}"></em></i></div>`).join('');
+ let msg='';if(t.p<.5)msg='Chưa đủ bằng chứng. ';
+ if(!R.V.lab&&S1.grp!==SM[t2.k].grp&&t2.p>.15)msg+='Thêm kết quả phòng lab hoặc soi rãnh giữa để tách loài. ';
+ if(S1.grp===SM[t2.k].grp&&t2.p>.15)msg+=`${S1.s} và ${SM[t2.k].s} cùng loài: cần hồ sơ vườn, nếm hoặc DNA. `;
+ if(st.mode==='myst'&&st.rev&&t.k!==st.hid)msg+='Số đo của mẫu này rơi vào vùng chồng lấn; ngoài đời cũng vậy.';
+ $('verdict').className=cls;$('verdict').innerHTML=`<b>${hd}</b>${bars}${msg?`<p style="margin:8px 0 0">${msg}</p>`:''}`}
+function drawM(){const W=340,H=200,l=30,r=10,t=20,b=22,x0=9,x1=27,y0=.4,y1=3,X=x=>l+(x-x0)/(x1-x0)*(W-l-r),Y=y=>t+(1-(y-y0)/(y1-y0))*(H-t-b);
+ let g=`<text class="ttl" x="${l}" y="12">Caffeine % · trục ngang: 100 nhân (g)</text>`;
+ [1,2,3].forEach(v=>g+=`<line x1="${l}" x2="${W-r}" y1="${f1(Y(v))}" y2="${f1(Y(v))}" style="stroke:var(--rule);stroke-width:.8"/><text x="${l-5}" y="${f1(Y(v)+3.5)}" text-anchor="end">${v}</text>`);
+ [10,15,20,25].forEach(v=>g+=`<text x="${f1(X(v))}" y="${H-5}" text-anchor="middle">${v}</text>`);
+ ORD.forEach(k=>{const q=SM[k].q,c=SM[k].c;g+=`<ellipse cx="${f1(X(q.w[0]))}" cy="${f1(Y(q.caf[0]))}" rx="${f1(X(q.w[0]+q.w[1])-X(q.w[0]))}" ry="${f1(Y(q.caf[0])-Y(q.caf[0]+q.caf[1]))}" style="fill:${c};fill-opacity:.16;stroke:${c};stroke-width:1.2"/>`});
+ ORD.forEach(k=>{const q=SM[k].q,o=SM[k].lo;g+=`<text x="${f1(X(q.w[0])+o[0])}" y="${f1(Y(q.caf[0])+o[1])}" text-anchor="middle" style="fill:var(--ink);font:600 10px var(--body);paint-order:stroke;stroke:var(--panel);stroke-width:3px;stroke-linejoin:round">${SM[k].s}</text>`});
+ const m=R.V.m,x=X(clamp(m.w,x0,x1));
+ if(R.V.lab)g+=`<circle cx="${f1(x)}" cy="${f1(Y(clamp(m.caf,y0,y1)))}" r="5" style="fill:var(--ink);stroke:var(--panel);stroke-width:2"/>`;
+ else g+=`<line x1="${f1(x)}" x2="${f1(x)}" y1="${t}" y2="${H-b}" style="stroke:var(--ink);stroke-width:1.4;stroke-dasharray:4 3"/>`;
+ $('cM').innerHTML=g;
+ $('mTip').textContent=R.V.lab?'Chấm đậm là mẫu đang đo. Trục dọc tách loài: Robusta nằm trên. Trục ngang tách cỡ nhân trong cùng loài: Cà Sẻ bên trái, cao sản bên phải.':'Chưa có caffeine nên máy chỉ biết cỡ nhân (vạch đứt). Bật kết quả phòng lab để tách loài.'}
+function figsub(){$('figsub').textContent=`${R.V.name} · máy kết luận: ${SM[R.t.k].s} ${pc(R.t.p)}${NB}%`}
+function sNote(){const S=SM[st.k];
+ $('sNote').innerHTML=st.mode==='ref'?`<b>${S.n}</b> · ${S.sp}. ${S.prop}.`:st.mode==='myst'?(st.rev?`Đáp án: <b>${SM[st.hid].n}</b>. Bấm Mẫu bí ẩn để thử mẫu khác.`:'Máy đang đo một mẫu chưa biết tên. Xem từng trạm, đoán trước, rồi bấm Lộ đáp án.'):'Bạn đang chỉnh số đo. Bấm một mẫu hoặc Về hồ sơ chuẩn để quay lại.';
+ $('reveal').hidden=!(st.mode==='myst'&&!st.rev);$('back').hidden=st.mode==='ref'}
+function update(){calc();
+ pills('samps',ORD.map(k=>[k,SM[k].s]),st.mode==='ref'?st.k:'',k=>{halt();st.k=k;st.mode='ref';st.rev=false;update()});
+ pills('cuts',[['','Chưa soi'],['t','Thẳng'],['s','Chữ S'],['r','Nhăn, lệch'],['p','Tròn, culi']],R.V.cut||'',k=>{halt();toOwn();st.cut=k||null;update()});
+ sNote();sliders();stats();verdict();renderScene();drawM();renderStation();figsub();sheet()}
+function runMachine(){stopRun();st.step=0;calc();renderScene();
+ tour([1,2,3,4,5,6,7,8],600,k=>{st.step=k+1;renderScene();renderStation()})}
+const onS=(id,f)=>$(id).addEventListener('input',()=>{halt();toOwn();st.own[f]=+$(id).value;if(['caf','lip','suc'].includes(f))st.lab=true;update()});
+onS('iW','w');onS('iS','s16');onS('iC','cu');onS('iCa','caf');onS('iL','lip');onS('iSu','suc');
+$('lab').addEventListener('change',()=>{halt();toOwn();st.lab=$('lab').checked;update()});
+$('run').onclick=runMachine;$('run2').onclick=runMachine;
+$('myst').onclick=()=>{halt();mystery();update();runMachine()};
+$('reveal').onclick=()=>{halt();st.rev=true;update()};
+$('back').onclick=()=>{halt();st.mode='ref';st.rev=false;update()};
+
+/* ====== MÁY NHẬN DIỆN BẰNG GIÁC QUAN ====== */
+function qz(){$('qz').innerHTML=QZ.map(q=>`<div class="qb"><b>${q.n}</b>${q.h?`<small>${q.h}</small>`:''}<div class="row">${q.o.map(o=>`<button class="pill" type="button" data-q="${q.id}" data-o="${o.id}" aria-pressed="${st.qa[q.id]===o.id}">${o.t}</button>`).join('')}</div></div>`).join('');
+ $('qz').querySelectorAll('button').forEach(b=>b.onclick=()=>{const q=b.dataset.q,o=b.dataset.o;if(st.qa[q]===o)delete st.qa[q];else st.qa[q]=o;qz()});
+ qres();sheet()}
+function qres(){const ans=Object.entries(st.qa),lp={};ORD.forEach(k=>lp[k]=0);
+ ans.forEach(([q,o])=>{const w=QZ.find(x=>x.id===q).o.find(x=>x.id===o).w;ORD.forEach(k=>lp[k]+=Math.log(w[k]))});
+ const mx=Math.max(...ORD.map(k=>lp[k]));let t=0;const e={};ORD.forEach(k=>{e[k]=Math.exp(lp[k]-mx);t+=e[k]});
+ const P=ORD.map(k=>({k,p:e[k]/t})).sort((a,b)=>b.p-a.p);st.qP=P;
+ if(!ans.length){$('qzr').innerHTML='<span class="lbl">0/'+QZ.length+' câu</span><b class="qh">Chưa có quan sát</b><p class="mnote">Chọn ít nhất hai câu, hoặc bấm một mẫu ở dòng “Điền thử như mẫu”.</p>';return}
+ const t1=P[0],t2=P[1];
+ const why=ans.map(([q,o])=>{const O=QZ.find(x=>x.id===q).o.find(x=>x.id===o),w=O.w,oth=ORD.filter(k=>k!==t1.k).reduce((s,k)=>s+w[k],0)/7;return {t:O.t,r:w[t1.k]/oth}}).filter(x=>x.r>1.4).sort((a,b)=>b.r-a.r).slice(0,4);
+ let nx='';if(t1.p-t2.p<.3){let best=null,bv=0;QZ.forEach(Q=>{if(st.qa[Q.id])return;const v=Math.max(...Q.o.map(O=>Math.abs(Math.log(O.w[t1.k]/O.w[t2.k]))));if(v>bv){bv=v;best=Q}});
+  nx=best?`Để tách ${SM[t1.k].s} với ${SM[t2.k].s}, xem thêm: <b>${best.n.toLowerCase()}</b>.`:`${SM[t1.k].s} và ${SM[t2.k].s} còn sát nhau: cần cân, sàng hoặc hồ sơ vườn.`}
+ const robNote=(t1.k==='se'||t1.k==='cs')?'<p class="mnote">Giữa Cà Sẻ và cao sản, giác quan chỉ gợi ý. Hãy cân 100 nhân và sàng ở cỗ máy phía trên, và hỏi hồ sơ vườn.</p>':'';
+ $('qzr').innerHTML=`<span class="lbl">${ans.length}/${QZ.length} câu đã chọn</span><b class="qh">${t1.p>=.8?'Khá chắc':t1.p>=.5?'Nghiêng về':'Chưa rõ, gần nhất'}: ${SM[t1.k].n}</b>${P.slice(0,4).map(o=>`<div class="pbar"><span>${SM[o.k].n}</span><b>${pc(o.p)}${NB}%</b><i><em style="width:${f1(Math.max(1,o.p*100))}%;background:${SM[o.k].c}"></em></i></div>`).join('')}${why.length?`<span class="lbl" style="margin-top:12px">Dấu hiệu khớp ${SM[t1.k].s}</span><div class="why">${why.map(x=>`<span>${x.t}</span>`).join('')}</div>`:''}${nx?`<p class="mnote">${nx}</p>`:''}${robNote}`}
+pills('qPre',ORD.map(k=>[k,SM[k].s]).concat([['x','Xoá hết']]),'',k=>{st.qa=k==='x'?{}:{...PRE[k]};qz()});
+
+/* ====== HÌNH 2 ====== */
+function drawR(){const W=cw('wR'),mob=W<640,H=mob?300:360,l=mob?36:48,r=mob?12:22,t=26,b=34,x0=13,x1=31,y0=54,y1=101,X=x=>l+(x-x0)/(x1-x0)*(W-l-r),Y=y=>t+(1-(y-y0)/(y1-y0))*(H-t-b);
+ $('cR').setAttribute('viewBox',`0 0 ${W} ${H}`);
+ let g=`<text class="ttl" x="${l}" y="14">${mob?'% nhân trên sàng 16 · ngang: g/100 nhân':'Phần trăm nhân trên sàng 16 · trục ngang: khối lượng 100 nhân (g)'}</text>`;
+ [60,70,80,90,100].forEach(v=>g+=`<line x1="${l}" x2="${W-r}" y1="${f1(Y(v))}" y2="${f1(Y(v))}" style="stroke:var(--rule);stroke-width:.8"/><text x="${l-6}" y="${f1(Y(v)+4)}" text-anchor="end">${v}</text>`);
+ (mob?[14,18,22,26,30]:[14,16,18,20,22,24,26,28,30]).forEach(v=>g+=`<text x="${f1(X(v))}" y="${H-b+18}" text-anchor="middle">${v}</text>`);
+ g+=`<ellipse cx="${f1(X(15))}" cy="${f1(Y(62))}" rx="${f1(X(16.6)-X(15))}" ry="${f1(Y(62)-Y(71))}" style="fill:var(--k1);fill-opacity:.13;stroke:var(--k1);stroke-width:1.8;stroke-dasharray:6 4"/>`;
+ ROB.forEach(([cl,rg,w,s])=>{g+=`<circle cx="${f1(X(w))}" cy="${f1(Y(s))}" r="${rg==='all'?7:5.5}" style="fill:${RG[rg][1]};stroke:var(--panel);stroke-width:1.6"><title>${cl} · ${RG[rg][0]}: ${vn(w,1)} g, ${vn(s,1)} %</title></circle>`});
+ const lab=(x,y,txt,anc,c)=>`<text class="val" x="${f1(x)}" y="${f1(y)}" text-anchor="${anc}"${c?` style="fill:${c}"`:''}>${txt}</text>`;
+ g+=mob?lab(X(16.8)+2,Y(57.5),'Cà Sẻ (ước)','start','var(--k1)'):lab(X(15)+4,Y(71)-10,'Cà Sẻ (ước)','middle','var(--k1)');
+ g+=lab(X(15.7)+10,Y(65)+18,'TR4, TR11 · Gia Lai','start');
+ g+=mob?lab(X(29.6)+4,Y(91),'TR9 · Lâm Đồng','end'):lab(X(29.6)-9,Y(99.2)+18,'TR9 · Lâm Đồng','end');
+ g+=lab(X(19.1)+10,Y(85.3)+4,'TRS1','start');
+ $('cR').innerHTML=g;
+ legend('lgR',[{n:'Đắk Lắk',c:'var(--k2)',box:1},{n:'Gia Lai',c:'var(--k4)',box:1},{n:'Lâm Đồng',c:'var(--k3)',box:1},{n:'TRS1, trung bình 4 vùng',c:'var(--k5)',box:1},{n:'Cà Sẻ, ước của MeDili',c:'var(--k1)',d:1}])}
+
+/* ====== HÌNH 3, ĐỐI CHIẾU CẶP, THAM SỐ ====== */
+function gallery(){$('bgal').innerHTML=ORD.map(k=>{const S=SM[k],L=S.Lmm*7;return `<figure><svg viewBox="0 0 120 112" role="img" aria-label="Nhân xanh ${S.n}">${beanG(S.sh,60,50,L)}<line x1="12" x2="47" y1="104" y2="104" style="stroke:var(--muted);stroke-width:1.6"/><text x="12" y="99" style="font:600 9px var(--body);fill:var(--muted)">5 mm</text></svg><figcaption><b>${S.s}</b><span>${CUTN[S.sh.cut]} · dài ≈${NB}${vn(S.Lmm,1)}${NB}mm</span></figcaption></figure>`}).join('')}
+const PROWS=[['Loài, nhóm','sp'],['Nhân giống','prop'],['Cây','tree'],['Trái','cher'],['Nhân xanh','bean'],['Rãnh giữa','cutT'],['Vùng, độ cao','alt'],['Mùi vị','notes'],['Thang chấm','scale'],['Năng suất','yld'],['Dễ nhầm với','conf']];
+const PAIRS={'se|cs':'Nhìn vườn trước: cây thực sinh hay cây ghép. Rồi cân 100 nhân và sàng, so với cao sản trồng cùng vùng. Nếm: Cà Sẻ đậm, thân dày, hậu dài hơn. Cùng loài nên caffeine không tách được; muốn chắc chắn thì xét nghiệm DNA.',
+ 'se|culi':'Đếm hạt tròn trong 100 hạt. Lô Cà Sẻ chỉ có vài phần trăm hạt tròn; lô culi đã tách từ 90 % trở lên. Culi lấy từ vườn Sẻ thì vẫn là Culi Sẻ.',
+ 'cs|culi':'Đếm hạt tròn trong 100 hạt. Lô hạt dẹt chỉ có vài phần trăm hạt tròn; lô culi đã tách từ 90 % trở lên.',
+ 'ara|cat':'Dáng nhân gần như giống nhau. Hỏi giống trong vườn: Typica cao, cành ngang, lá non màu đồng; Catimor thấp, lóng ngắn. Nếm: Catimor hay có vị thảo mộc. Chắc chắn thì DNA.',
+ 'ara|mok':'Cân 100 nhân: Moka rất nhẹ, khoảng 10–13 g, nhân tròn như hạt đậu. Sản lượng ít nên giá cao; cẩn thận tên “Moka” gắn cho Arabica thường.',
+ 'cat|mok':'Cân 100 nhân: Moka rất nhẹ, khoảng 10–13 g, nhân tròn như hạt đậu; Catimor nhân thuôn, to hơn nhiều. Cây Catimor thấp nhưng sai trái, Moka cây nhỏ, ít trái.',
+ 'lib|exc':'Liberica nhân to hơn, dài, đầu nhọn có móc; Excelsa nhỏ hơn, dáng giọt nước, vỏ trấu mỏng hơn. Nếm: Liberica trái nhiệt đới, mít chín; Excelsa chua kiểu trái cây sẫm.'};
+function pairText(a,b){const key=[a,b].sort((x,y)=>ORD.indexOf(x)-ORD.indexOf(y)).join('|');if(PAIRS[key])return PAIRS[key];
+ const A=SM[a],B=SM[b];
+ if(a==='culi'||b==='culi')return 'Culi là hình hạt, không phải giống: có Culi Robusta, có Culi Arabica. Trước hết đếm hạt tròn; rồi tách loài như với hạt dẹt: rãnh, caffeine, mùi vị.';
+ if(a==='lib'||b==='lib')return 'Liberica nhân to, lệch, đầu nhọn có móc, rãnh nhăn; mùi mít chín rất riêng; caffeine thấp hơn Robusta. TCVN 4193 chỉ cho Robusta hạng 1 lẫn tối đa 0,5 % cà phê mít.';
+ if(a==='exc'||b==='exc')return 'Excelsa dáng giọt nước hơi lệch, rãnh hơi nhăn; vị chua kiểu trái cây, ít đắng, ngược hẳn Robusta.';
+ if(a==='mok'||b==='mok')return 'Moka nhân rất nhỏ, tròn, rãnh cong; 100 nhân chỉ khoảng 10–13 g; thơm nồng, chua sáng, ít đắng.';
+ if(A.grp!==B.grp)return 'Khác loài nên dễ tách. Robusta tròn ngắn, rãnh thẳng; Arabica dẹt, thuôn, rãnh chữ S. Phòng lab: Robusta caffeine gần gấp đôi, ít dầu, ít đường, nhiều 16-OMC. Nếm: Robusta đắng, thân dày; Arabica chua sáng, thơm.';
+ return 'Cùng nhóm: so cỡ nhân, nếm và hỏi hồ sơ vườn.'}
+function pair(){pills('pA',ORD.map(k=>[k,SM[k].s]),st.pa,k=>{st.pa=k;if(st.pb===k)st.pb=ORD.find(x=>x!==k);pair()});
+ pills('pB',ORD.filter(k=>k!==st.pa).map(k=>[k,SM[k].s]),st.pb,k=>{st.pb=k;pair()});
+ const A=SM[st.pa],B=SM[st.pb],PD={w:1,s16:0,caf:1,lip:0},qr=['w','s16','caf','lip'].map(f=>[FN[f][0]+', mô hình',vn(A.q[f][0],PD[f])+NB+FN[f][1],vn(B.q[f][0],PD[f])+NB+FN[f][1]]);
+ $('pT').innerHTML=`<thead><tr><th></th><th><i class="sw" style="background:${A.c}"></i>${A.n}</th><th><i class="sw" style="background:${B.c}"></i>${B.n}</th></tr></thead><tbody>${PROWS.map(([n,f])=>`<tr><th>${n}</th><td>${A[f]}</td><td>${B[f]}</td></tr>`).join('')}${qr.map(([n,a,b])=>`<tr><th>${n}</th><td>${a}</td><td>${b}</td></tr>`).join('')}</tbody>`;
+ $('pX').innerHTML=`<b>Cách tách nhanh nhất</b>${pairText(st.pa,st.pb)}`}
+const sdf=v=>String(+(+v).toFixed(2)).replace('.',',');
+function ptab(){$('pTab').innerHTML=`<thead><tr><th>Mẫu</th>${FE.map(f=>`<th>${FN[f][0]}, ${FN[f][1]}</th>`).join('')}<th>Rãnh giữa</th></tr></thead><tbody>${ORD.map(k=>`<tr><td><i class="sw" style="background:${SM[k].c}"></i>${SM[k].s}</td>${FE.map(f=>`<td>${sdf(SM[k].q[f][0])} ± ${sdf(SM[k].q[f][1])}</td>`).join('')}<td>${CUTN[SM[k].sh.cut]}</td></tr>`).join('')}</tbody>`}
+
+/* ====== HÌNH 4 ====== */
+function drawRad(){pills('rB',ORD.filter(k=>k!=='se').map(k=>[k,SM[k].s]),st.rb,k=>{st.rb=k;drawRad()});
+ const AX=['Thơm','Chua','Ngọt','Đắng','Thể chất','Hậu vị'],A=SM.se.prof,B=SM[st.rb].prof,cx=170,cy=150,Rr=100,n=6,pt=(i,r)=>{const a=(-90+i*360/n)*Math.PI/180;return [cx+r*Math.cos(a),cy+r*Math.sin(a)]};
+ let g='';[2,4,6,8,10].forEach(v=>g+=`<polygon class="grid" points="${AX.map((_,i)=>pt(i,Rr*v/10).map(f1).join(',')).join(' ')}"/>`);
+ AX.forEach((_,i)=>{const [x,y]=pt(i,Rr);g+=`<line x1="${cx}" y1="${cy}" x2="${f1(x)}" y2="${f1(y)}" style="stroke:var(--rule)"/>`});
+ [[B,SM[st.rb].c,'6 4'],[A,SM.se.c,'']].forEach(([v,c,d])=>g+=`<polygon points="${v.map((x,i)=>pt(i,Rr*x/10).map(f1).join(',')).join(' ')}" style="fill:${c};fill-opacity:.18;stroke:${c};stroke-width:2.2${d?';stroke-dasharray:'+d:''}"/>`);
+ AX.forEach((nm,i)=>{const [x,y]=pt(i,Rr+20);g+=`<text x="${f1(x)}" y="${f1(y+4)}" text-anchor="middle">${nm}</text>`});
+ $('cRad').innerHTML=g;legend('lgRad',[{n:'Cà Sẻ Di Linh',c:SM.se.c},{n:SM[st.rb].n,c:SM[st.rb].c,d:1}]);
+ const up=[],dn=[];AX.forEach((nm,i)=>{const d=A[i]-B[i];if(d>=1)up.push(nm.toLowerCase());else if(d<=-1)dn.push(nm.toLowerCase())});
+ $('radT').textContent=!up.length&&!dn.length?`Cà Sẻ và ${SM[st.rb].s} gần giống nhau trên sáu trục.`:`So với ${SM[st.rb].s}, Cà Sẻ ${up.length?'mạnh hơn ở '+up.join(', '):''}${up.length&&dn.length?'; ':''}${dn.length?'nhẹ hơn ở '+dn.join(', '):''}.`}
+
+/* ====== PHIẾU ====== */
+function sheet(){if(!R.V)return;const m=R.V.m,P=R.P,qa=Object.entries(st.qa).map(([q,o])=>{const Q=QZ.find(x=>x.id===q);return `${Q.n}: ${Q.o.find(x=>x.id===o).t}`});
+ const t=`PHIẾU KIỂM MẪU CÀ PHÊ NHÂN · MeDili
+Lô: ________  Nhà cung cấp: ________  Ngày: __/__/____
+Tên gọi khi chào hàng: ________  Vùng, độ cao: ________
+Vườn: thực sinh / ghép / không rõ · Năm trồng: ____
+
+1. Độ ẩm: ____ % (tối đa 12,5 %)
+2. Soi 100 nhân: rãnh thẳng ___ · chữ S ___ · nhăn lệch ___ · tròn ___
+3. Sàng 300 g: trên 18 ___ % · 16–18 ___ % · 13–16 ___ % · lọt 13 ___ %
+4. 100 nhân: ___ g · ___ g · ___ g → trung bình ___ g
+5. Lỗi theo TCVN 4193: đen ___ · nâu ___ · non ___ · vỡ ___ · tạp chất ___
+6. Nếm (Fine Robusta / SCA): điểm ___ · ghi chú ____________
+7. Lab nếu có: caffeine ___ % · 16-OMC ___ mg/kg · DNA ________
+
+Số đang nhập vào máy: 100 nhân ${vn(m.w,1)} g · trên sàng 16 ${vn(m.s16,0)} % · hạt tròn ${vn(m.cu,0)} %${R.V.lab?` · caffeine ${vn(m.caf,2)} %`:''}
+Máy MeDili (mô hình minh hoạ): ${P.slice(0,2).map(o=>SM[o.k].s+' '+pc(o.p)+' %').join(' · ')}
+${qa.length?'Cảm quan: '+qa.join('; ')+'\n':''}Kết luận: ________________  Người kiểm: ________`;
+ $('sheet').textContent=t;st.sheet=t}
+$('cpSh').onclick=()=>cp(st.sheet,'cpShS');
+
+buildScene();calc();gallery();ptab();pair();drawRad();drawR();qz();update();
+let rz=0;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(drawR,150)});
+</script>
+</body></html>

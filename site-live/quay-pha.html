@@ -1,0 +1,602 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="MeDili, nhà rang từ cao nguyên Di Linh. Cà phê nguyên chất, rang mộc từ gốc Cà Sẻ."><meta property="og:title" content="Quầy Pha MeDili"><meta property="og:description" content="MeDili, nhà rang từ cao nguyên Di Linh. Cà phê nguyên chất, rang mộc từ gốc Cà Sẻ."><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>Quầy Pha MeDili</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.inl{color:var(--moss);font-weight:600}
+.quiz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.q{border:0;padding:0;margin:0 0 14px;min-width:0}.q legend{padding:0;font-weight:600}
+.res{background:var(--tint);border-radius:14px;padding:16px}.res h3{font:800 2rem/1.1 var(--display);margin:2px 0 4px;color:var(--accent)}
+.res p{margin:6px 0}.rp{font-weight:600}.rp small{font-weight:400;color:var(--muted)}
+.tinyn{font-size:.78rem;color:var(--muted)}
+.gumap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gm{border-top:3px solid var(--copper);padding-top:8px}.gm h3{margin:0;font:800 1.3rem var(--display)}.gm small{color:var(--muted)}
+ol.steps{margin:0 0 8px;padding-left:20px}ol.steps li{margin-bottom:4px;font-size:.9rem}ol.steps li.on{font-weight:700;color:var(--accent)}
+.sop.tight li{grid-template-columns:36px minmax(0,1fr)}.sop.tight .n{font-size:1.5rem}
+.st.off{opacity:.45}
+@media (max-width:820px){.quiz{grid-template-columns:minmax(0,1fr)}}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style></head><body><div class="mnav"><div><a class="b" href="./">MeDili Café</a><nav aria-label="Menu chính"><a href="vuon.html">Vườn</a><a href="len-men-men-bia.html">Men bia</a><a href="len-men-trai-cay.html">Trái cây</a><a href="rang.html">Rang</a><a href="quay-pha.html" class=on aria-current=page>Quầy pha</a><a href="suc-khoe.html">Sức khoẻ</a></nav><a class="go" href="mua-hang.html">Chọn mua</a></div></div>
+
+<div class="wrap">
+<header>
+  <span class="lgw"><img class="lgL" src="assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div class="brandbar"><span>Mê vị Di Linh</span><span>Zalo <a href="#lien-he">0966770788</a></span></div>
+  <h1>Quầy Pha <em>MeDili</em></h1>
+  <p>Cách pha máy, phin, lọc, cold brew và các món sữa, có định lượng từng ly. Chưa biết uống gì? <a href="#gu" class="inl">Tìm gu của bạn</a> rồi xem cách pha ngay trên quầy.</p>
+</header>
+
+<div class="bench">
+  <div class="card">
+    <div class="fighead">
+      <div><b>Hình 1</b> <span id="figsub"></span></div>
+      <button class="btn small" id="snd" aria-pressed="false">Tiếng quầy: tắt</button>
+    </div>
+    <div class="scroller"><svg id="scene" viewBox="0 0 1040 690" aria-label="Quầy pha cà phê MeDili gồm cối xay, máy pha, phin, lọc, bình ép, cold brew, sữa đá và khay phục vụ. Bấm từng trạm để xem chi tiết."></svg></div>
+    <div class="strip" id="strip" role="group" aria-label="Các bước pha"></div>
+    <div id="detail" aria-live="polite"></div>
+  </div>
+
+  <aside class="card ctl">
+    <div class="head2"><h3>Chọn món</h3><small id="count"></small></div>
+    <div class="row" id="groups"></div>
+    <div class="row" id="drinks"></div>
+    <hr>
+    <div class="sl" style="margin-top:0"><label for="N">Số ly <output id="oN"></output></label><input id="N" type="range" min="1" max="30" step="1"></div>
+    <div class="head2" style="margin-top:12px"><h3>Độ đậm</h3></div><div class="row" id="str"></div>
+    <div id="sweetBox"><div class="head2" style="margin-top:12px"><h3>Độ ngọt</h3></div><div class="row" id="swt"></div></div>
+    <div class="row" style="margin-top:14px"><button class="btn main" id="run">Pha thử</button><button class="btn" id="reset">Về công thức chuẩn</button></div>
+    <hr>
+    <span class="lbl" id="needLbl"></span>
+    <div class="stats" id="stats"></div>
+    <dl class="kv" id="spec" style="margin-top:10px"></dl>
+    <div id="verdict"></div>
+    <hr>
+    <span class="lbl">Hướng vị dự đoán, 0–100</span>
+    <div class="bars" id="bars"></div>
+  </aside>
+</div>
+
+<section class="card" id="gu">
+  <h2>Tìm gu cà phê của bạn</h2>
+  <p class="lead">Trả lời 5 câu. MeDili gợi ý ly hợp với bạn, loại cà phê và cách pha. Các lựa chọn bên dưới là ví dụ, bạn chọn lại theo ý mình.</p>
+  <div class="quiz"><div id="qs"></div><div id="result" aria-live="polite"></div></div>
+</section>
+
+<section class="card">
+  <h2>Menu theo gu</h2>
+  <p class="lead">Bấm một món để xem cách pha trên quầy.</p>
+  <div class="gumap" id="gumap"></div>
+</section>
+
+<section class="card">
+  <h2>Bảng định lượng cho 1 ly</h2>
+  <p class="lead">Cân bằng gram sẽ chính xác hơn đong muỗng. Sữa đặc và kem là mức vừa, có thể chỉnh theo khẩu vị.</p>
+  <div class="tw"><table class="rich"><thead><tr><th>Món</th><th>Cà phê</th><th>Nước</th><th>Sữa, kem</th><th>Đá</th><th>Thời gian</th><th>Ly / gói 250 g</th></tr></thead><tbody id="dose"></tbody></table></div>
+</section>
+
+<div class="cols">
+  <section class="card">
+    <h2>Quy tắc chung ở quầy</h2>
+    <ol class="sop tight" id="rules"></ol>
+  </section>
+  <section class="card">
+    <h2>Chỉnh ly theo vị</h2>
+    <div class="tw"><table class="rich"><thead><tr><th>Vị của ly</th><th>Nguyên nhân</th><th>Sửa</th></tr></thead><tbody id="fix"></tbody></table></div>
+    <hr>
+    <h3 style="margin:0 0 6px">Phiếu pha</h3>
+    <div id="sheet"></div>
+    <button class="btn main" id="copy">Sao chép công thức</button> <span id="copied" role="status" class="src"></span>
+  </section>
+</div>
+
+<section class="card src">
+  <h2 style="color:var(--ink)">Nguồn số liệu</h2>
+  <p class="lead">Công thức là mốc khởi đầu từ các nguồn dưới đây. Các con số không có nguồn riêng, như lượng sữa đặc, đá, kem mỗi ly và công thức drip bag, moka, AeroPress, là gợi ý để thử rồi chỉnh theo khẩu vị. Hình quầy là mô hình minh hoạ.</p>
+  <ul>
+    <li><a href="https://sca.coffee/s/SCA_Standard_310-2021.pdf" target="_blank" rel="noopener">SCA Standard 310-2021</a>: tỷ lệ 55 g/kg nước, nhiệt độ pha 90–96 °C.</li>
+    <li><a href="https://coffeetower.pages.dev/coffee/espresso-extraction" target="_blank" rel="noopener">Coffee Tower: espresso</a>: 18–21 g, tỷ lệ 1:2, 25–30 giây, 9 bar.</li>
+    <li><a href="https://completehomebarista.com/guides/espresso-milk-ratio-chart" target="_blank" rel="noopener">Complete Home Barista</a>: tỷ lệ sữa các món espresso.</li>
+    <li><a href="https://www.sapo.vn/blog/cach-pha-ca-phe-phin" target="_blank" rel="noopener">Sapo: pha phin</a>: 25 g, 80 ml, ủ rồi rót.</li>
+    <li><a href="https://food52.com/recipes/85874-best-vietnamese-coffee-recipe" target="_blank" rel="noopener">Food52, Sahra Nguyen</a>: công thức phin 14 g, nhẹ hơn.</li>
+    <li><a href="https://www.sapo.vn/blog/cach-pha-bac-xiu" target="_blank" rel="noopener">Sapo: bạc xỉu</a> và <a href="https://www.sapo.vn/blog/cafe-muoi-la-gi" target="_blank" rel="noopener">cà phê muối</a>.</li>
+    <li><a href="https://coffeetower.pages.dev/coffee/cold-brew" target="_blank" rel="noopener">Coffee Tower: cold brew</a>: 1:8, 18–24 giờ trong tủ lạnh, 7–14 ngày.</li>
+    <li><a href="https://know.coffeeparts.com.au/brew/cold-drip" target="_blank" rel="noopener">Coffee Parts: cold drip</a>: 1:10, 40–60 giọt/phút, 4–6 giờ.</li>
+    <li><a href="https://cafeguru.pages.dev/en/metodos/" target="_blank" rel="noopener">Cafe Guru</a>: V60, French press, AeroPress, moka.</li>
+    <li><a href="https://coffee-61l.pages.dev/caffeine-content-coffee-drinks-guide/" target="_blank" rel="noopener">Coffee &amp; Cafés</a>: caffeine Robusta và Arabica, giới hạn 400 mg/ngày.</li>
+  </ul>
+</section>
+
+<section class="contact" id="lien-he">
+  <div>
+    <img class="lgK" src="assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83">
+    <div class="tagline">Mê vị Di Linh</div>
+    <p>Thương hiệu cà phê nguồn gốc Di Linh của Medili Coffee Farm. Nhắn Zalo để MeDili tư vấn gu và cách pha phù hợp với bạn.</p>
+  </div>
+  <div class="zalo">
+    <span>Zalo MeDili</span>
+    <strong id="zaloNo">0966770788</strong>
+    <div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Nhắn Zalo</a><button type="button" id="copyZalo">Sao chép số</button></div>
+    <small id="zaloMsg" role="status"></small>
+  </div>
+</section>
+<footer>Medili Coffee Farm - Di Linh</footer>
+</div>
+
+<script>
+/* ====== DỮ LIỆU ====== */
+const C={esp:'#3A2416',cre:'#B98B58',mi:'#F1E5CE',fo:'#FBF5E9',co:'#E9D7A3',bk:'#5A3520',am:'#7A4D2A',ice:'#CFE6EA',wa:'#C8DDE0',ch:'#4A2A1A',cr:'#FFF3D6',lt:'#B98B58'};
+const PR={
+ phin:{n:'Phin Robusta Classic',c:'Robusta Di Linh, Tân Nghĩa',l:'Dark Roast'},
+ sua:{n:'Phin Robusta Classic',c:'Robusta Di Linh, Tân Nghĩa',l:'Dark Roast'},
+ fine:{n:'Máy Robusta Premium',c:'Robusta Di Linh',l:'Medium Roast'},
+ esp:{n:'Máy Blend Robusta - Arabica Premium 7:3',c:'Arabica và Robusta phối 7:3',l:'medium-dark'},
+ arab:{n:'Máy Arabica Premium',c:'Arabica Cầu Đất',l:'Medium Roast'},
+ cold:{n:'Phin Robusta Premium',c:'Robusta honey, washed',l:'medium'},
+ drip:{n:'Phin Robusta Premium',c:'Robusta honey, washed, xay sẵn',l:'medium'}
+};
+const G={may:'Pha máy',phin:'Phin',loc:'Lọc tay',lanh:'Lạnh'};
+const shot=(extra,tail)=>r=>[[1,`Cân ${vn0(r.c)} g, xay mịn.`,20],[2,`Dàn đều, nén phẳng, lắp tay cầm.`,20],[2,`Chiết 25–30 giây, được ${Math.round(r.c*2)} g espresso.`,28],...extra(r)];
+const phinB=(tail,w1=30,w2=50)=>r=>[[1,`Cân ${vn0(r.c)} g, xay vừa thô.`,20],[3,'Tráng phin và ly bằng nước sôi.',30],[3,`Cho cà phê vào phin, lắc phẳng, đặt nắp gài nhẹ.`,20],[3,`Rót ${w1} ml nước 90–96 °C, ủ 2–3 phút.`,160],[3,`Rót thêm ${w2} ml, chờ nhỏ giọt 3–5 phút.`,240],...tail(r)];
+const D={
+ espresso:{n:'Espresso',g:'may',p:'esp',c:18,w:0,yield:36,grind:'Mịn',temp:'90–92 °C',time:'25–30 giây',ratio:'1:2',bar:1,rt:[1,2,8],lay:[['Espresso',30,C.esp],['Crema',8,C.cre]],steps:shot(r=>[[8,'Dùng ngay khi còn lớp crema.',10]]),fl:[85,25,70,45,20],tag:['dam','den','sang','may','quen']},
+ americano:{n:'Americano',g:'may',p:'esp',c:18,w:120,yield:36,grind:'Mịn',temp:'90–92 °C',time:'1 phút',ratio:'1:2 + nước',rt:[1,2,8],lay:[['Nước nóng',120,C.am],['Espresso',45,C.bk],['Crema',6,C.cre]],steps:shot(r=>[[2,`Rót ${r.w} ml nước nóng vào ly, thêm espresso lên trên.`,15],[8,'Dùng ngay.',5]]),fl:[55,20,40,30,25],tag:['can','den','sang','may','quen']},
+ cappuccino:{n:'Cappuccino',g:'may',p:'esp',c:18,w:0,milk:120,yield:36,grind:'Mịn',temp:'Sữa 60–65 °C',time:'2 phút',ratio:'1:1:1',rt:[1,2,7,8],lay:[['Espresso',60,C.esp],['Sữa nóng',60,C.mi],['Bọt sữa',60,C.fo]],steps:shot(r=>[[7,`Đánh ${r.milk} ml sữa tươi tới 60–65 °C, tạo nhiều bọt.`,50],[2,'Rót sữa và phủ lớp bọt lên espresso.',20],[8,'Dùng ngay.',5]]),fl:[40,55,70,20,25],tag:['can','tuoi','sang','may','quen']},
+ latte:{n:'Latte',g:'may',p:'esp',c:18,w:0,milk:240,yield:36,grind:'Mịn',temp:'Sữa 60–65 °C',time:'2 phút',ratio:'1:4',rt:[1,2,7,8],lay:[['Espresso',60,C.esp],['Sữa nóng',230,C.mi],['Bọt mỏng',15,C.fo]],steps:shot(r=>[[7,`Đánh ${r.milk} ml sữa tươi tới 60–65 °C, bọt mịn mỏng.`,50],[2,'Rót sữa đều vào giữa ly.',20],[8,'Dùng ngay.',5]]),fl:[25,60,55,10,25],tag:['thanh','tuoi','chieu','may','quen']},
+ flat:{n:'Flat White',g:'may',p:'esp',c:18,w:0,milk:120,yield:36,grind:'Mịn',temp:'Sữa 60–65 °C',time:'2 phút',ratio:'1:2',rt:[1,2,7,8],lay:[['Espresso',60,C.esp],['Sữa nóng',115,C.mi],['Bọt rất mỏng',8,C.fo]],steps:shot(r=>[[7,`Đánh ${r.milk} ml sữa tươi tới 60–65 °C, bọt thật mịn.`,45],[2,'Rót sữa vào espresso, giữ lớp bọt mỏng.',20],[8,'Dùng ngay.',5]]),fl:[50,50,65,20,30],tag:['can','tuoi','sang','may','kham']},
+ mocha:{n:'Mocha',g:'may',p:'esp',c:18,w:0,milk:180,choc:20,sweet:'choc',yield:36,grind:'Mịn',temp:'Sữa 60–65 °C',time:'3 phút',ratio:'1:3 + sô-cô-la',rt:[1,2,7,8],lay:[['Sô-cô-la',20,C.ch],['Espresso',60,C.esp],['Sữa nóng',170,C.mi],['Bọt mỏng',15,C.fo]],steps:shot(r=>[[2,`Khuấy ${r.choc} ml sốt sô-cô-la với espresso.`,15],[7,`Đánh ${r.milk} ml sữa tươi tới 60–65 °C.`,50],[2,'Rót sữa vào ly.',15],[8,'Dùng ngay.',5]]),fl:[40,75,70,15,15],tag:['ngot','tuoi','chieu','may','kham']},
+ den:{n:'Đen phin',g:'phin',p:'phin',c:25,w:80,grind:'Vừa thô',temp:'90–96 °C',time:'6–8 phút',ratio:'1:3,2',rt:[1,3,8],lay:[['Cà phê phin',65,C.esp]],steps:phinB(r=>[[8,'Thêm đá hoặc đường nếu thích.',10]]),fl:[85,30,90,30,30],tag:['dam','den','sang','phin','quen']},
+ sua:{n:'Cà phê sữa nóng',g:'phin',p:'phin',c:25,w:80,cond:25,sweet:'cond',grind:'Vừa thô',temp:'90–96 °C',time:'6–8 phút',ratio:'1:3,2',rt:[1,3,8],lay:[['Sữa đặc',22,C.co],['Cà phê phin',65,C.esp]],steps:phinB(r=>[[3,`Cho ${vn0(r.cond)} ml sữa đặc vào ly trước khi đặt phin.`,10],[8,'Khuấy đều và thưởng thức.',10]]),fl:[60,75,90,25,20],tag:['dam','ngot','sang','phin','quen']},
+ suada:{n:'Cà phê sữa đá',g:'phin',p:'sua',c:25,w:80,cond:30,ice:120,sweet:'cond',grind:'Vừa thô',temp:'90–96 °C',time:'7–9 phút',ratio:'1:3,2',rt:[1,3,7,8],lay:[['Sữa đặc',28,C.co],['Cà phê phin',65,C.esp],['Đá',110,C.ice]],steps:phinB(r=>[[7,`Khuấy với ${vn0(r.cond)} ml sữa đặc, đổ vào ly có ${vn0(r.ice)} g đá.`,20],[8,'Dùng ngay.',5]]),fl:[55,80,80,30,20],tag:['dam','ngot','nong','phin','quen']},
+ bacxiu:{n:'Bạc xỉu đá',g:'phin',p:'sua',c:20,w:60,cond:40,milk:80,ice:120,sweet:'cond',grind:'Vừa thô',temp:'90–96 °C',time:'7–9 phút',ratio:'Nhiều sữa',rt:[1,3,7,8],lay:[['Sữa đặc',38,C.co],['Sữa tươi',78,C.mi],['Cà phê phin',48,C.bk],['Đá',100,C.ice]],steps:phinB(r=>[[7,`Cho ${vn0(r.cond)} ml sữa đặc, ${r.milk} ml sữa tươi vào ly, khuấy đều.`,20],[7,`Thêm ${vn0(r.ice)} g đá.`,8],[8,'Rót cà phê lên trên, khuấy khi uống.',8]],20,40),fl:[30,90,55,15,15],tag:['thanh','ngot','chieu','phin','quen']},
+ muoi:{n:'Cà phê muối',g:'phin',p:'phin',c:25,w:95,cond:25,cream:40,ice:80,sweet:'cond',grind:'Vừa thô',temp:'90–96 °C',time:'8–10 phút',ratio:'Kem mặn',rt:[1,3,7,8],lay:[['Sữa đặc',22,C.co],['Cà phê phin',75,C.esp],['Đá',60,C.ice],['Kem muối',40,C.cr]],steps:phinB(r=>[[7,'Đánh kem với muối theo tỷ lệ 200 ml kem : 5 g muối trong 2–3 phút.',150],[7,`Khuấy cà phê với ${vn0(r.cond)} ml sữa đặc, thêm đá.`,20],[8,`Phủ ${r.cream} ml kem muối lên mặt ly.`,10]],45,50),fl:[50,85,85,20,20],tag:['dam','ngot','chieu','phin','kham']},
+ pour:{n:'Pour over',g:'loc',p:'arab',c:15,w:240,grind:'Vừa mịn',temp:'90–96 °C',time:'2:30–4:00',ratio:'1:16',rt:[1,4,8],lay:[['Cà phê lọc',200,C.lt]],steps:r=>[[1,`Cân ${vn0(r.c)} g, xay vừa mịn.`,20],[4,'Tráng giấy lọc bằng nước nóng, đổ nước tráng.',20],[4,`Rót ${vn0(r.c*2)} ml để ủ 30–45 giây.`,40],[4,`Rót chậm thành vòng tới ${r.w} ml.`,130],[8,'Nhấc phễu, lắc nhẹ bình, rót ra ly.',15]],fl:[35,30,35,85,95],tag:['thanh','den','toi','loc','kham']},
+ french:{n:'French Press',g:'loc',p:'phin',c:20,w:300,grind:'Thô',temp:'90–96 °C',time:'4–5 phút',ratio:'1:15',rt:[1,5,8],lay:[['Cà phê ép',260,C.am]],steps:r=>[[1,`Cân ${vn0(r.c)} g, xay thô.`,20],[5,`Rót ${r.w} ml nước nóng, khuấy nhẹ.`,20],[5,'Đậy nắp, ngâm 4 phút.',240],[5,'Ấn chậm pít tông xuống đáy.',20],[8,'Rót hết ra ly ngay.',10]],fl:[55,40,75,45,60],tag:['can','den','sang','loc','quen']},
+ aero:{n:'AeroPress',g:'loc',p:'fine',c:15,w:200,grind:'Vừa mịn',temp:'90–96 °C',time:'2 phút',ratio:'1:13',rt:[1,5,8],lay:[['Cà phê ép',180,C.lt]],steps:r=>[[1,`Cân ${vn0(r.c)} g, xay vừa mịn.`,20],[5,`Rót ${r.w} ml nước nóng, khuấy 10 giây.`,20],[5,'Ngâm 1 phút.',60],[5,'Ấn nhẹ 30 giây.',30],[8,'Thêm nước nếu thích nhẹ hơn.',5]],fl:[40,40,50,70,80],tag:['thanh','den','chieu','loc','kham']},
+ moka:{n:'Bình moka',g:'loc',p:'phin',c:18,w:120,grind:'Vừa mịn',temp:'Nước nóng sẵn',time:'5 phút',ratio:'Đầy giỏ',rt:[1,5,8],lay:[['Cà phê moka',100,C.bk]],steps:r=>[[1,`Cân ${vn0(r.c)} g, xay vừa mịn, không mịn bằng espresso.`,20],[5,'Đổ nước dưới van an toàn, cho cà phê đầy giỏ, không nén.',30],[5,'Vặn chặt, đặt lửa nhỏ.',20],[5,'Tắt lửa khi cà phê bắt đầu xì bọt.',200],[8,'Rót ra ly ngay.',5]],fl:[75,30,75,30,30],tag:['dam','den','sang','loc','quen']},
+ dripb:{n:'Drip bag',g:'loc',p:'drip',c:12,w:180,grind:'Xay sẵn',temp:'90–96 °C',time:'3 phút',ratio:'1:15',rt:[4,8],lay:[['Cà phê lọc',165,C.lt]],steps:r=>[[4,'Xé túi, treo vào miệng ly.',10],[4,'Rót 30 ml để ủ 30 giây.',35],[4,`Rót chậm tới ${r.w} ml.`,110],[8,'Nhấc túi, dùng ngay.',5]],fl:[40,35,40,70,80],tag:['thanh','den','chieu','quan','kham']},
+ cold:{n:'Cold brew',g:'lanh',p:'cold',c:17,w:235,ice:100,grind:'Thô',temp:'Tủ lạnh',time:'18–24 giờ',ratio:'1:8 pha 1:1',rt:[1,6,7,8],lay:[['Cold brew',170,C.bk],['Đá',100,C.ice]],steps:r=>[[1,`Cân ${vn0(r.c)} g, xay thô.`,20],[6,`Trộn với ${Math.round(r.c*8)} ml nước sạch trong bình kín.`,20],[6,'Ngâm 18–24 giờ trong tủ lạnh.',72000],[6,'Lọc bỏ bã, giữ lạnh, dùng trong 7 ngày.',60],[7,`Pha 100 ml cốt với 100 ml nước, thêm ${vn0(r.ice)} g đá.`,20],[8,'Dùng ngay.',5]],fl:[20,50,55,30,50],tag:['can','den','nong','quan','quen']},
+ colddrip:{n:'Cold drip',g:'lanh',p:'fine',c:12,w:132,ice:60,grind:'Vừa mịn',temp:'Nước đá lạnh',time:'4–6 giờ',ratio:'1:10',rt:[1,6,7,8],lay:[['Cold drip',120,C.lt],['Đá',60,C.ice]],steps:r=>[[1,`Cân ${vn0(r.c)} g, xay vừa mịn.`,20],[6,`Làm ướt bã với ${vn0(r.c)} ml nước, nghỉ 10–15 phút.`,800],[6,'Chỉnh van 1 giọt mỗi giây, nhỏ 4–6 giờ.',18000],[6,'Đóng chai, ủ lạnh 12–24 giờ.',54000],[8,'Rót trên đá, dùng trong 2 tuần.',10]],fl:[25,50,40,65,80],tag:['thanh','den','nong','quan','kham']}
+};
+const ids=Object.keys(D);
+const QS=[
+ ['q1','Bạn thích ly cà phê thế nào?',[['dam','Đậm, đắng thơm'],['can','Cân bằng, dễ uống'],['thanh','Thanh, thơm nhẹ']]],
+ ['q2','Bạn uống với gì?',[['den','Đen'],['ngot','Sữa đặc, ngọt béo'],['tuoi','Sữa tươi, nhẹ nhàng']]],
+ ['q3','Bạn thường uống lúc nào?',[['sang','Buổi sáng, cần tỉnh'],['chieu','Buổi chiều, thư giãn'],['nong','Trời nóng, muốn mát'],['toi','Chiều tối, sợ thức khuya']]],
+ ['q4','Bạn có dụng cụ gì?',[['phin','Phin'],['may','Máy pha'],['loc','Phễu lọc, bình ép'],['quan','Chưa có, uống ở quán']]],
+ ['q5','Bạn thích quen thuộc hay mới lạ?',[['quen','Vị quen'],['kham','Thử vị mới']]]
+];
+const WHY={dam:'bạn thích vị đậm',can:'bạn thích vị cân bằng',thanh:'bạn thích vị thanh',den:'uống đen',ngot:'hợp sữa đặc',tuoi:'hợp sữa tươi',sang:'hợp buổi sáng',chieu:'hợp buổi chiều',nong:'mát khi trời nóng',toi:'ít gắt, nên chọn ly nhỏ',phin:'pha được bằng phin',may:'pha bằng máy',loc:'pha bằng dụng cụ lọc',quan:'dễ gọi ở quán',quen:'vị quen thuộc',kham:'lạ hơn thường ngày'};
+const RULES=[
+ ['Cân','Dùng cân 0,1 g cho cà phê và nước.'],
+ ['Nước','Nước lọc sạch, không mùi. Nước nóng 90–96 °C.'],
+ ['Xay','Xay ngay trước khi pha. Mỗi cách pha một cỡ xay riêng.'],
+ ['Làm nóng','Tráng ly, phin, phễu bằng nước nóng trước khi pha.'],
+ ['Vệ sinh','Xả máy trước và sau mỗi ly, lau vòi sữa ngay.'],
+ ['Giữ cà phê','Túi kín, có van, để mát. Dùng trong vài tuần sau khi mở.'],
+ ['Hàng lạnh','Cold brew giữ trong tủ lạnh, nhãn ghi ngày pha.']
+];
+const FIX=[
+ ['Chua, nhạt','Chiết thiếu: xay thô, nước nguội, pha nhanh','Xay mịn hơn, nước nóng hơn, kéo dài thời gian'],
+ ['Đắng, chát','Chiết quá: xay mịn, ngâm lâu','Xay thô hơn, rút ngắn thời gian'],
+ ['Phin không chảy','Xay quá mịn hoặc nén quá chặt','Xay thô hơn, gài nắp nhẹ'],
+ ['Phin chảy nhanh, loãng','Xay thô, ít cà phê','Tăng lượng, nén vừa'],
+ ['Espresso không crema','Hạt quá cũ, áp suất thiếu','Dùng hạt mới, kiểm tra máy'],
+ ['Sữa bọt to, tanh','Sữa quá nóng, đánh sai vị trí','Dừng ở 60–65 °C, để vòi sát mặt sữa']
+];
+const vn=(n,d=1)=>n.toFixed(d).replace('.',',');
+const vn0=n=>{const r=Math.round(n*2)/2;return r%1?vn(r):String(r)};
+const fm=n=>Math.round(n).toLocaleString('de-DE');
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const $=id=>document.getElementById(id);
+const fmtT=s=>s>=3600?`${vn(s/3600)} giờ`:s>=60?`${Math.floor(s/60)}:${String(Math.round(s%60)).padStart(2,'0')}`:`${Math.round(s)} giây`;
+const SK={strength:1,sweet:1};
+const st={d:'suada',group:'phin',n:1,strength:1,sweet:1,step:0,fill:1,sound:false,sel:3};
+const STN=['Cối xay và cân','Máy pha espresso','Phin','Phễu lọc','Bình ép, moka','Cold brew, cold drip','Sữa, đá, kem','Khay phục vụ'];
+function rec(id){
+  const d=D[id],q=st.strength,s=st.sweet,r={...d};
+  r.c=d.c*q;
+  if(d.cond)r.cond=d.cond*s;if(d.choc)r.choc=d.choc*s;
+  return r;
+}
+function steps(id){return D[id].steps(rec(id))}
+
+/* ====== HÌNH HỌC ====== */
+const U=8.4,OX=232,OY=92;
+const P=(x,y,z=0)=>[OX+(x-y)*.866*U,OY+(x+y)*.5*U-z*U];
+const pts=a=>a.map(q=>q.map(n=>n.toFixed(1)).join(',')).join(' ');
+const poly=(a,c='')=>`<polygon points="${pts(a)}" class="${c}"/>`;
+const line=(a,w,col)=>`<polyline points="${pts(a)}" fill="none" style="${w?`stroke-width:${w};`:''}${col?`stroke:var(--${col})`:''}"/>`;
+function box(x,y,z,w,d,h,c=['f1','f2','f3']){return poly([P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[1])+poly([P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)],c[2])+poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[0])}
+const RX=r=>r*U*1.2247,RY=r=>r*U*.7071;
+function cyl(cx,cy,z,r,h,c='f2',top='f1'){const [a,b]=P(cx,cy,z),[,t]=P(cx,cy,z+h),rx=RX(r),ry=RY(r);return `<path class="${c}" d="M${a-rx} ${t}V${b}A${rx} ${ry} 0 0 0 ${a+rx} ${b}V${t}Z"/><ellipse class="${top}" cx="${a}" cy="${t}" rx="${rx}" ry="${ry}"/>`}
+const stG=(i,inner)=>`<g class="st m" data-i="${i}" tabindex="0" role="button" aria-label="Trạm ${i}: ${STN[i-1]}">${inner}</g>`;
+const drip=(id,x,y,z)=>{const q=P(x,y,z);return `<circle id="${id}" cx="${q[0]}" cy="${q[1]}" r="2.6" style="fill:#3A2416;stroke:none" data-y="${q[1]}"/>`};
+function buildScene(){
+  let h='<g class="m">';
+  [[3,23],[97,23],[97,3]].forEach(([x,y])=>h+=cyl(x,y,-7,1.3,3,'dk3','dk2'));
+  h+=box(0,0,-4,100,27,4,['wo','wo2','dk3'])+'</g>';
+  /* 1 cối xay */
+  h+=stG(1,box(4,6,0,8,7,1,['f3','f3','f3'])+box(5,6.5,1,6,5,9,['dk2','dk3','dk3'])
+   +poly([P(5.5,7,10),P(10.5,7,10),P(11.5,6,14),P(4.5,6,14)],'wa')+poly([P(4.5,12,14),P(11.5,12,14),P(10.5,11.5,10),P(5.5,11.5,10)],'wa')+poly([P(4.5,6,14),P(11.5,6,14),P(11.5,12,14),P(4.5,12,14)],'cu')
+   +box(7,11.5,3,2,2,1.5)+box(5.5,13.5,0,5,4,.7,['f1','f2','f3'])+`<rect x="${P(8,17.5,.3)[0]-16}" y="${P(8,17.5,.3)[1]-5}" width="32" height="13" rx="2" style="fill:#1E1411"/><text id="scale" x="${P(8,17.5,.3)[0]}" y="${P(8,17.5,.3)[1]+5}" text-anchor="middle" style="font:700 10px var(--mono);fill:#8FE3B0"></text>`);
+  /* 2 máy espresso */
+  h+=stG(2,box(15,4,0,19,12,1.6,['f3','f3','f3'])+box(15,4,1.6,19,4,10)+box(15,4,11.6,19,12,3.4,['f1','f2','f3'])+box(16.5,8,1.6,16,8,.6,['dk2','dk3','dk3'])
+   +cyl(20,12,9.5,1.8,2.1,'f2','f1')+cyl(29,12,9.5,1.8,2.1,'f2','f1')+box(19,12,8.4,2,2,1.1,['dk2','dk3','dk3'])+line([P(20,13.5,8.8),P(20,18,8)],5,'ink')
+   +cyl(20,12,2.2,1.6,3.2,'pa','ac')+drip('d2',20,12,8)
+   +cyl(18,6,15,1.3,1.2,'pa','f1')+cyl(23,6,15,1.3,1.2,'pa','f1')+cyl(28,6,15,1.3,1.2,'pa','f1')
+   +`<circle cx="${P(24.5,16,13.2)[0]}" cy="${P(24.5,16,13.2)[1]}" r="9" class="pa"/><line x1="${P(24.5,16,13.2)[0]}" y1="${P(24.5,16,13.2)[1]}" x2="${P(24.5,16,13.2)[0]+6}" y2="${P(24.5,16,13.2)[1]-4}" style="stroke:var(--accent);stroke-width:2"/>`
+   +line([P(33,12,10),P(35,14,5.5)],3,'s3'));
+  /* 3 phin */
+  h+=stG(3,cyl(40,12,0,2.6,6,'pa','f1')+`<g id="ph"></g>`+cyl(40,12,6,3.2,.4,'f1','f2')+cyl(40,12,6.4,2.6,3,'f2','f1')+cyl(40,12,9.4,2.7,.4,'f1','f2')+drip('d3',40,12,6)
+   +cyl(40,5,0,2.4,4.6,'cu','cu2')+line([P(42,5,3),P(44,5,5.4)],4,'copper2'));
+  /* 4 lọc */
+  const cn=(x,y,z)=>poly([P(x-1,y+1,z),P(x+1,y+1,z),P(x+3,y+1,z+4),P(x-3,y+1,z+4)],'pa')+`<ellipse cx="${P(x,y,z+4)[0]}" cy="${P(x,y,z+4)[1]}" rx="${RX(2.6)}" ry="${RY(2.6)}" class="f2"/>`;
+  h+=stG(4,cyl(52,12,0,2.6,5.4,'wa','f1')+cn(52,12,5.6)+drip('d4',52,12,5)+cyl(52,5,0,2.2,5.6,'f2','f1')+line([P(54,5,3.6),P(56.4,5.4,7),P(54.4,8,9)],3,'s3'));
+  /* 5 bình ép */
+  h+=stG(5,cyl(62,12,0,2.4,8,'wa','f3')+line([P(62,12,8),P(62,12,11)],3,'ink')+cyl(62,12,11,1.2,.4,'f3','ac')
+   +cyl(68,12,0,2.4,3.6,'f2','f1')+cyl(68,12,3.6,1.7,.5,'f3','f3')+cyl(68,12,4.1,2.2,3.2,'f2','f1')+line([P(70,12,6),P(71.5,12,6)],4,'ink'));
+  /* 6 lạnh */
+  h+=stG(6,box(74,4,0,1,1,18,['wo','wo2','wo2'])+box(84,4,0,1,1,18,['wo','wo2','wo2'])+box(74,4,0,11,10,1,['wo','wo2','wo2'])+box(74,4,17,11,10,1.2,['wo','wo2','wo2'])+box(74,12.6,0,1,1,18,['wo','wo2','wo2'])+box(84,12.6,0,1,1,18,['wo','wo2','wo2'])
+   +cyl(79.6,8.8,13,3,4.4,'wa','f1')+`<g id="iceTop"></g>`+line([P(79.6,8.8,13),P(79.6,8.8,11)],3,'s3')+cyl(79.6,8.8,7,2.6,4,'cu2','cu')+line([P(79.6,8.8,7),P(79.6,8.8,5.2)],3,'s3')+cyl(79.6,8.8,1,2.8,4.2,'f2','wa')+drip('d6',79.6,8.8,5)
+   +cyl(74,17,0,2.6,6.5,'wa','f1')+cyl(74,17,6.5,2.2,.8,'cu','cu2'));
+  /* 7 sữa đá */
+  h+=stG(7,box(87,4,0,8,6.5,4.4,['f2','f2','f3'])+poly([P(87.6,4.6,4.4),P(94.4,4.6,4.4),P(94.4,10,4.4),P(87.6,10,4.4)],'wa')+cubes()+cyl(92,14,0,2.2,4,'f1','f2')+line([P(92,16,3),P(92,17,2)],3,'s3')+cyl(87.6,14.4,0,1.5,5.6,'pa','f2')+cyl(87.6,14.4,5.6,.8,1.2,'ac','ac'));
+  /* ray phục vụ */
+  h+='<g class="m">'+box(2,20.4,0,96,4.6,.8,['dk3','dk3','dk3'])+'</g>';
+  h+=`<polyline id="beltd" class="belt-d" points="${pts([P(3,22.7,.8)])} ${pts([P(92,22.7,.8)])}"/><g class="m" id="beans"></g>`;
+  h+=stG(8,box(90,20.6,.8,8,4.2,.5,['wo','wo2','wo2'])+`<g id="tray"></g>`);
+  const pl=P(30,27,-.6);
+  h+=`<g transform="matrix(.866 .5 0 1 ${pl[0]} ${pl[1]})"><rect width="245" height="26" rx="3" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:1.2"/><circle cx="8" cy="13" r="1.8" style="fill:#2A1B16"/><circle cx="237" cy="13" r="1.8" style="fill:#2A1B16"/><text class="sgn" x="122" y="18.5" text-anchor="middle">Medili Coffee Farm - Di Linh</text></g>`;
+  /* đồng hồ */
+  const c={x:126,y:362,r:66};
+  h+=`<g><circle cx="${c.x}" cy="${c.y}" r="${c.r}" class="pa" style="stroke:var(--ink);stroke-width:2.4"/><circle cx="${c.x}" cy="${c.y}" r="52" fill="none" style="stroke:var(--tint);stroke-width:10"/><circle id="ring" cx="${c.x}" cy="${c.y}" r="52" fill="none" transform="rotate(-90 ${c.x} ${c.y})" style="stroke:var(--accent);stroke-width:10;stroke-linecap:round" stroke-dasharray="326.7" stroke-dashoffset="326.7"/><text id="clk" x="${c.x}" y="${c.y+3}" text-anchor="middle" class="mono" font-size="18"></text><text id="clk2" x="${c.x}" y="${c.y+22}" text-anchor="middle" class="tiny mutedt"></text></g>`;
+  /* ly */
+  h+=`<g id="glass"></g>`;
+  h+=`<g><rect x="790" y="600" width="238" height="74" rx="8" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="804" y="648" class="sgn2">Medili Coffee Farm - Di Linh</text><text x="804" y="664" class="tiny mutedt">Mô hình quầy pha · công thức là mốc thử</text></g>`;
+  h+='<g id="tagB"></g><g id="chips"></g>';
+  $('scene').innerHTML=h;
+  document.querySelectorAll('.st').forEach(g=>{g.addEventListener('click',()=>selectS(+g.dataset.i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectS(+g.dataset.i)}})});
+  chipEv();
+}
+function cubes(){let s='';for(let i=0;i<14;i++){const q=P(88.2+(i*2.3%5.4),5+(i*1.7%4.4),4.5);s+=`<rect x="${q[0]-3}" y="${q[1]-3}" width="6" height="6" rx="1" style="fill:#EAF6F8;stroke:#7FB2BC;stroke-width:.6"/>`}return s}
+const CHIP=[null,{x:8,y:112,a:[8,9,8]},{x:300,y:10,a:[24,10,16]},{x:420,y:60,a:[40,10,10]},{x:540,y:110,a:[52,10,10]},{x:690,y:62,a:[64,10,11]},{x:806,y:128,a:[79.6,8,18]},{x:826,y:224,a:[91,8,5]},{x:848,y:330,a:[94,22,2]}];
+function chipLabel(i){const id=st.d,d=D[id],r=rec(id);
+  switch(i){case 1:return d.rt.includes(1)?`Cân ${vn0(r.c)} g · ${d.grind}`:STN[0];
+  case 2:return d.g==='may'?`Máy · ${Math.round(r.c*2)} g espresso`:'Máy pha';
+  case 3:return d.rt.includes(3)?`Phin · ${d.w} ml nước`:'Phin';
+  case 4:return d.rt.includes(4)?`Lọc · ${d.w} ml`:'Phễu lọc';
+  case 5:return d.rt.includes(5)?`Ép · ${d.w} ml`:'Bình ép, moka';
+  case 6:return d.rt.includes(6)?`${d.n} · ${d.time}`:'Cold brew, drip';
+  case 7:{const a=[];if(d.milk)a.push(`${d.milk} ml sữa`);if(r.cond)a.push(`${vn0(r.cond)} ml sữa đặc`);if(d.ice)a.push(`${d.ice} g đá`);return a.length?a.join(' · '):'Sữa, đá, kem'}
+  case 8:return d.n}}
+function chipEv(){}
+function buildChips(){let h='';const rt=D[st.d].rt;for(let i=1;i<=8;i++){const c=CHIP[i],q=P(...c.a),l=chipLabel(i),w=38+l.length*7.1,off=!rt.includes(i);h+=`<polyline class="lead-l" data-l="${i}" points="${q[0].toFixed(1)},${q[1].toFixed(1)} ${c.x+20},${c.y+13}"/><g class="chip${off?' off':''}" data-c="${i}"><rect x="${c.x+6}" y="${c.y}" rx="8" width="${w}" height="26"/><circle cx="${c.x+6}" cy="${c.y+13}" r="13"/><text class="num" x="${c.x+6}" y="${c.y+18.5}" text-anchor="middle">${i}</text><text class="lab" x="${c.x+26}" y="${c.y+18}">${l}</text></g>`}
+  const el=$('chips');el.innerHTML=h;el.querySelectorAll('.chip').forEach(g=>g.addEventListener('click',()=>selectS(+g.dataset.c)))}
+function selectS(i){st.sel=i;const s=steps(st.d),k=s.findIndex(x=>x[0]===i);if(k>=0)st.step=k;else st.step=-1;renderAll();const sc=document.querySelector('.scroller'),q=P(...CHIP[i].a);if(sc.scrollWidth>sc.clientWidth)sc.scrollLeft=q[0]/1040*sc.scrollWidth-sc.clientWidth/2}
+function drawGlass(){
+  const d=D[st.d],L=d.lay,x=58,y=486,w=86,h=172,tot=L.reduce((a,b)=>a+b[1],0),cap=Math.max(tot,240);
+  let g=`<rect x="40" y="474" width="318" height="196" rx="10" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="166" y="498" class="lab12 mutedt">CẤU TRÚC LY</text>`;
+  const scale=(h-14)/cap,gid='gclip';
+  g+=`<defs><clipPath id="${gid}"><path d="M${x} ${y}L${x+6} ${y+h}H${x+w-6}L${x+w} ${y}Z"/></clipPath></defs><g clip-path="url(#${gid})">`;
+  const lim=tot*st.fill;let acc=0,yy=y+h;
+  L.forEach(l=>{const take=clamp(lim-acc,0,l[1]);acc+=l[1];const hh=take*scale;if(hh>0){yy-=hh;g+=`<rect x="${x-4}" y="${yy}" width="${w+8}" height="${hh}" style="fill:${l[2]};stroke:none"/>`;if(l[0]==='Đá'){for(let i=0;i<5;i++){const cy=yy+(i%3)*hh/3+4;if(cy<yy+hh-6)g+=`<rect x="${x+8+i*14}" y="${cy}" width="14" height="14" rx="2" transform="rotate(${i*14} ${x+15+i*14} ${cy+7})" style="fill:#EAF6F8;fill-opacity:.8;stroke:#7FB2BC"/>`}}}});
+  g+=`</g><path d="M${x} ${y}L${x+6} ${y+h}H${x+w-6}L${x+w} ${y}" fill="none" style="stroke:var(--ink);stroke-width:2.2"/>`;
+  [...L].reverse().forEach((l,i)=>{const ty=522+i*24,v=l[1]===0?'':`${l[1]} ml`;g+=`<rect x="166" y="${ty-10}" width="13" height="13" rx="3" style="fill:${l[2]};stroke:var(--ink);stroke-width:.8"/><text x="186" y="${ty+1}" class="lab12">${l[0]}</text><text x="342" y="${ty+1}" text-anchor="end" class="tiny mono">~${l[1]} ml</text>`});
+  $('glass').innerHTML=g;
+  const c=P(94,22.7,1.3);$('tray').innerHTML=st.fill>=1?cyl(94,22.7,1.3,1.4,3,'wa','f1'):'';
+  const col=L[Math.floor(L.length/2)][2];const ph=$('ph');const q=P(40,12,0),rr=RX(2.3);ph.innerHTML=`<rect x="${q[0]-rr}" y="${q[1]-22-(st.fill*24)}" width="${2*rr}" height="${24+st.fill*24}" style="fill:${col};stroke:none;opacity:.8"/>`;
+}
+function renderAll(){
+  const id=st.d,d=D[id],r=rec(id),n=st.n,s=steps(id);
+  document.querySelectorAll('.st').forEach(g=>{const i=+g.dataset.i;g.classList.toggle('on',i===st.sel);g.classList.toggle('off',!d.rt.includes(i))});
+  buildChips();
+  document.querySelectorAll('.chip').forEach(g=>g.classList.toggle('on',+g.dataset.c===st.sel));
+  document.querySelectorAll('.lead-l').forEach(g=>g.classList.toggle('on',+g.dataset.l===st.sel));
+  $('strip').innerHTML=s.map((x,i)=>`<button type="button" class="${i===st.step?'on':''}">Bước ${i+1}</button>`).join('');
+  $('strip').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>{st.step=i;st.sel=s[i][0];renderAll()});
+  const cur=st.step>=0?s[st.step]:null,pr=PR[d.p],tot=s.reduce((a,b)=>a+b[2],0),done=s.slice(0,Math.max(0,st.step+1)).reduce((a,b)=>a+b[2],0);
+  $('detail').innerHTML=`<div class="dh"><div class="dn">${st.step>=0?st.step+1:'–'}</div><h2>${d.n}<small>${pr.n} · ${pr.c} · rang ${pr.l}</small></h2></div>
+   <div class="dgrid"><div><span class="lbl">Cách pha từng bước</span><ol class="steps">${s.map((x,i)=>`<li class="${i===st.step?'on':''}">${x[1]}</li>`).join('')}</ol></div>
+   <div><span class="lbl">Vì sao làm vậy</span><p>${why(d)}</p><span class="lbl">Trạm ${st.sel}: ${STN[st.sel-1]}</span><p>${d.rt.includes(st.sel)?stationText(st.sel):'Món này không dùng trạm này.'}</p></div></div>`;
+  /* đồng hồ */
+  const prog=clamp(done/tot,0,1);$('ring').setAttribute('stroke-dashoffset',326.7*(1-prog));$('clk').textContent=fmtT(done);$('clk2').textContent='trên '+fmtT(tot);
+  $('scale').textContent=vn0(r.c)+' g';
+  drawGlass();
+  const c=Math.floor(250/r.c);
+  const q=P(94,24,1);$('tagB').innerHTML=`<g class="tag big"><rect x="372" y="634" width="270" height="24" rx="6"/><text x="507" y="650" text-anchor="middle">Gói 250 g pha được ${c} ly</text></g>`;
+  $('figsub').textContent=`quầy 8 trạm, đang pha ${d.n}`;
+}
+function why(d){
+  if(d.g==='may')return 'Áp suất 9 bar đẩy nước qua lớp cà phê nén trong khoảng 30 giây. Dầu và khí tạo thành crema, nên ly nhỏ mà rất đậm. Chảy nhanh quá thì chua, chảy chậm quá thì đắng.';
+  if(d.g==='phin')return 'Trọng lực kéo nước qua lớp cà phê rất chậm. Bước ủ để cà phê nở và thoát khí, giúp nước sau đó thấm đều. Vì tỷ lệ cà phê cao, ly phin đậm và dày hơn cà phê lọc.';
+  if(d.g==='lanh')return 'Nước lạnh hoà tan chậm nên cần nhiều giờ. Ít chất chua và đắng được chiết ra hơn, vì vậy ly mát, tròn vị và dễ uống.';
+  return 'Tỷ lệ nước cao làm ly nhẹ và rõ hương. Lọc giấy giữ dầu lại nên vị trong, còn bình ép giữ dầu nên thân dày hơn.';
+}
+function stationText(i){return ['Xay ngay trước khi pha để giữ hương. Cân đúng gram trước mỗi ly.','Tay cầm cần nén phẳng. Áp suất ở khoảng 9 bar, cà phê chảy thành dòng mảnh như đuôi chuột.','Phin sạch, nắp gài vừa tay. Nước đổ thành hai lần để cà phê nở đều.','Giấy lọc tráng nước nóng trước. Rót thành vòng chậm, đừng rót trực tiếp vào thành giấy.','Mỗi dụng cụ có cỡ xay và thời gian riêng, xem các bước bên trái.','Giữ lạnh trong suốt quá trình. Bình và dụng cụ phải sạch, nhãn ghi ngày pha.','Sữa đặc cho vị ngọt béo, sữa tươi cho độ nhẹ, đá làm mát và pha loãng dần.','Dùng ngay để giữ hương. Ly nóng tráng trước khi rót.'][i-1]}
+function renderPanel(){
+  const id=st.d,d=D[id],r=rec(id),n=st.n;
+  $('count').textContent=ids.length+' món';
+  $('groups').innerHTML=Object.entries(G).map(([k,v])=>`<button class="pill" data-k="${k}" aria-pressed="${st.group===k}">${v}</button>`).join('');
+  $('groups').querySelectorAll('button').forEach(b=>b.onclick=()=>{st.group=b.dataset.k;const f=ids.find(i=>D[i].g===st.group);load(f)});
+  $('drinks').innerHTML=ids.filter(i=>D[i].g===st.group).map(i=>`<button class="pill" data-k="${i}" aria-pressed="${st.d===i}">${D[i].n}</button>`).join('');
+  $('drinks').querySelectorAll('button').forEach(b=>b.onclick=()=>load(b.dataset.k));
+  const pl=(el,opts,k)=>{$(el).innerHTML=opts.map(([v,t])=>`<button class="pill" data-v="${v}" aria-pressed="${st[k]===v}">${t}</button>`).join('');$(el).querySelectorAll('button').forEach(b=>b.onclick=()=>{st[k]=+b.dataset.v;refresh()})};
+  pl('str',[[.9,'Nhẹ'],[1,'Vừa'],[1.1,'Đậm']],'strength');
+  $('sweetBox').hidden=!d.sweet;pl('swt',[[.7,'Ít ngọt'],[1,'Vừa'],[1.3,'Ngọt']],'sweet');
+  $('N').value=n;$('oN').textContent=n+' ly';
+  $('needLbl').textContent=`Cần cho ${n} ly`;
+  const S=[['Cà phê',`${vn0(r.c*n)} g`],['Nước',d.w?`${fm(d.w*n)} ml`:'–']];
+  if(d.milk)S.push(['Sữa tươi',`${fm(d.milk*n)} ml`]);if(r.cond)S.push(['Sữa đặc',`${vn0(r.cond*n)} ml`]);if(d.cream)S.push(['Kem muối',`${fm(d.cream*n)} ml`]);if(r.choc)S.push(['Sốt sô-cô-la',`${vn0(r.choc*n)} ml`]);if(d.ice)S.push(['Đá',`${fm(d.ice*n)} g`]);
+  $('stats').innerHTML=S.map(([a,b])=>`<div class="stat"><span>${a}</span><b>${b}</b></div>`).join('');
+  const pr=PR[d.p];
+  $('spec').innerHTML=[['Cà phê dùng',pr.c],['Cấp rang',pr.l],['Cỡ xay',d.grind],['Nhiệt độ',d.temp],['Thời gian',d.time],['Tỷ lệ',d.ratio]].map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join('');
+  const lv=pr.c.startsWith('Arabica')&&d.p==='arab';
+  $('verdict').className=(st.strength>1?'warn':'good');
+  $('verdict').innerHTML=st.strength>1?`<b>! Ly đậm hơn</b>Cà phê ${vn0(r.c)} g. ${pr.c.includes('Robusta')?'Robusta có caffeine cao hơn Arabica, nên uống vừa phải.':'Uống vừa phải.'}`:`<b>✓ Công thức ${st.strength<1?'nhẹ':'chuẩn'}</b>${vn0(r.c)} g cà phê cho mỗi ly. 1 gói 250 g pha được khoảng ${Math.floor(250/r.c)} ly.`;
+  const nm=['Đậm đắng','Ngọt béo','Thân dày','Hương thơm','Rõ vườn'];
+  $('bars').innerHTML=d.fl.map((v,i)=>{let x=v;if(i===0)x=clamp(v*st.strength,0,100);if(i===1&&d.sweet)x=clamp(v*st.sweet,0,100);return `<div class="bar"><span>${nm[i]}</span><span class="track"><i style="width:${x.toFixed(0)}%"></i></span><span>${x.toFixed(0)}</span></div>`}).join('');
+  renderSheet();
+}
+function renderSheet(){
+  const d=D[st.d],r=rec(st.d),n=st.n,pr=PR[d.p],s=steps(st.d);
+  const a=[`CÔNG THỨC ${d.n.toUpperCase()} · ${n} ly`,'Medili Coffee Farm - Di Linh','',`Cà phê: ${pr.c}, rang ${pr.l}`,`Cà phê: ${vn0(r.c*n)} g, xay ${d.grind.toLowerCase()}`];
+  if(d.w)a.push(`Nước: ${fm(d.w*n)} ml, ${d.temp}`);if(d.milk)a.push(`Sữa tươi: ${fm(d.milk*n)} ml`);if(r.cond)a.push(`Sữa đặc: ${vn0(r.cond*n)} ml`);if(d.cream)a.push(`Kem muối: ${fm(d.cream*n)} ml`);if(r.choc)a.push(`Sốt sô-cô-la: ${vn0(r.choc*n)} ml`);if(d.ice)a.push(`Đá: ${fm(d.ice*n)} g`);
+  a.push('',...s.map((x,i)=>`${i+1}. ${x[1]}`));
+  const t=a.join('\n');$('sheet').textContent=t;st.sheet=t;
+}
+function renderDose(){
+  $('dose').innerHTML=ids.map(i=>{const d=D[i],sw=[];if(d.milk)sw.push(d.milk+' ml sữa tươi');if(d.cond)sw.push(d.cond+' ml sữa đặc');if(d.cream)sw.push(d.cream+' ml kem');if(d.choc)sw.push(d.choc+' ml sô-cô-la');return `<tr class="pick${i===st.d?' on':''}" data-k="${i}" tabindex="0"><td><b>${d.n}</b></td><td>${d.c} g</td><td>${d.w?d.w+' ml':'–'}</td><td>${sw.join(', ')||'–'}</td><td>${d.ice?d.ice+' g':'–'}</td><td>${d.time}</td><td>${Math.floor(250/d.c)} ly</td></tr>`}).join('');
+  $('dose').querySelectorAll('tr').forEach(r=>{const go=()=>{load(r.dataset.k);$('scene').scrollIntoView({behavior:still?'auto':'smooth',block:'center'})};r.onclick=go;r.onkeydown=e=>{if(e.key==='Enter')go()}});
+}
+function refresh(){renderPanel();renderDose();renderAll()}
+function load(id){run=null;$('run').textContent='Pha thử';st.d=id;st.group=D[id].g;st.fill=1;st.step=0;st.sel=D[id].rt[Math.min(1,D[id].rt.length-1)];const s=steps(id);st.step=s.findIndex(x=>x[0]===st.sel);refresh()}
+
+/* ====== CHỌN GU ====== */
+const ans={q1:'dam',q2:'ngot',q3:'sang',q4:'phin',q5:'quen'};
+function scored(){const keys=Object.values(ans);return ids.map(i=>{const t=D[i].tag;let s=0;keys.forEach(k=>{if(t.includes(k))s+=(k===ans.q4?2.5:k===ans.q2?2:1.5)});if(ans.q2==='tuoi'&&!D[i].milk)s-=3;if(ans.q2==='ngot'&&!D[i].cond&&!D[i].choc)s-=3;if(ans.q3==='toi'&&PR[D[i].p].c.includes('Robusta'))s-=2;if(ans.q2==='den'&&(D[i].milk||D[i].cond))s-=3;return {i,s,why:t.filter(k=>keys.includes(k)).slice(0,3).map(k=>WHY[k])}}).sort((a,b)=>b.s-a.s)}
+function renderQuiz(){
+  $('qs').innerHTML=QS.map(([k,q,o],n)=>`<fieldset class="q"><legend><b>${n+1}.</b> ${q}</legend><div class="row">${o.map(([v,t])=>`<button class="pill" type="button" data-q="${k}" data-v="${v}" aria-pressed="${ans[k]===v}">${t}</button>`).join('')}</div></fieldset>`).join('');
+  $('qs').querySelectorAll('button').forEach(b=>b.onclick=()=>{ans[b.dataset.q]=b.dataset.v;renderQuiz()});
+  const r=scored(),a=r[0],d=D[a.i],pr=PR[d.p],alt=r.slice(1,3);
+  const night=ans.q3==='toi';
+  $('result').innerHTML=`<div class="res"><span class="lbl">Gu của bạn hợp với</span><h3>${d.n}</h3><p class="rp">${pr.n}<br><small>${pr.c} · rang ${pr.l}</small></p><p>Vì ${a.why.join(', ')||'vị dễ uống'}.</p><div class="row"><button class="btn main" id="goD">Xem cách pha</button><button class="btn" id="copyG">Sao chép để nhắn MeDili</button></div><small id="gmsg" role="status"></small>${alt.length?`<hr><span class="lbl">Thử thêm</span><div class="row">${alt.map(x=>`<button class="pill" data-a="${x.i}">${D[x.i].n}</button>`).join('')}</div>`:''}<p class="tinyn">${night?'Buổi tối nên chọn ly nhỏ. ':''}Robusta có caffeine gần gấp đôi Arabica. Người lớn khoẻ mạnh nên dưới 400 mg caffeine mỗi ngày, phụ nữ mang thai dưới 200 mg.</p></div>`;
+  const goto=id=>{load(id);$('scene').scrollIntoView({behavior:still?'auto':'smooth',block:'center'})};
+  $('goD').onclick=()=>goto(a.i);$('result').querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>goto(b.dataset.a));
+  $('copyG').onclick=()=>copyTo(`Chào MeDili, tôi vừa làm bài tìm gu. Gợi ý của tôi là ${d.n}, dùng ${pr.n}. MeDili tư vấn giúp tôi nhé.`,'gmsg',null,'Đã sao chép, hãy dán vào Zalo MeDili.');
+}
+function renderMap(){
+  const M=[['Đậm và đắng','Tỉnh ngay, thân dày',['den','espresso','moka','french','americano']],['Ngọt và béo','Quen thuộc, dễ uống',['suada','sua','bacxiu','muoi','mocha']],['Sữa tươi nhẹ','Mềm, ít đắng',['latte','cappuccino','flat']],['Thanh và thơm','Rõ hương vườn',['pour','aero','dripb']],['Mát lạnh','Tròn vị, ít gắt',['cold','colddrip']]];
+  $('gumap').innerHTML=M.map(([t,s,l])=>`<div class="gm"><h3>${t}</h3><small>${s}</small><div class="row">${l.map(i=>`<button class="pill" data-g="${i}">${D[i].n}</button>`).join('')}</div></div>`).join('');
+  $('gumap').querySelectorAll('button').forEach(b=>b.onclick=()=>{load(b.dataset.g);$('scene').scrollIntoView({behavior:still?'auto':'smooth',block:'center'})});
+}
+
+/* ====== HOẠT ẢNH ====== */
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let prev=0,tA=0,run=null,ac=null;
+function ding(){if(!st.sound||!ac)return;const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=660;g.gain.setValueAtTime(.05,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+.2);o.connect(g);g.connect(ac.destination);o.start();o.stop(ac.currentTime+.2)}
+function frame(ts){
+  const dt=Math.min(50,ts-prev||16);prev=ts;tA+=dt;
+  if(!document.hidden){
+    const act=D[st.d].rt;
+    [['d2',2,26],['d3',3,44],['d4',4,36],['d6',6,30]].forEach(([id,i,dist])=>{const e=$(id);if(!e)return;const base=+e.dataset.y,on=act.includes(i);e.style.visibility=on?'visible':'hidden';if(on){const p=(tA*.0013+i*.3)%1;e.setAttribute('cy',base+p*dist)}});
+    $('beltd').style.strokeDashoffset=-tA*.02;
+    if(run)step(dt);
+  }
+  requestAnimationFrame(frame);
+}
+function startRun(){
+  if(run){run=null;$('run').textContent='Pha thử';st.fill=1;renderAll();return}
+  if(still){st.fill=1;st.step=0;renderAll();return}
+  run={i:0,t:0};st.fill=0;st.step=0;st.sel=steps(st.d)[0][0];$('run').textContent='Dừng lại';renderAll();ding();
+}
+function step(dt){
+  const s=steps(st.d);run.t+=dt;
+  const n=s.length,p=(run.i+clamp(run.t/2200,0,1))/n,startFill=.35;
+  st.fill=clamp((p-startFill)/(1-startFill),0,1);
+  if(run.t>=2200){run.i++;run.t=0;ding();if(run.i>=n){run=null;st.fill=1;$('run').textContent='Pha lại';renderAll();return}st.step=run.i;st.sel=s[run.i][0];renderAll();return}
+  drawGlass();
+}
+
+/* ====== KHỞI ĐỘNG ====== */
+const copyTo=async(t,msg,src,done)=>{try{await navigator.clipboard.writeText(t);$(msg).textContent=done}catch(e){if(src){const r=document.createRange();r.selectNodeContents($(src));const s=getSelection();s.removeAllRanges();s.addRange(r);$(msg).textContent='Đã bôi đen, hãy sao chép bằng tay.'}else $(msg).textContent=t}};
+$('rules').innerHTML=RULES.map((r,i)=>`<li><div class="n">${i+1}</div><div><h3>${r[0]}</h3><p>${r[1]}</p></div></li>`).join('');
+$('fix').innerHTML=FIX.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('');
+$('N').addEventListener('input',e=>{st.n=+e.target.value;refresh()});
+$('run').onclick=startRun;
+$('reset').onclick=()=>{st.strength=1;st.sweet=1;st.n=1;load(st.d)};
+$('copy').onclick=()=>copyTo(st.sheet,'copied','sheet','Đã sao chép công thức.');
+$('copyZalo').onclick=()=>copyTo('0966770788','zaloMsg','zaloNo','Đã sao chép số Zalo.');
+$('snd').onclick=()=>{st.sound=!st.sound;if(st.sound&&!ac){try{ac=new (window.AudioContext||window.webkitAudioContext)()}catch(e){st.sound=false}}$('snd').textContent='Tiếng quầy: '+(st.sound?'bật':'tắt');$('snd').setAttribute('aria-pressed',st.sound)};
+buildScene();renderQuiz();renderMap();load('suada');
+if(!still)requestAnimationFrame(frame);
+</script>
+</body></html>

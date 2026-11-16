@@ -1,0 +1,160 @@
+{
+ "version": 1,
+ "updated": "2026-11-07T12:37:00+07:00",
+ "days": [
+  {
+   "date": "2026-10-31",
+   "vn": {
+    "lamdong": 86500
+   },
+   "src": [
+    {
+     "name": "Báo Lâm Đồng",
+     "url": "https://baolamdong.vn/gia-ca-phe/tinh-lam-dong"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-02",
+   "vn": {
+    "lamdong": 84200
+   },
+   "src": [
+    {
+     "name": "Báo Lâm Đồng",
+     "url": "https://baolamdong.vn/gia-ca-phe/tinh-lam-dong"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "vn": {
+    "lamdong": 84000
+   },
+   "src": [
+    {
+     "name": "Báo Lâm Đồng",
+     "url": "https://baolamdong.vn/gia-ca-phe/tinh-lam-dong"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-04",
+   "vn": {
+    "lamdong": 83300
+   },
+   "src": [
+    {
+     "name": "Báo Lâm Đồng",
+     "url": "https://baolamdong.vn/gia-ca-phe/tinh-lam-dong"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05",
+   "vn": {
+    "lamdong": 83500
+   },
+   "src": [
+    {
+     "name": "Báo Lâm Đồng",
+     "url": "https://baolamdong.vn/gia-ca-phe/tinh-lam-dong"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-06",
+   "vn": {
+    "lamdong": 83600,
+    "daklak": 84200,
+    "gialai": 84000,
+    "daknong": 84500
+   },
+   "world": {
+    "robusta": 3241,
+    "robustaChg": 13,
+    "robustaPct": 0.4,
+    "robustaTerm": "01/2027",
+    "arabica": 277.15,
+    "arabicaChg": -2.6,
+    "arabicaPct": -0.93,
+    "arabicaTerm": "12/2026"
+   },
+   "src": [
+    {
+     "name": "Báo Lâm Đồng",
+     "url": "https://baolamdong.vn/gia-ca-phe/tinh-lam-dong"
+    },
+    {
+     "name": "VietNamNet",
+     "url": "https://dantocphattrien.vietnamnet.vn/gia-ca-phe"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-07",
+   "time": "12:37",
+   "vn": {
+    "lamdong": 84000,
+    "daklak": 84500,
+    "gialai": 84500,
+    "daknong": 84700
+   },
+   "world": {
+    "robusta": 3270,
+    "robustaChg": 29,
+    "robustaPct": 0.89,
+    "robustaTerm": "01/2027",
+    "arabica": 280.0,
+    "arabicaChg": 2.85,
+    "arabicaPct": 1.03,
+    "arabicaTerm": "12/2026"
+   },
+   "src": [
+    {
+     "name": "Báo Lâm Đồng",
+     "url": "https://baolamdong.vn/gia-ca-phe/tinh-lam-dong"
+    },
+    {
+     "name": "VietNamNet",
+     "url": "https://dantocphattrien.vietnamnet.vn/gia-ca-phe"
+    }
+   ]
+  }
+ ],
+ "fresh": [
+  {
+   "date": "2026-11-05",
+   "low": 18000,
+   "high": 18000,
+   "place": "",
+   "note": "trên dưới 18.000 đ/kg",
+   "src": {
+    "name": "Tuổi Trẻ",
+    "url": "https://tuoitre.vn/gia-ca-dau-ngay-nho-than-go-gia-200000-dong-kg-ca-phe-dau-vu-tiep-tuc-rot-gia-10026110508561234.htm"
+   }
+  },
+  {
+   "date": "2026-11-05",
+   "low": 16000,
+   "high": 18000,
+   "place": "Di Linh, Lâm Đồng",
+   "note": "Di Linh 16.000–18.000 đ/kg; Bảo Lâm 17.500–17.800 đ/kg, tùy chất lượng trái",
+   "src": {
+    "name": "Báo Lâm Đồng",
+    "url": "https://baolamdong.vn/nong-dan-tat-bat-thu-hoach-ca-phe-472867.html"
+   }
+  },
+  {
+   "date": "2026-11-03",
+   "low": 17500,
+   "high": 17800,
+   "place": "Bảo Lâm, Lâm Đồng",
+   "note": "trái chín nhiều được 17.800 đ/kg",
+   "src": {
+    "name": "Dân Trí",
+    "url": "https://dantri.com.vn/kinh-doanh/gia-ca-phe-giam-manh-nong-dan-co-dong-thai-bat-ngo-20261103183301042.htm"
+   }
+  }
+ ]
+}
