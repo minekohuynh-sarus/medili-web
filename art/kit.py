@@ -48,7 +48,7 @@ GROUPS = [
                                ('len-men-men-bia.html', 'Lên men men bia'), ('len-men-trai-cay.html', 'Lên men trái cây')]),
     ('Rang & pha', [('xuong-rang.html', 'Xưởng rang & năng lực'), ('rang.html', 'Phòng rang'), ('quay-pha.html', 'Quầy pha'),
                     ('cold-brew.html', 'Cỗ máy Cold Brew'), ('tim-gu.html', 'Tìm gu cà phê')]),
-    ('Mua & hợp tác', [('cua-hang.html', 'Cửa hàng · 20 dòng cà phê'), ('mua-hang.html', 'Phòng Chọn Mua'), ('horeca.html', 'Giải pháp HORECA'),
+    ('Mua & hợp tác', [('cua-hang.html', 'Cửa hàng cà phê'), ('mua-hang.html', 'Phòng Chọn Mua'), ('horeca.html', 'Giải pháp HORECA'),
                        ('nhan-xanh.html', 'Chọn nhân xanh · khách sỉ'), ('gia-ca-phe.html', 'Giá cà phê hôm nay'), ('giao-hang.html', 'Giao hàng & đổi trả'),
                        ('gio-hang.html', 'Giỏ hàng'), ('tim-kiem.html', 'Tìm kiếm')]),
     ('Kiến thức cà phê', [('journal.html', 'Tất cả bài viết'), ('chiet-xuat.html', 'Cỗ máy Chiết xuất'), ('phan-biet-ca-phe.html', 'Cỗ máy Phân biệt cà phê'), ('trai-chin.html', 'Cỗ máy Trái chín'),

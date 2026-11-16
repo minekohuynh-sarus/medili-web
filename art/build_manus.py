@@ -8,8 +8,22 @@ import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, 
 os.makedirs(OUT, exist_ok=True)
 rd = lambda f: open(os.path.join(BASE, f), encoding='utf8').read()
 
+# Giá theo bảng báo giá MeDili tháng 11/2026 (chị Ngân chốt 12/11/2026): Catimor 400k/kg, Culi 350k/kg, chưa có giá sỉ.
+PRICE_FIX = [("{id:'cat',n:'Catimor',full:'Cà phê Catimor',line:'Đặc sản',kind:'phin',p:[350,null,null],",
+              "{id:'cat',n:'Catimor',full:'Cà phê Catimor',line:'Đặc sản',kind:'phin',p:[400,null,null],"),
+             ("{id:'cul',n:'Culi',full:'Cà phê Culi',line:'Đặc sản',kind:'phin',p:null,",
+              "{id:'cul',n:'Culi',full:'Cà phê Culi',line:'Đặc sản',kind:'phin',p:[350,null,null],"),
+             ('Catimor và Blend MeDili chưa có giá sỉ', 'Catimor, Culi và Blend MeDili chưa có giá sỉ')]
+
+
+def price_fix(s):
+    for a, b in PRICE_FIX:
+        assert s.count(a) == 1, a[:60]
+        s = s.replace(a, b)
+    return s
+
 # ---------- danh mục 14 dòng từ Phòng Chọn Mua ----------
-shop = rd('mua-hang.html')
+shop = price_fix(rd('mua-hang.html'))
 a, b = shop.index('const CL='), shop.index('const byId=')
 node = subprocess.run(['node', '-e', shop[a:b] + ';process.stdout.write(JSON.stringify(S))'], capture_output=True, text=True, check=True)
 P = {x['id']: x for x in json.loads(node.stdout)}
@@ -89,6 +103,7 @@ for f, a_ in pages_b.ART.items():
 # Cửa hàng theo cấu trúc web medilinh.com: danh mục, 20 trang sản phẩm, giỏ hàng, tìm kiếm
 SHOP, CATALOG = cuahang.pages(P)
 NEW.update(SHOP)
+N_SHELF = sum(x['st'] != 'sap' for x in CATALOG)   # dòng đang bán (kể cả Ngũ Hành)
 
 # ---------- trang cũ: menu, chân trang, màu ----------
 OLD = ['gia-ca-phe.html', 'vuon.html', 'trai-ca-phe.html', 'len-men-men-bia.html', 'len-men-trai-cay.html', 'rang.html',
@@ -109,6 +124,7 @@ for f in OLD:
         assert s.count('</header>') == 1, f
         s = s.replace('</header>', f'</header>\n<section class="pgal" aria-label="{t}"><h2>{t}</h2><p>{nb(d)}</p>{strip(items)}</section>', 1)
     if f == 'mua-hang.html':
+        s = price_fix(s)
         assert s.count("col:'#2F6B4A'") == 2 and s.count("col:'#3F7F5A'") == 1
         s = s.replace("col:'#2F6B4A'", "col:'#B5832F'").replace("col:'#3F7F5A'", "col:'#C9A15B'")
         assert s.count('</header>') == 1
@@ -183,7 +199,7 @@ HOME_BODY = f'''{header('index.html')}
  <h2 class="p-h2">Bốn hương vị. <em>Một niềm mê.</em></h2>
  <p class="lead">Bốn nhóm cà phê rang mộc trên kệ MeDili. Mỗi nhóm có bản cho phin, cho máy, và giá sỉ theo lượng dùng mỗi tháng.</p>
  <div class="g4">{coll}</div>
- <div class="box gu"><div>{icon('gu')}</div><div><p class="eye">Tìm gu cà phê của bạn</p><p>Sáu câu hỏi ngắn. Không có đáp án đúng, chỉ có ly cà phê đúng gu.</p></div><div class="cta" style="margin:0"><a class="btn main" href="tim-gu.html">Bắt đầu khám phá</a><a class="btn" href="cua-hang.html">Xem đủ 20 dòng</a></div></div>
+ <div class="box gu"><div>{icon('gu')}</div><div><p class="eye">Tìm gu cà phê của bạn</p><p>Sáu câu hỏi ngắn. Không có đáp án đúng, chỉ có ly cà phê đúng gu.</p></div><div class="cta" style="margin:0"><a class="btn main" href="tim-gu.html">Bắt đầu khám phá</a><a class="btn" href="cua-hang.html">Xem đủ {N_SHELF} dòng</a></div></div>
  <p class="note">Bảng giá đề xuất, chưa gồm 8 % VAT và phí vận chuyển. MeDili xác nhận khi đặt hàng.</p>
 </section>
 
@@ -251,7 +267,7 @@ HOME_BODY = f'''{header('index.html')}
  <p class="eye">Chương 08 · Hẹn nhau ở MeDili</p>
  <h2 class="p-h2">Một niềm mê để sẻ chia. <em>Một hành trình còn tiếp.</em></h2>
  <p class="k">Di Linh origin · Saigon soul</p>
- <div class="facts"><div><b>{ha(TOTAL)} ha</b><span>bốn vùng trồng ở Lâm Đồng</span></div><div><b>{LINKED} ha</b><span>liên kết tại Di Linh, tính riêng</span></div><div><b>2010</b><span>năm vùng trồng bắt đầu canh tác</span></div><div><b>14</b><span>dòng cà phê trên kệ</span></div></div>
+ <div class="facts"><div><b>{ha(TOTAL)} ha</b><span>bốn vùng trồng ở Lâm Đồng</span></div><div><b>{LINKED} ha</b><span>liên kết tại Di Linh, tính riêng</span></div><div><b>2010</b><span>năm vùng trồng bắt đầu canh tác</span></div><div><b>{N_SHELF}</b><span>dòng cà phê trên kệ</span></div></div>
  {pages_a.loc_cards()}
 </section>
 {contact_band()}
