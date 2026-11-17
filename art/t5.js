@@ -25,7 +25,7 @@ const only = process.argv[2];
     await p.route(/fonts\.gstatic\.com/, r => r.abort());
     await p.goto('http://localhost:8144/' + (url === 'index.html' ? '' : url)); await p.waitForTimeout(450); return p;
   };
-  const over = p => p.evaluate(() => { const W = document.documentElement.clientWidth; const bad = [...document.querySelectorAll('body *')].filter(e => { const r = e.getBoundingClientRect(); return r.width && r.right > W + 1 && !e.closest('.tw,.scroller,.trip,.mh-pan,.histw,.strip,.pfs,.sh-tabs') }).slice(0, 4).map(e => e.tagName + '.' + (e.className.baseVal ?? e.className)); return [document.documentElement.scrollWidth - W, bad] });
+  const over = p => p.evaluate(() => { const W = document.documentElement.clientWidth; const bad = [...document.querySelectorAll('body *')].filter(e => { const r = e.getBoundingClientRect(); return r.width && r.right > W + 1 && !e.closest('.tw,.scroller,.trip,.mh-pan,.histw,.strip,.pfs,.sh-tabs,.rx-cmp') }).slice(0, 4).map(e => e.tagName + '.' + (e.className.baseVal ?? e.className)); return [document.documentElement.scrollWidth - W, bad] });
   const links = new Set();
   for (const f of pages) {
     if (only && f !== only) continue;

@@ -588,7 +588,7 @@ def product_page(x, L):
     ngu = x['line'] == 'Ngũ Hành'
     tips = '' if ngu else ''.join(f'<li>{esc(t)}</li>' for t in x['tips'])
     story = f'<p class="pd-story">{esc(x["tips"][0])}</p>' if ngu else ''
-    brew_links = []
+    brew_links = [f'<a class="btn main" href="cong-thuc-pha.html?sp={x["id"]}">Công thức pha cho dòng này</a>']
     if 'phin' in x['brews']: brew_links.append('<a class="btn" href="quay-pha.html">Công thức phin ở Quầy pha</a>')
     if 'espresso' in x['brews'] or 'v60' in x['brews']: brew_links.append('<a class="btn" href="chiet-xuat.html">Cỗ máy Chiết xuất</a>')
     if 'coldbrew' in x['brews']: brew_links.append('<a class="btn" href="cold-brew.html">Cỗ máy Cold Brew</a>')
@@ -701,7 +701,7 @@ def pages(P):
 
 
 # ---------------- chỉ mục tìm kiếm, sitemap, robots ----------------
-TOOLS = {'chiet-xuat.html', 'cold-brew.html', 'trai-chin.html', 'vi-sinh.html', 'tien-chat-huong.html', 'banh-xe-huong.html',
+TOOLS = {'chiet-xuat.html', 'cold-brew.html', 'cong-thuc-pha.html', 'trai-chin.html', 'vi-sinh.html', 'tien-chat-huong.html', 'banh-xe-huong.html',
          'phan-biet-ca-phe.html', 'tim-gu.html', 'nhan-xanh.html', 'mua-hang.html', 'gia-ca-phe.html', 'len-men-men-bia.html', 'len-men-trai-cay.html'}
 ARTS = {'journal-phin.html', 'journal-tu-qua.html', 'journal-di-linh.html', 'tu-vuon-den-ly.html', 'suc-khoe.html'}
 NOINDEX = {'gio-hang.html', 'tim-kiem.html'}
