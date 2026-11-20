@@ -192,7 +192,7 @@ HOME_BODY = f'''{header('index.html')}
   <div class="cta"><a class="btn main" href="cua-hang.html">Chọn cà phê</a><a class="btn" href="tim-gu.html">Tìm gu của bạn</a><a class="btn" href="horeca.html">Giải pháp HORECA</a></div>
   <a class="tick" href="gia-ca-phe.html"><span class="k">Giá cà phê <span id="tk-d">{ddmm(dl['date'])}</span></span><span>Nhân xô Lâm Đồng <b id="tk-v">{fm(dl['vn']['lamdong'])} đ/kg</b></span><span>Robusta London <b id="tk-r">{fm(dw['world']['robusta'])} USD/tấn</b></span><i>Xem bảng giá</i></a>
   </div>
-  <a class="heroimg" href="vung-trong.html"><img src="assets/p-robusta-tay.jpg" alt="Chùm Robusta chín đỏ trên tay người hái" width="1500" height="1000"></a>
+  <a class="heroimg" href="vung-trong.html"><img src="assets/p-mua-chin.jpg" alt="Bàn tay hái giữa những chùm cà phê chín" width="1500" height="1000"></a>
 </div></div>
 <div class="wrap hm">
 <section class="p-sec" id="bo-suu-tap">
@@ -225,6 +225,7 @@ HOME_BODY = f'''{header('index.html')}
  <h2 class="p-h2" style="margin:0">Di Linh. <em>Nơi câu chuyện bắt đầu.</em></h2>
  <p class="lead" style="margin:0">Bốn vùng trồng, tổng {ha(TOTAL)} ha. Thêm {LINKED} ha liên kết tại Di Linh, tính riêng, không gộp vào {ha(TOTAL)} ha.</p>
  {photo('p-san-phoi-wide.jpg', 'Cà phê phơi trên sân giữa đồi', 'Phơi cà phê giữa đồi.', cls='pfw')}
+ <div class="pgal"><p class="k">Vào mùa ở vườn MeDili</p>{strip(STRIP_MUAVU)}</div>
  {pages_a.seg_block()}
  <div class="lnks"><a class="lnk" href="vung-trong.html">Khám phá vùng nguyên liệu</a><a class="lnk" href="{MAP_FARM}" target="_blank" rel="noopener">Chỉ đường đến xưởng rang ↗</a></div>
 </section>

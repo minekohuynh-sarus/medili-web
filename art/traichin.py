@@ -102,6 +102,7 @@ def page():
 <section class="card" id="hai">
   <h2>Hình 3: hái tuốt một lần hay hái chọn nhiều lượt</h2>
   <p class="lead">400 trái trên một nhóm cây. Hoa nở theo số đợt chị chọn, mỗi trái chín sớm muộn khác nhau vài tuần. Vùng màu cho biết trái trên cây đang ở độ chín nào theo ngày; vạch đứt là các lượt hái. Đây là mô hình minh hoạ, không phải số đo của vườn.</p>
+  <figure class="pf" style="max-width:760px;margin:6px 0 14px"><img src="assets/p-mua-chin.jpg" alt="Bàn tay hái giữa những chùm cà phê có trái xanh, ương, chín và chín quá" width="1500" height="1000" loading="lazy"><figcaption>Ảnh thực tế: trên cùng một cành có trái xanh, trái ương, trái chín và trái chín quá. Vì thế hái chọn thường phải đi nhiều lượt.</figcaption></figure>
   <div class="lg" id="lg3"></div>
   <div class="chw" id="w3"><svg id="c3" class="c2" role="img" aria-label="Tỷ lệ trái xanh, ương, chín, chín quá, khô trên cây theo ngày"></svg></div>
   <span class="lbl" style="margin-top:14px">Mẻ trái về xưởng · cột phải là tỷ lệ trái chín</span>

@@ -328,6 +328,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
 .pfw img{aspect-ratio:3/1;object-fit:cover}
 .split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
 @media (max-width:700px){.pfw img{aspect-ratio:2/1}}
 .pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 @media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
@@ -517,9 +518,9 @@ svg.pi .fi{fill:var(--accent);stroke:none}
   <h1>Từ gốc Cà Sẻ.<br><em>Đến nghệ thuật rang.</em></h1>
   <p class="sub">MeDili là nhà rang cà phê ở cao nguyên Di Linh, lấy Cà Sẻ Di Linh làm gốc. Vùng trồng canh tác từ năm 2010, xưởng rang tại Thôn 11, Xã Di Linh. Cà phê rang cho gia đình, quán, nhà hàng và khách sạn.</p>
   <div class="cta"><a class="btn main" href="cua-hang.html">Chọn cà phê</a><a class="btn" href="tim-gu.html">Tìm gu của bạn</a><a class="btn" href="horeca.html">Giải pháp HORECA</a></div>
-  <a class="tick" href="gia-ca-phe.html"><span class="k">Giá cà phê <span id="tk-d">16/11</span></span><span>Nhân xô Lâm Đồng <b id="tk-v">81.300 đ/kg</b></span><span>Robusta London <b id="tk-r">3.176 USD/tấn</b></span><i>Xem bảng giá</i></a>
+  <a class="tick" href="gia-ca-phe.html"><span class="k">Giá cà phê <span id="tk-d">20/11</span></span><span>Nhân xô Lâm Đồng <b id="tk-v">73.200 đ/kg</b></span><span>Robusta London <b id="tk-r">3.005 USD/tấn</b></span><i>Xem bảng giá</i></a>
   </div>
-  <a class="heroimg" href="vung-trong.html"><img src="assets/p-robusta-tay.jpg" alt="Chùm Robusta chín đỏ trên tay người hái" width="1500" height="1000"></a>
+  <a class="heroimg" href="vung-trong.html"><img src="assets/p-mua-chin.jpg" alt="Bàn tay hái giữa những chùm cà phê chín" width="1500" height="1000"></a>
 </div></div>
 <div class="wrap hm">
 <section class="p-sec" id="bo-suu-tap">
@@ -552,6 +553,7 @@ svg.pi .fi{fill:var(--accent);stroke:none}
  <h2 class="p-h2" style="margin:0">Di Linh. <em>Nơi câu chuyện bắt đầu.</em></h2>
  <p class="lead" style="margin:0">Bốn vùng trồng, tổng 17,7 ha. Thêm 50 ha liên kết tại Di Linh, tính riêng, không gộp vào 17,7 ha.</p>
  <figure class="pf pfw"><img src="assets/p-san-phoi-wide.jpg" alt="Cà phê phơi trên sân giữa đồi" width="1350" height="450" loading="lazy"><figcaption>Phơi cà phê giữa đồi.</figcaption></figure>
+ <div class="pgal"><p class="k">Vào mùa ở vườn MeDili</p><div class="pfs"><figure class="pf "><img src="assets/p-sq-nguoi-vuon.jpg" alt="Người MeDili đội mũ MeDili, đứng giữa những cành cà phê chín" width="900" height="900" loading="lazy"><figcaption>Mùa chín ở vườn MeDili.</figcaption></figure><figure class="pf "><img src="assets/p-sq-may-cay.jpg" alt="Bao cà phê chất cao trên máy cày, hai người mặc áo MeDili đứng cạnh" width="900" height="900" loading="lazy"><figcaption>Bao cà phê lên máy cày rời vườn.</figcaption></figure><figure class="pf "><img src="assets/p-sq-duong-lo.jpg" alt="Những chiếc máy cày chở bao cà phê nối đuôi trên đường lô" width="900" height="900" loading="lazy"><figcaption>Máy cày nối đuôi trên đường lô.</figcaption></figure></div></div>
  <div class="seg" role="img" aria-label="Bốn vùng trồng, tổng 17,7 ha: Tà Hine 8 ha, Tân Nghĩa 4 ha, Lộc Châu 3 3 ha, Gia Bắc 2 2,7 ha"><i class="s1" style="flex:8.0" title="Tà Hine: 8 ha">8 ha</i><i class="s2" style="flex:4.0" title="Tân Nghĩa: 4 ha">4 ha</i><i class="s3" style="flex:3.0" title="Lộc Châu 3: 3 ha">3 ha</i><i class="s4" style="flex:2.7" title="Gia Bắc 2: 2,7 ha">2,7 ha</i></div><div class="areas"><div><b><i class="sw" style="background:var(--seg1)"></i>Tà Hine</b><span>Đức Trọng</span><strong>8 ha<small>45 %</small></strong></div><div><b><i class="sw" style="background:var(--seg2)"></i>Tân Nghĩa</b><span>Di Linh</span><strong>4 ha<small>23 %</small></strong></div><div><b><i class="sw" style="background:var(--seg3)"></i>Lộc Châu 3</b><span>Bảo Thuận, Di Linh</span><strong>3 ha<small>17 %</small></strong></div><div><b><i class="sw" style="background:var(--seg4)"></i>Gia Bắc 2</b><span>Di Linh</span><strong>2,7 ha<small>15 %</small></strong></div></div>
  <div class="lnks"><a class="lnk" href="vung-trong.html">Khám phá vùng nguyên liệu</a><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=Th%C3%B4n%2011%2C%20X%C3%A3%20Di%20Linh%2C%20L%C3%A2m%20%C4%90%E1%BB%93ng%2C%20Vi%E1%BB%87t%20Nam" target="_blank" rel="noopener">Chỉ đường đến xưởng rang ↗</a></div>
 </section>

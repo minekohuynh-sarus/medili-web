@@ -1,11 +1,18 @@
-# Cắt, thu nhỏ và nén ảnh chị Ngân gửi cho site MeDili. Bỏ EXIF.
+# Cắt, thu nhỏ, nén ảnh thật của MeDili cho web và đóng logo chìm (logo kem, góc dưới). Bỏ EXIF (cả GPS).
+# Chạy: python3 art/make_photos.py   (ảnh gốc phải có sẵn ở SRC và SRC2)
 import os
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, ImageFilter, ImageChops
 
-SRC = '/mnt/user-data/attachments/619bd0cf-b746-5328-b8be-a7ac0d4efa6d'
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, '..', 'site-new4', 'assets')
+LOGO = os.path.join(OUT, 'logo-kem.png')
 os.makedirs(OUT, exist_ok=True)
+
+# Đợt 1: ảnh chị Ngân gửi trong cuộc trò chuyện (tên file = mã ảnh đính kèm).
+SRC = '/mnt/user-data/attachments/619bd0cf-b746-5328-b8be-a7ac0d4efa6d'
+# Đợt 2: ảnh trong thư mục Google Drive "11/2026" chị Ngân gửi ngày 21/11/2026.
+# IMG_0603, IMG_0548, IMG_0549, IMG_0551 là ảnh máy ảnh (thư mục ẢNH); H0545, H0549 là ảnh điện thoại (HEIC đã đổi sang JPG).
+SRC2 = os.environ.get('MEDILI_ANH', '/tmp/claude-0/-home-claude/619bd0cf-b746-5328-b8be-a7ac0d4efa6d/scratchpad/anh')
 
 # tên ra: (file nguồn, tỷ lệ rộng/cao, tâm x, tâm y, rộng ra)
 JOBS = {
@@ -28,6 +35,14 @@ JOBS = {
     'p-hat-rang.jpg': ('2149f183', 3 / 2, .5, .36, 1200),
     'p-hai-chon.jpg': ('c7aa0b06', 3 / 2, .5, .45, 1200),
 }
+JOBS2 = {
+    'p-mua-chin.jpg': ('src/IMG_0603.jpg', 3 / 2, .5, .58, 1500),
+    'p-nguoi-vuon.jpg': ('src/IMG_0549.jpg', 4 / 5, .5, .5, 960),
+    'p-sq-nguoi-vuon.jpg': ('src/IMG_0548.jpg', 1, .49, .53, 900),
+    'p-doi-ngu-vuon.jpg': ('src/IMG_0551.jpg', 4 / 5, .5, .45, 960),
+    'p-sq-may-cay.jpg': ('work/H0549.jpg', 1, .5, .62, 900),
+    'p-sq-duong-lo.jpg': ('work/H0545.jpg', 1, .5, .55, 900),
+}
 
 
 def crop(im, ratio, fx, fy):
@@ -41,14 +56,54 @@ def crop(im, ratio, fx, fy):
     return im.crop((x, y, x + w, y + h))
 
 
-SIZES = {}
-for name, (src, ratio, fx, fy, ow) in JOBS.items():
-    im = ImageOps.exif_transpose(Image.open(os.path.join(SRC, src + '-image.jpg'))).convert('RGB')
+def watermark(im, ratio):
+    """Logo kem mờ ở góc dưới phải; ảnh ngang 3:1 đặt giữa đáy vì trên điện thoại web cắt hai bên còn 2:1.
+    Ảnh dọc 4:5 chừa lề dưới rộng hơn vì khung ảnh trên web có thể cắt bớt trên và dưới."""
+    W, H = im.size
+    k = .13 if ratio >= 2.5 else .19 if ratio >= 1.2 else .22 if ratio >= .95 else .24
+    lg = Image.open(LOGO).convert('RGBA')
+    lw = round(W * k); lh = round(lg.size[1] * lw / lg.size[0])
+    lg = lg.resize((lw, lh), Image.LANCZOS)
+    if ratio >= 2.5:
+        x, y = (W - lw) // 2, H - lh - round(H * .07)
+    elif ratio < .95:
+        x, y = W - lw - round(W * .05), H - lh - round(H * .085)
+    else:
+        m = round(min(W, H) * .045)
+        x, y = W - lw - m, H - lh - m
+    a = lg.getchannel('A')
+    # bóng mềm để logo đọc được cả trên nền sáng (trời, bao trắng)
+    pad = max(4, round(lw * .04))
+    sh = Image.new('L', (lw + 2 * pad, lh + 2 * pad), 0)
+    sh.paste(a, (pad, pad))
+    sh = sh.filter(ImageFilter.GaussianBlur(max(2, lw * .018))).point(lambda v: round(v * .38))
+    base = im.convert('RGBA')
+    shadow = Image.new('RGBA', sh.size, (20, 12, 8, 0)); shadow.putalpha(sh)
+    base.alpha_composite(shadow, (x - pad, y - pad + max(1, round(lw * .006))))
+    lg.putalpha(a.point(lambda v: round(v * .62)))
+    base.alpha_composite(lg, (x, y))
+    return base.convert('RGB')
+
+
+def make(name, path, ratio, fx, fy, ow):
+    im = ImageOps.exif_transpose(Image.open(path)).convert('RGB')
     c = crop(im, ratio, fx, fy)
     oh = round(ow / ratio)
     if c.size[0] > ow:
         c = c.resize((ow, oh), Image.LANCZOS)
-    c.save(os.path.join(OUT, name), 'JPEG', quality=80, optimize=True, progressive=True)
-    SIZES[name] = c.size
+    c = watermark(c, ratio)
+    c.save(os.path.join(OUT, name), 'JPEG', quality=80, optimize=True, progressive=True)   # không truyền exif: ảnh ra không còn GPS
     print(f'{name:24s} {c.size} {os.path.getsize(os.path.join(OUT, name)) // 1024} KB')
-print('tổng', sum(os.path.getsize(os.path.join(OUT, n)) for n in JOBS) // 1024, 'KB')
+
+
+if __name__ == '__main__':
+    import sys
+    only = set(sys.argv[1:])
+    for name, (src, ratio, fx, fy, ow) in JOBS.items():
+        if not only or name in only:
+            make(name, os.path.join(SRC, src + '-image.jpg'), ratio, fx, fy, ow)
+    for name, (src, ratio, fx, fy, ow) in JOBS2.items():
+        if not only or name in only:
+            make(name, os.path.join(SRC2, src), ratio, fx, fy, ow)
+    names = [n for n in list(JOBS) + list(JOBS2) if not only or n in only]
+    print('tổng', sum(os.path.getsize(os.path.join(OUT, n)) for n in names) // 1024, 'KB')

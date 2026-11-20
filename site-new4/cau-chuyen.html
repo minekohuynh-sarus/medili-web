@@ -323,6 +323,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
 .pfw img{aspect-ratio:3/1;object-fit:cover}
 .split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
 @media (max-width:700px){.pfw img{aspect-ratio:2/1}}
 .pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 @media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
@@ -504,7 +505,7 @@ svg.pi .fi{fill:var(--accent);stroke:none}
   <p>Nhiều người kể rằng cây cà phê lên cao nguyên Di Linh từ thời người Pháp. MeDili vẫn đang tìm thêm tư liệu về thời điểm, nguồn giống và con đường cây đến vùng này, nên trang này chưa ghi một mốc năm lịch sử nào.</p>
   <p>Điều MeDili ghi nhận được là vườn của mình: canh tác từ năm 2010, cây 15 năm tuổi, chăm theo hướng tự nhiên, kết hợp phân hữu cơ và giảm hoá chất.</p>
  </div>
- <figure class="pf "><img src="assets/p-robusta-canh.jpg" alt="Robusta chín đỏ trên cành" width="960" height="1200" loading="lazy"><figcaption>Robusta chín đỏ trên cành.</figcaption></figure>
+ <figure class="pf pv"><img src="assets/p-nguoi-vuon.jpg" alt="Người MeDili đội mũ MeDili, đứng giữa những cành cà phê chín" width="960" height="1200" loading="lazy"><figcaption>Mùa chín ở vườn MeDili.</figcaption></figure>
 </section>
 
 <section class="p-sec">
@@ -512,7 +513,7 @@ svg.pi .fi{fill:var(--accent);stroke:none}
 </section>
 
 <section class="split">
- <figure class="pf "><img src="assets/p-may-rang-dung.jpg" alt="Hạt cà phê vừa rang đảo trên khay làm nguội" width="960" height="1200" loading="lazy"><figcaption>Hạt vừa ra lò, đảo trên khay làm nguội.</figcaption></figure>
+ <figure class="pf pv"><img src="assets/p-may-rang-dung.jpg" alt="Hạt cà phê vừa rang đảo trên khay làm nguội" width="960" height="1200" loading="lazy"><figcaption>Hạt vừa ra lò, đảo trên khay làm nguội.</figcaption></figure>
  <div class="p-sec">
   <p class="eye">02 · Coffee Roaster chuyên nghiệp</p>
   <h2 class="p-h2">Đọc nguyên liệu, <em>rồi mới rang.</em></h2>

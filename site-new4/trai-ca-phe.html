@@ -421,6 +421,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
 .pfw img{aspect-ratio:3/1;object-fit:cover}
 .split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
 @media (max-width:700px){.pfw img{aspect-ratio:2/1}}
 .pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 @media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}

@@ -186,6 +186,9 @@ STRIP_LM = [('p-lm-nhan.jpg', 'Cà phê trái chín đổ chung với cùi nhãn
 STRIP_SOCHE = [('p-natural.jpg', 'Trái cà phê phơi nguyên trái trên giàn', 'Natural: phơi nguyên trái trên giàn.'),
                ('p-honey.jpg', 'Hạt cà phê còn lớp nhớt phơi trên giàn', 'Honey: hạt còn lớp nhớt, phơi trên giàn.'),
                ('p-xat-tuoi.jpg', 'Máy xát tươi tách vỏ cà phê', 'Xát tươi: máy tách vỏ khỏi hạt.')]
+STRIP_MUAVU = [('p-sq-nguoi-vuon.jpg', 'Người MeDili đội mũ MeDili, đứng giữa những cành cà phê chín', 'Mùa chín ở vườn MeDili.'),
+               ('p-sq-may-cay.jpg', 'Bao cà phê chất cao trên máy cày, hai người mặc áo MeDili đứng cạnh', 'Bao cà phê lên máy cày rời vườn.'),
+               ('p-sq-duong-lo.jpg', 'Những chiếc máy cày chở bao cà phê nối đuôi trên đường lô', 'Máy cày nối đuôi trên đường lô.')]
 STRIP_VUON = [('p-sq-canh.jpg', 'Robusta chín đỏ trên cành', 'Robusta chín đỏ trên cành.'),
               ('p-sq-tay.jpg', 'Chùm Robusta chín trên tay người hái', 'Chùm Robusta vào mùa thu hái.'),
               ('p-sq-san-phoi.jpg', 'Cà phê phơi trên sân giữa đồi', 'Phơi cà phê giữa đồi.')]
@@ -273,6 +276,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
 .pfw img{aspect-ratio:3/1;object-fit:cover}
 .split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
 @media (max-width:700px){.pfw img{aspect-ratio:2/1}}
 .pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 @media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}

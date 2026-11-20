@@ -86,7 +86,7 @@ def cau_chuyen():
   <p>Nhiều người kể rằng cây cà phê lên cao nguyên Di Linh từ thời người Pháp. MeDili vẫn đang tìm thêm tư liệu về thời điểm, nguồn giống và con đường cây đến vùng này, nên trang này chưa ghi một mốc năm lịch sử nào.</p>
   <p>Điều MeDili ghi nhận được là vườn của mình: canh tác từ năm 2010, cây 15 năm tuổi, chăm theo hướng tự nhiên, kết hợp phân hữu cơ và giảm hoá chất.</p>
  </div>
- {photo('p-robusta-canh.jpg', 'Robusta chín đỏ trên cành', 'Robusta chín đỏ trên cành.')}
+ {photo('p-nguoi-vuon.jpg', 'Người MeDili đội mũ MeDili, đứng giữa những cành cà phê chín', 'Mùa chín ở vườn MeDili.', cls='pv')}
 </section>
 
 <section class="p-sec">
@@ -94,7 +94,7 @@ def cau_chuyen():
 </section>
 
 <section class="split">
- {photo('p-may-rang-dung.jpg', 'Hạt cà phê vừa rang đảo trên khay làm nguội', 'Hạt vừa ra lò, đảo trên khay làm nguội.')}
+ {photo('p-may-rang-dung.jpg', 'Hạt cà phê vừa rang đảo trên khay làm nguội', 'Hạt vừa ra lò, đảo trên khay làm nguội.', cls='pv')}
  <div class="p-sec">
   <p class="eye">02 · Coffee Roaster chuyên nghiệp</p>
   <h2 class="p-h2">Đọc nguyên liệu, <em>rồi mới rang.</em></h2>
@@ -132,9 +132,15 @@ def doi_ngu():
     body = head('Đội ngũ MeDili · Hai cách chú ý đến hương vị', 'Con người <em>đứng sau hương vị.</em>',
                 'Ở MeDili, người rang và người pha cùng làm một việc: đưa vị của hạt vào ly. Trang này giới thiệu hai vai trò đó. Hồ sơ từng người sẽ được bổ sung khi MeDili xác nhận thông tin.')
     body += f'''
+<section class="split">
+ <div class="p-sec">
+  <h2 class="p-h2">Những người <em>giữ lửa cho hương vị.</em></h2>
+  <p class="lead">Rang và pha là hai nửa của cùng một ly. MeDili nối hai nửa đó bằng hồ sơ rang: đội rang biết hạt sẽ được pha thế nào, barista biết hạt đã được rang ra sao.</p>
+ </div>
+ {photo('p-doi-ngu-vuon.jpg', 'Người MeDili đội mũ MeDili, cầm cành cà phê chín trong vườn', 'Mùa chín ở vườn MeDili.', cls='pv')}
+</section>
+
 <section class="p-sec">
- <h2 class="p-h2">Những người <em>giữ lửa cho hương vị.</em></h2>
- <p class="lead">Rang và pha là hai nửa của cùng một ly. MeDili nối hai nửa đó bằng hồ sơ rang: đội rang biết hạt sẽ được pha thế nào, barista biết hạt đã được rang ra sao.</p>
  <div class="g2">
   <article class="box">
    <img src="assets/p-may-rang.jpg" alt="Hạt cà phê vừa rang trên khay làm nguội" width="1200" height="800" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px;margin-bottom:12px">
@@ -180,6 +186,12 @@ def vung_trong():
  <div><b>{LINKED} ha</b><span>liên kết tại Di Linh, tính riêng</span></div>
  <div><b>2010</b><span>năm bắt đầu canh tác</span></div>
  <div><b>15 năm</b><span>tuổi cây trong vườn</span></div>
+</section>
+
+<section class="pgal" aria-label="Vào mùa">
+ <h2 class="p-h2" style="margin:0">Vào mùa <em>ở vườn MeDili.</em></h2>
+ <p>Ảnh mùa thu hoạch 2026: trái chín trên cành, bao cà phê lên máy cày rời vườn.</p>
+ {strip(STRIP_MUAVU)}
 </section>
 
 <section class="box p-sec">

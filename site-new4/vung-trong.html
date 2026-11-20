@@ -323,6 +323,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
 .pfw img{aspect-ratio:3/1;object-fit:cover}
 .split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
 @media (max-width:700px){.pfw img{aspect-ratio:2/1}}
 .pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 @media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
@@ -494,6 +495,12 @@ svg.pi .fi{fill:var(--accent);stroke:none}
  <div><b>50 ha</b><span>liên kết tại Di Linh, tính riêng</span></div>
  <div><b>2010</b><span>năm bắt đầu canh tác</span></div>
  <div><b>15 năm</b><span>tuổi cây trong vườn</span></div>
+</section>
+
+<section class="pgal" aria-label="Vào mùa">
+ <h2 class="p-h2" style="margin:0">Vào mùa <em>ở vườn MeDili.</em></h2>
+ <p>Ảnh mùa thu hoạch 2026: trái chín trên cành, bao cà phê lên máy cày rời vườn.</p>
+ <div class="pfs"><figure class="pf "><img src="assets/p-sq-nguoi-vuon.jpg" alt="Người MeDili đội mũ MeDili, đứng giữa những cành cà phê chín" width="900" height="900" loading="lazy"><figcaption>Mùa chín ở vườn MeDili.</figcaption></figure><figure class="pf "><img src="assets/p-sq-may-cay.jpg" alt="Bao cà phê chất cao trên máy cày, hai người mặc áo MeDili đứng cạnh" width="900" height="900" loading="lazy"><figcaption>Bao cà phê lên máy cày rời vườn.</figcaption></figure><figure class="pf "><img src="assets/p-sq-duong-lo.jpg" alt="Những chiếc máy cày chở bao cà phê nối đuôi trên đường lô" width="900" height="900" loading="lazy"><figcaption>Máy cày nối đuôi trên đường lô.</figcaption></figure></div>
 </section>
 
 <section class="box p-sec">
