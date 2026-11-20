@@ -192,6 +192,7 @@ def vung_trong():
  <h2 class="p-h2" style="margin:0">Vào mùa <em>ở vườn MeDili.</em></h2>
  <p>Ảnh mùa thu hoạch 2026: trái chín trên cành, bao cà phê lên máy cày rời vườn.</p>
  {strip(STRIP_MUAVU)}
+ <div class="lnks" style="margin-top:0"><a class="lnk" href="anh-vuon.html">Xem toàn bộ ảnh vườn</a></div>
 </section>
 
 <section class="box p-sec">

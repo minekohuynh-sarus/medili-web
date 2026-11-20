@@ -3,7 +3,7 @@
 import os, re, json, shutil, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kit import *
-import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh, cuahang, congthuc
+import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh, cuahang, congthuc, anhvuon
 
 os.makedirs(OUT, exist_ok=True)
 rd = lambda f: open(os.path.join(BASE, f), encoding='utf8').read()
@@ -97,6 +97,7 @@ NEW = {
     'banh-xe-huong.html': banhxe.page(),
     'phan-biet-ca-phe.html': phanbiet.page(),
     'nhan-xanh.html': nhanxanh.page(),
+    anhvuon.FILE: anhvuon.page(),   # Ảnh vườn MeDili (21/11/2026)
 }
 for f, a_ in pages_b.ART.items():
     NEW[f] = pages_b.article(f, a_, CARDS)
@@ -123,7 +124,8 @@ for f in OLD:
     if f in GAL:
         t, d, items = GAL[f]
         assert s.count('</header>') == 1, f
-        s = s.replace('</header>', f'</header>\n<section class="pgal" aria-label="{t}"><h2>{t}</h2><p>{nb(d)}</p>{strip(items)}</section>', 1)
+        more = '<div class="lnks" style="margin-top:0"><a class="lnk" href="anh-vuon.html">Xem toàn bộ ảnh vườn</a></div>' if f == 'vuon.html' else ''
+        s = s.replace('</header>', f'</header>\n<section class="pgal" aria-label="{t}"><h2>{t}</h2><p>{nb(d)}</p>{strip(items)}{more}</section>', 1)
     if f == 'mua-hang.html':
         s = price_fix(s)
         assert s.count("col:'#2F6B4A'") == 2 and s.count("col:'#3F7F5A'") == 1
@@ -184,16 +186,20 @@ COLL_HREF = ['cua-hang.html?q=classic', 'cua-hang.html?q=robusta%20premium', 'cu
 coll = ''.join(f'<a class="box coll" href="{h}"><i class="bag" style="--c:{c}" aria-hidden="true"></i><span class="k">{k}</span><h3>{t}</h3>'
                f'<p>{taste}.</p><p class="use">{use}</p><div class="ft">{ft}</div></a>' for h, (c, k, t, taste, use, ft) in zip(COLL_HREF, COLL))
 
+BAND_MUA = anhvuon.band('bg-mua-vu', 'Trái cà phê chuyển màu dưới tán lá', 'Ảnh vườn MeDili', 'Mỗi mùa chín <em>là một câu chuyện.</em>',
+                        f'Trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, rồi phơi và xay xát. Mùa vụ qua {len(anhvuon.GAL)} tấm ảnh.',
+                        '<a class="btn main" href="anh-vuon.html">Xem ảnh vườn</a><a class="btn" href="vung-trong.html">Vùng trồng Di Linh</a>')
+BAND_KHO = anhvuon.band('bg-trong-kho', 'Xe xúc làm việc trong kho cà phê dưới ánh đèn vàng', 'Chương 08 · Hẹn nhau ở MeDili',
+                        'Một niềm mê để sẻ chia. <em>Một hành trình còn tiếp.</em>',
+                        'Di Linh origin · Saigon soul. Cà phê đi từ vườn, kho và sân phơi ở Di Linh đến những tách cà phê ở Sài Gòn.',
+                        '<a class="btn main" href="quan-medili.html">Ghé MeDili Café</a><a class="btn" href="lien-he.html">Liên hệ &amp; bản đồ</a>')
+
 HOME_BODY = f'''{header('index.html')}
-<div class="hero"><div class="hwrap">
-  <div>{logo()}<p class="eye">Chương 01 · Nhà rang cà phê chuyên nghiệp</p>
+{anhvuon.hero('bg-trang-chu', 'Bàn tay hái giữa những chùm cà phê chín', f"""{anhvuon.logo_kem()}<p class="eye">Chương 01 · Nhà rang cà phê chuyên nghiệp</p>
   <h1>Từ gốc Cà Sẻ.<br><em>Đến nghệ thuật rang.</em></h1>
   <p class="sub">MeDili là nhà rang cà phê ở cao nguyên Di Linh, lấy Cà Sẻ Di Linh làm gốc. Vùng trồng canh tác từ năm 2010, xưởng rang tại Thôn 11, Xã Di Linh. Cà phê rang cho gia đình, quán, nhà hàng và khách sạn.</p>
   <div class="cta"><a class="btn main" href="cua-hang.html">Chọn cà phê</a><a class="btn" href="tim-gu.html">Tìm gu của bạn</a><a class="btn" href="horeca.html">Giải pháp HORECA</a></div>
-  <a class="tick" href="gia-ca-phe.html"><span class="k">Giá cà phê <span id="tk-d">{ddmm(dl['date'])}</span></span><span>Nhân xô Lâm Đồng <b id="tk-v">{fm(dl['vn']['lamdong'])} đ/kg</b></span><span>Robusta London <b id="tk-r">{fm(dw['world']['robusta'])} USD/tấn</b></span><i>Xem bảng giá</i></a>
-  </div>
-  <a class="heroimg" href="vung-trong.html"><img src="assets/p-mua-chin.jpg" alt="Bàn tay hái giữa những chùm cà phê chín" width="1500" height="1000"></a>
-</div></div>
+  <a class="tick" href="gia-ca-phe.html"><span class="k">Giá cà phê <span id="tk-d">{ddmm(dl['date'])}</span></span><span>Nhân xô Lâm Đồng <b id="tk-v">{fm(dl['vn']['lamdong'])} đ/kg</b></span><span>Robusta London <b id="tk-r">{fm(dw['world']['robusta'])} USD/tấn</b></span><i>Xem bảng giá</i></a>""")}
 <div class="wrap hm">
 <section class="p-sec" id="bo-suu-tap">
  <p class="eye">Chương 02 · Bộ sưu tập MeDili</p>
@@ -203,7 +209,9 @@ HOME_BODY = f'''{header('index.html')}
  <div class="box gu"><div>{icon('gu')}</div><div><p class="eye">Tìm gu cà phê của bạn</p><p>Sáu câu hỏi ngắn. Không có đáp án đúng, chỉ có ly cà phê đúng gu.</p></div><div class="cta" style="margin:0"><a class="btn main" href="tim-gu.html">Bắt đầu khám phá</a><a class="btn" href="cua-hang.html">Xem đủ {N_SHELF} dòng</a></div></div>
  <p class="note">Bảng giá đề xuất, chưa gồm 8 % VAT và phí vận chuyển. MeDili xác nhận khi đặt hàng.</p>
 </section>
-
+</div>
+{BAND_MUA}
+<div class="wrap hm">
 <section class="split">
  <div class="p-sec">
   <p class="eye">Chương 03 · Câu chuyện MeDili</p>
@@ -225,7 +233,7 @@ HOME_BODY = f'''{header('index.html')}
  <h2 class="p-h2" style="margin:0">Di Linh. <em>Nơi câu chuyện bắt đầu.</em></h2>
  <p class="lead" style="margin:0">Bốn vùng trồng, tổng {ha(TOTAL)} ha. Thêm {LINKED} ha liên kết tại Di Linh, tính riêng, không gộp vào {ha(TOTAL)} ha.</p>
  {photo('p-san-phoi-wide.jpg', 'Cà phê phơi trên sân giữa đồi', 'Phơi cà phê giữa đồi.', cls='pfw')}
- <div class="pgal"><p class="k">Vào mùa ở vườn MeDili</p>{strip(STRIP_MUAVU)}</div>
+ <div class="pgal"><p class="k">Vào mùa ở vườn MeDili</p>{strip(STRIP_MUAVU)}<div class="lnks" style="margin-top:0"><a class="lnk" href="anh-vuon.html">Xem toàn bộ ảnh vườn</a></div></div>
  {pages_a.seg_block()}
  <div class="lnks"><a class="lnk" href="vung-trong.html">Khám phá vùng nguyên liệu</a><a class="lnk" href="{MAP_FARM}" target="_blank" rel="noopener">Chỉ đường đến xưởng rang ↗</a></div>
 </section>
@@ -265,10 +273,10 @@ HOME_BODY = f'''{header('index.html')}
  <div class="lnks"><a class="lnk" href="journal.html">Mở mục Kiến thức cà phê</a></div>
 </section>
 
+</div>
+{BAND_KHO}
+<div class="wrap hm end">
 <section class="p-sec">
- <p class="eye">Chương 08 · Hẹn nhau ở MeDili</p>
- <h2 class="p-h2">Một niềm mê để sẻ chia. <em>Một hành trình còn tiếp.</em></h2>
- <p class="k">Di Linh origin · Saigon soul</p>
  <div class="facts"><div><b>{ha(TOTAL)} ha</b><span>bốn vùng trồng ở Lâm Đồng</span></div><div><b>{LINKED} ha</b><span>liên kết tại Di Linh, tính riêng</span></div><div><b>2010</b><span>năm vùng trồng bắt đầu canh tác</span></div><div><b>{N_SHELF}</b><span>dòng cà phê trên kệ</span></div></div>
  {pages_a.loc_cards()}
 </section>
@@ -296,6 +304,9 @@ HOME_CSS = '''
 .role svg.pi{width:36px;height:36px;color:var(--accent)}.role h3{margin:2px 0}.role p{margin:0;color:var(--muted)}
 .role:hover h3{color:var(--accent)}
 .band .eye{color:var(--on-accent);opacity:.85}.band h2{margin:4px 0 6px}
+.wrap.hm{padding-block:40px}.wrap.hm.end{padding-bottom:56px}
+.phero .tick{background:rgba(42,24,14,.46);border-color:rgba(255,243,228,.32);color:#FFF3E4;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.phero .tick .k,.phero .tick i{color:#F4CC97}.phero .tick:hover{border-color:#F4CC97}
 .btn.light2{background:transparent;color:var(--on-accent);border-color:var(--on-accent)}
 '''
 
@@ -307,7 +318,7 @@ if(w)document.getElementById('tk-r').textContent=f(w.world.robusta)+' USD/tấn
 '''
 
 head_old = home_old[:home_old.index('<style>')]
-HOME_HEAD = head_old + '<style>' + HOME_CSS_OLD + '</style>\n<style>' + CORE_CSS + NEW_CSS + HOME_CSS + '</style>'
+HOME_HEAD = head_old + '<style>' + HOME_CSS_OLD + '</style>\n<style>' + CORE_CSS + NEW_CSS + anhvuon.PHOTO_CSS + HOME_CSS + '</style>'
 HOME_TAIL = nb(HOME_BODY) + '<script>' + COMMON_JS + HOME_JS + '</script>\n'
 HOME = HOME_HEAD + HOME_TAIL
 assert '<div class="mnav">' not in HOME

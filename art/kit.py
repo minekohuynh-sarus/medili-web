@@ -44,7 +44,7 @@ FONTS = re.search(r'<link rel="preconnect" href="https://fonts.googleapis.com">\
 GROUPS = [
     ('MeDili', [('./', 'Trang chủ'), ('cau-chuyen.html', 'Câu chuyện MeDili'), ('doi-ngu.html', 'Đội ngũ'),
                 ('quan-medili.html', 'Quán MeDili Café'), ('lien-he.html', 'Liên hệ')]),
-    ('Vùng trồng & sản xuất', [('vung-trong.html', 'Vùng trồng Di Linh'), ('vuon.html', 'Vườn 12 tháng'), ('trai-ca-phe.html', 'Cấu tạo trái'),
+    ('Vùng trồng & sản xuất', [('vung-trong.html', 'Vùng trồng Di Linh'), ('anh-vuon.html', 'Ảnh vườn'), ('vuon.html', 'Vườn 12 tháng'), ('trai-ca-phe.html', 'Cấu tạo trái'),
                                ('len-men-men-bia.html', 'Lên men men bia'), ('len-men-trai-cay.html', 'Lên men trái cây')]),
     ('Rang & pha', [('xuong-rang.html', 'Xưởng rang & năng lực'), ('rang.html', 'Phòng rang'), ('quay-pha.html', 'Quầy pha'), ('cong-thuc-pha.html', 'Cỗ máy Công thức pha'),
                     ('cold-brew.html', 'Cỗ máy Cold Brew'), ('tim-gu.html', 'Tìm gu cà phê')]),
@@ -57,7 +57,7 @@ GROUPS = [
                         ('journal-tu-qua.html', 'Từ quả cà phê đến hương vị'), ('journal-di-linh.html', 'Di Linh trong một tách cà phê'),
                         ('tu-vuon-den-ly.html', 'Từ vườn đến ly'), ('suc-khoe.html', 'Cà phê và cơ thể')]),
 ]
-PRIMARY = [('cau-chuyen.html', 'Câu chuyện'), ('vung-trong.html', 'Vùng trồng'), ('xuong-rang.html', 'Xưởng rang'),
+PRIMARY = [('cau-chuyen.html', 'Câu chuyện'), ('vung-trong.html', 'Vùng trồng'), ('anh-vuon.html', 'Ảnh vườn'), ('xuong-rang.html', 'Xưởng rang'),
            ('horeca.html', 'HORECA'), ('quan-medili.html', 'Quán MeDili'), ('journal.html', 'Kiến thức'), ('gia-ca-phe.html', 'Giá cà phê')]
 
 
@@ -81,7 +81,7 @@ def header(current):
             f'<a class="mh-go" href="cua-hang.html"{_cur(current, current) if current == "cua-hang.html" or current.startswith("sp-") else ""}>Cửa hàng</a></div></div>')
 
 
-FOOT_EXPLORE = [('cau-chuyen.html', 'Câu chuyện MeDili'), ('doi-ngu.html', 'Đội ngũ MeDili'), ('vung-trong.html', 'Vùng trồng Di Linh'),
+FOOT_EXPLORE = [('cau-chuyen.html', 'Câu chuyện MeDili'), ('doi-ngu.html', 'Đội ngũ MeDili'), ('vung-trong.html', 'Vùng trồng Di Linh'), ('anh-vuon.html', 'Ảnh vườn MeDili'),
                 ('xuong-rang.html', 'Xưởng rang & năng lực'), ('rang.html', 'Phòng rang'), ('quay-pha.html', 'Quầy pha'),
                 ('tim-gu.html', 'Tìm gu cà phê'), ('cong-thuc-pha.html', 'Cỗ máy Công thức pha'), ('chiet-xuat.html', 'Cỗ máy Chiết xuất'),
                 ('cold-brew.html', 'Cỗ máy Cold Brew'), ('journal.html', 'Kiến thức cà phê')]
@@ -460,13 +460,13 @@ badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,ad
 '''
 
 
-def doc(fname, title, desc, body, css='', js='', wrap_cls='wrap', contact=True):
+def doc(fname, title, desc, body, css='', js='', wrap_cls='wrap', contact=True, hero=''):
     head = (f'<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
             f'<meta name="description" content="{esc(desc)}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">'
             '<style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>'
             f'<title>{title}</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n{FONTS}\n')
     assert '</script' not in (COMMON_JS + js).lower()
-    out = (head + '<style>' + SHARED + '</style>\n<style>' + CORE_CSS + NEW_CSS + css + '</style></head><body>' + header(fname) +
+    out = (head + '<style>' + SHARED + '</style>\n<style>' + CORE_CSS + NEW_CSS + css + '</style></head><body>' + header(fname) + nb(hero) +
            f'\n<div class="{wrap_cls}">\n' + nb(body) + ('\n' + contact_band() if contact else '') + '\n</div>\n' + footer() +
            '\n<script>' + COMMON_JS + js + '</script>\n</body></html>\n')
     return out
