@@ -1,6 +1,6 @@
 # Bộ khung chung cho site MeDili sau khi gộp nội dung web Manus:
 # menu 5 nhóm, chân trang, màu theo phong thủy (không xanh lá, không đen), icon, hàm dựng trang.
-import os, re, html as H
+import os, re, json, html as H
 from urllib.parse import quote
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -21,6 +21,10 @@ MAP_HCM = 'https://www.google.com/maps/search/?api=1&query=' + quote('143 Phạm
 MAP_FARM = 'https://www.google.com/maps/search/?api=1&query=' + quote('Thôn 11, Xã Di Linh, Lâm Đồng, Việt Nam')
 FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSfFnK1eOB8u1UJg-5mIVS_k9h7ElULoxnmVDvCEYVjeSLWS_w/viewform?usp=pp_url'
 FORM_F = {'name': 'entry.1445823936', 'phone': 'entry.907299194', 'txt': 'entry.730970220'}
+FORM_POST = FORM.replace('/viewform?usp=pp_url', '/formResponse')   # gửi đơn thẳng vào Google Form, không mở phiếu
+# Tài khoản nhận chuyển khoản ở trang Thanh toán (chị Ngân chốt 24/11/2026: tài khoản công ty DSunfood).
+# bin: mã ngân hàng theo Napas (6 số) để dựng mã VietQR. Chưa có số tài khoản thì trang Thanh toán ẩn mã QR, mời khách nhắn Zalo.
+BANK = dict(bin='970436', bank='Vietcombank', acc='1051082788', name='CONG TY TNHH THUC PHAM DSUNFOOD')   # chị Ngân gửi 24/11/2026
 
 # ---------- vùng trồng (web Manus) ----------
 AREAS = [('Tà Hine', 'Đức Trọng', 8.0), ('Tân Nghĩa', 'Di Linh', 4.0), ('Lộc Châu 3', 'Bảo Thuận, Di Linh', 3.0), ('Gia Bắc 2', 'Di Linh', 2.7)]
@@ -51,7 +55,7 @@ GROUPS = [
                     ('cong-thuc-pha.html', 'Cỗ máy Công thức pha'), ('cold-brew.html', 'Cỗ máy Cold Brew'), ('tim-gu.html', 'Tìm gu cà phê')]),
     ('Mua & hợp tác', [('cua-hang.html', 'Cửa hàng cà phê'), ('mua-hang.html', 'Phòng chọn mua'), ('horeca.html', 'Giải pháp HORECA'), ('dong-hanh-cung-quan.html', 'Đồng hành cùng quán'),
                        ('nhan-xanh.html', 'Chọn nhân xanh · khách sỉ'), ('gia-ca-phe.html', 'Giá cà phê hôm nay'), ('chinh-sach.html', 'Chính sách MeDili'), ('giao-hang.html', 'Giao hàng & đổi trả'),
-                       ('gio-hang.html', 'Giỏ hàng'), ('tim-kiem.html', 'Tìm kiếm')]),
+                       ('gio-hang.html', 'Giỏ hàng'), ('thanh-toan.html', 'Thanh toán'), ('tim-kiem.html', 'Tìm kiếm')]),
     ('Kiến thức cà phê', [('journal.html', 'Tất cả bài viết'), ('chiet-xuat.html', 'Cỗ máy Chiết xuất'), ('phan-biet-ca-phe.html', 'Cỗ máy Phân biệt cà phê'), ('trai-chin.html', 'Cỗ máy Trái chín'),
                         ('vi-sinh.html', 'Cỗ máy Vi sinh'), ('tien-chat-huong.html', 'Cỗ máy Tiền chất hương'), ('banh-xe-huong.html', 'Bánh xe hương MeDili'),
                         ('journal-phin.html', 'Phin và nhịp rơi của thời gian'),
@@ -91,7 +95,7 @@ FOOT_EXPLORE = [('cau-chuyen.html', 'Câu chuyện MeDili'), ('doi-ngu.html', '�
 FOOT_YOU = [('cua-hang.html', 'Cửa hàng MeDili'), ('mua-hang.html', 'Phòng chọn mua'), ('horeca.html', 'Giải pháp HORECA'), ('dong-hanh-cung-quan.html', 'Đồng hành cùng quán'), ('nhan-xanh.html', 'Nhân xanh cho khách sỉ'),
             ('gia-ca-phe.html', 'Giá cà phê hôm nay'),
             ('quan-medili.html', 'Quán MeDili Café'), ('lien-he.html', 'Liên hệ & bản đồ'), ('chinh-sach.html', 'Chính sách MeDili'), ('giao-hang.html', 'Giao hàng & đổi trả'),
-            ('bao-mat.html', 'Chính sách bảo mật')]
+            ('thanh-toan.html', 'Thanh toán'), ('bao-mat.html', 'Chính sách bảo mật')]
 
 
 def footer(sig='MeDili Coffee Farm · Cà Sẻ Di Linh'):
@@ -497,6 +501,18 @@ const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badg
 const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
 badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
 '''
+# Đơn hàng (24/11/2026): mã đơn MDddmmxxxx, gửi đơn thẳng vào Google Form (chỉ trên medili.vn; bản xem trước không gửi thật),
+# lưu 12 đơn gần nhất trên trình duyệt để trang Thanh toán hiện lại nội dung đơn.
+COMMON_JS += ("window.MDO=(()=>{const K='medili-don',U=" + json.dumps(FORM_POST) + ",F=" + json.dumps(FORM_F) + ";"
+              "const all=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'{}');if(v&&typeof v==='object')return v}catch(e){}return {}};"
+              "const live=()=>/(^|[.])medili[.]vn$/.test(location.hostname);"
+              "const code=()=>{const d=new Date(),p=n=>String(n).padStart(2,'0');return 'MD'+p(d.getDate())+p(d.getMonth()+1)+(1000+Math.floor(Math.random()*9000))};"
+              "const send=a=>{if(!live())return Promise.resolve('demo');const b=new URLSearchParams();b.append(F.name,a.name);b.append(F.phone,a.phone);b.append(F.txt,a.txt);"
+              "const c=new AbortController(),t=setTimeout(()=>c.abort(),15000);"
+              "return fetch(U,{method:'POST',mode:'no-cors',body:b,signal:c.signal}).then(()=>'ok').finally(()=>clearTimeout(t))};"
+              "const keep=(k,o)=>{const v=all();v[k]=Object.assign({ts:Date.now()},o);Object.keys(v).sort((x,y)=>v[y].ts-v[x].ts).slice(12).forEach(x=>delete v[x]);"
+              "try{localStorage.setItem(K,JSON.stringify(v))}catch(e){}};"
+              "return {code,live,send,keep,get:k=>all()[k]||null}})();\n")
 
 
 def doc(fname, title, desc, body, css='', js='', wrap_cls='wrap', contact=True, hero=''):

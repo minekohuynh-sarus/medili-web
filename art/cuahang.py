@@ -347,14 +347,25 @@ CSS = r'''
 .ct-tot{display:grid;gap:6px}
 .ct-tot p{margin:0;display:flex;justify-content:space-between;gap:12px;font-size:.92rem}
 .ct-tot p b{font-family:var(--mono)}
+#ct-tier{font-family:var(--body)}
 .ct-tot .big{font-size:1.05rem;border-top:1px solid var(--rule);padding-top:8px}
 .ct-tot .big b{font-size:1.25rem}
 .ct-empty{text-align:center;display:grid;gap:10px;justify-items:center;padding:40px 16px}
 .ct-send{display:grid;gap:8px}
 .ct-send .btn{text-align:center}
 .ct-err{color:var(--bad);font-weight:600;margin:0}
+.ct-pt{border:0;margin:2px 0 0;padding:0;display:grid;gap:8px;min-width:0}
+.ct-pt legend{padding:0;margin-bottom:6px}
+.ct-op{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;border:1px solid var(--rule);border-radius:12px;padding:10px 12px;cursor:pointer;background:var(--bg)}
+.ct-op input{margin:3px 0 0;accent-color:var(--accent)}
+.ct-op span{display:grid;gap:2px}
+.ct-op small{color:var(--muted);font-size:.82rem}
+.ct-op:has(input:checked){border-color:var(--accent);background:var(--tint)}
+.ct-op:has(input:disabled){opacity:.55;cursor:not-allowed}
+#ct-go{width:100%;font-size:1rem;padding:13px 16px}
+#ct-go:disabled{opacity:.6;cursor:progress}
 @media (max-width:900px){.ct-wrap{grid-template-columns:minmax(0,1fr)}.ct-side{position:static}}
-@media (max-width:420px){.ct-row{grid-template-columns:36px minmax(0,1fr)}.ct-sw{width:36px;height:44px}.ct-r{grid-column:2;justify-items:start;grid-auto-flow:column;align-items:center;justify-content:space-between}}
+@media (max-width:420px){.ct-row{grid-template-columns:36px minmax(0,1fr)}.ct-sw{width:36px;height:44px}.ct-r{grid-column:2;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px}}
 /* tìm kiếm */
 .sr-box{display:grid;gap:10px}
 .sr-chips{display:flex;flex-wrap:wrap;gap:6px}
@@ -445,33 +456,42 @@ wireBuy(document);
 '''
 
 CART_JS = r'''
-(()=>{const box=document.getElementById('ct'),K2='medili-cart-khach';
- const f=document.getElementById('ct-f'),msg=document.getElementById('ct-msg'),err=document.getElementById('ct-err');
- f.addEventListener('submit',e=>e.preventDefault());
+(()=>{const box=document.getElementById('ct'),K2='medili-cart-khach',$=id=>document.getElementById(id);
+ const f=$('ct-f'),msg=$('ct-msg'),err=$('ct-err'),go=$('ct-go');
  try{const v=JSON.parse(localStorage.getItem(K2)||'{}');for(const k in v)if(f.elements[k])f.elements[k].value=v[k]}catch(e){}
+ if(f.elements.ai.selectedIndex<0)f.elements.ai.selectedIndex=0;if(!f.elements.pt.value)f.elements.pt[0].checked=true;
+ // mã đơn giữ nguyên trong phiên để nội dung xem trước khớp với đơn gửi đi
+ let CODE='';try{CODE=sessionStorage.getItem('medili-ma')||''}catch(e){}if(!CODE){CODE=MDO.code();try{sessionStorage.setItem('medili-ma',CODE)}catch(e){}}
  const today=()=>{const d=new Date();return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear()};
  function calc(){const c=MDC.get().filter(it=>byId[it.id]);let kg=0;c.forEach(it=>{const x=byId[it.id];if(x.p&&!tuiJ(x))kg+=it.w*it.q/1000});const tier=kg>=5?1:0;
   let tot=0,ask=0;const rows=c.map(it=>{const x=byId[it.id],u=unitP(x,tier),v=u?u*it.w*it.q:null;if(v)tot+=v;else ask++;return {it,x,v}});
-  return {c,rows,kg,tier,tot,ask,used:!!tier&&rows.some(o=>o.x.p&&o.x.p[1]&&!tuiJ(o.x))}}
- function text(){const r=calc(),v=f.elements;const L=['ĐƠN CÀ PHÊ · MEDILI','Ngày: '+today(),''];
+  const all=c.reduce((a,it)=>a+it.w*it.q,0)/1000,vat=Math.round(tot*.08);
+  return {c,rows,kg,all,tier,tot,vat,pay:tot+vat,ask,used:!!tier&&rows.some(o=>o.x.p&&o.x.p[1]&&!tuiJ(o.x))}}
+ const PT=r=>r.ask?'bg':f.elements.pt.value;
+ function text(){const r=calc(),v=f.elements,pt=PT(r);const L=['ĐƠN CÀ PHÊ · MEDILI '+CODE,'Ngày: '+today(),''];
   r.rows.forEach(({it,x,v:val},i)=>L.push(`${i+1}. ${x.n} · ${wlab(it.w)} · ${it.g} · x${it.q} · ${val?fmt(val)+' đ':'hỏi giá'}`));
-  L.push('',`Tổng khối lượng: ${(Math.round(r.c.reduce((a,it)=>a+it.w*it.q,0)/100)/10).toLocaleString('vi-VN')} kg`);
-  L.push(`Tạm tính: ${fmt(r.tot)} đ (${r.used?'giá sỉ cấp 1':'giá lẻ'}, chưa gồm 8% VAT và phí giao)${r.ask?' + '+r.ask+' dòng hỏi giá':''}`,'');
+  L.push('',`Tổng khối lượng: ${(Math.round(r.all*10)/10).toLocaleString('vi-VN')} kg`);
+  L.push(`Tạm tính: ${fmt(r.tot)} đ (${r.used?'giá sỉ cấp 1':'giá lẻ'})${r.ask?' + '+r.ask+' dòng hỏi giá':''}`);
+  L.push(`VAT 8%: ${fmt(r.vat)} đ`,`Cần thanh toán: ${fmt(r.pay)} đ, chưa gồm phí giao`);
+  L.push(r.all>=10?'Phí giao: miễn phí (đơn từ 10 kg)':'Phí giao: MeDili báo và thu sau');
+  L.push('Thanh toán: '+(pt==='bg'?'chờ MeDili báo giá rồi gửi link thanh toán':pt==='cod'?'tiền mặt khi nhận hàng':'chuyển khoản ngay bằng mã QR'),'');
   L.push('Khách: '+(v.ten.value.trim()||'...')+' · '+(v.sdt.value.trim()||'...'));
   if(v.dc.value.trim())L.push('Giao đến: '+v.dc.value.trim());L.push('Mua cho: '+v.ai.value);if(v.gc.value.trim())L.push('Ghi chú: '+v.gc.value.trim());
   return L.join('\n')}
- function render(){const r=calc();document.getElementById('ct-has').hidden=!r.c.length;document.getElementById('ct-none').hidden=!!r.c.length;
+ function render(){const r=calc();$('ct-has').hidden=!r.c.length;$('ct-none').hidden=!!r.c.length;
   box.innerHTML=r.rows.map(({it,x,v},i)=>`<div class="ct-row" data-i="${i}"><i class="ct-sw" style="--c:${x.col}" aria-hidden="true"></i>
   <div class="ct-n"><a href="${x.file}">${esc(x.n)}</a><small>${esc(x.kline)} · ${x.p?(tuiJ(x)?fmt(x.p[0]*250)+' đ/túi 250 g':fmt(unitP(x,r.tier)*1000)+' đ/kg'+(r.tier&&x.p[1]?' (sỉ)':'')):'Liên hệ'}</small>
   <select aria-label="Quy cách" data-k="w">${x.packs.map(w=>`<option value="${w}"${w===it.w?' selected':''}>${wlab(w)}</option>`).join('')}</select><select aria-label="Độ xay" data-k="g">${GR(x).map(g=>`<option${g===it.g?' selected':''}>${g}</option>`).join('')}</select></div>
   <div class="ct-r"><div class="pd-st"><button type="button" data-d="-1" aria-label="Bớt một">−</button><output>${it.q}</output><button type="button" data-d="1" aria-label="Thêm một">+</button></div>
   <b>${v?fmt(v)+' đ':'Hỏi giá'}</b><button type="button" class="ct-rm" data-rm>Bỏ khỏi giỏ</button></div></div>`).join('');
-  const kg=r.c.reduce((a,it)=>a+it.w*it.q,0)/1000;
-  document.getElementById('ct-kg').textContent=(Math.round(kg*10)/10).toLocaleString('vi-VN')+' kg';
-  document.getElementById('ct-tier').textContent=r.used?'Sỉ cấp 1 (từ 5 kg)':'Giá lẻ';
-  document.getElementById('ct-sum').textContent=fmt(r.tot)+' đ'+(r.ask?' + hỏi giá':'');
-  document.getElementById('ct-hint').textContent=r.used?'Đơn đã từ 5 kg nên áp giá sỉ cấp 1 cho các dòng có giá sỉ. Khi đạt 20 kg trong tháng, phần chênh lệch được chiết khấu vào đơn kế tiếp.':r.tier?'Các dòng trong giỏ chưa có giá sỉ, MeDili sẽ báo giá khi đặt hàng.':
+  $('ct-kg').textContent=(Math.round(r.all*10)/10).toLocaleString('vi-VN')+' kg';
+  $('ct-tier').textContent=r.used?'Sỉ cấp 1 (từ 5 kg)':'Giá lẻ';
+  $('ct-sum').textContent=fmt(r.tot)+' đ'+(r.ask?' + hỏi giá':'');$('ct-vat').textContent=fmt(r.vat)+' đ';$('ct-pay').textContent=fmt(r.pay)+' đ'+(r.ask?' + hỏi giá':'');
+  $('ct-hint').textContent=r.used?'Đơn đã từ 5 kg nên áp giá sỉ cấp 1 cho các dòng có giá sỉ. Khi đạt 20 kg trong tháng, phần chênh lệch được chiết khấu vào đơn kế tiếp.':r.tier?'Các dòng trong giỏ chưa có giá sỉ, MeDili sẽ báo giá khi đặt hàng.':
    (r.kg>0?`Thêm ${(Math.round((5-r.kg)*10)/10).toLocaleString('vi-VN')} kg nữa để được giá sỉ cấp 1.`:'');
+  $('ct-ship').textContent=(r.all>=10?'Đơn từ 10 kg được miễn phí giao hàng.':'Phí giao: miễn phí cho đơn từ 10 kg. Đơn dưới 10 kg, MeDili báo phí giao và thu sau.')+(r.ask?' Dòng ghi “Hỏi giá” được MeDili báo giá khi nhận đơn.':'');
+  const ck=f.querySelector('input[name=pt][value=ck]');ck.disabled=!!r.ask;if(r.ask&&ck.checked)f.querySelector('input[name=pt][value=cod]').checked=true;
+  const pt=PT(r);go.textContent=pt==='bg'?'Gửi đơn để MeDili báo giá':pt==='cod'?'Đặt hàng':'Đặt hàng và thanh toán';
   msg.textContent=text()}
  box.addEventListener('click',e=>{const row=e.target.closest('.ct-row');if(!row)return;const c=MDC.get(),it=c[+row.dataset.i];if(!it)return;
   const d=e.target.closest('[data-d]');if(d){it.q=Math.max(1,Math.min(99,it.q+ +d.dataset.d));MDC.set(c);render()}
@@ -479,16 +499,23 @@ CART_JS = r'''
  box.addEventListener('change',e=>{const s=e.target.closest('select');if(!s)return;const row=s.closest('.ct-row'),c=MDC.get(),it=c[+row.dataset.i];
   it[s.dataset.k]=s.dataset.k==='w'?+s.value:s.value;const j=c.findIndex((o,k)=>k!==+row.dataset.i&&o.id===it.id&&o.w===it.w&&o.g===it.g);
   if(j>=0){c[j].q=Math.min(99,c[j].q+it.q);c.splice(+row.dataset.i,1)}MDC.set(c);render()});
- f.addEventListener('input',()=>{const o={};['ten','sdt','dc','ai','gc'].forEach(k=>o[k]=f.elements[k].value);try{localStorage.setItem(K2,JSON.stringify(o))}catch(e){}msg.textContent=text();err.hidden=true});
- const ok=()=>{const t=f.elements.ten.value.trim(),p=f.elements.sdt.value.replace(/\D/g,'');if(!t||p.length<9||p.length>11){err.hidden=false;
-  err.textContent=!t?'Vui lòng nhập tên người nhận.':'Vui lòng nhập số điện thoại đúng 9 đến 11 số.';(t?f.elements.sdt:f.elements.ten).focus();return false}return true};
- document.getElementById('ct-gf').addEventListener('click',e=>{if(!ok()){e.preventDefault();return}const v=f.elements;
-  e.currentTarget.href=FORM+'&'+FN.name+'='+encodeURIComponent(v.ten.value.trim())+'&'+FN.phone+'='+encodeURIComponent(v.sdt.value.trim())+'&'+FN.txt+'='+encodeURIComponent(text());
-  toast('Đã mở Google Form. Bấm Gửi trong phiếu để MeDili nhận đơn.')});
- document.getElementById('ct-zl').addEventListener('click',async e=>{if(!ok()){e.preventDefault();return}try{await navigator.clipboard.writeText(text());toast('Đã sao chép đơn. Dán vào Zalo MeDili rồi gửi.')}catch(x){toast('Hãy sao chép nội dung đơn bên dưới rồi dán vào Zalo.')}});
- document.getElementById('ct-em').addEventListener('click',e=>{if(!ok()){e.preventDefault();return}
-  e.currentTarget.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('Đơn cà phê MeDili · '+f.elements.ten.value.trim())+'&body='+encodeURIComponent(text())});
- document.getElementById('ct-clr').addEventListener('click',()=>{MDC.set([]);render()});
+ const save=()=>{const o={};['ten','sdt','dc','ai','gc','pt'].forEach(k=>o[k]=f.elements[k].value);try{localStorage.setItem(K2,JSON.stringify(o))}catch(e){}};
+ f.addEventListener('input',()=>{save();render();err.hidden=true});f.addEventListener('change',()=>{save();render()});
+ const ok=()=>{const v=f.elements,t=v.ten.value.trim(),p=v.sdt.value.replace(/[\s.()-]/g,''),a=v.dc.value.trim();
+  const m=!t?['Vui lòng nhập tên người nhận.',v.ten]:!/^(0\d{9,10}|\+\d{8,15})$/.test(p)?['Vui lòng nhập số điện thoại đúng (ví dụ 0901234567 hoặc +84 901 234 567).',v.sdt]:a.length<6?['Vui lòng nhập địa chỉ giao. Nhận tại quán thì ghi “Nhận tại quán”.',v.dc]:null;
+  if(m){err.hidden=false;err.textContent=m[0];m[1].focus();return false}return true};
+ // Đặt hàng: gửi đơn thẳng cho MeDili (Google Form), lưu đơn trên máy, sang trang Thanh toán
+ let busy=false;
+ f.addEventListener('submit',async e=>{e.preventDefault();if(busy||!ok())return;const r=calc();if(!r.c.length)return;
+  busy=true;const lab=go.textContent;go.disabled=true;go.textContent='Đang gửi đơn…';const v=f.elements,pt=PT(r),txt=text();
+  try{await MDO.send({name:v.ten.value.trim(),phone:v.sdt.value.trim(),txt})}
+  catch(x){busy=false;go.disabled=false;go.textContent=lab;err.hidden=false;err.textContent='Chưa gửi được đơn. Kiểm tra kết nối mạng rồi bấm lại, hoặc gửi đơn qua Zalo MeDili.';return}
+  MDO.keep(CODE,{t:txt,tien:r.pay,pt});MDC.set([]);try{sessionStorage.removeItem('medili-ma')}catch(x){}
+  location.href='thanh-toan.html?ma='+CODE+(pt==='ck'?'&tien='+r.pay:'&pt='+pt+(r.pay?'&tien='+r.pay:''))});
+ $('ct-zl').addEventListener('click',async e=>{if(!ok()){e.preventDefault();return}try{await navigator.clipboard.writeText(text());toast('Đã sao chép đơn. Dán vào Zalo MeDili rồi gửi.')}catch(x){toast('Hãy sao chép nội dung đơn bên dưới rồi dán vào Zalo.')}});
+ $('ct-em').addEventListener('click',e=>{if(!ok()){e.preventDefault();return}
+  e.currentTarget.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('Đơn cà phê MeDili · '+CODE)+'&body='+encodeURIComponent(text())});
+ $('ct-clr').addEventListener('click',()=>{MDC.set([]);render()});
  addEventListener('storage',render);render()})();
 '''
 
@@ -645,7 +672,7 @@ document.querySelector('.pd-rel').addEventListener('click',e=>{const a=e.target.
 
 def cart_page(L):
     body = head('Giỏ hàng', 'Giỏ cà phê <em>của bạn.</em>',
-                'Kiểm tra gói, độ xay, số lượng rồi gửi đơn. MeDili liên hệ lại để xác nhận giá cuối, phí giao và thời gian giao. Website chưa hỗ trợ thanh toán trực tuyến.')
+                'Kiểm tra gói, độ xay, số lượng, chọn cách thanh toán rồi đặt hàng. Chuyển khoản ngay bằng mã QR, hoặc trả tiền mặt khi nhận hàng.')
     body += f'''
 <div id="ct-none" class="box ct-empty" hidden><p class="eye">Giỏ đang trống</p><p style="margin:0">Chọn cà phê trong Cửa hàng rồi bấm Thêm vào giỏ.</p>
  <div class="cta" style="margin:0;justify-content:center"><a class="btn main" href="cua-hang.html">Vào Cửa hàng</a><a class="btn" href="tim-gu.html">Tìm gu cà phê</a></div></div>
@@ -654,26 +681,30 @@ def cart_page(L):
   <p class="note" style="margin-top:10px"><a class="lnk" href="cua-hang.html">← Chọn thêm cà phê</a> · <button type="button" class="ct-rm" id="ct-clr">Xóa cả giỏ</button></p></section>
  <aside class="ct-side" aria-label="Gửi đơn">
   <div class="box ct-tot"><p><span>Tổng khối lượng</span><b id="ct-kg">0 kg</b></p><p><span>Mức giá</span><b id="ct-tier">Giá lẻ</b></p>
-   <p class="big"><span>Tạm tính</span><b id="ct-sum">0 đ</b></p><p class="note" id="ct-hint" style="display:block"></p>
-   <p class="note" style="display:block">Chưa gồm 8% VAT và phí giao. Dòng ghi “Hỏi giá” sẽ được MeDili báo giá khi nhận đơn.</p></div>
+   <p><span>Tạm tính</span><b id="ct-sum">0 đ</b></p><p><span>VAT 8%</span><b id="ct-vat">0 đ</b></p>
+   <p class="big"><span>Cần thanh toán</span><b id="ct-pay">0 đ</b></p><p class="note" id="ct-hint" style="display:block"></p>
+   <p class="note" id="ct-ship" style="display:block"></p></div>
   <form class="box p-form" id="ct-f" autocomplete="on">
    <p class="eye">Người nhận</p>
    <label>Họ và tên<input name="ten" autocomplete="name" required></label>
    <label>Số điện thoại hoặc Zalo<input name="sdt" type="tel" inputmode="tel" autocomplete="tel" required></label>
-   <label>Địa chỉ giao <small>số nhà, đường, phường, tỉnh</small><input name="dc" autocomplete="street-address"></label>
+   <label>Địa chỉ giao <small>số nhà, đường, phường, tỉnh</small><input name="dc" autocomplete="street-address" required></label>
    <label>Mua cho<select name="ai"><option>Gia đình</option><option>Quán cà phê</option><option>Nhà hàng, khách sạn</option><option>Văn phòng</option><option>Quà tặng</option></select></label>
    <label>Ghi chú <small>giờ nhận, xuất hóa đơn, đóng gói</small><textarea name="gc" rows="2"></textarea></label>
+   <fieldset class="ct-pt"><legend class="eye">Cách thanh toán</legend>
+    <label class="ct-op"><input type="radio" name="pt" value="ck" checked><span><b>Chuyển khoản ngay</b><small>Quét mã QR bằng app ngân hàng, MoMo hoặc ZaloPay</small></span></label>
+    <label class="ct-op"><input type="radio" name="pt" value="cod"><span><b>Tiền mặt khi nhận hàng</b><small>Trả cho người giao hàng (COD)</small></span></label>
+   </fieldset>
    <p class="ct-err" id="ct-err" role="alert" hidden></p>
-   <div class="ct-send"><a class="btn main" id="ct-gf" href="{FORM}" target="_blank" rel="noopener">Gửi đơn qua Google Form</a>
-    <a class="btn" id="ct-zl" href="{ZALO}" target="_blank" rel="noopener">Sao chép đơn và mở Zalo MeDili</a>
-    <a class="btn" id="ct-em" href="mailto:{EMAIL}">Gửi đơn qua email</a></div>
+   <div class="ct-send"><button type="submit" class="btn main" id="ct-go">Đặt hàng và thanh toán</button></div>
+   <p class="note">Hoặc gửi đơn qua <a class="lnk" id="ct-zl" href="{ZALO}" target="_blank" rel="noopener">Zalo MeDili</a> hay <a class="lnk" id="ct-em" href="mailto:{EMAIL}">email</a>.</p>
    <p class="note">Thông tin chỉ dùng để giao đơn này, xem <a class="lnk" href="bao-mat.html">Chính sách bảo mật</a>. Hỗ trợ: Zalo {PHONE}.</p>
   </form>
   <details class="box"><summary>Xem nội dung đơn sẽ gửi</summary><pre class="msg" id="ct-msg" data-sel style="margin-top:10px"></pre></details>
  </aside>
 </div>
 '''
-    return doc('gio-hang.html', 'Giỏ hàng · MeDili', 'Giỏ cà phê MeDili: kiểm tra gói, độ xay, số lượng rồi gửi đơn qua Google Form, Zalo hoặc email.',
+    return doc('gio-hang.html', 'Giỏ hàng · MeDili', 'Giỏ cà phê MeDili: kiểm tra gói, độ xay, số lượng rồi đặt hàng, chuyển khoản bằng mã QR hoặc trả tiền mặt khi nhận hàng.',
                body, css=CSS, js=js_head(L) + SHOP_JS + CART_JS, wrap_cls='wrap pg', contact=False)
 
 
@@ -704,7 +735,7 @@ def pages(P):
 TOOLS = {'chiet-xuat.html', 'cold-brew.html', 'cong-thuc-pha.html', 'trai-chin.html', 'vi-sinh.html', 'tien-chat-huong.html', 'banh-xe-huong.html',
          'phan-biet-ca-phe.html', 'tim-gu.html', 'nhan-xanh.html', 'mua-hang.html', 'gia-ca-phe.html', 'len-men-men-bia.html', 'len-men-trai-cay.html'}
 ARTS = {'journal-phin.html', 'journal-tu-qua.html', 'journal-di-linh.html', 'tu-vuon-den-ly.html', 'suc-khoe.html'}
-NOINDEX = {'gio-hang.html', 'tim-kiem.html'}
+NOINDEX = {'gio-hang.html', 'tim-kiem.html', 'thanh-toan.html'}
 
 
 def _plain(s):
@@ -735,13 +766,14 @@ def search_index(out_dir):
 
 
 def sitemap(out_dir):
-    urls = [SITE if f == 'index.html' else SITE + f for f in sorted(os.listdir(out_dir)) if f.endswith('.html') and f != 'gio-hang.html']
+    urls = [SITE if f == 'index.html' else SITE + f for f in sorted(os.listdir(out_dir)) if f.endswith('.html') and f not in ('gio-hang.html', 'thanh-toan.html')]
     for lang in ('en', 'ja', 'zh'):   # bản tiếng Anh, Nhật, Trung (24/11/2026)
         d = os.path.join(out_dir, lang)
         if os.path.isdir(d):
-            urls += [SITE + lang + '/' + ('' if f == 'index.html' else f) for f in sorted(os.listdir(d)) if f.endswith('.html') and f != 'gio-hang.html']
+            urls += [SITE + lang + '/' + ('' if f == 'index.html' else f) for f in sorted(os.listdir(d)) if f.endswith('.html') and f not in ('gio-hang.html', 'thanh-toan.html')]
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
             + ''.join(f'<url><loc>{u}</loc></url>\n' for u in urls) + '</urlset>\n')
 
 
-ROBOTS = f'User-agent: *\nAllow: /\nDisallow: /gio-hang.html\nDisallow: /en/gio-hang.html\nDisallow: /ja/gio-hang.html\nDisallow: /zh/gio-hang.html\n\nSitemap: {SITE}sitemap.xml\n'
+ROBOTS = ('User-agent: *\nAllow: /\n' + ''.join(f'Disallow: /{l}{f}\n' for f in ('gio-hang.html', 'thanh-toan.html') for l in ('', 'en/', 'ja/', 'zh/'))
+          + f'\nSitemap: {SITE}sitemap.xml\n')

@@ -58,6 +58,12 @@ huyện/xã giữ chữ Latin (Di Linh, Cầu Đất, Bảo Lâm, Tân Nghĩa, G
 | Hướng dẫn pha | Brewing Guide | 抽出ガイド | 冲煮指南 |
 | Chính sách MeDili | MeDili Policies | MeDiliのポリシー | MeDili政策 |
 | Giao hàng & đổi trả | Delivery & Returns | 配送と返品 | 配送与退换货 |
+| Thanh toán | Payment | お支払い | 付款 |
+| chuyển khoản (quét mã QR) | bank transfer (scan the QR code) | 銀行振込（QRコードを読み取る） | 银行转账（扫描二维码） |
+| tiền mặt khi nhận hàng (COD) | cash on delivery (COD) | 代金引換（現金） | 货到付款（现金） |
+| nội dung chuyển khoản / số tài khoản / tên tài khoản | reference / account number / account name | 振込内容 / 口座番号 / 口座名義 | 转账附言 / 账号 / 户名 |
+| mã đơn | order code | 注文番号 | 订单号 |
+| Công ty TNHH Thực phẩm DSunfood (chủ tài khoản) | DSunfood Food Co., Ltd. | DSunfood食品有限会社 | DSunfood食品有限责任公司 |
 | Giỏ hàng | Cart | カート | 购物车 |
 | Cửa hàng | Shop | ショップ | 商店 |
 | Cỗ máy Vi sinh / Tiền chất hương / Lên men cùng trái cây | Microbe / Aroma Precursor / Fruit Co-fermentation Machine | 微生物 / 香りの前駆体 / フルーツ共発酵マシン | 微生物 / 香气前体 / 水果共同发酵机 |

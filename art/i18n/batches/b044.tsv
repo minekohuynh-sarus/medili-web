@@ -1,0 +1,107 @@
+9d5a6614c ||| Payment ||| お支払い ||| 付款
+43cc4087d ||| <1>MeDili Store</1><2>Buying Room</2><3>HORECA Solutions</3><4>Partnering with Cafés</4><5>Green Coffee for Wholesale</5><6>Coffee Prices Today</6><7>MeDili Café</7><8>Contact & Map</8><9>MeDili Policies</9><10>Delivery & Returns</10><11>Payment</11><12>Privacy Policy</12> ||| <1>MeDiliストア</1><2>購入ルーム</2><3>HORECA向けソリューション</3><4>カフェとともに</4><5>卸売向け生豆</5><6>本日のコーヒー価格</6><7>MeDili Caféの店舗</7><8>お問い合わせと地図</8><9>MeDiliのポリシー</9><10>配送と返品</10><11>お支払い</11><12>プライバシーポリシー</12> ||| <1>MeDili商店</1><2>选购室</2><3>HORECA解决方案</3><4>与咖啡馆同行</4><5>批发生豆</5><6>今日咖啡价格</6><7>MeDili Café门店</7><8>联系方式与地图</8><9>MeDili政策</9><10>配送与退换货</10><11>付款</11><12>隐私政策</12>
+fa1c54949 ||| What information the MeDili website uses: orders are sent through Google Forms, payment QR codes are created on your device, and no advertising cookies are used. ||| MeDiliのウェブサイトが使う情報：ご注文はGoogle Forms経由で送信、支払い用QRコードはお使いの端末上で作成、広告用Cookieは使用しません。 ||| MeDili网站使用哪些信息：订单通过Google Forms发送，付款二维码在您的设备上生成，不使用广告Cookie。
+adc2ab0af ||| The input fields on Find Your Coffee Taste, Choose Green Coffee, HORECA and Partnering with Cafés are only used to compose a message on your own device. The website does not send or store what you enter on these pages. ||| 好みのコーヒー診断、生豆を選ぶ、HORECA、カフェとともにの各ページの入力欄は、お使いの端末上でメッセージを作成するためだけに使われます。これらのページで入力した内容を、ウェブサイトが自動で送信したり保存したりすることはありません。 ||| “寻找您的咖啡口味”“选择生豆”“HORECA”和“与咖啡馆同行”页面的输入框仅用于在您的设备上撰写消息。网站不会自动发送或保存您在这些页面输入的内容。
+cb57c0e84 ||| When you place an order ||| ご注文時 ||| 当您下单时
+c2046a4de ||| When you press Place order in the Cart or the Buying Room, the website sends your name, phone number and order details (including the delivery address) to MeDili through Google Forms. Google Forms is operated by Google under Google's own policies. Your cart, recipient details and latest orders are stored in your browser so they can be shown again on the Payment page. ||| カートまたは購入ルームで注文ボタンを押すと、お名前、電話番号、注文内容（お届け先住所を含む）がGoogle Forms経由でMeDiliに送信されます。Google FormsはGoogleが運営しており、Google独自のポリシーに従います。カート、お届け先情報、直近のご注文はお使いのブラウザに保存され、お支払いページで再表示されます。 ||| 当您在购物车或选购室点击下单时，网站会通过Google Forms将您的姓名、电话号码和订单内容（包括收货地址）发送给MeDili。Google Forms由Google运营，适用Google自己的政策。购物车、收货人信息和最近的订单保存在您的浏览器中，以便在付款页面再次显示。
+f056f7792 ||| Payment page ||| お支払いページ ||| 付款页面
+d3ddf692b ||| QR codes are created right on your device. The website does not receive or store your bank account, wallet or card details; you make the transfer yourself in your banking or wallet app. ||| QRコードはお使いの端末上で作成されます。ウェブサイトがお客様の銀行口座、ウォレット、カードの情報を受け取ったり保存したりすることはありません。振込はお客様ご自身の銀行アプリやウォレットアプリで行います。 ||| 二维码直接在您的设备上生成。网站不接收也不保存您的银行账户、钱包或银行卡信息；转账由您在自己的银行或钱包应用中完成。
+242dfaaf2 ||| When you order on the website, you pay right away by bank transfer with the QR code on the <1>Payment</1> page (banking app, MoMo, ZaloPay), or pay cash on delivery. For orders under 10 kg, MeDili quotes the delivery fee and collects it later. ||| ウェブサイトでご注文の際は、<1>お支払い</1>ページのQRコードですぐに銀行振込（銀行アプリ、MoMo、ZaloPay）いただくか、代金引換（現金）でお支払いください。10 kg未満のご注文の送料は、MeDiliがお知らせし、後ほどいただきます。 ||| 在网站下单时，您可在<1>付款</1>页面扫描二维码立即银行转账（银行应用、MoMo、ZaloPay），或选择货到付款（现金）。不足10公斤的订单，运费由MeDili告知并在之后收取。
+9fdcb92eb ||| Choose your coffee in the Store or the Buying Room and press Place order, or message Zalo 0966 770 788. MeDili will call you back to confirm the order. ||| ストアまたは購入ルームでコーヒーを選んで注文ボタンを押すか、Zalo（0966 770 788）でご連絡ください。MeDiliから折り返しお電話して注文を確認します。 ||| 在商店或选购室选好咖啡后点击下单，或通过Zalo 0966 770 788联系。MeDili会回电确认订单。
+f4f0c05e4 ||| Pay by bank transfer with a QR code when you order (banking app, MoMo, ZaloPay), or pay cash on delivery. VAT invoices are issued by DSunfood Co., Ltd. ||| ご注文時にQRコードで銀行振込（銀行アプリ、MoMo、ZaloPay）いただくか、代金引換（現金）でお支払いください。VAT請求書はDSunfood有限会社が発行します。 ||| 下单时扫描二维码银行转账（银行应用、MoMo、ZaloPay），或货到付款（现金）。增值税发票由DSunfood有限责任公司开具。
+a36b24279 ||| MeDili coffee cart: check the packs, grind and quantity, then place your order and pay by QR bank transfer or cash on delivery. ||| MeDiliのコーヒーカート：袋、挽き目、数量を確認して注文し、QRコードでの銀行振込または代金引換（現金）でお支払いください。 ||| MeDili咖啡购物车：确认包装、研磨度和数量后下单，扫描二维码银行转账或货到付款（现金）。
+362c27826 ||| Check the packs, grind and quantity, choose how to pay, then place your order. Pay right away by bank transfer with a QR code, or pay cash on delivery. ||| 袋、挽き目、数量を確認し、お支払い方法を選んでご注文ください。QRコードですぐに銀行振込するか、代金引換（現金）でお支払いいただけます。 ||| 确认包装、研磨度和数量，选择付款方式后下单。可扫描二维码立即银行转账，也可货到付款（现金）。
+ad25dff2f ||| <1>VAT 8%</1><2>0 VND</2> ||| <1>VAT 8%</1><2>0 VND</2> ||| <1>增值税 8%</1><2>0 VND</2>
+ab8b77651 ||| <1>Amount due</1><2>0 VND</2> ||| <1>お支払い金額</1><2>0 VND</2> ||| <1>应付金额</1><2>0 VND</2>
+c60f4c7e8 ||| Payment method ||| お支払い方法 ||| 付款方式
+d74c3fd4d ||| <1>Bank transfer now</1><2>Scan the QR code with your banking app, MoMo or ZaloPay</2> ||| <1>今すぐ銀行振込</1><2>銀行アプリ、MoMo、ZaloPayでQRコードを読み取る</2> ||| <1>立即银行转账</1><2>用银行应用、MoMo或ZaloPay扫描二维码</2>
+7822ae580 ||| <1>Cash on delivery</1><2>Pay the courier in cash (COD)</2> ||| <1>代金引換（現金）</1><2>配達員に現金でお支払い（COD）</2> ||| <1>货到付款（现金）</1><2>以现金付给送货员（COD）</2>
+6b0df08e2 ||| Place order and pay ||| 注文して支払う ||| 下单并付款
+0093a8094 ||| Or send your order through <1>MeDili on Zalo</1> or by <2>email</2>. ||| または<1>MeDiliのZalo</1>か<2>メール</2>で注文を送ることもできます。 ||| 也可以通过<1>MeDili的Zalo</1>或<2>邮件</2>发送订单。
+9cd94823f ||| Subtotal: {1} VND ({2}){3} ||| 小計：{1} VND（{2}）{3} ||| 小计：{1} VND（{2}）{3}
+04f4c7c38 ||| VAT 8%: {1} VND ||| VAT 8%：{1} VND ||| 增值税8%：{1} VND
+bdc1d0439 ||| Amount due: {1} VND, excluding delivery ||| お支払い金額：{1} VND（送料別） ||| 应付金额：{1} VND，不含运费
+2d74b3359 ||| Delivery: free (orders from 10 kg) ||| 送料：無料（10 kg以上のご注文） ||| 运费：免费（10公斤及以上订单）
+13db04892 ||| Delivery: MeDili quotes the fee and collects it later ||| 送料：MeDiliがお知らせし、後ほどいただきます ||| 运费：由MeDili告知，之后收取
+0f0bee38e ||| Payment: ||| お支払い： ||| 付款方式：
+1de9154b9 ||| waiting for MeDili's quote and payment link ||| MeDiliの見積もりと支払いリンク待ち ||| 等待MeDili报价并发送付款链接
+ce2bcf981 ||| cash on delivery ||| 代金引換（現金） ||| 货到付款（现金）
+f86dbd419 ||| bank transfer now with the QR code ||| QRコードで今すぐ銀行振込 ||| 立即扫码银行转账
+24a59f869 ||| Orders from 10 kg get free delivery. ||| 10 kg以上のご注文は配送無料です。 ||| 10公斤及以上的订单免运费。
+2b5fd9705 ||| Delivery: free for orders from 10 kg. For orders under 10 kg, MeDili quotes the delivery fee and collects it later. ||| 送料：10 kg以上のご注文は無料です。10 kg未満のご注文は、MeDiliが送料をお知らせし、後ほどいただきます。 ||| 运费：10公斤及以上的订单免运费。不足10公斤的订单，运费由MeDili告知，之后收取。
+d93710b9e ||| Lines marked “Ask for price” are quoted by MeDili when the order arrives. ||| 「価格を問い合わせる」と表示された商品は、ご注文受付時にMeDiliがお見積もりします。 ||| 标有“询价”的商品，MeDili会在收到订单时报价。
+aaa6d6da8 ||| Send order for a quote ||| 注文を送って見積もりを依頼 ||| 提交订单，等待报价
+3766e5e79 ||| Please enter a valid phone number (e.g. 0901234567 or +84 901 234 567). ||| 正しい電話番号を入力してください（例：0901234567 または +84 901 234 567）。 ||| 请输入正确的电话号码（例如 0901234567 或 +84 901 234 567）。
+f174fa55e ||| Please enter a delivery address. To pick up at the café, write “Pick up at café”. ||| お届け先住所を入力してください。店舗で受け取る場合は「店舗受取」とご記入ください。 ||| 请输入收货地址。到店自取请填写“到店自取”。
+499bfc4a3 ||| Sending order… ||| 注文を送信中… ||| 正在提交订单…
+85b464551 ||| The order could not be sent. Check your internet connection and try again, or send the order through MeDili on Zalo. ||| 注文を送信できませんでした。インターネット接続を確認してもう一度押すか、MeDiliのZaloで注文を送ってください。 ||| 订单未能发送。请检查网络连接后重试，或通过MeDili的Zalo发送订单。
+42631c52f ||| Order on the website ||| ウェブで注文 ||| 网上下单
+1face55cf ||| The Cart and the Buying Room send your order straight to MeDili, with a QR code for bank transfer. ||| カートと購入ルームからは注文がMeDiliに直接届き、銀行振込用のQRコードも表示されます。 ||| 购物车和选购室会将订单直接发送给MeDili，并提供转账二维码。
+9e8cbd3ed ||| Order and pay by transfer now ||| 注文して今すぐ振込 ||| 下单并立即转账
+f3dac7729 ||| Order and pay later ||| 注文して後払い ||| 下单，稍后付款
+e36f39bfd ||| Enter your name and phone number, then choose how to pay. The order goes straight to MeDili, with a QR code for bank transfer if you pay now. ||| お名前と電話番号を入力し、お支払い方法を選んでください。注文はMeDiliに直接届き、今すぐ支払う場合は振込用のQRコードが表示されます。 ||| 输入姓名和电话号码，然后选择付款方式。订单会直接发送给MeDili；如立即付款，将显示转账二维码。
+9067b6d8d ||| The order could not be sent. Check your internet connection and try again, or message MeDili on Zalo. ||| 注文を送信できませんでした。インターネット接続を確認してもう一度押すか、ZaloでMeDiliにご連絡ください。 ||| 订单未能发送。请检查网络连接后重试，或通过Zalo联系MeDili。
+ac26f9553 ||| Pay for your MeDili coffee order: bank transfer by QR code (banking app, MoMo, ZaloPay) with the amount and order code filled in, or cash on delivery. ||| MeDiliのコーヒーのお支払い：QRコードで銀行振込（銀行アプリ、MoMo、ZaloPay）、金額と注文番号は入力済み。または代金引換（現金）。 ||| MeDili咖啡订单付款：扫描二维码银行转账（银行应用、MoMo、ZaloPay），金额和订单号已自动填写；或货到付款（现金）。
+6ed30fbad ||| Payment · MeDili ||| お支払い · MeDili ||| 付款 · MeDili
+8044e4af6 ||| Pay <1>MeDili.</1> ||| MeDiliへの<1>お支払い。</1> ||| 向MeDili<1>付款。</1>
+ea1eb9ce0 ||| Scan the QR code with your banking app, MoMo or ZaloPay. The amount and transfer reference are filled in for you. The money goes to the account of DSunfood Food Co., Ltd., MeDili's distributor. ||| 銀行アプリ、MoMo、ZaloPayでQRコードを読み取ってください。金額と振込内容は入力済みです。お振込先は、MeDiliの販売元であるDSunfood食品有限会社の口座です。 ||| 用银行应用、MoMo或ZaloPay扫描二维码，金额和转账附言已自动填写。款项转入MeDili经销商DSunfood食品有限责任公司的账户。
+d677c1c76 ||| Order sent ||| 注文を送信しました ||| 订单已发送
+db388ba12 ||| Message MeDili on Zalo ||| ZaloでMeDiliに連絡 ||| 通过Zalo联系MeDili
+d825a8c63 ||| Pay by transfer now ||| 今すぐ振込 ||| 立即转账
+ee19f6c47 ||| Bank transfer · scan the QR code ||| 銀行振込 · QRコードを読み取る ||| 银行转账 · 扫描二维码
+ec895bb51 ||| <1>Amount</1><2></2> ||| <1>金額</1><2></2> ||| <1>金额</1><2></2>
+bebc9b7ec ||| Bank transfer QR code for MeDili ||| MeDiliへの振込用QRコード ||| 向MeDili转账的二维码
+0290e2cff ||| Banking app · MoMo · ZaloPay ||| 銀行アプリ · MoMo · ZaloPay ||| 银行应用 · MoMo · ZaloPay
+69ba2e446 ||| Bank ||| 銀行 ||| 银行
+dc0ca7a8d ||| Account number ||| 口座番号 ||| 账号
+c0b94cff5 ||| Copy ||| コピー ||| 复制
+3f742a8a3 ||| Account name ||| 口座名義 ||| 户名
+d5261b2d2 ||| Amount ||| 金額 ||| 金额
+abdf05335 ||| Reference ||| 振込内容 ||| 转账附言
+bc56aacec ||| Save QR image ||| QR画像を保存 ||| 保存二维码图片
+e2e6fbb52 ||| Tell MeDili I've paid ||| 振込済みを連絡 ||| 告知已转账
+62e6e0274 ||| Open your banking app, MoMo or ZaloPay and choose Scan QR. ||| 銀行アプリ、MoMo、ZaloPayを開き、QRコードの読み取りを選びます。 ||| 打开银行应用、MoMo或ZaloPay，选择扫描二维码。
+173421650 ||| Scan the code on the screen. If you are viewing this page on that same phone, press Save QR image, then pick the saved image in the app's scan screen. ||| 画面のコードを読み取ります。同じスマートフォンでこのページを見ている場合は、「QR画像を保存」を押し、アプリの読み取り画面で保存した画像を選んでください。 ||| 扫描屏幕上的二维码。如果正在用同一部手机浏览本页，请点“保存二维码图片”，再在应用的扫码界面选择刚保存的图片。
+11a810109 ||| Check the account name, amount and reference, then confirm the transfer. ||| 口座名義、金額、振込内容を確認してから振込を確定します。 ||| 核对户名、金额和转账附言，然后确认转账。
+f407f4273 ||| Press Tell MeDili I've paid so MeDili can match your payment and ship sooner. ||| 「振込済みを連絡」を押すと、MeDiliが入金を確認して早めに発送します。 ||| 点“告知已转账”，MeDili核对款项后会尽快发货。
+983bba817 ||| Bank transfer ||| 銀行振込 ||| 银行转账
+fc633a925 ||| The receiving account details are being updated. Message MeDili on Zalo at 0966 770 788 for transfer details, or choose cash on delivery. ||| 振込先口座の情報を更新中です。振込先はZalo（0966 770 788）でお問い合わせいただくか、代金引換（現金）をお選びください。 ||| 收款账户信息正在更新。请通过Zalo 0966 770 788获取转账信息，或选择货到付款（现金）。
+6bde43e73 ||| Payment notes ||| お支払いの注意 ||| 付款须知
+f41b6fc76 ||| MeDili only accepts transfers to the DSunfood Food Co., Ltd. account shown on this page. ||| MeDiliへのお振込は、このページに記載のDSunfood食品有限会社の口座でのみ受け付けます。 ||| MeDili只接受转入本页所示DSunfood食品有限责任公司账户的款项。
+41557ceec ||| Need a VAT invoice? Put your company name, tax code, address and invoice email in the order notes, or message on Zalo. ||| VAT請求書が必要な場合は、会社名、税番号、住所、請求書の受け取り用メールアドレスを注文の備考に書くか、Zaloでご連絡ください。 ||| 如需增值税发票，请在订单备注中填写公司名称、税号、地址和接收发票的邮箱，或通过Zalo联系。
+a39493942 ||| Refunds within 5 days under the <1>Refund policy</1>. ||| <1>返金ポリシー</1>に基づき、5日以内に返金します。 ||| 按照<1>退款政策</1>，5天内退款。
+fb3dc24f0 ||| The QR code works with banking and e-wallet apps in Vietnam. Customers abroad can pay on delivery or message MeDili. ||| QRコードはベトナム国内の銀行アプリと電子ウォレットで使えます。海外のお客様は代金引換をご利用いただくか、MeDiliにご連絡ください。 ||| 二维码适用于越南境内的银行应用和电子钱包。海外客户可选择货到付款或联系MeDili。
+f41cdf4f5 ||| Support: Zalo and phone 0966 770 788, email cafe@medili.vn. ||| サポート：Zalo・電話 0966 770 788、メール cafe@medili.vn。 ||| 支持：Zalo和电话0966 770 788，邮箱cafe@medili.vn。
+d3245c2bd ||| For MeDili: create a payment link for a customer ||| MeDili用：お客様に送る支払いリンクを作成 ||| MeDili专用：创建发给客户的付款链接
+a2211fc3e ||| Enter the order code and the amount agreed with the customer. The link opens this page with the amount and reference already in the QR code. ||| お客様と確定した注文番号と金額を入力します。リンクを開くとこのページが表示され、QRコードに金額と振込内容が入っています。 ||| 输入与客户确认的订单号和金额。链接会打开本页，二维码已包含金额和附言。
+e67a0987d ||| Order code ||| 注文番号 ||| 订单号
+2e6af3fb3 ||| Amount (VND) ||| 金額（VND） ||| 金额（VND）
+82cafd519 ||| Create link ||| リンクを作成 ||| 生成链接
+cb3aa078b ||| Copy link ||| リンクをコピー ||| 复制链接
+6b507f7b9 ||| Copy message for the customer ||| お客様へのメッセージをコピー ||| 复制发给客户的消息
+0bf4e6d32 ||| Open to test ||| 開いて確認 ||| 打开预览
+ca9cd0589 ||| Couldn't copy automatically. Please select and copy it by hand. ||| 自動でコピーできませんでした。選択して手動でコピーしてください。 ||| 无法自动复制，请手动选择并复制。
+e2f34761f ||| MeDili's receiving account ||| MeDiliの振込先口座 ||| MeDili收款账户
+e6c8e76ee ||| Order <1>{1} sent.</1> ||| 注文<1>{1}</1>を送信しました。 ||| <1>订单 {1}</1>已发送。
+0df913f30 ||| Order ||| 注文 ||| 订单
+bc264345a ||| Pay cash <1>on delivery.</1> ||| <1>代金引換</1>で現金払い。 ||| <1>货到</1>现金付款。
+fd80044c3 ||| MeDili will call or message you on Zalo within 60 minutes (6:30–22:30) to confirm the order, delivery fee and delivery time. You pay the courier in cash when the goods arrive. ||| MeDiliから60分以内（6:30〜22:30）にお電話またはZaloでご連絡し、注文、送料、配送日数を確認します。商品受け取り時に配達員へ現金でお支払いください。 ||| MeDili会在60分钟内（6:30–22:30）致电或通过Zalo联系您，确认订单、运费和配送时间。收货时以现金付给送货员。
+f9f8cad29 ||| MeDili will <1>confirm your order.</1> ||| MeDiliが<1>注文を確認します。</1> ||| MeDili将<1>确认您的订单。</1>
+6ab08fb7f ||| MeDili will call or message you on Zalo within 60 minutes (6:30–22:30) to confirm the price, delivery fee and payment terms. You pay on delivery, or by the deadline stated in the order confirmation. ||| MeDiliから60分以内（6:30〜22:30）にお電話またはZaloでご連絡し、価格、送料、支払期限を確認します。お支払いは商品受け取り時、または注文確認に記載の期限までにお願いします。 ||| MeDili会在60分钟内（6:30–22:30）致电或通过Zalo联系您，确认价格、运费和付款期限。您可在收货时付款，或在订单确认写明的期限内付款。
+765c42c0d ||| Waiting for <1>MeDili's quote.</1> ||| MeDiliからの<1>お見積もりをお待ちください。</1> ||| 等待MeDili<1>报价。</1>
+4de7bfe30 ||| Your order includes coffee without a listed price. MeDili will send a quote on Zalo within 60 minutes (6:30–22:30), then send you a payment link. ||| ご注文に価格未掲載のコーヒーが含まれています。MeDiliが60分以内（6:30〜22:30）にZaloでお見積もりを送り、その後お支払いリンクをお送りします。 ||| 您的订单中有未标价的咖啡。MeDili会在60分钟内（6:30–22:30）通过Zalo报价，然后发送付款链接。
+afeb40eb6 ||| Estimated amount: ||| 見込み金額： ||| 预计金额：
+952e8c94b ||| , excluding delivery. ||| （送料別）。 ||| ，不含运费。
+4912e4f7b ||| Pay for <1>order {1}.</1> ||| <1>注文{1}</1>のお支払い。 ||| 支付<1>订单{1}。</1>
+d49326207 ||| Your order has been sent to MeDili. Complete it with a bank transfer; MeDili will match the payment and ship your order. ||| ご注文をMeDiliに送信しました。銀行振込で完了してください。MeDiliが入金を確認して発送します。 ||| 订单已发送给MeDili。请完成银行转账，MeDili核对款项后发货。
+e6e022f36 ||| Copied ||| コピーしました ||| 已复制
+1f66f0b7c ||| Hi MeDili, I have transferred {1} for order {2}. ||| MeDiliさん、注文{2}の代金{1}を振り込みました。 ||| 您好MeDili，我已为订单{2}转账{1}。
+306bdefcc ||| Message copied. Paste it into MeDili's Zalo chat and send it with a screenshot of the transfer. ||| メッセージをコピーしました。MeDiliのZaloに貼り付け、振込画面のスクリーンショットと一緒に送ってください。 ||| 消息已复制。请粘贴到MeDili的Zalo，并附上转账截图发送。
+26c34089f ||| Hi MeDili, I just sent order {1}. ||| MeDiliさん、注文{1}を送りました。 ||| 您好MeDili，我刚提交了订单{1}。
+8c6cd3557 ||| Order details copied. Paste them into MeDili's Zalo chat and send. ||| 注文内容をコピーしました。MeDiliのZaloに貼り付けて送信してください。 ||| 订单内容已复制。请粘贴到MeDili的Zalo并发送。
+c90b88d8c ||| QR image saved. Open your banking app, choose Scan QR, then pick this image. ||| QR画像を保存しました。銀行アプリを開き、QRコードの読み取りでこの画像を選んでください。 ||| 二维码图片已保存。打开银行应用，选择扫码，再选择这张图片。
+972e70652 ||| Enter the order code and amount. ||| 注文番号と金額を入力してください。 ||| 请输入订单号和金额。
+ea515ccbf ||| Link copied. ||| リンクをコピーしました。 ||| 链接已复制。
+fe1171e74 ||| MeDili is sending you the payment link for order {1}, amount {2}: {3} ||| MeDiliより、注文{1}（金額{2}）のお支払いリンクです：{3} ||| MeDili发给您订单{1}的付款链接，金额{2}：{3}
+b64ffe4e7 ||| Message copied. ||| メッセージをコピーしました。 ||| 消息已复制。
+gio-hang.html::0feb4d112 ||| Place order ||| 注文する ||| 下单

@@ -3,6 +3,7 @@
 # Điều đã có trên web giữ nguyên: đổi trả 7 ngày, phản hồi 3 ngày làm việc, giá sỉ theo khối lượng tháng, giá chưa gồm 8% VAT,
 # giao toàn quốc (phí và thời gian báo trước), cam kết nguyên chất, mẫu thử 50 g miễn phí, phản hồi Zalo 60 phút (6:30–22:30).
 # Chị Ngân chốt 23/11/2026 (để trong PENDING): thanh toán chuyển khoản hoặc tiền mặt, linh hoạt; hoàn tiền trong 5 ngày;
+# 24/11/2026: khách lẻ trả ngay trong giỏ hàng (chuyển khoản mã QR vào tài khoản công ty DSunfood) hoặc tiền mặt khi nhận hàng;
 # miễn phí giao từ 10 kg; hóa đơn VAT do Công ty TNHH DSunfood xuất.
 from kit import *
 from pages_a import head
@@ -12,7 +13,7 @@ UPDATED = '11/2026'
 
 PENDING = dict(
     pay_si='Thanh toán linh hoạt bằng chuyển khoản hoặc tiền mặt. Thời hạn thanh toán được thống nhất và ghi trong xác nhận đơn hàng.',
-    pay_le='Website chưa nhận thanh toán trực tuyến. Bạn thanh toán bằng chuyển khoản hoặc tiền mặt, MeDili xác nhận cùng lúc với giá và phí giao khi chốt đơn.',
+    pay_le='Khi đặt hàng trên web, bạn chuyển khoản ngay bằng mã QR ở trang <a class="lnk" href="thanh-toan.html">Thanh toán</a> (app ngân hàng, MoMo, ZaloPay), hoặc trả tiền mặt khi nhận hàng. Phí giao của đơn dưới 10 kg được MeDili báo và thu sau.',
     refund_time='MeDili hoàn tiền bằng chuyển khoản vào tài khoản bạn cung cấp, trong 5 ngày kể từ khi xác nhận hủy đơn hoặc nhận lại hàng.',
     ship_si='Đơn từ 10 kg được miễn phí giao hàng. Với đơn dưới 10 kg, phí giao được báo trước khi xác nhận đơn. Thời gian giao được báo cùng lúc.',
     vat='Hóa đơn VAT do Công ty TNHH DSunfood xuất. Cần hóa đơn, bạn gửi tên công ty, mã số thuế, địa chỉ và email nhận hóa đơn khi đặt hàng.',

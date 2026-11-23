@@ -3,7 +3,7 @@
 import os, re, json, shutil, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kit import *
-import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh, cuahang, congthuc, anhvuon, huongdan, donghanh, chinhsach
+import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh, cuahang, congthuc, anhvuon, huongdan, donghanh, chinhsach, thanhtoan
 
 os.makedirs(OUT, exist_ok=True)
 rd = lambda f: open(os.path.join(BASE, f), encoding='utf8').read()
@@ -108,6 +108,7 @@ NEW.update(SHOP)
 NEW[congthuc.FILE] = congthuc.page(CATALOG)   # Cỗ máy Công thức pha (17/11/2026)
 NEW[donghanh.FILE] = donghanh.page(P)   # Đồng hành cùng quán (23/11/2026)
 NEW[chinhsach.FILE] = chinhsach.page()   # Chính sách MeDili: khách sỉ, đổi trả, kiểm hàng, hoàn tiền (23/11/2026)
+NEW[thanhtoan.FILE] = thanhtoan.page()   # Thanh toán: mã VietQR chuyển khoản, link thanh toán, COD (24/11/2026)
 N_SHELF = sum(x['st'] != 'sap' for x in CATALOG)   # dòng đang bán (kể cả Ngũ Hành)
 
 # ---------- trang cũ: menu, chân trang, màu ----------
@@ -355,6 +356,13 @@ shutil.copy(os.path.join(HERE, '..', 'run-check', 'gia-ca-phe.json'), os.path.jo
 # Ảnh dự phòng assets/hd-*.webp (khi máy không chạy được 3D) chụp lại bằng: node hdshot.js
 subprocess.run([os.path.join(HERE, 'node_modules', '.bin', 'esbuild'), os.path.join(HERE, 'hd3d.js'), '--bundle', '--format=esm', '--minify',
                 '--target=es2020', '--legal-comments=eof', '--log-level=warning', '--outfile=' + os.path.join(OUT, 'assets', 'hd3d.js')], check=True)
+# Thư viện dựng mã QR cho trang Thanh toán: qrcode-generator (Kazuhiko Arase, giấy phép MIT), nén lại, giữ dòng giấy phép ở đầu file.
+subprocess.run([os.path.join(HERE, 'node_modules', '.bin', 'esbuild'), os.path.join(HERE, 'node_modules', 'qrcode-generator', 'dist', 'qrcode.js'), '--minify',
+                '--target=es2017', '--log-level=warning', '--outfile=' + os.path.join(OUT, 'assets', 'qrcode.js')], check=True)
+_qr = os.path.join(OUT, 'assets', 'qrcode.js')
+_qrs = open(_qr, encoding='utf8').read()
+open(_qr, 'w', encoding='utf8').write('/*! QR Code Generator for JavaScript (qrcode-generator 2.0.4) · Copyright (c) 2009 Kazuhiko Arase · MIT license · '
+                                    'http://www.opensource.org/licenses/mit-license.php · QR Code is a registered trademark of DENSO WAVE INCORPORATED */\n' + _qrs)
 # bản tiếng Anh, Nhật, Trung trong /en /ja /zh, dịch theo từ điển art/i18n (24/11/2026)
 import i18n
 for _l, _miss in i18n.build().items():
