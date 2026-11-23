@@ -12,8 +12,8 @@ rd = lambda f: open(os.path.join(BASE, f), encoding='utf8').read()
 PRICE_FIX = [("{id:'cat',n:'Catimor',full:'Cà phê Catimor',line:'Đặc sản',kind:'phin',p:[350,null,null],",
               "{id:'cat',n:'Catimor',full:'Cà phê Catimor',line:'Đặc sản',kind:'phin',p:[400,null,null],"),
              ("{id:'cul',n:'Culi',full:'Cà phê Culi',line:'Đặc sản',kind:'phin',p:null,",
-              "{id:'cul',n:'Culi',full:'Cà phê Culi',line:'Đặc sản',kind:'phin',p:[350,null,null],"),
-             ('Catimor và Blend MeDili chưa có giá sỉ', 'Catimor, Culi và Blend MeDili chưa có giá sỉ')]
+              "{id:'cul',n:'Culi',full:'Cà phê Culi',line:'Đặc sản',kind:'phin',p:[350,null,null],")]
+# Câu "Catimor, Culi và Blend MeDili chưa có giá sỉ" đã sửa thẳng trong site-new3/mua-hang.html (23/11/2026).
 
 
 def price_fix(s):
@@ -22,7 +22,7 @@ def price_fix(s):
         s = s.replace(a, b)
     return s
 
-# ---------- danh mục 14 dòng từ Phòng Chọn Mua ----------
+# ---------- danh mục 14 dòng từ Phòng chọn mua ----------
 shop = price_fix(rd('mua-hang.html'))
 a, b = shop.index('const CL='), shop.index('const byId=')
 node = subprocess.run(['node', '-e', shop[a:b] + ';process.stdout.write(JSON.stringify(S))'], capture_output=True, text=True, check=True)
@@ -46,7 +46,7 @@ seg = lambda start, end: tg[tg.index(start):tg.index(end)]
 TG_DATA = (seg('const PRODUCTS = [', '/* a = tỷ lệ Arabica phù hợp') + seg('const QUESTIONS = [', 'function scoreAnswers') +
            seg('function scoreAnswers', 'const state = {'))
 assert 'RECIPES' in TG_DATA and 'function profile' in TG_DATA
-# đối chiếu giá với Phòng Chọn Mua
+# đối chiếu giá với Phòng chọn mua
 tgp = json.loads(subprocess.run(['node', '-e', TG_DATA.split('const QUESTIONS')[0] + ';process.stdout.write(JSON.stringify(PRODUCTS))'],
                                 capture_output=True, text=True, check=True).stdout)
 idmap = {'p-rc': 'pc', 'p-rp': 'pp', 'm-rc': 'mc', 'm-rp': 'mp', 'm-rs': 'ms', 'p-ap': 'pa', 'm-ap': 'ma', 'b-91': 'b91', 'b-82': 'b82', 'b-73': 'b73', 'b-55': 'b55'}
@@ -69,10 +69,10 @@ for f, a_ in pages_b.ART.items():
     CARDS.append((f, pages_b.jcard(f, a_['cat'], f'{pages_b.mins(a_["body"])} phút đọc', re.sub(r'</?em>', '', a_['h1']).rstrip('.'), a_['dek'], a_['svg']())))
 CARDS += [
     ('trai-ca-phe.html', pages_b.jcard('trai-ca-phe.html', 'Giải phẫu trái', f'{M_TRAI} phút đọc', 'Bên trong trái Cà Sẻ',
-                                       'Năm lớp bọc một hạt nhân, lớp nào được tách ra ở bước nào, và vì sao Natural, Honey, Washed cho vị khác nhau.', FEAT[0])),
+                                       'Năm lớp bọc quanh hạt nhân, mỗi lớp được tách ra ở bước nào, và vì sao Natural, Honey, Washed cho vị khác nhau.', FEAT[0])),
     ('tu-vuon-den-ly.html', pages_b.jcard('tu-vuon-den-ly.html', 'Farm to cup', f'{M_F2C} phút đọc', 'Từ vườn đến ly',
                                           'Một ly cà phê đi qua những khâu nào, và với giá cà phê hôm nay, người trồng nhận bao nhiêu trong một ly 35.000 đ.', FEAT[1])),
-    ('suc-khoe.html', pages_b.jcard('suc-khoe.html', 'Sức khoẻ', 'Có công cụ tính', 'Cà phê và cơ thể',
+    ('suc-khoe.html', pages_b.jcard('suc-khoe.html', 'Sức khỏe', 'Có công cụ tính', 'Cà phê và cơ thể',
                                     'Điều gì xảy ra sau một ngụm, một tuần và một năm uống cà phê. Tính lượng caffeine theo thói quen của bạn.', ill.suckhoe())),
 ]
 
@@ -119,7 +119,7 @@ for f in OLD:
     s = s.replace('</head>', '<style>' + CORE_CSS + '</style></head>')
     s = s.replace('</body>', footer() + '\n<script>' + COMMON_JS + '</script>\n</body>')
     GAL = {'len-men-trai-cay.html': ('Ảnh thực tế', 'Cà phê trái chín đồng lên men với nhãn, dâu tằm và chanh dây.', STRIP_LM),
-           'len-men-men-bia.html': ('Ba cách sơ chế', 'Natural phơi nguyên trái, Honey giữ lớp nhớt, xát tươi tách vỏ trước khi lên men và rửa.', STRIP_SOCHE),
+           'len-men-men-bia.html': ('Ba cách sơ chế', 'Natural phơi nguyên trái, Honey giữ lớp nhớt, Washed xát tươi tách vỏ rồi lên men và rửa.', STRIP_SOCHE),
            'vuon.html': ('Vườn vào mùa', 'Robusta chín đỏ, thu hái rồi phơi.', STRIP_VUON)}
     if f in GAL:
         t, d, items = GAL[f]
@@ -132,7 +132,7 @@ for f in OLD:
         s = s.replace("col:'#2F6B4A'", "col:'#B5832F'").replace("col:'#3F7F5A'", "col:'#C9A15B'")
         assert s.count('</header>') == 1
         s = s.replace('</header>', '</header>\n<p class="note" style="margin:0 0 14px">Mua lẻ từng gói? Vào <a href="cua-hang.html" '
-                      'style="color:var(--accent);font-weight:600">Cửa hàng MeDili</a>, thêm vào giỏ rồi gửi đơn. Phòng Chọn Mua giúp quán tính lượng dùng và giá sỉ.</p>', 1)
+                      'style="color:var(--accent);font-weight:600">Cửa hàng MeDili</a>, thêm vào giỏ rồi gửi đơn. Phòng chọn mua giúp quán tính lượng dùng và giá sỉ.</p>', 1)
     UPD[f] = s
 
 # ---------- giá cà phê: không hiện tên nguồn cụ thể ----------
@@ -177,9 +177,9 @@ def pr(k):
 
 COLL = [
     ('#6B4226', 'Classic · Natural', 'Robusta Classic', P['pc']['taste'], P['pc']['use'], f'Phin và máy · từ <b>{fm(min(pr("pc"), pr("mc")))} đ/kg</b>'),
-    ('#A23B24', 'Premium · Honey, washed', 'Robusta Premium', P['pp']['taste'], P['pp']['use'], f'Phin và máy · từ <b>{fm(min(pr("pp"), pr("mp")))} đ/kg</b>'),
+    ('#A23B24', 'Premium · Honey, Washed', 'Robusta Premium', P['pp']['taste'], P['pp']['use'], f'Phin và máy · từ <b>{fm(min(pr("pp"), pr("mp")))} đ/kg</b>'),
     ('#B5832F', 'Premium · Cầu Đất', 'Arabica Premium', P['pa']['taste'], P['ma']['use'], f'Phin và máy · <b>{fm(pr("pa"))} đ/kg</b>'),
-    ('#8A5A32', 'Premium · Robusta, Arabica', 'Blend 9:1 đến 5:5', 'Từ đậm cacao đến cân bằng, thơm, chua thanh', P['b73']['use'],
+    ('#8A5A32', 'Premium · Robusta, Arabica', 'Blend 9:1 đến 5:5', 'Từ đậm ca cao đến cân bằng, thơm, chua thanh', P['b73']['use'],
      f'Pha máy · <b>{fm(pr("b91"))}–{fm(pr("b55"))} đ/kg</b>'),
 ]
 COLL_HREF = ['cua-hang.html?q=classic', 'cua-hang.html?q=robusta%20premium', 'cua-hang.html?loai=arabica', 'cua-hang.html?loai=blend']
@@ -187,7 +187,7 @@ coll = ''.join(f'<a class="box coll" href="{h}"><i class="bag" style="--c:{c}" a
                f'<p>{taste}.</p><p class="use">{use}</p><div class="ft">{ft}</div></a>' for h, (c, k, t, taste, use, ft) in zip(COLL_HREF, COLL))
 
 BAND_MUA = anhvuon.band('bg-mua-vu', 'Trái cà phê chuyển màu dưới tán lá', 'Ảnh vườn MeDili', 'Mỗi mùa chín <em>là một câu chuyện.</em>',
-                        f'Trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, rồi phơi và xay xát. Mùa vụ qua {len(anhvuon.GAL)} tấm ảnh.',
+                        f'Trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, rồi phơi và xay xát. Trọn mùa vụ trong {len(anhvuon.GAL)} tấm ảnh.',
                         '<a class="btn main" href="anh-vuon.html">Xem ảnh vườn</a><a class="btn" href="vung-trong.html">Vùng trồng Di Linh</a>')
 BAND_KHO = anhvuon.band('bg-trong-kho', 'Xe xúc làm việc trong kho cà phê dưới ánh đèn vàng', 'Chương 08 · Hẹn nhau ở MeDili',
                         'Một niềm mê để sẻ chia. <em>Một hành trình còn tiếp.</em>',
@@ -197,17 +197,17 @@ BAND_KHO = anhvuon.band('bg-trong-kho', 'Xe xúc làm việc trong kho cà phê 
 HOME_BODY = f'''{header('index.html')}
 {anhvuon.hero('bg-trang-chu', 'Bàn tay hái giữa những chùm cà phê chín', f"""{anhvuon.logo_kem()}<p class="eye">Chương 01 · Nhà rang cà phê chuyên nghiệp</p>
   <h1>Từ gốc Cà Sẻ.<br><em>Đến nghệ thuật rang.</em></h1>
-  <p class="sub">MeDili là nhà rang cà phê ở cao nguyên Di Linh, lấy Cà Sẻ Di Linh làm gốc. Vùng trồng canh tác từ năm 2010, xưởng rang tại Thôn 11, Xã Di Linh. Cà phê rang cho gia đình, quán, nhà hàng và khách sạn.</p>
+  <p class="sub">MeDili là nhà rang cà phê trên cao nguyên Di Linh, chọn Cà Sẻ Di Linh làm nguyên liệu gốc. Vùng trồng canh tác từ năm 2010, xưởng rang đặt tại Thôn 11, xã Di Linh. MeDili rang cà phê cho gia đình, quán cà phê, nhà hàng và khách sạn.</p>
   <div class="cta"><a class="btn main" href="cua-hang.html">Chọn cà phê</a><a class="btn" href="tim-gu.html">Tìm gu của bạn</a><a class="btn" href="horeca.html">Giải pháp HORECA</a></div>
   <a class="tick" href="gia-ca-phe.html"><span class="k">Giá cà phê <span id="tk-d">{ddmm(dl['date'])}</span></span><span>Nhân xô Lâm Đồng <b id="tk-v">{fm(dl['vn']['lamdong'])} đ/kg</b></span><span>Robusta London <b id="tk-r">{fm(dw['world']['robusta'])} USD/tấn</b></span><i>Xem bảng giá</i></a>""")}
 <div class="wrap hm">
 <section class="p-sec" id="bo-suu-tap">
  <p class="eye">Chương 02 · Bộ sưu tập MeDili</p>
  <h2 class="p-h2">Bốn hương vị. <em>Một niềm mê.</em></h2>
- <p class="lead">Bốn nhóm cà phê rang mộc trên kệ MeDili. Mỗi nhóm có bản cho phin, cho máy, và giá sỉ theo lượng dùng mỗi tháng.</p>
+ <p class="lead">Bốn nhóm cà phê rang mộc của MeDili. Mỗi nhóm có loại pha phin, loại pha máy và giá sỉ theo lượng dùng mỗi tháng.</p>
  <div class="g4">{coll}</div>
- <div class="box gu"><div>{icon('gu')}</div><div><p class="eye">Tìm gu cà phê của bạn</p><p>Sáu câu hỏi ngắn. Không có đáp án đúng, chỉ có ly cà phê đúng gu.</p></div><div class="cta" style="margin:0"><a class="btn main" href="tim-gu.html">Bắt đầu khám phá</a><a class="btn" href="cua-hang.html">Xem đủ {N_SHELF} dòng</a></div></div>
- <p class="note">Bảng giá đề xuất, chưa gồm 8 % VAT và phí vận chuyển. MeDili xác nhận khi đặt hàng.</p>
+ <div class="box gu"><div>{icon('gu')}</div><div><p class="eye">Tìm gu cà phê của bạn</p><p>Sáu câu hỏi ngắn. Không có đáp án đúng, chỉ có ly cà phê đúng gu.</p></div><div class="cta" style="margin:0"><a class="btn main" href="tim-gu.html">Bắt đầu khám phá</a><a class="btn" href="cua-hang.html">Xem cả {N_SHELF} dòng</a></div></div>
+ <p class="note">Giá đề xuất, chưa gồm 8% VAT và phí vận chuyển. MeDili xác nhận giá khi bạn đặt hàng.</p>
 </section>
 </div>
 {BAND_MUA}
@@ -216,14 +216,14 @@ HOME_BODY = f'''{header('index.html')}
  <div class="p-sec">
   <p class="eye">Chương 03 · Câu chuyện MeDili</p>
   <h2 class="p-h2" style="margin:0">Cà Sẻ Di Linh. <em>Nguồn gốc của niềm mê.</em></h2>
-  <p>MeDili lấy Cà Sẻ Di Linh làm nền. Vùng trồng canh tác từ năm 2010, cây 15 năm tuổi, chăm theo hướng tự nhiên. Xưởng rang ở Thôn 11 nối nguyên liệu với người uống và các quán.</p>
+  <p>MeDili chọn Cà Sẻ Di Linh làm nền tảng. Vùng trồng canh tác từ năm 2010, cây đã 15 năm tuổi, được chăm sóc theo hướng tự nhiên. Xưởng rang ở Thôn 11 đưa nguyên liệu từ vườn đến người uống và các quán.</p>
   <blockquote class="quote">Nguồn gốc là nền tảng của mỗi mẻ rang.</blockquote>
   <div class="cta"><a class="btn main" href="cau-chuyen.html">Đọc câu chuyện MeDili</a></div>
  </div>
  <div class="p-sec">
   <p class="k">Những người giữ lửa cho hương vị</p>
-  <a class="box role" href="doi-ngu.html">{icon('rang')}<div><span class="k">01 · Đọc nguyên liệu</span><h3>Đội ngũ rang xay</h3><p>Nguyên liệu, hồ sơ rang và hương vị.</p></div></a>
-  <a class="box role" href="doi-ngu.html">{icon('ly')}<div><span class="k">02 · Mở vị trong tách</span><h3>Nghệ nhân barista</h3><p>Phin, espresso và gu của từng khách.</p></div></a>
+  <a class="box role" href="doi-ngu.html">{icon('rang')}<div><span class="k">01 · Hiểu nguyên liệu</span><h3>Đội ngũ rang xay</h3><p>Nguyên liệu, hồ sơ rang và hương vị.</p></div></a>
+  <a class="box role" href="doi-ngu.html">{icon('ly')}<div><span class="k">02 · Pha trọn vị trong tách</span><h3>Nghệ nhân barista</h3><p>Phin, espresso và gu của từng khách.</p></div></a>
   <div class="lnks"><a class="lnk" href="doi-ngu.html">Khám phá đội ngũ MeDili</a></div>
  </div>
 </section>
@@ -231,7 +231,7 @@ HOME_BODY = f'''{header('index.html')}
 <section class="box p-sec">
  <p class="eye">Chương 04 · Vùng đất Di Linh</p>
  <h2 class="p-h2" style="margin:0">Di Linh. <em>Nơi câu chuyện bắt đầu.</em></h2>
- <p class="lead" style="margin:0">Bốn vùng trồng, tổng {ha(TOTAL)} ha. Thêm {LINKED} ha liên kết tại Di Linh, tính riêng, không gộp vào {ha(TOTAL)} ha.</p>
+ <p class="lead" style="margin:0">Bốn vùng trồng với tổng diện tích {ha(TOTAL)} ha. Ngoài ra có {LINKED} ha liên kết tại Di Linh, tính riêng, không gộp vào {ha(TOTAL)} ha.</p>
  {photo('p-san-phoi-wide.jpg', 'Cà phê phơi trên sân giữa đồi', 'Phơi cà phê giữa đồi.', cls='pfw')}
  <div class="pgal"><p class="k">Vào mùa ở vườn MeDili</p>{strip(STRIP_MUAVU)}<div class="lnks" style="margin-top:0"><a class="lnk" href="anh-vuon.html">Xem toàn bộ ảnh vườn</a></div></div>
  {pages_a.seg_block()}
@@ -241,14 +241,14 @@ HOME_BODY = f'''{header('index.html')}
 <section class="p-sec" id="hanh-trinh">
  <p class="eye">Chương 05 · Từ nông trại đến tách</p>
  <h2 class="p-h2">Một hành trình <em>trong từng tách cà phê.</em></h2>
- <p class="lead">Năm công đoạn mở ra hương vị. Mỗi chặng là một mô hình bạn có thể tự bấm, chỉnh thông số và xem cách làm.</p>
+ <p class="lead">Năm công đoạn làm nên hương vị. Mỗi công đoạn có một mô hình để bạn tự bấm, chỉnh thông số và xem cách làm.</p>
  {pages_a.trip()}
- <div class="pgal"><p class="k">Những lô lên men đặc biệt</p>{strip(STRIP_LM)}<div class="lnks" style="margin-top:0"><a class="lnk" href="len-men-trai-cay.html">Xem cỗ máy lên men trái cây</a><a class="lnk" href="xuong-rang.html">Xưởng rang &amp; năng lực</a></div></div>
+ <div class="pgal"><p class="k">Những lô lên men đặc biệt</p>{strip(STRIP_LM)}<div class="lnks" style="margin-top:0"><a class="lnk" href="len-men-trai-cay.html">Xem cỗ máy lên men cùng trái cây</a><a class="lnk" href="xuong-rang.html">Xưởng rang &amp; năng lực</a></div></div>
 </section>
 
 <section class="band">
- <div><p class="eye">Coffee Solutions for HORECA</p><h2>Cho quán, nhà hàng, khách sạn</h2>
- <p>Nhân xanh, cà phê phin, pha máy và cold brew. Xưởng rang trung bình 20 tấn mỗi tháng, tối đa 60 tấn, đóng gói bán tự động.</p></div>
+ <div><p class="eye">Giải pháp cà phê cho HORECA</p><h2>Cho quán cà phê, nhà hàng, khách sạn</h2>
+ <p>Nhân xanh, cà phê pha phin, pha máy và cold brew. Xưởng rang trung bình 20 tấn mỗi tháng, tối đa 60 tấn, đóng gói bằng máy bán tự động.</p></div>
  <div class="cta" style="margin:0"><a class="btn light" href="horeca.html">Khám phá giải pháp</a><a class="btn light2" href="mua-hang.html">Tính giá mỗi ly</a></div>
 </section>
 
@@ -256,10 +256,10 @@ HOME_BODY = f'''{header('index.html')}
  <div class="p-sec">
   <p class="eye">Chương 06 · MeDili Café</p>
   <h2 class="p-h2" style="margin:0">Một tách cà phê. <em>Một cuộc hẹn.</em></h2>
-  <p>Công ty TNHH DSunfood ở 143 Phạm Văn Hai là điểm phân phối của MeDili tại TP.HCM và cũng là MeDili Café. Ghé để uống một ly, hỏi menu trong ngày, hoặc bàn chuyện cung cấp cà phê cho quán.</p>
+  <p>Công ty TNHH DSunfood tại 143 Phạm Văn Hai là điểm phân phối của MeDili ở TP.HCM, đồng thời là MeDili Café. Bạn có thể ghé uống một ly, hỏi thực đơn trong ngày hoặc trao đổi về việc cung cấp cà phê cho quán.</p>
   <p class="k">Hôm nay, bạn mê vị gì?</p>
   <div class="chips" style="margin-top:0"><span>Cà phê sữa đá Việt Nam</span><span>Cà phê phin</span><span>Cappuccino</span><span>Espresso</span></div>
-  <p class="note">Menu gợi ý, gọi trước để xác nhận món trong ngày.</p>
+  <p class="note">Thực đơn gợi ý. Vui lòng gọi trước để xác nhận món trong ngày.</p>
   <div class="cta"><a class="btn main" href="quan-medili.html">Ghé MeDili Café</a><a class="btn" href="{MAP_HCM}" target="_blank" rel="noopener">Chỉ đường ↗</a></div>
  </div>
  <div class="illw">{ill.suada()}</div>
@@ -282,7 +282,7 @@ HOME_BODY = f'''{header('index.html')}
 </section>
 {contact_band()}
 </div>
-{footer('Medili Coffee Farm - Di Linh')}
+{footer('MeDili Coffee Farm · Di Linh')}
 '''
 
 HOME_CSS = '''
@@ -333,10 +333,10 @@ SKELETON_HEAD = ('<!doctype html><html lang="vi"><head><meta charset="utf-8">'
                  'html{scroll-padding-top:env(safe-area-inset-top,0px)}'
                  'body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}'
                  'img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>')
-HOME_DESC = ('MeDili là nhà rang cà phê ở cao nguyên Di Linh, lấy Cà Sẻ Di Linh làm gốc. '
-             'Cà phê rang cho gia đình, quán, nhà hàng và khách sạn.')
+HOME_DESC = ('MeDili là nhà rang cà phê trên cao nguyên Di Linh, chọn Cà Sẻ Di Linh làm nguyên liệu gốc. '
+             'MeDili rang cà phê cho gia đình, quán cà phê, nhà hàng và khách sạn.')
 HOME_FULL = (SKELETON_HEAD + f'<meta name="description" content="{esc(HOME_DESC)}">'
-             f'<meta property="og:title" content="MeDili Coffee Di Linh"><meta property="og:description" content="{esc(HOME_DESC)}">\n'
+             f'<meta property="og:title" content="MeDili · Cà phê Di Linh"><meta property="og:description" content="{esc(HOME_DESC)}">\n'
              + HOME_HEAD + '</head><body>' + HOME_TAIL + '</body></html>\n')
 
 # ---------- ghi ra ----------

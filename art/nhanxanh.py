@@ -8,9 +8,9 @@ from kit import *
 from pages_a import head
 
 FILE = 'nhan-xanh.html'
-TITLE = 'Chọn Nhân Xanh MeDili'
-DESC = ('Bảng câu hỏi cho khách sỉ mua cà phê nhân xanh: gu, Robusta hay Arabica, Ro Sẻ, Fine Robusta hay cao sản, '
-        'độ chín, sơ chế natural, honey, washed, sàng 14 đến 18. MeDili gợi ý dòng nhân và gửi mẫu thử. Liên hệ để nhận báo giá mỗi ngày.')
+TITLE = 'Chọn nhân xanh MeDili'
+DESC = ('Bảng câu hỏi cho khách sỉ mua cà phê nhân xanh: gu, Robusta hay Arabica, Robusta Sẻ, Fine Robusta hay cao sản, '
+        'độ chín, sơ chế Natural, Honey, Washed, sàng 14 đến 18. MeDili gợi ý dòng nhân và gửi mẫu thử. Liên hệ để nhận báo giá mỗi ngày.')
 
 # ---------- danh mục nhân xanh MeDili ----------
 # g: nhóm; sp: R/A; ro: kiểu Robusta; sc: sơ chế; s: sàng; ch: % chín (0 = không cam kết, None = theo lô);
@@ -25,38 +25,38 @@ LINES = [
     dict(id='rc18bm', g='tm', code='MD-RC18-BM', n='Culi Robusta S18 bắn màu', sub='Nhân tròn một hạt, tách riêng',
          sp='R', ro='culi', sc='tm', s=18, ch=0, vu=25, c='var(--nx2)', use='phin đậm, bán hạt nguyên',
          gu=dict(dam=1, ngot=.4, can=.4, chua=0, trai=0)),
-    dict(id='r18h97', g='fine', code='MD-R18-H97', n='Robusta Honey S18 · chín 97–98 %', sub='Ngọt, tròn vị',
+    dict(id='r18h97', g='fine', code='MD-R18-H97', n='Robusta Honey S18 · chín 97–98%', sub='Ngọt, tròn vị',
          sp='R', ro='fine', sc='honey', s=18, ch=97, vu=25, c='var(--nx3)', use='phin ngọt hậu, espresso, cold brew',
          gu=dict(dam=.6, ngot=1, can=.8, chua=.1, trai=.5)),
-    dict(id='r18h98', g='fine', code='MD-R18-H98', n='Robusta Honey S18 · chín 98 % tuyển', sub='Tuyển kỹ hơn, sạch vị hơn',
+    dict(id='r18h98', g='fine', code='MD-R18-H98', n='Robusta Honey S18 · chín 98% tuyển', sub='Tuyển kỹ hơn, sạch vị hơn',
          sp='R', ro='fine', sc='honey', s=18, ch=98, vu=25, c='var(--nx3)', use='espresso, Robusta chất lượng cao',
          gu=dict(dam=.5, ngot=1, can=.9, chua=.2, trai=.6)),
-    dict(id='r18n99', g='fine', code='MD-R18-N99', n='Robusta Natural S18 · chín 99 %', sub='Ngọt trái chín, thân dày',
+    dict(id='r18n99', g='fine', code='MD-R18-N99', n='Robusta Natural S18 · chín 99%', sub='Ngọt trái chín, thân dày',
          sp='R', ro='fine', sc='natural', s=18, ch=99, vu=25, c='var(--nx4)', use='pha máy, pha phễu, cold brew',
          gu=dict(dam=.5, ngot=.9, can=.6, chua=.2, trai=1)),
-    dict(id='rse', g='se', code='MD-RSE-DL', n='Ro Sẻ Di Linh', sub='Giống Robusta cũ, trồng từ hạt',
+    dict(id='rse', g='se', code='MD-RSE-DL', n='Robusta Sẻ Di Linh', sub='Giống Robusta cũ, trồng từ hạt',
          sp='R', ro='se', sc=None, s=None, ch=None, vu=None, c='var(--nx5)', use='phin đậm, rang mộc, dòng đặc biệt',
          gu=dict(dam=.9, ngot=.9, can=.5, chua=0, trai=.3)),
-    dict(id='a18w99', g='ara', code='MD-A18-W99', n='Arabica Cầu Đất S18 · washed · chín 99 %', sub='Sạch vị, chua sáng, thơm hoa',
+    dict(id='a18w99', g='ara', code='MD-A18-W99', n='Arabica Cầu Đất S18 · Washed · chín 99%', sub='Sạch vị, chua thanh, thơm hoa',
          sp='A', ro=None, sc='washed', s=18, ch=99, vu=25, c='var(--nx6)', use='pha phễu, espresso một nguồn',
          gu=dict(dam=0, ngot=.3, can=.6, chua=1, trai=.4)),
-    dict(id='a18w98m', g='ara', code='MD-A18-W98-VM', n='Arabica Cầu Đất S18 · washed · chín 98 % · vụ mới', sub='Hương tươi của vụ 2026–2027',
+    dict(id='a18w98m', g='ara', code='MD-A18-W98-VM', n='Arabica Cầu Đất S18 · Washed · chín 98% · vụ mới', sub='Hương tươi của vụ 2026–2027',
          sp='A', ro=None, sc='washed', s=18, ch=98, vu=26, c='var(--nx6)', use='pha phễu, espresso',
          gu=dict(dam=0, ngot=.3, can=.7, chua=1, trai=.4)),
-    dict(id='a18w95', g='ara', code='MD-A18-W95', n='Arabica Cầu Đất S18 · washed · chín 95 %', sub='Cân bằng, dễ phối blend',
+    dict(id='a18w95', g='ara', code='MD-A18-W95', n='Arabica Cầu Đất S18 · Washed · chín 95%', sub='Cân bằng, dễ phối blend',
          sp='A', ro=None, sc='washed', s=18, ch=95, vu=25, c='var(--nx6)', use='espresso, blend cao cấp',
          gu=dict(dam=.1, ngot=.3, can=.8, chua=.9, trai=.3)),
-    dict(id='a14w97', g='ara', code='MD-A14-W97', n='Arabica Cầu Đất S14 · washed · chín 97 %', sub='Nhân nhỏ hơn, độ chín cao',
+    dict(id='a14w97', g='ara', code='MD-A14-W97', n='Arabica Cầu Đất S14 · Washed · chín 97%', sub='Nhân nhỏ hơn, độ chín cao',
          sp='A', ro=None, sc='washed', s=14, ch=97, vu=25, c='var(--nx6)', use='blend, pha máy',
          gu=dict(dam=.1, ngot=.3, can=.8, chua=.8, trai=.3)),
-    dict(id='a18n89', g='ara', code='MD-A18-N89', n='Arabica S18 · natural · chín 89 %', sub='Phơi khô cả trái, ngọt, thân dày',
+    dict(id='a18n89', g='ara', code='MD-A18-N89', n='Arabica S18 · Natural · chín 89%', sub='Phơi khô cả trái, ngọt, thân dày',
          sp='A', ro=None, sc='natural', s=18, ch=89, vu=25, c='var(--nx7)', use='blend, pha máy, cold brew',
          gu=dict(dam=.2, ngot=.6, can=.8, chua=.5, trai=.9)),
 ]
 GRP = {'tm': ('Robusta thương mại', 'bắn màu, hàng phổ biến'),
-       'fine': ('Robusta hái chín', 'honey và natural, nền cho Fine Robusta; điểm nếm xác nhận theo lô'),
-       'se': ('Ro Sẻ Di Linh', 'tuyển theo vụ, quy cách báo theo lô'),
-       'ara': ('Arabica', 'washed và natural')}
+       'fine': ('Robusta hái chín', 'Honey và Natural, nền cho Fine Robusta; điểm nếm xác nhận theo lô'),
+       'se': ('Robusta Sẻ Di Linh', 'tuyển theo vụ, quy cách báo theo lô'),
+       'ara': ('Arabica', 'Washed và Natural')}
 SCN = {'tm': 'Thương mại', 'natural': 'Natural', 'honey': 'Honey', 'washed': 'Washed'}
 
 # ---------- 13 câu hỏi ----------
@@ -72,31 +72,31 @@ Q = {
         ('dam', 'Đậm đắng truyền thống', 'Phin, cà phê sữa đá. Thân dày, đắng rõ, ít chua.', '#5A3420'),
         ('ngot', 'Đậm mà ngọt hậu', 'Đắng dịu, hậu ngọt dài, không gắt.', '#8D5A32'),
         ('can', 'Cân bằng cho pha máy', 'Espresso, blend Robusta và Arabica.', '#B8894A'),
-        ('chua', 'Chua thanh, thơm hoa', 'Pha phễu, Arabica sáng vị.', '#D9B77E'),
-        ('trai', 'Ngọt trái chín, hương lên men', 'Natural, honey: mận chín, nho khô, rượu vang nhẹ.', '#A23B24'),
+        ('chua', 'Chua thanh, thơm hoa', 'Pha phễu, Arabica vị thanh.', '#D9B77E'),
+        ('trai', 'Ngọt trái chín, hương lên men', 'Natural, Honey: mận chín, nho khô, rượu vang nhẹ.', '#A23B24'),
         ('mau', 'Chưa rõ, muốn thử mẫu', 'MeDili chuẩn bị mẫu vài dòng gần nhu cầu.', 'none')]),
     'loai': ('Robusta hay Arabica?', 'Loại', 'Có thể lấy cả hai để phối blend.', [
         ('R', 'Robusta', 'Đậm, đắng, nhiều caffeine. Giá mềm hơn.', None),
         ('A', 'Arabica', 'Chua thanh, thơm. Giá cao hơn.', None),
         ('RA', 'Cả hai, để phối', 'Robusta làm nền, Arabica làm hương.', None),
         ('x', 'Chưa rõ', 'MeDili gợi ý theo gu.', None)]),
-    'ro': ('Robusta loại nào?', 'Robusta', 'Cao sản và Ro Sẻ là giống. Fine Robusta là mức chất lượng. Culi là hình dạng hạt.', [
+    'ro': ('Robusta loại nào?', 'Robusta', 'Cao sản và Robusta Sẻ là giống. Fine Robusta là mức chất lượng. Culi là hình dạng hạt.', [
         ('cs', 'Robusta cao sản', 'Dòng chọn lọc năng suất cao như TR4, TR9, TRS1. Nhân to, đều; đắng rõ, thân vừa.', None),
         ('fine', 'Fine Robusta', 'Hái chín, sơ chế kỹ, nếm đạt từ 80 điểm. Ngọt và sạch vị.', None),
-        ('se', 'Ro Sẻ Di Linh', 'Giống Robusta cũ trồng từ hạt. Nhân nhỏ, chắc; đậm, hậu dài. Ít hàng, tuyển theo vụ.', None),
+        ('se', 'Robusta Sẻ Di Linh', 'Giống Robusta cũ trồng từ hạt. Nhân nhỏ, chắc; đậm, hậu dài. Ít hàng, tuyển theo vụ.', None),
         ('culi', 'Culi Robusta', 'Mỗi trái một nhân tròn. Hạt tròn rang đều hơn.', None),
         ('x', 'Chưa rõ', 'MeDili gợi ý theo gu.', None)]),
-    'chin': ('Độ chín khi hái', 'Độ chín', 'Tỉ lệ trái chín trong mẻ hái. Càng cao, ly càng ngọt và sạch vị, giá càng cao.', [
-        ('99', 'Chín 99 %', 'Tuyển gần như toàn trái chín.', None),
-        ('97', 'Chín 97–98 %', 'Mức của hàng chất lượng cao.', None),
-        ('95', 'Chín 95 %', 'Cân bằng chất lượng và giá.', None),
-        ('90', 'Khoảng 90 %', 'Hàng khá, giá mềm.', None),
-        ('0', 'Không yêu cầu', 'Hàng thương mại, không cam kết tỉ lệ chín.', None)]),
+    'chin': ('Độ chín khi hái', 'Độ chín', 'Tỷ lệ trái chín trong mẻ hái. Càng cao, ly càng ngọt và sạch vị, giá càng cao.', [
+        ('99', 'Chín 99%', 'Tuyển gần như toàn trái chín.', None),
+        ('97', 'Chín 97–98%', 'Mức của hàng chất lượng cao.', None),
+        ('95', 'Chín 95%', 'Cân bằng chất lượng và giá.', None),
+        ('90', 'Khoảng 90%', 'Hàng khá, giá mềm.', None),
+        ('0', 'Không yêu cầu', 'Hàng thương mại, không cam kết tỷ lệ chín.', None)]),
     'sc': ('Phương pháp sơ chế', 'Sơ chế', 'Cách bỏ vỏ và phơi quyết định phần lớn vị ngọt, độ chua và hương.', [
         ('tm', 'Thương mại', 'Phơi khô thông thường, bắn màu. Đậm, đắng, giá tốt.', None),
         ('natural', 'Natural', 'Phơi nguyên trái chín. Ngọt trái chín, thân dày.', None),
         ('honey', 'Honey', 'Xát vỏ, giữ lớp nhớt khi phơi. Ngọt, tròn vị.', None),
-        ('washed', 'Washed (ướt)', 'Xát vỏ, lên men, rửa sạch nhớt. Sạch vị, chua sáng.', None),
+        ('washed', 'Washed (sơ chế ướt)', 'Xát vỏ, lên men, rửa sạch lớp nhớt. Sạch vị, chua thanh.', None),
         ('x', 'Chưa rõ', 'MeDili gợi ý theo gu.', None)]),
     'sang': ('Cỡ sàng', 'Sàng', 'Sàng càng lớn, nhân càng to và đều, rang dễ đều màu.', [
         ('18', 'S18', 'Nhân to, lỗ sàng 7,14 mm.', 7.14),
@@ -153,7 +153,7 @@ def _opt(k, v, t, d, x):
         extra = f'<i class="swc{" none" if x == "none" else ""}" style="--c:{x if x != "none" else "transparent"}" aria-hidden="true"></i>'
     elif k == 'sang' and x:
         cls += ' hasx'
-        rx, ry = x * .82, x * 1.18   # hạt vẽ theo tỉ lệ cỡ lỗ sàng
+        rx, ry = x * .82, x * 1.18   # hạt vẽ theo tỷ lệ cỡ lỗ sàng
         extra = (f'<svg class="sv" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="{rx:.2f}" ry="{ry:.2f}"/>'
                  f'<path d="M12 {12 - ry * .7:.2f}V{12 + ry * .7:.2f}"/></svg>')
     return (f'<label class="{cls}"><input type="radio" name="{k}" value="{v}">'
@@ -165,7 +165,7 @@ def question(no, k):
     skip = ''
     if k == 'ro':
         skip = ('<p class="skip">Bạn chọn Arabica, câu này bỏ qua.</p>'
-                '<p class="qlnk"><a class="lnk" href="phan-biet-ca-phe.html#ca-se">Cách phân biệt Ro Sẻ và cao sản</a></p>')
+                '<p class="qlnk"><a class="lnk" href="phan-biet-ca-phe.html#ca-se">Cách phân biệt Robusta Sẻ và cao sản</a></p>')
     return (f'<fieldset class="nxq" id="q-{k}"><legend><span class="qn">{no:02d}</span>{t}</legend>'
             f'<p class="hint">{h}</p><div class="nxo" style="--n:{3 if k == "gu" else len(opts) - (1 if k in ALT else 0)}">' + ''.join(_opt(k, *o) for o in opts) + '</div>' + skip + '</fieldset>')
 
@@ -181,7 +181,7 @@ def form_html():
                    f'<div class="nxgh"><span class="lt" aria-hidden="true">{letter}</span><h3 id="g-{letter}">{title}</h3>'
                    f'<p>{desc}</p><span class="cnt" aria-label="Số câu đã trả lời">0/{len(ks)}</span></div>' + ''.join(qs) + '</section>')
     out.append('''<section class="box nxg" aria-labelledby="g-D">
- <div class="nxgh"><span class="lt" aria-hidden="true">D</span><h3 id="g-D">Liên hệ</h3><p>Để MeDili gửi gợi ý, mẫu và báo giá. Tên và số điện thoại cần cho phiếu gửi online.</p></div>
+ <div class="nxgh"><span class="lt" aria-hidden="true">D</span><h3 id="g-D">Liên hệ</h3><p>Để MeDili gửi gợi ý, mẫu và báo giá. Tên và số điện thoại cần cho phiếu gửi trực tuyến.</p></div>
  <div class="p-form">
   <div class="row2">
    <label for="nx-name">Người liên hệ<input id="nx-name" autocomplete="name" maxlength="80" placeholder="Ví dụ: anh Minh"></label>
@@ -191,14 +191,14 @@ def form_html():
    <label for="nx-org">Xưởng, quán hoặc công ty <small>không bắt buộc</small><input id="nx-org" autocomplete="organization" maxlength="100" placeholder="Ví dụ: Xưởng rang Mộc"></label>
    <label for="nx-area">Khu vực nhận hàng <small>không bắt buộc</small><input id="nx-area" maxlength="80" placeholder="Ví dụ: Thủ Đức, TP.HCM"></label>
   </div>
-  <label for="nx-note">Ghi chú <small>không bắt buộc</small><textarea id="nx-note" rows="3" maxlength="400" placeholder="Lô đang dùng, máy rang, yêu cầu riêng về độ ẩm, đóng gói..."></textarea></label>
+  <label for="nx-note">Ghi chú <small>không bắt buộc</small><textarea id="nx-note" rows="3" maxlength="400" placeholder="Lô đang dùng, máy rang, yêu cầu riêng về độ ẩm, đóng gói…"></textarea></label>
  </div>
 </section>''')
     return '<form class="nxf" id="nxf" novalidate>' + ''.join(out) + '</form>'
 
 
 def _ch(c):
-    return 'Theo lô' if c is None else 'Không cam kết' if c == 0 else '97–98 %' if c == 97 else f'{c} %'
+    return 'Theo lô' if c is None else 'Không cam kết' if c == 0 else '97–98%' if c == 97 else f'{c}%'
 
 
 def catalog_html():
@@ -210,7 +210,7 @@ def catalog_html():
             rows.append(f'<tr class="gr" data-sp="{L["sp"]}"><td colspan="7"><b>{t}</b> · {d}</td></tr>')
         rows.append(
             f'<tr class="ln" id="l-{L["id"]}" data-id="{L["id"]}" data-sp="{L["sp"]}" style="--c:{L["c"]}">'
-            f'<td><div class="nxdn"><i aria-hidden="true"></i><b>{L["n"]}</b><small>{L["sub"]}. Hợp {L["use"]}.</small></div></td>'
+            f'<td><div class="nxdn"><i aria-hidden="true"></i><b>{L["n"]}</b><small>{L["sub"]}. Phù hợp với {L["use"]}.</small></div></td>'
             f'<td data-l="Sơ chế">{SCN.get(L["sc"], "Theo lô")}</td>'
             f'<td data-l="Sàng">{"S" + str(L["s"]) if L["s"] else "Theo lô"}</td>'
             f'<td data-l="Độ chín">{_ch(L["ch"])}</td>'
@@ -222,7 +222,7 @@ def catalog_html():
             '<tbody>' + ''.join(rows) + '</tbody></table></div>')
 
 
-# ---------- hình minh hoạ ----------
+# ---------- hình minh họa ----------
 def svg_soche():
     def beans(cx, cy):
         return ''.join(f'<ellipse class="Lb" cx="{cx + d}" cy="{cy}" rx="7" ry="17.5"/><path class="Lc" d="M{cx + d} {cy - 12}v24"/>'
@@ -247,7 +247,7 @@ def svg_soche():
     leg = [('Ls', 'Vỏ quả', 8), ('Lp', 'Thịt quả', 66), ('Lm', 'Lớp nhớt', 130), ('Lt', 'Vỏ trấu', 197), ('Lb', 'Nhân', 256)]
     lg = ''.join(f'<circle class="{c}" cx="{x + 5}" cy="290" r="5"/><text class="t2" x="{x + 14}" y="294">{t}</text>' for c, t, x in leg)
     return (f'<svg class="fig sc" viewBox="0 0 300 302" role="img" aria-label="Mặt cắt trái cà phê khi đem phơi theo bốn cách sơ chế: '
-            f'thương mại và natural còn đủ vỏ quả, thịt quả, lớp nhớt; honey còn lớp nhớt; washed chỉ còn vỏ trấu bọc nhân.">'
+            f'thương mại và Natural còn đủ vỏ quả, thịt quả, lớp nhớt; Honey còn lớp nhớt; Washed chỉ còn vỏ trấu bọc nhân.">'
             + ''.join(out) + lg + '</svg>')
 
 
@@ -258,7 +258,7 @@ def svg_sang():
         hs += (f'<circle class="ho" cx="{cx}" cy="50" r="{mm * 3:.2f}"/>'
                f'<text class="t1" x="{cx}" y="112" text-anchor="middle">Sàng {n}</text>'
                f'<text class="t2" x="{cx}" y="127" text-anchor="middle">{str(mm).replace(".", ",")} mm</text>')
-    return ('<svg class="fig sg2" viewBox="0 0 300 134" role="img" aria-label="Ba lỗ sàng vẽ đúng tỉ lệ: sàng 18 lỗ 7,14 mm, sàng 16 lỗ 6,35 mm, sàng 14 lỗ 5,56 mm.">'
+    return ('<svg class="fig sg2" viewBox="0 0 300 134" role="img" aria-label="Ba lỗ sàng vẽ đúng tỷ lệ: sàng 18 lỗ 7,14 mm, sàng 16 lỗ 6,35 mm, sàng 14 lỗ 5,56 mm.">'
             '<rect class="pl" x="6" y="8" width="288" height="84" rx="12"/>' + hs + '</svg>')
 
 
@@ -284,8 +284,8 @@ def svg_robusta():
              f'<path class="Lc2" d="M{cx - rx * .2} {50 - ry * .7}C{cx + rx * .5} {50 - ry * .2} {cx + rx * .5} {50 + ry * .2} {cx - rx * .2} {50 + ry * .7}"/>')
         return (f'<ellipse class="Lb" cx="{cx}" cy="50" rx="{rx}" ry="{ry}"/>' + c +
                 f'<text class="t1" x="{cx}" y="98" text-anchor="middle">{lab}</text><text class="t2" x="{cx}" y="113" text-anchor="middle">{sub}</text>')
-    return ('<svg class="fig rb" viewBox="0 0 300 120" role="img" aria-label="Ba dạng nhân Robusta: cao sản to và đều, Ro Sẻ nhỏ và chắc, Culi tròn một nhân.">'
-            + bean(55, 17, 25, 'thang', 'Cao sản', 'to, đều') + bean(150, 15, 21.5, 'thang', 'Ro Sẻ', 'nhỏ, chắc')
+    return ('<svg class="fig rb" viewBox="0 0 300 120" role="img" aria-label="Ba dạng nhân Robusta: cao sản to và đều, Robusta Sẻ nhỏ và chắc, Culi tròn một nhân.">'
+            + bean(55, 17, 25, 'thang', 'Cao sản', 'to, đều') + bean(150, 15, 21.5, 'thang', 'Robusta Sẻ', 'nhỏ, chắc')
             + bean(245, 15.5, 20, 'culi', 'Culi', 'tròn, một nhân') + '</svg>')
 
 
@@ -494,8 +494,8 @@ const W={loai:3,ro:3,gu:2,sc:2,chin:2,sang:1.5,vu:1,muc:.8};
 const ROM={cs:{r18bm:1,r16bm:1,rc18bm:.6,r18h97:.5,r18h98:.5,r18n99:.5,rse:.2},fine:{r18h97:1,r18h98:1,r18n99:1,rse:.5},se:{rse:1},culi:{rc18bm:1}};
 const SCM={tm:{tm:1,natural:.5,honey:.2,washed:0},natural:{natural:1,tm:.4,honey:.5,washed:.1},honey:{honey:1,natural:.5,washed:.5,tm:.1},washed:{washed:1,honey:.5,natural:.1,tm:0}};
 const SGM={18:{18:1,16:.4,14:.1},16:{16:1,18:.8,14:.3},14:{14:1,16:.7,18:.6}};
-const SCL={tm:'Thương mại',natural:'Natural',honey:'Honey',washed:'Washed'},ROL={cs:'Dòng cao sản',fine:'Dòng hái chín',se:'Ro Sẻ',culi:'Culi'};
-const chL=c=>c==null?'Chín theo lô':c===0?'Không cam kết chín':c===97?'Chín 97–98'+NB+'%':'Chín '+c+NB+'%';
+const SCL={tm:'Thương mại',natural:'Natural',honey:'Honey',washed:'Washed'},ROL={cs:'Dòng cao sản',fine:'Dòng hái chín',se:'Robusta Sẻ',culi:'Culi'};
+const chL=c=>c==null?'Chín theo lô':c===0?'Không cam kết chín':c===97?'Chín 97–98'+'%':'Chín '+c+'%';
 function parts(L,a){const P=[];
  if(a.loai&&a.loai!=='x')P.push(['loai',a.loai==='RA'||L.sp===a.loai?1:0,L.sp==='R'?'Robusta':'Arabica']);
  if(a.ro&&a.ro!=='x'){if(L.sp==='R'){const m=(ROM[a.ro]||{})[L.id];P.push(['ro',m===undefined?.1:m,ROL[L.ro]])}else if(a.loai!=='RA')P.push(['ro',0,'Arabica'])}
@@ -509,21 +509,21 @@ function parts(L,a){const P=[];
 function rank(a){return LINES.map((L,i)=>{const P=parts(L,a);let s=0,w=0;P.forEach(([k,m])=>{s+=W[k]*m;w+=W[k]});return {L,P,f:w?s/w:0,w,i}}).sort((x,y)=>y.f-x.f||x.i-y.i)}
 function sugs(a){const sp=a.loai==='R'||a.loai==='A'?a.loai:((!a.loai||a.loai==='x')&&a.ro&&a.ro!=='x'?'R':null),R=rank(a).filter(x=>!sp||x.L.sp===sp);if(!R.length||!R[0].w)return [];
  if(a.loai==='RA'){const r=R.find(x=>x.L.sp==='R'),A=R.find(x=>x.L.sp==='A'),o=R.find(x=>x!==r&&x!==A);return [[r,'Nền Robusta'],[A,'Hương Arabica'],[o,'Lựa chọn khác']]}
- return R.slice(0,3).map((x,i)=>[x,['Hợp nhất','Lựa chọn hai','Lựa chọn ba'][i]])}
+ return R.slice(0,3).map((x,i)=>[x,['Phù hợp nhất','Lựa chọn thứ hai','Lựa chọn thứ ba'][i]])}
 const pct=f=>Math.round(f*100);
 const sym=m=>m>=.95?['y','✓','khớp']:m>=.45?['m','≈','gần']:['n','✗','lệch'];
-function chipsH(P){return P.map(([k,m,t])=>{const [c,s,w]=sym(m);const lab=k==='gu'?(c==='y'?'Đúng gu':c==='m'?'Gần gu':'Khác gu'):k==='muc'?(c==='y'?'Hợp chế biến':'Cao hơn mức cần'):t;
+function chipsH(P){return P.map(([k,m,t])=>{const [c,s,w]=sym(m);const lab=k==='gu'?(c==='y'?'Đúng gu':c==='m'?'Gần gu':'Khác gu'):k==='muc'?(c==='y'?'Phù hợp chế biến':'Cao hơn mức cần'):t;
  return `<span class="nxc ${c}" title="${w}">${s} ${escH(lab)}</span>`}).join('')}
-function sgH([x,lab]){const L=x.L;return `<li class="sg" style="--c:${L.c}"><span class="sg-k">${lab}</span><a class="sg-n" href="#l-${L.id}" data-id="${L.id}">${escH(L.n)}</a><b class="sg-p">${pct(x.f)}${NB}%</b>
+function sgH([x,lab]){const L=x.L;return `<li class="sg" style="--c:${L.c}"><span class="sg-k">${lab}</span><a class="sg-n" href="#l-${L.id}" data-id="${L.id}">${escH(L.n)}</a><b class="sg-p">${pct(x.f)}%</b>
 <span class="sg-c"><span>${L.code}</span></span><span class="sg-f" aria-hidden="true"><i style="width:${pct(x.f)}%"></i></span><span class="nxcs">${chipsH(x.P)}</span></li>`}
 function tips(a){const T=[],wantR=a.loai==='R'||((!a.loai||a.loai==='x')&&a.ro&&a.ro!=='x');
  if(a.loai==='A'&&a.gu==='dam')T.push('Gu đậm đắng truyền thống thường cần Robusta. Arabica cho vị chua thanh, thân nhẹ hơn.');
- if(a.loai==='R'&&a.gu==='chua')T.push('Gu chua thanh hợp Arabica hơn. Nếu vẫn chọn Robusta, Honey hoặc Natural chín cao cho vị sạch và ngọt hơn.');
- if(a.ro==='se'&&a.sang==='18')T.push('Ro Sẻ nhân nhỏ, hiếm khi đạt S18. Nên chọn S16 hoặc không yêu cầu sàng.');
- if(a.ro==='fine'&&(a.chin==='0'||a.chin==='90'||a.sc==='tm'))T.push('Fine Robusta cần hái chín từ 95'+NB+'% và sơ chế kỹ: honey, natural hoặc washed.');
- if(a.sc==='tm'&&['99','97','95'].includes(a.chin))T.push('Hàng thương mại không cam kết tỉ lệ chín. Muốn chín từ 95'+NB+'%, chọn Natural hoặc Honey.');
- if(wantR&&a.sc==='washed')T.push('Robusta washed chưa có sẵn trong danh mục. MeDili báo riêng nếu có lô; gần nhất là Robusta Honey.');
- if(a.loai==='A'&&a.sc==='honey')T.push('Arabica honey chưa có sẵn trong danh mục. MeDili báo riêng nếu có lô; gần nhất là Arabica washed chín cao.');
+ if(a.loai==='R'&&a.gu==='chua')T.push('Gu chua thanh phù hợp với Arabica hơn. Nếu vẫn chọn Robusta, Honey hoặc Natural chín cao cho vị sạch và ngọt hơn.');
+ if(a.ro==='se'&&a.sang==='18')T.push('Robusta Sẻ nhân nhỏ, hiếm khi đạt S18. Nên chọn S16 hoặc không yêu cầu sàng.');
+ if(a.ro==='fine'&&(a.chin==='0'||a.chin==='90'||a.sc==='tm'))T.push('Fine Robusta cần hái chín từ 95'+'% và sơ chế kỹ: Honey, Natural hoặc Washed.');
+ if(a.sc==='tm'&&['99','97','95'].includes(a.chin))T.push('Hàng thương mại không cam kết tỷ lệ chín. Muốn chín từ 95'+'%, chọn Natural hoặc Honey.');
+ if(wantR&&a.sc==='washed')T.push('Robusta Washed chưa có sẵn trong danh mục. MeDili báo riêng nếu có lô; gần nhất là Robusta Honey.');
+ if(a.loai==='A'&&a.sc==='honey')T.push('Arabica Honey chưa có sẵn trong danh mục. MeDili báo riêng nếu có lô; gần nhất là Arabica Washed chín cao.');
  if(a.loai==='A'&&a.sang==='16')T.push('Arabica trong danh mục có S18 và S14. S16 báo riêng theo lô.');
  if((wantR||a.loai==='RA')&&a.vu==='26')T.push('Robusta vụ 2026–2027 đang thu hoạch. MeDili báo khi có lô mới theo từng đợt.');
  if(a.ro==='culi'&&(a.sang==='16'||a.sang==='14'))T.push('Culi Robusta trong danh mục là cỡ S18.');
@@ -556,9 +556,9 @@ function render(){const a=ans();$('q-ro').disabled=a.loai==='A';
  document.querySelectorAll('.nxg[data-q]').forEach(g=>{const ks=g.dataset.q.split(' ').filter(k=>!(k==='ro'&&a.loai==='A')),n=ks.filter(k=>a[k]).length,c=g.querySelector('.cnt');c.textContent=n+'/'+ks.length;c.classList.toggle('full',n===ks.length)});
  const S=sugs(a);
  $('nx-sug').innerHTML=S.length?S.map(sgH).join(''):'<li class="em">Trả lời vài câu ở phần A và B, gợi ý hiện ở đây.</li>';
- const best=S.length?`Hợp nhất lúc này: ${S[0][0].L.n}, khớp ${pct(S[0][0].f)}${NB}%.`:'';if(best!==lastBest){$('nx-best').textContent=best;lastBest=best}
+ const best=S.length?`Phù hợp nhất lúc này: ${S[0][0].L.n}, khớp ${pct(S[0][0].f)}%.`:'';if(best!==lastBest){$('nx-best').textContent=best;lastBest=best}
  const ids=S.map(([x])=>x.L.id);document.querySelectorAll('#nx-tab tr.ln').forEach(tr=>tr.classList.toggle('sugd',ids.includes(tr.dataset.id)));
- $('nx-bar-c').textContent=done+'/'+app.length;$('nx-bar-t').textContent=S.length?S[0][0].L.n+' · '+pct(S[0][0].f)+NB+'%':'Trả lời vài câu để xem gợi ý';
+ $('nx-bar-c').textContent=done+'/'+app.length;$('nx-bar-t').textContent=S.length?S[0][0].L.n+' · '+pct(S[0][0].f)+'%':'Trả lời vài câu để xem gợi ý';
  const T=tips(a);$('nx-tips').innerHTML=T.map(t=>`<li>${escH(t)}</li>`).join('');$('nx-tipw').hidden=!T.length;
  const pk=picks();$('nx-sum').classList.toggle('empty',!done&&!pk.length);$('nx-pk').closest('.sec').classList.toggle('has',pk.length>0);$('nx-pk').innerHTML=pk.length?pk.map(l=>`<span class="nxc" style="--c:${l.c}">${escH(l.code)}</span>`).join(''):'<span class="note">Chưa đánh dấu. Bấm ô Quan tâm trong danh mục bên dưới.</span>';
  const nm=$('nx-name').value.trim(),ph=$('nx-ph').value.replace(/[\s.]/g,''),t=msg(a,S,nm,ph);$('nx-msg').textContent=t;
@@ -573,9 +573,9 @@ $('nx-sug').addEventListener('click',e=>{const a=e.target.closest('a.sg-n');if(!
  if(tr.hidden)document.querySelector('#nx-fl .pill[data-f="all"]').click();setTimeout(()=>{tr.classList.add('hl');setTimeout(()=>tr.classList.remove('hl'),1800)},60)});
 const st=t=>{$('nx-st').textContent=t};
 $('nx-gf').addEventListener('click',e=>{if(!$('nx-gf').getAttribute('href')){e.preventDefault();st('Nhập tên và số điện thoại ở mục D để mở phiếu gửi MeDili.');($('nx-name').value.trim()?$('nx-ph'):$('nx-name')).focus()}else st('Phiếu đã mở ở thẻ mới. Bấm Gửi ở cuối phiếu để hoàn tất.')});
-$('nx-cp').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('nx-msg').textContent);st('Đã chép tin nhắn. Mở Zalo MeDili rồi dán vào.')}catch(e){const d=$('nx-msg').closest('details');if(d)d.open=true;const r=document.createRange();r.selectNodeContents($('nx-msg'));const s=getSelection();s.removeAllRanges();s.addRange(r);st('Đã bôi đen tin nhắn, hãy sao chép rồi dán vào Zalo.')}});
+$('nx-cp').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('nx-msg').textContent);st('Đã sao chép tin nhắn. Mở Zalo MeDili rồi dán vào.')}catch(e){const d=$('nx-msg').closest('details');if(d)d.open=true;const r=document.createRange();r.selectNodeContents($('nx-msg'));const s=getSelection();s.removeAllRanges();s.addRange(r);st('Đã chọn sẵn tin nhắn, bạn hãy sao chép rồi dán vào Zalo.')}});
 $('nx-pr').addEventListener('click',()=>window.print());
-$('nx-rs').addEventListener('click',()=>{F.reset();document.querySelectorAll('#nx-tab input[name="pick"]').forEach(x=>x.checked=false);try{localStorage.removeItem(KEY)}catch(e){}render();st('Đã xoá câu trả lời. Muốn in phiếu trống, bấm In phiếu.');$('bang-cau-hoi').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
+$('nx-rs').addEventListener('click',()=>{F.reset();document.querySelectorAll('#nx-tab input[name="pick"]').forEach(x=>x.checked=false);try{localStorage.removeItem(KEY)}catch(e){}render();st('Đã xóa câu trả lời. Muốn in phiếu trống, bấm In phiếu.');$('bang-cau-hoi').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
 load();render();
 if('IntersectionObserver' in window){const bar=$('nx-bar'),vis={f:false,s:false};const io=new IntersectionObserver(es=>{es.forEach(e=>{vis[e.target===F?'f':'s']=e.isIntersecting});bar.hidden=!(vis.f&&!vis.s)},{threshold:0});io.observe(F);io.observe($('nx-sum'))}
 })();
@@ -587,7 +587,7 @@ def page():
     qt = {k: Q[k][1] for k in QS}
     lines = [{k: L[k] for k in ('id', 'g', 'code', 'n', 'sp', 'ro', 'sc', 's', 'ch', 'vu', 'c', 'gu')} for L in LINES]
     data = 'const D=' + json.dumps(dict(qs=QS, lab=lab, qt=qt, lines=lines), ensure_ascii=False, separators=(',', ':')) + ';\n'
-    data = data.replace(' %', ' %')
+    data = data.replace('%', '%')
     js = f"const FORM={FORM!r},FN={{name:{FORM_F['name']!r},phone:{FORM_F['phone']!r},txt:{FORM_F['txt']!r}}};\n" + data + JS
 
     body = head('Khách sỉ · Cà phê nhân xanh', 'Chọn nhân xanh <em>đúng gu, đúng lô.</em>',
@@ -596,9 +596,9 @@ def page():
                 '<a class="btn main" href="#bang-cau-hoi">Bắt đầu trả lời</a><a class="btn" href="#danh-muc">Xem danh mục nhân</a>')
     body += '''
 <div class="facts nxfacts">
- <div><b>Robusta · Arabica</b><span>Ro Sẻ, Fine Robusta, cao sản, Culi và Arabica Cầu Đất.</span></div>
+ <div><b>Robusta · Arabica</b><span>Robusta Sẻ, Fine Robusta, cao sản, Culi và Arabica Cầu Đất.</span></div>
  <div><b>Natural · Honey · Washed</b><span>cùng hàng thương mại bắn màu.</span></div>
- <div><b>Sàng 14 · 16 · 18</b><span>độ chín từ 89 đến 99 %.</span></div>
+ <div><b>Sàng 14 · 16 · 18</b><span>độ chín từ 89 đến 99%.</span></div>
  <div><b>Bao 60 kg</b><span>từ mẫu thử dưới 5 kg đến hơn 1 tấn mỗi đơn.</span></div>
 </div>
 '''
@@ -622,7 +622,7 @@ def page():
    <details><summary>Xem tin nhắn sẽ gửi</summary><pre class="msg" id="nx-msg"></pre></details>
   </div>
   <div class="nxs-f">
-   <div class="cta acts"><a class="btn main off" id="nx-gf" target="_blank" rel="noopener" aria-disabled="true">Mở phiếu gửi MeDili</a><button class="btn" type="button" id="nx-cp">Chép tin nhắn</button>
+   <div class="cta acts"><a class="btn main off" id="nx-gf" target="_blank" rel="noopener" aria-disabled="true">Mở phiếu gửi MeDili</a><button class="btn" type="button" id="nx-cp">Sao chép tin nhắn</button>
     <a class="btn" href="{ZALO}" target="_blank" rel="noopener">Nhắn Zalo MeDili</a><button class="btn" type="button" id="nx-pr">In phiếu</button><button class="btn ghost" type="button" id="nx-rs">Làm lại</button></div>
    <p class="fstat" id="nx-st" role="status"></p>
   </div>
@@ -632,7 +632,7 @@ def page():
 
 <section class="box p-sec" id="danh-muc">
  <p class="eye">Danh mục nhân xanh</p>
- <h2 class="p-h2" style="margin:0">Mười một dòng có sẵn, <em>thêm Ro Sẻ theo vụ.</em></h2>
+ <h2 class="p-h2" style="margin:0">Mười một dòng có sẵn, <em>thêm Robusta Sẻ theo vụ.</em></h2>
  <p class="note">Mã MeDili dùng khi đặt hàng. Mỗi báo giá ghi rõ vùng trồng, vụ và quy cách của lô. Bấm Quan tâm để đưa dòng đó vào phiếu.</p>
  <div class="nxprice"><span class="k">Giá nhân xanh</span><b>Liên hệ để nhận báo giá mỗi ngày.</b><a class="btn main small" href="{ZALO}" target="_blank" rel="noopener">Nhắn Zalo MeDili</a><button class="btn small" type="button" data-copy="{PHONE_RAW}" data-done="Đã sao chép số">Sao chép số {PHONE}</button></div>
  <div class="nxfl" id="nx-fl" role="group" aria-label="Lọc danh mục"><button type="button" class="pill" data-f="all" aria-pressed="true">Tất cả</button><button type="button" class="pill" data-f="R" aria-pressed="false">Robusta</button><button type="button" class="pill" data-f="A" aria-pressed="false">Arabica</button></div>
@@ -644,15 +644,15 @@ def page():
  <h2 class="p-h2">Sáu điều <em>quyết định lô nhân.</em></h2>
  <div class="nxx">
   <div class="box">{photo('p-hai-chon.jpg', 'Bàn tay nhặt trái cà phê chín', '')}<span class="k">Độ chín</span><h3>Trái chín cho vị ngọt</h3>
-   <p>Độ chín là tỉ lệ trái chín trong mẻ hái. Trái chín đủ tích nhiều đường hơn, nên ly ngọt và sạch vị hơn; trái chưa chín làm vị chát, gắt. Hái càng chọn lọc, công càng nhiều, giá càng cao.</p></div>
+   <p>Độ chín là tỷ lệ trái chín trong mẻ hái. Trái chín đủ tích nhiều đường hơn, nên ly ngọt và sạch vị hơn; trái chưa chín làm vị chát, gắt. Hái càng chọn lọc, công càng nhiều, giá càng cao.</p></div>
   <div class="box">{svg_soche()}<span class="k">Sơ chế</span><h3>Phần nào của trái ở lại khi phơi</h3>
-   <p>Natural phơi cả trái chín nên ngọt trái chín, thân dày. Honey xát vỏ nhưng giữ lớp nhớt, vị ngọt tròn. Washed rửa sạch nhớt trước khi phơi, vị sạch, chua sáng. Hàng thương mại phơi cả trái, hái lẫn trái chín và chưa chín.</p></div>
+   <p>Natural phơi cả trái chín nên ngọt trái chín, thân dày. Honey xát vỏ nhưng giữ lớp nhớt, vị ngọt tròn. Washed rửa sạch lớp nhớt trước khi phơi, vị sạch, chua thanh. Hàng thương mại phơi cả trái, hái lẫn trái chín và chưa chín.</p></div>
   <div class="box">{svg_sang()}<span class="k">Cỡ sàng</span><h3>Số sàng là cỡ lỗ</h3>
-   <p>Số sàng tính theo phần 64 của inch: sàng 18 có lỗ 7,14 mm, sàng 16 lỗ 6,35 mm, sàng 14 lỗ 5,56 mm. Nhân S18 là lô mà phần lớn nhân nằm lại trên sàng 18. Nhân to và đều cỡ thì rang chín đều hơn. Hình vẽ đúng tỉ lệ giữa ba lỗ.</p></div>
+   <p>Số sàng tính theo phần 64 của inch: sàng 18 có lỗ 7,14 mm, sàng 16 lỗ 6,35 mm, sàng 14 lỗ 5,56 mm. Nhân S18 là lô mà phần lớn nhân nằm lại trên sàng 18. Nhân to và đều cỡ thì rang chín đều hơn. Hình vẽ đúng tỷ lệ giữa ba lỗ.</p></div>
   <div class="box">{svg_banmau()}<span class="k">Bắn màu</span><h3>Máy loại hạt lỗi từng hạt một</h3>
    <p>Máy tách màu soi từng hạt bằng camera. Gặp hạt đen, nâu, sâu, mốc hay lệch màu, máy thổi khí nén cho hạt rơi sang đường loại. Nhân đều màu thì rang đều hơn, ly ít vị lạ.</p></div>
   <div class="box">{svg_robusta()}<span class="k">Robusta</span><h3>Giống, mức chất lượng, hình dạng</h3>
-   <p>Cao sản là các dòng chọn lọc năng suất cao, phần lớn trồng bằng cây ghép, nhân to và đều. Ro Sẻ là giống Robusta cũ của Di Linh, trồng từ hạt, nhân nhỏ và chắc, vị đậm, hậu dài. Fine Robusta là mức chất lượng: hái chín, sơ chế kỹ, nếm đạt từ 80 điểm. Culi là trái chỉ nuôi một nhân tròn.</p>
+   <p>Cao sản là các dòng chọn lọc năng suất cao, phần lớn trồng bằng cây ghép, nhân to và đều. Robusta Sẻ là giống Robusta cũ của Di Linh, trồng từ hạt, nhân nhỏ và chắc, vị đậm, hậu dài. Fine Robusta là mức chất lượng: hái chín, sơ chế kỹ, nếm đạt từ 80 điểm. Culi là trái chỉ nuôi một nhân tròn.</p>
    <div class="lnks"><a class="lnk" href="phan-biet-ca-phe.html">Cỗ máy Phân biệt cà phê</a></div></div>
   <div class="box">{icon('hen')}<span class="k">Vụ mùa</span><h3>Vụ mới hay vụ trước</h3>
    <p>Nhân vụ mới tươi, hương rõ, nhưng độ ẩm thường còn cao hơn nên cần chỉnh hồ sơ rang. Nhân vụ trước đã ổn định, rang dễ đoán; để lâu, hương dịu dần. Lô nào cũng nên rang thử trước khi chốt số lượng lớn.</p>
@@ -665,7 +665,7 @@ def page():
  <p class="eye">Cách MeDili báo giá</p>
  <h2 class="p-h2">Từ phiếu câu hỏi <em>đến bao nhân.</em></h2>
  <ol class="pst two">
-  <li><span class="n">{icon('so')}</span><h3><small>Bước 1</small>Gửi phiếu</h3><p>Mở phiếu gửi MeDili, hoặc chép tin nhắn rồi dán vào Zalo. MeDili đọc gu, số lượng và cách nhận hàng của bạn.</p></li>
+  <li><span class="n">{icon('so')}</span><h3><small>Bước 1</small>Gửi phiếu</h3><p>Mở phiếu gửi MeDili, hoặc sao chép tin nhắn rồi dán vào Zalo. MeDili đọc gu, số lượng và cách nhận hàng của bạn.</p></li>
   <li><span class="n">{icon('nhan')}</span><h3><small>Bước 2</small>Thử mẫu</h3><p>MeDili gửi mẫu nhân hoặc mẫu rang của vài dòng gần gu nhất để bạn rang thử, nếm thử.</p></li>
   <li><span class="n">{icon('can')}</span><h3><small>Bước 3</small>Nhận báo giá mỗi ngày</h3><p>Báo giá ghi rõ lô, vùng trồng, vụ, quy cách, thuế và phí giao.</p></li>
   <li><span class="n">{icon('xe')}</span><h3><small>Bước 4</small>Chốt đơn và giao</h3><p>Đóng bao 60 kg; đơn dưới 1 bao đóng túi theo số kg. Giao tại TP.HCM, đi tỉnh, hoặc hẹn đến lấy.</p></li>

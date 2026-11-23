@@ -13,7 +13,7 @@ SRC = '/mnt/user-data/attachments/619bd0cf-b746-5328-b8be-a7ac0d4efa6d'
 # Đợt 2: ảnh trong thư mục Google Drive "11/2026" chị Ngân gửi ngày 21/11/2026.
 # IMG_0603 là ảnh máy ảnh (thư mục ẢNH); H0545, H0549 là ảnh điện thoại (HEIC đã đổi sang JPG).
 # 23/11/2026: chị Ngân yêu cầu bỏ ảnh người nữ đội mũ MeDili (IMG_0548–IMG_0551) khỏi web, không dùng lại các ảnh này.
-# Hosting chỉ thêm và cập nhật file, không xoá, nên các file ảnh cũ được ghi đè bằng ô màu kem (REMOVED) để thay luôn trên medili.vn.
+# Hosting chỉ thêm và cập nhật file, không xóa, nên các file ảnh cũ được ghi đè bằng ô màu kem (REMOVED) để thay luôn trên medili.vn.
 REMOVED = ['p-nguoi-vuon.jpg', 'p-sq-nguoi-vuon.jpg', 'p-doi-ngu-vuon.jpg', 'g-vuon-nguoi-vuon.jpg', 'g-vuon-nguoi-vuon-s.jpg']
 SRC2 = os.environ.get('MEDILI_ANH', '/tmp/claude-0/-home-claude/619bd0cf-b746-5328-b8be-a7ac0d4efa6d/scratchpad/anh')
 

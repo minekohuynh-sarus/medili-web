@@ -45,16 +45,16 @@ GROUPS = [
     ('MeDili', [('./', 'Trang chủ'), ('cau-chuyen.html', 'Câu chuyện MeDili'), ('doi-ngu.html', 'Đội ngũ'),
                 ('quan-medili.html', 'Quán MeDili Café'), ('lien-he.html', 'Liên hệ')]),
     ('Vùng trồng & sản xuất', [('vung-trong.html', 'Vùng trồng Di Linh'), ('anh-vuon.html', 'Ảnh vườn'), ('vuon.html', 'Vườn 12 tháng'), ('trai-ca-phe.html', 'Cấu tạo trái'),
-                               ('len-men-men-bia.html', 'Lên men men bia'), ('len-men-trai-cay.html', 'Lên men trái cây')]),
+                               ('len-men-men-bia.html', 'Lên men bằng men bia'), ('len-men-trai-cay.html', 'Lên men cùng trái cây')]),
     ('Rang & pha', [('xuong-rang.html', 'Xưởng rang & năng lực'), ('rang.html', 'Phòng rang'), ('quay-pha.html', 'Quầy pha'), ('cong-thuc-pha.html', 'Cỗ máy Công thức pha'),
                     ('cold-brew.html', 'Cỗ máy Cold Brew'), ('tim-gu.html', 'Tìm gu cà phê')]),
-    ('Mua & hợp tác', [('cua-hang.html', 'Cửa hàng cà phê'), ('mua-hang.html', 'Phòng Chọn Mua'), ('horeca.html', 'Giải pháp HORECA'),
+    ('Mua & hợp tác', [('cua-hang.html', 'Cửa hàng cà phê'), ('mua-hang.html', 'Phòng chọn mua'), ('horeca.html', 'Giải pháp HORECA'),
                        ('nhan-xanh.html', 'Chọn nhân xanh · khách sỉ'), ('gia-ca-phe.html', 'Giá cà phê hôm nay'), ('giao-hang.html', 'Giao hàng & đổi trả'),
                        ('gio-hang.html', 'Giỏ hàng'), ('tim-kiem.html', 'Tìm kiếm')]),
     ('Kiến thức cà phê', [('journal.html', 'Tất cả bài viết'), ('chiet-xuat.html', 'Cỗ máy Chiết xuất'), ('phan-biet-ca-phe.html', 'Cỗ máy Phân biệt cà phê'), ('trai-chin.html', 'Cỗ máy Trái chín'),
                         ('vi-sinh.html', 'Cỗ máy Vi sinh'), ('tien-chat-huong.html', 'Cỗ máy Tiền chất hương'), ('banh-xe-huong.html', 'Bánh xe hương MeDili'),
                         ('journal-phin.html', 'Phin và nhịp rơi của thời gian'),
-                        ('journal-tu-qua.html', 'Từ quả cà phê đến hương vị'), ('journal-di-linh.html', 'Di Linh trong một tách cà phê'),
+                        ('journal-tu-qua.html', 'Từ trái cà phê đến hương vị'), ('journal-di-linh.html', 'Di Linh trong một tách cà phê'),
                         ('tu-vuon-den-ly.html', 'Từ vườn đến ly'), ('suc-khoe.html', 'Cà phê và cơ thể')]),
 ]
 PRIMARY = [('cau-chuyen.html', 'Câu chuyện'), ('vung-trong.html', 'Vùng trồng'), ('anh-vuon.html', 'Ảnh vườn'), ('xuong-rang.html', 'Xưởng rang'),
@@ -85,24 +85,24 @@ FOOT_EXPLORE = [('cau-chuyen.html', 'Câu chuyện MeDili'), ('doi-ngu.html', '�
                 ('xuong-rang.html', 'Xưởng rang & năng lực'), ('rang.html', 'Phòng rang'), ('quay-pha.html', 'Quầy pha'),
                 ('tim-gu.html', 'Tìm gu cà phê'), ('cong-thuc-pha.html', 'Cỗ máy Công thức pha'), ('chiet-xuat.html', 'Cỗ máy Chiết xuất'),
                 ('cold-brew.html', 'Cỗ máy Cold Brew'), ('journal.html', 'Kiến thức cà phê')]
-FOOT_YOU = [('cua-hang.html', 'Cửa hàng MeDili'), ('mua-hang.html', 'Phòng Chọn Mua'), ('horeca.html', 'Giải pháp HORECA'), ('nhan-xanh.html', 'Nhân xanh cho khách sỉ'),
+FOOT_YOU = [('cua-hang.html', 'Cửa hàng MeDili'), ('mua-hang.html', 'Phòng chọn mua'), ('horeca.html', 'Giải pháp HORECA'), ('nhan-xanh.html', 'Nhân xanh cho khách sỉ'),
             ('gia-ca-phe.html', 'Giá cà phê hôm nay'),
             ('quan-medili.html', 'Quán MeDili Café'), ('lien-he.html', 'Liên hệ & bản đồ'), ('giao-hang.html', 'Giao hàng & đổi trả'),
             ('bao-mat.html', 'Chính sách bảo mật')]
 
 
-def footer(sig='Medili - Farm Robusta Cà Sẻ Di Linh'):
+def footer(sig='MeDili Coffee Farm · Cà Sẻ Di Linh'):
     a = lambda L: ''.join(f'<a href="{h}">{t}</a>' for h, t in L)
     return (f'<footer class="mf"><div class="mf-in">'
             f'<div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span>'
             f'<p class="mf-h">Luôn có thời gian cho <em>một tách cà phê ngon.</em></p>'
             f'<a class="btn main" href="quan-medili.html">Hẹn nhau ở MeDili</a></div>'
             f'<div class="mf-grid">'
-            f'<div class="mf-brand"><b>Mê Cà Phê, Mê Di Linh.</b><span>Gìn giữ di sản. Chắt chiu từng hương vị.</span><small>Di Linh · Lâm Đồng · Việt Nam</small></div>'
+            f'<div class="mf-brand"><b>Mê cà phê, mê Di Linh.</b><span>Gìn giữ di sản. Chắt chiu từng hương vị.</span><small>Di Linh · Lâm Đồng · Việt Nam</small></div>'
             f'<nav class="mf-col" aria-label="Khám phá"><p class="mf-t">Khám phá</p>{a(FOOT_EXPLORE)}</nav>'
             f'<nav class="mf-col" aria-label="MeDili và bạn"><p class="mf-t">MeDili &amp; bạn</p>{a(FOOT_YOU)}</nav>'
             f'<div class="mf-col"><p class="mf-t">Phân phối · DSunfood</p>'
-            f'<p>Công ty TNHH DSunfood<br>{ADDR_HCM}</p><p>Farm &amp; xưởng rang<br>{ADDR_FARM}</p>'
+            f'<p>Công ty TNHH DSunfood<br>{ADDR_HCM}</p><p>Vườn &amp; xưởng rang<br>{ADDR_FARM}</p>'
             f'<p><span class="mf-n">{PHONE}</span> · <span class="mf-n">{EMAIL}</span></p>'
             f'<a href="{MAP_HCM}" target="_blank" rel="noopener">Chỉ đường đến MeDili ↗</a><a href="{ZALO}" target="_blank" rel="noopener">Nhắn Zalo MeDili ↗</a></div>'
             f'</div><div class="mf-base"><span>© 2026 MeDili Café</span><i>{sig}</i></div></div></footer>')
@@ -111,7 +111,7 @@ def footer(sig='Medili - Farm Robusta Cà Sẻ Di Linh'):
 def contact_band():
     return (f'<section class="contact" id="lien-he"><div><img class="lgK" src="assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83">'
             f'<div class="tagline">Mê vị Di Linh</div>'
-            f'<p>Phân phối: Công ty TNHH DSunfood, {ADDR_HCM}.<br>Farm và xưởng rang: {ADDR_FARM}.</p></div>'
+            f'<p>Phân phối: Công ty TNHH DSunfood, {ADDR_HCM}.<br>Vườn và xưởng rang: {ADDR_FARM}.</p></div>'
             f'<div class="zalo"><span>Zalo MeDili</span><strong data-sel>{PHONE}</strong>'
             f'<div><a href="{ZALO}" target="_blank" rel="noopener">Nhắn Zalo</a><button type="button" data-copy="{PHONE_RAW}" data-done="Đã sao chép số">Sao chép số</button></div>'
             f'<small>Email: {EMAIL}</small></div></section>')
@@ -449,7 +449,7 @@ COMMON_JS = r'''
 if(m){document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
 document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
 document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
-try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'Đã sao chép'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='Đã bôi đen, hãy sao chép'}
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'Đã sao chép'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='Đã chọn sẵn số, bạn hãy tự sao chép'}
 setTimeout(()=>{b.textContent=o},2400)}))})();
 window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
 const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};

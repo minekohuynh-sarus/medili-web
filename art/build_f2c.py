@@ -80,7 +80,7 @@ suc = open(os.path.join(LIVE, 'suc-khoe.html'), encoding='utf8').read()
 SHARED = re.findall(r'<style>(.*?)</style>', suc, flags=re.S)[1]
 FONTS = re.search(r'<link rel="preconnect" href="https://fonts.googleapis.com">\s*<link rel="preconnect"[^>]*>\s*<link rel="stylesheet"[^>]*>', suc).group(0)
 
-NAV_RE = re.compile(r'(<a href="suc-khoe\.html"[^>]*>Sức khoẻ</a>)')
+NAV_RE = re.compile(r'(<a href="suc-khoe\.html"[^>]*>Sức khỏe</a>)')
 
 
 def nav(html, current=False):

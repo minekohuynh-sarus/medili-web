@@ -17,7 +17,7 @@ GROUPS = [
      'Cuối buổi hái, cà phê được đóng bao, chằng lên máy cày và chở theo đường lô ra khỏi vườn, về kho và sân phơi.',
      [('vung-trong.html', 'Vùng trồng Di Linh')]),
     ('phoi', 'Phơi & xay', 'Phơi <em>và xay xát.</em>',
-     'Trái chín được phơi nguyên trái (Natural), phơi khi hạt còn lớp nhớt (Honey) hoặc xát tươi rồi mới phơi. Khô rồi mới xay xát, tách vỏ để lấy nhân xanh.',
+     'Trái chín được phơi nguyên trái (Natural), phơi khi hạt còn lớp nhớt (Honey) hoặc xát tươi rồi mới phơi. Cà phê khô mới đem xay xát, tách vỏ để lấy nhân xanh.',
      [('len-men-men-bia.html', 'Ba cách sơ chế'), ('nhan-xanh.html', 'Chọn nhân xanh')]),
 ]
 
@@ -198,12 +198,12 @@ def page():
                  f'<h2 class="p-h2" id="h-{g}" style="margin:0">{h2}</h2><p class="lead">{lead}</p><div class="lnks">{lk}</div></div>'
                  f'<div class="gv">{tiles}</div></section>\n')
     body += (f'<section class="box av-note">{icon("ghim")}<div class="p-sec" style="gap:6px"><h2 class="p-h2" style="margin:0;font-size:1.6rem">Muốn ghé vườn <em>hoặc xưởng rang?</em></h2>'
-             f'<p>Farm và xưởng rang ở {ADDR_FARM}. Gọi trước để MeDili hẹn lịch: <span class="sel">{PHONE}</span>.</p>'
-             '<p class="note">Ảnh trên trang có logo MeDili. Cần dùng ảnh cho bài viết hay sự kiện, bạn liên hệ MeDili.</p>'
+             f'<p>Vườn và xưởng rang ở {ADDR_FARM}. Gọi trước để MeDili hẹn lịch: <span class="sel">{PHONE}</span>.</p>'
+             '<p class="note">Ảnh trên trang có logo MeDili. Nếu cần dùng ảnh cho bài viết hay sự kiện, bạn vui lòng liên hệ MeDili.</p>'
              f'<div class="cta"><a class="btn main" href="{ZALO}" target="_blank" rel="noopener">Nhắn Zalo MeDili</a><a class="btn" href="vung-trong.html">Vùng trồng Di Linh</a><a class="btn" href="cua-hang.html">Chọn cà phê</a></div></div></section>')
     dlg = (f'<dialog class="lb" id="lb" aria-label="Xem ảnh lớn"><figure class="lb-f"><img alt=""><figcaption><span class="lb-c"></span><b class="lb-k"></b></figcaption></figure>'
            f'<button class="lb-x" type="button" aria-label="Đóng">{SVG_X}</button><button class="lb-p" type="button" aria-label="Ảnh trước">{SVG_P}</button>'
            f'<button class="lb-n" type="button" aria-label="Ảnh sau">{SVG_N}</button></dialog>')
-    return doc(FILE, 'Ảnh Vườn MeDili',
+    return doc(FILE, 'Ảnh vườn MeDili',
                'Ảnh mùa vụ cà phê của MeDili: vườn vào mùa, hái bằng tay, máy cày chở bao rời vườn, phơi và xay xát.',
                body + dlg, css=PHOTO_CSS + GAL_CSS, js=GAL_JS, wrap_cls='wrap av', hero=top)

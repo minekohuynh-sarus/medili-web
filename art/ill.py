@@ -1,4 +1,4 @@
-# Minh hoạ SVG cho các trang mới, tô bằng token nên đổi được nền sáng/tối. Không dùng xanh lá, không đen.
+# Minh họa SVG cho các trang mới, tô bằng token nên đổi được nền sáng/tối. Không dùng xanh lá, không đen.
 
 def _hill(pts, x):
     for (x0, y0), (x1, y1) in zip(pts, pts[1:]):

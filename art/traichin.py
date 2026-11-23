@@ -3,18 +3,18 @@
 from iso import *
 
 FILE = 'trai-chin.html'
-TITLE = 'Cỗ Máy Trái Chín MeDili'
+TITLE = 'Cỗ máy Trái chín MeDili'
 DESC = ('Trái cà phê lớn và chín ra sao: các giai đoạn từ hoa đến trái chín, đường đi từ lá vào hạt, độ Brix, '
         'hái tuốt một lần hay hái chọn nhiều lượt, và độ cao ảnh hưởng thế nào. Mô hình tương tác của MeDili.')
 
 READ = [
     ('trai', 'Brix là của thịt quả, không phải của nhân',
      'Khúc xạ kế đo đường và chất tan trong dịch thịt quả. Nhân nhận sucrose từ cây qua mạch dẫn ở giai đoạn làm đầy hạt, khoảng 130–190 ngày sau hoa ở Arabica. '
-     'Thịt quả thì ngọt lên nhanh trong khoảng hai tháng cuối. Hai việc diễn ra ở hai phần khác nhau của trái, nên Brix cao cho biết trái đã chín, không đo được đường trong nhân.',
+     'Thịt quả thì ngọt lên nhanh trong khoảng hai tháng cuối. Hai việc diễn ra ở hai phần khác nhau của trái, nên Brix cao cho biết trái đã chín, nhưng không đo được đường trong nhân.',
      'De Castro & Marraccini 2006'),
     ('nui', 'Vùng cao chín chậm hơn, không phải cứ cao là nhiều đường',
      'Lên cao 100 m, trời mát hơn khoảng 0,6 °C, trái chín chậm lại và có thêm thời gian làm đầy hạt. Nghiên cứu trên 16 lô Arabica ở đảo Réunion thấy nhiệt độ lúc hạt phát triển '
-     'quyết định acid chlorogenic và acid béo; glucose tăng theo độ cao, nhưng tổng đường hoà tan không đổi theo khí hậu. Vị ngọt trong ly còn do độ chín, sơ chế và rang.',
+     'quyết định hàm lượng acid chlorogenic và acid béo; glucose tăng theo độ cao, nhưng tổng đường hòa tan không đổi theo khí hậu. Vị ngọt trong ly còn do độ chín, sơ chế và rang.',
      'Joët và cộng sự 2010'),
     ('hen', 'Robusta chín chậm hơn Arabica',
      'Arabica cần khoảng 6–8 tháng từ lúc hoa nở đến trái chín, Robusta cần 9–11 tháng. Vì vậy ở Di Linh, hoa nở tháng 3 thì đến tháng 11 mới vào mùa hái.',
@@ -37,13 +37,13 @@ BRIX_SOP = [
     ('Lấy dịch', 'Bóp vài trái lấy dịch thịt quả, nhỏ 2–3 giọt phủ kín lăng kính khúc xạ kế.', 'Khúc xạ kế 0–32 °Brix', 'Dịch không lẫn vỏ, không bọt.'),
     ('Đọc và lau', 'Đọc °Brix, rửa lăng kính bằng nước sạch, thấm khô rồi mới đo mẫu kế.', '5 lần đọc mỗi cây', 'Hiệu chuẩn bằng nước cất về 0 trước mỗi buổi.'),
     ('Ghi sổ', 'Ghi ngày, lô, màu trái, °Brix và tính trung bình từng lô.', 'Sổ Brix theo lô', 'Ghi cả trái xanh và chín quá để so.'),
-    ('So với ly', 'Sau một hai vụ, so Brix lúc hái với điểm cupping của từng mẻ để biết vườn mình ngon nhất ở khoảng Brix nào.', 'Dữ liệu riêng của farm', 'Mỗi giống, mỗi lô có ngưỡng riêng.'),
+    ('So với ly', 'Sau một hai vụ, so Brix lúc hái với điểm thử nếm (cupping) của từng mẻ để biết vườn mình ngon nhất ở khoảng Brix nào.', 'Dữ liệu riêng của vườn', 'Mỗi giống, mỗi lô có ngưỡng riêng.'),
 ]
 
 SRC = [
     ('De Castro R. D., Marraccini P. (2006). Cytology, biochemistry and molecular changes during coffee fruit development. Braz. J. Plant Physiol. 18(1): 175–199', 'DOI', 'https://www.doi.org/10.1590/S1677-04202006000100013'),
     ('Joët T. và cộng sự (2010). Influence of environmental factors, wet processing and their interactions on the biochemical composition of green Arabica coffee beans. Food Chemistry 118(3): 693–701', 'CIRAD', 'https://agritrop.cirad.fr/551309'),
-    ('Brix in coffee: trái chín đạt chuẩn đặc sản thường đọc 18–24 °Brix, tuỳ giống và điều kiện trồng', 'Green Coffee Collective', 'https://greencoffeecollective.com/pages/glossary/brix'),
+    ('Brix in coffee: trái chín đạt chuẩn đặc sản thường đọc 18–24 °Brix, tùy giống và điều kiện trồng', 'Green Coffee Collective', 'https://greencoffeecollective.com/pages/glossary/brix'),
     ('Ferment: lỗi chua giấm do trái chín quá, xát chậm, để lâu trong bồn', 'Sweet Maria’s', 'https://library.sweetmarias.com/glossary/ferment/'),
 ]
 
@@ -60,7 +60,7 @@ def page():
   <div class="card">
     <div class="fighead">
       <div><b>Hình 1</b> <span id="figsub"></span></div>
-      <button class="btn small" id="run2" type="button">Chạy cả mùa</button>
+      <button class="btn small" id="run2" type="button">Xem cả mùa</button>
     </div>
     <div class="scroller"><svg id="scene" viewBox="0 0 1040 720" aria-label="Bàn mô hình chín trạm: nắng và lá, hoa nở, bốn giai đoạn của trái, đo Brix, hái, tuyển nổi. Bấm từng trạm để xem chi tiết."></svg></div>
     <div class="strip" id="strip" role="group" aria-label="Chọn trạm"></div>
@@ -78,9 +78,9 @@ def page():
     <div class="row" id="waves"></div>
     <div class="head2" style="margin-top:12px"><h3>Cách hái</h3></div>
     <div class="row" id="meth"></div>
-    <div class="sl" id="gGap"><label for="iG">Cách nhau giữa các lượt hái <output id="oG"></output></label><input id="iG" type="range" min="7" max="35" step="1"><p id="gNote">Farm MeDili hái 3 lượt, từ tháng 11 đến đầu tháng 1.</p></div>
+    <div class="sl" id="gGap"><label for="iG">Khoảng cách giữa các lượt hái <output id="oG"></output></label><input id="iG" type="range" min="7" max="35" step="1"><p id="gNote">Vườn MeDili hái 3 lượt, từ tháng 11 đến đầu tháng 1.</p></div>
     <div class="sl" id="gStrip"><label for="iS">Ngày hái tuốt <output id="oS"></output></label><input id="iS" type="range" step="1"><p>Mặc định là ngày có nhiều trái chín nhất.</p></div>
-    <div class="row" style="margin-top:14px"><button class="btn main" id="run" type="button">Chạy cả mùa</button><button class="btn" id="reset" type="button">Về mặc định</button></div>
+    <div class="row" style="margin-top:14px"><button class="btn main" id="run" type="button">Xem cả mùa</button><button class="btn" id="reset" type="button">Về mặc định</button></div>
     <div class="stats" id="stats"></div>
     <div id="verdict"></div>
     <hr>
@@ -101,7 +101,7 @@ def page():
 
 <section class="card" id="hai">
   <h2>Hình 3: hái tuốt một lần hay hái chọn nhiều lượt</h2>
-  <p class="lead">400 trái trên một nhóm cây. Hoa nở theo số đợt chị chọn, mỗi trái chín sớm muộn khác nhau vài tuần. Vùng màu cho biết trái trên cây đang ở độ chín nào theo ngày; vạch đứt là các lượt hái. Đây là mô hình minh hoạ, không phải số đo của vườn.</p>
+  <p class="lead">400 trái trên một nhóm cây. Hoa nở theo số đợt bạn chọn, mỗi trái chín sớm muộn khác nhau vài tuần. Vùng màu cho biết trái trên cây đang ở độ chín nào theo ngày; vạch đứt là các lượt hái. Đây là mô hình minh họa, không phải số đo của vườn.</p>
   <figure class="pf" style="max-width:760px;margin:6px 0 14px"><img src="assets/p-mua-chin.jpg" alt="Bàn tay hái giữa những chùm cà phê có trái xanh, ương, chín và chín quá" width="1500" height="1000" loading="lazy"><figcaption>Ảnh thực tế: trên cùng một cành có trái xanh, trái ương, trái chín và trái chín quá. Vì thế hái chọn thường phải đi nhiều lượt.</figcaption></figure>
   <div class="lg" id="lg3"></div>
   <div class="chw" id="w3"><svg id="c3" class="c2" role="img" aria-label="Tỷ lệ trái xanh, ương, chín, chín quá, khô trên cây theo ngày"></svg></div>
@@ -114,11 +114,11 @@ def page():
   <h2>Đường đi từ lá vào hạt</h2>
   <p class="lead">Vị ngọt của ly cà phê bắt đầu từ chiếc lá, nhưng đường vào nhân và vào thịt quả theo hai lối, ở hai thời điểm khác nhau.</p>
   <div class="flowx">
-    <div><span class="k">1 · Lá</span><b>Quang hợp</b><p>Nắng, CO₂ và nước thành đường. Lá khỏe, cây không mang quá nhiều trái so với lá thì hạt mới đủ nguồn nuôi.</p></div>
+    <div><span class="k">1 · Lá</span><b>Quang hợp</b><p>Nắng, CO₂ và nước tạo thành đường. Lá khỏe, cây không mang quá nhiều trái so với lá thì hạt mới đủ nguồn nuôi.</p></div>
     <div><span class="k">2 · Mạch libe</span><b>Sucrose lên đường</b><p>Đường đi khắp cây dưới dạng sucrose, tới hoa, trái và hạt đang lớn.</p></div>
-    <div><span class="k">3 · Nhân</span><b>Làm đầy hạt</b><p>Ở Arabica, khoảng ngày 130–190 sau hoa, nội nhũ tích sucrose và đạm dự trữ. Lúc thu hoạch, sucrose trong nhân trung bình 9,4 % chất khô ở Arabica, 6 % ở Robusta.</p></div>
+    <div><span class="k">3 · Nhân</span><b>Làm đầy hạt</b><p>Ở Arabica, khoảng ngày 130–190 sau hoa, nội nhũ tích sucrose và đạm dự trữ. Lúc thu hoạch, sucrose trong nhân trung bình 9,4% chất khô ở Arabica, 6% ở Robusta.</p></div>
     <div><span class="k">4 · Thịt quả</span><b>Ngọt lên cuối mùa</b><p>Khoảng hai tháng cuối, thịt quả tích đường nhanh, vỏ đổi màu. Đây là đường mà khúc xạ kế đo được.</p></div>
-    <div><span class="k">5 · Lò rang</span><b>Đường thành hương</b><p>Sucrose trong nhân bị phân huỷ gần hết khi rang vừa, tạo caramel và tham gia phản ứng Maillard. Xem <a class="lnk" href="tien-chat-huong.html">Cỗ máy Tiền chất hương</a>.</p></div>
+    <div><span class="k">5 · Lò rang</span><b>Đường thành hương</b><p>Sucrose trong nhân bị phân hủy gần hết khi rang vừa, tạo caramel và tham gia phản ứng Maillard. Xem <a class="lnk" href="tien-chat-huong.html">Cỗ máy Tiền chất hương</a>.</p></div>
   </div>
 </section>
 
@@ -131,16 +131,16 @@ def page():
 <div class="cols">
   <section class="card">
     <h2>Đo Brix ngoài vườn</h2>
-    <p class="lead">Brix là công cụ chọn ngày hái, không phải điểm chất lượng. Đo đều mỗi lượt, ghi sổ, sau vài vụ farm sẽ có ngưỡng của riêng mình.</p>
+    <p class="lead">Brix là công cụ chọn ngày hái, không phải điểm chất lượng. Đo đều mỗi lượt, ghi sổ, sau vài vụ, vườn sẽ có ngưỡng của riêng mình.</p>
     <ol class="sop tight">{sop}</ol>
   </section>
   <section class="card">
-    <h2>Ở farm MeDili</h2>
+    <h2>Ở vườn MeDili</h2>
     <div class="medili">
       <h3>Đang làm</h3>
       <ul>
         <li>Tưới đều cả lô để hoa nở một lần, vụ sau chín tập trung hơn (<a class="lnk" href="vuon.html">Vườn 12 tháng</a>).</li>
-        <li>Chia mùa hái làm 3 lượt, từ tháng 11 đến đầu tháng 1; trái xanh tối đa 5 % mỗi mẻ (<a class="lnk" href="trai-ca-phe.html">Cấu tạo trái</a>).</li>
+        <li>Chia mùa hái làm 3 lượt, từ tháng 11 đến đầu tháng 1; trái xanh tối đa 5% mỗi mẻ (<a class="lnk" href="trai-ca-phe.html">Cấu tạo trái</a>).</li>
       </ul>
       <h3 style="margin-top:12px">Nên làm thêm</h3>
       <ul>
@@ -154,7 +154,7 @@ def page():
 
 <section class="card src">
   <h2>Nguồn và cách đọc mô hình</h2>
-  <p class="lead">Mốc giai đoạn theo tài liệu tổng hợp; thời gian chín đổi theo nhiệt độ bằng một mô hình đơn giản: lên cao 100 m mát hơn 0,6 °C, trái cần thêm thời gian tương ứng. Đường cong Brix, độ chín lệch giữa các trái và cách hái là minh hoạ, dùng để hiểu và làm mốc khởi đầu, không thay cho số đo của vườn.</p>
+  <p class="lead">Mốc giai đoạn theo tài liệu tổng hợp; thời gian chín đổi theo nhiệt độ bằng một mô hình đơn giản: lên cao 100 m mát hơn 0,6 °C, trái cần thêm thời gian tương ứng. Đường cong Brix, độ chín lệch giữa các trái và cách hái là minh họa, dùng để hiểu và làm mốc khởi đầu, không thay cho số đo của vườn.</p>
   <ul>{srclist(SRC)}</ul>
   <div class="lnks"><a class="lnk" href="phan-biet-ca-phe.html">Cỗ máy Phân biệt cà phê</a><a class="lnk" href="trai-ca-phe.html">Cấu tạo trái</a><a class="lnk" href="vuon.html">Vườn 12 tháng</a><a class="lnk" href="vi-sinh.html">Cỗ máy Vi sinh</a><a class="lnk" href="tien-chat-huong.html">Cỗ máy Tiền chất hương</a><a class="lnk" href="journal.html">Tất cả kiến thức cà phê</a></div>
 </section>
@@ -254,22 +254,22 @@ const ST=[
  {n:'Nội nhũ thay chỗ',sub:()=>`Tuần ${wk(.37)}–${wk(.57)}`,mech:'Nội nhũ, phần sẽ thành nhân cà phê, lớn dần và chiếm chỗ của perisperm cho tới khi lấp đầy khoang hạt. Perisperm còn lại thành lớp vỏ lụa mỏng bám quanh nhân.',
   kv:()=>[['Kéo dài',`${wk(.57)-wk(.37)} tuần`],['Theo Arabica','Lấp đầy khoang hạt quanh tuần 19'],['Kích thước hạt','gần đạt mức cuối']],check:'Cắt ngang thấy phần nhân trắng đục lớn dần, lớp trong suốt mỏng đi.',fail:'Thiếu nước giai đoạn này cho hạt nhỏ, nhiều hạt lép.',tip:'Đây là lúc giữ nước tưới và bón đúng đợt mùa mưa.'},
  {n:'Làm đầy hạt',sub:()=>`Tuần ${wk(.57)}–${wk(.83)}`,mech:'Hạt đã đủ kích thước. Cây chuyển sucrose, đạm dự trữ và dầu vào nhân. Đây là lúc hạt tích tiền chất hương: đường, acid amin, lipid, acid hữu cơ, caffeine.',
-  kv:()=>[['Kéo dài',`${wk(.83)-wk(.57)} tuần`],['Theo Arabica','Ngày 130–190 sau hoa'],['Sucrose lúc hái',st.v==='rob'?'khoảng 6 % chất khô':'khoảng 9,4 % chất khô']],check:'Trái nặng tay, cắt ngang nhân chắc, khó bóp.',fail:'Nghĩ trái đổi màu mới bắt đầu ngọt. Nhân đã tích đường từ trước, lúc vỏ còn chưa đổi màu.',tip:'Không để cây mang quá tải ở giai đoạn này, hạt sẽ nhẹ và hương mỏng.'},
+  kv:()=>[['Kéo dài',`${wk(.83)-wk(.57)} tuần`],['Theo Arabica','Ngày 130–190 sau hoa'],['Sucrose lúc hái',st.v==='rob'?'khoảng 6% chất khô':'khoảng 9,4% chất khô']],check:'Trái nặng tay, cắt ngang nhân chắc, khó bóp.',fail:'Nghĩ trái đổi màu mới bắt đầu ngọt. Nhân đã tích đường từ trước, lúc vỏ còn chưa đổi màu.',tip:'Không để cây mang quá tải ở giai đoạn này, hạt sẽ nhẹ và hương mỏng.'},
  {n:'Đổi màu và chín',sub:()=>`Chín tới quanh tuần ${wk(.97)}–${wk(1.06)}`,mech:'Diệp lục trong vỏ giảm, sắc tố đỏ tăng, trái ương rồi chín đỏ. Thịt quả tích đường nhanh trong khoảng hai tháng cuối, Brix tăng. Để quá lâu thì trái chín quá, sẫm màu, rồi khô trên cây.',
   kv:()=>[['Chín tới',`ngày ${Math.round(.97*R.T)}–${Math.round(1.06*R.T)}`],['Khoảng',`${dmy(.97*R.T)} đến ${dmy(1.06*R.T)}`],['Chín quá sau',`ngày ${Math.round(1.06*R.T)}`]],check:'Trái đỏ đều, bóp nhẹ thấy mềm, hạt trượt ra dễ.',fail:'Trái đỏ sẫm tưởng là ngon nhất. Nhiều khi đó đã là trái chín quá.',tip:'Hái theo lượt để lấy đúng khoảng chín tới.'},
  {n:'Đo Brix',sub:()=>R.b==null?'Trái khô, không còn dịch':`${vn(R.b,1)} °Brix lúc này`,mech:'Khúc xạ kế đo độ khúc xạ của dịch thịt quả để ước lượng chất tan, chủ yếu là đường. Brix tăng theo độ chín nên là công cụ chọn ngày hái tốt, nhưng không cho biết đường trong nhân.',
-  kv:()=>[['Brix lúc này',R.b==null?'không đo được':vn(R.b,1)+' °Brix'],['Trái chín đặc sản thường','18–24 °Brix'],['Pha của trái',R.ph.n]],check:'Hiệu chuẩn về 0 bằng nước cất, đo dịch của nhiều trái, lấy trung bình.',fail:'Lấy Brix làm điểm chất lượng. Brix cao do trái chín quá, mất nước cũng tăng.',tip:'Lập sổ Brix theo lô, so với điểm cupping sau vài vụ.'},
+  kv:()=>[['Brix lúc này',R.b==null?'không đo được':vn(R.b,1)+' °Brix'],['Trái chín đặc sản thường','18–24 °Brix'],['Giai đoạn của trái',R.ph.n]],check:'Hiệu chuẩn về 0 bằng nước cất, đo dịch của nhiều trái, lấy trung bình.',fail:'Lấy Brix làm điểm chất lượng. Brix cao do trái chín quá, mất nước cũng tăng.',tip:'Lập sổ Brix theo lô, so với điểm thử nếm (cupping) sau vài vụ.'},
  {n:'Hái',sub:()=>st.meth==='sel'?`Hái chọn ${R.np} lượt`:`Hái tuốt ngày ${st.sday}`,mech:()=>st.meth==='sel'?`Người hái quay lại sau mỗi ${st.gap} ngày, chỉ lấy trái chín, chín quá và khô, lẫn một ít trái ương. Lượt cuối vét hết trái còn lại trên cây.`:'Một lần tuốt hết cả cành: nhanh, rẻ công, nhưng lấy cả trái xanh, ương lẫn trái chín quá.',
-  kv:()=>[['Trái chín trong mẻ',vn(R.ripe,0)+' %'],['Trái xanh',vn(R.green,0)+' %'],['Ương',vn(R.un,0)+' %'],['Chín quá, khô',vn(R.over,0)+' %']],check:'Đếm ngẫu nhiên 100 trái trong rổ mỗi lượt.',fail:'Hái tuốt cho nhanh rồi định loại sau. Trái xanh đã lẫn vào mẻ thì khó tách hết.',tip:'Chuẩn MeDili: trái xanh tối đa 5 % mỗi mẻ.'},
- {n:'Tuyển nổi',sub:()=>`Nổi khoảng ${vn(R.fl,0)} %`,mech:'Đổ trái vào bể nước. Trái chín chắc chìm; trái khô, lép, sâu và nhiều trái chín quá nổi lên. Vớt riêng phần nổi để không kéo hương lỗi vào mẻ tốt.',
-  kv:()=>[['Phần nổi ước tính',vn(R.fl,0)+' %'],['Trái chín còn lại',vn(R.ripe,0)+' %'],['Cách hái',st.meth==='sel'?'Hái chọn':'Hái tuốt']],check:'Nước sạch, thay sau mỗi vài mẻ. Vớt kỹ lớp nổi.',fail:'Trộn lại phần nổi vào mẻ cho đủ cân.',tip:'Sau tuyển nổi, sơ chế trong ngày. Xem Cỗ máy Vi sinh.'}];
+  kv:()=>[['Trái chín trong mẻ',vn(R.ripe,0)+'%'],['Trái xanh',vn(R.green,0)+'%'],['Ương',vn(R.un,0)+'%'],['Chín quá, khô',vn(R.over,0)+'%']],check:'Đếm ngẫu nhiên 100 trái trong rổ mỗi lượt.',fail:'Hái tuốt cho nhanh rồi định loại sau. Trái xanh đã lẫn vào mẻ thì khó tách hết.',tip:'Chuẩn MeDili: trái xanh tối đa 5% mỗi mẻ.'},
+ {n:'Tuyển nổi',sub:()=>`Nổi khoảng ${vn(R.fl,0)}%`,mech:'Đổ trái vào bể nước. Trái chín chắc chìm; trái khô, lép, sâu và nhiều trái chín quá nổi lên. Vớt riêng phần nổi để không kéo hương lỗi vào mẻ tốt.',
+  kv:()=>[['Phần nổi ước tính',vn(R.fl,0)+'%'],['Trái chín còn lại',vn(R.ripe,0)+'%'],['Cách hái',st.meth==='sel'?'Hái chọn':'Hái tuốt']],check:'Nước sạch, thay sau mỗi vài mẻ. Vớt kỹ lớp nổi.',fail:'Trộn lại phần nổi vào mẻ cho đủ cân.',tip:'Sau tuyển nổi, sơ chế trong ngày. Xem Cỗ máy Vi sinh.'}];
 
 /* ====== DỰNG CẢNH ====== */
 const ANCH=[null,[8,14,13],[21,14,8.6],[33,13,5.4],[44,13,6.6],[55,13,7.6],[66,13,7.9],[77,12.5,4.2],[91,13,5.2],[111,14,6.6]];
 const CHIP=[null,{x:176,y:12},{x:244,y:50},{x:318,y:90},{x:396,y:130},{x:474,y:170},{x:552,y:212},{x:634,y:256},{x:716,y:304},{x:800,y:356}];
 const PED=[[29,1.25],[40,2.05],[51,2.7],[62,2.9]];
 function buildScene(){
- let h=bench(124,24,'Cỗ máy Trái chín · Farm Di Linh',46);
+ let h=bench(124,24,'Cỗ máy Trái chín · Vườn Di Linh',46);
  h+=`<polyline class="flowL" points="${pts([P(11,6,9.5),P(30,5,9),P(68,5,9)])}"/>`;
  /* 1 nắng và lá */
  const sp=P(-4,8,13);let s=`<g>${[0,45,90,135,180,225,270,315].map(a=>{const r1=19,r2=27,c=Math.cos(a*Math.PI/180),n=Math.sin(a*Math.PI/180);return `<line class="ray" x1="${f1(sp[0]+c*r1)}" y1="${f1(sp[1]+n*r1)}" x2="${f1(sp[0]+c*r2)}" y2="${f1(sp[1]+n*r2)}"/>`}).join('')}<circle class="sun" cx="${f1(sp[0])}" cy="${f1(sp[1])}" r="15"/></g>`;
@@ -309,12 +309,12 @@ function renderScene(){const r=R,T=r.T;
  dots('kS1',87,13,2.8,3.2,34,r.stp.tot,3);dots('kS2',96,13,2.8,3.2,34,r.sel.tot,5);
  const bx=st.meth==='sel'?96:87;$('bskOn').innerHTML=disc(bx,13,0,4.1,'nowr');
  const g=rng(9);let s='';const nf=Math.round(r.fl/2.5);for(let i=0;i<nf;i++){const q2=P(104+g()*13,9+g()*9,4.52);s+=`<circle cx="${f1(q2[0])}" cy="${f1(q2[1])}" r="2.4" style="fill:${g()<.5?'#4E3A2C':'#7A2414'};stroke:#3A2416;stroke-width:.4"/>`}$('flt').innerHTML=s;
- $('kF').textContent='nổi '+vn(r.fl,0)+' %';
+ $('kF').textContent='nổi '+vn(r.fl,0)+'%';
  drawFlow();drawChips()}
 function chipLabel(i){const r=R;return ['','Nắng và lá',`Hoa nở · ${st.waves} đợt`,`Trái non · tuần 0–${wk(.37)}`,`Nội nhũ · tuần ${wk(.37)}–${wk(.57)}`,`Làm đầy hạt · tuần ${wk(.57)}–${wk(.83)}`,`Chín tới · tuần ${wk(.97)}–${wk(1.06)}`,
- r.b==null?'Brix · trái khô':`Brix ${vn(r.b,1)} °Bx`,st.meth==='sel'?`Hái chọn ${r.np} lượt · ${vn(r.ripe,0)} % chín`:`Hái tuốt · ${vn(r.ripe,0)} % chín`,`Tuyển nổi · nổi ${vn(r.fl,0)} %`][i]}
+ r.b==null?'Brix · trái khô':`Brix ${vn(r.b,1)} °Bx`,st.meth==='sel'?`Hái chọn ${r.np} lượt · ${vn(r.ripe,0)}% chín`:`Hái tuốt · ${vn(r.ripe,0)}% chín`,`Tuyển nổi · nổi ${vn(r.fl,0)}%`][i]}
 function drawFlow(){const r=R,V=VAR[st.v];
- const rows=[['Giống, độ cao',`${V.sh} · ${fm(st.alt)}${NB}m`],['Nhiệt độ trung bình',`khoảng ${vn(temp(),1)}${NB}°C`],['Từ hoa đến chín',`${r.T} ngày, ${vn(r.T/30.4,1)} tháng`],['Đang xem',`ngày ${st.day} · tuần ${Math.round(st.day/7)}`],['Pha của trái',r.ph.n],['Brix dịch quả',r.b==null?'không còn dịch':vn(r.b,1)+NB+'°Bx'],['Mẻ hái',`${vn(r.ripe,0)}${NB}% chín · ${r.np} lượt`]];
+ const rows=[['Giống, độ cao',`${V.sh} · ${fm(st.alt)}${NB}m`],['Nhiệt độ trung bình',`khoảng ${vn(temp(),1)}${NB} °C`],['Từ hoa đến chín',`${r.T} ngày, ${vn(r.T/30.4,1)} tháng`],['Đang xem',`ngày ${st.day} · tuần ${Math.round(st.day/7)}`],['Giai đoạn của trái',r.ph.n],['Brix dịch quả',r.b==null?'không còn dịch':vn(r.b,1)+NB+'°Bx'],['Mẻ hái',`${vn(r.ripe,0)}% chín · ${r.np} lượt`]];
  const x=16,rh=27,h=50+rows.length*rh+20,y=712-h,w=330;
  let g=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="${x+16}" y="${y+26}" class="lab12" style="letter-spacing:.08em">MỘT VỤ TRÁI, TỪ HOA ĐẾN XƯỞNG</text>`;
  rows.forEach(([a,b],i)=>{const yy=y+48+i*rh;g+=`<text class="flowT" x="${x+16}" y="${yy+4}">${a}</text><text x="${x+w-16}" y="${yy+4}" text-anchor="end" class="mono flowT">${b}</text>`});
@@ -333,7 +333,7 @@ function draw3(){const T=R.T,W=cw('w3'),mob=W<760,H=mob?240:300,d0=Math.round(.7
  $('c3').setAttribute('viewBox',`0 0 ${W} ${H}`);
  $('c3').innerHTML=lineSVG({W,H,l:mob?34:42,r:14,t:22,b:24,x0:d0,x1:d1,y0:0,y1:100,xt,xf:v=>mob?v:v+' ('+dmy(v)+')',yt:[0,50,100],yf:v=>v+'%',ttl:mob?'Trái trên cây theo độ chín (%)':'Trái trên cây theo độ chín · trục ngang: ngày sau hoa nở',areas,vl,vx:clamp(st.day,d0,d1)});
  legend('lg3',CL.map(c=>({c:c.c,n:c.n,box:1})))}
-function mixRows(){const row=(lab,cnt,cls2)=>{const s=cnt.reduce((a,b)=>a+b,0)||1;return `<div class="mrow2 ${cls2||''}"><span>${lab}</span><div class="stk">${cnt.map((v,k)=>v?`<i class="${CL[k].lt?'lt':''}" style="width:${f1(v/s*100)}%;background:${CL[k].c}" title="${CL[k].n} ${vn(v/s*100,0)} %">${v/s>=.09?vn(v/s*100,0):''}</i>`:'').join('')}</div><b>${vn(cnt[2]/s*100,0)} %</b></div>`};
+function mixRows(){const row=(lab,cnt,cls2)=>{const s=cnt.reduce((a,b)=>a+b,0)||1;return `<div class="mrow2 ${cls2||''}"><span>${lab}</span><div class="stk">${cnt.map((v,k)=>v?`<i class="${CL[k].lt?'lt':''}" style="width:${f1(v/s*100)}%;background:${CL[k].c}" title="${CL[k].n} ${vn(v/s*100,0)}%">${v/s>=.09?vn(v/s*100,0):''}</i>`:'').join('')}</div><b>${vn(cnt[2]/s*100,0)}%</b></div>`};
  let h='';R.sel.passes.forEach((p,i)=>h+=row(`${p.vet?'Lượt vét':'Lượt '+(i+1)} · ${dmy(p.day)}`,p.cnt));
  h+=row(`Tổng hái chọn`,R.sel.tot,'tot'+(st.meth==='sel'?' sel':''));h+=row(`Hái tuốt · ${dmy(st.sday)}`,R.stp.tot,'tot'+(st.meth==='strip'?' sel':''));
  $('mix').innerHTML=h}
@@ -347,7 +347,7 @@ function drawCut(){const s=R.s,k=ip(SZ,s),cx=168,cy=165,ax=96*k+14,ay=128*k+14,e
  const lx=340;L.forEach(([x,y,t],i)=>{const ty=60+i*48;g+=`<line class="lead2" x1="${f1(x)}" y1="${f1(y)}" x2="${lx-6}" y2="${ty-4}"/><text x="${lx}" y="${ty}">${t}</text>`});
  g+=`<text x="${lx}" y="${300}" style="font:500 12px var(--mono);fill:var(--muted)">ngày ${st.day} · ${R.ph.n.toLowerCase()}</text>`;
  $('cut').innerHTML=g;
- const B=[['Kích thước trái',k,vn(k*100,0)+' %'],['Nội nhũ trong khoang hạt',en,vn(en*100,0)+' %'],['Chất khô trong nhân',dm,vn(dm*100,0)+' %'],['Brix thịt quả',(R.b||0)/26,R.b==null?'khô':vn(R.b,1)+' °Bx']];
+ const B=[['Kích thước trái',k,vn(k*100,0)+'%'],['Nội nhũ trong khoang hạt',en,vn(en*100,0)+'%'],['Chất khô trong nhân',dm,vn(dm*100,0)+'%'],['Brix thịt quả',(R.b||0)/26,R.b==null?'khô':vn(R.b,1)+' °Bx']];
  $('gbars').innerHTML=B.map(([n,v,t])=>`<div class="bar"><span>${n}</span><div class="track"><i style="width:${f1(clamp(v,0,1)*100)}%"></i></div><span>${t}</span></div>`).join('');
  const segs=[['Trái non',.37,'#EFE3C2'],['Nội nhũ',.2,'#E6D4A6'],['Làm đầy',.26,'#D9C08A'],['Đổi màu',.14,'#E2A15A'],['Chín',.09,'#C0563B'],['Quá',.1,'#8E3A2A']],tot=1.16;
  $('tline').innerHTML=`<div class="tl2">${segs.map(([n,f,c])=>`<div style="flex:${f};background:${c}">${n}</div>`).join('')}<i class="mk" style="left:calc(${f1(clamp(R.s/tot,0,1)*100)}% - 1px)"></i></div><div class="tlx"><span>hoa nở</span><span>tuần ${wk(.57)}</span><span>tuần ${wk(.97)}</span><span>tuần ${wk(1.16)}</span></div>`;
@@ -355,11 +355,11 @@ function drawCut(){const s=R.s,k=ip(SZ,s),cx=168,cy=165,ax=96*k+14,ay=128*k+14,e
 
 /* ====== ĐIỀU KHIỂN ====== */
 function verdict(){const r=R;let k='good',t,m;
- if(r.green>15){k='bad';t=`Mẻ lẫn ${vn(r.green,0)} % trái xanh`;m='Quá ngưỡng 5 % của MeDili. Trái xanh kéo vị ngái, chát vào cả mẻ; hái chọn hoặc lùi ngày hái.'}
- else if(r.green>5){k='warn';t=`Mẻ có ${vn(r.green,0)} % trái xanh`;m='Vượt ngưỡng 5 % trái xanh mỗi mẻ của MeDili. Lùi ngày hái hoặc thêm một lượt hái chọn.'}
- else if(r.ripe<60){k='warn';t=`Mẻ chỉ có ${vn(r.ripe,0)} % trái chín`;m=`Trái ương ${vn(r.un,0)} %, chín quá và khô ${vn(r.over,0)} %. Trái ương chưa đủ ngọt, trái chín quá dễ lên men trong vỏ: hái chọn nhiều lượt cho mẻ đều hơn.`}
- else if(r.over>15){k='warn';t=`${vn(r.over,0)} % trái chín quá hoặc khô`;m='Dễ mang mùi lên men, mốc. Hái các lượt gần nhau hơn.'}
- else{t=`Mẻ đạt: ${vn(r.ripe,0)} % trái chín`;m=`Trái xanh ${vn(r.green,0)} %, dưới ngưỡng 5 % của MeDili.`}
+ if(r.green>15){k='bad';t=`Mẻ lẫn ${vn(r.green,0)}% trái xanh`;m='Quá ngưỡng 5% của MeDili. Trái xanh kéo vị ngái, chát vào cả mẻ; hái chọn hoặc lùi ngày hái.'}
+ else if(r.green>5){k='warn';t=`Mẻ có ${vn(r.green,0)}% trái xanh`;m='Vượt ngưỡng 5% trái xanh mỗi mẻ của MeDili. Lùi ngày hái hoặc thêm một lượt hái chọn.'}
+ else if(r.ripe<60){k='warn';t=`Mẻ chỉ có ${vn(r.ripe,0)}% trái chín`;m=`Trái ương ${vn(r.un,0)}%, chín quá và khô ${vn(r.over,0)}%. Trái ương chưa đủ ngọt, trái chín quá dễ lên men trong vỏ: hái chọn nhiều lượt cho mẻ đều hơn.`}
+ else if(r.over>15){k='warn';t=`${vn(r.over,0)}% trái chín quá hoặc khô`;m='Dễ mang mùi lên men, mốc. Hái các lượt gần nhau hơn.'}
+ else{t=`Mẻ đạt: ${vn(r.ripe,0)}% trái chín`;m=`Trái xanh ${vn(r.green,0)}%, dưới ngưỡng 5% của MeDili.`}
  const d=r.T-VAR[st.v].T0;m+=` Ở ${fm(st.alt)} m, trái cần khoảng ${r.T} ngày từ hoa đến chín${d?`, ${d>0?'chậm':'nhanh'} hơn ${Math.abs(d)} ngày so với ${fm(VAR[st.v].a0)} m`:''}.`;
  $('verdict').className=k;$('verdict').innerHTML=`<b>${k==='good'?'✓':k==='warn'?'!':'✕'} ${t}</b>${m}`}
 function sliders(){const V=VAR[st.v],T=R.T;
@@ -369,7 +369,7 @@ function sliders(){const V=VAR[st.v],T=R.T;
  $('iS').min=Math.round(.85*T);$('iS').max=Math.round(1.25*T);$('iS').value=st.sday;$('oS').textContent=`ngày ${st.sday} · ${dmy(st.sday)}`;
  $('gGap').hidden=st.meth!=='sel';$('gStrip').hidden=st.meth!=='strip'}
 function stats(){const r=R,t=(a,b)=>`<div class="stat"><span>${a}</span><b>${b}</b></div>`;
- $('stats').innerHTML=t('Pha của trái',r.ph.n)+t('Brix dịch quả',r.b==null?'—':vn(r.b,1)+NB+'°Bx')+t('Trái chín trong mẻ',vn(r.ripe,0)+NB+'%')+t('Số lượt hái',r.np)}
+ $('stats').innerHTML=t('Giai đoạn của trái',r.ph.n)+t('Brix dịch quả',r.b==null?'—':vn(r.b,1)+NB+'°Bx')+t('Trái chín trong mẻ',vn(r.ripe,0)+'%')+t('Số lượt hái',r.np)}
 function update(full){if(full){st.sday=bestStrip()}calc();
  pills('vars',Object.entries(VAR).map(([k,v])=>[k,v.n]),st.v,k=>{const f=st.day/R.T;st.v=k;st.alt=VAR[k].a0;st.gap=VAR[k].gap;stopRun();CHK='';calc();st.day=Math.round(f*R.T);update(1)});
  pills('waves',[1,2,3].map(x=>[x,x+' đợt']),st.waves,k=>{st.waves=+k;stopRun();update(1)});

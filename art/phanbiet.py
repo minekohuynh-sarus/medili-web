@@ -1,13 +1,13 @@
 # Cỗ máy Phân biệt cà phê: Robusta Cà Sẻ Di Linh, Robusta cao sản, Arabica, Catimor, Moka, Culi, Liberica, Excelsa.
-# Định tính (vườn, trái, hình nhân, nếm), định lượng (sàng, cân 100 nhân, phòng lab) và một bộ phân loại Bayes đơn giản để minh hoạ.
+# Định tính (vườn, trái, hình nhân, nếm), định lượng (sàng, cân 100 nhân, phòng thí nghiệm) và một bộ phân loại Bayes đơn giản để minh họa.
 # Màu theo phong thủy: không xanh lá, không xanh dương, không đen.
 import json
 from iso import *
 
 FILE = 'phan-biet-ca-phe.html'
-TITLE = 'Cỗ Máy Phân Biệt Cà Phê MeDili'
+TITLE = 'Cỗ máy Phân biệt cà phê MeDili'
 DESC = ('Phân biệt Robusta Cà Sẻ Di Linh với Robusta cao sản, Arabica, Catimor, Moka, Culi, Liberica và Excelsa: xem vườn, soi nhân, '
-        'sàng, cân 100 nhân, phòng lab và nếm. Định tính, định lượng, cảm quan. Mô hình tương tác của MeDili, có nguồn.')
+        'sàng, cân 100 nhân, phòng thí nghiệm và nếm. Định tính, định lượng, cảm quan. Mô hình tương tác của MeDili, có nguồn.')
 
 # ---------- tám mẫu ----------
 # q: [trung bình, độ lệch] cho bộ phân loại; Lmm: chiều dài nhân ước theo khối lượng 100 nhân và dáng hạt (Liberica theo đo đạc).
@@ -30,7 +30,7 @@ SAMPLES = [
          tree='Vườn đồng đều như đúc, gốc có vết ghép; phải trồng xen nhiều dòng vì Robusta cần thụ phấn chéo. TR9 thấp, gọn, lá non màu đồng sẫm.', tc='cây ghép đồng đều',
          cher='Trái to, đều trong cùng một dòng.', cc='to, đều',
          bean='To, đều, dáng tròn hơi dài.', cutT='Thẳng',
-         alt='Tùy vùng: Đắk Lắk, Gia Lai, Lâm Đồng; TR9 hợp khoảng 500–800 m', har='Tùy dòng; TR9, TR14, TR15 chín muộn',
+         alt='Tùy vùng: Đắk Lắk, Gia Lai, Lâm Đồng; TR9 phù hợp ở khoảng 500–800 m', har='Tùy dòng; TR9, TR14, TR15 chín muộn',
          notes='Đắng rõ, gỗ, ngũ cốc rang; vị nhẹ hơn Cà Sẻ', cupS='đắng rõ, thân vừa',
          scale='Fine Robusta', prof=[5, 2.5, 4, 7.5, 6, 5], dist=[45, 43, 11, 1],
          q=dict(caf=[2.1, .25], lip=[10, 1], suc=[4, .8], w=[21, 3], s16=[88, 6], cu=[4, 2]),
@@ -44,7 +44,7 @@ SAMPLES = [
          cher='Trái đỏ, cỡ vừa; mỗi đốt ít trái hơn Robusta.', cc='vừa, thưa',
          bean='Dẹt, thuôn dài, mặt phẳng rộng.', cutT='Cong chữ S',
          alt='Vùng cao; Cầu Đất khoảng 1.500 m trở lên', har='Tùy vùng',
-         notes='Hoa, cam chanh, trái cây; chua sáng, ngọt', cupS='chua sáng, thơm',
+         notes='Hoa, cam chanh, trái cây; chua thanh, ngọt', cupS='chua thanh, thơm',
          scale='SCA', prof=[8, 7, 7, 3, 5, 6], dist=[30, 50, 18, 2],
          q=dict(caf=[1.2, .15], lip=[16, 1], suc=[8, 1], w=[18, 1.6], s16=[80, 7], cu=[4, 2]),
          sh=dict(a=1.45, asym=.06, hook=0, pt=0, cut='s'), Lmm=10.4, omc='Chỉ ở mức vết', omcS='vết',
@@ -70,7 +70,7 @@ SAMPLES = [
          cher='Trái nhỏ, tròn.', cc='nhỏ, tròn',
          bean='Rất nhỏ, tròn như hạt đậu.', cutT='Cong, ngắn',
          alt='Khoảng 1.500–1.600 m, Cầu Đất', har='Tùy vụ',
-         notes='Vỏ quýt, hạnh nhân, dâu, vani; có nguồn tả socola, trái khô, gia vị', cupS='thơm nồng, chua thanh',
+         notes='Vỏ quýt, hạnh nhân, dâu, vani; có tài liệu mô tả socola, trái khô, gia vị', cupS='thơm nồng, chua thanh',
          scale='SCA', prof=[9, 7, 8, 3, 6, 7], dist=[3, 27, 55, 15],
          q=dict(caf=[.9, .25], lip=[16, 1], suc=[8, 1], w=[11.5, 1.5], s16=[30, 10], cu=[6, 3]),
          sh=dict(a=1.12, asym=.03, hook=0, pt=0, cut='s'), Lmm=7.5, omc='Chỉ ở mức vết', omcS='vết',
@@ -87,7 +87,7 @@ SAMPLES = [
          scale='Theo loài của cây mẹ', prof=[6, 3, 5, 7.5, 7.5, 7], dist=[10, 35, 45, 10],
          q=dict(caf=[2.3, .3], lip=[10, 1], suc=[4, .8], w=[15.5, 2], s16=[45, 15], cu=[92, 5]),
          sh=dict(a=1.32, asym=0, hook=0, pt=0, cut='p'), Lmm=8.0, omc='Theo loài của cây mẹ', omcS='theo cây mẹ',
-         yld='Khoảng 4–5 % sản lượng một vụ', conf='Cà Sẻ: Sẻ là giống, Culi là hình hạt. Có Culi Sẻ, Culi cao sản, Culi Arabica.',
+         yld='Khoảng 4–5% sản lượng một vụ', conf='Cà Sẻ: Sẻ là giống, Culi là hình hạt. Có Culi Sẻ, Culi cao sản, Culi Arabica.',
          lo=[26, 24], tv=dict(t=2, h=5.2, cr=4.2, n=12, lr=13, ir=.6, seed=19),
          cv=dict(n=11, r=4.6, cols=['#B33A24', '#C8553D'], cl=3)),
     dict(k='lib', n='Liberica (cà phê mít)', s='Liberica', sp='Coffea liberica', grp='L', c='var(--k7)',
@@ -198,15 +198,15 @@ ROB = [('TR4', 'dl', 18.4, 80.0), ('TR9', 'dl', 22.5, 94.3), ('TR11', 'dl', 18.3
 # ---------- bảng định lượng: giá trị và cờ nguồn ----------
 FL = dict(N='NC', L='Loài', T='TL', U='Ước')
 QT = [
-    ('se', [('2,2–2,7', 'T'), ('≈ 10', 'L'), ('≈ 4', 'L'), ('13–17', 'U'), ('55–70 %', 'U'), ('4–5 %', 'T'), ('2–3 tấn/ha', 'U'), ('Cao', 'L')]),
-    ('cs', [('≈ 2,2', 'L'), ('≈ 10', 'L'), ('≈ 4', 'L'), ('15,3–29,6; Lâm Đồng 19,2–29,6', 'N'), ('63–99 %; Lâm Đồng 87–99 %', 'N'), ('4–5 %', 'T'),
+    ('se', [('2,2–2,7', 'T'), ('≈ 10', 'L'), ('≈ 4', 'L'), ('13–17', 'U'), ('55–70%', 'U'), ('4–5%', 'T'), ('2–3 tấn/ha', 'U'), ('Cao', 'L')]),
+    ('cs', [('≈ 2,2', 'L'), ('≈ 10', 'L'), ('≈ 4', 'L'), ('15,3–29,6; Lâm Đồng 19,2–29,6', 'N'), ('63–99%; Lâm Đồng 87–99%', 'N'), ('4–5%', 'T'),
             ('3,7–7,3 tấn/ha', 'N'), ('Cao', 'L')]),
-    ('ara', [('≈ 1,2', 'L'), ('≈ 16', 'L'), ('≈ 8', 'L'), ('≈ 18', 'U'), ('≈ 80 %', 'U'), ('4–5 %', 'T'), ('Thấp', 'T'), ('Vết', 'N')]),
-    ('cat', [('≈ 1,2', 'L'), ('≈ 16', 'L'), ('≈ 8', 'L'), ('16–18', 'U'), ('70–85 %', 'U'), ('4–5 %', 'T'), ('1,67 tấn/ha', 'N'), ('Vết', 'N')]),
-    ('mok', [('Nếu là Mokka: khoảng ½ Arabica', 'T'), ('≈ 16', 'L'), ('≈ 8', 'L'), ('10–13', 'U'), ('20–40 %', 'U'), ('—', ''), ('1–2 kg/cây/năm', 'T'), ('Vết', 'N')]),
-    ('culi', [('Theo cây mẹ', ''), ('Theo cây mẹ', ''), ('Theo cây mẹ', ''), ('Theo cây mẹ', ''), ('Sàng riêng', ''), ('4–5 % một vụ; lô culi từ 90 %', 'T'), ('—', ''),
+    ('ara', [('≈ 1,2', 'L'), ('≈ 16', 'L'), ('≈ 8', 'L'), ('≈ 18', 'U'), ('≈ 80%', 'U'), ('4–5%', 'T'), ('Thấp', 'T'), ('Vết', 'N')]),
+    ('cat', [('≈ 1,2', 'L'), ('≈ 16', 'L'), ('≈ 8', 'L'), ('16–18', 'U'), ('70–85%', 'U'), ('4–5%', 'T'), ('1,67 tấn/ha', 'N'), ('Vết', 'N')]),
+    ('mok', [('Nếu là Mokka: khoảng ½ Arabica', 'T'), ('≈ 16', 'L'), ('≈ 8', 'L'), ('10–13', 'U'), ('20–40%', 'U'), ('—', ''), ('1–2 kg/cây/năm', 'T'), ('Vết', 'N')]),
+    ('culi', [('Theo cây mẹ', ''), ('Theo cây mẹ', ''), ('Theo cây mẹ', ''), ('Theo cây mẹ', ''), ('Sàng riêng', ''), ('4–5% một vụ; lô culi từ 90%', 'T'), ('—', ''),
               ('Theo loài', '')]),
-    ('lib', [('Gần Arabica', 'T'), ('—', ''), ('—', ''), ('≈ 21 (0,212 g một nhân)', 'N'), ('Hàng xuất khẩu từ 90 %', 'T'), ('—', ''), ('—', ''), ('Chưa rõ', '')]),
+    ('lib', [('Gần Arabica', 'T'), ('—', ''), ('—', ''), ('≈ 21 (0,212 g một nhân)', 'N'), ('Hàng xuất khẩu từ 90%', 'T'), ('—', ''), ('—', ''), ('Chưa rõ', '')]),
     ('exc', [('Gần Arabica', 'T'), ('—', ''), ('—', ''), ('Nhỏ hơn Liberica', 'T'), ('—', ''), ('—', ''), ('Cao hơn Liberica', 'T'), ('Chưa rõ', '')]),
 ]
 QROWS = [('Loài, nhóm', 'sp'), ('Nhân giống', 'prop'), ('Cây', 'tree'), ('Trái', 'cher'), ('Nhân xanh', 'bean'), ('Rãnh giữa', 'cutT'), ('Vùng, độ cao', 'alt'),
@@ -215,7 +215,7 @@ QROWS = [('Loài, nhóm', 'sp'), ('Nhân giống', 'prop'), ('Cây', 'tree'), ('
 NAMES = [
     ('Cà Sẻ, Robusta Sẻ, Ro Sẻ, Robusta hạt nhỏ', 'Giống Robusta cũ, trồng từ hạt, nhân nhỏ. Tên dân gian, không phải tên phân loại.', 'Hồ sơ vườn, cây không vết ghép; cân 100 nhân; sàng.'),
     ('Robusta cao sản, Ro ghép, TR4, TR9, TR11, TR14, TRS1', 'Các dòng chọn lọc năng suất cao của Viện WASI, phần lớn nhân bằng ghép.', 'Nhân to, đều; ở Lâm Đồng thường trên 20 g mỗi 100 nhân.'),
-    ('Culi', 'Hình hạt: trái chỉ có một nhân tròn. Robusta hay Arabica đều có, khoảng 4–5 % một vụ.', 'Đếm hạt tròn trong 100 hạt; lô culi đã tách từ 90 % trở lên.'),
+    ('Culi', 'Hình hạt: trái chỉ có một nhân tròn. Robusta hay Arabica đều có, khoảng 4–5% một vụ.', 'Đếm hạt tròn trong 100 hạt; lô culi đã tách từ 90% trở lên.'),
     ('Moka', 'Giống Arabica thường được mô tả là dạng lùn của Bourbon; nhân rất nhỏ, tròn. Có nguồn cho rằng Cầu Đất chỉ còn khoảng 500 cây thuần.', 'Hỏi vườn, độ cao; cân 100 nhân; giá cao vì hiếm.'),
     ('Arabica Cầu Đất', 'Tên vùng, không phải tên giống. Ở đó có Typica, Bourbon, Moka, Catimor.', 'Hỏi giống cụ thể của lô.'),
     ('Catimor', 'Arabica lai Timor Hybrid với Caturra, giống trồng nhiều ở Việt Nam.', 'Cây thấp, lóng ngắn; hỏi vườn.'),
@@ -227,12 +227,12 @@ NAMES = [
 
 SOP = [
     ('Lấy mẫu', 'Khoảng 300 g, trộn từ nhiều bao. Ghi mã lô và tên gọi khi chào hàng.'),
-    ('Đo ẩm', 'Tối đa 12,5 % theo TCVN 4193. Ẩm cao thì mọi số cân đều sai.'),
+    ('Đo ẩm', 'Tối đa 12,5% theo TCVN 4193. Độ ẩm cao thì mọi số cân đều sai.'),
     ('Soi 100 nhân', 'Lật mặt phẳng lên, đếm rãnh thẳng, chữ S, nhăn lệch, hạt tròn.'),
     ('Sàng', 'Sàng 18 (7,10 mm), 16 (6,30 mm), 13 (5,00 mm). Cân từng tầng.'),
     ('Cân 100 nhân', 'Nhân nguyên, không vỡ. Cân 3 lần, lấy trung bình.'),
     ('Đếm lỗi', 'Hạt đen, nâu, non, vỡ, tạp chất, tính phần trăm khối lượng.'),
-    ('Rang mẫu', 'Rang nhạt đến vừa, cùng một hồ sơ cho mọi mẫu.'),
+    ('Rang mẫu', 'Rang sáng đến vừa, cùng một hồ sơ rang cho mọi mẫu.'),
     ('Nếm', 'Nghỉ 8–24 giờ, 5 ly mỗi mẫu, nếm mù. Thang Fine Robusta hoặc SCA.'),
     ('Lab khi cần', 'Caffeine, 16-OMC bằng HPLC hoặc NMR; DNA để định danh dòng.'),
     ('Lưu mẫu', 'Giữ một phần mẫu đối chứng tới khi hết lô, ghi phiếu.'),
@@ -243,7 +243,7 @@ TCVN = [('R1 18a', '10', '0,1'), ('R1 18b', '15', '0,5'), ('R1 16a', '14', '0,5'
 
 READ = [
     ('nhan', 'Cà Sẻ không phải Culi',
-     'Sẻ là giống cây. Culi là hình hạt: trái chỉ nuôi một nhân tròn, giống nào cũng có, khoảng 4–5 % một vụ. Có Culi Sẻ, Culi cao sản, Culi Arabica.', 'CoffeeHow; MeDili'),
+     'Sẻ là giống cây. Culi là hình hạt: trái chỉ nuôi một nhân tròn, giống nào cũng có, khoảng 4–5% một vụ. Có Culi Sẻ, Culi cao sản, Culi Arabica.', 'CoffeeHow; MeDili'),
     ('can', 'Nhân nhỏ chưa chắc là Sẻ',
      'Dòng TR4 trồng ở Gia Lai chỉ 15,3 g mỗi 100 nhân, ngang Cà Sẻ. Hạn, thiếu dinh dưỡng, hái non hay sàng lấy phần nhân nhỏ đều làm nhân nhỏ đi.', 'Phan Việt Hà 2017'),
     ('phantu', 'Caffeine không chứng minh được giống',
@@ -267,7 +267,7 @@ SRC = [
      'VAAS', 'https://tapchi.vaas.vn/vi/tap-chi/ket-qua-chon-loc-dong-tu-thu-ca-phe-che-he-f5-tai-cac-tinh-tay-nguyen'),
     ('IARC (2018). Monographs Vol. 116, Coffee: thành phần nhân xanh Arabica và Robusta theo Clarke (1987)', 'IARC',
      'https://publications.iarc.who.int/_publications/media/download/1796/e3b9d8b93f56977f63fd3c4b9aff66e768296f17.pdf'),
-    ('Gunning Y. và cộng sự (2018). 16-O-methylcafestol is present in ground roast Arabica coffees. Food Chemistry: Robusta 600–1.800 mg/kg, Arabica chỉ có vết, phát hiện từ khoảng 1–3 % Robusta trộn',
+    ('Gunning Y. và cộng sự (2018). 16-O-methylcafestol is present in ground roast Arabica coffees. Food Chemistry: Robusta 600–1.800 mg/kg, Arabica chỉ có vết, phát hiện từ khoảng 1–3% Robusta trộn',
      'UEA', 'https://ueaeprints.uea.ac.uk/67696/1/Gunning_etal_2018_FoodChemistry.pdf'),
     ('SCA News số 25 (2025). Beyond Arabica and Robusta: Liberica và Excelsa là hai loài, hương vị, caffeine gần Arabica', 'SCA',
      'https://sca.coffee/sca-news/25/issue-25-insight-liberica-excelsa'),
@@ -289,11 +289,11 @@ SRC = [
      'https://www.dallmayr.com/hr/academy/magazine/how-to-tell-the-difference-between-arabica-and-robusta/'),
     ('Kaffeemacher. Fine Robusta und Q Robusta Grading: thang điểm, từ 80 điểm là Fine Robusta', 'Kaffeemacher',
      'https://kaffeemacher.ch/en/blogs/kaffeewissen/fine-robusta-und-q-robusta-grading'),
-    ('CoffeeHow. Peaberry coffee: hạt culi khoảng 4–5 % một vụ, rang đều hơn, vị không bảo đảm khác', 'CoffeeHow', 'https://coffeehow.co/peaberry-coffee/'),
+    ('CoffeeHow. Peaberry coffee: hạt culi khoảng 4–5% một vụ, rang đều hơn, vị không bảo đảm khác', 'CoffeeHow', 'https://coffeehow.co/peaberry-coffee/'),
     ('Helena Coffee. Vietnam National Coffee Export Standards: tóm tắt TCVN 4193:2014 về hạng, % hạt lỗi, lẫn loại, lỗ sàng, độ ẩm', 'Helena', 'https://www.helenacoffee.vn/?p=1372'),
-    ('Nhật Trường Kon Tum. Robusta hạt sẻ là gì: giống cũ, nhân nhỏ chắc, vị đậm; đổi sang cao sản tăng sản lượng khoảng 60–80 %', 'Nhật Trường',
+    ('Nhật Trường Kon Tum. Robusta hạt sẻ là gì: giống cũ, nhân nhỏ chắc, vị đậm; đổi sang cao sản tăng sản lượng khoảng 60–80%', 'Nhật Trường',
      'https://nhattruongkontum.com/news/tan-man/robusta-hat-se-la-gi-co-may-loai-robusta-90.html'),
-    ('Doanh Đăng. Robusta Sẻ là gì: caffeine 2,2–2,7 % theo tài liệu thương mại', 'Doanh Đăng',
+    ('Doanh Đăng. Robusta Sẻ là gì: caffeine 2,2–2,7% theo tài liệu thương mại', 'Doanh Đăng',
      'https://doanhdang.com/robusta-se-la-gi-nhung-dac-diem-noi-bat-cua-ca-phe-thuan-chung.html'),
     ('Mia.vn. Cao nguyên Di Linh: độ cao khoảng 1.000 m, Robusta trồng ở 900–1.000 m', 'Mia.vn',
      'https://mia.vn/cam-nang-du-lich/cao-nguyen-di-linh-mot-thoang-thien-nhien-khoac-len-minh-ve-dep-hoang-so-quyen-ru-1493'),
@@ -327,7 +327,7 @@ def qualtable():
 
 
 def robtable():
-    rows = ''.join(f'<tr><td>{c}</td><td>{RG[r][0]}</td><td>{str(w).replace(".", ",")}</td><td>{str(s).replace(".", ",")} %</td></tr>' for c, r, w, s in ROB)
+    rows = ''.join(f'<tr><td>{c}</td><td>{RG[r][0]}</td><td>{str(w).replace(".", ",")}</td><td>{str(s).replace(".", ",")}%</td></tr>' for c, r, w, s in ROB)
     return '<thead><tr><th>Dòng</th><th>Vùng</th><th>100 nhân, g</th><th>Trên sàng 16</th></tr></thead><tbody>' + rows + '</tbody>'
 
 
@@ -339,9 +339,9 @@ def page():
         ('Nguồn gốc', 'Robusta đưa vào Việt Nam từ đầu thế kỷ XX, trồng phổ biến ở Tây Nguyên trước khi có giống WASI', 'Các dòng WASI chọn lọc từ năm 1976: TR4, TR9, TR11, TR14, TR15; TRS1 lai từ TR4, TR9, TR11, TR12'),
         ('Nhân giống', 'Từ hạt, nên mỗi cây một khác', 'Ghép chồi, giâm cành, vườn đồng đều; phải trồng xen nhiều dòng'),
         ('100 nhân', _tag('Ước 13–17 g', 'U'), _tag('15,3–29,6 g tùy dòng và vùng; ở Lâm Đồng 19,2–29,6 g', 'N')),
-        ('Trên sàng 16', _tag('Ước 55–70 %', 'U'), _tag('63–99 %; ở Lâm Đồng 86,9–99,2 %', 'N')),
+        ('Trên sàng 16', _tag('Ước 55–70%', 'U'), _tag('63–99%; ở Lâm Đồng 86,9–99,2%', 'N')),
         ('Năng suất', _tag('Ước 2–3 tấn nhân/ha', 'U'), _tag('3,7–7,3 tấn nhân/ha trong thí nghiệm', 'N')),
-        ('Caffeine', _tag('2,2–2,7 % theo tài liệu thương mại', 'T'), _tag('Robusta nói chung khoảng 2,2 %', 'L')),
+        ('Caffeine', _tag('2,2–2,7% theo tài liệu thương mại', 'T'), _tag('Robusta nói chung khoảng 2,2%', 'L')),
         ('Ly cà phê', 'Đậm, đắng rõ, hậu dài, thân dày; socola đen, ca cao', 'Đắng rõ, gỗ, ngũ cốc rang; vị nhẹ hơn'),
         ('Điểm mạnh', 'Nguồn gen thích nghi với hạn và sâu bệnh; câu chuyện của vùng', 'Năng suất cao, nhân to đều, kháng gỉ sắt'),
         ('Điểm yếu', 'Năng suất thấp, nhân nhỏ, ít hàng sàng to', 'Cần thâm canh; TRS1 chịu hạn kém'),
@@ -351,7 +351,7 @@ def page():
     flg = ''
     sop = ''.join(f'<div><span class="k">Bước {i}</span><b>{t}</b><p>{p}</p></div>' for i, (t, p) in enumerate(SOP, 1))
     names = ''.join(f'<tr><td><b>{a}</b></td><td>{b}</td><td>{c}</td></tr>' for a, b, c in NAMES)
-    tcvn = ''.join(f'<tr><td>{a}</td><td>{b} %</td><td>{c} %</td></tr>' for a, b, c in TCVN)
+    tcvn = ''.join(f'<tr><td>{a}</td><td>{b}%</td><td>{c}%</td></tr>' for a, b, c in TCVN)
     body += f'''
 <div class="bench">
   <div class="card">
@@ -371,12 +371,12 @@ def page():
     <div class="row" style="margin-top:12px"><button class="btn main" id="run" type="button">Chạy máy</button><button class="btn" id="myst" type="button">Mẫu bí ẩn</button><button class="btn" id="reveal" type="button" hidden>Lộ đáp án</button><button class="btn" id="back" type="button" hidden>Về hồ sơ chuẩn</button></div>
     <hr>
     <div class="head2"><h3>Số đo</h3><small id="modeL"></small></div>
-    <div class="sl" style="margin-top:6px"><label for="iW">Khối lượng 100 nhân <output id="oW"></output></label><input id="iW" type="range" min="9" max="31" step="0.1"><p>Nhân nguyên, ẩm từ 12,5 % trở xuống.</p></div>
+    <div class="sl" style="margin-top:6px"><label for="iW">Khối lượng 100 nhân <output id="oW"></output></label><input id="iW" type="range" min="9" max="31" step="0.1"><p>Nhân nguyên, độ ẩm từ 12,5% trở xuống.</p></div>
     <div class="sl"><label for="iS">Nhân trên sàng 16 <output id="oS"></output></label><input id="iS" type="range" min="10" max="100" step="1"><p>Lỗ sàng 6,30 mm, mẫu 300 g.</p></div>
     <div class="sl"><label for="iC">Hạt tròn trong 100 hạt <output id="oC"></output></label><input id="iC" type="range" min="0" max="100" step="1"></div>
     <span class="lbl" style="margin-top:12px">Rãnh giữa của nhân</span>
     <div class="row" id="cuts"></div>
-    <label class="tg"><input type="checkbox" id="lab"> Có kết quả phòng lab</label>
+    <label class="tg"><input type="checkbox" id="lab"> Có kết quả phòng thí nghiệm</label>
     <div id="labBox">
       <div class="sl"><label for="iCa">Caffeine <output id="oCa"></output></label><input id="iCa" type="range" min="0.4" max="3" step="0.05"></div>
       <div class="sl"><label for="iL">Chất béo <output id="oL"></output></label><input id="iL" type="range" min="6" max="19" step="0.5"></div>
@@ -403,9 +403,9 @@ def page():
       <h3>Vườn Cà Sẻ của MeDili</h3>
       <ul>
         <li>Cao nguyên Di Linh khoảng 1.000 m; Robusta trồng ở khoảng 900–1.000 m.</li>
-        <li>Canh tác từ năm 2010, cây 15 năm tuổi, chăm theo hướng tự nhiên.</li>
-        <li>Trời mát nên trái chín chậm: hái nhiều lượt từ tháng 11 tới đầu tháng 1, trái xanh tối đa 5 %.</li>
-        <li>MeDili ghi nhận: những cây Cà Sẻ cũ cho ly cà phê ngon và rất nhiều caffeine.</li>
+        <li>Canh tác từ năm 2010, cây 15 năm tuổi, chăm sóc theo hướng tự nhiên.</li>
+        <li>Trời mát nên trái chín chậm: hái nhiều lượt từ tháng 11 tới đầu tháng 1, trái xanh tối đa 5%.</li>
+        <li>MeDili ghi nhận: những cây Cà Sẻ lâu năm cho ly cà phê ngon, giàu caffeine.</li>
       </ul>
     </div>
   </div>
@@ -415,14 +415,14 @@ def page():
     <li><b>Trái nhỏ, chùm dày</b><span>Trái nhỏ hơn dòng ghép; màu và độ chín khác nhau giữa các cây.</span><em>Trái · định tính</em></li>
     <li><b>Nhân nhỏ, chắc, lưng dày</b><span>Dáng tròn ngắn, rãnh giữa thẳng như mọi Robusta.</span><em>Nhân · định tính</em></li>
     <li><b>Nhẹ khi cân</b><span>Ước 13–17 g mỗi 100 nhân; các dòng TR4, TR9, TR11 trồng ở Lâm Đồng nặng 21,6–29,6 g.</span><em>Cân · định lượng</em></li>
-    <li><b>Ít nhân sàng to</b><span>Phần lớn nằm ở sàng 13–16; dòng ghép ở Lâm Đồng có 87–99 % nằm trên sàng 16.</span><em>Sàng · định lượng</em></li>
+    <li><b>Ít nhân sàng to</b><span>Phần lớn nằm ở sàng 13–16; dòng ghép ở Lâm Đồng có 87–99% nằm trên sàng 16.</span><em>Sàng · định lượng</em></li>
     <li><b>Đậm, đắng rõ, hậu dài</b><span>Socola đen, ca cao; thân dày, ít chua. Cao sản đắng nhưng vị nhẹ hơn.</span><em>Nếm · cảm quan</em></li>
     <li><b>Có hồ sơ vườn</b><span>Mã vườn, năm trồng, nguồn hạt giống. Đây là bằng chứng mạnh nhất; cần chắc chắn thì xét nghiệm DNA.</span><em>Truy xuất</em></li>
   </ol>
   <h3 class="h3s">Cà Sẻ và Robusta cao sản, đặt cạnh nhau</h3>
   {flg}
   <div class="tw"><table class="rich vs2">{vs2h}</table></div>
-  <p class="mnote">Cùng loài Robusta nên caffeine, chất béo, đường của hai nhóm chồng lên nhau; phân tích hoá học không tách được. Khác biệt nằm ở cây, cỡ nhân, năng suất và ly cà phê. Số “ước” của Cà Sẻ suy từ đối chứng Robusta trồng hạt đại trà trong thí nghiệm giống TRS1 (TRS1 hơn đối chứng 50,2 % năng suất và 25,4 % khối lượng 100 nhân), chưa phải số đo riêng của vườn Di Linh.</p>
+  <p class="mnote">Cùng loài Robusta nên caffeine, chất béo, đường của hai nhóm chồng lên nhau; phân tích hóa học không tách được. Khác biệt nằm ở cây, cỡ nhân, năng suất và ly cà phê. Số “ước” của Cà Sẻ suy từ đối chứng Robusta trồng hạt đại trà trong thí nghiệm giống TRS1 (TRS1 hơn đối chứng 50,2% năng suất và 25,4% khối lượng 100 nhân), chưa phải số đo riêng của vườn Di Linh.</p>
 </section>
 
 <section class="card" id="robusta">
@@ -445,10 +445,10 @@ def page():
 
 <section class="card" id="dinh-luong">
   <h2>Định lượng: tám mẫu, tám chỉ số</h2>
-  <p class="lead">Số liệu tổng hợp từ tài liệu nghiên cứu và tài liệu ngành. Ô có chữ “Ước” là số MeDili ước cho mô hình; ô gạch ngang là chưa có số đáng tin, MeDili không điền bừa.</p>
+  <p class="lead">Số liệu tổng hợp từ tài liệu nghiên cứu và tài liệu ngành. Ô có chữ “Ước” là số MeDili ước cho mô hình; ô gạch ngang là chưa có số đáng tin, MeDili không tự điền.</p>
   {flg}
   <div class="tw"><table class="rich qtab">{qtable()}</table></div>
-  <p class="mnote">Caffeine, chất béo, sucrose tính trên chất khô của nhân xanh. 16-OMC (16-O-methylcafestol) là dấu vết hoá học của Robusta, dùng để phát hiện Robusta trộn vào Arabica.</p>
+  <p class="mnote">Caffeine, chất béo, sucrose tính trên chất khô của nhân xanh. 16-OMC (16-O-methylcafestol) là dấu vết hóa học của Robusta, dùng để phát hiện Robusta trộn vào Arabica.</p>
   <details class="more"><summary>Tham số mà cỗ máy dùng (trung bình ± độ lệch)</summary><div class="tw"><table class="rich" id="pTab"></table></div>
   <p class="mnote">Giá trị trung tâm chọn từ bảng trên. Ở chỗ chưa có số, như chất béo của Liberica, MeDili đặt khoảng rộng để máy không dựa nhiều vào đó.</p></details>
 </section>
@@ -466,7 +466,7 @@ def page():
 
 <section class="card" id="cam-quan">
   <h2>Hình 4: hồ sơ cảm quan, Cà Sẻ đặt cạnh mẫu khác</h2>
-  <p class="lead">Cường độ tương đối trên thang 10, MeDili chuyển từ mô tả cảm quan trong tài liệu; không phải điểm cupping.</p>
+  <p class="lead">Cường độ tương đối trên thang 10, MeDili chuyển từ mô tả cảm quan trong tài liệu; không phải điểm thử nếm (cupping).</p>
   <div class="prow"><span>So với</span><div class="row" id="rB" style="margin-top:0"></div></div>
   <div class="radg">
     <div><div class="radw"><svg id="cRad" viewBox="0 0 340 300" role="img" aria-label="Biểu đồ sáu trục: thơm, chua, ngọt, đắng, thể chất, hậu vị"></svg></div><div class="lg" id="lgRad" style="justify-content:center"></div><p class="mnote" id="radT" style="text-align:center"></p></div>
@@ -476,7 +476,7 @@ def page():
         <li><b>Robusta:</b> thang Fine Robusta, gồm hương, vị, hậu vị, tỷ lệ mặn và chua, tỷ lệ đắng và ngọt, cảm giác miệng, cân bằng, độ đồng đều, độ sạch và tổng thể. Từ 80 điểm là Fine Robusta.</li>
         <li><b>Arabica:</b> thang của SCA. Catimor, Typica, Moka đều chấm theo thang này.</li>
         <li><b>Liberica, Excelsa:</b> chưa có thang riêng phổ biến; thường mượn phiếu của Arabica.</li>
-        <li><b>Muốn so giống:</b> rang nhạt đến vừa, cùng một hồ sơ, nghỉ 8–24 giờ, 5 ly mỗi mẫu, nếm mù. Rang đậm che mất khác biệt.</li>
+        <li><b>Muốn so giống:</b> rang sáng đến vừa, cùng một hồ sơ rang, nghỉ 8–24 giờ, 5 ly mỗi mẫu, nếm mù. Rang đậm che mất khác biệt.</li>
       </ul>
       <p class="mnote">Ghi phiếu theo <a class="lnk" href="banh-xe-huong.html">Bánh xe hương MeDili</a>.</p>
     </div>
@@ -496,14 +496,14 @@ def page():
 </section>
 
 <section class="card" id="quy-trinh">
-  <h2>Quy trình kiểm mẫu khi mua nhân</h2>
+  <h2>Quy trình kiểm tra mẫu khi mua nhân</h2>
   <p class="lead">Mười bước MeDili dùng khi nhận mẫu. Bước 1–6 làm ở xưởng trong một buổi; bước 7–8 cần lò rang mẫu và bàn nếm; bước 9 chỉ khi cần chứng nhận.</p>
   <div class="flowx">{sop}</div>
   <div class="cols" style="margin-top:16px">
     <div>
       <h3 class="h3s" style="margin-top:0">TCVN 4193:2014 cho Robusta</h3>
       <div class="tw"><table class="rich"><thead><tr><th>Hạng</th><th>Hạt lỗi tối đa</th><th>Tạp chất tối đa</th></tr></thead><tbody>{tcvn}</tbody></table></div>
-      <p class="mnote">Tính theo phần trăm khối lượng, mẫu khoảng 300 g. Độ ẩm tối đa 12,5 %. Robusta hạng 1 được lẫn tối đa 0,5 % cà phê mít và 3 % Arabica; hạng 2, 3 tối đa 1 % và 5 %. Arabica hạng 1 không được lẫn Robusta và cà phê mít. Lỗ sàng: số 18 là 7,10 mm, 16 là 6,30 mm, 14 là 5,60 mm, 13 là 5,00 mm.</p>
+      <p class="mnote">Tính theo phần trăm khối lượng, mẫu khoảng 300 g. Độ ẩm tối đa 12,5%. Robusta hạng 1 được lẫn tối đa 0,5% cà phê mít và 3% Arabica; hạng 2, 3 tối đa 1% và 5%. Arabica hạng 1 không được lẫn Robusta và cà phê mít. Lỗ sàng: số 18 là 7,10 mm, 16 là 6,30 mm, 14 là 5,60 mm, 13 là 5,00 mm.</p>
     </div>
     <div>
       <h3 class="h3s" style="margin-top:0">Phiếu kiểm mẫu</h3>
@@ -515,8 +515,8 @@ def page():
 
 <section class="card src">
   <h2>Nguồn và cách đọc mô hình</h2>
-  <p class="lead">Cỗ máy là mô hình minh hoạ. Mỗi mẫu có một khoảng giá trị điển hình cho sáu chỉ số và kiểu rãnh giữa; máy tính xem số đo khớp mẫu nào nhất, theo cách cộng dồn bằng chứng của bộ phân loại Bayes đơn giản. Số có chữ “Ước” là MeDili ước cho mô hình. Với hai giống cùng loài như Cà Sẻ và cao sản, chỉ hồ sơ vườn và xét nghiệm DNA mới cho câu trả lời chắc chắn.</p>
-  <ul>{srclist(SRC)}<li>Đinh Thị Tiếu Oanh và cộng sự (2016). Giống cà phê vối lai đa dòng TRS1. Tạp chí KH&amp;CN Nông nghiệp Việt Nam 2(63): 3–8. TRS1 hơn đối chứng đại trà 50,2 % năng suất và 25,4 % khối lượng 100 nhân; MeDili dùng để ước Cà Sẻ.</li><li>MeDili: vườn Cà Sẻ Di Linh canh tác từ năm 2010, cây 15 năm tuổi, lịch hái và mô tả vị từ phiếu nếm của xưởng.</li></ul>
+  <p class="lead">Cỗ máy là mô hình minh họa. Mỗi mẫu có một khoảng giá trị điển hình cho sáu chỉ số và kiểu rãnh giữa; máy tính xem số đo khớp mẫu nào nhất, theo cách cộng dồn bằng chứng của bộ phân loại Bayes đơn giản. Số có chữ “Ước” là MeDili ước cho mô hình. Với hai giống cùng loài như Cà Sẻ và cao sản, chỉ hồ sơ vườn và xét nghiệm DNA mới cho câu trả lời chắc chắn.</p>
+  <ul>{srclist(SRC)}<li>Đinh Thị Tiếu Oanh và cộng sự (2016). Giống cà phê vối lai đa dòng TRS1. Tạp chí KH&amp;CN Nông nghiệp Việt Nam 2(63): 3–8. TRS1 hơn đối chứng đại trà 50,2% năng suất và 25,4% khối lượng 100 nhân; MeDili dùng để ước Cà Sẻ.</li><li>MeDili: vườn Cà Sẻ Di Linh canh tác từ năm 2010, cây 15 năm tuổi, lịch hái và mô tả vị từ phiếu nếm của xưởng.</li></ul>
   <div class="lnks"><a class="lnk" href="trai-chin.html">Cỗ máy Trái chín</a><a class="lnk" href="vi-sinh.html">Cỗ máy Vi sinh</a><a class="lnk" href="tien-chat-huong.html">Cỗ máy Tiền chất hương</a><a class="lnk" href="banh-xe-huong.html">Bánh xe hương MeDili</a><a class="lnk" href="trai-ca-phe.html">Giải phẫu trái Cà Sẻ</a><a class="lnk" href="journal.html">Tất cả kiến thức cà phê</a></div>
 </section>
 '''
@@ -690,48 +690,48 @@ const ST=[
   mech:'Bằng chứng đầu tiên nằm ngoài vườn. Cây mọc từ hạt (thực sinh) mỗi cây một dáng, lá và trái khác nhau; cây ghép giống nhau như đúc vì cùng một dòng. Arabica là cây bụi lá nhỏ, bóng; Liberica và Excelsa là cây gỗ cao, lá to, dày.',
   check:'Nhìn gốc: vết ghép là một gờ hay chỗ lệch thân gần mặt đất. Đi một hàng 20 cây: dáng, lá, trái khác nhau nhiều là dấu hiệu cây thực sinh.',
   kv:()=>{const S=S_();return S?[['Nhân giống',S.prop],['Cây',S.tree],['Vùng',S.alt]]:[['Quan sát','Chưa có. Điền ở Máy nhận diện bằng giác quan.']]},
-  fail:'Tin lời “cây Sẻ” mà không xem vườn. Nhân đã rời vườn thì phân tích hoá học cũng khó tách Cà Sẻ với cao sản.',
-  tip:'Vườn MeDili canh tác từ năm 2010, cây 15 năm tuổi, chăm theo hướng tự nhiên; mỗi lô ghi mã vườn.'},
+  fail:'Tin lời “cây Sẻ” mà không xem vườn. Nhân đã rời vườn thì phân tích hóa học cũng khó tách Cà Sẻ với cao sản.',
+  tip:'Vườn MeDili canh tác từ năm 2010, cây 15 năm tuổi, chăm sóc theo hướng tự nhiên; mỗi lô ghi mã vườn.'},
  {n:'Trái chín',sub:()=>S_()?'Trái '+S_().cc:'chưa xem trái',offNote:'chưa có quan sát',
   mech:'Trái cho thêm manh mối. Robusta trái nhỏ, mọc thành chùm dày dọc cành; Arabica mỗi đốt ít trái hơn; Liberica trái to, vỏ dày, nhiều thịt quả. Dòng ghép cao sản trái to và đều; cây thực sinh trái khác nhau giữa các cây.',
   check:'Lấy 100 trái chín ngẫu nhiên, ghi màu, cỡ, số trái mỗi chùm. Trái xanh lẫn nhiều làm nhân nhỏ, nhẹ, dễ đoán sai giống.',
   kv:()=>{const S=S_();return S?[['Trái',S.cher],['Mùa hái',S.har]]:[['Quan sát','Chưa có.']]},
   fail:'Đoán giống theo màu trái: cùng một giống, màu khi chín đổi theo độ chín và nắng.',
-  tip:'MeDili hái nhiều lượt từ tháng 11 tới đầu tháng 1, trái xanh tối đa 5 %. Xem Cỗ máy Trái chín.'},
+  tip:'MeDili hái nhiều lượt từ tháng 11 tới đầu tháng 1, trái xanh tối đa 5%. Xem Cỗ máy Trái chín.'},
  {n:'Bàn soi nhân',sub:()=>R.V.cut?CUTN[R.V.cut]:'chưa soi',offNote:'chọn kiểu rãnh ở khung bên phải',
   mech:'Mặt phẳng của nhân là chỗ dễ đọc nhất. Robusta: nhân tròn ngắn, rãnh giữa thẳng. Arabica: nhân dẹt, thuôn, rãnh cong chữ S. Liberica: to, lệch, đầu nhọn có móc, rãnh nhăn. Culi: tròn đều, không có mặt phẳng.',
   check:'Rải 100 nhân trên nền sáng, lật mặt phẳng lên, đếm theo bốn nhóm: rãnh thẳng, chữ S, nhăn lệch, hạt tròn.',
   kv:()=>{const S=S_();return [['Dáng nhân',S?S.bean:'—'],['Rãnh giữa',R.V.cut?CUTN[R.V.cut]:'chưa soi'],['Dài, ước',S?vn(S.Lmm,1)+NB+'mm':'—']]},
   fail:'Dựa vào màu nhân xanh: màu đổi theo sơ chế, độ ẩm và thời gian kho, không theo giống.',
-  tip:'Đếm luôn hạt lạ. Theo TCVN 4193, Robusta hạng 1 chỉ được lẫn tối đa 3 % Arabica và 0,5 % cà phê mít.'},
- {n:'Sàng phân cỡ',sub:()=>`Trên sàng 16: ${vn(R.V.m.s16,0)}${NB}%`,
-  mech:'Sàng lỗ tròn chia nhân theo bề ngang: sàng 18 lỗ 7,10 mm, sàng 16 lỗ 6,30 mm, sàng 13 lỗ 5,00 mm. Các dòng TR trồng ở Lâm Đồng có 87–99 % nhân nằm trên sàng 16; Cà Sẻ nhân nhỏ nên phần lớn nằm ở sàng 13–16.',
+  tip:'Đếm luôn hạt lạ. Theo TCVN 4193, Robusta hạng 1 chỉ được lẫn tối đa 3% Arabica và 0,5% cà phê mít.'},
+ {n:'Sàng phân cỡ',sub:()=>`Trên sàng 16: ${vn(R.V.m.s16,0)}%`,
+  mech:'Sàng lỗ tròn chia nhân theo bề ngang: sàng 18 lỗ 7,10 mm, sàng 16 lỗ 6,30 mm, sàng 13 lỗ 5,00 mm. Các dòng TR trồng ở Lâm Đồng có 87–99% nhân nằm trên sàng 16; Cà Sẻ nhân nhỏ nên phần lớn nằm ở sàng 13–16.',
   check:'Mẫu 300 g, lắc chồng sàng 2–3 phút, cân từng tầng rồi chia cho tổng.',
-  kv:()=>{const d=bins();return [['Trên sàng 18',vn(d[0],0)+NB+'%'],['Sàng 16–18',vn(d[1],0)+NB+'%'],['Sàng 13–16',vn(d[2],0)+NB+'%'],['Lọt sàng 13',vn(d[3],0)+NB+'%']]},
+  kv:()=>{const d=bins();return [['Trên sàng 18',vn(d[0],0)+'%'],['Sàng 16–18',vn(d[1],0)+'%'],['Sàng 13–16',vn(d[2],0)+'%'],['Lọt sàng 13',vn(d[3],0)+'%']]},
   fail:'Đem lô đã sàng lấy nhân nhỏ ra so: lô nhân nhỏ của cao sản cũng toàn nhân nhỏ.',
   tip:'Ghi phân bố cỡ nhân mỗi vụ để có số chuẩn riêng cho Cà Sẻ của vườn.'},
  {n:'Cân 100 nhân',sub:()=>`${vn(R.V.m.w,1)}${NB}g mỗi 100 nhân`,
   mech:'Khối lượng 100 nhân gộp cả cỡ và độ chắc. Trong các thí nghiệm giống, các dòng TR trồng ở Lâm Đồng nặng 19,2–29,6 g; cũng các dòng TR4, TR9, TR11 ở Gia Lai chỉ 15,3–17 g. Cà Sẻ ước 13–17 g; Moka khoảng 10–13 g; Liberica khoảng 21 g.',
-  check:'Đếm 100 nhân nguyên, không vỡ, cân 3 lần lấy trung bình. Nhân phải khô tới 12,5 % ẩm trở xuống mới so được.',
-  kv:()=>{const w=R.V.m.w,ref=SM.se.q.w[0],d=(w/ref-1)*100;return [['100 nhân',vn(w,1)+NB+'g'],['So với Cà Sẻ',(d>=0?'+':'−')+vn(Math.abs(d),0)+NB+'%'],['Độ ẩm',vn(R.V.am,1)+NB+'% (tối đa 12,5)']]},
+  check:'Đếm 100 nhân nguyên, không vỡ, cân 3 lần lấy trung bình. Nhân phải khô tới độ ẩm 12,5% trở xuống mới so được.',
+  kv:()=>{const w=R.V.m.w,ref=SM.se.q.w[0],d=(w/ref-1)*100;return [['100 nhân',vn(w,1)+NB+'g'],['So với Cà Sẻ',(d>=0?'+':'−')+vn(Math.abs(d),0)+'%'],['Độ ẩm',vn(R.V.am,1)+'% (tối đa 12,5)']]},
   fail:'So nhân ẩm với nhân khô: nhân ẩm nặng hơn.',
   tip:'Chỉ so với cao sản trồng cùng vùng, cùng vụ; khác vùng thì cỡ nhân đổi rất nhiều.'},
- {n:'Phòng thí nghiệm',sub:()=>R.V.lab?`Caffeine ${vn(R.V.m.caf,1)}${NB}%`:'chưa gửi mẫu',offNote:'chưa có kết quả',
-  mech:'Phòng lab tách loài rất tốt: Robusta có caffeine gần gấp đôi Arabica, ít dầu và ít đường hơn. Chất 16-O-methylcafestol (16-OMC) có nhiều trong Robusta, khoảng 600–1.800 mg/kg, còn Arabica chỉ có vết, nên dùng để phát hiện Robusta trộn vào Arabica. Trong cùng loài, như Cà Sẻ với cao sản, các chỉ số này chồng lên nhau.',
-  check:'HPLC đo caffeine và 16-OMC; NMR phát hiện được từ khoảng 1–3 % Robusta trộn trong Arabica. Muốn định danh dòng thì xét nghiệm DNA.',
-  kv:()=>{const m=R.V.m,S=S_();return R.V.lab?[['Caffeine',vn(m.caf,2)+NB+'%'],['Chất béo',vn(m.lip,1)+NB+'%'],['Sucrose',vn(m.suc,1)+NB+'%'],['16-OMC',S?S.omc:(m.caf>1.7?'nhiều khả năng cao':'nhiều khả năng chỉ có vết')]]:[['Kết quả','Chưa có. Bật “Có kết quả phòng lab”.']]},
+ {n:'Phòng thí nghiệm',sub:()=>R.V.lab?`Caffeine ${vn(R.V.m.caf,1)}%`:'chưa gửi mẫu',offNote:'chưa có kết quả',
+  mech:'Phòng thí nghiệm tách loài rất tốt: Robusta có caffeine gần gấp đôi Arabica, ít dầu và ít đường hơn. Chất 16-O-methylcafestol (16-OMC) có nhiều trong Robusta, khoảng 600–1.800 mg/kg, còn Arabica chỉ có vết, nên dùng để phát hiện Robusta trộn vào Arabica. Trong cùng loài, như Cà Sẻ với cao sản, các chỉ số này chồng lên nhau.',
+  check:'HPLC đo caffeine và 16-OMC; NMR phát hiện được từ khoảng 1–3% Robusta trộn trong Arabica. Muốn định danh dòng thì xét nghiệm DNA.',
+  kv:()=>{const m=R.V.m,S=S_();return R.V.lab?[['Caffeine',vn(m.caf,2)+'%'],['Chất béo',vn(m.lip,1)+'%'],['Sucrose',vn(m.suc,1)+'%'],['16-OMC',S?S.omc:(m.caf>1.7?'nhiều khả năng cao':'nhiều khả năng chỉ có vết')]]:[['Kết quả','Chưa có. Bật “Có kết quả phòng thí nghiệm”.']]},
   fail:'Dùng caffeine để chứng minh “Sẻ thật”. Caffeine của Robusta đổi theo vùng, độ chín, năm; không có ngưỡng nào tách giống trong cùng loài.',
-  tip:'Hằng ngày MeDili dùng cân, sàng và nếm; gửi lab khi khách cần chứng nhận.'},
+  tip:'Hằng ngày MeDili dùng cân, sàng và nếm; gửi phòng thí nghiệm khi khách cần chứng nhận.'},
  {n:'Bàn nếm',sub:()=>{const S=S_();return S?(/^(Theo|Chưa)/.test(S.scale)?S.scale:'Thang '+S.scale):'chưa nếm'},offNote:'chưa có quan sát',
-  mech:'Nếm cho biết chất lượng, gu và gợi ý loài: Robusta đắng, thân dày, ít chua; Arabica chua sáng, thơm; Liberica mùi mít chín, trái nhiệt đới. Robusta chấm theo thang Fine Robusta, từ 80 điểm là Fine; Arabica chấm theo thang SCA.',
-  check:'Rang nhạt đến vừa, cùng một hồ sơ cho mọi mẫu, nghỉ 8–24 giờ, 5 ly mỗi mẫu, nếm mù.',
+  mech:'Nếm cho biết chất lượng, gu và gợi ý loài: Robusta đắng, thân dày, ít chua; Arabica chua thanh, thơm; Liberica mùi mít chín, trái nhiệt đới. Robusta chấm theo thang Fine Robusta, từ 80 điểm là Fine; Arabica chấm theo thang SCA.',
+  check:'Rang sáng đến vừa, cùng một hồ sơ rang cho mọi mẫu, nghỉ 8–24 giờ, 5 ly mỗi mẫu, nếm mù.',
   kv:()=>{const S=S_();if(!S)return [['Quan sát','Chưa có. Điền ở Máy nhận diện bằng giác quan.']];const p=S.prof;return [['Mùi vị',S.notes],['Thang chấm',S.scale],['Cường độ',`đắng ${g1(p[3])}, chua ${g1(p[1])}, thân ${g1(p[4])} trên 10`]]},
   fail:'Nếm mẫu rang đậm: rang đậm che mất khác biệt giữa các giống.',
   tip:'Ghi phiếu theo Bánh xe hương MeDili.'},
- {n:'Bộ quyết định',sub:()=>`${SM[R.t.k].s} · ${pc(R.t.p)}${NB}%`,
-  mech:'Máy ghép mọi số đo lại. Mỗi mẫu có một khoảng giá trị điển hình cho từng chỉ số; mẫu nào khớp nhiều chỉ số nhất thì xác suất cao nhất. Đây là mô hình minh hoạ; số đo thật có sai số và có vùng chồng lấn.',
-  check:'Từ 80 % trở lên: khá chắc. Từ 50 đến 80 %: nghiêng về. Dưới 50 %: cần thêm bằng chứng. Máy làm tròn tối đa 99 %.',
-  kv:()=>R.P.slice(0,3).map(o=>[SM[o.k].s,pc(o.p)+NB+'%']),
+ {n:'Bộ quyết định',sub:()=>`${SM[R.t.k].s} · ${pc(R.t.p)}%`,
+  mech:'Máy ghép mọi số đo lại. Mỗi mẫu có một khoảng giá trị điển hình cho từng chỉ số; mẫu nào khớp nhiều chỉ số nhất thì xác suất cao nhất. Đây là mô hình minh họa; số đo thật có sai số và có vùng chồng lấn.',
+  check:'Từ 80% trở lên: khá chắc. Từ 50 đến 80%: nghiêng về. Dưới 50%: cần thêm bằng chứng. Máy làm tròn tối đa 99%.',
+  kv:()=>R.P.slice(0,3).map(o=>[SM[o.k].s,pc(o.p)+'%']),
   fail:'Coi kết quả của máy là chứng nhận. Với hai giống cùng loài, chỉ hồ sơ vườn và DNA mới chắc chắn.',
   tip:'Ghi kết quả vào Phiếu kiểm mẫu ở cuối trang.'}];
 ST.forEach(s=>{s.l1='Trạm này đọc gì';s.l2='Làm tay thế nào'});
@@ -741,7 +741,7 @@ const ANCH=[null,[7.5,14,11],[21,13,5],[36,8,10.4],[52.5,12,6.5],[64.5,13,3],[77
 const CHIP=[null,{x:150,y:12},{x:236,y:56},{x:330,y:100},{x:420,y:150},{x:500,y:196},{x:590,y:240},{x:676,y:290},{x:770,y:340}];
 function buildScene(){
  let h=box(1,2.2,0,120,2.6,.6,['beltT','belt','belt2'])+`<polyline class="flowL" points="${pts([P(2,3.5,.62),P(120,3.5,.62)])}"/>`;
- h=bench(124,24,'Cỗ máy Phân biệt · Farm Di Linh',44)+h;
+ h=bench(124,24,'Cỗ máy Phân biệt · Vườn Di Linh',44)+h;
  /* 1 vườn */
  let s=box(3,9.5,0,9,9,2,['soilT','soil','soil2'])+'<g id="tree"></g>';h+=stG(1,s);
  /* 2 trái */
@@ -810,14 +810,14 @@ function renderScene(){const V=R.V,m=V.m,S=S_();
  drawFlow();drawChips()}
 function chipLabel(i){const V=R.V,m=V.m,S=S_();
  if(st.step<i)return ['','Vườn','Trái','Bàn soi','Sàng','Cân','Phòng lab','Bàn nếm','Kết luận'][i]+' · ···';
- return ['','Vườn · '+(S?S.tc:'chưa xem'),'Trái · '+(S?S.cc:'chưa xem'),'Nhân · '+(V.cut?CUTN[V.cut]:'chưa soi'),'Sàng 16+ · '+vn(m.s16,0)+NB+'%','100 nhân · '+vn(m.w,1)+NB+'g',
-  V.lab?'Caffeine · '+vn(m.caf,1)+NB+'%':'Lab · chưa đo','Nếm · '+(S?S.cupS:'chưa nếm'),'Kết luận · '+SM[R.t.k].s+' '+pc(R.t.p)+NB+'%'][i]}
+ return ['','Vườn · '+(S?S.tc:'chưa xem'),'Trái · '+(S?S.cc:'chưa xem'),'Nhân · '+(V.cut?CUTN[V.cut]:'chưa soi'),'Sàng 16+ · '+vn(m.s16,0)+'%','100 nhân · '+vn(m.w,1)+NB+'g',
+  V.lab?'Caffeine · '+vn(m.caf,1)+'%':'Lab · chưa đo','Nếm · '+(S?S.cupS:'chưa nếm'),'Kết luận · '+SM[R.t.k].s+' '+pc(R.t.p)+'%'][i]}
 function drawFlow(){const V=R.V,m=V.m;
- const rows=[['Chế độ',st.mode==='ref'?'Hồ sơ chuẩn':st.mode==='myst'?'Mẫu bí ẩn':'Số đo của bạn'],['Mẫu',V.name],['100 nhân',vn(m.w,1)+NB+'g'],['Trên sàng 16',vn(m.s16,0)+NB+'%'],['Hạt tròn',vn(m.cu,0)+NB+'%'],['Caffeine',V.lab?vn(m.caf,2)+NB+'%':'chưa đo'],['Máy kết luận',`${SM[R.t.k].s} · ${pc(R.t.p)}${NB}%`]];
+ const rows=[['Chế độ',st.mode==='ref'?'Hồ sơ chuẩn':st.mode==='myst'?'Mẫu bí ẩn':'Số đo của bạn'],['Mẫu',V.name],['100 nhân',vn(m.w,1)+NB+'g'],['Trên sàng 16',vn(m.s16,0)+'%'],['Hạt tròn',vn(m.cu,0)+'%'],['Caffeine',V.lab?vn(m.caf,2)+'%':'chưa đo'],['Máy kết luận',`${SM[R.t.k].s} · ${pc(R.t.p)}%`]];
  const X=16,rh=27,h=50+rows.length*rh+20,y=712-h,w=330;
  let g=`<rect x="${X}" y="${y}" width="${w}" height="${h}" rx="10" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="${X+16}" y="${y+26}" class="lab12" style="letter-spacing:.08em">MẪU TRONG MÁY</text>`;
  rows.forEach(([a,b],i)=>{const yy=y+48+i*rh;g+=`<text class="flowT" x="${X+16}" y="${yy+4}">${a}</text><text x="${X+w-16}" y="${yy+4}" text-anchor="end" class="mono flowT">${b}</text>`});
- g+=`<text x="${X+16}" y="${y+h-10}" class="tiny mutedt">Bản vẽ khái niệm · mô hình minh hoạ</text>`;$('flow').innerHTML=g}
+ g+=`<text x="${X+16}" y="${y+h-10}" class="tiny mutedt">Bản vẽ khái niệm · mô hình minh họa</text>`;$('flow').innerHTML=g}
 
 /* ====== ĐIỀU KHIỂN ====== */
 function halt(){stopRun();st.step=8}
@@ -827,17 +827,17 @@ function mystery(){const r=Math.random,k=ORD[Math.floor(r()*ORD.length)],q=SM[k]
  FE.forEach(f=>m[f]=clamp(q[f][0]+q[f][1]*gauss(r)*.9,lim[f][0],lim[f][1]));
  st.hid=k;st.mm=m;st.am=10.8+r()*1.6;st.mode='myst';st.rev=false;st.myN++}
 function sliders(){const m=R.V.m;
- [['iW','oW','w',1],['iS','oS','s16',0],['iC','oC','cu',0],['iCa','oCa','caf',2],['iL','oL','lip',1],['iSu','oSu','suc',1]].forEach(([i,o,f,d])=>{$(i).value=m[f];$(o).textContent=vn(m[f],d)+NB+'%'.replace('%',f==='w'?'g':'%')});
+ [['iW','oW','w',1],['iS','oS','s16',0],['iC','oC','cu',0],['iCa','oCa','caf',2],['iL','oL','lip',1],['iSu','oSu','suc',1]].forEach(([i,o,f,d])=>{$(i).value=m[f];$(o).textContent=vn(m[f],d)+'%'.replace('%',f==='w'?'g':'%')});
  $('lab').checked=R.V.lab;$('labBox').hidden=!R.V.lab;
  $('modeL').textContent=st.mode==='ref'?'hồ sơ chuẩn của '+SM[st.k].s:st.mode==='myst'?'máy đo mẫu bí ẩn':'bạn đang nhập'}
 function stats(){const m=R.V.m,t=(a,b)=>`<div class="stat"><span>${a}</span><b>${b}</b></div>`;
- $('stats').innerHTML=t('100 nhân',vn(m.w,1)+NB+'g')+t('Trên sàng 16',vn(m.s16,0)+NB+'%')+t('Caffeine',R.V.lab?vn(m.caf,1)+NB+'%':'chưa đo')+t('Máy kết luận',SM[R.t.k].s)}
+ $('stats').innerHTML=t('100 nhân',vn(m.w,1)+NB+'g')+t('Trên sàng 16',vn(m.s16,0)+'%')+t('Caffeine',R.V.lab?vn(m.caf,1)+'%':'chưa đo')+t('Máy kết luận',SM[R.t.k].s)}
 function verdict(){const P=R.P,t=P[0],t2=P[1],S1=SM[t.k];let cls=t.p>=.8?'good':t.p>=.5?'warn':'bad',hd;
  if(st.mode==='myst'&&st.rev){const ok=t.k===st.hid;cls=ok?'good':'bad';hd=(ok?'✓ Máy đoán đúng: ':'✕ Máy đoán sai: ')+'đáp án là '+SM[st.hid].n}
- else hd=`${t.p>=.8?'✓':'!'} ${st.mode==='myst'?'Máy đoán':'Gần nhất'}: ${S1.n} · ${pc(t.p)}${NB}%`;
- const bars=P.slice(0,3).map(o=>`<div class="pbar"><span>${SM[o.k].n}</span><b>${pc(o.p)}${NB}%</b><i><em style="width:${f1(Math.max(1,o.p*100))}%;background:${SM[o.k].c}"></em></i></div>`).join('');
+ else hd=`${t.p>=.8?'✓':'!'} ${st.mode==='myst'?'Máy đoán':'Gần nhất'}: ${S1.n} · ${pc(t.p)}%`;
+ const bars=P.slice(0,3).map(o=>`<div class="pbar"><span>${SM[o.k].n}</span><b>${pc(o.p)}%</b><i><em style="width:${f1(Math.max(1,o.p*100))}%;background:${SM[o.k].c}"></em></i></div>`).join('');
  let msg='';if(t.p<.5)msg='Chưa đủ bằng chứng. ';
- if(!R.V.lab&&S1.grp!==SM[t2.k].grp&&t2.p>.15)msg+='Thêm kết quả phòng lab hoặc soi rãnh giữa để tách loài. ';
+ if(!R.V.lab&&S1.grp!==SM[t2.k].grp&&t2.p>.15)msg+='Thêm kết quả phòng thí nghiệm hoặc soi rãnh giữa để tách loài. ';
  if(S1.grp===SM[t2.k].grp&&t2.p>.15)msg+=`${S1.s} và ${SM[t2.k].s} cùng loài: cần hồ sơ vườn, nếm hoặc DNA. `;
  if(st.mode==='myst'&&st.rev&&t.k!==st.hid)msg+='Số đo của mẫu này rơi vào vùng chồng lấn; ngoài đời cũng vậy.';
  $('verdict').className=cls;$('verdict').innerHTML=`<b>${hd}</b>${bars}${msg?`<p style="margin:8px 0 0">${msg}</p>`:''}`}
@@ -851,8 +851,8 @@ function drawM(){const W=340,H=200,l=30,r=10,t=20,b=22,x0=9,x1=27,y0=.4,y1=3,X=x
  if(R.V.lab)g+=`<circle cx="${f1(x)}" cy="${f1(Y(clamp(m.caf,y0,y1)))}" r="5" style="fill:var(--ink);stroke:var(--panel);stroke-width:2"/>`;
  else g+=`<line x1="${f1(x)}" x2="${f1(x)}" y1="${t}" y2="${H-b}" style="stroke:var(--ink);stroke-width:1.4;stroke-dasharray:4 3"/>`;
  $('cM').innerHTML=g;
- $('mTip').textContent=R.V.lab?'Chấm đậm là mẫu đang đo. Trục dọc tách loài: Robusta nằm trên. Trục ngang tách cỡ nhân trong cùng loài: Cà Sẻ bên trái, cao sản bên phải.':'Chưa có caffeine nên máy chỉ biết cỡ nhân (vạch đứt). Bật kết quả phòng lab để tách loài.'}
-function figsub(){$('figsub').textContent=`${R.V.name} · máy kết luận: ${SM[R.t.k].s} ${pc(R.t.p)}${NB}%`}
+ $('mTip').textContent=R.V.lab?'Chấm đậm là mẫu đang đo. Trục dọc tách loài: Robusta nằm trên. Trục ngang tách cỡ nhân trong cùng loài: Cà Sẻ bên trái, cao sản bên phải.':'Chưa có caffeine nên máy chỉ biết cỡ nhân (vạch đứt). Bật kết quả phòng thí nghiệm để tách loài.'}
+function figsub(){$('figsub').textContent=`${R.V.name} · máy kết luận: ${SM[R.t.k].s} ${pc(R.t.p)}%`}
 function sNote(){const S=SM[st.k];
  $('sNote').innerHTML=st.mode==='ref'?`<b>${S.n}</b> · ${S.sp}. ${S.prop}.`:st.mode==='myst'?(st.rev?`Đáp án: <b>${SM[st.hid].n}</b>. Bấm Mẫu bí ẩn để thử mẫu khác.`:'Máy đang đo một mẫu chưa biết tên. Xem từng trạm, đoán trước, rồi bấm Lộ đáp án.'):'Bạn đang chỉnh số đo. Bấm một mẫu hoặc Về hồ sơ chuẩn để quay lại.';
  $('reveal').hidden=!(st.mode==='myst'&&!st.rev);$('back').hidden=st.mode==='ref'}
@@ -884,8 +884,8 @@ function qres(){const ans=Object.entries(st.qa),lp={};ORD.forEach(k=>lp[k]=0);
  let nx='';if(t1.p-t2.p<.3){let best=null,bv=0;QZ.forEach(Q=>{if(st.qa[Q.id])return;const v=Math.max(...Q.o.map(O=>Math.abs(Math.log(O.w[t1.k]/O.w[t2.k]))));if(v>bv){bv=v;best=Q}});
   nx=best?`Để tách ${SM[t1.k].s} với ${SM[t2.k].s}, xem thêm: <b>${best.n.toLowerCase()}</b>.`:`${SM[t1.k].s} và ${SM[t2.k].s} còn sát nhau: cần cân, sàng hoặc hồ sơ vườn.`}
  const robNote=(t1.k==='se'||t1.k==='cs')?'<p class="mnote">Giữa Cà Sẻ và cao sản, giác quan chỉ gợi ý. Hãy cân 100 nhân và sàng ở cỗ máy phía trên, và hỏi hồ sơ vườn.</p>':'';
- $('qzr').innerHTML=`<span class="lbl">${ans.length}/${QZ.length} câu đã chọn</span><b class="qh">${t1.p>=.8?'Khá chắc':t1.p>=.5?'Nghiêng về':'Chưa rõ, gần nhất'}: ${SM[t1.k].n}</b>${P.slice(0,4).map(o=>`<div class="pbar"><span>${SM[o.k].n}</span><b>${pc(o.p)}${NB}%</b><i><em style="width:${f1(Math.max(1,o.p*100))}%;background:${SM[o.k].c}"></em></i></div>`).join('')}${why.length?`<span class="lbl" style="margin-top:12px">Dấu hiệu khớp ${SM[t1.k].s}</span><div class="why">${why.map(x=>`<span>${x.t}</span>`).join('')}</div>`:''}${nx?`<p class="mnote">${nx}</p>`:''}${robNote}`}
-pills('qPre',ORD.map(k=>[k,SM[k].s]).concat([['x','Xoá hết']]),'',k=>{st.qa=k==='x'?{}:{...PRE[k]};qz()});
+ $('qzr').innerHTML=`<span class="lbl">${ans.length}/${QZ.length} câu đã chọn</span><b class="qh">${t1.p>=.8?'Khá chắc':t1.p>=.5?'Nghiêng về':'Chưa rõ, gần nhất'}: ${SM[t1.k].n}</b>${P.slice(0,4).map(o=>`<div class="pbar"><span>${SM[o.k].n}</span><b>${pc(o.p)}%</b><i><em style="width:${f1(Math.max(1,o.p*100))}%;background:${SM[o.k].c}"></em></i></div>`).join('')}${why.length?`<span class="lbl" style="margin-top:12px">Dấu hiệu khớp ${SM[t1.k].s}</span><div class="why">${why.map(x=>`<span>${x.t}</span>`).join('')}</div>`:''}${nx?`<p class="mnote">${nx}</p>`:''}${robNote}`}
+pills('qPre',ORD.map(k=>[k,SM[k].s]).concat([['x','Xóa hết']]),'',k=>{st.qa=k==='x'?{}:{...PRE[k]};qz()});
 
 /* ====== HÌNH 2 ====== */
 function drawR(){const W=cw('wR'),mob=W<640,H=mob?300:360,l=mob?36:48,r=mob?12:22,t=26,b=34,x0=13,x1=31,y0=54,y1=101,X=x=>l+(x-x0)/(x1-x0)*(W-l-r),Y=y=>t+(1-(y-y0)/(y1-y0))*(H-t-b);
@@ -894,7 +894,7 @@ function drawR(){const W=cw('wR'),mob=W<640,H=mob?300:360,l=mob?36:48,r=mob?12:2
  [60,70,80,90,100].forEach(v=>g+=`<line x1="${l}" x2="${W-r}" y1="${f1(Y(v))}" y2="${f1(Y(v))}" style="stroke:var(--rule);stroke-width:.8"/><text x="${l-6}" y="${f1(Y(v)+4)}" text-anchor="end">${v}</text>`);
  (mob?[14,18,22,26,30]:[14,16,18,20,22,24,26,28,30]).forEach(v=>g+=`<text x="${f1(X(v))}" y="${H-b+18}" text-anchor="middle">${v}</text>`);
  g+=`<ellipse cx="${f1(X(15))}" cy="${f1(Y(62))}" rx="${f1(X(16.6)-X(15))}" ry="${f1(Y(62)-Y(71))}" style="fill:var(--k1);fill-opacity:.13;stroke:var(--k1);stroke-width:1.8;stroke-dasharray:6 4"/>`;
- ROB.forEach(([cl,rg,w,s])=>{g+=`<circle cx="${f1(X(w))}" cy="${f1(Y(s))}" r="${rg==='all'?7:5.5}" style="fill:${RG[rg][1]};stroke:var(--panel);stroke-width:1.6"><title>${cl} · ${RG[rg][0]}: ${vn(w,1)} g, ${vn(s,1)} %</title></circle>`});
+ ROB.forEach(([cl,rg,w,s])=>{g+=`<circle cx="${f1(X(w))}" cy="${f1(Y(s))}" r="${rg==='all'?7:5.5}" style="fill:${RG[rg][1]};stroke:var(--panel);stroke-width:1.6"><title>${cl} · ${RG[rg][0]}: ${vn(w,1)} g, ${vn(s,1)}%</title></circle>`});
  const lab=(x,y,txt,anc,c)=>`<text class="val" x="${f1(x)}" y="${f1(y)}" text-anchor="${anc}"${c?` style="fill:${c}"`:''}>${txt}</text>`;
  g+=mob?lab(X(16.8)+2,Y(57.5),'Cà Sẻ (ước)','start','var(--k1)'):lab(X(15)+4,Y(71)-10,'Cà Sẻ (ước)','middle','var(--k1)');
  g+=lab(X(15.7)+10,Y(65)+18,'TR4, TR11 · Gia Lai','start');
@@ -907,8 +907,8 @@ function drawR(){const W=cw('wR'),mob=W<640,H=mob?300:360,l=mob?36:48,r=mob?12:2
 function gallery(){$('bgal').innerHTML=ORD.map(k=>{const S=SM[k],L=S.Lmm*7;return `<figure><svg viewBox="0 0 120 112" role="img" aria-label="Nhân xanh ${S.n}">${beanG(S.sh,60,50,L)}<line x1="12" x2="47" y1="104" y2="104" style="stroke:var(--muted);stroke-width:1.6"/><text x="12" y="99" style="font:600 9px var(--body);fill:var(--muted)">5 mm</text></svg><figcaption><b>${S.s}</b><span>${CUTN[S.sh.cut]} · dài ≈${NB}${vn(S.Lmm,1)}${NB}mm</span></figcaption></figure>`}).join('')}
 const PROWS=[['Loài, nhóm','sp'],['Nhân giống','prop'],['Cây','tree'],['Trái','cher'],['Nhân xanh','bean'],['Rãnh giữa','cutT'],['Vùng, độ cao','alt'],['Mùi vị','notes'],['Thang chấm','scale'],['Năng suất','yld'],['Dễ nhầm với','conf']];
 const PAIRS={'se|cs':'Nhìn vườn trước: cây thực sinh hay cây ghép. Rồi cân 100 nhân và sàng, so với cao sản trồng cùng vùng. Nếm: Cà Sẻ đậm, thân dày, hậu dài hơn. Cùng loài nên caffeine không tách được; muốn chắc chắn thì xét nghiệm DNA.',
- 'se|culi':'Đếm hạt tròn trong 100 hạt. Lô Cà Sẻ chỉ có vài phần trăm hạt tròn; lô culi đã tách từ 90 % trở lên. Culi lấy từ vườn Sẻ thì vẫn là Culi Sẻ.',
- 'cs|culi':'Đếm hạt tròn trong 100 hạt. Lô hạt dẹt chỉ có vài phần trăm hạt tròn; lô culi đã tách từ 90 % trở lên.',
+ 'se|culi':'Đếm hạt tròn trong 100 hạt. Lô Cà Sẻ chỉ có vài phần trăm hạt tròn; lô culi đã tách từ 90% trở lên. Culi lấy từ vườn Sẻ thì vẫn là Culi Sẻ.',
+ 'cs|culi':'Đếm hạt tròn trong 100 hạt. Lô hạt dẹt chỉ có vài phần trăm hạt tròn; lô culi đã tách từ 90% trở lên.',
  'ara|cat':'Dáng nhân gần như giống nhau. Hỏi giống trong vườn: Typica cao, cành ngang, lá non màu đồng; Catimor thấp, lóng ngắn. Nếm: Catimor hay có vị thảo mộc. Chắc chắn thì DNA.',
  'ara|mok':'Cân 100 nhân: Moka rất nhẹ, khoảng 10–13 g, nhân tròn như hạt đậu. Sản lượng ít nên giá cao; cẩn thận tên “Moka” gắn cho Arabica thường.',
  'cat|mok':'Cân 100 nhân: Moka rất nhẹ, khoảng 10–13 g, nhân tròn như hạt đậu; Catimor nhân thuôn, to hơn nhiều. Cây Catimor thấp nhưng sai trái, Moka cây nhỏ, ít trái.',
@@ -916,10 +916,10 @@ const PAIRS={'se|cs':'Nhìn vườn trước: cây thực sinh hay cây ghép. R
 function pairText(a,b){const key=[a,b].sort((x,y)=>ORD.indexOf(x)-ORD.indexOf(y)).join('|');if(PAIRS[key])return PAIRS[key];
  const A=SM[a],B=SM[b];
  if(a==='culi'||b==='culi')return 'Culi là hình hạt, không phải giống: có Culi Robusta, có Culi Arabica. Trước hết đếm hạt tròn; rồi tách loài như với hạt dẹt: rãnh, caffeine, mùi vị.';
- if(a==='lib'||b==='lib')return 'Liberica nhân to, lệch, đầu nhọn có móc, rãnh nhăn; mùi mít chín rất riêng; caffeine thấp hơn Robusta. TCVN 4193 chỉ cho Robusta hạng 1 lẫn tối đa 0,5 % cà phê mít.';
+ if(a==='lib'||b==='lib')return 'Liberica nhân to, lệch, đầu nhọn có móc, rãnh nhăn; mùi mít chín rất riêng; caffeine thấp hơn Robusta. TCVN 4193 chỉ cho Robusta hạng 1 lẫn tối đa 0,5% cà phê mít.';
  if(a==='exc'||b==='exc')return 'Excelsa dáng giọt nước hơi lệch, rãnh hơi nhăn; vị chua kiểu trái cây, ít đắng, ngược hẳn Robusta.';
- if(a==='mok'||b==='mok')return 'Moka nhân rất nhỏ, tròn, rãnh cong; 100 nhân chỉ khoảng 10–13 g; thơm nồng, chua sáng, ít đắng.';
- if(A.grp!==B.grp)return 'Khác loài nên dễ tách. Robusta tròn ngắn, rãnh thẳng; Arabica dẹt, thuôn, rãnh chữ S. Phòng lab: Robusta caffeine gần gấp đôi, ít dầu, ít đường, nhiều 16-OMC. Nếm: Robusta đắng, thân dày; Arabica chua sáng, thơm.';
+ if(a==='mok'||b==='mok')return 'Moka nhân rất nhỏ, tròn, rãnh cong; 100 nhân chỉ khoảng 10–13 g; thơm nồng, chua thanh, ít đắng.';
+ if(A.grp!==B.grp)return 'Khác loài nên dễ tách. Robusta tròn ngắn, rãnh thẳng; Arabica dẹt, thuôn, rãnh chữ S. Phòng lab: Robusta caffeine gần gấp đôi, ít dầu, ít đường, nhiều 16-OMC. Nếm: Robusta đắng, thân dày; Arabica chua thanh, thơm.';
  return 'Cùng nhóm: so cỡ nhân, nếm và hỏi hồ sơ vườn.'}
 function pair(){pills('pA',ORD.map(k=>[k,SM[k].s]),st.pa,k=>{st.pa=k;if(st.pb===k)st.pb=ORD.find(x=>x!==k);pair()});
  pills('pB',ORD.filter(k=>k!==st.pa).map(k=>[k,SM[k].s]),st.pb,k=>{st.pb=k;pair()});
@@ -947,7 +947,7 @@ Lô: ________  Nhà cung cấp: ________  Ngày: __/__/____
 Tên gọi khi chào hàng: ________  Vùng, độ cao: ________
 Vườn: thực sinh / ghép / không rõ · Năm trồng: ____
 
-1. Độ ẩm: ____ % (tối đa 12,5 %)
+1. Độ ẩm: ____ % (tối đa 12,5%)
 2. Soi 100 nhân: rãnh thẳng ___ · chữ S ___ · nhăn lệch ___ · tròn ___
 3. Sàng 300 g: trên 18 ___ % · 16–18 ___ % · 13–16 ___ % · lọt 13 ___ %
 4. 100 nhân: ___ g · ___ g · ___ g → trung bình ___ g
@@ -955,8 +955,8 @@ Vườn: thực sinh / ghép / không rõ · Năm trồng: ____
 6. Nếm (Fine Robusta / SCA): điểm ___ · ghi chú ____________
 7. Lab nếu có: caffeine ___ % · 16-OMC ___ mg/kg · DNA ________
 
-Số đang nhập vào máy: 100 nhân ${vn(m.w,1)} g · trên sàng 16 ${vn(m.s16,0)} % · hạt tròn ${vn(m.cu,0)} %${R.V.lab?` · caffeine ${vn(m.caf,2)} %`:''}
-Máy MeDili (mô hình minh hoạ): ${P.slice(0,2).map(o=>SM[o.k].s+' '+pc(o.p)+' %').join(' · ')}
+Số đang nhập vào máy: 100 nhân ${vn(m.w,1)} g · trên sàng 16 ${vn(m.s16,0)}% · hạt tròn ${vn(m.cu,0)}%${R.V.lab?` · caffeine ${vn(m.caf,2)}%`:''}
+Máy MeDili (mô hình minh họa): ${P.slice(0,2).map(o=>SM[o.k].s+' '+pc(o.p)+'%').join(' · ')}
 ${qa.length?'Cảm quan: '+qa.join('; ')+'\n':''}Kết luận: ________________  Người kiểm: ________`;
  $('sheet').textContent=t;st.sheet=t}
 $('cpSh').onclick=()=>cp(st.sheet,'cpShS');

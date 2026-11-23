@@ -208,7 +208,7 @@ BODY = f'''{MNAV}
   <span class="lgw"><img class="lgL" src="assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div class="brandbar"><span>Mê vị Di Linh</span></div>
   <h1>Giá Cà Phê <em>Hôm Nay</em></h1>
   <p>Giá cà phê nhân xô Tây Nguyên, giá trái tươi và giá Robusta, Arabica trên sàn thế giới. Trang tự cập nhật mỗi ngày, khoảng 14 giờ.</p>
-  <p class="upd">Cập nhật <b id="upd">07/11/2026, 12:37</b>. Giá tham khảo, giá mua thực tế tuỳ đại lý, chất lượng và số lượng.</p>
+  <p class="upd">Cập nhật <b id="upd">07/11/2026, 12:37</b>. Giá tham khảo, giá mua thực tế tùy đại lý, chất lượng và số lượng.</p>
 </header>
 <div class="tiles" id="tiles" aria-live="polite"></div>
 <div class="bench">

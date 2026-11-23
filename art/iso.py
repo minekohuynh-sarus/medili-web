@@ -114,14 +114,14 @@ function lineSVG(o){const {W,H,l,r,t,b}=o,X=x=>l+(x-o.x0)/(o.x1-o.x0)*(W-l-r),Y=
  return g}
 const legend=(id,items)=>{$(id).innerHTML=items.map(s=>s.box?`<span><i class="sw3" style="background:${s.c}"></i>${s.n}</span>`:`<span><i class="sw2${s.d?' d':''}" style="border-color:${s.c}"></i>${s.n}</span>`).join('')};
 const cw=id=>{const e=$(id);return Math.max(300,Math.round((e&&e.clientWidth)||900))};
-const cp=async(txt,el)=>{try{await navigator.clipboard.writeText(txt);$(el).textContent='Đã sao chép.'}catch(e){$(el).textContent='Không sao chép được, hãy bôi đen để chép.'}setTimeout(()=>$(el).textContent='',2600)};
+const cp=async(txt,el)=>{try{await navigator.clipboard.writeText(txt);$(el).textContent='Đã sao chép.'}catch(e){$(el).textContent='Không sao chép được, bạn hãy tự chọn văn bản để sao chép.'}setTimeout(()=>$(el).textContent='',2600)};
 function rng(seed){let s=seed>>>0;return ()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296}}
 function gauss(r){let u=0,v=0;while(!u)u=r();while(!v)v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
 '''
 
 
 def head(title_em, title_pre, lead, tag='Kiến thức cà phê'):
-    return (f'<header>\n  {logo()}<div class="brandbar"><span>Mê vị Di Linh</span><span>{tag}</span><span>Zalo <a href="#lien-he">{PHONE_RAW}</a></span></div>\n'
+    return (f'<header>\n  {logo()}<div class="brandbar"><span>Mê vị Di Linh</span><span>{tag}</span><span>Zalo <a href="#lien-he">{PHONE}</a></span></div>\n'
             f'  <h1>{title_pre} <em>{title_em}</em></h1>\n  <p>{lead}</p>\n</header>\n')
 
 

@@ -25,12 +25,12 @@ let nf = 0; const ok = (c, m) => { if (!c) nf++; console.log((c ? 'OK  ' : 'FAIL
   // kịch bản
   const S = [
     [[['gu','dam'],['loai','R'],['ro','cs'],['sang','16'],['sc','tm']], 'r16bm', 'đậm truyền thống, cao sản, S16'],
-    [[['gu','chua'],['loai','A'],['chin','99'],['sc','washed'],['sang','18']], 'a18w99', 'Arabica washed 99 % S18'],
+    [[['gu','chua'],['loai','A'],['chin','99'],['sc','washed'],['sang','18']], 'a18w99', 'Arabica washed 99% S18'],
     [[['loai','A'],['vu','26']], 'a18w98m', 'Arabica vụ mới'],
     [[['loai','R'],['ro','culi']], 'rc18bm', 'Culi'],
-    [[['loai','R'],['ro','se'],['gu','ngot']], 'rse', 'Ro Sẻ'],
-    [[['loai','R'],['ro','fine'],['sc','natural'],['chin','99']], 'r18n99', 'Fine Robusta natural 99 %'],
-    [[['loai','R'],['ro','fine'],['sc','honey'],['chin','97']], 'r18h97', 'Fine Robusta honey 97–98 %'],
+    [[['loai','R'],['ro','se'],['gu','ngot']], 'rse', 'Robusta Sẻ'],
+    [[['loai','R'],['ro','fine'],['sc','natural'],['chin','99']], 'r18n99', 'Fine Robusta natural 99%'],
+    [[['loai','R'],['ro','fine'],['sc','honey'],['chin','97']], 'r18h97', 'Fine Robusta honey 97–98%'],
     [[['gu','trai'],['loai','A'],['sc','natural']], 'a18n89', 'Arabica natural'],
     [[['loai','A'],['sang','14']], 'a14w97', 'Arabica S14'],
     [[['muc','sx'],['gu','dam']], 'r18bm', 'chế biến, gu đậm'],
@@ -39,9 +39,9 @@ let nf = 0; const ok = (c, m) => { if (!c) nf++; console.log((c ? 'OK  ' : 'FAIL
     await reset(); for (const [k, v] of ans) await pick(k, v); await p.waitForTimeout(40);
     const t = await top(); ok(t[0] === want, `${name}: hợp nhất ${t[0]} (mong ${want}) | ${t.join(', ')}`);
   }
-  // Arabica thì câu Robusta bị khoá, tổng còn 12
+  // Arabica thì câu Robusta bị khóa, tổng còn 12
   await reset(); await pick('loai', 'A');
-  ok(await p.$eval('#q-ro', e => e.disabled), 'chọn Arabica thì khoá câu Robusta');
+  ok(await p.$eval('#q-ro', e => e.disabled), 'chọn Arabica thì khóa câu Robusta');
   ok((await txt('#nx-cnt')).trim() === '1 / 12', 'tổng còn 12 câu: ' + await txt('#nx-cnt'));
   await pick('loai', 'R'); ok(!(await p.$eval('#q-ro', e => e.disabled)), 'đổi sang Robusta thì mở lại');
   // phối: nền Robusta + hương Arabica
@@ -50,12 +50,12 @@ let nf = 0; const ok = (c, m) => { if (!c) nf++; console.log((c ? 'OK  ' : 'FAIL
   const ids = await top();
   ok(ks[0] === 'Nền Robusta' && ks[1] === 'Hương Arabica', 'phối blend: ' + ks.join(' / '));
   ok(ids[0].startsWith('r') && ids[1].startsWith('a'), 'nền là Robusta, hương là Arabica: ' + ids.join(', '));
-  ok((await txt('#nx-tips')).includes('9 : 1'), 'có lưu ý tỉ lệ phối');
+  ok((await txt('#nx-tips')).includes('9 : 1'), 'có lưu ý tỷ lệ phối');
   // lưu ý
   const tipCase = [[[['loai','A'],['gu','dam']], 'thường cần Robusta'], [[['loai','R'],['ro','se'],['sang','18']], 'hiếm khi đạt S18'],
-    [[['muc','sx'],['sc','honey']], 'chế biến công nghiệp'], [[['loai','R'],['sc','washed']], 'Robusta washed chưa có sẵn'],
-    [[['loai','A'],['sc','honey']], 'Arabica honey chưa có sẵn'], [[['sl','tan'],['mau','khong']], 'nên thử mẫu'],
-    [[['ro','fine'],['chin','0']], 'Fine Robusta cần hái chín'], [[['sc','tm'],['chin','99']], 'không cam kết tỉ lệ chín']];
+    [[['muc','sx'],['sc','honey']], 'chế biến công nghiệp'], [[['loai','R'],['sc','washed']], 'Robusta Washed chưa có sẵn'],
+    [[['loai','A'],['sc','honey']], 'Arabica Honey chưa có sẵn'], [[['sl','tan'],['mau','khong']], 'nên thử mẫu'],
+    [[['ro','fine'],['chin','0']], 'Fine Robusta cần hái chín'], [[['sc','tm'],['chin','99']], 'không cam kết tỷ lệ chín']];
   for (const [ans, frag] of tipCase) { await reset(); for (const [k, v] of ans) await pick(k, v); await p.waitForTimeout(30);
     ok((await txt('#nx-tips')).includes(frag) && !(await p.$eval('#nx-tipw', e => e.hidden)), 'lưu ý: ' + frag); }
   // phiếu: đầy đủ 13 câu, đánh dấu dòng, liên hệ
@@ -67,12 +67,12 @@ let nf = 0; const ok = (c, m) => { if (!c) nf++; console.log((c ? 'OK  ' : 'FAIL
   ok((await txt('#nx-pk')).includes('MD-R18-H98') && (await txt('#nx-pk')).includes('MD-A18-W99'), 'dòng đánh dấu vào phiếu');
   ok(await p.$eval('#nx-gf', e => e.classList.contains('off') && !e.getAttribute('href')), 'chưa có tên, số thì nút gửi tắt');
   await p.click('#nx-gf'); ok((await txt('#nx-st')).includes('mục D'), 'bấm nút tắt thì nhắc nhập liên hệ');
-  await p.fill('#nx-name', 'Anh Minh'); await p.fill('#nx-ph', '0901 234 567'); await p.fill('#nx-org', 'Xưởng rang Mộc'); await p.fill('#nx-note', 'Cần độ ẩm dưới 12,5 %');
+  await p.fill('#nx-name', 'Anh Minh'); await p.fill('#nx-ph', '0901 234 567'); await p.fill('#nx-org', 'Xưởng rang Mộc'); await p.fill('#nx-note', 'Cần độ ẩm dưới 12,5%');
   const href = await p.$eval('#nx-gf', e => e.getAttribute('href') || '');
   ok(href.startsWith('https://docs.google.com/forms/') && href.includes('entry.1445823936=Anh%20Minh') && href.includes('entry.907299194=0901234567'), 'mở phiếu Google Form có tên và số');
   ok(href.length < 7000, 'độ dài link phiếu ' + href.length);
   const m = await txt('#nx-msg');
-  for (const f of ['PHIẾU CHỌN NHÂN XANH · MEDILI', 'Đơn vị: Xưởng rang Mộc', 'Gu: Đậm mà ngọt hậu', 'Robusta: Fine Robusta', 'Độ chín: Chín 97–98 %', 'Sơ chế: Honey', 'Sàng: S18',
+  for (const f of ['PHIẾU CHỌN NHÂN XANH · MEDILI', 'Đơn vị: Xưởng rang Mộc', 'Gu: Đậm mà ngọt hậu', 'Robusta: Fine Robusta', 'Độ chín: Chín 97–98%', 'Sơ chế: Honey', 'Sàng: S18',
     'Mỗi lần mua: 1–16 bao', 'Bên mua: Doanh nghiệp', 'Dòng quan tâm: MD-R18-H98', 'MeDili gợi ý: MD-R18-H97', 'Ghi chú: Cần độ ẩm', 'Liên hệ: Anh Minh | 0901234567'])
     ok(m.includes(f), 'tin nhắn có: ' + f);
   // lưu và tải lại
@@ -85,7 +85,7 @@ let nf = 0; const ok = (c, m) => { if (!c) nf++; console.log((c ? 'OK  ' : 'FAIL
   ok(await p.$eval('#l-r18h97', e => e.classList.contains('sugd')), 'dòng gợi ý có dấu sao');
   await p.click('#nx-sug .sg-n'); await p.waitForTimeout(200); ok(await p.$eval('#l-r18h97', e => e.classList.contains('hl')), 'bấm gợi ý thì sáng dòng trong danh mục');
   // làm lại
-  await reset(); ok((await txt('#nx-cnt')).trim() === '0 / 13' && !(await p.$eval('#l-r18h98 input[name=pick]', e => e.checked)), 'làm lại xoá hết');
+  await reset(); ok((await txt('#nx-cnt')).trim() === '0 / 13' && !(await p.$eval('#l-r18h98 input[name=pick]', e => e.checked)), 'làm lại xóa hết');
   await p.reload(); await p.waitForTimeout(300); ok((await txt('#nx-cnt')).trim() === '0 / 13', 'sau làm lại, tải lại vẫn trống');
   const vis = await p.evaluate(() => document.body.innerText);
   ok(!vis.includes('₫') && !/\d[\d.]*\s?(đ|đồng)\/kg/.test(vis), 'trang không hiện con số giá hay ký hiệu ₫');

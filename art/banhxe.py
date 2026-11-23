@@ -4,11 +4,11 @@ import json
 from iso import *
 
 FILE = 'banh-xe-huong.html'
-TITLE = 'Bánh Xe Hương MeDili'
+TITLE = 'Bánh xe hương MeDili'
 DESC = ('Bánh xe hương cà phê do MeDili soạn với từ ngữ gần gũi người Việt: chín nhóm hương, ba tầng từ chung đến cụ thể, nguồn gốc của từng mùi, '
         'mức rang làm nổi nhóm nào, và phiếu nếm để luyện mũi.')
 
-# (tên nhóm, màu, mô tả, link, [(nhóm giữa, [(mùi, nguồn gốc)])])  nguồn gốc: e enzyme, s caramel hoá đường, d chưng cất khô, t mùi lỗi
+# (tên nhóm, màu, mô tả, link, [(nhóm giữa, [(mùi, nguồn gốc)])])  nguồn gốc: e enzyme, s caramel hóa đường, d chưng cất khô, t mùi lỗi
 SEC = [
     ('Hoa', '#C74B7A', 'Hương enzyme có sẵn từ lúc trái chín. Nhẹ và bay nhanh, rõ nhất ở rang sáng và khi ly còn ấm.', 'trai-chin.html',
      [('Hoa trắng', [('Hoa cà phê', 'e'), ('Hoa nhài', 'e'), ('Hoa bưởi', 'e')]), ('Hoa hồng, trà', [('Hoa hồng', 'e'), ('Trà ô long', 'e'), ('Trà đen', 'e')])]),
@@ -17,12 +17,12 @@ SEC = [
       ('Táo, mơ, đào', [('Táo', 'e'), ('Mơ', 'e'), ('Đào', 'e')]), ('Trái sấy', [('Nho khô', 's'), ('Mận khô', 's'), ('Chà là', 's')])]),
     ('Chua thanh', '#D9782E', 'Từ acid citric, malic có sẵn trong nhân và acid lactic, acetic do lên men. Rang càng đậm, chua càng giảm.', 'tien-chat-huong.html',
      [('Cam chanh', [('Chanh', 'e'), ('Cam', 'e'), ('Bưởi', 'e'), ('Quýt', 'e')]), ('Kiểu chua', [('Táo xanh', 'e'), ('Sữa chua', 'e'), ('Rượu vang', 'e'), ('Me', 'e')])]),
-    ('Ngọt', '#C9962B', 'Từ sucrose bị caramel hoá và phản ứng Maillard khi rang vừa. Robusta Premium sơ chế honey hay cho caramel, đường nâu.', 'tien-chat-huong.html',
+    ('Ngọt', '#C9962B', 'Từ sucrose bị caramel hóa và phản ứng Maillard khi rang vừa. Robusta Premium sơ chế Honey thường cho hương caramel, đường nâu.', 'tien-chat-huong.html',
      [('Đường nâu', [('Đường thốt nốt', 's'), ('Mật mía', 's'), ('Đường nâu', 's')]), ('Caramel, mật', [('Caramel', 's'), ('Mật ong', 'e'), ('Kẹo bơ', 's')]),
       ('Vani, bơ', [('Vani', 's'), ('Bơ', 's')])]),
     ('Hạt, ca cao', '#8D5A32', 'Phản ứng Maillard và Strecker ở rang vừa đến đậm. Robusta Di Linh thường mạnh nhóm này.', 'tien-chat-huong.html',
      [('Hạt rang', [('Đậu phộng rang', 's'), ('Hạt điều', 's'), ('Hạnh nhân', 's'), ('Óc chó', 's')]), ('Ca cao', [('Ca cao', 's'), ('Socola sữa', 's'), ('Socola đen', 's')])]),
-    ('Gia vị', '#A0482A', 'Acid chlorogenic phân huỷ thành các phenol như 4-vinylguaiacol mùi đinh hương. Rõ hơn ở rang đậm và ở Robusta.', 'tien-chat-huong.html',
+    ('Gia vị', '#A0482A', 'Acid chlorogenic phân hủy thành các phenol như 4-vinylguaiacol mùi đinh hương. Rõ hơn ở rang đậm và ở Robusta.', 'tien-chat-huong.html',
      [('Gia vị ấm', [('Quế', 'd'), ('Hồi', 'd'), ('Đinh hương', 'd')]), ('Gia vị cay', [('Tiêu đen', 'd'), ('Gừng', 'd'), ('Hạt mùi', 'd')])]),
     ('Rang, khói', '#5E3A24', 'Chưng cất khô khi rang đậm: mùi rang, khói, gỗ. Vừa đủ thì dễ chịu; quá thì át hết hương gốc của hạt.', 'rang.html',
      [('Ngũ cốc', [('Gạo rang', 's'), ('Mạch nha', 's'), ('Bánh mì nướng', 's')]), ('Rang đậm', [('Cà phê rang', 'd'), ('Khói củi', 'd'), ('Thuốc tẩu', 'd'), ('Gỗ tuyết tùng', 'd')])]),
@@ -30,13 +30,13 @@ SEC = [
      [('Rau củ', [('Đậu Hà Lan', 'e'), ('Dưa leo', 'e'), ('Khoai tây', 'e')]), ('Lá, cỏ', [('Cỏ khô', 'e'), ('Lá chè', 'e'), ('Thảo mộc', 'e')])]),
     ('Mùi lỗi', '#6E5A4A', 'Từ trái hỏng, lên men quá, ẩm mốc khi phơi và cất kho, hạt cũ hoặc rang chưa tới. Một ít hạt lỗi đủ làm hỏng mùi cả mẻ.', 'vi-sinh.html',
      [('Lên men quá', [('Giấm', 't'), ('Rượu nồng', 't'), ('Trái thối', 't'), ('Hành', 't')]), ('Ẩm, mốc', [('Mốc', 't'), ('Đất ẩm', 't'), ('Bao bố', 't')]),
-      ('Hoá chất', [('Thuốc', 't'), ('Cao su', 't')]), ('Cũ, sống', [('Giấy, bìa', 't'), ('Ngũ cốc sống', 't'), ('Rơm', 't')])]),
+      ('Hóa chất', [('Thuốc', 't'), ('Cao su', 't')]), ('Cũ, sống', [('Giấy, bìa', 't'), ('Ngũ cốc sống', 't'), ('Rơm', 't')])]),
 ]
 
 ORIG = [
     ('e', 'Enzyme', 'cx2', 'Hình thành khi trái lớn và chín, nằm sẵn trong hạt. Nhẹ, bay nhanh, rõ nhất ở rang sáng.',
      'Khoai tây, đậu Hà Lan, dưa leo, hoa hồng trà, hoa cà phê, chanh, mơ, táo, mật ong'),
-    ('s', 'Caramel hoá đường', 'cx1', 'Đường và acid amin phản ứng khi rang, mạnh nhất ở rang vừa: Maillard và caramel hoá.',
+    ('s', 'Caramel hóa đường', 'cx1', 'Đường và acid amin phản ứng khi rang, mạnh nhất ở rang vừa: Maillard và caramel hóa.',
      'Vani, bơ, bánh mì nướng, caramel, socola đen, hạnh nhân rang, đậu phộng rang, hạt phỉ rang, óc chó'),
     ('d', 'Chưng cất khô', 'cx4', 'Chất xơ và acid chlorogenic bị đốt nóng lâu, nổi rõ ở rang đậm: gỗ, gia vị, khói.',
      'Tuyết tùng, đinh hương, tiêu, hạt mùi, mạch nha, thuốc tẩu, cà phê rang'),
@@ -45,10 +45,10 @@ ORIG = [
 ]
 
 PRODUCTS = [  # theo mô tả sản phẩm trên trang Chọn mua của MeDili
-    ('rc', 'Robusta Classic', 'Đậm đà, đắng rõ, hậu tròn, chocolate đen.', ['Socola đen', 'Ca cao'], 6),
+    ('rc', 'Robusta Classic', 'Đậm đà, đắng rõ, hậu tròn, socola đen.', ['Socola đen', 'Ca cao'], 6),
     ('rp', 'Robusta Premium', 'Cân bằng, đường nâu, caramel, hậu ngọt.', ['Đường nâu', 'Caramel'], 4),
     ('ap', 'Arabica Premium', 'Socola, cam chanh, chua nhẹ, đắng vừa, ngọt hậu.', ['Socola sữa', 'Chanh', 'Cam'], 3),
-    ('bl', 'Blend', 'Từ đậm cacao đến cân bằng, thơm, chua thanh.', ['Ca cao', 'Chanh'], 4),
+    ('bl', 'Blend', 'Từ đậm ca cao đến cân bằng, thơm, chua thanh.', ['Ca cao', 'Chanh'], 4),
 ]
 
 TRAIN = [
@@ -66,7 +66,7 @@ SRC = [
      'https://pages.uoregon.edu/chendon/coffee_literature/old_literature/2004%20Flav.%20Frag.%20J.,%20An%20overview%20of%20coffee%20flavor.pdf'),
     ('Roasters Guild (2008). Advanced Level Craft Roasting: hương tạo ra nhiều nhất ở rang sáng, rang vừa thì mất nhiều hơn tạo', 'Sweet Maria’s',
      'https://library.sweetmarias.com/wp-content/uploads/2020/08/Advanced-Level-Craft-Roasting.pdf'),
-    ('Ba nhóm hương enzyme, caramel hoá đường, chưng cất khô theo mức rang sáng, vừa, đậm', 'The Daily Meal', 'https://www.thedailymeal.com/1512848/three-coffee-aromas-explained'),
+    ('Ba nhóm hương enzyme, caramel hóa đường, chưng cất khô theo mức rang sáng, vừa, đậm', 'The Daily Meal', 'https://www.thedailymeal.com/1512848/three-coffee-aromas-explained'),
 ]
 
 
@@ -79,7 +79,7 @@ def page():
     train = ''.join(f'<li><span class="n">{icon(i)}</span><h3>{t}</h3><p>{p}</p></li>' for i, t, p in TRAIN)
     body = head('MeDili', 'Bánh xe hương',
                 'Chín nhóm hương, ba tầng từ chung đến cụ thể, viết bằng những mùi người Việt quen: mít chín, đường thốt nốt, đậu phộng rang, tiêu Di Linh. '
-                'Bấm một ô để xem mùi đó từ đâu ra, chọn mức rang để thấy nhóm nào nổi lên, rồi ghi phiếu nếm của chính chị.')
+                'Bấm một ô để xem mùi đó từ đâu ra, chọn mức rang để thấy nhóm nào nổi lên, rồi ghi phiếu nếm của chính bạn.')
     body += f'''
 <div class="bench bx">
   <div class="card">
@@ -114,7 +114,7 @@ def page():
 <section class="p-sec">
   <p class="eye">Bốn nguồn gốc của mùi</p>
   <h2 class="p-h2" style="margin:0">Mùi trong ly <em>đến từ đâu.</em></h2>
-  <p class="lead" style="margin:0 0 4px">Giới nếm cà phê hay chia mùi theo lúc nó hình thành. Cách chia này để luyện mũi, không phải hoá học chính xác: một mùi có thể đến từ nhiều đường.</p>
+  <p class="lead" style="margin:0 0 4px">Giới nếm cà phê hay chia mùi theo lúc nó hình thành. Cách chia này để luyện mũi, không phải hóa học chính xác: một mùi có thể đến từ nhiều đường.</p>
   <div class="g4">{orig}</div>
 </section>
 
@@ -126,7 +126,7 @@ def page():
 
 <section class="card" id="phieu">
   <h2>Phiếu nếm MeDili</h2>
-  <p class="lead">Bấm “Thêm vào phiếu” ở ô chi tiết để ghi mùi, chỉnh năm thang vị, rồi chép phiếu. Ghi đều mỗi ly, sau một tháng chị sẽ thấy mũi mình nhạy với nhóm nào.</p>
+  <p class="lead">Bấm “Thêm vào phiếu” ở ô chi tiết để ghi mùi, chỉnh năm thang vị, rồi sao chép phiếu. Ghi đều mỗi ly, sau một tháng bạn sẽ thấy mũi mình nhạy với nhóm nào.</p>
   <div class="cup3">
     <div>
       <span class="lbl">Mùi đã chọn</span><div class="picked" id="picked"></div>
@@ -143,15 +143,15 @@ def page():
 
 <section class="card">
   <h2>Luyện mũi trong bốn tuần</h2>
-  <p class="lead">Mũi giỏi lên nhờ ngửi đồ thật và ghi chép đều, không cần bộ mùi đắt tiền để bắt đầu.</p>
+  <p class="lead">Mũi nhạy hơn nhờ ngửi đồ thật và ghi chép đều đặn; không cần bộ mùi đắt tiền để bắt đầu.</p>
   <ol class="pst two">{train}</ol>
 </section>
 
 <section class="card src">
   <h2>Nguồn và cách đọc</h2>
-  <p class="lead">Bánh xe này do MeDili soạn cho người uống cà phê Việt, không thay cho bánh xe chuẩn quốc tế dùng trong chấm điểm. Gán nguồn gốc cho từng mùi là cách đơn giản hoá để luyện mũi. Mức nổi của ba nhóm theo mức rang là minh hoạ định tính, dùng chung với Cỗ máy Tiền chất hương. Mùi gợi ý cho từng dòng cà phê lấy theo mô tả sản phẩm của MeDili.</p>
+  <p class="lead">Bánh xe này do MeDili soạn cho người uống cà phê Việt, không thay cho bánh xe chuẩn quốc tế dùng trong chấm điểm. Gán nguồn gốc cho từng mùi là cách đơn giản hóa để luyện mũi. Mức nổi của ba nhóm theo mức rang là minh họa định tính, dùng chung với Cỗ máy Tiền chất hương. Mùi gợi ý cho từng dòng cà phê lấy theo mô tả sản phẩm của MeDili.</p>
   <ul>{srclist(SRC)}</ul>
-  <div class="lnks"><a class="lnk" href="phan-biet-ca-phe.html">Cỗ máy Phân biệt cà phê</a><a class="lnk" href="tien-chat-huong.html">Cỗ máy Tiền chất hương</a><a class="lnk" href="vi-sinh.html">Cỗ máy Vi sinh</a><a class="lnk" href="trai-chin.html">Cỗ máy Trái chín</a><a class="lnk" href="rang.html">Phòng rang</a><a class="lnk" href="tim-gu.html">Tìm gu cà phê</a><a class="lnk" href="mua-hang.html">Phòng Chọn Mua</a></div>
+  <div class="lnks"><a class="lnk" href="phan-biet-ca-phe.html">Cỗ máy Phân biệt cà phê</a><a class="lnk" href="tien-chat-huong.html">Cỗ máy Tiền chất hương</a><a class="lnk" href="vi-sinh.html">Cỗ máy Vi sinh</a><a class="lnk" href="trai-chin.html">Cỗ máy Trái chín</a><a class="lnk" href="rang.html">Phòng rang</a><a class="lnk" href="tim-gu.html">Tìm gu cà phê</a><a class="lnk" href="mua-hang.html">Phòng chọn mua</a></div>
 </section>
 '''
     return doc(FILE, TITLE, DESC, body, css=ISO_CSS + CSS, js=ISO_JS + 'const W=' + data + ';\n' + JS)
@@ -208,7 +208,7 @@ JS = r'''
 const CX=340,CY=340,R0=74,R1=150,R2=228,R3=330;
 const LV=[null,{n:'Cinnamon',g:'Light'},{n:'New England',g:'Light'},{n:'City',g:'Medium-Light'},{n:'City+',g:'Medium'},{n:'Full City',g:'Medium-Dark'},{n:'Vienna',g:'Dark'},{n:'French',g:'Dark'},{n:'Italian',g:'Very Dark'}];
 const AR={e:[.15,.95,1,.85,.6,.4,.25,.15,.08],s:[0,.35,.5,.75,1,.9,.65,.4,.25],d:[0,.05,.08,.15,.3,.5,.75,.95,1],t:[.7,.7,.7,.7,.7,.7,.7,.7,.7]};
-const ON={e:'Enzyme',s:'Caramel hoá đường',d:'Chưng cất khô',t:'Mùi lỗi'};
+const ON={e:'Enzyme',s:'Caramel hóa đường',d:'Chưng cất khô',t:'Mùi lỗi'};
 const OC={e:'var(--cx2)',s:'var(--cx1)',d:'var(--cx4)',t:'var(--cx3)'};
 const STR={e:'rang sáng',s:'rang vừa',d:'rang đậm',t:'mọi mức rang'};
 const st={lv:4,prod:'',sel:null,picked:[]};
@@ -251,7 +251,7 @@ function build(){let h='';let i=0;
 function leafHTML(li){const L=LEAF[li],s=W.sec[L.s],g=s.g[L.g],prods=W.prod.filter(p=>p.f.includes(L.n)).map(p=>p.n);
  return `<div class="dh"><div class="dn" style="background:${s.c};color:${txc(s.c)}">${L.n.slice(0,1)}</div><h2>${L.n}<small>${s.n} · ${g.n}</small></h2></div>
  <div class="dgrid"><div><span class="lbl">Nguồn gốc</span><p><b style="color:${OC[L.o]}">${ON[L.o]}</b>. ${W.orig.find(o=>o.k===L.o).d}</p><span class="lbl">Nhóm ${s.n.toLowerCase()}</span><p>${s.d} <a class="lnk" href="${s.l}">Xem thêm</a></p></div>
- <div><span class="lbl">Thông tin nhanh</span><dl class="kv"><dt>Rõ nhất ở</dt><dd>${STR[L.o]}</dd><dt>Ở ${LV[st.lv].n}</dt><dd>${L.o==='t'?'không phụ thuộc mức rang':vn(AR[L.o][st.lv]*100,0)+' % mức nổi'}</dd><dt>Cà phê MeDili</dt><dd>${prods.length?prods.join(', '):'chưa ghi trong mô tả sản phẩm'}</dd></dl>
+ <div><span class="lbl">Thông tin nhanh</span><dl class="kv"><dt>Rõ nhất ở</dt><dd>${STR[L.o]}</dd><dt>Ở ${LV[st.lv].n}</dt><dd>${L.o==='t'?'không phụ thuộc mức rang':vn(AR[L.o][st.lv]*100,0)+'% mức nổi'}</dd><dt>Cà phê MeDili</dt><dd>${prods.length?prods.join(', '):'chưa ghi trong mô tả sản phẩm'}</dd></dl>
  <p style="margin-top:8px"></p><span class="lbl">Ngửi gì để nhớ</span><p>${L.o==='t'?'Đây là mùi cần tránh. Nhớ để nhận ra sớm, tìm lại khâu lỗi: trái, bồn, sân phơi, kho.':`Ngửi ${L.n.toLowerCase()} thật trong 10 giây, nhắm mắt, rồi ngửi ly cà phê ngay sau đó.`}</p>
  <div class="dact"><button class="btn small main" type="button" id="addP">${st.picked.includes(li)?'Bỏ khỏi phiếu':'Thêm vào phiếu'}</button></div></div></div>`}
 function pick(k){if(!k)return;st.sel=k;const t=k[0],idx=k.slice(1);let h='';

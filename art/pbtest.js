@@ -26,7 +26,7 @@ const ok = (c, m) => console.log((c ? 'OK  ' : 'FAIL') + ' ' + m);
   await p.click('#samps [data-k=se]');
   await p.$eval('#iW', e => { e.value = 22; e.dispatchEvent(new Event('input')) });
   await p.$eval('#iS', e => { e.value = 90; e.dispatchEvent(new Event('input')) });
-  ok((await txt('#verdict b')).includes('Robusta cao sản'), 'kéo 100 nhân 22 g, sàng 16 90 %: ' + (await txt('#verdict b')).trim());
+  ok((await txt('#verdict b')).includes('Robusta cao sản'), 'kéo 100 nhân 22 g, sàng 16 90%: ' + (await txt('#verdict b')).trim());
   ok(!(await p.$eval('#back', e => e.hidden)), 'nút Về hồ sơ chuẩn hiện ở chế độ tự nhập');
   // 3. tắt lab
   await p.click('#lab'); await p.waitForTimeout(60);
@@ -37,7 +37,7 @@ const ok = (c, m) => console.log((c ? 'OK  ' : 'FAIL') + ' ' + m);
   await p.click('#cuts [data-k=s]'); await p.waitForTimeout(60);
   ok(true, 'rãnh chữ S, không lab: ' + (await txt('#verdict b')).trim());
   await p.click('#cuts [data-k=r]'); await p.waitForTimeout(60);
-  ok((await txt('#verdict b')).includes('Liberica'), 'rãnh nhăn + 22 g + sàng 90 %: ' + (await txt('#verdict b')).trim());
+  ok((await txt('#verdict b')).includes('Liberica'), 'rãnh nhăn + 22 g + sàng 90%: ' + (await txt('#verdict b')).trim());
   await p.click('#back'); await p.waitForTimeout(60);
   ok((await txt('#modeL')).includes('hồ sơ chuẩn'), 'về hồ sơ chuẩn: ' + await txt('#modeL'));
   // 5. mẫu bí ẩn
@@ -59,7 +59,7 @@ const ok = (c, m) => console.log((c ? 'OK  ' : 'FAIL') + ' ' + m);
     await p.click(`#qPre [data-k=${k}]`); await p.waitForTimeout(40);
     const h = await txt('#qzr .qh'); ok(h.includes(names[k]) || (k === 'ara' && h.includes('Arabica')), `cảm quan mẫu ${k}: ${h}`);
   }
-  await p.click('#qPre [data-k=x]'); ok((await txt('#qzr')).includes('Chưa có quan sát'), 'xoá hết câu trả lời');
+  await p.click('#qPre [data-k=x]'); ok((await txt('#qzr')).includes('Chưa có quan sát'), 'xóa hết câu trả lời');
   await p.click('#qz [data-q=ranh][data-o=t]'); await p.click('#qz [data-q=co][data-o=nho]');
   ok(true, 'hai câu: ' + (await txt('#qzr .qh')) + ' | ' + ((await p.$('#qzr .mnote')) ? await txt('#qzr .mnote') : ''));
   // 8. đối chiếu cặp, radar

@@ -9,7 +9,7 @@ from pages_a import head
 
 FILE = 'cong-thuc-pha.html'
 TITLE = 'Cỗ máy Công thức pha MeDili'
-DESC = ('Bốn bước ra công thức pha cà phê của riêng bạn: chọn sơ chế, mức rang, cách pha V60, phin, espresso hay cold brew '
+DESC = ('Bốn bước để có công thức pha cà phê của riêng bạn: chọn sơ chế, mức rang, cách pha V60, phin, espresso hay cold brew '
         'và kỹ thuật. Cỗ máy tính liều cà phê, nước, nhiệt độ, độ xay, thời gian, từng lần rót và gợi ý cà phê MeDili hợp gu.')
 
 # cà phê MeDili hợp từng cách pha, theo thứ tự ưu tiên (mã trong cuahang.py)
@@ -112,27 +112,27 @@ CSS = r'''
 '''
 
 JS = r'''
-const PC={washed:{n:'Washed',d:'Xát vỏ, lên men, rửa sạch nhớt rồi phơi. Ly sạch, thanh, chua sáng.',t:0,g:0},
- honey:{n:'Honey',d:'Giữ lại một phần lớp nhớt khi phơi. Ngọt hơn, thân tròn hơn washed.',t:-1,g:0},
+const PC={washed:{n:'Washed',d:'Xát vỏ, lên men, rửa sạch lớp nhớt rồi phơi. Ly sạch, thanh, chua thanh.',t:0,g:0},
+ honey:{n:'Honey',d:'Giữ lại một phần lớp nhớt khi phơi. Ngọt hơn, thân tròn hơn Washed.',t:-1,g:0},
  natural:{n:'Natural',d:'Phơi nguyên trái. Hương trái cây chín, ngọt đậm, thân dày.',t:-1,g:20},
  anaerobic:{n:'Natural yếm khí',d:'Ủ trái trong thùng kín trước khi phơi. Hương lên men rõ, như trái cây chín, rượu vang.',t:-2,g:40}};
-const RO={rs:{n:'Rất sáng',d:'Hạt còn cứng, chua sáng và hương hoa nhiều.',t:2,g:-60},
- s:{n:'Sáng',d:'Chua sáng, hương trái cây rõ.',t:1,g:-30},
+const RO={rs:{n:'Rất sáng',d:'Hạt còn cứng, chua thanh và hương hoa nhiều.',t:2,g:-60},
+ s:{n:'Sáng',d:'Chua thanh, hương trái cây rõ.',t:1,g:-30},
  sv:{n:'Sáng vừa',d:'Cân bằng giữa chua và ngọt.',t:0,g:0},
  v:{n:'Vừa',d:'Ngọt caramel, thân vừa, chua dịu.',t:-1,g:20},
- vd:{n:'Vừa đậm',d:'Đường nâu, cacao, đắng nhẹ.',t:-2,g:40},
- d:{n:'Đậm',d:'Đậm, đắng rõ, chocolate đen. Kiểu rang của ly phin truyền thống.',t:-3,g:60}};
+ vd:{n:'Vừa đậm',d:'Đường nâu, ca cao, đắng nhẹ.',t:-2,g:40},
+ d:{n:'Đậm',d:'Đậm, đắng rõ, socola đen. Kiểu rang của ly phin truyền thống.',t:-3,g:60}};
 const ICON={v60:'<svg viewBox="0 0 36 36" aria-hidden="true"><path d="M7 9h22l-8 13h-6z"/><path d="M12 26h12v5H12z"/><path d="M15 22v4M21 22v4"/></svg>',
  phin:'<svg viewBox="0 0 36 36" aria-hidden="true"><path d="M11 7h14v10H11z"/><path d="M8 17h20"/><path d="M12 20h12l-1.5 11h-9z"/></svg>',
  esp:'<svg viewBox="0 0 36 36" aria-hidden="true"><path d="M8 8h16v5H8z"/><path d="M24 10h6"/><path d="M11 18h12v6a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z"/><path d="M23 20h2a2.5 2.5 0 0 1 0 5h-2"/></svg>',
  cold:'<svg viewBox="0 0 36 36" aria-hidden="true"><path d="M11 6h14v3H11z"/><path d="M10 9h16v20a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2z"/><path d="M10 17h16"/><circle cx="27" cy="27" r="5"/><path d="M27 24.5V27l1.8 1.2"/></svg>'};
 const M={
- v60:{n:'Pour over V60',d:'Phễu nón, giấy lọc, rót tay. Ly sạch, rõ hương, hợp Arabica rang sáng đến vừa.',temp:94,cold:0,
+ v60:{n:'Pour-over V60',d:'Phễu nón, giấy lọc, rót tay. Ly sạch, rõ hương, phù hợp với Arabica rang sáng đến vừa.',temp:94,cold:0,
   T:{'46':{n:'4:6 · năm lần rót',d:'Hai lần rót đầu chỉnh chua và ngọt, ba lần sau chỉnh độ đậm.',dose:20,r:15,g:950,end:210},
      one:{n:'Ủ rồi rót một lần',d:'Ủ 45 giây, rót hết nước trong một lần, xoáy nhẹ rồi để chảy hết.',dose:15,r:16.5,g:650,end:180},
      three:{n:'Ba lần rót',d:'Ủ rồi rót hai lần đều nhau. Dễ làm, ly cân bằng.',dose:15,r:16,g:750,end:180},
      pulse:{n:'Rót nhịp',d:'Ủ rồi rót bốn nhịp nhỏ, nước luôn ngập bã. Ly ngọt và dày.',dose:15,r:16,g:700,end:195}}},
- phin:{n:'Phin',d:'Phin nhôm hoặc inox, nhỏ giọt chậm. Ly đậm, thân dày, hợp Robusta rang vừa đến đậm.',temp:94,cold:0,
+ phin:{n:'Phin',d:'Phin nhôm hoặc inox, nhỏ giọt chậm. Ly đậm, thân dày, phù hợp với Robusta rang vừa đến đậm.',temp:94,cold:0,
   T:{nong:{n:'Phin đen nóng',d:'Ly đen nóng, uống chậm.',dose:20,r:5,g:600,end:270},
      da:{n:'Phin đen đá',d:'Pha đậm hơn vì đá tan sẽ làm loãng.',dose:22,r:3.6,g:600,end:270},
      sua:{n:'Phin sữa đá',d:'Cà phê sữa kiểu Sài Gòn: cà phê đậm, sữa đặc, đá.',dose:25,r:2.8,g:580,end:270},
@@ -147,8 +147,8 @@ const M={
  cold:{n:'Cold brew',d:'Ngâm lạnh nhiều giờ. Ly êm, ngọt, ít chua, uống mát.',temp:0,cold:1,
   T:{cot:{n:'Cốt đậm đặc 1:5',d:'Ngâm cốt đặc, khi uống pha thêm nước hoặc sữa theo tỷ lệ 1:1.',dose:100,r:5,g:1100,end:16},
      lien:{n:'Uống liền 1:10',d:'Ngâm loãng, lọc xong uống ngay, không cần pha thêm.',dose:60,r:10,g:1100,end:18},
-     sua:{n:'Cold brew sữa',d:'Cốt 1:5 pha với sữa tươi, thêm sữa đặc tuỳ gu.',dose:100,r:5,g:1100,end:16},
-     jp:{n:'Pha nóng trên đá',d:'Pha nóng nhanh lên đá: thơm như pour over, mát ngay.',dose:20,r:15,g:650,end:165}}}};
+     sua:{n:'Cold brew sữa',d:'Cốt 1:5 pha với sữa tươi, thêm sữa đặc tùy gu.',dose:100,r:5,g:1100,end:16},
+     jp:{n:'Pha nóng trên đá',d:'Pha nóng nhanh lên đá: thơm như pour-over, mát ngay.',dose:20,r:15,g:650,end:165}}}};
 const PICK=__PICK__,SP=__SP__,SPI=Object.fromEntries(SP.map(x=>[x.id,x]));
 const K='medili-congthuc-1';
 let S={pc:'washed',ro:'sv',m:'v60',t:'46',dose:20,sh:0};
@@ -172,17 +172,17 @@ function recipe(){
   if(S.t==='46'){const q=W*.2,sh=Math.max(-q*.6,Math.min(q*.6,+S.sh||0));
    R.pours=[{at:0,w:q+sh,n:'Rót đều từ tâm ra, chờ hạt nở'},{at:45,w:q-sh,n:'Lần 2: cùng nhóm chỉnh chua ngọt'},{at:90,w:q,n:'Bắt đầu nhóm chỉnh độ đậm'},{at:130,w:q,n:''},{at:165,w:q,n:'Lần cuối, để chảy hết'}];R.bal=sh}
   else if(S.t==='one'){const b=d*2;R.pours=[{at:0,w:b,n:'Ủ, xoáy nhẹ cho bã ướt đều'},{at:45,w:W-b,n:'Rót liên tục đến hết, xong trước 1:45'},{at:105,w:0,n:'Xoáy nhẹ cho mặt bã phẳng'}]}
-  else if(S.t==='three'){const b=d*2.5;R.pours=[{at:0,w:b,n:'Ủ 45 giây'},{at:45,w:W*.6-b,n:'Rót đến 60 % lượng nước'},{at:90,w:W*.4,n:'Rót đến đủ, để chảy hết'}]}
+  else if(S.t==='three'){const b=d*2.5;R.pours=[{at:0,w:b,n:'Ủ 45 giây'},{at:45,w:W*.6-b,n:'Rót đến 60% lượng nước'},{at:90,w:W*.4,n:'Rót đến đủ, để chảy hết'}]}
   else {const b=d*2,p=(W-b)/4;R.pours=[{at:0,w:b,n:'Ủ 40 giây'},{at:40,w:p,n:'Nhịp 1'},{at:65,w:p,n:'Nhịp 2'},{at:90,w:p,n:'Nhịp 3'},{at:115,w:p,n:'Nhịp 4, để chảy hết'}]}
-  R.par=[['Nước',fm(W)+' g',''],['Tỷ lệ','1:'+f1(t.r),''],['Nhiệt độ',temp+' °C','nước vừa sôi để nguội chút'],['Độ xay','≈ '+g+' µm',grindTxt(g)],['Thời gian',mmss(t.end),'tính cả lúc chảy hết'],['Ra ly','≈ '+fm(W-d*2)+' ml','bã giữ lại khoảng gấp đôi lượng cà phê']];
+  R.par=[['Nước',fm(W)+' g',''],['Tỷ lệ','1:'+f1(t.r),''],['Nhiệt độ',temp+' °C','nước vừa sôi, để nguội một chút'],['Độ xay','≈ '+g+' µm',grindTxt(g)],['Thời gian',mmss(t.end),'tính cả lúc chảy hết'],['Ra ly','≈ '+fm(W-d*2)+' ml','bã giữ lại khoảng gấp đôi lượng cà phê']];
  } else if(S.m==='phin'){
   R.water=W;const b=d;R.pours=[{at:0,w:b,n:'Ủ: tưới ướt đều mặt cà phê, chờ hạt nở'},{at:40,w:W-b,n:'Đổ đầy, đậy nắp, chờ nhỏ giọt'}];
-  if(S.t==='da')R.ing=[['Đá viên','≈ 150 g'],['Đường','tuỳ gu']];
+  if(S.t==='da')R.ing=[['Đá viên','≈ 150 g'],['Đường','tùy gu']];
   if(S.t==='sua')R.ing=[['Sữa đặc',fm(d)+' ml'],['Đá viên','≈ 150 g']];
   if(S.t==='bx')R.ing=[['Sữa đặc',fm(d*2)+' ml'],['Sữa tươi',fm(d*4)+' ml'],['Đá viên','≈ 120 g']];
-  R.par=[['Nước',fm(W)+' ml',''],['Tỷ lệ','1:'+f1(t.r),S.t==='nong'?'':'pha đậm vì còn sữa, đá'],['Nhiệt độ',temp+' °C','nước sôi để khoảng 30 giây'],['Độ xay','≈ '+g+' µm',grindTxt(g)],['Thời gian',mmss(t.end),'giọt chảy hết'],['Ra ly','≈ '+fm(W-d*1.6)+' ml','cà phê đậm']];
+  R.par=[['Nước',fm(W)+' ml',''],['Tỷ lệ','1:'+f1(t.r),S.t==='nong'?'':'pha đậm vì còn sữa, đá'],['Nhiệt độ',temp+' °C','nước sôi để nguội khoảng 30 giây'],['Độ xay','≈ '+g+' µm',grindTxt(g)],['Thời gian',mmss(t.end),'giọt chảy hết'],['Ra ly','≈ '+fm(W-d*1.6)+' ml','cà phê đậm']];
  } else if(esp){
-  const y=d*t.r;R.water=y;R.pours=[{at:0,w:0,n:'Bấm chiết, vài giây đầu ngấm bã'},{at:7,w:y*.15,n:'Giọt đầu ra, màu nâu sậm'},{at:t.end,w:y*.85,n:'Ngắt khi đủ '+f1(y)+' g'}];
+  const y=d*t.r;R.water=y;R.pours=[{at:0,w:0,n:'Bấm chiết, vài giây đầu nước thấm bã'},{at:7,w:y*.15,n:'Giọt đầu ra, màu nâu sậm'},{at:t.end,w:y*.85,n:'Ngắt khi đủ '+f1(y)+' g'}];
   if(S.t==='ame')R.ing=[['Nước nóng',fm(y*4)+' ml']];
   if(S.t==='lat')R.ing=[['Sữa tươi',fm(d*11)+' ml','đánh nóng 60–65 °C, bọt mỏng']];
   if(S.t==='cap')R.ing=[['Sữa tươi',fm(d*7)+' ml','đánh nhiều bọt']];
@@ -191,7 +191,7 @@ function recipe(){
   if(S.t==='jp'){const tot=d*t.r,ice=tot*.4,hot=tot*.6;R.water=hot;R.pours=[{at:0,w:d*2,n:'Ủ 40 giây trên đá'},{at:40,w:hot-d*2,n:'Rót đến đủ nước nóng'}];R.ing=[['Đá trong bình',fm(ice)+' g','đá làm lạnh và pha loãng ly']];
    R.par=[['Nước nóng',fm(hot)+' g','cộng '+fm(ice)+' g đá'],['Tỷ lệ','1:'+f1(t.r),'tính cả đá'],['Nhiệt độ',temp+' °C',''],['Độ xay','≈ '+g+' µm',grindTxt(g)],['Thời gian',mmss(t.end),''],['Ra ly','≈ '+fm(tot-d*2)+' ml','uống ngay']]}
   else {R.unit='h';R.water=W;R.pours=[{at:0,w:W,n:'Đổ nước lạnh hoặc nước nguội, khuấy cho ướt đều'},{at:t.end,w:0,n:'Lọc qua giấy lọc hoặc túi vải'}];
-   if(S.t!=='lien')R.ing=[[S.t==='sua'?'Sữa tươi khi uống':'Nước hoặc sữa khi uống','1 phần cốt : 1 phần',S.t==='sua'?'thêm sữa đặc tuỳ gu':'']];
+   if(S.t!=='lien')R.ing=[[S.t==='sua'?'Sữa tươi khi uống':'Nước hoặc sữa khi uống','1 phần cốt : 1 phần',S.t==='sua'?'thêm sữa đặc tùy gu':'']];
    R.par=[['Nước',fm(W)+' ml','nước lạnh hoặc nhiệt độ phòng'],['Tỷ lệ','1:'+f1(t.r),S.t==='lien'?'uống liền':'cốt đậm đặc'],['Nhiệt độ','Lạnh','ngâm trong tủ lạnh 4 °C'],['Độ xay','≈ '+g+' µm',grindTxt(g)],['Thời gian',(t.end-2)+'–'+(t.end+2)+' giờ',''],['Ra','≈ '+fm(W-d*2)+' ml',S.t==='lien'?'':'cốt, pha 1:1 khi uống']]}
  }
  // gợi ý chỉnh
@@ -283,7 +283,7 @@ function render(){
  $('rx-par').innerHTML=R.par.map(p=>`<div><span>${p[0]}</span><b>${p[1]}</b>${p[2]?`<small>${p[2]}</small>`:''}</div>`).join('')+
   R.ing.map(i=>`<div><span>${i[0]}</span><b>${i[1]}</b>${i[2]?`<small>${i[2]}</small>`:''}</div>`).join('');
  $('rx-pours').innerHTML=`<thead><tr><th>Lúc</th><th>${S.m==='esp'?'Ra':'Rót'}</th><th>Làm gì</th></tr></thead><tbody>`+R.pours.map(p=>`<tr><td class="m">${R.unit==='h'?(p.at?p.at+' giờ':'Bắt đầu'):mmss(p.at)}</td><td class="m">${p.w>0?fm(p.w)+' g':'–'}</td><td>${E(p.n)}</td></tr>`).join('')+'</tbody>';
- $('rx-bal').hidden=!(S.m==='v60'&&S.t==='46');$('rx-bal-o').textContent=!S.sh?'Cân bằng':S.sh>0?`Lần 1 nhiều hơn ${fm(S.sh*2)} g: sáng, chua hơn`:`Lần 2 nhiều hơn ${fm(-S.sh*2)} g: ngọt hơn`;
+ $('rx-bal').hidden=!(S.m==='v60'&&S.t==='46');$('rx-bal-o').textContent=!S.sh?'Cân bằng':S.sh>0?`Lần 1 nhiều hơn ${fm(S.sh*2)} g: chua hơn`:`Lần 2 nhiều hơn ${fm(-S.sh*2)} g: ngọt hơn`;
  $('rx-tips').innerHTML=R.tips.map(x=>`<li>${E(x)}</li>`).join('');
  $('rx-sp').innerHTML=picks().map(x=>`<a href="${x.file}"><i style="--c:${x.col}" aria-hidden="true"></i><b>${E(x.n)}</b><small>${E(x.price)}</small></a>`).join('');
  $('rx-scene').innerHTML=scene(R);$('rx-tl').innerHTML=timeline(R);
@@ -300,7 +300,7 @@ $('rx-dose').addEventListener('change',e=>{const v=parseFloat(String(e.target.va
 $('rx-sweet').addEventListener('click',()=>{S.sh=(+S.sh||0)-2.5;render()});
 $('rx-bright').addEventListener('click',()=>{S.sh=(+S.sh||0)+2.5;render()});
 $('rx-reset').addEventListener('click',()=>{S={pc:'washed',ro:'sv',m:'v60',t:'46',dose:20,sh:0};$('rx-q').value='';render()});
-$('rx-copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(text(window._R));$('rx-msg').textContent='Đã chép công thức.'}catch(e){$('rx-msg').textContent='Trình duyệt chặn chép, hãy dùng In hoặc Lưu ảnh.'}});
+$('rx-copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(text(window._R));$('rx-msg').textContent='Đã sao chép công thức.'}catch(e){$('rx-msg').textContent='Trình duyệt chặn sao chép, hãy dùng In hoặc Lưu ảnh.'}});
 $('rx-print').addEventListener('click',()=>window.print());
 $('rx-img').addEventListener('click',()=>{try{const R=window._R,c=document.createElement('canvas'),W=1080,P=72,nr=1+R.par.length+R.ing.length,HH=Math.max(1080,330+Math.ceil(nr/2)*92+80+R.pours.length*44+150);c.width=W;c.height=HH;const g=c.getContext('2d');
   const F='"Be Vietnam Pro",system-ui,sans-serif',D='"Big Shoulders Display","Be Vietnam Pro",sans-serif';
@@ -314,7 +314,7 @@ $('rx-img').addEventListener('click',()=>{try{const R=window._R,c=document.creat
   R.pours.forEach(p=>{const tt=(R.unit==='h'?(p.at?p.at+' giờ':'Bắt đầu'):mmss(p.at))+(p.w>0&&S.m!=='esp'?' · rót '+fm(p.w)+' g':'')+(p.n?' · '+p.n:'');g.fillText(tt.length>58?tt.slice(0,57)+'…':tt,P,y);y+=44});
   g.fillStyle='#9E3B26';g.font=`italic 600 28px Georgia,serif`;g.fillText('medili.vn · Mê vị Di Linh',P,HH-80);
   const a=document.createElement('a');a.download='cong-thuc-pha-medili.png';a.href=c.toDataURL('image/png');document.body.append(a);a.click();a.remove();$('rx-msg').textContent='Đã lưu ảnh công thức.'}
- catch(e){$('rx-msg').textContent='Chưa lưu được ảnh trên trình duyệt này, hãy dùng In hoặc Chép.'}});
+ catch(e){$('rx-msg').textContent='Chưa lưu được ảnh trên trình duyệt này, hãy dùng In hoặc Sao chép.'}});
 $('rx-q').addEventListener('change',e=>{const x=SPI[e.target.value];if(!x)return;applySP(x);render()});
 function applySP(x){if(x.pk[0]&&PC[x.pk[0]])S.pc=x.pk[0];if(x.rk)S.ro=x.rk;S.m=x.m;S.t=Object.keys(M[x.m].T)[0];S.dose=M[x.m].T[S.t].dose;S.sh=0}
 const sp=new URLSearchParams(location.search).get('sp');if(sp&&SPI[sp]){applySP(SPI[sp]);$('rx-q').value=sp}
@@ -355,11 +355,11 @@ def page(catalog):
   <div class="rx-sum" id="rx-sum"></div>
   <div class="rx-dose"><b>Lượng cà phê</b><div class="rx-st"><button type="button" id="rx-minus" aria-label="Bớt cà phê">−</button><input id="rx-dose" inputmode="decimal" aria-label="Lượng cà phê, gam"><button type="button" id="rx-plus" aria-label="Thêm cà phê">+</button></div><span id="rx-unit">g cà phê</span></div>
   <div class="rx-par" id="rx-par"></div>
-  <div class="rx-bal" id="rx-bal" hidden><button type="button" id="rx-sweet">Ngọt hơn</button><button type="button" id="rx-bright">Chua sáng hơn</button><output id="rx-bal-o"></output></div>
+  <div class="rx-bal" id="rx-bal" hidden><button type="button" id="rx-sweet">Ngọt hơn</button><button type="button" id="rx-bright">Chua hơn</button><output id="rx-bal-o"></output></div>
   <table class="rx-pours" id="rx-pours"></table>
   <div><p class="eye">Chỉnh cho vừa gu</p><ul class="rx-tips" id="rx-tips"></ul></div>
   <div><p class="eye">Cà phê MeDili hợp công thức này</p><div class="rx-sp" id="rx-sp" style="margin-top:6px"></div></div>
-  <div class="rx-act"><button type="button" class="btn main" id="rx-img">Lưu ảnh công thức</button><button type="button" class="btn" id="rx-print">In công thức</button><button type="button" class="btn" id="rx-copy">Chép công thức</button></div>
+  <div class="rx-act"><button type="button" class="btn main" id="rx-img">Lưu ảnh công thức</button><button type="button" class="btn" id="rx-print">In công thức</button><button type="button" class="btn" id="rx-copy">Sao chép công thức</button></div>
   <p class="rx-msg" id="rx-msg" role="status"></p>
  </div>
 </section>
@@ -367,20 +367,20 @@ def page(catalog):
  <p class="eye">So sánh nhanh</p>
  <h2 class="p-h2">Bốn cách pha, <em>bốn kiểu ly.</em></h2>
  <div class="rx-cmp"><table>
-  <thead><tr><th>Cách pha</th><th>Tỷ lệ</th><th>Nước</th><th>Độ xay</th><th>Thời gian</th><th>Ly ra sao</th><th>Hợp với</th></tr></thead>
+  <thead><tr><th>Cách pha</th><th>Tỷ lệ</th><th>Nước</th><th>Độ xay</th><th>Thời gian</th><th>Ly ra sao</th><th>Phù hợp với</th></tr></thead>
   <tbody>
-   <tr><td>Pour over V60</td><td>1:15 đến 1:17</td><td>90 đến 96 °C</td><td>Vừa đến vừa thô</td><td>3 đến 3 phút 30</td><td>Sạch, rõ hương, chua sáng</td><td>Arabica rang sáng đến vừa</td></tr>
+   <tr><td>Pour-over V60</td><td>1:15 đến 1:17</td><td>90 đến 96 °C</td><td>Vừa đến vừa thô</td><td>3 đến 3 phút 30</td><td>Sạch, rõ hương, chua thanh</td><td>Arabica rang sáng đến vừa</td></tr>
    <tr><td>Phin</td><td>1:3 đến 1:5</td><td>90 đến 96 °C</td><td>Vừa</td><td>4 đến 5 phút</td><td>Đậm, thân dày, đắng rõ</td><td>Robusta rang vừa đến đậm</td></tr>
    <tr><td>Espresso</td><td>1:1,5 đến 1:3</td><td>90 đến 94 °C</td><td>Mịn</td><td>20 đến 35 giây</td><td>Đặc, crema dày, làm nền cho sữa</td><td>Blend, Robusta Premium</td></tr>
-   <tr><td>Cold brew</td><td>1:5 đến 1:10</td><td>Lạnh</td><td>Thô</td><td>14 đến 20 giờ</td><td>Êm, ngọt, ít chua</td><td>Robusta honey, blend</td></tr>
+   <tr><td>Cold brew</td><td>1:5 đến 1:10</td><td>Lạnh</td><td>Thô</td><td>14 đến 20 giờ</td><td>Êm, ngọt, ít chua</td><td>Robusta Honey, blend</td></tr>
   </tbody></table></div>
 </section>
 <section class="p-sec rx-more">
- <p class="eye">Đọc ly cà phê</p>
+ <p class="eye">Đọc vị ly cà phê</p>
  <h2 class="p-h2">Nếm rồi chỉnh <em>một thứ mỗi lần.</em></h2>
  <div class="rx-fix">
-  <div class="box"><h3>Chua gắt, nhạt</h3><p>Chiết chưa đủ. Xay mịn hơn một nấc, tăng nước 1 đến 2 °C, hoặc kéo dài thời gian.</p></div>
-  <div class="box"><h3>Đắng khét, khô miệng</h3><p>Chiết quá tay. Xay thô hơn, giảm nhiệt, rút ngắn thời gian hoặc rót nhẹ tay hơn.</p></div>
+  <div class="box"><h3>Chua gắt, nhạt</h3><p>Chiết xuất chưa đủ. Xay mịn hơn một nấc, tăng nhiệt độ nước 1 đến 2 °C, hoặc kéo dài thời gian.</p></div>
+  <div class="box"><h3>Đắng khét, khô miệng</h3><p>Chiết xuất quá mức. Xay thô hơn, giảm nhiệt, rút ngắn thời gian hoặc rót nhẹ tay hơn.</p></div>
   <div class="box"><h3>Loãng, thiếu thân</h3><p>Tăng lượng cà phê thêm 1 đến 2 g, hoặc giảm nước: tỷ lệ từ 1:16 xuống 1:15.</p></div>
   <div class="box"><h3>Ngọt, tròn, hậu dài</h3><p>Đúng công thức của bạn. Ghi lại bằng nút Lưu ảnh để lần sau pha y như vậy.</p></div>
  </div>

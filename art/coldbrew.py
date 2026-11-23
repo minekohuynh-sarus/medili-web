@@ -1,15 +1,15 @@
-# Cỗ máy Cold Brew MeDili: dây chuyền từ farm Di Linh đến chai cold brew và hộp túi ủ bán trên sàn TMĐT.
-# Mô hình minh hoạ. Chiết xuất lạnh dùng cùng hệ số với Cỗ máy Chiết xuất. Màu theo phong thủy: không xanh lá, không đen.
+# Cỗ máy Cold Brew MeDili: dây chuyền từ vườn Di Linh đến chai cold brew và hộp túi ủ bán trên sàn TMĐT.
+# Mô hình minh họa. Chiết xuất lạnh dùng cùng hệ số với Cỗ máy Chiết xuất. Màu theo phong thủy: không xanh lá, không đen.
 from kit import *
 
 FILE = 'cold-brew.html'
-TITLE = 'Cỗ Máy Cold Brew MeDili'
-DESC = ('Quy trình làm Cold Brew MeDili từ trái chín ở farm Di Linh đến chai cold brew và hộp túi ủ lạnh bán trên sàn thương mại điện tử: '
+TITLE = 'Cỗ máy Cold Brew MeDili'
+DESC = ('Quy trình làm Cold Brew MeDili từ trái chín ở vườn Di Linh đến chai cold brew và hộp túi ủ lạnh bán trên sàn thương mại điện tử: '
         'công thức theo mẻ, sản lượng, hạn dùng, bao bì, an toàn thực phẩm và hồ sơ cần có.')
 
 SAFE = [
-    ('khien', 'Cold brew là thực phẩm ít axit',
-     'Cà phê pha nóng và cold brew có pH khoảng 4,85–5,13, cao hơn mốc 4,6 dùng để phân biệt thực phẩm axit. '
+    ('khien', 'Cold brew là thực phẩm ít acid',
+     'Cà phê pha nóng và cold brew có pH khoảng 4,85–5,13, cao hơn mốc 4,6 dùng để phân biệt thực phẩm acid. '
      'Trong chai kín, ít oxy, nếu để ấm, vi khuẩn Clostridium botulinum có thể sinh độc tố. Vì vậy chai cold brew phải giữ lạnh từ lúc ngâm đến lúc khách uống.',
      'Rao & Fuller 2018'),
     ('lanh', 'Ngâm lạnh, giữ lạnh dưới 5 °C',
@@ -21,9 +21,9 @@ SAFE = [
      'Muốn hạn dài hơn phải kiểm nghiệm vi sinh theo thời gian, hoặc xử lý áp suất cao (HPP): một nghiên cứu cho thấy HPP 600 MPa trong 3 phút '
      'giảm hơn 6 log vi khuẩn gây bệnh và giữ an toàn 90 ngày, nhưng chưa thử với bào tử C. botulinum.',
      'Wisconsin DATCP · Polanco-Estibález 2023'),
-    ('nhan', 'Không thổi nitơ, không đóng lon tuỳ tiện',
+    ('nhan', 'Không thổi nitơ, không đóng lon tùy tiện',
      'Ở Mỹ đã có những vụ thu hồi lon cold brew, kể cả loại thổi nitơ, vì quy trình có thể để C. botulinum sinh độc tố, '
-     'hoặc quy trình cho thực phẩm ít axit đóng hộp chưa được duyệt. Chưa ghi nhận ca bệnh, nhưng cho thấy đóng kín, ít oxy là điểm rủi ro.',
+     'hoặc quy trình cho thực phẩm ít acid đóng hộp chưa được duyệt. Chưa ghi nhận ca bệnh, nhưng cho thấy đóng kín, ít oxy là điểm rủi ro.',
      'Food Safety News 2017 · Daily Coffee News 2024'),
     ('soche', 'Nước, bồn, túi lọc sạch',
      'Dùng nước uống đạt chuẩn: nước RO đã kiểm nghiệm hoặc nước uống đóng bình. Bồn inox 304, túi lọc vải thực phẩm, chai và nắp được rửa, khử trùng, để khô trước mỗi mẻ. '
@@ -87,9 +87,9 @@ def page():
     src = ''.join(f'<li>{t}. <a href="{u}" target="_blank" rel="noopener">{n} ↗</a></li>' for t, n, u in SRC)
     body = f'''
 <header>
-  {logo()}<div class="brandbar"><span>Mê vị Di Linh</span><span>Mô hình sản phẩm</span><span>Zalo <a href="#lien-he">{PHONE_RAW}</a></span></div>
+  {logo()}<div class="brandbar"><span>Mê vị Di Linh</span><span>Mô hình sản phẩm</span><span>Zalo <a href="#lien-he">{PHONE}</a></span></div>
   <h1>Cỗ máy <em>Cold Brew MeDili</em></h1>
-  <p>Từ trái chín ở farm MeDili, Di Linh, đến chai cold brew và hộp túi ủ lạnh bán trên sàn thương mại điện tử. Chọn dạng sản phẩm, chỉnh mẻ, xem công thức, sản lượng, hạn dùng, bao bì và hồ sơ cần có.</p>
+  <p>Từ trái chín ở vườn MeDili, Di Linh, đến chai cold brew và hộp túi ủ lạnh bán trên sàn thương mại điện tử. Chọn dạng sản phẩm, chỉnh mẻ, xem công thức, sản lượng, hạn dùng, bao bì và hồ sơ cần có.</p>
 </header>
 
 <div class="bench">
@@ -107,7 +107,7 @@ def page():
     <div class="head2"><h3>Dạng sản phẩm</h3><small>3 dạng</small></div>
     <div class="row" id="fmts"></div>
     <p class="mnote" id="fNote"></p>
-    <div class="head2" style="margin-top:12px"><h3>Cà phê từ farm MeDili</h3></div>
+    <div class="head2" style="margin-top:12px"><h3>Cà phê từ vườn MeDili</h3></div>
     <div class="row" id="beans"></div>
     <p class="mnote" id="bNote"></p>
     <hr>
@@ -116,7 +116,7 @@ def page():
       <div class="sl"><label for="iRa">Tỷ lệ cà phê : nước <output id="oRa"></output></label><input id="iRa" type="range" min="4" max="10" step="0.5"><p>1:5 cho cốt cô đặc. Bình ủ thương mại thường dùng khoảng 1:5,8.</p></div>
       <div class="sl"><label for="iT">Nhiệt độ ngâm <output id="oT"></output></label><input id="iT" type="range" min="2" max="28" step="1"><p id="tNote"></p></div>
       <div class="sl"><label for="iH">Thời gian ngâm <output id="oH"></output></label><input id="iH" type="range" min="8" max="24" step="1"></div>
-      <div class="sl" id="grpR"><label for="iS">Độ đậm chai uống liền <output id="oS"></output></label><input id="iS" type="range" min="1.2" max="2.4" step="0.1"><p>TDS đo bằng khúc xạ kế. Ly lọc chuẩn SCA khoảng 1,15–1,35 %, cold brew uống liền thường đậm hơn.</p></div>
+      <div class="sl" id="grpR"><label for="iS">Độ đậm chai uống liền <output id="oS"></output></label><input id="iS" type="range" min="1.2" max="2.4" step="0.1"><p>TDS đo bằng khúc xạ kế. Ly lọc chuẩn SCA khoảng 1,15–1,35%, cold brew uống liền thường đậm hơn.</p></div>
       <div class="head2" style="margin-top:12px"><h3>Dung tích chai</h3></div><div class="row" id="vols"></div>
     </div>
     <div id="grpB">
@@ -140,7 +140,7 @@ def page():
   <ol class="sop" id="sop"></ol>
   <div class="cols eqc">
     <div><h3 class="eqh">Dụng cụ và vật tư cho mẻ này</h3><div class="tw"><table class="rich"><thead><tr><th>Dụng cụ</th><th>Cho mẻ này</th><th>Ghi chú</th></tr></thead><tbody id="eqT"></tbody></table></div></div>
-    <div><h3 class="eqh">Phiếu lô</h3><p class="mnote" style="margin:0 0 8px">Chép hoặc in phiếu, điền tay mỗi lô. Giữ phiếu ít nhất đến hết hạn dùng của lô.</p><pre class="msg" id="sheet"></pre><button class="btn small" id="cpSh" type="button">Sao chép phiếu lô</button> <span class="cpst" id="cpShS" role="status"></span></div>
+    <div><h3 class="eqh">Phiếu lô</h3><p class="mnote" style="margin:0 0 8px">Sao chép hoặc in phiếu, điền tay cho mỗi lô. Giữ phiếu ít nhất đến hết hạn dùng của lô.</p><pre class="msg" id="sheet"></pre><button class="btn small" id="cpSh" type="button">Sao chép phiếu lô</button> <span class="cpst" id="cpShS" role="status"></span></div>
   </div>
 </section>
 
@@ -155,13 +155,13 @@ def page():
   <div class="g3 pkspec">
     <div class="box"><span class="k">Chai</span><h3>Thủy tinh nâu</h3><p>Chai 250–500 ml, nắp thiếc có vòng niêm phong. Thủy tinh nâu chắn bớt ánh sáng, giữ màu và mùi. Nhãn decal giấy chống ẩm quấn thân, không bong khi đọng hơi nước.</p></div>
     <div class="box"><span class="k">Túi ủ</span><h3>Túi lọc và túi bạc</h3><p>Túi lọc không dệt dùng cho thực phẩm, có dây và thẻ MeDili. 5 túi trong một túi bạc nhiều lớp có van một chiều, thổi nitơ rồi hàn.</p></div>
-    <div class="box"><span class="k">Hộp</span><h3>Kraft in hai màu</h3><p>Hộp giấy kraft in nâu cà phê và đỏ đất, hướng dẫn ủ ở mặt sau. Thùng giao chai lạnh là thùng xốp có đá gel, băng keo đỏ in "Giữ lạnh 0–4 °C".</p></div>
+    <div class="box"><span class="k">Hộp</span><h3>Kraft in hai màu</h3><p>Hộp giấy kraft in nâu cà phê và đỏ đất, hướng dẫn ủ ở mặt sau. Thùng giao chai lạnh là thùng xốp có đá gel, băng keo đỏ in “Giữ lạnh 0–4 °C”.</p></div>
   </div>
 </section>
 
 <section class="card" id="ban-san">
   <h2>Bán trên sàn: dạng nào đi kênh nào</h2>
-  <p class="lead">Chai lạnh có hạn 7 ngày và cần giữ lạnh, nên chỉ hợp kênh giao nhanh nội thành. Túi ủ là hàng khô, đi được mọi sàn và mọi tỉnh.</p>
+  <p class="lead">Chai lạnh có hạn 7 ngày và cần giữ lạnh, nên chỉ phù hợp với kênh giao nhanh nội thành. Túi ủ là hàng khô, đi được mọi sàn và mọi tỉnh.</p>
   <div class="cols">
     <div class="tw"><table class="rich"><thead><tr><th>Dạng</th><th>Bán ở đâu</th><th>Giao</th><th>Hạn dùng</th></tr></thead><tbody>
       <tr><td><b>Túi ủ lạnh</b></td><td>Gian hàng MeDili trên Shopee, TikTok Shop, Lazada, toàn quốc</td><td>Giao thường, nhiệt độ thường</td><td>6 tháng, mốc đề xuất</td></tr>
@@ -187,9 +187,9 @@ def page():
 
 <section class="card src">
   <h2>Nguồn và cách đọc mô hình</h2>
-  <p class="lead">Chiết xuất lạnh dùng cùng mô hình với Cỗ máy Chiết xuất: trần chiết xuất 21 % ở nước lạnh, bã giữ khoảng 2 lít nước mỗi kg bột. Hao hụt rang City+ 17,5 % theo Phòng rang. 100 kg trái chín cho khoảng 18 kg nhân xanh theo trang Cấu tạo trái. Túi ủ dùng tỷ lệ 1:8 và 18–24 giờ như công thức cold brew ở Quầy pha. Mọi con số là ước tính để lên kế hoạch, không thay cho kiểm nghiệm.</p>
+  <p class="lead">Chiết xuất lạnh dùng cùng mô hình với Cỗ máy Chiết xuất: trần chiết xuất 21% ở nước lạnh, bã giữ khoảng 2 lít nước mỗi kg bột. Hao hụt rang City+ 17,5% theo Phòng rang. 100 kg trái chín cho khoảng 18 kg nhân xanh theo trang Cấu tạo trái. Túi ủ dùng tỷ lệ 1:8 và 18–24 giờ như công thức cold brew ở Quầy pha. Mọi con số là ước tính để lên kế hoạch, không thay cho kiểm nghiệm.</p>
   <ul>{src}</ul>
-  <div class="lnks"><a class="lnk" href="chiet-xuat.html">Cỗ máy Chiết xuất</a><a class="lnk" href="rang.html">Phòng rang</a><a class="lnk" href="quay-pha.html">Quầy pha: cold brew tại quán</a><a class="lnk" href="trai-ca-phe.html">Cấu tạo trái</a><a class="lnk" href="vung-trong.html">Vùng trồng Di Linh</a><a class="lnk" href="mua-hang.html">Phòng Chọn Mua</a></div>
+  <div class="lnks"><a class="lnk" href="chiet-xuat.html">Cỗ máy Chiết xuất</a><a class="lnk" href="rang.html">Phòng rang</a><a class="lnk" href="quay-pha.html">Quầy pha: cold brew tại quán</a><a class="lnk" href="trai-ca-phe.html">Cấu tạo trái</a><a class="lnk" href="vung-trong.html">Vùng trồng Di Linh</a><a class="lnk" href="mua-hang.html">Phòng chọn mua</a></div>
 </section>
 '''
     return doc(FILE, TITLE, DESC, body, css=CSS, js=JS_HEAD + JS)
@@ -284,8 +284,8 @@ const FMT={
  rtd:{n:'Chai uống liền',life:7,note:'Pha loãng sẵn tới độ đậm uống liền, mở nắp là uống. Giữ lạnh 0–4 °C, giao nội thành trong ngày.'},
  bag:{n:'Túi ủ lạnh',life:180,note:'Cà phê xay thô trong túi lọc, khách tự ủ trong tủ lạnh. Hàng khô nên giao được toàn quốc qua sàn.'}};
 const BEAN={
- rp:{n:'Robusta Premium',proc:'honey',full:'Robusta Premium, sơ chế honey',note:'Dòng MeDili gợi ý cho cold brew: ngọt, caramel, đường nâu, ít gắt khi ủ lạnh.',cher:'#9A5A2B'},
- rc:{n:'Robusta Classic',proc:'natural',full:'Robusta Classic, phơi nguyên trái',note:'Đậm, cacao đen, hậu dày. Hợp uống với sữa.',cher:'#6E2418'}};
+ rp:{n:'Robusta Premium',proc:'honey',full:'Robusta Premium, sơ chế Honey',note:'Dòng MeDili gợi ý cho cold brew: ngọt, caramel, đường nâu, ít gắt khi ủ lạnh.',cher:'#9A5A2B'},
+ rc:{n:'Robusta Classic',proc:'natural',full:'Robusta Classic, phơi nguyên trái',note:'Đậm, ca cao đen, hậu dày. Phù hợp uống với sữa.',cher:'#6E2418'}};
 const DEF={f:'conc',bean:'rp',R:10,ratio:5,T:4,h:18,tds:1.6,vol:250,bag:35,per:10};
 const st={...DEF,sel:5};
 const use=(i,f=st.f)=>[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,0],[1,1,0],[1,1,0],[0,0,1],[1,1,1],[1,1,1]][i-1][f==='conc'?0:f==='rtd'?1:2];
@@ -300,13 +300,13 @@ function calc(){
  r.n=Math.floor(r.Vout*1000*.99/s.vol);return r}
 function verdict(r){
  const s=st;
- if(s.f==='bag')return {k:'good',t:'Hàng khô, giao toàn quốc',m:`Khách ủ 1 túi với ${s.bag*8}${NB}ml nước trong ngăn mát 18–24 giờ, được khoảng ${fm(r.out)}${NB}ml cốt, TDS khoảng ${vn(r.tdsB,1)}${NB}%, pha 1:1 khi uống. Hạn dùng đề xuất 6 tháng, xác lập bằng kiểm nghiệm.`};
- if(s.T>8)return {k:'bad',t:`Ngâm ở ${s.T}${NB}°C không hợp chai bán ra ngoài`,m:'Ngâm ở nhiệt độ phòng chỉ hợp cho quán pha và dùng trong ngày. Chai bán online nên ngâm ở 2–5 °C để hạn chế vi sinh.'};
- if(r.low)return {k:'bad',t:'Cốt chưa đủ đậm để pha loãng',m:`Cốt chỉ đạt TDS khoảng ${vn(r.tdsC,1)}${NB}%, thấp hơn mốc uống liền ${vn(s.tds,1)}${NB}%. Tăng lượng cà phê (tỷ lệ 1:4–1:5) hoặc ngâm lâu hơn.`};
- if(s.h<12)return {k:'warn',t:'Ngâm hơi ngắn',m:`Ở ${s.T}${NB}°C, ${s.h} giờ chưa kéo đủ chất, cốt TDS khoảng ${vn(r.tdsC,1)}${NB}%. Hướng dẫn thường gặp là 16–20 giờ trong tủ lạnh.`};
+ if(s.f==='bag')return {k:'good',t:'Hàng khô, giao toàn quốc',m:`Khách ủ 1 túi với ${s.bag*8}${NB}ml nước trong ngăn mát 18–24 giờ, được khoảng ${fm(r.out)}${NB}ml cốt, TDS khoảng ${vn(r.tdsB,1)}%, pha 1:1 khi uống. Hạn dùng đề xuất 6 tháng, xác lập bằng kiểm nghiệm.`};
+ if(s.T>8)return {k:'bad',t:`Ngâm ở ${s.T}${NB} °C không phù hợp với chai bán ra ngoài`,m:'Ngâm ở nhiệt độ phòng chỉ phù hợp cho quán pha và dùng trong ngày. Chai bán trực tuyến nên ngâm ở 2–5 °C để hạn chế vi sinh.'};
+ if(r.low)return {k:'bad',t:'Cốt chưa đủ đậm để pha loãng',m:`Cốt chỉ đạt TDS khoảng ${vn(r.tdsC,1)}%, thấp hơn mốc uống liền ${vn(s.tds,1)}%. Tăng lượng cà phê (tỷ lệ 1:4–1:5) hoặc ngâm lâu hơn.`};
+ if(s.h<12)return {k:'warn',t:'Ngâm hơi ngắn',m:`Ở ${s.T}${NB} °C, ${s.h} giờ chưa kéo đủ chất, cốt TDS khoảng ${vn(r.tdsC,1)}%. Hướng dẫn thường gặp là 16–20 giờ trong tủ lạnh.`};
  if(s.h>22)return {k:'warn',t:'Ngâm hơi dài',m:'Qua khoảng 20 giờ, cốt đậm thêm rất ít mà dễ có vị gỗ, chát. Thử dừng ở 18–20 giờ.'};
- if(s.f==='conc')return {k:'good',t:'Công thức đạt cho chai cô đặc',m:`Cốt TDS khoảng ${vn(r.tdsC,1)}${NB}%, pha 1:2 ra ly khoảng ${vn(r.tdsC/3,1)}${NB}%. Giữ 0–4 °C, hạn 7 ngày, giao nội thành trong ngày.`};
- return {k:'good',t:'Công thức đạt cho chai uống liền',m:`Pha ${vn(r.Vc,1)}${NB}L cốt với ${vn(r.add,1)}${NB}L nước tới TDS ${vn(s.tds,1)}${NB}%. Giữ 0–4 °C, hạn 7 ngày, giao nội thành trong ngày.`};
+ if(s.f==='conc')return {k:'good',t:'Công thức đạt cho chai cô đặc',m:`Cốt TDS khoảng ${vn(r.tdsC,1)}%, pha 1:2 ra ly khoảng ${vn(r.tdsC/3,1)}%. Giữ 0–4 °C, hạn 7 ngày, giao nội thành trong ngày.`};
+ return {k:'good',t:'Công thức đạt cho chai uống liền',m:`Pha ${vn(r.Vc,1)}${NB}L cốt với ${vn(r.add,1)}${NB}L nước tới TDS ${vn(s.tds,1)}%. Giữ 0–4 °C, hạn 7 ngày, giao nội thành trong ngày.`};
 }
 
 /* ====== HÌNH HỌC ====== */
@@ -328,33 +328,33 @@ function bottle(x,y,z,lab){return cyl(x,y,z,.7,2.5,'amb','ambT')+(lab?side(x,y,z
 
 /* ====== 10 TRẠM ====== */
 const ST=[
- {n:'Vườn Di Linh',sub:()=>'Farm MeDili, Thôn 11, Xã Di Linh',
-  mech:r=>`Cà phê cho Cold Brew MeDili là Robusta từ farm MeDili ở Di Linh. Chỉ hái trái chín đỏ: trái xanh cho vị ngái, chát; trái chín quá dễ lên men lạ. Mẻ này cần khoảng <b>${fm(r.cherry)}${NB}kg trái tươi</b>, theo tỷ lệ của MeDili: 100${NB}kg trái tươi cho khoảng 18${NB}kg nhân xanh.`,
+ {n:'Vườn Di Linh',sub:()=>'Vườn MeDili, Thôn 11, Xã Di Linh',
+  mech:r=>`Cà phê cho Cold Brew MeDili là Robusta từ vườn MeDili ở Di Linh. Chỉ hái trái chín đỏ: trái xanh cho vị ngái, chát; trái chín quá dễ lên men lạ. Mẻ này cần khoảng <b>${fm(r.cherry)}${NB}kg trái tươi</b>, theo tỷ lệ của MeDili: 100${NB}kg trái tươi cho khoảng 18${NB}kg nhân xanh.`,
   kv:r=>[['Trái tươi cần',fm(r.cherry)+NB+'kg'],['Nhân xanh thu được',vn(r.green,1)+NB+'kg'],['Giống','Robusta Di Linh']],
   check:'Đếm ngẫu nhiên 100 trái trong rổ: từ 90 trái chín đỏ trở lên.',fail:'Hái tuốt cả cành lẫn trái xanh làm cốt cold brew ngái, chát.',tip:'Ghi mã vườn lên bao để truy xuất tới từng chai.'},
  {n:'Sơ chế & phơi',sub:()=>BEAN[st.bean].proc==='honey'?'Honey, phơi trên giàn':'Natural, phơi nguyên trái',
-  mech:()=>BEAN[st.bean].proc==='honey'?'Robusta Premium: xát bỏ vỏ, giữ lại lớp nhớt rồi phơi trên giàn, đảo đều mỗi ngày. Lớp nhớt cho vị ngọt, caramel rất hợp với ủ lạnh. Phơi tới khi nhân còn ẩm 10–12 %, rồi xát khô ra nhân.':'Robusta Classic: phơi nguyên trái trên giàn tới khô, đảo đều mỗi ngày, rồi xát lấy nhân. Vị đậm, cacao, thân dày. Phơi tới khi nhân còn ẩm 10–12 %.',
-  kv:r=>[['Ẩm nhân sau phơi','10–12'+NB+'%'],['Thời gian phơi','khoảng 10–20 ngày, tuỳ nắng'],['Nhân xanh',vn(r.green,1)+NB+'kg']],
-  check:'Đo ẩm nhân trước khi đóng bao; nhân khô đều, không mốc.',fail:'Phơi dày, ít đảo: lên men quá, mùi chua lạ đi thẳng vào cốt.',tip:'Giàn phơi cao, có mái che mưa, không phơi sát đất.'},
+  mech:()=>BEAN[st.bean].proc==='honey'?'Robusta Premium: xát bỏ vỏ, giữ lại lớp nhớt rồi phơi trên giàn, đảo đều mỗi ngày. Lớp nhớt cho vị ngọt, caramel rất phù hợp với ủ lạnh. Phơi tới khi nhân còn độ ẩm 10–12%, rồi xay xát lấy nhân.':'Robusta Classic: phơi nguyên trái trên giàn tới khô, đảo đều mỗi ngày, rồi xát lấy nhân. Vị đậm, ca cao, thân dày. Phơi tới khi nhân còn độ ẩm 10–12%.',
+  kv:r=>[['Độ ẩm nhân sau phơi','10–12'+'%'],['Thời gian phơi','khoảng 10–20 ngày, tùy nắng'],['Nhân xanh',vn(r.green,1)+NB+'kg']],
+  check:'Đo độ ẩm nhân trước khi đóng bao; nhân khô đều, không mốc.',fail:'Phơi dày, ít đảo: lên men quá, mùi chua lạ đi thẳng vào cốt.',tip:'Giàn phơi cao, có mái che mưa, không phơi sát đất.'},
  {n:'Rang & ủ khí',sub:()=>'City+, nghỉ 3–10 ngày',
-  mech:r=>`Rang riêng cho cold brew ở mức City+ (rang vừa), ra mẻ khoảng 210–220${NB}°C, hao hụt khoảng 17,5${NB}% như Phòng rang. Nước lạnh khó kéo chất từ hạt rang quá sáng, còn rang quá đậm cho vị khét, gắt. Sau rang nghỉ 3–10 ngày trong thùng kín có van một chiều cho CO₂ thoát bớt, bột ngấm nước đều hơn.`,
-  kv:r=>[['Cà phê rang',g1(st.R)+NB+'kg'],['Cấp rang','City+, ra mẻ 210–220'+NB+'°C'],['Hao hụt','khoảng 17,5'+NB+'%'],['Nghỉ sau rang','3–10 ngày']],
-  check:'Bẻ hạt: ruột và vỏ cùng màu. Cupping mẫu trước khi xay.',fail:'Xay ngay sau rang: CO₂ đẩy nước ra, bột ngấm không đều.',tip:'Ghi ngày rang lên thùng, dùng theo thứ tự.'},
+  mech:r=>`Rang riêng cho cold brew ở mức City+ (rang vừa), ra mẻ khoảng 210–220${NB} °C, hao hụt khoảng 17,5% như Phòng rang. Nước lạnh khó kéo chất từ hạt rang quá sáng, còn rang quá đậm cho vị khét, gắt. Sau rang nghỉ 3–10 ngày trong thùng kín có van một chiều cho CO₂ thoát bớt, bột ngấm nước đều hơn.`,
+  kv:r=>[['Cà phê rang',g1(st.R)+NB+'kg'],['Cấp rang','City+, ra mẻ 210–220'+NB+'°C'],['Hao hụt','khoảng 17,5'+'%'],['Nghỉ sau rang','3–10 ngày']],
+  check:'Bẻ hạt: ruột và vỏ cùng màu. Thử nếm (cupping) mẫu trước khi xay.',fail:'Xay ngay sau rang: CO₂ đẩy nước ra, bột ngấm không đều.',tip:'Ghi ngày rang lên thùng, dùng theo thứ tự.'},
  {n:'Xay thô',sub:()=>'Thô như muối hạt',
   mech:()=>`Xay thô như muối hạt, ngay trước khi ${st.f==='bag'?'đóng túi lọc':'ngâm'}. Bột quá mịn làm cốt đục, đắng gắt và khó lọc; bột quá thô thì nhạt.`,
-  kv:()=>[['Cỡ xay','Thô, như muối hạt'],['Bột cho mẻ',vn(st.R*.99,1)+NB+'kg'],['Hao khi xay','khoảng 1'+NB+'%']],
+  kv:()=>[['Cỡ xay','Thô, như muối hạt'],['Bột cho mẻ',vn(st.R*.99,1)+NB+'kg'],['Hao khi xay','khoảng 1'+'%']],
   check:'Rây thử 100 g bột: phần bụi mịn càng ít càng tốt.',fail:'Lưỡi cối mòn tạo nhiều bụi mịn: lọc chậm, cốt đục.',tip:'Xay từng đợt vừa đủ một bồn ngâm.'},
  {n:'Ngâm lạnh',sub:()=>'Bồn inox trong kho lạnh',
-  mech:r=>`Bột trong túi lọc vải thực phẩm, mỗi túi không quá 2,5${NB}kg để nước ngấm đều, đặt vào bồn inox 304. Rót nước uống đạt chuẩn đã làm lạnh theo tỷ lệ 1:${vn(st.ratio,1)}, ấn nhẹ cho bột ngấm hết, đậy kín, ngâm <b>${st.h} giờ ở ${st.T}${NB}°C</b>. Hướng dẫn ngâm thương mại thường là 16–20 giờ trong tủ lạnh dưới 4,4${NB}°C.`,
-  kv:r=>[['Nước ngâm',fm(r.W)+NB+'L'],['Tỷ lệ cà phê : nước','1:'+vn(st.ratio,1)],['Nhiệt độ, thời gian',st.T+NB+'°C, '+st.h+' giờ'],['EY ước tính',vn(r.ey,1)+NB+'%']],
+  mech:r=>`Bột trong túi lọc vải thực phẩm, mỗi túi không quá 2,5${NB}kg để nước ngấm đều, đặt vào bồn inox 304. Rót nước uống đạt chuẩn đã làm lạnh theo tỷ lệ 1:${vn(st.ratio,1)}, ấn nhẹ cho bột ngấm hết, đậy kín, ngâm <b>${st.h} giờ ở ${st.T}${NB} °C</b>. Hướng dẫn ngâm thương mại thường là 16–20 giờ trong tủ lạnh dưới 4,4${NB} °C.`,
+  kv:r=>[['Nước ngâm',fm(r.W)+NB+'L'],['Tỷ lệ cà phê : nước','1:'+vn(st.ratio,1)],['Nhiệt độ, thời gian',st.T+NB+'°C, '+st.h+' giờ'],['EY ước tính',vn(r.ey,1)+'%']],
   check:'Nhiệt kế kho đọc 2–5 °C. Ghi giờ bắt đầu và kết thúc vào phiếu lô.',fail:'Ngâm ở nhiệt độ phòng cho chai bán ra ngoài: vi sinh phát triển nhanh hơn.',tip:'Đảo nhẹ một lần sau giờ đầu để bột không vón khô.'},
- {n:'Lọc & đo TDS',sub:()=>st.f==='rtd'?'Lọc hai tầng, pha loãng':'Lọc hai tầng, chuẩn hoá lô',
-  mech:()=>'Nhấc túi, để ráo 15–20 phút, không vắt mạnh vì vắt làm cốt đục và gắt. Lọc tinh qua giấy lọc hoặc vải lọc thực phẩm. Đo TDS bằng khúc xạ kế để chuẩn hoá từng lô: chai cô đặc ghi TDS lên phiếu lô, chai uống liền pha loãng tới TDS mục tiêu.',
-  kv:r=>[['Cốt sau lọc',vn(r.Vc,1)+NB+'L'],['TDS cốt, ước tính',vn(r.tdsC,1)+NB+'%'],['Nước bã giữ lại',fm(RET*st.R)+NB+'L']].concat(st.f==='rtd'&&!r.low?[['Nước pha thêm',vn(r.add,1)+NB+'L'],['TDS uống liền',vn(st.tds,1)+NB+'%']]:[]),
-  check:'Cốt trong, không cặn. Nếm so với mẫu chuẩn của lô trước.',fail:'Lọc một lần qua lưới thô: cặn mịn tiếp tục chiết, chai đục và đắng dần.',tip:'Lệch quá 10 % so với TDS mốc thì chỉnh mẻ sau.'},
+ {n:'Lọc & đo TDS',sub:()=>st.f==='rtd'?'Lọc hai tầng, pha loãng':'Lọc hai tầng, chuẩn hóa lô',
+  mech:()=>'Nhấc túi, để ráo 15–20 phút, không vắt mạnh vì vắt làm cốt đục và gắt. Lọc tinh qua giấy lọc hoặc vải lọc thực phẩm. Đo TDS bằng khúc xạ kế để chuẩn hóa từng lô: chai cô đặc ghi TDS lên phiếu lô, chai uống liền pha loãng tới TDS mục tiêu.',
+  kv:r=>[['Cốt sau lọc',vn(r.Vc,1)+NB+'L'],['TDS cốt, ước tính',vn(r.tdsC,1)+'%'],['Nước bã giữ lại',fm(RET*st.R)+NB+'L']].concat(st.f==='rtd'&&!r.low?[['Nước pha thêm',vn(r.add,1)+NB+'L'],['TDS uống liền',vn(st.tds,1)+'%']]:[]),
+  check:'Cốt trong, không cặn. Nếm so với mẫu chuẩn của lô trước.',fail:'Lọc một lần qua lưới thô: cặn mịn tiếp tục chiết, chai đục và đắng dần.',tip:'Lệch quá 10% so với TDS mốc thì chỉnh mẻ sau.'},
  {n:'Chiết rót',sub:()=>'Chai thủy tinh nâu '+st.vol+' ml',
   mech:()=>`Chiết vào chai thủy tinh nâu ${st.vol}${NB}ml đã rửa, khử trùng, để khô úp ngược. Chừa khoảng trống ở cổ chai, đóng nắp có vòng niêm phong, dán nhãn có ngày sản xuất, hạn dùng và mã lô ngay khi chiết. Không thổi nitơ, không đóng lon khi chưa có quy trình được thẩm định.`,
-  kv:r=>[['Số chai',fm(r.n)+' chai '+st.vol+NB+'ml'],['Hao khi chiết','khoảng 1'+NB+'%'],['Mã lô',lot()]],
+  kv:r=>[['Số chai',fm(r.n)+' chai '+st.vol+NB+'ml'],['Hao khi chiết','khoảng 1'+'%'],['Mã lô',lot()]],
   check:'Lật ngược 5 chai mỗi lô: không rỉ nắp.',fail:'Chai còn ẩm, nắp không niêm phong: dễ nhiễm và khách khó tin.',tip:'Chai nâu chắn bớt ánh sáng, giữ màu và mùi.'},
  {n:'Đóng túi ủ',sub:()=>st.bag+' g mỗi túi lọc',
   mech:()=>`Máy định lượng ${st.bag}${NB}g bột thô vào túi lọc không dệt dùng cho thực phẩm, hàn kín, có dây và thẻ MeDili. Mỗi 5 túi vào một túi bạc nhiều lớp có van một chiều, thổi nitơ rồi hàn. ${st.per===10?'Hai túi bạc':'Một túi bạc'} vào một hộp ${st.per} túi.`,
@@ -368,8 +368,8 @@ const ST=[
   mech:()=>st.f==='bag'?'Hộp túi ủ là hàng khô: kho khô, thoáng, tránh nắng. Giao toàn quốc qua sàn, đóng thùng carton có chèn chống sốc.':'Chai vào kho lạnh 0–4 °C ngay sau khi chiết, ghi nhiệt độ hai lần mỗi ngày. Hạn dùng 7 ngày kể từ ngày sản xuất. Giao nội thành trong ngày bằng thùng xốp có đá gel, nhắc khách cất tủ lạnh ngay. Không gửi chai lạnh đi tỉnh bằng giao hàng thường.',
   kv:()=>st.f==='bag'?[['Kho','Khô, dưới 30'+NB+'°C'],['Hạn dùng','6 tháng, mốc đề xuất'],['Kênh bán','Sàn TMĐT toàn quốc']]:[['Nhiệt độ kho','0–4'+NB+'°C'],['Hạn dùng','7 ngày'],['Kênh bán','Nội thành, giao trong ngày']],
   check:'',fail:'',tip:''}];
-const K10={cold:{check:'Đo nhiệt độ chai khi giao: dưới 5 °C.',fail:'Để chai ngoài tủ lạnh khi chờ shipper.',tip:'Lưu 2 chai mẫu mỗi lô đến hết hạn để đối chiếu.'},
- dry:{check:'Kiểm túi bạc không xì trước khi đóng thùng.',fail:'Kho nóng ẩm làm bột mất mùi nhanh.',tip:'Lô cũ xuất trước, lô mới xuất sau.'}};
+const K10={cold:{check:'Đo nhiệt độ chai khi giao: dưới 5 °C.',fail:'Để chai ngoài tủ lạnh khi chờ người giao hàng.',tip:'Lưu 2 chai mẫu mỗi lô đến hết hạn để đối chiếu.'},
+ dry:{check:'Kiểm tra túi bạc không xì trước khi đóng thùng.',fail:'Kho nóng ẩm làm bột mất mùi nhanh.',tip:'Lô cũ xuất trước, lô mới xuất sau.'}};
 const today=()=>{const d=new Date();d.setHours(12,0,0,0);return d};
 const dmy=d=>String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear();
 const addD=(d,n)=>{const e=new Date(d);e.setDate(e.getDate()+n);return e},addM=(d,n)=>{const e=new Date(d);e.setMonth(e.getMonth()+n);return e};
@@ -382,7 +382,7 @@ function buildScene(){
  [[3,23],[125,23],[125,3]].forEach(([x,y])=>h+=cyl(x,y,-9,1.2,5,'cu2','cu2'));
  h+=box(0,0,-4,128,26,4,['wo','wo2','cu2'])+'</g>';
  const pl=P(56,26,-.6);
- h+=`<g transform="matrix(.866 .5 0 1 ${f1(pl[0])} ${f1(pl[1])})"><rect width="252" height="24" rx="3" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:1.2"/><circle cx="8" cy="12" r="1.8" style="fill:#2A1B16"/><circle cx="244" cy="12" r="1.8" style="fill:#2A1B16"/><text class="sgn" x="126" y="17.5" text-anchor="middle">Cold Brew MeDili · Farm Di Linh</text></g>`;
+ h+=`<g transform="matrix(.866 .5 0 1 ${f1(pl[0])} ${f1(pl[1])})"><rect width="252" height="24" rx="3" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:1.2"/><circle cx="8" cy="12" r="1.8" style="fill:#2A1B16"/><circle cx="244" cy="12" r="1.8" style="fill:#2A1B16"/><text class="sgn" x="126" y="17.5" text-anchor="middle">Cold Brew MeDili · Vườn Di Linh</text></g>`;
  /* 1 vườn */
  let s=frus(8,13,0,6.2,2,3.3,'hill','hillT');
  [[6.6,11.2],[10.2,10.8],[9.6,14.8]].forEach(([x,y],k)=>{const b=P(x,y,2),t=P(x,y,7);
@@ -448,7 +448,7 @@ function cherries(){const c=BEAN[st.bean].cher;let s='';
 function chipLabel(i,r){
  const b=st.f==='bag';
  return ['',`Trái chín · ${fm(r.cherry)}${NB}kg`,`${BEAN[st.bean].proc==='honey'?'Honey':'Natural'} · ${vn(r.green,1)}${NB}kg nhân`,`Rang City+ · ${g1(st.R)}${NB}kg`,'Xay thô',
-  b?'Ngâm lạnh (chai)':`Ngâm ${st.T}${NB}°C · ${st.h} giờ`,b?'Lọc (chai)':`Lọc · TDS ${vn(r.tdsC,1)}${NB}%`,b?'Chiết rót (chai)':`${fm(r.n)} chai ${st.vol}${NB}ml`,
+  b?'Ngâm lạnh (chai)':`Ngâm ${st.T}${NB} °C · ${st.h} giờ`,b?'Lọc (chai)':`Lọc · TDS ${vn(r.tdsC,1)}%`,b?'Chiết rót (chai)':`${fm(r.n)} chai ${st.vol}${NB}ml`,
   b?`${fm(r.bags)} túi ${st.bag}${NB}g`:'Đóng túi (túi ủ)','Cold Brew MeDili',b?'Giao toàn quốc':'Giao lạnh trong ngày'][i]}
 const CHIP=[null,{x:178,y:14},{x:262,y:64},{x:344,y:108},{x:418,y:150},{x:492,y:192},{x:566,y:240},{x:636,y:290},{x:704,y:330},{x:760,y:384},{x:842,y:436}];
 function drawChips(r){let h='';
@@ -456,9 +456,9 @@ function drawChips(r){let h='';
   h+=`<polyline class="lead-l${i===st.sel?' on':''}" points="${f1(q[0])},${f1(q[1])} ${f1(x+20)},${C.y+13}"/><g class="chip${i===st.sel?' on':''}${off?' off':''}" data-c="${i}"><rect x="${f1(x+6)}" y="${C.y}" rx="8" width="${f1(w)}" height="26"/><circle cx="${f1(x+6)}" cy="${C.y+13}" r="13"/><text class="num" x="${f1(x+6)}" y="${C.y+18.5}" text-anchor="middle">${i}</text><text class="lab" x="${f1(x+26)}" y="${C.y+18}">${l}</text></g>`}
  const el=$('chips');el.innerHTML=h;el.querySelectorAll('.chip').forEach(g=>g.addEventListener('click',()=>select(+g.dataset.c)))}
 function drawFlow(r){
- const rows=[['Trái chín Di Linh',fm(r.cherry)+NB+'kg','#B33A24'],['Nhân xanh, ẩm 10–12 %',vn(r.green,1)+NB+'kg','#D8C9A3'],['Cà phê rang City+',g1(st.R)+NB+'kg','#6B4226']];
+ const rows=[['Trái chín Di Linh',fm(r.cherry)+NB+'kg','#B33A24'],['Nhân xanh, độ ẩm 10–12%',vn(r.green,1)+NB+'kg','#D8C9A3'],['Cà phê rang City+',g1(st.R)+NB+'kg','#6B4226']];
  if(st.f==='bag')rows.push(['Bột thô trong túi lọc',fm(r.bags)+NB+'túi','#F6F0E4'],['Thành phẩm',fm(r.boxes)+NB+'hộp '+st.per+' túi','#9E3B26']);
- else{rows.push(['Nước ngâm '+st.T+NB+'°C',fm(r.W)+NB+'L','#E9D3AE'],['Cốt sau lọc',vn(r.Vc,1)+NB+'L','#7A4A23']);if(st.f==='rtd'&&!r.low)rows.push(['Pha tới TDS '+vn(st.tds,1)+NB+'%',vn(r.Vout,1)+NB+'L','#A06C45']);rows.push(['Thành phẩm',fm(r.n)+NB+'chai '+st.vol+NB+'ml','#9E3B26'])}
+ else{rows.push(['Nước ngâm '+st.T+NB+'°C',fm(r.W)+NB+'L','#E9D3AE'],['Cốt sau lọc',vn(r.Vc,1)+NB+'L','#7A4A23']);if(st.f==='rtd'&&!r.low)rows.push(['Pha tới TDS '+vn(st.tds,1)+'%',vn(r.Vout,1)+NB+'L','#A06C45']);rows.push(['Thành phẩm',fm(r.n)+NB+'chai '+st.vol+NB+'ml','#9E3B26'])}
  const x=16,rh=28,h=50+rows.length*rh+22,y=712-h,w=320;
  let g=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="${x+16}" y="${y+26}" class="lab12" style="letter-spacing:.08em">TỪ VƯỜN ĐẾN SẢN PHẨM</text>`;
  rows.forEach(([a,b,c],i)=>{const yy=y+48+i*rh;g+=(i<rows.length-1?`<line x1="${x+24}" y1="${yy+7}" x2="${x+24}" y2="${yy+rh-7}" style="stroke:var(--muted);stroke-width:1.2;stroke-dasharray:2 3"/>`:'')+`<circle cx="${x+24}" cy="${yy}" r="7" style="fill:${c};stroke:var(--ol);stroke-width:1"/><text class="flowT" x="${x+40}" y="${yy+4}">${a}</text><text x="${x+w-16}" y="${yy+4}" text-anchor="end" class="mono flowT">${b}</text>`});
@@ -467,7 +467,7 @@ function drawFlow(r){
 function renderScene(r){
  document.querySelectorAll('#scene .st').forEach(g=>{const i=+g.dataset.i;g.classList.toggle('off',!use(i));g.classList.toggle('on',i===st.sel)});
  $('kC').textContent=st.f==='bag'?'—':`${st.T} °C · ${st.h} giờ`;
- $('kS').textContent=st.f==='bag'?'—':vn(r.tdsC,1)+' %';
+ $('kS').textContent=st.f==='bag'?'—':vn(r.tdsC,1)+'%';
  $('kF').textContent=st.f==='bag'?'—':'2 °C';
  cherries();parcel();drawChips(r);drawFlow(r);
 }
@@ -492,15 +492,15 @@ function drawCT(r){
  $('cT').innerHTML=g;
  $('cLbl').textContent=bag?'Khách ủ trong ngăn mát: cốt đậm dần theo giờ':'Ngâm càng lạnh, cốt đậm càng chậm';
  $('lgT').innerHTML=`<span><i class="sw2" style="border-color:var(--accent)"></i>${bag?'Ngăn mát 4 °C':'Ngâm '+Tm+' °C'}</span><span><i class="sw2 d" style="border-color:var(--muted)"></i>Nhiệt độ phòng 24 °C, để so sánh</span>`;
- $('tip').textContent=`Ở ${Tm} °C, ${hm} giờ: TDS khoảng ${vn(tds(Tm,hm),1)} %. Ở 24 °C cùng thời gian: khoảng ${vn(tds(ref,hm),1)} %.`;
+ $('tip').textContent=`Ở ${Tm} °C, ${hm} giờ: TDS khoảng ${vn(tds(Tm,hm),1)}%. Ở 24 °C cùng thời gian: khoảng ${vn(tds(ref,hm),1)}%.`;
 }
 
 /* ====== CÔNG THỨC MẺ ====== */
 function sop(r){
  const s=st,b=BEAN[s.bean],bag=s.f==='bag',rows=[],add=(t,d,a,c)=>rows.push([t,d,a,c]);
- add('Hái chín ở farm Di Linh','Chỉ hái trái chín đỏ, sơ chế trong ngày. Ghi mã vườn lên bao.',`${fm(r.cherry)}${NB}kg trái tươi`,'Đếm 100 trái trong rổ: từ 90 trái chín trở lên.');
- add(b.proc==='honey'?'Sơ chế honey, phơi giàn':'Phơi nguyên trái trên giàn',b.proc==='honey'?'Xát vỏ, giữ lớp nhớt, phơi trên giàn, đảo mỗi ngày, rồi xát khô ra nhân.':'Phơi nguyên trái trên giàn, đảo mỗi ngày, khô rồi xát lấy nhân.',`${vn(r.green,1)}${NB}kg nhân xanh`,'Ẩm nhân 10–12 %, không mốc.');
- add('Rang City+, nghỉ hạt','Rang riêng cho cold brew, ra mẻ 210–220 °C. Nghỉ 3–10 ngày trong thùng kín có van một chiều.',`${g1(s.R)}${NB}kg rang, hao khoảng 17,5${NB}%`,'Bẻ hạt đều màu, cupping mẫu.');
+ add('Hái chín ở vườn Di Linh','Chỉ hái trái chín đỏ, sơ chế trong ngày. Ghi mã vườn lên bao.',`${fm(r.cherry)}${NB}kg trái tươi`,'Đếm 100 trái trong rổ: từ 90 trái chín trở lên.');
+ add(b.proc==='honey'?'Sơ chế Honey, phơi giàn':'Phơi nguyên trái trên giàn',b.proc==='honey'?'Xát vỏ, giữ lớp nhớt, phơi trên giàn, đảo mỗi ngày, rồi xay xát lấy nhân.':'Phơi nguyên trái trên giàn, đảo mỗi ngày, khô rồi xát lấy nhân.',`${vn(r.green,1)}${NB}kg nhân xanh`,'Độ ẩm nhân 10–12%, không mốc.');
+ add('Rang City+, nghỉ hạt','Rang riêng cho cold brew, ra mẻ 210–220 °C. Nghỉ 3–10 ngày trong thùng kín có van một chiều.',`${g1(s.R)}${NB}kg rang, hao khoảng 17,5%`,'Bẻ hạt đều màu, thử nếm (cupping) mẫu.');
  add('Xay thô',`Thô như muối hạt, xay ngay trước khi ${bag?'đóng túi':'ngâm'}.`,`${vn(s.R*.99,1)}${NB}kg bột`,'Ít bụi mịn.');
  if(bag){
   add('Đóng túi lọc',`Định lượng ${s.bag}${NB}g bột vào túi lọc không dệt dùng cho thực phẩm, hàn kín, gắn dây và thẻ MeDili.`,`${fm(r.bags)} túi × ${s.bag}${NB}g`,`Cân 10 túi: lệch không quá 1${NB}g.`);
@@ -509,9 +509,9 @@ function sop(r){
   add('Lưu kho khô','Kho khô, thoáng, tránh nắng, dưới 30 °C. Hạn dùng đề xuất 6 tháng, xác lập bằng kiểm nghiệm và thử cảm quan theo thời gian.','6 tháng, mốc đề xuất','Lô cũ xuất trước.');
   add('Giao toàn quốc qua sàn',`Thùng carton có chèn chống sốc. Hướng dẫn khách: 1 túi với ${s.bag*8}${NB}ml nước lọc, ngâm ngăn mát 18–24 giờ, nhấc túi, pha 1:1 với nước, sữa hoặc đá.`,`Khoảng ${fm(r.out)}${NB}ml cốt mỗi túi`,'Hỏi phản hồi của khách sau 2 tuần đầu.');
  }else{
-  add('Ngâm lạnh',`Bột vào túi lọc vải thực phẩm, mỗi túi không quá 2,5${NB}kg, đặt vào bồn inox 304. Rót nước uống đạt chuẩn đã làm lạnh, ấn cho bột ngấm, đậy kín, ngâm ${s.h} giờ ở ${s.T}${NB}°C.`,`${fm(r.W)}${NB}L nước · 1:${vn(s.ratio,1)} · ${s.T}${NB}°C · ${s.h} giờ`,'Nhiệt kế kho 2–5 °C, ghi giờ vào phiếu lô.');
+  add('Ngâm lạnh',`Bột vào túi lọc vải thực phẩm, mỗi túi không quá 2,5${NB}kg, đặt vào bồn inox 304. Rót nước uống đạt chuẩn đã làm lạnh, ấn cho bột ngấm, đậy kín, ngâm ${s.h} giờ ở ${s.T}${NB} °C.`,`${fm(r.W)}${NB}L nước · 1:${vn(s.ratio,1)} · ${s.T}${NB} °C · ${s.h} giờ`,'Nhiệt kế kho 2–5 °C, ghi giờ vào phiếu lô.');
   add('Nhấc túi, lọc hai tầng','Để ráo 15–20 phút, không vắt mạnh. Lọc tinh qua giấy lọc hoặc vải lọc thực phẩm.',`${vn(r.Vc,1)}${NB}L cốt`,'Cốt trong, không cặn.');
-  add(s.f==='rtd'?'Đo TDS, pha loãng':'Đo TDS, ghi lô',s.f==='rtd'?(r.low?`Cốt chỉ đạt TDS khoảng ${vn(r.tdsC,1)}${NB}%, chưa đủ để pha tới ${vn(s.tds,1)}${NB}%. Tăng lượng cà phê hoặc ngâm lâu hơn.`:`Đo TDS cốt bằng khúc xạ kế, thêm nước uống đạt chuẩn tới TDS ${vn(s.tds,1)}${NB}%: thêm ${vn(r.add,1)}${NB}L.`):'Đo TDS cốt bằng khúc xạ kế, ghi lên phiếu lô. Lệch quá 10 % so với mốc thì chỉnh mẻ sau.',s.f==='rtd'?`${vn(r.Vout,1)}${NB}L uống liền`:`TDS khoảng ${vn(r.tdsC,1)}${NB}%`,'Nếm so với mẫu chuẩn.');
+  add(s.f==='rtd'?'Đo TDS, pha loãng':'Đo TDS, ghi lô',s.f==='rtd'?(r.low?`Cốt chỉ đạt TDS khoảng ${vn(r.tdsC,1)}%, chưa đủ để pha tới ${vn(s.tds,1)}%. Tăng lượng cà phê hoặc ngâm lâu hơn.`:`Đo TDS cốt bằng khúc xạ kế, thêm nước uống đạt chuẩn tới TDS ${vn(s.tds,1)}%: thêm ${vn(r.add,1)}${NB}L.`):'Đo TDS cốt bằng khúc xạ kế, ghi lên phiếu lô. Lệch quá 10% so với mốc thì chỉnh mẻ sau.',s.f==='rtd'?`${vn(r.Vout,1)}${NB}L uống liền`:`TDS khoảng ${vn(r.tdsC,1)}%`,'Nếm so với mẫu chuẩn.');
   add('Chiết rót, đóng nắp',`Chai thủy tinh nâu ${s.vol}${NB}ml đã rửa, khử trùng, để khô. Đóng nắp có vòng niêm phong, dán nhãn có ngày sản xuất, hạn dùng, mã lô ngay khi chiết.`,`${fm(r.n)} chai ${s.vol}${NB}ml`,'Lật ngược 5 chai: không rỉ.');
   add('Kho lạnh 0–4 °C','Đưa vào kho lạnh ngay. Ghi nhiệt độ hai lần mỗi ngày. Lưu 2 chai mẫu mỗi lô đến hết hạn.','Hạn dùng 7 ngày','Chai dưới 5 °C khi xuất kho.');
   add('Giao lạnh trong ngày','Thùng xốp có đá gel, giao nội thành trong ngày, nhắc khách cất tủ lạnh ngay. Không gửi đi tỉnh bằng giao hàng thường.','Nội thành, trong ngày','Chai dưới 5 °C khi tới tay khách.');
@@ -579,43 +579,43 @@ function boxSvg(){
 function backLabel(r){
  const bag=st.f==='bag',d=today(),e=bag?addM(d,6):addD(d,r.life-1);
  const name=bag?'COLD BREW MEDILI – CÀ PHÊ TÚI Ủ LẠNH':st.f==='rtd'?'COLD BREW MEDILI – CÀ PHÊ Ủ LẠNH UỐNG LIỀN':'COLD BREW MEDILI – CÀ PHÊ Ủ LẠNH CÔ ĐẶC';
- const ing=bag?'Cà phê Robusta rang xay 100 % (Robusta Di Linh).':'Nước, cà phê Robusta rang xay (Robusta Di Linh).';
+ const ing=bag?'Cà phê Robusta rang xay 100% (Robusta Di Linh).':'Nước, cà phê Robusta rang xay (Robusta Di Linh).';
  const qty=bag?`Khối lượng tịnh: ${st.per*st.bag} g (${st.per} túi × ${st.bag} g)`:`Thể tích thực: ${st.vol} ml`;
  const how=bag?`Cho 1 túi vào bình với ${st.bag*8} ml nước lọc, đậy kín, ngâm ngăn mát 18–24 giờ, nhấc túi ra. Pha 1:1 với nước, sữa hoặc đá. Cốt đã ủ giữ ngăn mát, dùng trong 3 ngày.`:st.f==='rtd'?'Lắc đều trước khi dùng. Uống lạnh hoặc rót trên đá.':'Lắc đều. Pha 1 phần cốt với 2 phần nước, sữa hoặc đá.';
  const keep=bag?'Nơi khô ráo, thoáng mát, tránh ánh nắng. Sau khi mở túi bạc, đóng kín và dùng sớm.':'Bảo quản lạnh 0–4 °C. Đậy kín và giữ lạnh sau khi mở.';
  const warn=bag?'Sản phẩm có caffeine. Cân nhắc khi dùng cho trẻ em, phụ nữ mang thai và người nhạy cảm với caffeine.':'Không dùng khi chai phồng, rỉ hoặc có mùi lạ. Không để ngoài tủ lạnh quá 2 giờ. Sản phẩm có caffeine.';
  const html=`<h4>${name}</h4><p><b>Thành phần:</b> ${ing}</p><p><b>${qty}</b></p><p><b>Hướng dẫn sử dụng:</b> ${how}</p><p><b>Bảo quản:</b> <span class="${bag?'':'red'}">${keep}</span></p><p><b>Cảnh báo:</b> ${warn}</p>
 <div class="dt"><div><span>NSX</span>${dmy(d)}</div><div><span>HSD</span>${dmy(e)}</div><div><span>Mã lô</span>${lot()}</div></div>
-<p><b>Số tự công bố:</b> ……/DSUNFOOD/${d.getFullYear()}</p><p><b>Tổ chức chịu trách nhiệm:</b> Công ty TNHH DSunfood, ${ADDR}. ĐT ${PHONE}.</p><p><b>Xuất xứ:</b> Việt Nam. Nguyên liệu từ farm MeDili, ${ADDR_FARM}.</p>`;
+<p><b>Số tự công bố:</b> ……/DSUNFOOD/${d.getFullYear()}</p><p><b>Tổ chức chịu trách nhiệm:</b> Công ty TNHH DSunfood, ${ADDR}. ĐT ${PHONE}.</p><p><b>Xuất xứ:</b> Việt Nam. Nguyên liệu từ vườn MeDili, ${ADDR_FARM}.</p>`;
  $('backlbl').innerHTML=html;
  st.label=$('backlbl').innerText.replace(/\n{2,}/g,'\n');
 }
 function listing(r){
  const bag=st.f==='bag',conc=st.f==='conc';
  const title=bag?`Cold Brew MeDili túi ủ lạnh · Hộp ${st.per} túi × ${st.bag} g · Robusta Di Linh rang mộc`:`Cold Brew MeDili ${conc?'cô đặc':'uống liền'} ${st.vol} ml · Robusta Di Linh ủ lạnh ${st.h} giờ · Giao lạnh trong ngày`;
- const L=bag?[`100 % cà phê Robusta từ farm MeDili, Di Linh, Lâm Đồng, rang mộc City+, xay thô.`,`Mỗi túi ${st.bag} g ủ với ${st.bag*8} ml nước lọc trong ngăn mát 18–24 giờ, được khoảng ${fm(r.out)} ml cốt.`,'Pha 1:1 với nước, sữa tươi hoặc đá, tuỳ gu.',`Hộp ${st.per} túi, đóng trong túi bạc thổi nitơ.`,'Hàng khô, giao toàn quốc.']
-  :[`100 % cà phê Robusta từ farm MeDili, Di Linh, Lâm Đồng, rang mộc City+.`,`Ủ lạnh ${st.h} giờ ở ${st.T} °C, lọc hai lần. Không đường, không chất bảo quản.`,conc?'Pha 1 phần cốt với 2 phần nước, sữa hoặc đá.':'Lắc đều, uống lạnh hoặc rót trên đá.','Bảo quản 0–4 °C, dùng trong 7 ngày kể từ ngày sản xuất.','Giao nội thành TP.HCM trong ngày, thùng xốp có đá gel.'];
+ const L=bag?[`100% cà phê Robusta từ vườn MeDili, Di Linh, Lâm Đồng, rang mộc City+, xay thô.`,`Mỗi túi ${st.bag} g ủ với ${st.bag*8} ml nước lọc trong ngăn mát 18–24 giờ, được khoảng ${fm(r.out)} ml cốt.`,'Pha 1:1 với nước, sữa tươi hoặc đá, tùy gu.',`Hộp ${st.per} túi, đóng trong túi bạc thổi nitơ.`,'Hàng khô, giao toàn quốc.']
+  :[`100% cà phê Robusta từ vườn MeDili, Di Linh, Lâm Đồng, rang mộc City+.`,`Ủ lạnh ${st.h} giờ ở ${st.T} °C, lọc hai lần. Không đường, không chất bảo quản.`,conc?'Pha 1 phần cốt với 2 phần nước, sữa hoặc đá.':'Lắc đều, uống lạnh hoặc rót trên đá.','Bảo quản 0–4 °C, dùng trong 7 ngày kể từ ngày sản xuất.','Giao nội thành TP.HCM trong ngày, thùng xốp có đá gel.'];
  st.lst=title+'\n\n'+L.map(x=>'• '+x).join('\n');$('lst').textContent=st.lst}
 
 /* ====== DỤNG CỤ, PHIẾU LÔ ====== */
 function equip(r){
  const s=st,rows=[];
  if(s.f==='bag'){
-  rows.push(['Cân điện tử','Cân bột từng đợt xay','Kiểm cân định kỳ']);
+  rows.push(['Cân điện tử','Cân bột từng đợt xay','Kiểm tra cân định kỳ']);
   rows.push(['Máy đóng gói túi lọc định lượng',`${fm(r.bags)} túi × ${s.bag}${NB}g`,'Hoặc thuê xưởng gia công đã có giấy an toàn thực phẩm']);
-  rows.push(['Túi lọc không dệt dùng cho thực phẩm',`${fm(Math.ceil(r.bags*1.03))} túi`,'Dư 3 % cho hao hụt máy']);
+  rows.push(['Túi lọc không dệt dùng cho thực phẩm',`${fm(Math.ceil(r.bags*1.03))} túi`,'Dư 3% cho hao hụt máy']);
   rows.push(['Túi bạc nhiều lớp có van một chiều',`${fm(Math.ceil(r.bags/5))} túi`,'5 túi lọc mỗi túi bạc']);
-  rows.push(['Máy hàn miệng túi có thổi nitơ','1 máy','Kiểm mối hàn đầu mỗi ca']);
+  rows.push(['Máy hàn miệng túi có thổi nitơ','1 máy','Kiểm tra mối hàn đầu mỗi ca']);
   rows.push(['Hộp kraft in Cold Brew MeDili',`${fm(r.boxes)} hộp`,`${s.per} túi mỗi hộp`]);
  }else{
   const tank=Math.ceil(r.W*1.4/10)*10,nb=Math.ceil(r.n*1.05);
   rows.push(['Cân điện tử','Cân bột và nước','1 lít nước khoảng 1 kg']);
   rows.push(['Bồn inox 304 có nắp, van xả đáy',`Từ ${fm(tank)}${NB}L`,'Chừa chỗ cho bột nở']);
-  rows.push(['Túi lọc vải hoặc lưới nylon dùng cho thực phẩm',`${Math.ceil(s.R/2.5)} túi`,'Mỗi túi không quá 2,5 kg bột']);
+  rows.push(['Túi lọc vải hoặc lưới nilon dùng cho thực phẩm',`${Math.ceil(s.R/2.5)} túi`,'Mỗi túi không quá 2,5 kg bột']);
   rows.push(['Giấy lọc hoặc vải lọc tinh, phễu inox','Lọc tầng hai','Thay giấy mỗi mẻ']);
   rows.push(['Kho lạnh hoặc tủ mát 0–4 °C',`Chứa bồn và ${fm(r.n)} chai`,'Đặt nhiệt kế trong kho']);
   rows.push(['Nhiệt kế, khúc xạ kế đo TDS','1 bộ','Ghi số vào phiếu lô']);
-  rows.push(['Chai thủy tinh nâu, nắp có vòng niêm phong',`${fm(nb)} bộ`,'Dư 5 % phòng vỡ']);
+  rows.push(['Chai thủy tinh nâu, nắp có vòng niêm phong',`${fm(nb)} bộ`,'Dư 5% phòng vỡ']);
   rows.push(['Nhãn decal chống ẩm',`${fm(nb)} nhãn`,'In ngày sản xuất, hạn dùng, mã lô']);
   rows.push(['Thùng xốp, đá gel','Theo đơn giao','Giao trong ngày']);
  }
@@ -637,8 +637,8 @@ ${head}
 Bột thô: ${vn(s.R*.99,1)} kg · nước ${fm(r.W)} L (1:${vn(s.ratio,1)}) · mục tiêu ${s.T} °C, ${s.h} giờ
 Bắt đầu ngâm: ______ giờ · nhấc túi: ______ giờ
 Nhiệt độ kho: đầu mẻ ____ °C · giữa mẻ ____ °C · lúc lọc ____ °C
-Cốt sau lọc: ______ L (mô hình ${vn(r.Vc,1)} L) · TDS đo ____ % (mô hình ${vn(r.tdsC,1)} %)${s.f==='rtd'?`
-Nước pha thêm: ______ L (mô hình ${vn(r.add,1)} L) · TDS sau pha ____ % (mục tiêu ${vn(s.tds,1)} %)`:''}
+Cốt sau lọc: ______ L (mô hình ${vn(r.Vc,1)} L) · TDS đo ____ % (mô hình ${vn(r.tdsC,1)}%)${s.f==='rtd'?`
+Nước pha thêm: ______ L (mô hình ${vn(r.add,1)} L) · TDS sau pha ____ % (mục tiêu ${vn(s.tds,1)}%)`:''}
 Chiết rót: ______ chai ${s.vol} ml (mô hình ${fm(r.n)}) · HSD ${dmy(addD(d,FMT[s.f].life-1))}
 Lưu 2 chai mẫu đến hết hạn · nếm so mẫu chuẩn: đạt / chưa đạt
 Ghi chú: ____________________`;
@@ -650,8 +650,8 @@ function pills(id,items,cur,cb){$(id).innerHTML=items.map(([k,n])=>`<button clas
 const sym=k=>k==='good'?'✓':k==='warn'?'!':'✕';
 function stats(r){const s=st,t=(a,b)=>`<div class="stat"><span>${a}</span><b>${b}</b></div>`;
  $('stats').innerHTML=s.f==='bag'?t('Số túi',fm(r.bags))+t('Số hộp',fm(r.boxes))+t('Cốt mỗi túi',fm(r.out)+NB+'ml')+t('Hạn dùng','6 tháng')
-  :s.f==='rtd'?t('Uống liền',vn(r.Vout,1)+NB+'L')+t('TDS chai',vn(r.low?r.tdsC:s.tds,1)+NB+'%')+t('Số chai',fm(r.n))+t('Hạn dùng','7 ngày')
-  :t('Cốt thu được',vn(r.Vc,1)+NB+'L')+t('TDS cốt',vn(r.tdsC,1)+NB+'%')+t('Số chai',fm(r.n))+t('Hạn dùng','7 ngày')}
+  :s.f==='rtd'?t('Uống liền',vn(r.Vout,1)+NB+'L')+t('TDS chai',vn(r.low?r.tdsC:s.tds,1)+'%')+t('Số chai',fm(r.n))+t('Hạn dùng','7 ngày')
+  :t('Cốt thu được',vn(r.Vc,1)+NB+'L')+t('TDS cốt',vn(r.tdsC,1)+'%')+t('Số chai',fm(r.n))+t('Hạn dùng','7 ngày')}
 function renderStation(){
  const s=ST[st.sel-1],r=calc(),x=st.sel===10?K10[st.f==='bag'?'dry':'cold']:s,off=!use(st.sel);
  document.querySelectorAll('#scene .st').forEach(g=>g.classList.toggle('on',+g.dataset.i===st.sel));
@@ -661,8 +661,8 @@ function renderStation(){
 function select(i){st.sel=i;renderStation();drawChips(calc());const sc=document.querySelector('.scroller'),q=P(...ANCH[i]);if(sc.scrollWidth>sc.clientWidth)sc.scrollLeft=q[0]/1040*sc.scrollWidth-sc.clientWidth/2}
 function sliders(){const set=(id,v)=>{$(id).value=v};
  set('iR',st.R);set('iRa',st.ratio);set('iT',st.T);set('iH',st.h);set('iS',st.tds);set('iB',st.bag);
- $('oR').textContent=st.R+NB+'kg';$('oRa').textContent='1:'+vn(st.ratio,1);$('oT').textContent=st.T+NB+'°C';$('oH').textContent=st.h+' giờ';$('oS').textContent=vn(st.tds,1)+NB+'%';$('oB').textContent=st.bag+NB+'g';
- $('tNote').textContent=st.T<=5?'Kho lạnh hoặc tủ mát 2–5 °C, đúng mức khuyến nghị.':st.T<=8?'Hơi ấm cho kho lạnh, đưa về 2–5 °C.':'Nhiệt độ phòng: chỉ hợp quán pha dùng trong ngày.';
+ $('oR').textContent=st.R+NB+'kg';$('oRa').textContent='1:'+vn(st.ratio,1);$('oT').textContent=st.T+NB+'°C';$('oH').textContent=st.h+' giờ';$('oS').textContent=vn(st.tds,1)+'%';$('oB').textContent=st.bag+NB+'g';
+ $('tNote').textContent=st.T<=5?'Kho lạnh hoặc tủ mát 2–5 °C, đúng mức khuyến nghị.':st.T<=8?'Hơi ấm cho kho lạnh, đưa về 2–5 °C.':'Nhiệt độ phòng: chỉ phù hợp với quán pha dùng trong ngày.';
  $('bgNote').textContent=`Mỗi túi pha với ${st.bag*8}${NB}ml nước, tỷ lệ 1:8 như cold brew ở Quầy pha.`;
  $('grpC').hidden=st.f==='bag';$('grpB').hidden=st.f!=='bag';$('grpR').hidden=st.f!=='rtd';
 }
@@ -702,7 +702,7 @@ $('strip').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>select(i+1));
 const onIn=(id,f)=>$(id).addEventListener('input',()=>{stopRun();f(+$(id).value);update()});
 onIn('iR',v=>st.R=v);onIn('iRa',v=>st.ratio=v);onIn('iT',v=>st.T=v);onIn('iH',v=>st.h=v);onIn('iS',v=>st.tds=v);onIn('iB',v=>st.bag=v);
 $('run').onclick=run;$('run2').onclick=run;$('reset').onclick=()=>{stopRun();const f=st.f;Object.assign(st,DEF,{f});update()};
-const cp=async(txt,el)=>{try{await navigator.clipboard.writeText(txt);$(el).textContent='Đã sao chép.'}catch(e){$(el).textContent='Không sao chép được, hãy bôi đen để chép.'}setTimeout(()=>$(el).textContent='',2600)};
+const cp=async(txt,el)=>{try{await navigator.clipboard.writeText(txt);$(el).textContent='Đã sao chép.'}catch(e){$(el).textContent='Không sao chép được, bạn hãy tự chọn văn bản để sao chép.'}setTimeout(()=>$(el).textContent='',2600)};
 $('cpLbl').onclick=()=>cp(st.label,'cpLblS');$('cpLst').onclick=()=>cp(st.lst,'cpLstS');$('cpSh').onclick=()=>cp(st.sheet,'cpShS');
 buildScene();update();
 '''

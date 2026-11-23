@@ -12,7 +12,7 @@ from kit import *
 from pages_a import head
 
 SITE = 'https://www.medili.vn/'
-GREENFIX = {'#2F6B4A': '#B5832F', '#3F7F5A': '#C9A15B'}   # giống bản Phòng Chọn Mua trên web
+GREENFIX = {'#2F6B4A': '#B5832F', '#3F7F5A': '#C9A15B'}   # giống bản Phòng chọn mua trên web
 MAN = json.load(open(os.path.join(HERE, 'data', 'manus-catalog.json'), encoding='utf8'))
 
 # mã dòng → tên trang (bỏ tiền tố "medili-" của handle Manus)
@@ -29,7 +29,7 @@ ORDER = list(SLUG)
 BREW = {'phin': 'Phin', 'espresso': 'Máy espresso', 'v60': 'Pha thủ công', 'coldbrew': 'Cold brew'}
 GRIND = ['Nguyên hạt', 'Xay cho phin', 'Xay cho máy espresso', 'Xay pha thủ công']
 PACKS = [250, 500, 1000, 5000]
-BARS = ['Đậm', 'Ngọt hậu', 'Chua sáng', 'Thơm']
+BARS = ['Đậm', 'Ngọt hậu', 'Chua thanh', 'Thơm']
 SAP_NOTE = ('Dòng đang hoàn thiện. Mức rang, hương vị và giá được MeDili xác nhận theo từng lô. '
             'Thêm vào giỏ để hỏi giá, hoặc nhắn Zalo để nhận mẫu thử khi mở bán.')
 
@@ -37,42 +37,42 @@ SAP_NOTE = ('Dòng đang hoàn thiện. Mức rang, hương vị và giá đư�
 NEW6 = {
     'frd': dict(n='Fine Robusta Di Linh', line='Robusta', tier='Premium', col='#8B4A2B', oshort='Di Linh',
                 proc='Xác nhận theo lô', head='Robusta Di Linh thân rõ, ngọt rang',
-                origin='Robusta Di Linh, Lâm Đồng', roast='Medium, có thể rang đậm hơn cho phin và espresso',
-                taste='Định hướng: cacao đen, caramel rang, hạt rang, hậu sạch',
-                fit='Quán và người pha cần một Robusta premium dễ lên công thức',
-                tips=['Hợp phin và espresso, có thể thử thêm pha thủ công và cold brew.',
-                      'Mức rang chốt sau khi rang thử và nếm từng lô.']),
+                origin='Robusta Di Linh, Lâm Đồng', roast='Rang vừa, có thể rang đậm hơn cho phin và espresso',
+                taste='Định hướng: ca cao đen, caramel rang, hạt rang, hậu sạch',
+                fit='Quán và người pha cần một dòng Robusta cao cấp dễ lên công thức',
+                tips=['Phù hợp với phin và espresso; có thể thử thêm pha thủ công và cold brew.',
+                      'Mức rang được chốt sau khi rang thử và nếm từng lô.']),
     'rh': dict(n='Robusta Honey Di Linh', line='Robusta', tier='Premium', col='#C27B2C', oshort='Di Linh',
-               proc='Honey', head='Robusta sơ chế honey, thân dày, hậu ngọt',
-               origin='Robusta Di Linh, Lâm Đồng', roast='Medium đến medium-dark',
-               taste='Định hướng: cacao, đường nâu, hạt rang, trái cây khô nhẹ',
+               proc='Honey', head='Robusta sơ chế Honey, thân dày, hậu ngọt',
+               origin='Robusta Di Linh, Lâm Đồng', roast='Rang vừa đến vừa đậm',
+               taste='Định hướng: ca cao, đường nâu, hạt rang, trái cây khô nhẹ',
                fit='Người uống hằng ngày thích Robusta đậm, hậu ngọt',
                tips=['Honey là cách sơ chế giữ lớp nhớt quanh nhân khi phơi, không phải tẩm mật ong.',
-                     'Hợp phin và espresso hằng ngày.']),
+                     'Phù hợp với phin và espresso hằng ngày.']),
     'acd': dict(n='Arabica Cầu Đất', line='Arabica', tier='Premium', col='#A86B3C', oshort='Cầu Đất',
-                proc='Xác nhận theo lô', head='Arabica Cầu Đất sáng vừa, ngọt sạch',
-                origin='Arabica Cầu Đất, Lâm Đồng', roast='Medium-light đến medium',
+                proc='Xác nhận theo lô', head='Arabica Cầu Đất chua thanh vừa, ngọt sạch',
+                origin='Arabica Cầu Đất, Lâm Đồng', roast='Rang vừa sáng đến rang vừa',
                 taste='Định hướng: trái cây sáng nhẹ, cam quýt, caramel, hậu sạch',
                 fit='Khách muốn Arabica Cầu Đất cân bằng, dễ đổi cách pha',
                 tips=['Pha thủ công để rõ hương, phin hoặc espresso để đậm thân hơn.']),
     'sig': dict(n='MeDili Signature', line='Blend', tier='Signature', col='#5C2A3A', oshort='Di Linh',
-                proc='Blend chữ ký, công thức xác nhận theo lô', head='Blend chữ ký MeDili, đậm vừa, thân dày',
-                origin='Robusta Honey và Robusta Sẻ Di Linh, tỷ lệ MeDili xác nhận', roast='Medium đến medium-dark',
-                taste='Định hướng: cacao, caramel, hạt rang, chua thấp, hậu gọn',
+                proc='Blend đặc trưng, công thức được xác nhận theo lô', head='Blend đặc trưng của MeDili, đậm vừa, thân dày',
+                origin='Robusta Honey và Robusta Sẻ Di Linh, tỷ lệ do MeDili xác nhận', roast='Rang vừa đến vừa đậm',
+                taste='Định hướng: ca cao, caramel, hạt rang, chua thấp, hậu gọn',
                 fit='Gia đình và quầy pha cần một blend linh hoạt từ phin đến espresso',
-                tips=['Dòng ký tên của MeDili, khác Classic dễ uống và Premium thơm hương.']),
+                tips=['Dòng đặc trưng của MeDili, khác với Classic dễ uống và Premium thơm hương.']),
     'an': dict(n='Arabica Natural Cầu Đất', line='Arabica', tier='Premium', col='#9E4B6E', oshort='Cầu Đất',
-               proc='Natural', head='Arabica natural, quả chín, ngọt',
-               origin='Arabica Cầu Đất, Lâm Đồng', roast='Medium-light đến medium',
-               taste='Định hướng: quả chín nhẹ, caramel, đường nâu, hậu sạch',
-               fit='Khách muốn khám phá Arabica sơ chế natural',
+               proc='Natural', head='Arabica Natural, vị trái chín, ngọt',
+               origin='Arabica Cầu Đất, Lâm Đồng', roast='Rang vừa sáng đến rang vừa',
+               taste='Định hướng: trái chín nhẹ, caramel, đường nâu, hậu sạch',
+               fit='Khách muốn khám phá Arabica sơ chế Natural',
                tips=['Natural là phơi nguyên trái, hương trái cây thể hiện khác nhau theo từng lô.']),
     'aw': dict(n='Arabica Washed Cầu Đất', line='Arabica', tier='Premium', col='#C08A3E', oshort='Cầu Đất',
-               proc='Washed', head='Arabica washed, thanh rõ, cân bằng',
-               origin='Arabica Cầu Đất, Lâm Đồng', roast='Medium-light đến medium',
+               proc='Washed', head='Arabica Washed, thanh rõ, cân bằng',
+               origin='Arabica Cầu Đất, Lâm Đồng', roast='Rang vừa sáng đến rang vừa',
                taste='Định hướng: thanh rõ, cam chanh nhẹ, đường mía, hậu sạch',
                fit='Khách thích ly thanh, chua cân bằng',
-               tips=['Washed là xát vỏ, lên men rồi rửa sạch nhớt trước khi phơi, vị thường thanh và sạch.']),
+               tips=['Washed là xát vỏ, lên men rồi rửa sạch lớp nhớt trước khi phơi, vị thường thanh và sạch.']),
 }
 OSHORT = {'Robusta': 'Di Linh', 'Arabica': 'Cầu Đất', 'Blend': 'Di Linh · Cầu Đất', 'Đặc sản': 'Lâm Đồng'}
 
@@ -80,8 +80,8 @@ OSHORT = {'Robusta': 'Di Linh', 'Arabica': 'Cầu Đất', 'Blend': 'Di Linh · 
 # kg = giá 1 kg (nghìn đồng), túi 250 g = 1/4. bars lấy theo dòng gốc gần nhất trên kệ (base).
 NGU = {
     'ng-suong': dict(n='Sương', sub='Mist', badge='Kim', kg=450, base='pa', col='#9C8466', oshort='Cầu Đất',
-                     proc='Honey, washed', origin='100% Arabica, Cầu Đất, Lâm Đồng',
-                     roast='Rang mộc. Bản phin rang đậm (Dark Roast), bản máy rang cho espresso',
+                     proc='Honey, Washed', origin='100% Arabica, Cầu Đất, Lâm Đồng',
+                     roast='Rang mộc. Bản phin rang đậm (Dark), bản máy rang cho espresso',
                      taste='Socola, cam chanh, chua nhẹ, đắng vừa, ngọt hậu',
                      use='Bản phin: phin, đen đá, sữa đá. Bản máy: espresso, Americano, latte', brews=['phin', 'espresso'],
                      head='Một khoảng lặng giữa ngày', fit='Người thích Arabica thơm, chua nhẹ, ngọt hậu',
@@ -89,31 +89,31 @@ NGU = {
                      grinds=['Bản phin · nguyên hạt', 'Bản phin · xay cho phin', 'Bản máy · nguyên hạt', 'Bản máy · xay cho máy espresso']),
     'ng-rung': dict(n='Rừng', sub='Forest', badge='Mộc', kg=350, base='bm', col='#C8962E', oshort='Di Linh · Cầu Đất',
                     proc='Robusta : Arabica : Culi = 6 : 2 : 2', origin='60% Robusta Di Linh, 20% Arabica Cầu Đất, 20% Culi',
-                    roast='Medium Roast, rang mộc', taste='Đậm, thơm, hậu ngọt',
+                    roast='Rang vừa (Medium), rang mộc', taste='Đậm, thơm, hậu ngọt',
                     use='Espresso, Americano, latte, phin', brews=['espresso', 'phin'],
                     head='Ba hạt, một nhịp', fit='Người thích ly đậm, thơm, pha máy hoặc phin',
                     story='Robusta Di Linh, Arabica Cầu Đất và Culi: ba hạt, một nhịp. Đậm từ Robusta và Culi, thơm từ Arabica, hậu ngọt, trọn vị trong một ly.'),
     'ng-suoi': dict(n='Suối', sub='Stream', badge='Thủy', kg=400, base='b82', col='#8A6F5A', oshort='Di Linh · Cầu Đất',
                     proc='Robusta Honey : Arabica : Culi = 7 : 2 : 1', origin='70% Robusta Honey Di Linh, 20% Arabica Cầu Đất, 10% Culi',
-                    roast='Medium Roast, rang mộc', taste='Đậm vừa, ngọt mật, thơm, hậu dài',
+                    roast='Rang vừa (Medium), rang mộc', taste='Đậm vừa, ngọt mật, thơm, hậu dài',
                     use='Phin, đen đá, sữa đá, cold brew', brews=['phin', 'coldbrew'],
                     head='Ba hạt chảy chung một dòng', fit='Người thích ly đậm vừa, ngọt mật, hậu dài',
                     story='Robusta Honey làm nền, Arabica Cầu Đất cho hương, chút Culi cho đậm: ba hạt chảy chung một dòng.'),
     'ng-nang': dict(n='Nắng', sub='Sunshine', badge='Hỏa', kg=350, base='pp', col='#B33A24', oshort='Di Linh',
-                    proc='Honey, giữ lớp thịt quả khi phơi', origin='100% Robusta Premium, Di Linh, Lâm Đồng',
-                    roast='Medium Roast, rang mộc', taste='Cân bằng, đường nâu, caramel, hậu ngọt',
+                    proc='Honey, giữ lớp thịt trái khi phơi', origin='100% Robusta Premium, Di Linh, Lâm Đồng',
+                    roast='Rang vừa (Medium), rang mộc', taste='Cân bằng, đường nâu, caramel, hậu ngọt',
                     use='Phin, đen đá, sữa đá, cold brew', brews=['phin', 'coldbrew'],
                     head='Đắng đầu lưỡi, ngọt ở hậu vị', fit='Người thích Robusta êm, hậu ngọt, pha phin hoặc cold brew',
-                    story='Trái chín hái chọn, giữ lớp thịt quả khi phơi dưới nắng cao nguyên Di Linh. Đắng đầu lưỡi, ngọt ở hậu vị, cho những giờ làm việc cần hứng khởi.'),
+                    story='Trái chín hái chọn, giữ lớp thịt trái khi phơi dưới nắng cao nguyên Di Linh. Đắng đầu lưỡi, ngọt ở hậu vị, cho những giờ làm việc cần hứng khởi.'),
     'ng-nui': dict(n='Núi', sub='Mountain', badge='Thổ', kg=400, base='pc', col='#5A3A28', oshort='Tân Nghĩa · Di Linh',
                    proc='Natural, phơi nguyên trái', origin='100% Robusta Sẻ tuyển chọn, Tân Nghĩa, Di Linh',
-                   roast='Dark Roast, rang mộc', taste='Đậm đà, đắng rõ, hậu tròn, chocolate đen',
+                   roast='Rang đậm (Dark), rang mộc', taste='Đậm đà, đắng rõ, hậu tròn, socola đen',
                    use='Phin truyền thống, đen đá, sữa đá', brews=['phin'],
                    head='Đậm, đắng rõ, cho buổi sáng tỉnh táo', fit='Người thích phin đậm, đen đá, sữa đá buổi sáng',
-                   story='Từ gốc Cà Sẻ trên đồi Tân Nghĩa, cây 15 năm tuổi, chăm theo hướng tự nhiên. Rang mộc, không tẩm ướp. Đậm, đắng rõ, hậu tròn, cho những buổi sáng cần tỉnh táo.'),
+                   story='Từ gốc Cà Sẻ trên đồi Tân Nghĩa, cây 15 năm tuổi, chăm sóc theo hướng tự nhiên. Rang mộc, không tẩm ướp. Đậm, đắng rõ, hậu tròn, cho những buổi sáng cần tỉnh táo.'),
     'ng-may': dict(n='Mây', sub='Cloud', badge='Soleil', kg=420, base='b73', col='#C98F7A', oshort='Di Linh · Cầu Đất',
                    proc='Robusta Sẻ : Arabica = 7 : 3', origin='70% Robusta Sẻ Tân Nghĩa, 30% Arabica Cầu Đất',
-                   roast='Medium Roast, rang mộc', taste='Đậm, thơm, hậu ngọt thanh',
+                   roast='Rang vừa (Medium), rang mộc', taste='Đậm, thơm, hậu ngọt thanh',
                    use='Phin, espresso, Americano, latte', brews=['phin', 'espresso'],
                    head='Vững như núi, thoáng như mây', fit='Người thích ly đậm mà thoáng, pha phin hoặc máy',
                    story='Trước bình minh, mây phủ kín thung lũng, chỉ còn đỉnh núi nhô lên. Bảy phần Robusta Sẻ, ba phần Arabica Cầu Đất: vững như núi, thoáng như mây.'),
@@ -149,7 +149,7 @@ def products(P):
                      bars=list(P[g['base']]['bars']), tips=[g['story']], note=NGU_NOTE, kline=f'Ngũ Hành · {g["badge"]}')
         elif i in NEW6:
             x = dict(NEW6[i])
-            x.update(id=i, kind='all', p=None, st='sap', brews=list(m['brews']), use=', '.join(BREW[b] for b in m['brews']),
+            x.update(id=i, kind='all', p=None, st='sap', brews=list(m['brews']), use=', '.join(BREW[b] for b in m['brews']).capitalize(),
                      bars=[round(m['profile'][k] * 20 / 5) * 5 for k in ('intensity', 'sweetness', 'acidity', 'complexity')],
                      full=x['n'], note=SAP_NOTE)
         else:
@@ -166,8 +166,8 @@ def products(P):
                      tips=list(d.get('tips') or []), p=p, st='ban' if p else 'lh', brews=[k for k in BREW if k in b], bars=list(s['bars']))
             notes = []
             if i in ('ms', 'cul'): notes.append('Gói lẻ 250 g, 500 g: liên hệ MeDili.')
-            if p and p[1] is None: notes.append('Chưa có giá sỉ, MeDili báo khi đặt.')
-            if not p: notes.append('Giá theo từng lô, MeDili báo khi đặt.')
+            if p and p[1] is None: notes.append('Chưa có giá sỉ, MeDili sẽ báo giá khi đặt hàng.')
+            if not p: notes.append('Giá theo từng lô, MeDili sẽ báo giá khi đặt hàng.')
             x['note'] = ' '.join(notes)
         x['brews'] = [k for k in BREW if k in x['brews']]
         x['pk'] = _pk(x['proc'])
@@ -234,7 +234,7 @@ def js_head(L):
 # ---------------- CSS ----------------
 CSS = r'''
 .sh-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-/* bao bì minh hoạ */
+/* bao bì minh họa */
 .sb{position:relative;width:100%;max-width:230px;margin:auto;aspect-ratio:4/5;background:var(--c);
  background:linear-gradient(160deg,color-mix(in srgb,var(--c) 78%,#FFF3D6) 0%,var(--c) 52%,color-mix(in srgb,var(--c) 78%,#1E120C) 100%);
  clip-path:polygon(7% 0,93% 0,100% 6%,100% 100%,0 100%,0 6%);border-radius:0 0 14px 14px;display:grid;place-items:center;color:#FFF3D6}
@@ -394,12 +394,12 @@ function buyHTML(x,k){
 function wireBuy(root){
  const f=root.querySelector('[data-buy]');if(!f)return;const x=byId[f.dataset.buy],out=f.querySelector('output');
  const st=()=>({w:+f.querySelector('input[type=radio]:checked').value,g:f.querySelector('select').value,q:+out.textContent});
- const sum=()=>{const s=st(),u=unitP(x,0);f.querySelector('.pd-sum').innerHTML=u?`Tạm tính: <b>${fmt(u*s.w*s.q)} đ</b><small>${tuiJ(x)?`Túi 250 g giá ${fmt(u*250)} đ`:`Giá lẻ ${fmt(u*1000)} đ/kg`}, chưa gồm 8 % VAT và phí giao.${x.p[1]?' Đơn từ 5 kg được giá sỉ.':''}</small>`:`Giá: <b>Liên hệ</b><small>MeDili báo giá khi nhận đơn.</small>`};
+ const sum=()=>{const s=st(),u=unitP(x,0);f.querySelector('.pd-sum').innerHTML=u?`Tạm tính: <b>${fmt(u*s.w*s.q)} đ</b><small>${tuiJ(x)?`Túi 250 g giá ${fmt(u*250)} đ`:`Giá lẻ ${fmt(u*1000)} đ/kg`}, chưa gồm 8% VAT và phí giao.${x.p[1]?' Đơn từ 5 kg được giá sỉ.':''}</small>`:`Giá: <b>Liên hệ</b><small>MeDili báo giá khi nhận đơn.</small>`};
  f.addEventListener('change',sum);
  f.querySelectorAll('[data-d]').forEach(b=>b.addEventListener('click',()=>{out.textContent=Math.max(1,Math.min(99,+out.textContent+ +b.dataset.d));sum()}));
  f.querySelector('[data-act=add]').addEventListener('click',()=>{const s=st();addCart(x.id,s.w,s.g,s.q)});
  f.querySelector('[data-act=zalo]').addEventListener('click',async()=>{const s=st();const t=`Chào MeDili, mình muốn hỏi về ${x.n}, gói ${wlab(s.w)}, ${s.g.toLowerCase()}, số lượng ${s.q}.`;
-  try{await navigator.clipboard.writeText(t);toast('Đã chép câu hỏi. Dán vào Zalo MeDili để gửi.')}catch(e){}});
+  try{await navigator.clipboard.writeText(t);toast('Đã sao chép câu hỏi. Dán vào Zalo MeDili để gửi.')}catch(e){}});
  sum()}
 '''
 
@@ -431,7 +431,7 @@ SHOP_PAGE_JS = r'''
   dw.innerHTML=`<button type="button" class="sh-x" aria-label="Đóng">×</button>
   <div>${document.querySelector(`.sh-card[data-id="${x.id}"] .sb`).outerHTML}</div>
   <div class="pd-info"><p class="eye">${esc(x.kline)}</p><h2 class="pd-h" id="sh-dt" style="font-size:2rem">${esc(x.n)}</h2>
-  ${x.head?`<p class="pd-tag">${esc(x.head)}</p>`:''}<p style="margin:0">${esc(x.taste)}</p><p class="note">Pha: ${x.brews.map(b=>BREW[b]).join(' · ')}. Hợp với: ${esc(x.fit)}.</p>
+  ${x.head?`<p class="pd-tag">${esc(x.head)}</p>`:''}<p style="margin:0">${esc(x.taste)}</p><p class="note">Pha: ${x.brews.map(b=>BREW[b]).join(' · ')}. Phù hợp với: ${esc(x.fit)}.</p>
   <div class="pd-pr"><b>${ptxt(x)}</b>${x.p&&x.p[1]?`<small>Sỉ 5–20 kg/tháng ${fmt(x.p[1]*1000)} đ/kg · trên 20 kg ${fmt(x.p[2]*1000)} đ/kg</small>`:x.p&&tuiJ(x)?`<small>Tương đương ${fmt(x.p[0]*1000)} đ/kg</small>`:''}</div>
   ${x.note?`<p class="pd-note">${esc(x.note)}</p>`:''}${buyHTML(x,'q')}<a class="lnk" href="${x.file}">Xem trang ${esc(x.n)} →</a></div>`;
   dw.querySelector('.sh-x').addEventListener('click',()=>dlg.close());wireBuy(dw);
@@ -456,7 +456,7 @@ CART_JS = r'''
  function text(){const r=calc(),v=f.elements;const L=['ĐƠN CÀ PHÊ · MEDILI','Ngày: '+today(),''];
   r.rows.forEach(({it,x,v:val},i)=>L.push(`${i+1}. ${x.n} · ${wlab(it.w)} · ${it.g} · x${it.q} · ${val?fmt(val)+' đ':'hỏi giá'}`));
   L.push('',`Tổng khối lượng: ${(Math.round(r.c.reduce((a,it)=>a+it.w*it.q,0)/100)/10).toLocaleString('vi-VN')} kg`);
-  L.push(`Tạm tính: ${fmt(r.tot)} đ (${r.used?'giá sỉ cấp 1':'giá lẻ'}, chưa gồm 8 % VAT và phí giao)${r.ask?' + '+r.ask+' dòng hỏi giá':''}`,'');
+  L.push(`Tạm tính: ${fmt(r.tot)} đ (${r.used?'giá sỉ cấp 1':'giá lẻ'}, chưa gồm 8% VAT và phí giao)${r.ask?' + '+r.ask+' dòng hỏi giá':''}`,'');
   L.push('Khách: '+(v.ten.value.trim()||'...')+' · '+(v.sdt.value.trim()||'...'));
   if(v.dc.value.trim())L.push('Giao đến: '+v.dc.value.trim());L.push('Mua cho: '+v.ai.value);if(v.gc.value.trim())L.push('Ghi chú: '+v.gc.value.trim());
   return L.join('\n')}
@@ -470,7 +470,7 @@ CART_JS = r'''
   document.getElementById('ct-kg').textContent=(Math.round(kg*10)/10).toLocaleString('vi-VN')+' kg';
   document.getElementById('ct-tier').textContent=r.used?'Sỉ cấp 1 (từ 5 kg)':'Giá lẻ';
   document.getElementById('ct-sum').textContent=fmt(r.tot)+' đ'+(r.ask?' + hỏi giá':'');
-  document.getElementById('ct-hint').textContent=r.used?'Đơn đã từ 5 kg nên áp giá sỉ cấp 1 cho các dòng có giá sỉ. Khi đạt 20 kg trong tháng, phần chênh lệch được chiết khấu vào đơn kế tiếp.':r.tier?'Các dòng trong giỏ chưa có giá sỉ, MeDili báo khi đặt.':
+  document.getElementById('ct-hint').textContent=r.used?'Đơn đã từ 5 kg nên áp giá sỉ cấp 1 cho các dòng có giá sỉ. Khi đạt 20 kg trong tháng, phần chênh lệch được chiết khấu vào đơn kế tiếp.':r.tier?'Các dòng trong giỏ chưa có giá sỉ, MeDili sẽ báo giá khi đặt hàng.':
    (r.kg>0?`Thêm ${(Math.round((5-r.kg)*10)/10).toLocaleString('vi-VN')} kg nữa để được giá sỉ cấp 1.`:'');
   msg.textContent=text()}
  box.addEventListener('click',e=>{const row=e.target.closest('.ct-row');if(!row)return;const c=MDC.get(),it=c[+row.dataset.i];if(!it)return;
@@ -484,8 +484,8 @@ CART_JS = r'''
   err.textContent=!t?'Vui lòng nhập tên người nhận.':'Vui lòng nhập số điện thoại đúng 9 đến 11 số.';(t?f.elements.sdt:f.elements.ten).focus();return false}return true};
  document.getElementById('ct-gf').addEventListener('click',e=>{if(!ok()){e.preventDefault();return}const v=f.elements;
   e.currentTarget.href=FORM+'&'+FN.name+'='+encodeURIComponent(v.ten.value.trim())+'&'+FN.phone+'='+encodeURIComponent(v.sdt.value.trim())+'&'+FN.txt+'='+encodeURIComponent(text());
-  toast('Đã mở Google Form. Bấm Gửi trong Form để MeDili nhận đơn.')});
- document.getElementById('ct-zl').addEventListener('click',async e=>{if(!ok()){e.preventDefault();return}try{await navigator.clipboard.writeText(text());toast('Đã chép đơn. Dán vào Zalo MeDili rồi gửi.')}catch(x){toast('Hãy chép nội dung đơn bên dưới rồi dán vào Zalo.')}});
+  toast('Đã mở Google Form. Bấm Gửi trong phiếu để MeDili nhận đơn.')});
+ document.getElementById('ct-zl').addEventListener('click',async e=>{if(!ok()){e.preventDefault();return}try{await navigator.clipboard.writeText(text());toast('Đã sao chép đơn. Dán vào Zalo MeDili rồi gửi.')}catch(x){toast('Hãy sao chép nội dung đơn bên dưới rồi dán vào Zalo.')}});
  document.getElementById('ct-em').addEventListener('click',e=>{if(!ok()){e.preventDefault();return}
   e.currentTarget.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('Đơn cà phê MeDili · '+f.elements.ten.value.trim())+'&body='+encodeURIComponent(text())});
  document.getElementById('ct-clr').addEventListener('click',()=>{MDC.set([]);render()});
@@ -536,10 +536,10 @@ def shop_page(L):
             ('arabica', 'Arabica', sum(x['line'] == 'Arabica' for x in L)), ('blend', 'Blend', sum(x['line'] == 'Blend' for x in L)),
             ('dac', 'Đặc sản', sum(x['tier'] == 'Specialty' or x['line'] == 'Đặc sản' for x in L)), ('sap', 'Sắp mở bán', len(sap))]
     body = head('Cửa hàng MeDili', 'Cà phê rang mộc <em>từ Di Linh.</em>',
-                f'{len(ban)} dòng đang bán, gồm bộ Ngũ Hành túi 250 g, và {len(sap)} dòng sắp mở bán, cho phin, máy và pha thủ công. Chọn gói, thêm vào giỏ rồi gửi đơn. '
+                f'{len(ban)} dòng đang bán (gồm bộ Ngũ Hành túi 250 g) và {len(sap)} dòng sắp mở bán, dành cho pha phin, pha máy và pha thủ công. Chọn gói, thêm vào giỏ rồi gửi đơn. '
                 'MeDili xác nhận giá cuối và phí giao trước khi chốt đơn.',
                 '<a class="btn main" href="#ke">Xem kệ cà phê</a><a class="btn" href="tim-gu.html">Chưa biết chọn? Tìm gu</a>'
-                '<a class="btn" href="mua-hang.html">Mua cho quán: Phòng Chọn Mua</a>')
+                '<a class="btn" href="mua-hang.html">Mua cho quán: Phòng chọn mua</a>')
     body += f'''
 <section class="sh-tool" id="ke" aria-label="Lọc và tìm cà phê">
  <label class="sh-s"><span class="sh-sr">Tìm cà phê</span>{SEARCH_ICON}<input id="sh-q" type="search" placeholder="Tìm: Robusta, honey, phin, blend…" autocomplete="off" enterkeyhint="search"></label>
@@ -553,9 +553,9 @@ def shop_page(L):
 <div class="sh-grid" id="sh-grid">{"".join(card(x) for x in L)}</div>
 <p class="sh-empty" id="sh-empty" hidden>Không có dòng nào khớp. <button type="button" class="lnk" id="sh-reset">Xem tất cả</button></p>
 <section class="sh-info" aria-label="Mua hàng tại MeDili">
- <div class="box"><p class="eye">Giá và quy cách</p><p>Giá bán lẻ tính theo kg cà phê rang, chưa gồm 8 % VAT và phí giao. Gói 250 g, 500 g, 1 kg và 5 kg. Từ 5 kg mỗi tháng có giá sỉ cấp 1, trên 20 kg có giá sỉ cấp 2. Bộ Ngũ Hành bán theo túi 250 g.</p></div>
+ <div class="box"><p class="eye">Giá và quy cách</p><p>Giá bán lẻ tính theo kg cà phê rang, chưa gồm 8% VAT và phí giao. Có các gói 250 g, 500 g, 1 kg và 5 kg. Từ 5 kg mỗi tháng có giá sỉ cấp 1, trên 20 kg có giá sỉ cấp 2. Bộ Ngũ Hành bán theo túi 250 g.</p></div>
  <div class="box"><p class="eye">Đặt hàng</p><p>Thêm vào giỏ, điền tên, số điện thoại, địa chỉ rồi gửi đơn qua Google Form, Zalo hoặc email. MeDili liên hệ lại để xác nhận giá cuối, phí giao và thời gian giao.</p></div>
- <div class="box"><p class="eye">Đổi trả</p><p>Đổi trả trong 7 ngày với lỗi sản xuất, đóng gói, hư hỏng khi vận chuyển hoặc giao sai loại. <a class="lnk" href="giao-hang.html">Giao hàng và đổi trả</a></p></div>
+ <div class="box"><p class="eye">Đổi trả</p><p>Đổi trả trong 7 ngày đối với lỗi sản xuất, lỗi đóng gói, hư hỏng khi vận chuyển hoặc giao sai loại. <a class="lnk" href="giao-hang.html">Giao hàng và đổi trả</a></p></div>
 </section>
 <dialog class="sh-dlg" id="sh-dlg" aria-labelledby="sh-dt"><div class="sh-dw" id="sh-dw"></div></dialog>
 '''
@@ -567,7 +567,7 @@ def shop_page(L):
 
 def _ld(x):
     d = dict(**{'@context': 'https://schema.org', '@type': 'Product'}, name=x['n'], brand={'@type': 'Brand', 'name': 'MeDili'},
-             description=f'{x["head"] + ". " if x["head"] else ""}{x["taste"]}. Pha: {", ".join(BREW[b] for b in x["brews"])}.',
+             description=f'{x["head"] + ". " if x["head"] else ""}{x["taste"]}. Pha: {", ".join(BREW[b] for b in x["brews"]).lower()}.',
              category='Cà phê rang', url=SITE + x['file'])
     if x['p']:
         v, q, u = (x['p'][0] * 250, 250, 'GRM') if tui(x) else (x['p'][0] * 1000, 1, 'KGM')
@@ -578,9 +578,9 @@ def _ld(x):
 
 
 def product_page(x, L):
-    pr = (f'<b>{fm(x["p"][0] * 250)} đ/túi 250 g</b><small>Tương đương {fm(x["p"][0] * 1000)} đ/kg, chưa gồm 8 % VAT và phí giao.</small>'
+    pr = (f'<b>{fm(x["p"][0] * 250)} đ/túi 250 g</b><small>Tương đương {fm(x["p"][0] * 1000)} đ/kg, chưa gồm 8% VAT và phí giao.</small>'
           if x['p'] and tui(x) else
-          f'<b>{fm(x["p"][0] * 1000)} đ/kg</b><small>Giá lẻ, chưa gồm 8 % VAT và phí giao.'
+          f'<b>{fm(x["p"][0] * 1000)} đ/kg</b><small>Giá lẻ, chưa gồm 8% VAT và phí giao.'
           + (f' Sỉ 5–20 kg/tháng: {fm(x["p"][1] * 1000)} đ/kg · trên 20 kg/tháng: {fm(x["p"][2] * 1000)} đ/kg.' if x['p'][1] else '') + '</small>'
           if x['p'] else '<b>Liên hệ</b><small>MeDili báo giá khi nhận đơn.</small>')
     badge = '<span class="sh-bd">Sắp mở bán</span>' if x['st'] == 'sap' else ''
@@ -612,11 +612,11 @@ def product_page(x, L):
 </section>
 <section class="p-sec">
  <p class="eye">Hồ sơ vị</p>
- <h2 class="p-h2">Uống thế nào, <em>hợp với ai.</em></h2>
+ <h2 class="p-h2">Uống thế nào, <em>phù hợp với ai.</em></h2>
  <div class="pd-two">
   <div class="box"><div class="pd-bars" aria-label="Hồ sơ vị, thang 100">{bars}</div>
-   <p class="note" style="margin-top:10px">{'Chỉ số định hướng, MeDili xác nhận theo từng lô.' if x['st'] == 'sap' else 'Thang 100, so giữa các dòng của MeDili.'}</p></div>
-  <div class="box"><p class="eye">Hợp với</p><p style="margin:4px 0 0">{esc(x['fit'])}.</p>{f'<ul class="pd-tips">{tips}</ul>' if tips else ''}{story}</div>
+   <p class="note" style="margin-top:10px">{'Chỉ số định hướng, MeDili xác nhận theo từng lô.' if x['st'] == 'sap' else 'Thang điểm 100, so sánh giữa các dòng của MeDili.'}</p></div>
+  <div class="box"><p class="eye">Phù hợp với</p><p style="margin:4px 0 0">{esc(x['fit'])}.</p>{f'<ul class="pd-tips">{tips}</ul>' if tips else ''}{story}</div>
  </div>
 </section>
 <section class="p-sec">
@@ -632,7 +632,7 @@ def product_page(x, L):
     js = (js_head(L) + SHOP_JS +
           "document.getElementById('pd-buy').innerHTML=buyHTML(byId[%s],'p');wireBuy(document.getElementById('pd-buy'));\n" % json.dumps(x['id']) +
           REL_JS)
-    desc = f'{x["n"]} MeDili: {x["head"] + ". " if x["head"] else ""}{x["taste"]}. Pha {", ".join(BREW[b].lower() for b in x["brews"])}. {price_txt(x)}.'
+    desc = f'{x["n"]}{"" if "MeDili" in x["n"] else " MeDili"}: {x["head"] + ". " if x["head"] else ""}{x["taste"]}. Pha {", ".join(BREW[b].lower() for b in x["brews"])}. {price_txt(x) if x["p"] else "Giá liên hệ"}.'
     return doc(x['file'], f'{x["n"]} · Cà phê MeDili', desc, body, css=CSS, js=js, wrap_cls='wrap pg')
 
 
@@ -645,27 +645,27 @@ document.querySelector('.pd-rel').addEventListener('click',e=>{const a=e.target.
 
 def cart_page(L):
     body = head('Giỏ hàng', 'Giỏ cà phê <em>của bạn.</em>',
-                'Kiểm tra gói, độ xay, số lượng rồi gửi đơn. MeDili liên hệ lại để xác nhận giá cuối, phí giao và thời gian giao. Chưa thanh toán online.')
+                'Kiểm tra gói, độ xay, số lượng rồi gửi đơn. MeDili liên hệ lại để xác nhận giá cuối, phí giao và thời gian giao. Website chưa hỗ trợ thanh toán trực tuyến.')
     body += f'''
 <div id="ct-none" class="box ct-empty" hidden><p class="eye">Giỏ đang trống</p><p style="margin:0">Chọn cà phê trong Cửa hàng rồi bấm Thêm vào giỏ.</p>
  <div class="cta" style="margin:0;justify-content:center"><a class="btn main" href="cua-hang.html">Vào Cửa hàng</a><a class="btn" href="tim-gu.html">Tìm gu cà phê</a></div></div>
 <div id="ct-has" class="ct-wrap">
  <section aria-label="Các món trong giỏ"><div class="ct-list" id="ct"></div>
-  <p class="note" style="margin-top:10px"><a class="lnk" href="cua-hang.html">← Chọn thêm cà phê</a> · <button type="button" class="ct-rm" id="ct-clr">Xoá cả giỏ</button></p></section>
+  <p class="note" style="margin-top:10px"><a class="lnk" href="cua-hang.html">← Chọn thêm cà phê</a> · <button type="button" class="ct-rm" id="ct-clr">Xóa cả giỏ</button></p></section>
  <aside class="ct-side" aria-label="Gửi đơn">
   <div class="box ct-tot"><p><span>Tổng khối lượng</span><b id="ct-kg">0 kg</b></p><p><span>Mức giá</span><b id="ct-tier">Giá lẻ</b></p>
    <p class="big"><span>Tạm tính</span><b id="ct-sum">0 đ</b></p><p class="note" id="ct-hint" style="display:block"></p>
-   <p class="note" style="display:block">Chưa gồm 8 % VAT và phí giao. Dòng ghi Hỏi giá được MeDili báo khi nhận đơn.</p></div>
+   <p class="note" style="display:block">Chưa gồm 8% VAT và phí giao. Dòng ghi “Hỏi giá” sẽ được MeDili báo giá khi nhận đơn.</p></div>
   <form class="box p-form" id="ct-f" autocomplete="on">
    <p class="eye">Người nhận</p>
    <label>Họ và tên<input name="ten" autocomplete="name" required></label>
    <label>Số điện thoại hoặc Zalo<input name="sdt" type="tel" inputmode="tel" autocomplete="tel" required></label>
    <label>Địa chỉ giao <small>số nhà, đường, phường, tỉnh</small><input name="dc" autocomplete="street-address"></label>
    <label>Mua cho<select name="ai"><option>Gia đình</option><option>Quán cà phê</option><option>Nhà hàng, khách sạn</option><option>Văn phòng</option><option>Quà tặng</option></select></label>
-   <label>Ghi chú <small>giờ nhận, xuất hoá đơn, đóng gói</small><textarea name="gc" rows="2"></textarea></label>
+   <label>Ghi chú <small>giờ nhận, xuất hóa đơn, đóng gói</small><textarea name="gc" rows="2"></textarea></label>
    <p class="ct-err" id="ct-err" role="alert" hidden></p>
    <div class="ct-send"><a class="btn main" id="ct-gf" href="{FORM}" target="_blank" rel="noopener">Gửi đơn qua Google Form</a>
-    <a class="btn" id="ct-zl" href="{ZALO}" target="_blank" rel="noopener">Chép đơn và mở Zalo MeDili</a>
+    <a class="btn" id="ct-zl" href="{ZALO}" target="_blank" rel="noopener">Sao chép đơn và mở Zalo MeDili</a>
     <a class="btn" id="ct-em" href="mailto:{EMAIL}">Gửi đơn qua email</a></div>
    <p class="note">Thông tin chỉ dùng để giao đơn này, xem <a class="lnk" href="bao-mat.html">Chính sách bảo mật</a>. Hỗ trợ: Zalo {PHONE}.</p>
   </form>

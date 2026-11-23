@@ -333,7 +333,7 @@ BODY = f'''{MNAV}
     <div class="row mtog" id="mtog" role="group" aria-label="Cách sơ chế"><button class="pill" type="button" data-m="washed" aria-pressed="true">Washed</button><button class="pill" type="button" data-m="honey" aria-pressed="false">Honey</button><button class="pill" type="button" data-m="natural" aria-pressed="false">Natural</button></div>
     <p class="msum">100 kg trái chín còn khoảng <b>18 kg nhân xanh</b> và <b>14,4 kg cà phê rang</b>, đủ khoảng 57 gói 250 g. Ba cách cho cùng lượng nhân, khác nhau ở lớp bị bỏ trước khi phơi.</p>
     <div id="mass">{rows_html('washed')}</div>
-    <p class="src">Ước tính theo mô hình ở trang <a href="len-men-men-bia.html">Lên men men bia</a> của MeDili. Số thật tuỳ độ chín, độ ẩm và từng lô. Bấm một dòng để xem lớp bị tách trên Hình 1.</p>
+    <p class="src">Ước tính theo mô hình ở trang <a href="len-men-men-bia.html">Lên men men bia</a> của MeDili. Số thật tùy độ chín, độ ẩm và từng lô. Bấm một dòng để xem lớp bị tách trên Hình 1.</p>
   </aside>
 </div>
 
