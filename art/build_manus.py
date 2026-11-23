@@ -3,7 +3,7 @@
 import os, re, json, shutil, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kit import *
-import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh, cuahang, congthuc, anhvuon, huongdan
+import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh, cuahang, congthuc, anhvuon, huongdan, donghanh
 
 os.makedirs(OUT, exist_ok=True)
 rd = lambda f: open(os.path.join(BASE, f), encoding='utf8').read()
@@ -106,6 +106,7 @@ for f, a_ in pages_b.ART.items():
 SHOP, CATALOG = cuahang.pages(P)
 NEW.update(SHOP)
 NEW[congthuc.FILE] = congthuc.page(CATALOG)   # Cỗ máy Công thức pha (17/11/2026)
+NEW[donghanh.FILE] = donghanh.page(P)   # Đồng hành cùng quán (23/11/2026)
 N_SHELF = sum(x['st'] != 'sap' for x in CATALOG)   # dòng đang bán (kể cả Ngũ Hành)
 
 # ---------- trang cũ: menu, chân trang, màu ----------

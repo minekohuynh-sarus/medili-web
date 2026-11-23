@@ -314,7 +314,7 @@ def horeca(P):
   <tr><td><b>Vừa</b><br><small>quán có chỗ ngồi</small></td><td>80–200</td><td>Phin Robusta Premium</td><td>Blend 8:2 hoặc 7:3</td></tr>
   <tr><td><b>Lớn</b><br><small>chuỗi cửa hàng, khách sạn, nhà hàng</small></td><td>Trên 200</td><td>Phin Arabica Premium</td><td>Blend 5:5, Arabica Premium hoặc Robusta Specialty</td></tr>
  </tbody></table></div>
- <div class="lnks"><a class="lnk" href="mua-hang.html">Tính lượng dùng và giá mỗi ly</a></div>
+ <div class="lnks"><a class="lnk" href="mua-hang.html">Tính lượng dùng và giá mỗi ly</a><a class="lnk" href="dong-hanh-cung-quan.html">Chọn theo ưu tiên của quán</a></div>
 </section>
 
 <section class="p-sec">

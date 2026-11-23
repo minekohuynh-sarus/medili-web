@@ -48,7 +48,7 @@ GROUPS = [
                                ('len-men-men-bia.html', 'Lên men bằng men bia'), ('len-men-trai-cay.html', 'Lên men cùng trái cây')]),
     ('Rang & pha', [('xuong-rang.html', 'Xưởng rang & năng lực'), ('rang.html', 'Phòng rang'), ('huong-dan-pha.html', 'Hướng dẫn pha'), ('quay-pha.html', 'Quầy pha'),
                     ('cong-thuc-pha.html', 'Cỗ máy Công thức pha'), ('cold-brew.html', 'Cỗ máy Cold Brew'), ('tim-gu.html', 'Tìm gu cà phê')]),
-    ('Mua & hợp tác', [('cua-hang.html', 'Cửa hàng cà phê'), ('mua-hang.html', 'Phòng chọn mua'), ('horeca.html', 'Giải pháp HORECA'),
+    ('Mua & hợp tác', [('cua-hang.html', 'Cửa hàng cà phê'), ('mua-hang.html', 'Phòng chọn mua'), ('horeca.html', 'Giải pháp HORECA'), ('dong-hanh-cung-quan.html', 'Đồng hành cùng quán'),
                        ('nhan-xanh.html', 'Chọn nhân xanh · khách sỉ'), ('gia-ca-phe.html', 'Giá cà phê hôm nay'), ('giao-hang.html', 'Giao hàng & đổi trả'),
                        ('gio-hang.html', 'Giỏ hàng'), ('tim-kiem.html', 'Tìm kiếm')]),
     ('Kiến thức cà phê', [('journal.html', 'Tất cả bài viết'), ('chiet-xuat.html', 'Cỗ máy Chiết xuất'), ('phan-biet-ca-phe.html', 'Cỗ máy Phân biệt cà phê'), ('trai-chin.html', 'Cỗ máy Trái chín'),
@@ -85,7 +85,7 @@ FOOT_EXPLORE = [('cau-chuyen.html', 'Câu chuyện MeDili'), ('doi-ngu.html', '�
                 ('xuong-rang.html', 'Xưởng rang & năng lực'), ('rang.html', 'Phòng rang'), ('huong-dan-pha.html', 'Hướng dẫn pha'), ('quay-pha.html', 'Quầy pha'),
                 ('tim-gu.html', 'Tìm gu cà phê'), ('cong-thuc-pha.html', 'Cỗ máy Công thức pha'), ('chiet-xuat.html', 'Cỗ máy Chiết xuất'),
                 ('cold-brew.html', 'Cỗ máy Cold Brew'), ('journal.html', 'Kiến thức cà phê')]
-FOOT_YOU = [('cua-hang.html', 'Cửa hàng MeDili'), ('mua-hang.html', 'Phòng chọn mua'), ('horeca.html', 'Giải pháp HORECA'), ('nhan-xanh.html', 'Nhân xanh cho khách sỉ'),
+FOOT_YOU = [('cua-hang.html', 'Cửa hàng MeDili'), ('mua-hang.html', 'Phòng chọn mua'), ('horeca.html', 'Giải pháp HORECA'), ('dong-hanh-cung-quan.html', 'Đồng hành cùng quán'), ('nhan-xanh.html', 'Nhân xanh cho khách sỉ'),
             ('gia-ca-phe.html', 'Giá cà phê hôm nay'),
             ('quan-medili.html', 'Quán MeDili Café'), ('lien-he.html', 'Liên hệ & bản đồ'), ('giao-hang.html', 'Giao hàng & đổi trả'),
             ('bao-mat.html', 'Chính sách bảo mật')]
