@@ -186,7 +186,7 @@ STRIP_LM = [('p-lm-nhan.jpg', 'Cà phê trái chín đổ chung với cùi nhãn
 STRIP_SOCHE = [('p-natural.jpg', 'Trái cà phê phơi nguyên trái trên giàn', 'Natural: phơi nguyên trái trên giàn.'),
                ('p-honey.jpg', 'Hạt cà phê còn lớp nhớt phơi trên giàn', 'Honey: hạt còn lớp nhớt, phơi trên giàn.'),
                ('p-xat-tuoi.jpg', 'Máy xát tươi tách vỏ cà phê', 'Xát tươi: máy tách vỏ khỏi hạt.')]
-STRIP_MUAVU = [('p-sq-nguoi-vuon.jpg', 'Người MeDili đội mũ MeDili, đứng giữa những cành cà phê chín', 'Mùa chín ở vườn MeDili.'),
+STRIP_MUAVU = [('p-sq-chum-chin.jpg', 'Chùm cà phê có trái chín đỏ, trái vàng và trái xanh trên cùng một cành', 'Trái chín dần trên cành.'),
                ('p-sq-may-cay.jpg', 'Bao cà phê chất cao trên máy cày, hai người mặc áo MeDili đứng cạnh', 'Bao cà phê lên máy cày rời vườn.'),
                ('p-sq-duong-lo.jpg', 'Những chiếc máy cày chở bao cà phê nối đuôi trên đường lô', 'Máy cày nối đuôi trên đường lô.')]
 STRIP_VUON = [('p-sq-canh.jpg', 'Robusta chín đỏ trên cành', 'Robusta chín đỏ trên cành.'),

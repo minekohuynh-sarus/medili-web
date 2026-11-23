@@ -25,7 +25,6 @@ GROUPS = [
 GAL = [
     ('vuon', 'vuon-chum-chin', A('a9bfa20b'), None, .5, .5, 'Chùm cà phê có trái xanh, trái vàng và trái đỏ trên cùng một cành', 'Một chùm, nhiều độ chín.'),
     ('vuon', 'vuon-trai-ung', A('e7526603'), None, .5, .5, 'Trái cà phê chuyển màu dưới tán lá', 'Trái chuyển màu dưới tán lá.'),
-    ('vuon', 'vuon-nguoi-vuon', D('src/IMG_0550.jpg'), 4 / 5, .5, .45, 'Người MeDili đội mũ MeDili, đứng cạnh cành cà phê chín', 'Mùa chín ở vườn MeDili.'),
     ('vuon', 'vuon-robusta-canh', A('10517b97'), None, .5, .5, 'Cành Robusta trĩu trái chín đỏ', 'Robusta chín đỏ trĩu cành.'),
     ('vuon', 'vuon-canh-do', A('aa8c978e'), None, .5, .5, 'Cành cà phê có những trái đã chín đỏ', 'Những trái chín đầu tiên.'),
     ('vuon', 'vuon-tan-la', A('508fdebf'), None, .5, .5, 'Trái cà phê non và trái chín xen giữa tán lá', 'Trái non, trái chín dưới tán lá.'),

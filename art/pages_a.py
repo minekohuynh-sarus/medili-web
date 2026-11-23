@@ -86,7 +86,7 @@ def cau_chuyen():
   <p>Nhiều người kể rằng cây cà phê lên cao nguyên Di Linh từ thời người Pháp. MeDili vẫn đang tìm thêm tư liệu về thời điểm, nguồn giống và con đường cây đến vùng này, nên trang này chưa ghi một mốc năm lịch sử nào.</p>
   <p>Điều MeDili ghi nhận được là vườn của mình: canh tác từ năm 2010, cây 15 năm tuổi, chăm theo hướng tự nhiên, kết hợp phân hữu cơ và giảm hoá chất.</p>
  </div>
- {photo('p-nguoi-vuon.jpg', 'Người MeDili đội mũ MeDili, đứng giữa những cành cà phê chín', 'Mùa chín ở vườn MeDili.', cls='pv')}
+ {photo('p-robusta-canh.jpg', 'Cành Robusta trĩu trái chín đỏ', 'Cà Sẻ chín đỏ trên cành.', cls='pv')}
 </section>
 
 <section class="p-sec">
@@ -137,7 +137,7 @@ def doi_ngu():
   <h2 class="p-h2">Những người <em>giữ lửa cho hương vị.</em></h2>
   <p class="lead">Rang và pha là hai nửa của cùng một ly. MeDili nối hai nửa đó bằng hồ sơ rang: đội rang biết hạt sẽ được pha thế nào, barista biết hạt đã được rang ra sao.</p>
  </div>
- {photo('p-doi-ngu-vuon.jpg', 'Người MeDili đội mũ MeDili, cầm cành cà phê chín trong vườn', 'Mùa chín ở vườn MeDili.', cls='pv')}
+ {photo('p-tay-hai-doc.jpg', 'Bàn tay hái từng trái cà phê chín trên cành', 'Hương vị bắt đầu từ bàn tay hái.', cls='pv')}
 </section>
 
 <section class="p-sec">

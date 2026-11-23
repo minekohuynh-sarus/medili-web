@@ -11,7 +11,10 @@ os.makedirs(OUT, exist_ok=True)
 # Đợt 1: ảnh chị Ngân gửi trong cuộc trò chuyện (tên file = mã ảnh đính kèm).
 SRC = '/mnt/user-data/attachments/619bd0cf-b746-5328-b8be-a7ac0d4efa6d'
 # Đợt 2: ảnh trong thư mục Google Drive "11/2026" chị Ngân gửi ngày 21/11/2026.
-# IMG_0603, IMG_0548, IMG_0549, IMG_0551 là ảnh máy ảnh (thư mục ẢNH); H0545, H0549 là ảnh điện thoại (HEIC đã đổi sang JPG).
+# IMG_0603 là ảnh máy ảnh (thư mục ẢNH); H0545, H0549 là ảnh điện thoại (HEIC đã đổi sang JPG).
+# 23/11/2026: chị Ngân yêu cầu bỏ ảnh người nữ đội mũ MeDili (IMG_0548–IMG_0551) khỏi web, không dùng lại các ảnh này.
+# Hosting chỉ thêm và cập nhật file, không xoá, nên các file ảnh cũ được ghi đè bằng ô màu kem (REMOVED) để thay luôn trên medili.vn.
+REMOVED = ['p-nguoi-vuon.jpg', 'p-sq-nguoi-vuon.jpg', 'p-doi-ngu-vuon.jpg', 'g-vuon-nguoi-vuon.jpg', 'g-vuon-nguoi-vuon-s.jpg']
 SRC2 = os.environ.get('MEDILI_ANH', '/tmp/claude-0/-home-claude/619bd0cf-b746-5328-b8be-a7ac0d4efa6d/scratchpad/anh')
 
 # tên ra: (file nguồn, tỷ lệ rộng/cao, tâm x, tâm y, rộng ra)
@@ -34,12 +37,11 @@ JOBS = {
     'p-may-rang-dung.jpg': ('e9fd1566', 4 / 5, .5, .5, 960),
     'p-hat-rang.jpg': ('2149f183', 3 / 2, .5, .36, 1200),
     'p-hai-chon.jpg': ('c7aa0b06', 3 / 2, .5, .45, 1200),
+    'p-sq-chum-chin.jpg': ('a9bfa20b', 1, .5, .45, 900),      # thay ảnh người trong dải Vào mùa (23/11/2026)
+    'p-tay-hai-doc.jpg': ('381f5a09', 4 / 5, .5, .5, 960),    # thay ảnh người ở trang Đội ngũ (23/11/2026)
 }
 JOBS2 = {
     'p-mua-chin.jpg': ('src/IMG_0603.jpg', 3 / 2, .5, .58, 1500),
-    'p-nguoi-vuon.jpg': ('src/IMG_0549.jpg', 4 / 5, .5, .5, 960),
-    'p-sq-nguoi-vuon.jpg': ('src/IMG_0548.jpg', 1, .49, .53, 900),
-    'p-doi-ngu-vuon.jpg': ('src/IMG_0551.jpg', 4 / 5, .5, .45, 960),
     'p-sq-may-cay.jpg': ('work/H0549.jpg', 1, .5, .62, 900),
     'p-sq-duong-lo.jpg': ('work/H0545.jpg', 1, .5, .55, 900),
 }
@@ -96,9 +98,15 @@ def make(name, path, ratio, fx, fy, ow):
     print(f'{name:24s} {c.size} {os.path.getsize(os.path.join(OUT, name)) // 1024} KB')
 
 
+def blank(name):
+    Image.new('RGB', (8, 8), (239, 228, 210)).save(os.path.join(OUT, name), 'JPEG', quality=80)
+
+
 if __name__ == '__main__':
     import sys
     only = set(sys.argv[1:])
+    for name in REMOVED:
+        blank(name)
     for name, (src, ratio, fx, fy, ow) in JOBS.items():
         if not only or name in only:
             make(name, os.path.join(SRC, src + '-image.jpg'), ratio, fx, fy, ow)
