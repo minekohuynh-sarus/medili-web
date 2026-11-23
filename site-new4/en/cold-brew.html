@@ -1,0 +1,1078 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="How Cold Brew MeDili is made, from ripe cherries on the Di Linh farm to cold brew bottles and boxes of cold-steep bags sold on e-commerce marketplaces: batch recipes, yields, shelf life, packaging, food safety and the paperwork required."><meta property="og:title" content="MeDili Cold Brew Machine"><meta property="og:description" content="How Cold Brew MeDili is made, from ripe cherries on the Di Linh farm to cold brew bottles and boxes of cold-steep bags sold on e-commerce marketplaces: batch recipes, yields, shelf life, packaging, food safety and the paperwork required."><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>MeDili Cold Brew Machine</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.inl{color:var(--moss);font-weight:600}
+.quiz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.q{border:0;padding:0;margin:0 0 14px;min-width:0}.q legend{padding:0;font-weight:600}
+.res{background:var(--tint);border-radius:14px;padding:16px}.res h3{font:800 2rem/1.1 var(--display);margin:2px 0 4px;color:var(--accent)}
+.res p{margin:6px 0}.rp{font-weight:600}.rp small{font-weight:400;color:var(--muted)}
+.tinyn{font-size:.78rem;color:var(--muted)}
+.gumap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gm{border-top:3px solid var(--copper);padding-top:8px}.gm h3{margin:0;font:800 1.3rem var(--display)}.gm small{color:var(--muted)}
+ol.steps{margin:0 0 8px;padding-left:20px}ol.steps li{margin-bottom:4px;font-size:.9rem}ol.steps li.on{font-weight:700;color:var(--accent)}
+.sop.tight li{grid-template-columns:36px minmax(0,1fr)}.sop.tight .n{font-size:1.5rem}
+.st.off{opacity:.45}
+@media (max-width:820px){.quiz{grid-template-columns:minmax(0,1fr)}}
+
+:root{--ground:#8FA65E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#5D7340}}
+:root[data-theme="dark"]{--ground:#5D7340}
+.mths button{min-width:52px}
+.sgn3{font:italic 600 13.5px var(--sign)!important;fill:var(--accent)!important}
+.sgn{font-size:18px}
+.calc.three{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-bottom:12px}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px}
+.calc input{font-size:.95rem}
+
+:root{--floor:#C69A62;--wall:#EFE3CD}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--floor:#6B4F31;--wall:#3A2D22}}
+:root[data-theme="dark"]{--floor:#6B4F31;--wall:#3A2D22}
+.shophead{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}.shophead>div:last-child{flex:1 1 320px;min-width:0}
+.logoP{background:#F6F0E4;border-radius:12px;padding:8px 12px;display:inline-block}.logoP img{display:block;height:auto;max-width:100%}
+.flow{list-style:none;display:flex;flex-wrap:wrap;gap:6px 24px;padding:0;margin:0;counter-reset:f;font-weight:600;font-size:.9rem;color:var(--muted)}
+.flow li{counter-increment:f}.flow li::before{content:counter(f) ". ";color:var(--accent)}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:0}
+.whob{text-align:left;padding:12px 16px;border:2px solid var(--rule);border-radius:12px;background:var(--panel);color:var(--ink);cursor:pointer;font:inherit}
+.whob b{display:block;font-size:1.02rem}.whob small{color:var(--muted)}.whob.on{border-color:var(--accent)}
+.ah{font:800 1.45rem var(--display);margin:0 0 8px}
+.ctl{min-width:0}.ctl .card{padding:14px}
+.recbox{background:var(--tint);border-radius:12px;padding:10px;margin-top:12px;display:grid;gap:6px}
+.recb{text-align:left;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:7px 10px;color:var(--ink);cursor:pointer;font:inherit}.recb b{display:block;font-size:.9rem}.recb small{color:var(--muted)}.recb.on{border-color:var(--accent)}
+.line{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule)}.line small{display:block;color:var(--muted)}
+.qty{display:flex;align-items:center;gap:6px;white-space:nowrap}.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+a.btn{text-decoration:none;display:inline-block}
+.bagn{font:italic 600 6.5px var(--sign)!important;fill:#4A2A1A!important}.bagn2{font:700 4.6px var(--body)!important;fill:#A23B24!important}
+.bag.off{opacity:.25}.bag.on polygon{stroke:var(--accent)!important;stroke-width:2.4}
+.bench{align-items:start}
+.sgn3{font:italic 600 13px var(--sign)!important;fill:var(--accent)!important}
+.tag.big rect{fill:var(--accent)}
+
+.sent{margin-top:10px;background:var(--tint);border-radius:12px;padding:12px}.sent>b{display:block;margin-bottom:4px}
+.ordertxt{white-space:pre-wrap;overflow-wrap:anywhere;font:500 .78rem/1.5 var(--mono);margin:6px 0 0;user-select:all}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}.qrs svg{display:block;width:100%;height:auto;border-radius:6px}.qrs small{display:block;text-align:center;margin-top:4px;color:var(--muted)}
+:root{--skin:#EBC9A6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--skin:#8C6A4D}}:root[data-theme="dark"]{--skin:#8C6A4D}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.ctl .card{padding:16px}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style>
+<style>
+/* Khung chung sau khi gộp Manus: menu nhóm, chân trang, màu phong thủy Thổ (nâu, vàng đất, đỏ; không xanh lá, không đen). */
+:root{--moss:#8D4E22;--good:#8D4E22;
+  --i-red:#B33A24;--i-red2:#7A2414;--i-gold:#D9B77E;--i-gold2:#B8894A;--i-coffee:#6B4226;--i-brown:#8D5A32;--i-milk:#E9D3AE;
+  --seg1:#9E3B26;--seg2:#B8894A;--seg3:#6B4226;--seg4:#D9B77E;--seg-t1:#FFF6EC;--seg-t2:#2E1C12;--cmp2:#C9A46A;
+  --cx1:#BB8526;--cx2:#7A348E;--cx3:#83470D;--cx4:#CB4D54}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--panel)}
+.mnav{display:none!important}
+
+/* menu */
+.mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
+.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p a:hover{color:var(--accent)}
+.mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-m{margin:0;font-size:inherit}
+.mh-m>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font:600 .86rem var(--body);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;white-space:nowrap;user-select:none}
+.mh-m>summary::-webkit-details-marker{display:none}
+.mh-m>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mh-m[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-m>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-pan{position:absolute;left:0;right:0;top:100%;background:var(--panel);border-bottom:1px solid var(--rule);box-shadow:0 18px 30px rgba(46,28,18,.16);max-height:calc(100vh - 60px - env(safe-area-inset-top,0px));overflow:auto;overscroll-behavior:contain}
+.mh-grid{max-width:1560px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 26px;padding-block:18px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-g{margin:0 0 6px;font:600 .72rem/1.3 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mh-c ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-c a{display:block;color:var(--ink);text-decoration:none;font:500 .95rem/1.35 var(--body);padding:6px 0;border-bottom:1px solid transparent}
+.mh-c a:hover{color:var(--accent)}
+.mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
+.mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
+.mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.mh-i{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none}
+.mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
+@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+@media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
+
+/* chân trang */
+.mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
+.mf-in{max-width:1560px;margin:auto;padding-block:30px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:26px}
+.mf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border-bottom:1px solid var(--rule);padding-bottom:24px}
+.mf-k{flex-basis:100%;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mf-h{margin:0;font:italic 600 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sign);color:var(--ink);text-wrap:balance}
+.mf-h em{color:var(--accent)}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:22px 30px}
+.mf-brand b{display:block;font:italic 600 1.35rem/1.25 var(--sign);color:var(--accent)}
+.mf-brand span{display:block;margin-top:6px}.mf-brand small{display:block;margin-top:6px;color:var(--muted);letter-spacing:.06em}
+.mf-t{margin:0 0 6px;font:600 .72rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mf-col{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mf-col a{color:var(--ink);text-decoration:none;padding:2px 0}.mf-col a:hover{color:var(--accent);text-decoration:underline}
+.mf-col p{margin:0 0 6px}.mf-n{white-space:nowrap;user-select:all}
+.mf-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:.84rem}
+.mf-base i{font:italic 600 1rem var(--sign);color:var(--accent)}
+@media (max-width:980px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-brand{grid-column:1/-1}}
+@media (max-width:520px){.mf-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ảnh thật */
+.pf{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.pf img{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;border:1px solid var(--rule);background:var(--tint)}
+.pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.pfw img{aspect-ratio:3/1;object-fit:cover}
+.split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
+@media (max-width:700px){.pfw img{aspect-ratio:2/1}}
+.pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
+.pgal{display:grid;gap:10px}
+.pgal>h2{margin:0}
+.pgal>p{margin:0;color:var(--muted);max-width:72ch}
+
+/* chọn ngôn ngữ */
+.mh-l{position:relative;margin:0}
+.mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
+.mh-l>summary::-webkit-details-marker{display:none}
+.mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
+.mh-lp a:hover{background:var(--tint);color:var(--accent)}
+.mh-lp a[aria-current]{color:var(--accent)}
+@media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
+/* nút Zalo, Facebook nổi góc trái bên dưới */
+.fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
+.fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
+.fl-b svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fl-b:hover{transform:translateY(-2px) scale(1.05)}
+.fl-b:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.fl-b::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;background:var(--ink);color:var(--panel);font:600 .8rem var(--body);letter-spacing:0;padding:6px 11px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{opacity:1;transform:translate(0,-50%)}}
+@media (max-width:600px){.fl-c{gap:8px}.fl-b{width:46px;height:46px;font-size:.6rem}.fl-b svg{width:17px;height:17px}}
+@media (max-width:1020px){body:has(.nx-bar) .fl-c{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+/* chừa chỗ cho nút nổi ở cuối chân trang */
+@media (min-width:601px){.mf-base{padding-left:76px}}
+@media (max-width:600px){footer.mf{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}}
+@media print{.fl-c{display:none}}
+
+/* thành phần dùng chung cho trang mới */
+.wrap.art{max-width:980px}
+.k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.eye{font:600 .8rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0}
+section>h2 em,.p-h2 em{font-style:normal;color:var(--accent)}
+.p-h2{font:800 2.05rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em;text-wrap:balance}
+.p-head{display:grid;gap:4px}
+.p-head h1{margin:6px 0 0}
+.p-head .lead{font-size:1.06rem;color:var(--muted);max-width:68ch;margin:10px 0 0}
+.p-sig{font:italic 600 1.25rem var(--sign);color:var(--accent);margin:10px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+a.btn{text-decoration:none;display:inline-block}
+.btn.ghost{border-color:var(--rule)}
+.p-sec{display:grid;gap:10px}
+.p-sec>.lead{margin:0;max-width:72ch;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.facts>div{border-top:2px solid var(--accent);padding-top:8px;min-width:0}
+.facts b{display:block;font:800 2.4rem/1.05 var(--display);color:var(--accent)}
+.facts span{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.g3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.g2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.g4{grid-template-columns:minmax(0,1fr)}}
+.box{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:18px 20px;min-width:0}
+.box h3{font:800 1.45rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em}
+.box p{margin:0 0 8px}.box p:last-child{margin-bottom:0}
+.box .k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.box .ft{margin-top:10px;padding-top:10px;border-top:1px solid var(--rule);font-size:.88rem;color:var(--muted)}
+.box .ft b{color:var(--ink)}
+.box>svg.pi{width:34px;height:34px;color:var(--accent)}
+svg.pi{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+svg.pi .fi{fill:var(--accent);stroke:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font:600 .76rem var(--body);border:1px solid var(--rule);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.lnk{color:var(--accent);font-weight:600;text-decoration:none}.lnk:hover{text-decoration:underline}
+.lnks{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px}
+.quote{margin:0;font:italic 600 clamp(1.4rem,3vw,2.1rem)/1.3 var(--sign);color:var(--accent);max-width:34ch;text-wrap:balance}
+.split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:20px 30px;align-items:center}
+.split img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--rule)}
+.illw{max-width:320px;width:100%;justify-self:center}
+@media (max-width:820px){.split{grid-template-columns:minmax(0,1fr)}.illw{max-width:210px}}
+.pst{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:st}
+.pst>li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:4px 16px;align-items:start;background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 16px;min-width:0}
+.pst>li .n{grid-row:1/3;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--tint);color:var(--accent)}
+.pst>li .n svg{width:24px;height:24px}
+.pst h3{margin:0;font:700 1.05rem/1.3 var(--body)}
+.pst h3 small{font:600 .74rem var(--body);letter-spacing:.06em;color:var(--muted);margin-right:6px}
+.pst p{margin:0;font-size:.93rem}
+.pst.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pst.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.pst.three{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.pst.two{grid-template-columns:minmax(0,1fr)}}
+.trip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.trip a{display:flex;flex-direction:column;height:100%;background:var(--panel);border:1px solid var(--rule);border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none}
+.trip img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;max-width:100%}
+.trip b{font:800 1.25rem/1.15 var(--display);padding:10px 14px 0}
+.trip b small{display:block;font:600 .72rem var(--body);letter-spacing:.08em;color:var(--accent);margin-bottom:2px}
+.trip span{padding:4px 14px 14px;color:var(--muted);font-size:.88rem}
+.trip a:hover b{color:var(--accent)}
+@media (max-width:1180px){.trip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,32%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.trip li{scroll-snap-align:start}}
+@media (max-width:640px){.trip{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:minmax(0,1fr);overflow:visible}}
+.seg{display:flex;gap:2px;height:28px;margin:6px 0 4px}
+.seg i{display:flex;align-items:center;padding:0 8px;border-radius:4px;font:700 .78rem var(--mono);font-style:normal;white-space:nowrap;overflow:hidden;min-width:0}
+.seg i.s1{background:var(--seg1);color:var(--seg-t1)}.seg i.s2{background:var(--seg2);color:var(--seg-t2)}
+.seg i.s3{background:var(--seg3);color:var(--seg-t1)}.seg i.s4{background:var(--seg4);color:var(--seg-t2)}
+.areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:8px}
+.areas>div{border-top:1px solid var(--rule);padding-top:10px;min-width:0}
+.areas .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.areas b{font:700 1rem var(--body)}.areas span{display:block;color:var(--muted);font-size:.86rem}
+.areas strong{display:block;font:800 1.9rem/1.1 var(--display);margin-top:4px}
+.areas strong small{font:600 .8rem var(--body);color:var(--muted);margin-left:6px}
+@media (max-width:900px){.areas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cmp{display:grid;gap:10px;margin-top:8px}
+.cmp>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center}
+.cmp span{font-size:.88rem}.cmp span b{display:block;font-size:.95rem}
+.cmp .tr{position:relative;height:24px;margin-right:64px}
+.cmp .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0;background:var(--accent)}
+.cmp .tr i.b{background:var(--cmp2)}
+.cmp .tr em{position:absolute;top:50%;transform:translateY(-50%);font:700 .9rem var(--mono);font-style:normal;color:var(--ink);white-space:nowrap}
+@media (max-width:520px){.cmp>div{grid-template-columns:minmax(0,1fr)}}
+.loc{display:grid;gap:4px}
+.loc .ttl{display:flex;gap:10px;align-items:center}
+.loc .ttl svg{color:var(--accent)}
+.sel{user-select:all}
+.cp{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.cp strong{font:700 1.25rem var(--mono);user-select:all;overflow-wrap:anywhere}
+.note{font-size:.86rem;color:var(--muted);margin:0}
+.p-form{display:grid;gap:12px}
+.p-form .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:620px){.p-form .row2{grid-template-columns:minmax(0,1fr)}}
+.p-form label{display:grid;gap:4px;font:600 .9rem var(--body)}
+.p-form label small{font-weight:400;color:var(--muted)}
+.p-form input,.p-form select,.p-form textarea{font:500 1rem var(--body);padding:9px 11px;border:1px solid var(--rule);border-radius:10px;background:var(--bg);color:var(--ink);width:100%;min-width:0}
+.p-form textarea{resize:vertical}
+.p-form fieldset{border:0;margin:0;padding:0;min-width:0}
+.p-form legend{font:600 .9rem var(--body);padding:0;margin-bottom:6px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{display:inline-flex;flex-direction:row;align-items:center;gap:6px;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font:600 .86rem var(--body);cursor:pointer;background:var(--panel)}
+.opts input{width:auto;margin:0;accent-color:var(--accent)}
+.opts label:has(input:checked){border-color:var(--accent);background:var(--tint)}
+.msg{white-space:pre-wrap;font:500 .84rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:0;overflow-wrap:anywhere;user-select:all}
+.fstat{font:500 .86rem var(--body);color:var(--muted);min-height:1.3em;margin:0}
+.p-art{max-width:70ch;font-size:1.04rem;line-height:1.78}
+.p-art h2{font:800 1.75rem/1.2 var(--display);margin:30px 0 8px;letter-spacing:.01em}
+.p-art p{margin:0 0 14px}
+.p-art ul,.p-art ol{margin:0 0 14px;padding-left:22px}.p-art li{margin-bottom:6px}
+.p-art .rbox{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 18px;margin:18px 0}
+.p-art .rbox h3{margin:0 0 6px;font:700 1rem var(--body)}
+.p-art .rbox ol{margin:0}
+.p-art .pf,.p-art .pfs{margin:20px 0}
+.p-art blockquote{margin:22px 0;padding:0 0 0 18px;border-left:3px solid var(--accent);font:italic 600 1.3rem/1.45 var(--sign);color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font:600 .8rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.meta b{color:var(--accent)}
+.art-fig{max-width:880px}
+.art-fig svg{display:block;width:100%;height:auto;max-height:340px;background:var(--tint);border-radius:16px}
+.jcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.jcards a{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--rule);border-radius:16px;overflow:hidden;color:var(--ink);text-decoration:none;min-width:0}
+.jcards .th{background:var(--tint);display:grid;place-items:center;aspect-ratio:3/2;max-width:100%}
+.jcards .th svg{display:block;width:100%;height:100%}
+.jcards .bd{padding:12px 16px 16px;display:grid;gap:4px}
+.jcards .meta{font-size:.72rem}
+.jcards h3{margin:2px 0 0;font:800 1.35rem/1.15 var(--display);text-wrap:balance}
+.jcards p{margin:0;color:var(--muted);font-size:.9rem}
+.jcards a:hover h3{color:var(--accent)}
+@media (max-width:1000px){.jcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.jcards{grid-template-columns:minmax(0,1fr)}}
+.jfeat{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);padding:0;overflow:hidden;text-decoration:none;color:var(--ink)}
+.jfeat .th{background:var(--tint);display:grid;place-items:center;padding:14px;min-width:0}
+.jfeat .th svg{display:block;width:100%;max-width:340px;height:auto}
+.jfeat .bd{padding:20px 24px;display:grid;gap:6px;align-content:center;min-width:0}
+.jfeat h3{font:800 2.1rem/1.1 var(--display);margin:0;letter-spacing:.01em}
+.jfeat p{margin:0}.jfeat .bd>p:not(.meta){color:var(--muted);max-width:60ch}
+.jfeat:hover h3{color:var(--accent)}
+@media (max-width:760px){.jfeat{grid-template-columns:minmax(0,1fr)}.jfeat .th svg{max-width:280px}}
+.mdl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin-top:4px}
+.mdl a{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center;border-top:1px solid var(--rule);padding-top:10px;color:var(--ink);text-decoration:none;min-width:0}
+.mdl a svg.pi{width:30px;height:30px;color:var(--accent)}
+.mdl b{display:block;font:700 1rem var(--body)}.mdl small{display:block;color:var(--muted);font-size:.86rem}
+.mdl a:hover b{color:var(--accent)}
+.kser{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink)}
+.kser svg.pi{width:34px;height:34px;color:var(--accent);margin-bottom:4px}
+.kser p{color:var(--muted);font-size:.92rem}
+.kser .lnk{margin-top:auto;padding-top:6px}
+.kser:hover h3{color:var(--accent)}
+.g5k{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:1280px){.g5k{grid-template-columns:repeat(2,minmax(0,1fr))}.g5k>:first-child{grid-column:1/-1}}
+@media (max-width:560px){.g5k{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:1100px){.mdl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mdl{grid-template-columns:minmax(0,1fr)}}
+.ill .o{stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.ill text{font:600 12px var(--body);fill:var(--muted)}
+@media (max-width:620px){.p-h2{font-size:1.75rem}.facts b{font-size:2rem}}
+
+/* Cỗ máy Cold Brew MeDili */
+.mnote{font-size:.84rem;color:var(--muted);margin:8px 0 0;line-height:1.45}
+#scene .gl{fill:var(--panel);fill-opacity:.18}
+#scene .glt{fill:var(--panel);fill-opacity:.12}
+#scene .liqt{fill:#4A2A18}
+#scene .grd{fill:#5A3520}#scene .grdT{fill:#6B4226}
+#scene .beanT{fill:#5E3920}
+#scene .cherT{fill:#7A2A1C}
+#scene .hill{fill:#B8894A}#scene .hillT{fill:#D9B77E}
+#scene .bed{fill:#D9C39A}#scene .bed2{fill:#B9A274}
+#scene .amb{fill:#6E3F1C}#scene .ambT{fill:#8A5226}
+#scene .capc{fill:#C9A15B}
+#scene .labc{fill:#F4E8D2}
+#scene .kr{fill:#DDBB7A}#scene .kr2{fill:#C9A15B}#scene .kr3{fill:#A9823F}
+#scene .foil{fill:#DCD3C4}#scene .foil2{fill:#C4B9A6}#scene .foil3{fill:#AFA38E}
+#scene .bagw{fill:#F6F0E4}#scene .bagw2{fill:#E3D9C6}
+#scene .pcl{fill:#F4ECDD}#scene .pcl2{fill:#E3D6BE}#scene .pcl3{fill:#CDBD9F}
+#scene .door{fill:var(--panel);fill-opacity:.35;stroke:var(--ol);stroke-width:1.2}
+#scene .lcdb{fill:#2E1C12;stroke:none}
+#scene .lcd{font:700 7.6px var(--mono);fill:#F3D9A4}
+#scene .wtx{font:700 8px var(--body);fill:#3A2416}
+#scene .ptx{font:800 9px var(--display);fill:#4A2C1A;letter-spacing:.04em}
+#scene .frost{stroke:#FFF6EC;stroke-width:1.6;stroke-linecap:round;fill:none;opacity:.9}
+#scene .flowT{font-size:12.5px}
+#tok{display:none;fill:var(--accent);stroke:var(--panel);stroke-width:2}
+.running #tok{display:block}
+.lg{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.82rem;margin:2px 0 0;color:var(--muted)}
+.lg span{display:inline-flex;align-items:center;gap:6px}
+.sw2{display:inline-block;width:16px;height:0;border-top:2.5px solid;flex:none}.sw2.d{border-top-style:dashed}
+#tip{color:var(--muted)}
+.sop li>p{font-size:.88rem}.sop li>p .lbl{margin-bottom:1px}
+.pk{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.05fr) minmax(0,1.1fr);gap:16px;align-items:stretch;margin-top:4px}
+.pk figure{margin:0;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:space-between;background:var(--tint);border-radius:16px;padding:18px 14px 14px;min-width:0}
+.pkw{width:100%;flex:1;display:grid;place-items:center}
+.pkw svg{display:block;width:100%;height:auto}
+#pkBottle svg{max-width:210px}#pkBox svg{max-width:300px}
+.pk figcaption{font-size:.84rem;color:var(--muted);text-align:center;max-width:44ch}
+.pk .pkl{align-items:stretch}
+.backlbl{background:#F4E8D2;color:#3A2416;border:1px solid #C9B58F;border-radius:10px;padding:14px 16px;font:500 .79rem/1.5 var(--body);box-shadow:0 1px 0 #E3D3B3 inset}
+.backlbl h4{margin:0 0 6px;font:800 1.05rem/1.15 var(--display);letter-spacing:.03em;color:#4A2C1A}
+.backlbl p{margin:0 0 4px}.backlbl b{color:#4A2C1A}
+.backlbl .dt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:8px 0;padding:8px 0;border-block:1px dashed #C9B58F;font:700 .76rem var(--mono)}
+.backlbl .dt span{display:block;font:600 .64rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:#7A5A3A}
+.backlbl .red{color:#9E3B26;font-weight:700}
+.pk .btn{align-self:flex-start}
+.cpst{font-size:.84rem;color:var(--muted)}
+.pkspec{margin-top:14px}
+.pkspec .box{background:var(--bg)}
+@media (max-width:1080px){.pk{grid-template-columns:repeat(2,minmax(0,1fr))}.pk .pkl{grid-column:1/-1}}
+@media (max-width:620px){.pk{grid-template-columns:minmax(0,1fr)}}
+.pkT{font:800 23px var(--display);letter-spacing:.05em}
+.pkS{font:700 11px var(--body)}.pkS2{font:500 9.5px var(--body)}.pkB{font:700 9.6px var(--body);letter-spacing:.1em}
+.pkTag{font:700 7.6px var(--body);letter-spacing:.06em}
+#lst{min-height:160px}
+.eqc{margin-top:18px;padding-top:16px;border-top:1px solid var(--rule)}
+.eqh{font:700 1.05rem var(--body);margin:0 0 8px}
+#eqT td{min-width:0}#eqT td:first-child{width:40%}
+#sheet{min-height:220px}
+.rd{display:flex;flex-direction:column;gap:4px}
+.rd>svg.pi{width:30px;height:30px;color:var(--accent);margin-bottom:2px}
+.rd h3{font:800 1.4rem/1.15 var(--display);margin:2px 0 4px}
+.rd .ft{margin-top:auto}
+.src>h2{color:var(--ink)}.src>.lead{color:var(--muted);font-size:.95rem}
+.src ul{line-height:1.5}.src li{margin-bottom:4px}
+.src .lnks{margin-top:12px}
+@media (prefers-reduced-motion:reduce){.running #tok{display:none}}
+</style><link rel="alternate" hreflang="vi" href="https://www.medili.vn/cold-brew.html"><link rel="alternate" hreflang="en" href="https://www.medili.vn/en/cold-brew.html"><link rel="alternate" hreflang="ja" href="https://www.medili.vn/ja/cold-brew.html"><link rel="alternate" hreflang="zh-Hans" href="https://www.medili.vn/zh/cold-brew.html"><link rel="alternate" hreflang="x-default" href="https://www.medili.vn/cold-brew.html"></head><body><div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a><nav class="mh-p" aria-label="Main sections"><a href="cau-chuyen.html">Story</a><a href="vung-trong.html">Growing Area</a><a href="anh-vuon.html">Farm Photos</a><a href="xuong-rang.html">Roastery</a><a href="horeca.html">HORECA</a><a href="quan-medili.html">MeDili Café</a><a href="journal.html">Knowledge</a><a href="gia-ca-phe.html">Coffee Prices</a></nav><details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></summary><nav class="mh-pan" aria-label="All pages"><div class="mh-grid"><div class="mh-c"><p class="mh-g">MeDili</p><ul><li><a href="./">Home</a></li><li><a href="cau-chuyen.html">The MeDili Story</a></li><li><a href="doi-ngu.html">Team</a></li><li><a href="quan-medili.html">MeDili Café</a></li><li><a href="lien-he.html">Contact</a></li></ul></div><div class="mh-c"><p class="mh-g">Growing & Production</p><ul><li><a href="vung-trong.html">Di Linh Growing Area</a></li><li><a href="anh-vuon.html">Farm Photos</a></li><li><a href="vuon.html">The Farm in 12 Months</a></li><li><a href="trai-ca-phe.html">Cherry Anatomy</a></li><li><a href="len-men-men-bia.html">Fermentation with Brewer's Yeast</a></li><li><a href="len-men-trai-cay.html">Co-fermentation with Fruit</a></li></ul></div><div class="mh-c"><p class="mh-g">Roasting & Brewing</p><ul><li><a href="xuong-rang.html">Roastery & Capacity</a></li><li><a href="rang.html">Roasting Room</a></li><li><a href="huong-dan-pha.html">Brewing Guide</a></li><li><a href="quay-pha.html">Brew Bar</a></li><li><a href="cong-thuc-pha.html">Brew Recipe Machine</a></li><li><a href="cold-brew.html" aria-current="page">Cold Brew Machine</a></li><li><a href="tim-gu.html">Find Your Coffee Taste</a></li></ul></div><div class="mh-c"><p class="mh-g">Buy & Partner</p><ul><li><a href="cua-hang.html">Coffee Store</a></li><li><a href="mua-hang.html">Buying Room</a></li><li><a href="horeca.html">HORECA Solutions</a></li><li><a href="dong-hanh-cung-quan.html">Partnering with Cafés</a></li><li><a href="nhan-xanh.html">Choose Green Coffee · Wholesale</a></li><li><a href="gia-ca-phe.html">Coffee Prices Today</a></li><li><a href="chinh-sach.html">MeDili Policies</a></li><li><a href="giao-hang.html">Delivery & Returns</a></li><li><a href="gio-hang.html">Cart</a></li><li><a href="tim-kiem.html">Search</a></li></ul></div><div class="mh-c"><p class="mh-g">Coffee Knowledge</p><ul><li><a href="journal.html">All articles</a></li><li><a href="chiet-xuat.html">Extraction Machine</a></li><li><a href="phan-biet-ca-phe.html">Coffee Identification Machine</a></li><li><a href="trai-chin.html">Ripe Cherry Machine</a></li><li><a href="vi-sinh.html">Microbe Machine</a></li><li><a href="tien-chat-huong.html">Aroma Precursor Machine</a></li><li><a href="banh-xe-huong.html">MeDili Flavor Wheel</a></li><li><a href="journal-phin.html">The Phin and the Falling Rhythm of Time</a></li><li><a href="journal-tu-qua.html">From Coffee Cherry to Flavor</a></li><li><a href="journal-di-linh.html">Di Linh in a Cup of Coffee</a></li><li><a href="tu-vuon-den-ly.html">From Farm to Cup</a></li><li><a href="suc-khoe.html">Coffee and the Body</a></li></ul></div></div></nav></details><details class="mh-l"><summary aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.3 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.3-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>EN</span></summary><div class="mh-lp"><a href="../cold-brew.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="cold-brew.html" hreflang="en" lang="en" aria-current="true">English</a><a href="../ja/cold-brew.html" hreflang="ja" lang="ja">日本語</a><a href="../zh/cold-brew.html" hreflang="zh-Hans" lang="zh-Hans">中文</a></div></details><a class="mh-i" href="tim-kiem.html" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a><a class="mh-i" href="gio-hang.html" aria-label="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="mh-cn" hidden></span></a><a class="mh-go" href="cua-hang.html">Shop</a></div></div>
+<div class="wrap">
+
+<header>
+  <span class="lgw"><img class="lgL" src="../assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div class="brandbar"><span>Devoted to the taste of Di Linh</span><span>Product model</span><span>Zalo <a href="#lien-he">0966 770 788</a></span></div>
+  <h1>The <em>MeDili Cold Brew</em> Machine</h1>
+  <p>From ripe cherries on the MeDili farm in Di Linh to cold brew bottles and boxes of cold-steep bags sold on e-commerce marketplaces. Choose a product format, adjust the batch, and see the recipe, yield, shelf life, packaging and paperwork required.</p>
+</header>
+
+<div class="bench">
+  <div class="card">
+    <div class="fighead">
+      <div><b>Figure 1</b> <span id="figsub"></span></div>
+      <button class="btn small" id="run2" type="button">Run the line</button>
+    </div>
+    <div class="scroller"><svg id="scene" viewBox="0 0 1040 720" aria-label="A ten-station line from the Di Linh coffee farm to the Cold Brew MeDili parcel. Tap each station for details."></svg></div>
+    <div class="strip" id="strip" role="group" aria-label="Choose a station"></div>
+    <div id="detail" aria-live="polite"></div>
+  </div>
+
+  <aside class="card ctl">
+    <div class="head2"><h3>Product format</h3><small>3 formats</small></div>
+    <div class="row" id="fmts"></div>
+    <p class="mnote" id="fNote"></p>
+    <div class="head2" style="margin-top:12px"><h3>Coffee from the MeDili farm</h3></div>
+    <div class="row" id="beans"></div>
+    <p class="mnote" id="bNote"></p>
+    <hr>
+    <div class="sl" style="margin-top:0"><label for="iR">Roasted coffee per batch <output id="oR"></output></label><input id="iR" type="range" min="2" max="60" step="1"></div>
+    <div id="grpC">
+      <div class="sl"><label for="iRa">Coffee : water ratio <output id="oRa"></output></label><input id="iRa" type="range" min="4" max="10" step="0.5"><p>1:5 for a concentrate. Commercial brewers typically use about 1:5.8.</p></div>
+      <div class="sl"><label for="iT">Steeping temperature <output id="oT"></output></label><input id="iT" type="range" min="2" max="28" step="1"><p id="tNote"></p></div>
+      <div class="sl"><label for="iH">Steeping time <output id="oH"></output></label><input id="iH" type="range" min="8" max="24" step="1"></div>
+      <div class="sl" id="grpR"><label for="iS">Ready-to-drink strength <output id="oS"></output></label><input id="iS" type="range" min="1.2" max="2.4" step="0.1"><p>TDS is measured with a refractometer. An SCA-standard filter cup is about 1.15–1.35%; ready-to-drink cold brew is usually stronger.</p></div>
+      <div class="head2" style="margin-top:12px"><h3>Bottle size</h3></div><div class="row" id="vols"></div>
+    </div>
+    <div id="grpB">
+      <div class="sl"><label for="iB">Coffee per filter bag <output id="oB"></output></label><input id="iB" type="range" min="20" max="60" step="5"><p id="bgNote"></p></div>
+      <div class="head2" style="margin-top:12px"><h3>Bags per box</h3></div><div class="row" id="pers"></div>
+    </div>
+    <div class="row" style="margin-top:14px"><button class="btn main" id="run" type="button">Run the line</button><button class="btn" id="reset" type="button">About the standard recipes</button></div>
+    <div class="stats" id="stats"></div>
+    <div id="verdict"></div>
+    <hr>
+    <span class="lbl" id="cLbl"></span>
+    <div class="charts"><svg class="ch" id="cT" viewBox="0 0 340 162" role="img" aria-label="Cold brew concentrate strength by hours of steeping"></svg></div>
+    <div class="lg" id="lgT"></div>
+    <div id="tip"></div>
+  </aside>
+</div>
+
+<section class="card" id="cong-thuc">
+  <h2 id="sopH"></h2>
+  <p class="lead">Follow the steps in order. Figures are calculated for the batch selected in Figure 1. TDS is the model's estimate; measure each batch for real with a refractometer.</p>
+  <ol class="sop" id="sop"></ol>
+  <div class="cols eqc">
+    <div><h3 class="eqh">Equipment and supplies for this batch</h3><div class="tw"><table class="rich"><thead><tr><th>Equipment</th><th>For this batch</th><th>Notes</th></tr></thead><tbody id="eqT"></tbody></table></div></div>
+    <div><h3 class="eqh">Batch record</h3><p class="mnote" style="margin:0 0 8px">Copy or print the record and fill it in by hand for each batch. Keep the record at least until the batch's expiry date.</p><pre class="msg" id="sheet"></pre><button class="btn small" id="cpSh" type="button">Copy batch record</button> <span class="cpst" id="cpShS" role="status"></span></div>
+  </div>
+</section>
+
+<section class="card" id="bao-bi">
+  <h2>Figure 3: Cold Brew MeDili packaging</h2>
+  <p class="lead">MeDili brand colors: cream, coffee brown, earth red and earth yellow. The bottle and box text changes with the selected product format and batch. The back label fills in the production date, expiry date and batch code automatically.</p>
+  <div class="pk">
+    <figure><div class="pkw" id="pkBottle"></div><figcaption id="pkBc"></figcaption></figure>
+    <figure><div class="pkw" id="pkBox"></div><figcaption id="pkXc"></figcaption></figure>
+    <figure class="pkl"><div class="backlbl" id="backlbl"></div><figcaption>Sample back label under Decree 111/2021. Fill in the self-declaration number once you have it, and check the address against the business registration certificate before printing.</figcaption><button class="btn small" id="cpLbl" type="button">Copy label text</button> <span class="cpst" id="cpLblS" role="status"></span></figure>
+  </div>
+  <div class="g3 pkspec">
+    <div class="box"><span class="k">Bottle</span><h3>Brown glass</h3><p>250–500 ml bottles with tin caps and tamper-evident rings. Brown glass blocks some light, preserving color and aroma. A moisture-resistant paper sticker label wraps the body and won't peel off when condensation forms.</p></div>
+    <div class="box"><span class="k">Steeping bags</span><h3>Filter bags and foil pouches</h3><p>Food-grade non-woven filter bags with a string and MeDili tag. 5 bags go into a multi-layer foil pouch with a one-way valve, nitrogen-flushed, then sealed.</p></div>
+    <div class="box"><span class="k">Box</span><h3>Two-color printed kraft</h3><p>A kraft paper box printed in coffee brown and earth red, with steeping instructions on the back. Chilled bottles ship in foam boxes with gel ice, sealed with red tape printed “Keep cold 0–4 °C”.</p></div>
+  </div>
+</section>
+
+<section class="card" id="ban-san">
+  <h2>Selling online: which format for which channel</h2>
+  <p class="lead">Chilled bottles have a 7-day shelf life and must be kept cold, so they only suit fast inner-city delivery channels. Steeping bags are dry goods and can go through any marketplace to any province.</p>
+  <div class="cols">
+    <div class="tw"><table class="rich"><thead><tr><th>Format</th><th>Where to sell</th><th>Delivery</th><th>Shelf life</th></tr></thead><tbody>
+      <tr><td><b>Cold-steep bags</b></td><td>MeDili stores on Shopee, TikTok Shop and Lazada, nationwide</td><td>Standard delivery, ambient temperature</td><td>6 months, proposed</td></tr>
+      <tr><td><b>Concentrate bottle</b></td><td>Inner Ho Chi Minh City: GrabMart, ShopeeFood, MeDili Café, or same-day delivery on marketplaces where the area is supported</td><td>Foam box with gel ice, same day</td><td>7 days, 0–4 °C</td></tr>
+      <tr><td><b>Ready-to-drink bottle</b></td><td>As for concentrate bottles, plus offices and cafés with standing orders</td><td>Foam box with gel ice, same day</td><td>7 days, 0–4 °C</td></tr>
+    </tbody></table></div>
+    <div><span class="lbl">Suggested title and description for the selected format</span><pre class="msg" id="lst"></pre><button class="btn small" id="cpLst" type="button">Copy description</button> <span class="cpst" id="cpLstS" role="status"></span></div>
+  </div>
+</section>
+
+<section class="p-sec">
+  <p class="eye">Food safety</p>
+  <h2 class="p-h2" style="margin:0">Six things <em>you must not skip.</em></h2>
+  <p class="lead" style="margin:0 0 4px">Cold brew tastes good because of its long cold steep, and that is exactly why it needs stricter hygiene and cold-keeping than hot-brewed coffee.</p>
+  <div class="g3"><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l7.5 3V12c0 4.6-3.1 7.7-7.5 9.2C7.6 19.7 4.5 16.6 4.5 12V5.8z"/><path d="M8.8 12.2l2.3 2.3 4.3-4.6"/></svg><h3>Cold brew is a low-acid food</h3><p>Hot-brewed coffee and cold brew have a pH of about 4.85–5.13, above the 4.6 threshold used to define acid foods. In a sealed, low-oxygen bottle kept warm, Clostridium botulinum bacteria can produce toxin. That is why cold brew bottles must be kept cold from steeping until the customer drinks them.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 3h7M9.5 3v3L7 8.8V19a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V8.8L14.5 6V3"/><path d="M7 12h10"/><rect class="fi" x="9.4" y="14.3" width="2.8" height="2.8" rx=".6"/><rect class="fi" x="12.6" y="16.4" width="2.4" height="2.4" rx=".6"/></svg><h3>Steep cold, keep below 5 °C</h3><p>Food safety guidance for cold brew without heat treatment: steep, store and serve at 5 °C or below. Guidance for commercial brewers: steep 16–20 hours in a refrigerator below 4.4 °C.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><circle class="fi" cx="12" cy="14.8" r="1.8"/></svg><h3>Short shelf life without treatment</h3><p>The same guidance limits the date mark to at most 7 days from production for facilities without a HACCP plan. MeDili uses 7 days for chilled bottles. A longer shelf life requires microbiological testing over time, or high-pressure processing (HPP): one study found HPP at 600 MPa for 3 minutes cut pathogenic bacteria by more than 6 log and kept the product safe for 90 days, but it was not tested against C. botulinum spores.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 4h9l-1.2 3c3 2.2 4 6 3.2 10.2A3 3 0 0 1 15.6 20H8.4a3 3 0 0 1-2.9-2.8C4.7 13 5.7 9.2 8.7 7z"/><path d="M8.6 7h6.8"/><ellipse class="fi" cx="12" cy="13.6" rx="2" ry="3"/></svg><h3>No nitrogen flushing, no canning on a whim</h3><p>In the US there have been recalls of canned cold brew, including nitro versions, because the process could allow C. botulinum to produce toxin, or because the canned low-acid food process had not been approved. No illnesses were reported, but it shows that sealed, low-oxygen packaging is a risk point.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s5 6 5 10a5 5 0 0 1-10 0c0-4 5-10 5-10z"/><path d="M10 14a2 2 0 0 0 2 2"/></svg><h3>Clean water, tanks and filter bags</h3><p>Use drinking water that meets standards: tested RO water or bottled drinking water. The 304 stainless steel tank, food-grade cloth filter bags, bottles and caps are washed, sanitized and dried before every batch. Each batch has a record of times, temperatures and TDS, and 2 sample bottles are kept until expiry.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7h12v9H2zM14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><h3>Same-day chilled delivery</h3><p>Chilled bottles are only delivered within the city on the same day, in foam boxes with gel ice, reminding customers to refrigerate them as soon as they arrive. Never send chilled bottles to other provinces by standard delivery. To sell nationwide on marketplaces, use cold-steep bags: dry goods that customers steep at home.</p></div></div>
+</section>
+
+<section class="card">
+  <h2>Paperwork to sell legally</h2>
+  <p class="lead">Six steps before listing Cold Brew MeDili on a marketplace. Reference information based on regulations in force in November 2026; check the original texts or ask the authorities before submitting documents.</p>
+  <ol class="pst two"><li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2.8h6V4M8.5 9.5h7M8.5 13h7M8.5 16.5h4"/></svg></span><h3><small>01</small>Business registration that covers food</h3><p>DSunfood Co., Ltd. is named as the organization responsible for the product. Check that food production and trading are listed on the registration certificate.</p></li><li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l7.5 3V12c0 4.6-3.1 7.7-7.5 9.2C7.6 19.7 4.5 16.6 4.5 12V5.8z"/><path d="M8.8 12.2l2.3 2.3 4.3-4.6"/></svg></span><h3><small>02</small>Food safety eligibility certificate for the facility</h3><p>Mandatory for the production site (Article 11, Decree 15/2018), except for the cases in Article 12, such as facilities with valid HACCP, ISO 22000 or FSSC 22000. If you outsource production, choose a facility that already has this certificate. Businesses that only trade prepackaged food are not required to obtain it.</p></li><li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.2"/><path d="M15 15l5.5 5.5"/><ellipse class="fi" cx="10.5" cy="10.5" rx="2" ry="3"/></svg></span><h3><small>03</small>Product testing</h3><p>Send samples to a designated or ISO 17025-accredited testing lab. The results report must be dated within 12 months of the submission date. The lab advises on the set of criteria: cold brew bottles are usually checked against QCVN 6-2:2010/BYT for non-alcoholic beverages; steeping bags are roasted ground coffee, with TCVN 5251:2015 as a reference.</p></li><li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2.8h6V4M8.5 9.5h7M8.5 13h7M8.5 16.5h4"/></svg></span><h3><small>04</small>Product self-declaration</h3><p>Under Articles 4–5 of Decree 15/2018: a self-declaration on Form 01 with the test report; publish it on your own website or post it at your premises, and submit 1 copy to the agency designated by the provincial People's Committee. You may sell immediately after self-declaring. Decree 15/2018 applies because Decree 46/2026 has been suspended since April 6, 2026 under Resolution 15/2026. Check again when the amended Food Safety Law takes effect.</p></li><li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7.5h12L19.2 21H4.8z"/><path d="M8.5 7.5V4.5h7v3"/><circle class="fi" cx="12" cy="13" r="1.7"/></svg></span><h3><small>05</small>A label with all mandatory content</h3><p>Under Decree 43/2017, amended by Decree 111/2021: product name, responsible organization, origin, quantity, production date, expiry date, ingredients, directions for use, storage and warnings. The back label in the Packaging section fills itself in for the batch.</p></li><li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.5H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg></span><h3><small>06</small>List on the marketplace</h3><p>Upload the self-declaration and documents to your store when the marketplace requires them for food and beverages. State the storage method and delivery area correctly. Each marketplace's rules change over time; check the seller center before listing.</p></li></ol>
+</section>
+
+<section class="card src"><p style="margin:0;font-size:.88rem;color:var(--muted);max-width:110ch"><b style="color:var(--ink)">Compiled from multiple sources.</b> Cold extraction uses the same model as the Extraction Machine: an extraction ceiling of 21% in cold water, and the grounds retain about 2 liters of water per kg of coffee. City+ roast loss of 17.5% follows the Roasting Room. 100 kg of ripe cherries yield about 18 kg of green coffee, per the Cherry Anatomy page. Steeping bags use a 1:8 ratio and 18–24 hours, like the cold brew recipe at the Brew Bar. All figures are planning estimates and do not replace laboratory testing.</p><div class="lnks"><a class="lnk" href="chiet-xuat.html">Extraction Machine</a><a class="lnk" href="rang.html">Roasting Room</a><a class="lnk" href="quay-pha.html">Brew Bar: cold brew at the café</a><a class="lnk" href="trai-ca-phe.html">Cherry Anatomy</a><a class="lnk" href="vung-trong.html">Di Linh Growing Area</a><a class="lnk" href="mua-hang.html">Buying Room</a></div></section>
+
+<section class="contact" id="lien-he"><div><img class="lgK" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83"><div class="tagline">Devoted to the taste of Di Linh</div><p>Distributor: DSunfood Co., Ltd., 143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM.<br>Farm and roastery: Thôn 11, Xã Di Linh, Lâm Đồng.</p></div><div class="zalo"><span>MeDili Zalo</span><strong data-sel>0966 770 788</strong><div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Message on Zalo</a><button type="button" data-copy="0966770788" data-done="Number copied">Copy number</button></div><small>Email: cafe@medili.vn</small></div></section>
+</div>
+<footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">There is always time for <em>a good cup of coffee.</em></p><a class="btn main" href="quan-medili.html">Meet at MeDili</a></div><div class="mf-grid"><div class="mf-brand"><b>In love with coffee, in love with Di Linh.</b><span>Preserving a heritage. Treasuring every flavor.</span><small>Di Linh · Lâm Đồng · Vietnam</small></div><nav class="mf-col" aria-label="Explore"><p class="mf-t">Explore</p><a href="cau-chuyen.html">The MeDili Story</a><a href="doi-ngu.html">The MeDili Team</a><a href="vung-trong.html">Di Linh Growing Area</a><a href="anh-vuon.html">MeDili Farm Photos</a><a href="xuong-rang.html">Roastery & Capacity</a><a href="rang.html">Roasting Room</a><a href="huong-dan-pha.html">Brewing Guide</a><a href="quay-pha.html">Brew Bar</a><a href="tim-gu.html">Find Your Coffee Taste</a><a href="cong-thuc-pha.html">Brew Recipe Machine</a><a href="chiet-xuat.html">Extraction Machine</a><a href="cold-brew.html">Cold Brew Machine</a><a href="journal.html">Coffee Knowledge</a></nav><nav class="mf-col" aria-label="MeDili and you"><p class="mf-t">MeDili &amp; You</p><a href="cua-hang.html">MeDili Store</a><a href="mua-hang.html">Buying Room</a><a href="horeca.html">HORECA Solutions</a><a href="dong-hanh-cung-quan.html">Partnering with Cafés</a><a href="nhan-xanh.html">Green Coffee for Wholesale</a><a href="gia-ca-phe.html">Coffee Prices Today</a><a href="quan-medili.html">MeDili Café</a><a href="lien-he.html">Contact & Map</a><a href="chinh-sach.html">MeDili Policies</a><a href="giao-hang.html">Delivery & Returns</a><a href="bao-mat.html">Privacy Policy</a></nav><div class="mf-col"><p class="mf-t">Distribution · DSunfood</p><p>DSunfood Co., Ltd.<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>Farm &amp; roastery<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">Directions to MeDili ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Message MeDili on Zalo ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>MeDili Coffee Farm · Cà Sẻ Di Linh</i></div></div></footer><nav class="fl-c" aria-label="Quick contact with MeDili"><a class="fl-b" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener" aria-label="Message MeDili on Zalo" data-tip="Message MeDili on Zalo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a><a class="fl-b" href="https://www.facebook.com/share/192oMLdBnq/" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a></nav>
+<script>
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'Copied'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='The number is selected, please copy it yourself'}
+setTimeout(()=>{b.textContent=o},2400)}))})();
+window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
+const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};
+const badge=()=>{const n=get().reduce((a,x)=>a+(+x.q||0),0);document.querySelectorAll('.mh-cn').forEach(e=>{e.textContent=n>99?'99+':n;e.hidden=!n})};
+const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badge()};
+const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
+badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
+const ADDR='143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM',ADDR_FARM='Thôn 11, Xã Di Linh, Lâm Đồng',PHONE='0966 770 788';
+
+/* ====== DỮ LIỆU ====== */
+const $=id=>document.getElementById(id);
+const vn=(n,d=1)=>n.toFixed(d);
+const fm=n=>Math.round(n).toLocaleString('en-US');
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const NB=' ';
+const g1=n=>Number.isInteger(n)?String(n):vn(n,1);
+/* chiết xuất lạnh: cùng hệ số với Cỗ máy Chiết xuất (cold brew, xay thô, rang vừa) */
+const K0=.442,BETA=.716,FT=T=>Math.exp(.035*(T-93)),EYM=T=>28-7*clamp((93-T)/73,0,1);
+const CBM=(()=>{const x=-Math.log(1-19/EYM(20));return x/(Math.pow(840,BETA)*K0*.6*FT(20))})();
+const EY=(T,h,r)=>EYM(T)*(1-Math.exp(-K0*CBM*.6*FT(T)*Math.pow(r/8,.12)*Math.pow(Math.max(h,0)*60,BETA)));
+const LOSS=.175,GREEN=.18,RET=2;
+const FMT={
+ conc:{n:'Concentrate bottle',life:7,note:'A strong cold brew concentrate; customers mix 1 part concentrate with 2 parts water, milk or ice. Keep at 0–4 °C; same-day inner-city delivery.'},
+ rtd:{n:'Ready-to-drink bottle',life:7,note:'Pre-diluted to drinking strength; just open and drink. Keep at 0–4 °C; same-day inner-city delivery.'},
+ bag:{n:'Cold-steep bags',life:180,note:'Coarse-ground coffee in filter bags that customers steep in their own fridge. Dry goods, so they can ship nationwide through marketplaces.'}};
+const BEAN={
+ rp:{n:'Robusta Premium',proc:'honey',full:'Robusta Premium, Honey processed',note:'The MeDili line we suggest for cold brew: sweet, caramel, brown sugar, gentle when cold-steeped.',cher:'#9A5A2B'},
+ rc:{n:'Robusta Classic',proc:'natural',full:'Robusta Classic, dried as whole cherries',note:'Strong, dark cocoa, heavy finish. Good with milk.',cher:'#6E2418'}};
+const DEF={f:'conc',bean:'rp',R:10,ratio:5,T:4,h:18,tds:1.6,vol:250,bag:35,per:10};
+const st={...DEF,sel:5};
+const use=(i,f=st.f)=>[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,0],[1,1,0],[1,1,0],[0,0,1],[1,1,1],[1,1,1]][i-1][f==='conc'?0:f==='rtd'?1:2];
+
+/* ====== MÔ HÌNH MẺ ====== */
+function calc(){
+ const s=st,green=s.R/(1-LOSS),cherry=green/GREEN,r={green,cherry,life:FMT[s.f].life};
+ if(s.f==='bag'){r.bags=Math.floor(s.R*1000*.99/s.bag);r.boxes=Math.floor(r.bags/s.per);r.water=s.bag*8;r.out=r.water-RET*s.bag;r.tdsB=EY(4,20,8)*s.bag/r.out;return r}
+ r.W=s.R*s.ratio;const bev=Math.max(0,r.W-RET*s.R);r.Vc=bev*.98;r.ey=EY(s.T,s.h,s.ratio);r.tdsC=bev>0?r.ey*s.R/bev:0;
+ r.low=s.f==='rtd'&&r.tdsC<s.tds;
+ r.Vout=s.f==='rtd'&&!r.low?r.Vc*r.tdsC/s.tds:r.Vc;r.add=r.Vout-r.Vc;
+ r.n=Math.floor(r.Vout*1000*.99/s.vol);return r}
+function verdict(r){
+ const s=st;
+ if(s.f==='bag')return {k:'good',t:'Dry goods, nationwide delivery',m:`Customers steep 1 bag with ${s.bag*8}${NB}ml of water in the fridge for 18–24 hours, getting about ${fm(r.out)}${NB}ml of concentrate at a TDS of about ${vn(r.tdsB,1)}%, diluted 1:1 to drink. Proposed shelf life is 6 months, to be established by testing.`};
+ if(s.T>8)return {k:'bad',t:`Steeping at ${s.T}${NB} °C is not suitable for bottles sold to customers`,m:'Steeping at room temperature only suits a café brewing for use the same day. Bottles sold online should be steeped at 2–5 °C to limit microbes.'};
+ if(r.low)return {k:'bad',t:'The concentrate isn\'t strong enough to dilute',m:`The concentrate only reaches a TDS of about ${vn(r.tdsC,1)}%, below the ready-to-drink target of ${vn(s.tds,1)}%. Use more coffee (a 1:4–1:5 ratio) or steep longer.`};
+ if(s.h<12)return {k:'warn',t:'Steep a little short',m:`At ${s.T}${NB} °C, ${s.h} hours doesn't extract enough; the concentrate's TDS is about ${vn(r.tdsC,1)}%. Common guidance is 16–20 hours in the fridge.`};
+ if(s.h>22)return {k:'warn',t:'Steep a little long',m:'Beyond about 20 hours, the concentrate gets only slightly stronger but easily picks up woody, astringent notes. Try stopping at 18–20 hours.'};
+ if(s.f==='conc')return {k:'good',t:'Recipe works for concentrate bottles',m:`Concentrate TDS about ${vn(r.tdsC,1)}%; diluted 1:2, the cup is about ${vn(r.tdsC/3,1)}%. Keep at 0–4 °C, 7-day shelf life, same-day inner-city delivery.`};
+ return {k:'good',t:'Recipe works for ready-to-drink bottles',m:`Mix ${vn(r.Vc,1)}${NB}L of concentrate with ${vn(r.add,1)}${NB}L of water to a TDS of ${vn(s.tds,1)}%. Keep at 0–4 °C, 7-day shelf life, same-day inner-city delivery.`};
+}
+
+/* ====== HÌNH HỌC ====== */
+const U=7,OX=196,OY=118;
+const P=(x,y,z=0)=>[OX+(x-y)*.866*U,OY+(x+y)*.5*U-z*U];
+const f1=n=>n.toFixed(1);
+const pts=a=>a.map(q=>q.map(f1).join(',')).join(' ');
+const poly=(a,c='')=>`<polygon points="${pts(a)}" class="${c}"/>`;
+const line=(a,w,col)=>`<polyline points="${pts(a)}" fill="none" style="${w?`stroke-width:${w};`:''}${col?`stroke:${col}`:''}"/>`;
+function box(x,y,z,w,d,h,c=['f1','f2','f3']){return poly([P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[1])+poly([P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)],c[2])+poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[0])}
+const RX=r=>r*U*1.2247,RY=r=>r*U*.7071;
+function cyl(cx,cy,z,r,h,c='f2',top='f1'){const [a,b]=P(cx,cy,z),[,t]=P(cx,cy,z+h),rx=RX(r),ry=RY(r);return `<path class="${c}" d="M${f1(a-rx)} ${f1(t)}V${f1(b)}A${f1(rx)} ${f1(ry)} 0 0 0 ${f1(a+rx)} ${f1(b)}V${f1(t)}Z"/><ellipse class="${top}" cx="${f1(a)}" cy="${f1(t)}" rx="${f1(rx)}" ry="${f1(ry)}"/>`}
+function side(cx,cy,z,r,h,c){const [a,b]=P(cx,cy,z),[,t]=P(cx,cy,z+h),rx=RX(r),ry=RY(r);return `<path class="${c}" d="M${f1(a-rx)} ${f1(t)}V${f1(b)}A${f1(rx)} ${f1(ry)} 0 0 0 ${f1(a+rx)} ${f1(b)}V${f1(t)}A${f1(rx)} ${f1(ry)} 0 0 1 ${f1(a-rx)} ${f1(t)}Z"/>`}
+function frus(cx,cy,z0,r0,z1,r1,c,top){const [a,b0]=P(cx,cy,z0),[,b1]=P(cx,cy,z1),x0=RX(r0),y0=RY(r0),x1=RX(r1),y1=RY(r1);return `<path class="${c}" d="M${f1(a-x1)} ${f1(b1)}L${f1(a-x0)} ${f1(b0)}A${f1(x0)} ${f1(y0)} 0 0 0 ${f1(a+x0)} ${f1(b0)}L${f1(a+x1)} ${f1(b1)}Z"/><ellipse class="${top}" cx="${f1(a)}" cy="${f1(b1)}" rx="${f1(x1)}" ry="${f1(y1)}"/>`}
+const face=(x,y,z)=>{const q=P(x,y,z);return `matrix(.866 .5 0 1 ${f1(q[0])} ${f1(q[1])})`};
+const lcd=(x,y,z,w,id)=>`<g transform="${face(x,y,z)}"><rect class="lcdb" x="0" y=".8" width="${w}" height="9" rx="1.4"/><text class="lcd" id="${id}" x="${w/2}" y="7.9" text-anchor="middle"></text></g>`;
+const stG=(i,inner)=>`<g class="st m" data-i="${i}" tabindex="0" role="button" aria-label="Station ${i}: ${ST[i-1].n}">${inner}</g>`;
+function bottle(x,y,z,lab){return cyl(x,y,z,.7,2.5,'amb','ambT')+(lab?side(x,y,z+.7,.72,1.15,'labc'):'')+cyl(x,y,z+2.5,.34,.75,'amb','ambT')+cyl(x,y,z+3.25,.38,.32,'capc','capc')}
+
+/* ====== 10 TRẠM ====== */
+const ST=[
+ {n:'Di Linh farm',sub:()=>'MeDili farm, Thôn 11, Xã Di Linh',
+  mech:r=>`The coffee for Cold Brew MeDili is Robusta from the MeDili farm in Di Linh. Only red ripe cherries are picked: green cherries taste grassy and astringent; overripe cherries easily ferment oddly. This batch needs about <b>${fm(r.cherry)}${NB}kg of fresh cherries</b>, using MeDili's ratio: 100${NB}kg of fresh cherries gives about 18${NB}kg of green coffee.`,
+  kv:r=>[['Fresh cherries needed',fm(r.cherry)+NB+'kg'],['Green coffee obtained',vn(r.green,1)+NB+'kg'],['Variety','Robusta Di Linh']],
+  check:'Count 100 random cherries from the basket: at least 90 should be red and ripe.',fail:'Strip-picking whole branches, green cherries included, makes the concentrate grassy and astringent.',tip:'Write the farm code on the sacks so each bottle can be traced.'},
+ {n:'Processing & drying',sub:()=>BEAN[st.bean].proc==='honey'?'Honey, dried on raised beds':'Natural, dried as whole cherries',
+  mech:()=>BEAN[st.bean].proc==='honey'?'Robusta Premium: pulped, keeping the mucilage, then dried on raised beds and turned evenly every day. The mucilage gives sweet, caramel notes that suit cold steeping very well. Dried until the beans are at 10–12% moisture, then hulled to get the green beans.':'Robusta Classic: whole cherries dried on raised beds until dry, turned evenly every day, then hulled to get the beans. Strong, cocoa, full-bodied. Dried until the beans are at 10–12% moisture.',
+  kv:r=>[['Bean moisture after drying','10–12'+'%'],['Drying time','about 10–20 days, depending on sun'],['Green coffee',vn(r.green,1)+NB+'kg']],
+  check:'Measure bean moisture before bagging; beans evenly dry, no mold.',fail:'Drying too thick and turning too little: over-fermentation, and odd sour smells go straight into the concentrate.',tip:'Use raised drying beds with a rain cover; never dry on the ground.'},
+ {n:'Roasting & degassing',sub:()=>'City+, rest 3–10 days',
+  mech:r=>`Roasted specifically for cold brew at City+ (medium roast), dropped at about 210–220${NB} °C, with about 17.5% loss as in the Roasting Room. Cold water struggles to extract from beans roasted too light, while roasting too dark gives burnt, harsh flavors. After roasting, rest 3–10 days in a sealed bin with a one-way valve so some CO₂ escapes and the grounds absorb water more evenly.`,
+  kv:r=>[['Roasted coffee',g1(st.R)+NB+'kg'],['Roast level','City+, drop at 210–220'+NB+'°C'],['Loss','about 17.5'+'%'],['Rest after roasting','3–10 days']],
+  check:'Break a bean: the inside and outside should be the same color. Cup a sample before grinding.',fail:'Grinding right after roasting: CO₂ pushes the water away and the grounds wet unevenly.',tip:'Write the roast date on the bin and use in order.'},
+ {n:'Coarse grind',sub:()=>'Coarse like rock salt',
+  mech:()=>`Grind coarse like rock salt, right before ${st.f==='bag'?'filling the filter bags':'steeping'}. Grounds that are too fine make the concentrate cloudy, harshly bitter and hard to filter; too coarse and it is weak.`,
+  kv:()=>[['Grind size','Coarse, like rock salt'],['Grounds for the batch',vn(st.R*.99,1)+NB+'kg'],['Grinding loss','about 1'+'%']],
+  check:'Sieve-test 100 g of grounds: the less fine dust, the better.',fail:'Worn grinder burrs make lots of fine dust: slow filtering, cloudy concentrate.',tip:'Grind in rounds of just enough for one steeping tank.'},
+ {n:'Cold steeping',sub:()=>'Stainless steel tank in the cold room',
+  mech:r=>`The grounds go into food-grade cloth filter bags, no more than 2.5${NB}kg per bag so water penetrates evenly, placed in a 304 stainless steel tank. Pour chilled drinking water that meets standards at a 1:${vn(st.ratio,1)} ratio, press gently so all the grounds are wet, cover tightly and steep <b>${st.h} hours at ${st.T}${NB} °C</b>. Commercial steeping guidance is usually 16–20 hours in a refrigerator below 4.4${NB} °C.`,
+  kv:r=>[['Steeping water',fm(r.W)+NB+'L'],['Coffee : water ratio','1:'+vn(st.ratio,1)],['Temperature, time',st.T+NB+'°C, '+st.h+' hours'],['Estimated EY',vn(r.ey,1)+'%']],
+  check:'The cold room thermometer reads 2–5 °C. Record the start and end times on the batch record.',fail:'Steeping at room temperature for bottles sold to customers: microbes grow faster.',tip:'Stir gently once after the first hour so the grounds don\'t clump dry.'},
+ {n:'Filtering & TDS',sub:()=>st.f==='rtd'?'Two-stage filtering, diluted':'Two-stage filtering, batch standardized',
+  mech:()=>'Lift out the bags and let them drain for 15–20 minutes; don\'t squeeze hard, as squeezing makes the concentrate cloudy and harsh. Fine-filter through filter paper or food-grade filter cloth. Measure TDS with a refractometer to standardize each batch: concentrate bottles have the TDS written on the batch record; ready-to-drink bottles are diluted to the target TDS.',
+  kv:r=>[['Filtered concentrate',vn(r.Vc,1)+NB+'L'],['Concentrate TDS, estimated',vn(r.tdsC,1)+'%'],['Water retained by the grounds',fm(RET*st.R)+NB+'L']].concat(st.f==='rtd'&&!r.low?[['Water added',vn(r.add,1)+NB+'L'],['Ready-to-drink TDS',vn(st.tds,1)+'%']]:[]),
+  check:'Clear concentrate, no sediment. Taste against the previous batch\'s reference sample.',fail:'Filtering only once through a coarse mesh: fine sediment keeps extracting, and the bottles turn cloudy and increasingly bitter.',tip:'If it is more than 10% off the reference TDS, adjust the next batch.'},
+ {n:'Bottling',sub:()=>'Brown glass bottles '+st.vol+' ml',
+  mech:()=>`Fill into ${st.vol}${NB}ml brown glass bottles that have been washed, sanitized and dried upside down. Leave headspace in the neck, close with a tamper-evident cap, and label with the production date, expiry date and batch code right at filling. No nitrogen flushing and no canning until a process has been validated.`,
+  kv:r=>[['Number of bottles',fm(r.n)+' bottles of '+st.vol+NB+'ml'],['Filling loss','about 1'+'%'],['Batch code',lot()]],
+  check:'Turn 5 bottles per batch upside down: no leaks at the cap.',fail:'Damp bottles and unsealed caps: easily contaminated, and customers find it hard to trust.',tip:'Brown bottles block some light, preserving color and aroma.'},
+ {n:'Bagging steeping bags',sub:()=>st.bag+' g per filter bag',
+  mech:()=>`A dosing machine fills ${st.bag}${NB}g of coarse grounds into food-grade non-woven filter bags, heat-sealed, with a string and MeDili tag. Every 5 bags go into a multi-layer foil pouch with a one-way valve, nitrogen-flushed, then sealed. ${st.per===10?'Two foil pouches':'One foil pouch'} per box of ${st.per} bags.`,
+  kv:r=>st.f==='bag'?[['Number of bags',fm(r.bags)+' bags × '+st.bag+NB+'g'],['Number of boxes',fm(r.boxes)+' boxes × '+st.per+' bags'],['Each bag makes',st.bag*8+NB+'ml of water, yielding about '+fm(r.out)+NB+'ml of concentrate'],['Shelf life','6 months, proposed']]:[['Used for','the cold-steep bag format']],
+  check:'Weigh 10 random bags: no more than 1 g off. Foil pouches fully sealed, no leaks.',fail:'Bagging while the grounds still hold lots of gas: the foil pouches puff up.',tip:'Print steeping instructions on the back of the box and on the bag tags.'},
+ {n:'Packaging',sub:()=>'Cold Brew MeDili',
+  mech:()=>'The packaging carries the Cold Brew MeDili name in the brand colors: cream, coffee brown, earth red and earth yellow. The bottle has a moisture-resistant wrap-around label with the MeDili logo, a large COLD BREW wordmark and a red band showing the product format and volume; the back label carries all mandatory content. Steeping bags come in a two-color printed kraft box. See the samples in Figure 3.',
+  kv:()=>[['Bottle',st.vol+NB+'ml, brown glass'],['Label','Moisture-resistant paper sticker'],['Steeping bag box','Kraft, '+st.per+' bags']],
+  check:'Check the label against the self-declaration before printing in bulk.',fail:'A label missing the expiry date or storage instructions.',tip:'Print 20 test labels and stick them on cold bottles to see whether they peel when condensation forms.'},
+ {n:'Storage & delivery',sub:()=>st.f==='bag'?'Dry storage, nationwide delivery':'0–4 °C storage, same-day delivery',
+  mech:()=>st.f==='bag'?'Boxes of steeping bags are dry goods: store them dry, ventilated and out of the sun. Ship nationwide through marketplaces in carton boxes with shock-absorbing padding.':'Bottles go into the 0–4 °C cold room right after filling, with the temperature recorded twice a day. Shelf life is 7 days from production. Deliver within the city on the same day in foam boxes with gel ice, reminding customers to refrigerate right away. Never send chilled bottles to other provinces by standard delivery.',
+  kv:()=>st.f==='bag'?[['Storage','Dry, below 30'+NB+'°C'],['Shelf life','6 months, proposed'],['Sales channel','E-commerce marketplaces nationwide']]:[['Storage temperature','0–4'+NB+'°C'],['Shelf life','7 days'],['Sales channel','Inner city, same-day delivery']],
+  check:'',fail:'',tip:''}];
+const K10={cold:{check:'Measure the bottle temperature at delivery: below 5 °C.',fail:'Leaving bottles out of the fridge while waiting for the courier.',tip:'Keep 2 sample bottles from each batch until expiry for comparison.'},
+ dry:{check:'Check the foil pouches for leaks before packing the cartons.',fail:'A hot, humid store makes the grounds lose aroma quickly.',tip:'Older batches go out first, newer ones after.'}};
+const today=()=>{const d=new Date();d.setHours(12,0,0,0);return d};
+const dmy=d=>['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()]+' '+d.getDate()+', '+d.getFullYear();
+const addD=(d,n)=>{const e=new Date(d);e.setDate(e.getDate()+n);return e},addM=(d,n)=>{const e=new Date(d);e.setMonth(e.getMonth()+n);return e};
+const lot=()=>{const d=today();return (st.f==='bag'?'TU':'CB')+String(d.getFullYear()).slice(2)+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+'-01'};
+
+/* ====== DỰNG CẢNH ====== */
+const ANCH=[null,[8,13,9],[22,12,3.2],[34.5,11,8.8],[46,11,8.8],[58,12,10],[69,11.5,8],[82.5,13.5,8.6],[93.5,11.3,8.8],[105.5,13,6.4],[118.5,12,9.8]];
+function buildScene(){
+ let h='<g class="m">';
+ [[3,23],[125,23],[125,3]].forEach(([x,y])=>h+=cyl(x,y,-9,1.2,5,'cu2','cu2'));
+ h+=box(0,0,-4,128,26,4,['wo','wo2','cu2'])+'</g>';
+ const pl=P(56,26,-.6);
+ h+=`<g transform="matrix(.866 .5 0 1 ${f1(pl[0])} ${f1(pl[1])})"><rect width="252" height="24" rx="3" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:1.2"/><circle cx="8" cy="12" r="1.8" style="fill:#2A1B16"/><circle cx="244" cy="12" r="1.8" style="fill:#2A1B16"/><text class="sgn" x="126" y="17.5" text-anchor="middle">Cold Brew MeDili · Di Linh Farm</text></g>`;
+ /* 1 vườn */
+ let s=frus(8,13,0,6.2,2,3.3,'hill','hillT');
+ [[6.6,11.2],[10.2,10.8],[9.6,14.8]].forEach(([x,y],k)=>{const b=P(x,y,2),t=P(x,y,7);
+  s+=`<path d="M${f1(b[0])} ${f1(b[1])}L${f1(t[0])} ${f1(t[1])}" style="stroke:#6B4226;stroke-width:3.2;stroke-linecap:round;fill:none"/>`;
+  s+=`<ellipse cx="${f1(t[0])}" cy="${f1(t[1]-2)}" rx="15" ry="12" style="fill:#8D5A32"/><ellipse cx="${f1(t[0]-6)}" cy="${f1(t[1]-7)}" rx="8" ry="6" style="fill:#A9743F;stroke:none"/>`;
+  [[-8,-4],[5,-8],[9,2],[-3,5],[1,-14],[-11,4],[12,-6]].forEach(([dx,dy])=>s+=`<circle cx="${f1(t[0]+dx)}" cy="${f1(t[1]+dy-2)}" r="2.4" style="fill:#B33A24;stroke:none"/>`)});
+ s+=cyl(3.6,20.6,0,1.8,1.6,'wo2','cherT')+[[-5,-1],[0,-2],[5,0],[-2,2],[3,2]].map(([dx,dy])=>{const q=P(3.6,20.6,1.6);return `<circle cx="${f1(q[0]+dx)}" cy="${f1(q[1]+dy)}" r="2.6" style="fill:#B33A24;stroke:none"/>`}).join('');
+ h+=stG(1,s);
+ /* 2 phơi giàn */
+ s='';[[17.3,8.3],[26.4,8.3],[17.3,15.4],[26.4,15.4]].forEach(([x,y])=>s+=box(x,y,0,.35,.35,2.4,['wo2','wo2','wo2']));
+ s+=box(17,8,2.4,10,8,.45,['bed','bed2','bed2'])+'<g id="cher"></g>';
+ h+=stG(2,s);
+ /* 3 rang */
+ const dr=P(31.4,14,5.2);
+ s=cyl(32.4,9.4,6,.5,4.6,'f3','f2')+box(31,8,0,6.6,6,6,['f1','f2','f3'])
+  +`<g transform="${face(31.6,14,5.4)}"><circle cx="22" cy="19" r="14" class="f3" style="stroke:var(--ol);stroke-width:1.2"/><circle cx="22" cy="19" r="8.5" class="cu2" style="stroke:var(--ol);stroke-width:1"/><rect x="34" y="30" width="8" height="5" rx="1" class="cu" style="stroke:var(--ol);stroke-width:1"/></g>`
+  +frus(34.6,11,6,.8,8.8,2.1,'f2','beanT')+cyl(40.6,13.2,0,2.4,1.4,'f2','beanT');
+ h+=stG(3,s);
+ /* 4 xay thô */
+ s=box(44,9,0,4,4,4.6,['f1','f2','f3'])+cyl(46,11,4.6,.9,1,'f3','f2')+frus(46,11,5.6,.8,8.6,2,'beanT','beanT')+frus(46,11,5.6,.9,8.8,2.1,'gl','glt')
+  +cyl(48.6,15.6,0,1.5,2,'pa','grdT');
+ h+=stG(4,s);
+ /* 5 ngâm lạnh */
+ s=cyl(58,12,0,3.2,6.4,'f2','f1')+(()=>{const q=P(58,12,6.2);return `<ellipse class="grdT" cx="${f1(q[0])}" cy="${f1(q[1])}" rx="${f1(RX(2.6))}" ry="${f1(RY(2.6))}"/>`})()
+  +box(52.4,6.6,0,11.2,11,9.6,['glt','gl','gl'])
+  +`<g transform="${face(53,17.6,9)}">${[[14,10],[40,6],[66,14],[28,27]].map(([x,y])=>`<path class="frost" d="M${x} ${y-4.5}v9M${x-3.9} ${y-2.25}l7.8 4.5M${x-3.9} ${y+2.25}l7.8 -4.5"/>`).join('')}</g>`
+  +lcd(53.4,17.6,1.7,68,'kC');
+ h+=stG(5,s);
+ /* 6 lọc và TDS */
+ s=cyl(69,11.5,0,2,3.8,'f2','liqt')+frus(69,11.5,3.8,.6,7.6,2.4,'f1','grdT')+box(71.6,14.6,0,3.2,2.2,1,['f1','f2','f3'])+lcd(71.9,16.8,.95,24,'kS');
+ h+=stG(6,s);
+ /* 7 chiết rót */
+ s=box(76.6,12.6,0,11.6,2.8,1.4,['f2','f3','f3'])+box(77.4,12,1.4,.5,.5,6.6,['f3','f3','f3']);
+ [79.2,81.4,83.6,85.8].forEach(x=>s+=bottle(x,14,1.4,0));
+ s+=box(86.6,12,1.4,.5,.5,6.6,['f3','f3','f3'])+box(77.4,12,8,9.8,3.4,1.4,['f1','f2','f3']);
+ [80.2,82.6,85].forEach(x=>{const a=P(x,13.7,8),b=P(x,13.7,6.6);s+=`<line x1="${f1(a[0])}" y1="${f1(a[1])}" x2="${f1(b[0])}" y2="${f1(b[1])}" style="stroke:var(--ol);stroke-width:2.2"/>`});
+ h+=stG(7,s);
+ /* 8 đóng túi ủ */
+ s=box(90.4,9,0,5,4.6,6.6,['f1','f2','f3'])+frus(92.9,11.3,6.6,.7,8.8,1.8,'f2','beanT')+box(91.4,13.6,1.6,2.2,1.4,.6,['f2','f3','f3']);
+ for(let i=0;i<4;i++)s+=box(91.6,15.6,i*.24,1.6,1.3,.22,['bagw','bagw2','bagw2']);
+ s+=box(95.6,14.6,0,1.8,.6,2.7,['foil','foil2','foil3'])+box(97.8,14.2,0,1.8,.6,2.7,['foil','foil2','foil3']);
+ h+=stG(8,s);
+ /* 9 bao bì */
+ s=box(100,9,0,10,8,2.2,['wo','wo2','cu2'])+bottle(101.8,11.2,2.2,1)+bottle(103.6,11.2,2.2,1)+bottle(102.6,13.4,2.2,1)
+  +box(105.4,10.2,2.2,3.6,2.6,2.8,['kr','kr2','kr3'])+`<g transform="${face(105.5,12.8,4.8)}"><rect x="1" y="2" width="23" height="5" style="fill:#9E3B26"/><text class="ptx" x="12.5" y="15" text-anchor="middle">COLD</text><text class="ptx" x="12.5" y="23" text-anchor="middle">BREW</text></g>`
+  +box(105.8,14,2.2,2.8,2.2,3.1,['kr','kr2','kr3'])+`<g transform="${face(105.9,16.2,5.1)}"><text class="ptx" x="9.6" y="10" text-anchor="middle" style="font-size:7px">MeDili</text><rect x="1" y="14" width="17.6" height="3.4" style="fill:#9E3B26"/></g>`;
+ h+=stG(9,s);
+ /* 10 kho và giao */
+ s=box(113,7.6,0,5.2,5,9.8,['f1','f2','f3'])+`<g transform="${face(113.3,12.6,9.4)}"><rect x="0" y="0" width="31" height="60" rx="2" class="door"/>${[14,30,46].map(y=>`<line x1="2" x2="29" y1="${y}" y2="${y}" style="stroke:var(--ol);stroke-width:1"/>`+[5,12,19,26].map(x=>`<rect x="${x-1.6}" y="${y-8}" width="3.2" height="8" rx="1" style="fill:#6E3F1C"/>`).join('')).join('')}</g>`
+  +lcd(113.5,12.6,9.6,24,'kF')+'<g id="parcel"></g>';
+ h+=stG(10,s);
+ h+='<g id="flow"></g><g id="chips"></g><circle id="tok" r="7"/>';
+ $('scene').innerHTML=h;
+ document.querySelectorAll('#scene .st').forEach(g=>{g.addEventListener('click',()=>select(+g.dataset.i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(+g.dataset.i)}})});
+}
+function parcel(){const cold=st.f!=='bag',c=cold?['pcl','pcl2','pcl3']:['kr','kr2','kr3'];
+ let s=box(119.6,13,0,7,5,4.2,c)+`<polygon points="${pts([P(122.7,13,4.2),P(123.5,13,4.2),P(123.5,18,4.2),P(122.7,18,4.2)])}" style="fill:#9E3B26;stroke:none"/>`;
+ s+=`<g transform="${face(119.6,18,4.2)}"><text class="wtx" x="24.5" y="9.5" text-anchor="middle" style="font-size:6.6px">COLD BREW</text><text class="wtx" x="24.5" y="17.5" text-anchor="middle" style="font-size:6.6px">MEDILI</text><text class="wtx" x="24.5" y="26" text-anchor="middle" style="font-size:6.2px;fill:#9E3B26">${cold?'CHILLED':'DRY GOODS'}</text></g>`;
+ $('parcel').innerHTML=s}
+function cherries(){const c=BEAN[st.bean].cher;let s='';
+ for(let i=0;i<8;i++)for(let j=0;j<6;j++){const q=P(17.7+i*1.18,8.7+j*1.2,2.86);s+=`<ellipse cx="${f1(q[0]+(j%2)*1.5)}" cy="${f1(q[1])}" rx="2.3" ry="1.5" style="fill:${c};stroke:none"/>`}
+ $('cher').innerHTML=s}
+function chipLabel(i,r){
+ const b=st.f==='bag';
+ return ['',`Ripe cherries · ${fm(r.cherry)}${NB}kg`,`${BEAN[st.bean].proc==='honey'?'Honey':'Natural'} · ${vn(r.green,1)}${NB}kg green`,`Roast City+ · ${g1(st.R)}${NB}kg`,'Coarse grind',
+  b?'Cold steeping (bottles)':`Steep ${st.T}${NB} °C · ${st.h} h`,b?'Filtering (bottles)':`Filter · TDS ${vn(r.tdsC,1)}%`,b?'Bottling (bottles)':`${fm(r.n)} bottles of ${st.vol}${NB}ml`,
+  b?`${fm(r.bags)} bags of ${st.bag}${NB}g`:'Bagging (steeping bags)','Cold Brew MeDili',b?'Nationwide delivery':'Same-day chilled delivery'][i]}
+const CHIP=[null,{x:178,y:14},{x:262,y:64},{x:344,y:108},{x:418,y:150},{x:492,y:192},{x:566,y:240},{x:636,y:290},{x:704,y:330},{x:760,y:384},{x:842,y:436}];
+function drawChips(r){let h='';
+ for(let i=1;i<=10;i++){const C=CHIP[i],l=chipLabel(i,r),w=40+l.length*7,x=Math.min(C.x,1032-w-6),q=P(...ANCH[i]),off=!use(i);
+  h+=`<polyline class="lead-l${i===st.sel?' on':''}" points="${f1(q[0])},${f1(q[1])} ${f1(x+20)},${C.y+13}"/><g class="chip${i===st.sel?' on':''}${off?' off':''}" data-c="${i}"><rect x="${f1(x+6)}" y="${C.y}" rx="8" width="${f1(w)}" height="26"/><circle cx="${f1(x+6)}" cy="${C.y+13}" r="13"/><text class="num" x="${f1(x+6)}" y="${C.y+18.5}" text-anchor="middle">${i}</text><text class="lab" x="${f1(x+26)}" y="${C.y+18}">${l}</text></g>`}
+ const el=$('chips');el.innerHTML=h;el.querySelectorAll('.chip').forEach(g=>g.addEventListener('click',()=>select(+g.dataset.c)))}
+function drawFlow(r){
+ const rows=[['Di Linh ripe cherries',fm(r.cherry)+NB+'kg','#B33A24'],['Green coffee, 10–12% moisture',vn(r.green,1)+NB+'kg','#D8C9A3'],['City+ roasted coffee',g1(st.R)+NB+'kg','#6B4226']];
+ if(st.f==='bag')rows.push(['Coarse grounds in filter bags',fm(r.bags)+NB+'bags','#F6F0E4'],['Finished product',fm(r.boxes)+NB+'boxes of '+st.per+' bags','#9E3B26']);
+ else{rows.push(['Steeping water '+st.T+NB+'°C',fm(r.W)+NB+'L','#E9D3AE'],['Filtered concentrate',vn(r.Vc,1)+NB+'L','#7A4A23']);if(st.f==='rtd'&&!r.low)rows.push(['Diluted to TDS '+vn(st.tds,1)+'%',vn(r.Vout,1)+NB+'L','#A06C45']);rows.push(['Finished product',fm(r.n)+NB+'bottles of '+st.vol+NB+'ml','#9E3B26'])}
+ const x=16,rh=28,h=50+rows.length*rh+22,y=712-h,w=320;
+ let g=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="${x+16}" y="${y+26}" class="lab12" style="letter-spacing:.08em">FROM FARM TO PRODUCT</text>`;
+ rows.forEach(([a,b,c],i)=>{const yy=y+48+i*rh;g+=(i<rows.length-1?`<line x1="${x+24}" y1="${yy+7}" x2="${x+24}" y2="${yy+rh-7}" style="stroke:var(--muted);stroke-width:1.2;stroke-dasharray:2 3"/>`:'')+`<circle cx="${x+24}" cy="${yy}" r="7" style="fill:${c};stroke:var(--ol);stroke-width:1"/><text class="flowT" x="${x+40}" y="${yy+4}">${a}</text><text x="${x+w-16}" y="${yy+4}" text-anchor="end" class="mono flowT">${b}</text>`});
+ g+=`<text x="${x+16}" y="${y+h-12}" class="tiny mutedt">Concept drawing · figures estimated by the model</text>`;
+ $('flow').innerHTML=g}
+function renderScene(r){
+ document.querySelectorAll('#scene .st').forEach(g=>{const i=+g.dataset.i;g.classList.toggle('off',!use(i));g.classList.toggle('on',i===st.sel)});
+ $('kC').textContent=st.f==='bag'?'—':`${st.T} °C · ${st.h} h`;
+ $('kS').textContent=st.f==='bag'?'—':vn(r.tdsC,1)+'%';
+ $('kF').textContent=st.f==='bag'?'—':'2 °C';
+ cherries();parcel();drawChips(r);drawFlow(r);
+}
+
+/* ====== BIỂU ĐỒ TDS THEO GIỜ ====== */
+function drawCT(r){
+ const bag=st.f==='bag',ratio=bag?8:st.ratio,dose=bag?st.bag:st.R*1000,water=bag?st.bag*8:st.R*st.ratio*1000,bev=water-RET*dose;
+ const tds=(T,h)=>bev>0?EY(T,h,ratio)*dose/bev:0,Tm=bag?4:st.T,ref=24;
+ const W=340,H=162,l=30,rr=48,t=18,b=22,ymax=Math.max(2,Math.ceil(Math.max(tds(ref,24),tds(Tm,24))*1.1));
+ const X=h=>l+h/24*(W-l-rr),Y=v=>t+(1-v/ymax)*(H-t-b);
+ let g=`<text class="ttl" x="${l}" y="11">TDS of ${bag?'the concentrate in the customer\'s cup':'the filtered concentrate'} (%) · horizontal axis: hours</text>`;
+ if(bag)g+=`<rect x="${f1(X(18))}" y="${t}" width="${f1(X(24)-X(18))}" height="${H-t-b}" style="fill:var(--good);fill-opacity:.14"/>`;
+ [0,ymax/2,ymax].forEach(v=>g+=`<line x1="${l}" x2="${W-rr}" y1="${f1(Y(v))}" y2="${f1(Y(v))}" style="stroke:var(--rule);stroke-width:.7"/><text x="${l-5}" y="${f1(Y(v)+3.5)}" text-anchor="end">${g1(Math.round(v*10)/10)}</text>`);
+ [0,6,12,18,24].forEach(hh=>g+=`<text x="${f1(X(hh))}" y="${H-5}" text-anchor="middle">${hh}</text>`);
+ const path=T=>{const p=[];for(let i=0;i<=48;i++){const hh=i/2;p.push(f1(X(hh))+','+f1(Y(tds(T,hh))))}return p.join(' ')};
+ g+=`<polyline points="${path(ref)}" fill="none" style="stroke:var(--muted);stroke-width:2;stroke-dasharray:5 4"/>`;
+ g+=`<polyline points="${path(Tm)}" fill="none" style="stroke:var(--accent);stroke-width:2"/>`;
+ const lab=[[ref,'24 °C'],[Tm,Tm+' °C']].map(([T,s])=>({y:Y(tds(T,24)),s})).sort((a,b)=>a.y-b.y);if(lab[1].y-lab[0].y<12)lab[1].y=lab[0].y+12;
+ lab.forEach(o=>g+=`<text x="${W-rr+5}" y="${f1(o.y+3.5)}" style="fill:var(--ink)">${o.s}</text>`);
+ const hm=bag?20:st.h;g+=`<line x1="${f1(X(hm))}" x2="${f1(X(hm))}" y1="${t}" y2="${H-b}" style="stroke:var(--ink);stroke-width:1"/><circle cx="${f1(X(hm))}" cy="${f1(Y(tds(Tm,hm)))}" r="4.5" style="fill:var(--accent);stroke:var(--panel);stroke-width:2"/>`;
+ if(bag)g+=`<text x="${f1(X(21))}" y="${H-b-6}" text-anchor="middle" style="paint-order:stroke;stroke:var(--panel);stroke-width:3px;stroke-linejoin:round;fill:var(--ink)">18–24 hours</text>`;
+ $('cT').innerHTML=g;
+ $('cLbl').textContent=bag?'Customers steep in the fridge: the concentrate grows stronger by the hour':'The colder the steep, the slower the concentrate strengthens';
+ $('lgT').innerHTML=`<span><i class="sw2" style="border-color:var(--accent)"></i>${bag?'Fridge 4 °C':'Steeping at '+Tm+' °C'}</span><span><i class="sw2 d" style="border-color:var(--muted)"></i>Room temperature 24 °C, for comparison</span>`;
+ $('tip').textContent=`At ${Tm} °C, ${hm} hours: TDS about ${vn(tds(Tm,hm),1)}%. At 24 °C for the same time: about ${vn(tds(ref,hm),1)}%.`;
+}
+
+/* ====== CÔNG THỨC MẺ ====== */
+function sop(r){
+ const s=st,b=BEAN[s.bean],bag=s.f==='bag',rows=[],add=(t,d,a,c)=>rows.push([t,d,a,c]);
+ add('Pick ripe cherries on the Di Linh farm','Pick only red ripe cherries and process them the same day. Write the farm code on the sacks.',`${fm(r.cherry)}${NB}kg fresh cherries`,'Count 100 cherries from the basket: at least 90 ripe.');
+ add(b.proc==='honey'?'Honey processing, dried on raised beds':'Whole cherries dried on raised beds',b.proc==='honey'?'Pulp, keep the mucilage, dry on raised beds, turn daily, then hull to get the beans.':'Dry whole cherries on raised beds, turning daily; once dry, hull to get the beans.',`${vn(r.green,1)}${NB}kg green coffee`,'Bean moisture 10–12%, no mold.');
+ add('Roast City+, rest the beans','Roast specifically for cold brew, dropped at 210–220 °C. Rest 3–10 days in a sealed bin with a one-way valve.',`${g1(s.R)}${NB}kg roasted, about 17.5% loss`,'Break beans to check even color; cup a sample.');
+ add('Coarse grind',`Coarse like rock salt, ground right before ${bag?'bagging':'steeping'}.`,`${vn(s.R*.99,1)}${NB}kg of grounds`,'Little fine dust.');
+ if(bag){
+  add('Fill the filter bags',`Dose ${s.bag}${NB}g of grounds into food-grade non-woven filter bags, heat-seal, and attach a string and MeDili tag.`,`${fm(r.bags)} bags × ${s.bag}${NB}g`,`Weigh 10 bags: no more than 1${NB}g off.`);
+  add('Nitrogen-flushed foil pouches','Every 5 filter bags go into a multi-layer foil pouch with a one-way valve, nitrogen-flushed, then sealed.',`${fm(Math.ceil(r.bags/5))} foil pouches`,'Squeeze gently: no leaks.');
+  add('Box and label','Kraft Cold Brew MeDili box with steeping instructions printed on the back, marked with the production date, expiry date and batch code.',`${fm(r.boxes)} boxes × ${s.per} bags`,'Label matches the self-declaration.');
+  add('Dry storage','A dry, ventilated store out of the sun, below 30 °C. Proposed shelf life is 6 months, to be established by testing and sensory checks over time.','6 months, proposed','Older batches go out first.');
+  add('Nationwide delivery through marketplaces',`Carton boxes with shock-absorbing padding. Customer instructions: 1 bag with ${s.bag*8}${NB}ml of filtered water, steep in the fridge for 18–24 hours, lift out the bag, dilute 1:1 with water, milk or ice.`,`About ${fm(r.out)}${NB}ml of concentrate per bag`,'Ask customers for feedback after the first 2 weeks.');
+ }else{
+  add('Cold steeping',`Put the grounds into food-grade cloth filter bags, no more than 2.5${NB}kg per bag, and place them in a 304 stainless steel tank. Pour in chilled drinking water that meets standards, press so the grounds are wet, cover tightly and steep ${s.h} hours at ${s.T}${NB} °C.`,`${fm(r.W)}${NB}L water · 1:${vn(s.ratio,1)} · ${s.T}${NB} °C · ${s.h} h`,'Cold room thermometer at 2–5 °C; record times on the batch record.');
+  add('Lift the bags, filter in two stages','Drain for 15–20 minutes without squeezing hard. Fine-filter through filter paper or food-grade filter cloth.',`${vn(r.Vc,1)}${NB}L of concentrate`,'Clear concentrate, no sediment.');
+  add(s.f==='rtd'?'Measure TDS, dilute':'Measure TDS, record the batch',s.f==='rtd'?(r.low?`The concentrate only reaches a TDS of about ${vn(r.tdsC,1)}%, not enough to dilute to ${vn(s.tds,1)}%. Use more coffee or steep longer.`:`Measure the concentrate's TDS with a refractometer and add standard drinking water to a TDS of ${vn(s.tds,1)}%: add ${vn(r.add,1)}${NB}L.`):'Measure the concentrate\'s TDS with a refractometer and write it on the batch record. If it is more than 10% off the reference, adjust the next batch.',s.f==='rtd'?`${vn(r.Vout,1)}${NB}L ready to drink`:`TDS about ${vn(r.tdsC,1)}%`,'Taste against the reference sample.');
+  add('Bottle and cap',`${s.vol}${NB}ml brown glass bottles, washed, sanitized and dried. Close with tamper-evident caps and label with the production date, expiry date and batch code right at filling.`,`${fm(r.n)} bottles of ${s.vol}${NB}ml`,'Turn 5 bottles upside down: no leaks.');
+  add('Cold room 0–4 °C','Move into the cold room immediately. Record the temperature twice a day. Keep 2 sample bottles per batch until expiry.','7-day shelf life','Bottles below 5 °C when leaving the store.');
+  add('Same-day chilled delivery','Foam boxes with gel ice, same-day delivery within the city, reminding customers to refrigerate right away. Never send to other provinces by standard delivery.','Inner city, same day','Bottles below 5 °C when they reach the customer.');
+ }
+ $('sopH').textContent=`Figure 2: recipe for a ${g1(s.R)}${NB}kg batch · ${FMT[s.f].n.toLowerCase()}`;
+ $('sop').innerHTML=rows.map(([t,d,a,c],i)=>`<li><span class="n">${i+1}</span><div><h3>${t}</h3><p>${d}</p></div><p><span class="lbl">Parameters</span>${a}</p><p><span class="lbl">Check</span>${c}</p></li>`).join('');
+}
+
+/* ====== BAO BÌ ====== */
+function bottleSvg(){
+ const kind=st.f==='rtd'?'READY TO DRINK':'CONCENTRATE',vol=st.f==='bag'?250:st.vol,h=st.f==='bag'?18:st.h;
+ const ridges=[0,1,2,3,4,5,6,7,8,9].map(i=>`<line x1="${81+i*4.2}" x2="${81+i*4.2}" y1="13" y2="37" stroke="#8D6A33" stroke-opacity=".45"/>`).join('');
+ return `<svg viewBox="0 0 200 410" role="img" aria-label="Cold Brew MeDili bottle, ${kind.toLowerCase()}, ${vol} ml">\n<defs><linearGradient id="pkG" x1="0" x2="1"><stop offset="0" stop-color="#3E2112"/><stop offset=".2" stop-color="#8B5226"/><stop offset=".55" stop-color="#5E3418"/><stop offset=".86" stop-color="#8B5226"/><stop offset="1" stop-color="#3A1E10"/></linearGradient>\n<linearGradient id="pkC" x1="0" x2="1"><stop offset="0" stop-color="#8D6A33"/><stop offset=".5" stop-color="#E7C985"/><stop offset="1" stop-color="#8D6A33"/></linearGradient>\n<linearGradient id="pkL" x1="0" x2="1"><stop offset="0" stop-color="#2E1A10" stop-opacity=".22"/><stop offset=".16" stop-color="#2E1A10" stop-opacity="0"/><stop offset=".84" stop-color="#2E1A10" stop-opacity="0"/><stop offset="1" stop-color="#2E1A10" stop-opacity=".24"/></linearGradient></defs>\n<ellipse cx="100" cy="398" rx="72" ry="8" fill="#2E1A10" fill-opacity=".18"/>\n<path d="M80 36h40v50c0 20 38 30 38 64v212a18 18 0 0 1-18 18H60a18 18 0 0 1-18-18V150c0-34 38-44 38-64z" fill="url(#pkG)" stroke="#3A1E10" stroke-width="1.5"/>\n<path d="M53 165c-3 60-3 130 0 190" stroke="#F6E7CF" stroke-opacity=".3" stroke-width="5" fill="none" stroke-linecap="round"/>\n<rect x="77" y="10" width="46" height="30" rx="5" fill="url(#pkC)" stroke="#6E4E22"/>${ridges}<rect x="78" y="38" width="44" height="5" rx="1.5" fill="#B08A4C" stroke="#6E4E22" stroke-width=".8"/>\n<path d="M120 52c10 2 14 6 16 12" stroke="#C9A15B" stroke-width="1.2" fill="none"/>\n<g transform="rotate(10 144 78)"><rect x="124" y="62" width="44" height="31" rx="3" fill="#F4E8D2" stroke="#9E3B26" stroke-width="1.2"/><circle cx="129" cy="67" r="1.6" fill="#9E3B26"/><text x="147" y="77" text-anchor="middle" class="pkTag" fill="#9E3B26">CHILLED</text><text x="147" y="87" text-anchor="middle" class="pkTag" fill="#4A2C1A">0–4 °C</text></g>\n<rect x="42" y="174" width="116" height="180" fill="#F4E8D2"/>\n<image href="../assets/logo-mau.png" x="58" y="184" width="84" height="27"/>\n<text x="100" y="245" text-anchor="middle" class="pkT" fill="#4A2C1A">COLD BREW</text>\n<text x="100" y="262" text-anchor="middle" class="pkS" fill="#9E3B26">Robusta Di Linh</text>\n<line x1="70" x2="130" y1="270" y2="270" stroke="#C9A15B" stroke-width="1.2"/>\n<text x="100" y="284" text-anchor="middle" class="pkS2" fill="#4A2C1A">Cold-steeped ${h} hours · pure roast</text>\n<path d="M42 318L60 303L80 309L102 296L124 307L144 299L158 305V332H42Z" fill="#D9B77E"/><path d="M42 326L68 313L96 321L122 311L158 319V332H42Z" fill="#B8894A"/>\n${[[52,320],[60,317],[68,315],[76,318],[86,320],[96,322],[106,318],[116,314],[126,314],[136,317],[146,318]].map(([x,y])=>`<circle cx="${x}" cy="${y+4}" r="2.2" fill="#6B4226"/>`).join('')}\n<rect x="42" y="332" width="116" height="22" fill="#9E3B26"/><text x="100" y="346.5" text-anchor="middle" class="pkB" fill="#F6EBD9">${kind} · ${vol} ml</text>\n<rect x="42" y="174" width="116" height="180" fill="url(#pkL)"/>\n</svg>`}
+function boxSvg(){
+ const per=st.per,g=st.bag;
+ return `<svg viewBox="0 52 306 246" role="img" aria-label="Cold Brew MeDili box of cold-steep bags, ${per} bags of ${g} g">\n<ellipse cx="160" cy="284" rx="140" ry="9" fill="#2E1A10" fill-opacity=".16"/>\n<polygon points="28,96 96,70 232,96 164,122" fill="#E4C78E" stroke="#6E4E22" stroke-width="1.3"/>\n<polygon points="28,96 164,122 164,284 28,258" fill="#D3AF6A" stroke="#6E4E22" stroke-width="1.3"/>\n<polygon points="164,122 232,96 232,256 164,284" fill="#B38C48" stroke="#6E4E22" stroke-width="1.3"/>\n<g transform="matrix(1 .1912 0 1 28 96)">\n <rect x="0" y="0" width="136" height="24" fill="#9E3B26"/><text x="68" y="16" text-anchor="middle" class="pkB" fill="#F6EBD9">COLD-STEEP BAGS</text>\n <image href="../assets/logo-mau.png" x="26" y="32" width="84" height="27"/>\n <text x="68" y="88" text-anchor="middle" class="pkT" fill="#4A2C1A" style="font-size:25px">COLD BREW</text>\n <text x="68" y="104" text-anchor="middle" class="pkS" fill="#9E3B26">Robusta Di Linh</text>\n <path d="M0 132L22 118L44 125L70 112L96 122L118 114L136 120V162H0Z" fill="#B8894A"/><path d="M0 140L30 128L60 136L92 126L136 134V162H0Z" fill="#8D5A32"/>\n <text x="68" y="154" text-anchor="middle" class="pkB" fill="#F6EBD9">${per} BAGS × ${g} G</text>\n</g>\n<g transform="matrix(1 -.3824 0 1 164 122)">\n <text x="34" y="30" text-anchor="middle" class="pkS2" fill="#3A2416">Steep at home</text>\n <text x="34" y="46" text-anchor="middle" class="pkS2" fill="#3A2416">1 bag + ${g*8} ml</text>\n <text x="34" y="60" text-anchor="middle" class="pkS2" fill="#3A2416">in the fridge</text>\n <text x="34" y="74" text-anchor="middle" class="pkS2" fill="#3A2416">18–24 hours</text>\n <text x="34" y="88" text-anchor="middle" class="pkS2" fill="#9E3B26">dilute 1:1</text>\n <circle cx="34" cy="116" r="13" fill="none" stroke="#9E3B26" stroke-width="1.6"/><path d="M28.5 109h11l-1.4 13h-8.2z" fill="#4A2C1A"/>\n</g>\n<g transform="rotate(-6 268 238)">\n <path d="M266 206c2-12 4-22 3-34" stroke="#B9A274" stroke-width="1.2" fill="none"/>\n <rect x="255" y="150" width="28" height="22" rx="2" fill="#9E3B26"/><text x="269" y="164" text-anchor="middle" class="pkTag" fill="#F6EBD9">MeDili</text>\n <rect x="240" y="206" width="56" height="64" rx="6" fill="#F6F0E4" stroke="#B9A274" stroke-width="1.4" stroke-dasharray="3 2"/>\n <rect x="245" y="212" width="46" height="52" rx="4" fill="#E3D9C6"/>\n ${[[252,222],[263,230],[276,220],[284,234],[256,246],[268,254],[281,248],[285,258],[252,258]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="2.1" fill="#6B4226" fill-opacity=".55"/>`).join('')}\n</g>\n</svg>`}
+function backLabel(r){
+ const bag=st.f==='bag',d=today(),e=bag?addM(d,6):addD(d,r.life-1);
+ const name=bag?'COLD BREW MEDILI – COLD-STEEP COFFEE BAGS':st.f==='rtd'?'COLD BREW MEDILI – READY-TO-DRINK COLD BREW COFFEE':'COLD BREW MEDILI – COLD BREW COFFEE CONCENTRATE';
+ const ing=bag?'100% roasted ground Robusta coffee (Robusta Di Linh).':'Water, roasted ground Robusta coffee (Robusta Di Linh).';
+ const qty=bag?`Net weight: ${st.per*st.bag} g (${st.per} bags × ${st.bag} g)`:`Net volume: ${st.vol} ml`;
+ const how=bag?`Put 1 bag in a jar with ${st.bag*8} ml of filtered water, cover tightly, steep in the fridge for 18–24 hours, then remove the bag. Dilute 1:1 with water, milk or ice. Keep the steeped concentrate in the fridge and use within 3 days.`:st.f==='rtd'?'Shake well before use. Drink chilled or pour over ice.':'Shake well. Mix 1 part concentrate with 2 parts water, milk or ice.';
+ const keep=bag?'Store in a dry, cool, well-ventilated place away from sunlight. After opening the foil pouch, reseal and use soon.':'Keep refrigerated at 0–4 °C. Close tightly and keep cold after opening.';
+ const warn=bag?'Contains caffeine. Use with care for children, pregnant women and people sensitive to caffeine.':'Do not consume if the bottle is bulging, leaking or smells unusual. Do not leave out of the fridge for more than 2 hours. Contains caffeine.';
+ const html=`<h4>${name}</h4><p><b>Ingredients:</b> ${ing}</p><p><b>${qty}</b></p><p><b>Directions:</b> ${how}</p><p><b>Storage:</b> <span class="${bag?'':'red'}">${keep}</span></p><p><b>Warning:</b> ${warn}</p>\n<div class="dt"><div><span>MFG</span>${dmy(d)}</div><div><span>EXP</span>${dmy(e)}</div><div><span>LOT</span>${lot()}</div></div>\n<p><b>Self-declaration no.:</b> ……/DSUNFOOD/${d.getFullYear()}</p><p><b>Responsible organization:</b> DSunfood Co., Ltd., ${ADDR}. Tel. ${PHONE}.</p><p><b>Origin:</b> Vietnam. Ingredients from the MeDili farm, ${ADDR_FARM}.</p>`;
+ $('backlbl').innerHTML=html;
+ st.label=$('backlbl').innerText.replace(/\n{2,}/g,'\n');
+}
+function listing(r){
+ const bag=st.f==='bag',conc=st.f==='conc';
+ const title=bag?`Cold Brew MeDili cold-steep bags · Box of ${st.per} bags × ${st.bag} g · pure-roast Robusta Di Linh`:`Cold Brew MeDili ${conc?'concentrate':'ready-to-drink'} ${st.vol} ml · Robusta Di Linh cold-steeped ${st.h} hours · Same-day chilled delivery`;
+ const L=bag?[`100% Robusta coffee from the MeDili farm, Di Linh, Lâm Đồng, pure-roasted to City+, coarse-ground.`,`Each ${st.bag} g bag steeped with ${st.bag*8} ml of filtered water in the fridge for 18–24 hours makes about ${fm(r.out)} ml of concentrate.`,'Dilute 1:1 with water, fresh milk or ice, to taste.',`Box of ${st.per} bags, packed in nitrogen-flushed foil pouches.`,'Dry goods, nationwide delivery.']
+  :[`100% Robusta coffee from the MeDili farm, Di Linh, Lâm Đồng, pure-roasted to City+.`,`Cold-steeped ${st.h} hours at ${st.T} °C, filtered twice. No sugar, no preservatives.`,conc?'Mix 1 part concentrate with 2 parts water, milk or ice.':'Shake well; drink chilled or pour over ice.','Store at 0–4 °C; use within 7 days of production.','Same-day delivery within Ho Chi Minh City, in foam boxes with gel ice.'];
+ st.lst=title+'\n\n'+L.map(x=>'• '+x).join('\n');$('lst').textContent=st.lst}
+
+/* ====== DỤNG CỤ, PHIẾU LÔ ====== */
+function equip(r){
+ const s=st,rows=[];
+ if(s.f==='bag'){
+  rows.push(['Digital scale','Weigh the grounds for each grinding round','Check the scale regularly']);
+  rows.push(['Dosing filter-bag packing machine',`${fm(r.bags)} bags × ${s.bag}${NB}g`,'Or hire a contract facility that already has a food safety certificate']);
+  rows.push(['Food-grade non-woven filter bags',`${fm(Math.ceil(r.bags*1.03))} bags`,'3% extra for machine waste']);
+  rows.push(['Multi-layer foil pouches with one-way valves',`${fm(Math.ceil(r.bags/5))} bags`,'5 filter bags per foil pouch']);
+  rows.push(['Bag sealer with nitrogen flushing','1 machine','Check the seals at the start of each shift']);
+  rows.push(['Kraft boxes printed with Cold Brew MeDili',`${fm(r.boxes)} boxes`,`${s.per} bags per box`]);
+ }else{
+  const tank=Math.ceil(r.W*1.4/10)*10,nb=Math.ceil(r.n*1.05);
+  rows.push(['Digital scale','Weigh grounds and water','1 liter of water is about 1 kg']);
+  rows.push(['304 stainless steel tank with lid and bottom drain valve',`From ${fm(tank)}${NB}L`,'Leave room for the grounds to swell']);
+  rows.push(['Food-grade cloth or nylon mesh filter bags',`${Math.ceil(s.R/2.5)} bags`,'No more than 2.5 kg of grounds per bag']);
+  rows.push(['Filter paper or fine filter cloth, stainless steel funnel','Second-stage filtering','Change the paper every batch']);
+  rows.push(['Cold room or chiller at 0–4 °C',`Holds the tank and ${fm(r.n)} bottles`,'Keep a thermometer inside']);
+  rows.push(['Thermometer, TDS refractometer','1 set','Record readings on the batch record']);
+  rows.push(['Brown glass bottles, tamper-evident caps',`${fm(nb)} sets`,'5% extra for breakage']);
+  rows.push(['Moisture-resistant sticker labels',`${fm(nb)} labels`,'Print the production date, expiry date and batch code']);
+  rows.push(['Foam boxes, gel ice','Per delivery order','Same-day delivery']);
+ }
+ $('eqT').innerHTML=rows.map(([a,b,c])=>`<tr><td><b>${a}</b></td><td>${b}</td><td>${c}</td></tr>`).join('');
+}
+function sheet(r){
+ const s=st,d=today();
+ const head=`Batch code: ${lot()}   Date: ${dmy(d)}   Made by: __________\nCoffee: ${BEAN[s.bean].full}, roast date ________ (rest 3–10 days)`;
+ const t=s.f==='bag'?`BATCH RECORD · COLD BREW MEDILI COLD-STEEP BAGS\n${head}\nCoarse grounds: ${vn(s.R*.99,1)} kg · ${s.bag} g per bag · expected ${fm(r.bags)} bags\nCheck-weigh 10 bags (g): ___ ___ ___ ___ ___ ___ ___ ___ ___ ___\nNitrogen-flushed foil pouches: ______ pouches · seals: pass / fail\nBoxing: ______ boxes × ${s.per} bags · EXP ${dmy(addM(d,6))}\nDry store: ______ °C · notes: ____________________`
+ :`BATCH RECORD · COLD BREW MEDILI ${s.f==='rtd'?'READY TO DRINK':'CONCENTRATE'}\n${head}\nCoarse grounds: ${vn(s.R*.99,1)} kg · water ${fm(r.W)} L (1:${vn(s.ratio,1)}) · target ${s.T} °C, ${s.h} hours\nSteeping started at: ______ · bags lifted at: ______\nCold room temperature: start ____ °C · midway ____ °C · at filtering ____ °C\nFiltered concentrate: ______ L (calculated ${vn(r.Vc,1)} L) · measured TDS ____ % (calculated ${vn(r.tdsC,1)}%)${s.f==='rtd'?`\nWater added: ______ L (calculated ${vn(r.add,1)} L) · TDS after dilution ____ % (target ${vn(s.tds,1)}%)`:''}\nBottling: ______ bottles of ${s.vol} ml (calculated ${fm(r.n)}) · EXP ${dmy(addD(d,FMT[s.f].life-1))}\nKeep 2 sample bottles until expiry · taste vs. reference: pass / fail\nNotes: ____________________`;
+ st.sheet=t;$('sheet').textContent=t;
+}
+
+/* ====== ĐIỀU KHIỂN ====== */
+function pills(id,items,cur,cb){$(id).innerHTML=items.map(([k,n])=>`<button class="pill" type="button" data-k="${k}" aria-pressed="${String(cur)===String(k)}">${n}</button>`).join('');$(id).querySelectorAll('button').forEach(b=>b.onclick=()=>cb(b.dataset.k))}
+const sym=k=>k==='good'?'✓':k==='warn'?'!':'✕';
+function stats(r){const s=st,t=(a,b)=>`<div class="stat"><span>${a}</span><b>${b}</b></div>`;
+ $('stats').innerHTML=s.f==='bag'?t('Number of bags',fm(r.bags))+t('Number of boxes',fm(r.boxes))+t('Concentrate per bag',fm(r.out)+NB+'ml')+t('Shelf life','6 months')
+  :s.f==='rtd'?t('Ready to drink',vn(r.Vout,1)+NB+'L')+t('Bottle TDS',vn(r.low?r.tdsC:s.tds,1)+'%')+t('Number of bottles',fm(r.n))+t('Shelf life','7 days')
+  :t('Concentrate obtained',vn(r.Vc,1)+NB+'L')+t('Concentrate TDS',vn(r.tdsC,1)+'%')+t('Number of bottles',fm(r.n))+t('Shelf life','7 days')}
+function renderStation(){
+ const s=ST[st.sel-1],r=calc(),x=st.sel===10?K10[st.f==='bag'?'dry':'cold']:s,off=!use(st.sel);
+ document.querySelectorAll('#scene .st').forEach(g=>g.classList.toggle('on',+g.dataset.i===st.sel));
+ document.querySelectorAll('#strip button').forEach((b,n)=>{b.classList.toggle('on',n+1===st.sel);b.classList.toggle('off',!use(n+1));b.setAttribute('aria-pressed',n+1===st.sel)});
+ $('detail').innerHTML=`<div class="dh"><div class="dn">${st.sel}</div><h2>${s.n}<small>${s.sub()}${off?' · not used for '+FMT[st.f].n.toLowerCase():''}</small></h2></div><div class="dgrid"><div><span class="lbl">How it's done</span><p>${s.mech(r)}</p><span class="lbl">How to check</span><p>${x.check}</p></div><div><span class="lbl">This batch's parameters</span><dl class="kv">${(off?[['Used for',st.sel===8?'The cold-steep bag format':'The concentrate and ready-to-drink bottle formats'],['Currently selected',FMT[st.f].n]]:s.kv(r)).map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join('')}</dl><p style="margin-top:8px"></p><span class="lbl">Common mistakes</span><p>${x.fail}</p><span class="lbl">Tip</span><p>${x.tip}</p></div></div>`;
+}
+function select(i){st.sel=i;renderStation();drawChips(calc());const sc=document.querySelector('.scroller'),q=P(...ANCH[i]);if(sc.scrollWidth>sc.clientWidth)sc.scrollLeft=q[0]/1040*sc.scrollWidth-sc.clientWidth/2}
+function sliders(){const set=(id,v)=>{$(id).value=v};
+ set('iR',st.R);set('iRa',st.ratio);set('iT',st.T);set('iH',st.h);set('iS',st.tds);set('iB',st.bag);
+ $('oR').textContent=st.R+NB+'kg';$('oRa').textContent='1:'+vn(st.ratio,1);$('oT').textContent=st.T+NB+'°C';$('oH').textContent=st.h+' hours';$('oS').textContent=vn(st.tds,1)+'%';$('oB').textContent=st.bag+NB+'g';
+ $('tNote').textContent=st.T<=5?'Cold room or chiller at 2–5 °C, as recommended.':st.T<=8?'A bit warm for a cold room; bring it down to 2–5 °C.':'Room temperature: only suits a café using it the same day.';
+ $('bgNote').textContent=`Each bag is brewed with ${st.bag*8}${NB}ml of water, a 1:8 ratio like the cold brew at the Brew Bar.`;
+ $('grpC').hidden=st.f==='bag';$('grpB').hidden=st.f!=='bag';$('grpR').hidden=st.f!=='rtd';
+}
+function update(){
+ const r=calc(),v=verdict(r);
+ pills('fmts',Object.entries(FMT).map(([k,f])=>[k,f.n]),st.f,k=>{st.f=k;if(!use(st.sel))st.sel=k==='bag'?8:5;stopRun();update()});
+ pills('beans',Object.entries(BEAN).map(([k,b])=>[k,b.n]),st.bean,k=>{st.bean=k;update()});
+ pills('vols',[250,330,500].map(x=>[x,x+NB+'ml']),st.vol,k=>{st.vol=+k;update()});
+ pills('pers',[5,10].map(x=>[x,x+' bags']),st.per,k=>{st.per=+k;update()});
+ $('fNote').textContent=FMT[st.f].note;$('bNote').textContent=BEAN[st.bean].note;
+ sliders();stats(r);
+ $('verdict').className=v.k;$('verdict').innerHTML=`<b>${sym(v.k)} ${v.t}</b>${v.m}`;
+ $('figsub').textContent=`10-station line, ${FMT[st.f].n.toLowerCase()}, batch of ${g1(st.R)}${NB}kg roasted coffee`;
+ renderScene(r);drawCT(r);sop(r);
+ $('pkBottle').innerHTML=bottleSvg();$('pkBox').innerHTML=boxSvg();
+ $('pkBc').textContent=`Cold Brew MeDili ${st.f==='rtd'?'ready-to-drink':'concentrate'} bottle, ${st.f==='bag'?250:st.vol} ml, brown glass, wrap-around label`;
+ $('pkXc').textContent=`Box of cold-steep bags, ${st.per} bags × ${st.bag} g, two-color printed kraft paper`;
+ backLabel(r);listing(r);equip(r);sheet(r);renderStation();
+}
+
+/* ====== CHẠY DÂY CHUYỀN ====== */
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let timer=0;
+function stopRun(){clearTimeout(timer);timer=0;$('scene').classList.remove('running')}
+function run(){
+ stopRun();const seq=[1,2,3,4,5,6,7,8,9,10].filter(i=>use(i));
+ if(still){select(seq[seq.length-1]);return}
+ $('scene').classList.add('running');let k=0;
+ const step=()=>{const i=seq[k],q=P(ANCH[i][0],ANCH[i][1],ANCH[i][2]-1.2),t=$('tok');t.setAttribute('cx',f1(q[0]));t.setAttribute('cy',f1(q[1]));select(i);k++;
+  if(k<seq.length)timer=setTimeout(step,700);else timer=setTimeout(()=>$('scene').classList.remove('running'),900)};
+ step();
+}
+
+/* ====== KHỞI ĐỘNG ====== */
+$('strip').innerHTML=ST.map((s,i)=>`<button type="button" aria-pressed="false">${i+1} ${s.n}</button>`).join('');
+$('strip').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>select(i+1));
+const onIn=(id,f)=>$(id).addEventListener('input',()=>{stopRun();f(+$(id).value);update()});
+onIn('iR',v=>st.R=v);onIn('iRa',v=>st.ratio=v);onIn('iT',v=>st.T=v);onIn('iH',v=>st.h=v);onIn('iS',v=>st.tds=v);onIn('iB',v=>st.bag=v);
+$('run').onclick=run;$('run2').onclick=run;$('reset').onclick=()=>{stopRun();const f=st.f;Object.assign(st,DEF,{f});update()};
+const cp=async(txt,el)=>{try{await navigator.clipboard.writeText(txt);$(el).textContent='Copied.'}catch(e){$(el).textContent='Could not copy. Please select the text and copy it yourself.'}setTimeout(()=>$(el).textContent='',2600)};
+$('cpLbl').onclick=()=>cp(st.label,'cpLblS');$('cpLst').onclick=()=>cp(st.lst,'cpLstS');$('cpSh').onclick=()=>cp(st.sheet,'cpShS');
+buildScene();update();
+</script>
+</body></html>

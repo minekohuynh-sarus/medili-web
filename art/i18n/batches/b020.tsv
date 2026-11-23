@@ -1,0 +1,238 @@
+# cong-thuc-pha.html
+4ec1656dd ||| Four steps to your own coffee recipe: choose the processing, roast level, brewing method (V60, phin, espresso or cold brew) and technique. The machine calculates the coffee dose, water, temperature, grind size, time and each pour, and suggests a MeDili coffee to suit your taste. ||| 4つのステップで自分だけの抽出レシピを。精製方法、焙煎度、淹れ方（V60、フィン、エスプレッソ、コールドブリュー）、テクニックを選ぶと、マシンが豆の量、湯量、温度、挽き目、時間、注湯ごとの量を計算し、好みに合うMeDiliのコーヒーをご提案します。 ||| 四步得到专属的咖啡配方：选择处理法、烘焙度、冲煮方式（V60、滴滤壶、意式浓缩或冷萃）和技法。机器会计算粉量、水量、温度、研磨度、时间和每次注水量，并推荐适合您口味的MeDili咖啡。
+faa5d99f7 ||| MeDili Brew Recipe Machine ||| MeDili抽出レシピマシン ||| MeDili冲煮配方机
+9ca4a9a66 ||| Four steps, <1>a recipe of your own.</1> ||| 4つのステップで、<1>あなただけのレシピを。</1> ||| 四个步骤，<1>一份专属于您的配方。</1>
+7c60a5c46 ||| Choose the processing method, roast level, brewing method and technique. The machine calculates the coffee dose, water, temperature, grind size, time and each pour. This is a starting point: brew, taste, then adjust to your taste. ||| 精製方法、焙煎度、淹れ方、テクニックを選ぶと、マシンが豆の量、湯量、温度、挽き目、時間、注湯ごとの量を計算します。これは出発点です。淹れて、味わって、好みに合わせて調整してください。 ||| 选择处理法、烘焙度、冲煮方式和技法。机器会计算粉量、水量、温度、研磨度、时间和每次注水量。这只是起点：冲煮、品尝，再按您的口味调整。
+33d365914 ||| <1>Start choosing</1><2>Choose MeDili coffee</2><3>Extraction Machine</3> ||| <1>選び始める</1><2>MeDiliのコーヒーを選ぶ</2><3>抽出マシン</3> ||| <1>开始选择</1><2>选择MeDili咖啡</2><3>萃取机</3>
+f6211ee0f ||| Quick pick by MeDili coffee ||| MeDiliのコーヒーからすばやく選ぶ ||| 按MeDili咖啡快速选择
+ef5d447e9 ||| Which MeDili coffee do you have? ||| お手元のMeDiliのコーヒーはどれですか？ ||| 您手上有哪款MeDili咖啡？
+c661f5f99 ||| Choose it to pre-fill the first three steps ||| 選ぶと最初の3ステップが自動で入力されます ||| 选择后自动填好前三步
+b331fb090 ||| Espresso Robusta Classic ||| エスプレッソ用 Robusta Classic ||| 意式款 Robusta Classic
+4093d6312 ||| Espresso Robusta Premium ||| エスプレッソ用 Robusta Premium ||| 意式款 Robusta Premium
+f642fb4f5 ||| Espresso Robusta Specialty ||| エスプレッソ用 Robusta Specialty ||| 意式款 Robusta Specialty
+cc51db3d7 ||| Espresso Arabica Premium ||| エスプレッソ用 Arabica Premium ||| 意式款 Arabica Premium
+2b8f78666 ||| Espresso Blend 9:1 ||| エスプレッソ用 Blend 9:1 ||| 意式款 Blend 9:1
+10d9c66ec ||| Espresso Blend 8:2 ||| エスプレッソ用 Blend 8:2 ||| 意式款 Blend 8:2
+daa2a2d79 ||| Espresso Blend 7:3 ||| エスプレッソ用 Blend 7:3 ||| 意式款 Blend 7:3
+19e8bb81b ||| Espresso Blend 5:5 ||| エスプレッソ用 Blend 5:5 ||| 意式款 Blend 5:5
+71691e69d ||| Blend MeDili ||| Blend MeDili ||| Blend MeDili
+fc29eb76c ||| Catimor ||| Catimor ||| Catimor
+dd2bd592e ||| Culi ||| Culi ||| Culi
+14a31de32 ||| Sương ||| Sương ||| Sương
+4e2696f1a ||| Rừng ||| Rừng ||| Rừng
+32d20bbf3 ||| Suối ||| Suối ||| Suối
+16ba7fe16 ||| Nắng ||| Nắng ||| Nắng
+4dc015b47 ||| Núi ||| Núi ||| Núi
+8bd618892 ||| Mây ||| Mây ||| Mây
+14e6371b8 ||| Four steps ||| 4つのステップ ||| 四个步骤
+2d573f0e5 ||| Processing ||| 精製 ||| 处理法
+dc19e32cd ||| Technique ||| テクニック ||| 技法
+06c75d2a4 ||| Your recipe ||| あなたのレシピ ||| 您的配方
+35cb1f0e9 ||| Start over ||| 最初から選び直す ||| 重新选择
+002e220f3 ||| Coffee dose ||| 豆の量 ||| 粉量
+ae07218b7 ||| Less coffee ||| 豆を減らす ||| 减少粉量
+4aa63e9b9 ||| Coffee dose, grams ||| 豆の量（グラム） ||| 粉量（克）
+d03cba724 ||| More coffee ||| 豆を増やす ||| 增加粉量
+6a660f01a ||| g coffee ||| g（粉） ||| 克咖啡
+d72f74b83 ||| Sweeter ||| 甘めに ||| 更甜
+fb26f0b20 ||| More acidic ||| 酸味強めに ||| 更酸
+ad530a149 ||| Adjust to your taste ||| 好みに合わせて調整 ||| 按口味调整
+8ca37cc36 ||| MeDili coffees for this recipe ||| このレシピに合うMeDiliのコーヒー ||| 适合这个配方的MeDili咖啡
+5f9f42a6a ||| Save recipe as image ||| レシピを画像で保存 ||| 将配方保存为图片
+99131b032 ||| Print recipe ||| レシピを印刷 ||| 打印配方
+5bf29f43f ||| Copy recipe ||| レシピをコピー ||| 复制配方
+6024649bf ||| Quick comparison ||| 簡単比較 ||| 快速比较
+57cace166 ||| Four brewing methods, <1>four kinds of cup.</1> ||| 4つの淹れ方、<1>4つの味わい。</1> ||| 四种冲煮方式，<1>四种杯中风味。</1>
+d2f1d0c94 ||| Grind size ||| 挽き目 ||| 研磨度
+0f0408d8c ||| How the cup tastes ||| カップの味わい ||| 杯中风味
+eb9c9f30e ||| 1:15 to 1:17 ||| 1:15〜1:17 ||| 1:15至1:17
+25b8c2d64 ||| 90 to 96 °C ||| 90〜96 °C ||| 90至96 °C
+41750a2c9 ||| Medium to medium-coarse ||| 中挽き〜中粗挽き ||| 中等至中粗
+d0fc10b10 ||| 3 to 3 min 30 s ||| 3分〜3分30秒 ||| 3分钟至3分30秒
+66a44e7ea ||| Clean, clear aromas, bright acidity ||| クリーンで香りがはっきり、爽やかな酸味 ||| 干净、香气清晰、明亮酸质
+dadb1cf19 ||| Light to medium roast Arabica ||| 浅煎り〜中煎りのArabica ||| 浅度至中度烘焙的Arabica
+1238ad548 ||| 1:3 to 1:5 ||| 1:3〜1:5 ||| 1:3至1:5
+2fa147666 ||| 4 to 5 minutes ||| 4〜5分 ||| 4至5分钟
+c0f354373 ||| Strong, full body, clearly bitter ||| 濃厚、しっかりしたボディ、はっきりした苦み ||| 浓郁、醇厚、苦味鲜明
+1a166b6c3 ||| Medium to dark roast Robusta ||| 中煎り〜深煎りのRobusta ||| 中度至深度烘焙的Robusta
+14cf95573 ||| 1:1.5 to 1:3 ||| 1:1.5〜1:3 ||| 1:1.5至1:3
+68a50bb72 ||| 90 to 94 °C ||| 90〜94 °C ||| 90至94 °C
+71270ba32 ||| 20 to 35 seconds ||| 20〜35秒 ||| 20至35秒
+691b0dd02 ||| Dense, thick crema, a base for milk ||| 濃密で厚いクレマ、ミルクのベースに ||| 浓稠，油脂厚实，适合做奶咖基底
+aec144d61 ||| Blend, Robusta Premium ||| Blend、Robusta Premium ||| Blend、Robusta Premium
+765cc9fc6 ||| 1:5 to 1:10 ||| 1:5〜1:10 ||| 1:5至1:10
+b1488fb30 ||| Cold ||| 冷水 ||| 冷水
+248d5daae ||| 14 to 20 hours ||| 14〜20時間 ||| 14至20小时
+4c8e7e6da ||| Smooth, sweet, low acidity ||| まろやかで甘く、酸味が少ない ||| 顺滑、甜、低酸
+8fe638c86 ||| Robusta Honey, blend ||| Robusta Honey、blend ||| Robusta Honey、blend
+a2b2dc893 ||| Reading your cup ||| カップの味を読み解く ||| 解读杯中风味
+2f1ada0cc ||| Taste, then adjust <1>one thing at a time.</1> ||| 味わってから、<1>一度に1つだけ調整。</1> ||| 品尝后，<1>每次只调整一项。</1>
+860fd96a4 ||| Sharply sour, weak ||| 酸味が強く、薄い ||| 酸涩、寡淡
+471a19e8d ||| Under-extracted. Grind one step finer, raise the water temperature by 1 to 2 °C, or extend the time. ||| 抽出不足です。挽き目を1段階細かくするか、湯温を1〜2 °C上げるか、時間を延ばします。 ||| 萃取不足。研磨调细一档，水温提高1至2 °C，或延长时间。
+ec16509bb ||| Burnt bitterness, drying ||| 焦げたような苦み、口が渇く ||| 焦苦、口干
+cec19fb96 ||| Over-extracted. Grind coarser, lower the temperature, shorten the time or pour more gently. ||| 過抽出です。粗く挽くか、温度を下げるか、時間を短くするか、やさしく注ぎます。 ||| 过度萃取。研磨调粗、降低温度、缩短时间或注水更轻柔。
+65b4891cc ||| Thin, lacking body ||| 薄く、ボディが足りない ||| 稀薄、缺乏醇厚度
+3d45e2ea7 ||| Add 1 to 2 g more coffee, or use less water: from a 1:16 ratio down to 1:15. ||| 豆を1〜2 g増やすか、湯を減らします。比率を1:16から1:15へ。 ||| 增加1至2克粉量，或减少水量：粉水比从1:16降到1:15。
+dec41650e ||| Sweet, rounded, long finish ||| 甘く、まろやかで、長い余韻 ||| 甜、圆润、余韵悠长
+73e1430f8 ||| That's your recipe. Record it with the Save image button so you can brew it exactly the same next time. ||| それがあなたのレシピです。「画像で保存」ボタンで記録しておけば、次も同じように淹れられます。 ||| 这就是您的配方。用“保存图片”按钮记下来，下次就能冲出一模一样的味道。
+6c1d287d0 ||| Pulped, fermented, washed of mucilage, then dried. A clean, bright cup with bright acidity. ||| 果肉を除き、発酵させ、ミューシレージを洗い流してから乾燥。クリーンですっきりした、爽やかな酸味の一杯。 ||| 脱皮、发酵、洗净果胶层后晾晒。杯中干净清爽，酸质明亮。
+6b0995eec ||| Part of the mucilage is kept during drying. Sweeter and rounder-bodied than Washed. ||| ミューシレージの一部を残して乾燥。Washedより甘く、ボディがまろやか。 ||| 晾晒时保留部分果胶层。比Washed更甜，醇厚度更圆润。
+d8e4e1a8a ||| Dried as whole cherries. Ripe-fruit aromas, rich sweetness, full body. ||| 実を丸ごと乾燥。熟した果実の香り、濃い甘み、しっかりしたボディ。 ||| 整颗果实晾晒。熟果香气，浓郁甜感，醇厚。
+d30b8a939 ||| Anaerobic Natural ||| 嫌気性Natural ||| 厌氧Natural
+f2a6080bb ||| Cherries are held in sealed tanks before drying. Clear fermented aromas, like ripe fruit and wine. ||| 乾燥の前に、密閉した容器で実をねかせます。熟した果実やワインのような、はっきりした発酵の香り。 ||| 晾晒前将果实置于密封罐中。发酵香气明显，似熟果和葡萄酒。
+17b19c934 ||| Very light ||| 極浅煎り ||| 极浅度
+9eecceedb ||| The beans are still hard, with lots of bright acidity and floral aromas. ||| 豆はまだ硬く、爽やかな酸味と花の香りが豊か。 ||| 豆子仍较硬，明亮酸质和花香丰富。
+55942c051 ||| Light ||| 浅煎り ||| 浅度
+7473abcb9 ||| Bright acidity, clear fruit aromas. ||| 爽やかな酸味、はっきりしたフルーツの香り。 ||| 明亮酸质，果香鲜明。
+1e0d5e6d3 ||| Medium-light ||| 中浅煎り ||| 中浅度
+d7be43949 ||| A balance of acidity and sweetness. ||| 酸味と甘みのバランス。 ||| 酸甜平衡。
+57bc6dc81 ||| Caramel sweetness, medium body, gentle acidity. ||| キャラメルの甘み、中程度のボディ、やわらかな酸味。 ||| 焦糖甜感，中等醇厚，酸质柔和。
+2a6ecd676 ||| Medium-dark ||| 中深煎り ||| 中深度
+21eb1b615 ||| Brown sugar, cocoa, mild bitterness. ||| 黒糖、カカオ、ほのかな苦み。 ||| 红糖、可可、微苦。
+6f0dad88a ||| Strong, clearly bitter, dark chocolate. The roast style of the traditional phin cup. ||| 濃厚ではっきりした苦み、ダークチョコレート。伝統的なフィンの一杯の焙煎スタイル。 ||| 浓郁、苦味鲜明、黑巧克力。传统滴滤咖啡的烘焙风格。
+5bc486efd ||| Cone dripper, paper filter, hand pouring. A clean cup with clear aromas, suited to light to medium roast Arabica. ||| 円すい形ドリッパー、ペーパーフィルター、手で注ぐ。クリーンで香りがはっきりした一杯で、浅煎り〜中煎りのArabicaに向いています。 ||| 锥形滤杯、滤纸、手工注水。杯中干净、香气清晰，适合浅度至中度烘焙的Arabica。
+9c638a019 ||| 4:6 · five pours ||| 4:6 · 5回注湯 ||| 4:6 · 五次注水
+cab0a71ee ||| The first two pours adjust acidity and sweetness; the next three adjust strength. ||| 最初の2回で酸味と甘みを、残りの3回で濃さを調整します。 ||| 前两次注水调整酸甜，后三次调整浓度。
+0304456b8 ||| Bloom, then one pour ||| 蒸らしてから1回で注ぐ ||| 闷蒸后一次注水
+d78d9f0ac ||| Bloom for 45 seconds, pour all the water at once, swirl gently and let it drain. ||| 45秒蒸らし、湯を一度に全部注ぎ、軽く回して落ちきるまで待ちます。 ||| 闷蒸45秒，一次注完全部水，轻轻摇晃后等待滴完。
+3c3282289 ||| Three pours ||| 3回注湯 ||| 三次注水
+7a8dddff4 ||| Bloom, then two equal pours. Easy to do, a balanced cup. ||| 蒸らしてから2回に分けて同量を注ぎます。簡単で、バランスのよい一杯に。 ||| 闷蒸后分两次等量注水。操作简单，口感平衡。
+d6ba9146b ||| Pulse pouring ||| パルス注湯 ||| 分段注水
+978b85eec ||| Bloom, then four small pulses, keeping the grounds covered with water. A sweet, full cup. ||| 蒸らしてから4回に分けて少しずつ注ぎ、粉が常に湯に浸かった状態を保ちます。甘く厚みのある一杯に。 ||| 闷蒸后分四小段注水，让水始终没过咖啡粉。口感甜而厚实。
+66eb327f4 ||| Aluminum or stainless-steel phin, slow drip. A strong, full-bodied cup, suited to medium to dark roast Robusta. ||| アルミかステンレスのフィンで、ゆっくりしたたらせます。濃くしっかりしたボディの一杯で、中煎り〜深煎りのRobustaに向いています。 ||| 铝制或不锈钢滴滤壶，缓慢滴落。咖啡浓郁醇厚，适合中度至深度烘焙的Robusta。
+169e4f75a ||| Hot black phin ||| ホットのブラックフィン ||| 热滴滤黑咖啡
+9c0afda9f ||| A hot black cup, for slow sipping. ||| ホットのブラックを、ゆっくり味わう。 ||| 一杯热黑咖啡，慢慢品。
+f2553f41e ||| Iced black phin ||| アイスのブラックフィン ||| 滴滤冰黑咖啡
+6488dde94 ||| Brew it stronger because melting ice dilutes it. ||| 氷が溶けて薄まるので、濃いめに淹れます。 ||| 因为冰块融化会冲淡，所以冲浓一些。
+d69be0505 ||| Iced milk phin ||| フィンのアイスミルク ||| 滴滤冰奶咖啡
+3a72eb74a ||| Saigon-style milk coffee: strong coffee, condensed milk, ice. ||| サイゴン式のミルクコーヒー：濃いコーヒー、練乳、氷。 ||| 西贡式奶咖：浓咖啡、炼乳、冰。
+deb688759 ||| Bạc xỉu ||| バクシウ ||| bạc xỉu
+08611726c ||| Lots of milk, a little coffee, rich and mild. ||| ミルクが多く、コーヒーは少なめで、コクがありまろやか。 ||| 奶多咖啡少，香浓柔和。
+6462f8569 ||| A 9-bar pressure machine. A short, dense cup with lots of crema, the base for Americano, latte and cappuccino. ||| 9気圧のマシン。量が少なく濃密で、クレマがたっぷり。アメリカーノ、ラテ、カプチーノのベースになります。 ||| 9巴压力的咖啡机。杯量小、浓稠、油脂丰富，是美式、拿铁、卡布奇诺的基底。
+5706af15d ||| A standard double shot, balanced between strength and sweetness. ||| 標準的なダブルショット。濃さと甘みのバランスがよい。 ||| 标准双份，浓度与甜感平衡。
+16ee72b46 ||| A shorter shot, dense and sweet, less bitter. ||| より短いショット。濃密で甘く、苦みは少なめ。 ||| 更短的一份，浓稠甜美，苦味较少。
+8a8fb30ec ||| A longer shot, lighter, with clear aromas but more easily bitter. ||| より長いショット。軽く香りがはっきりしますが、苦くなりやすい。 ||| 更长的一份，更清淡，香气清晰但容易发苦。
+5bcf255c5 ||| A 1:2 shot topped up with hot water. ||| 1:2のショットにお湯を加えたもの。 ||| 一份1:2的意式浓缩加热水。
+d017bf90a ||| A 1:2 shot with steamed milk and a thin layer of foam. ||| 1:2のショットに温めたミルク、薄い泡。 ||| 一份1:2的意式浓缩加热奶，薄薄一层奶泡。
+ddaf13bbb ||| A 1:2 shot with very foamy milk. ||| 1:2のショットに泡たっぷりのミルク。 ||| 一份1:2的意式浓缩加大量奶泡。
+c3ec1cd48 ||| Steeped cold for many hours. A smooth, sweet, low-acid, refreshing cup. ||| 冷たい水に何時間も浸します。まろやかで甘く、酸味が少なく、爽やかな一杯。 ||| 冷水浸泡数小时。口感顺滑、甜、低酸，清凉爽口。
+082dfd6af ||| 1:5 concentrate ||| 濃縮原液 1:5 ||| 1:5浓缩原液
+808c7d002 ||| Steep a strong concentrate and dilute it 1:1 with water or milk when serving. ||| 濃い原液をつくり、飲むときに水かミルクで1:1に割ります。 ||| 浸泡出浓缩原液，饮用时按1:1加水或牛奶。
+5bd75e358 ||| Ready to drink 1:10 ||| そのまま飲める 1:10 ||| 即饮型 1:10
+ee46bea9f ||| Steep it weaker, filter and drink right away, with no dilution needed. ||| 薄めに浸し、こしたらすぐに飲めます。割る必要はありません。 ||| 浸泡得淡一些，过滤后即可饮用，无需再稀释。
+ed5f1e3b6 ||| Cold brew with milk ||| コールドブリューミルク ||| 冷萃奶咖
+8191c46ee ||| 1:5 concentrate mixed with fresh milk, plus condensed milk to taste. ||| 1:5の原液を牛乳で割り、お好みで練乳を加えます。 ||| 1:5原液兑鲜奶，按口味加炼乳。
+b5b999acb ||| Hot brew over ice ||| 急冷式アイスコーヒー ||| 热冲冰镇
+6cd66c0fb ||| Brewed hot quickly over ice: aromatic like a pour-over, and cold right away. ||| 氷の上に熱いコーヒーを素早く落とします。ハンドドリップのような香りで、すぐに冷たくなります。 ||| 快速热冲在冰上：香气如手冲，立刻冰凉。
+b9dc340f8 ||| 280,000 VND/kg ||| 280,000 VND/kg ||| 280,000 VND/公斤
+3465feda8 ||| 320,000 VND/kg ||| 320,000 VND/kg ||| 320,000 VND/公斤
+b7dabc4d6 ||| 550,000 VND/kg ||| 550,000 VND/kg ||| 550,000 VND/公斤
+7e9568e8e ||| 345,000 VND/kg ||| 345,000 VND/kg ||| 345,000 VND/公斤
+a292c7a00 ||| 365,000 VND/kg ||| 365,000 VND/kg ||| 365,000 VND/公斤
+18a190019 ||| 389,000 VND/kg ||| 389,000 VND/kg ||| 389,000 VND/公斤
+43bf38132 ||| 435,000 VND/kg ||| 435,000 VND/kg ||| 435,000 VND/公斤
+d72bb7b6f ||| 400,000 VND/kg ||| 400,000 VND/kg ||| 400,000 VND/公斤
+15d7144a0 ||| 350,000 VND/kg ||| 350,000 VND/kg ||| 350,000 VND/公斤
+aef15eb63 ||| 112,500 VND per 250 g bag ||| 112,500 VND/250 g袋 ||| 112,500 VND/250克袋
+2818f1577 ||| 87,500 VND per 250 g bag ||| 87,500 VND/250 g袋 ||| 87,500 VND/250克袋
+19ce02d1a ||| 100,000 VND per 250 g bag ||| 100,000 VND/250 g袋 ||| 100,000 VND/250克袋
+e51d6d7d7 ||| 105,000 VND per 250 g bag ||| 105,000 VND/250 g袋 ||| 105,000 VND/250克袋
+3997d53a2 ||| Contact us · coming soon ||| お問い合わせ · 近日発売 ||| 请联系 · 即将上市
+7ca412f82 ||| Arabica Natural Cầu Đất ||| Arabica Natural Cầu Đất ||| Arabica Natural Cầu Đất
+42ea0ae56 ||| Arabica Washed Cầu Đất ||| Arabica Washed Cầu Đất ||| Arabica Washed Cầu Đất
+e88de964e ||| fine, for espresso machines ||| 細挽き、エスプレッソマシン用 ||| 细，适合意式咖啡机
+1d0297832 ||| medium-fine, like table salt ||| 中細挽き、食卓塩くらい ||| 中细，像食盐
+f8a4fde56 ||| medium, like sand ||| 中挽き、砂くらい ||| 中等，像沙子
+49831658d ||| medium-coarse, like sea salt ||| 中粗挽き、海塩くらい ||| 中粗，像海盐
+bfe516185 ||| coarse, like rock salt ||| 粗挽き、粗塩くらい ||| 粗，像粗盐
+53fab849b ||| Pour evenly from the center outwards and wait for the coffee to bloom ||| 中心から外へ均一に注ぎ、粉がふくらむのを待つ ||| 从中心向外均匀注水，等待咖啡粉膨胀
+e62a4da75 ||| Pour 2: same group, adjusts acidity and sweetness ||| 2回目：酸味と甘みを調整するグループ ||| 第2次：同属调整酸甜的一组
+c41902c9b ||| Start of the strength-adjusting group ||| 濃さを調整するグループの開始 ||| 开始调整浓度的一组
+30a01f0a4 ||| Last pour, let it drain ||| 最後の注湯、落ちきるまで待つ ||| 最后一次，等待滴完
+71a2b84f0 ||| Bloom, swirl gently so the grounds are evenly wet ||| 蒸らし、軽く回して粉全体を湿らせる ||| 闷蒸，轻轻摇晃让咖啡粉均匀湿润
+04d68b262 ||| Pour continuously to the end, finishing before 1:45 ||| 最後まで続けて注ぎ、1:45までに終える ||| 连续注水至结束，在1:45前完成
+03f207b75 ||| Swirl gently to level the bed ||| 軽く回して粉の表面を平らにする ||| 轻轻摇晃使粉面平整
+20ab9c2d1 ||| Bloom for 45 seconds ||| 45秒蒸らす ||| 闷蒸45秒
+f6c1166cf ||| Pour up to 60% of the water ||| 湯量の60%まで注ぐ ||| 注水至总水量的60%
+4e5927c45 ||| Pour to the full amount, let it drain ||| 全量まで注ぎ、落ちきるまで待つ ||| 注满全部水量，等待滴完
+941a5777e ||| Bloom for 40 seconds ||| 40秒蒸らす ||| 闷蒸40秒
+98d9230e8 ||| Pulse 1 ||| 1回目 ||| 第1段
+e4b66605a ||| Pulse 2 ||| 2回目 ||| 第2段
+9773d7078 ||| Pulse 3 ||| 3回目 ||| 第3段
+e40f58961 ||| Pulse 4, let it drain ||| 4回目、落ちきるまで待つ ||| 第4段，等待滴完
+63cc749b7 ||| Temperature ||| 温度 ||| 温度
+002d7561e ||| water just off the boil, cooled slightly ||| 沸かしたての湯を少し冷ます ||| 刚烧开的水，稍微放凉
+08c4f8e9b ||| including drain time ||| 落ちきるまでの時間を含む ||| 包括滴完的时间
+1623fd11d ||| the grounds hold back about twice their weight in water ||| 粉は豆の量の約2倍の湯を含む ||| 咖啡渣吸住约两倍粉量的水
+a1fc16bee ||| Bloom: wet the coffee evenly and wait for it to swell ||| 蒸らし：粉の表面を均一に湿らせ、ふくらむのを待つ ||| 闷蒸：均匀浇湿咖啡粉面，等待膨胀
+3da1f78bc ||| Fill up, put the lid on and wait for it to drip ||| いっぱいまで注ぎ、ふたをして、落ちるのを待つ ||| 注满，盖上盖子，等待滴落
+7ef4c0840 ||| Ice cubes ||| 角氷 ||| 冰块
+243dce963 ||| Sugar ||| 砂糖 ||| 糖
+753550c1b ||| to taste ||| お好みで ||| 按口味
+65235b4a5 ||| Condensed milk ||| 練乳 ||| 炼乳
+feaf78151 ||| Fresh milk ||| 牛乳 ||| 鲜奶
+10bf19ccf ||| brewed strong because milk and ice are added ||| ミルクと氷を加えるので濃いめに淹れる ||| 因为要加奶和冰，所以冲得浓一些
+369a8c40c ||| boiling water left to cool for about 30 seconds ||| 沸騰した湯を約30秒冷ます ||| 沸水放凉约30秒
+50d8fe77d ||| until it stops dripping ||| 落ちきるまで ||| 滴完为止
+c863b5b5f ||| strong coffee ||| 濃いコーヒー ||| 浓咖啡
+11b0706a1 ||| Start the shot; for the first few seconds water soaks the puck ||| 抽出を開始、最初の数秒は湯が粉にしみ込む ||| 开始萃取，最初几秒水浸透粉饼
+33f4be88c ||| First drops appear, dark brown ||| 最初のしずくが出る、濃い茶色 ||| 第一滴流出，呈深褐色
+f20b7bbee ||| Stop when you reach the target ||| 目標量で止める ||| 达到目标即停止
+9d2dbb5df ||| Hot water ||| お湯 ||| 热水
+5cbc68bc5 ||| steamed to 60–65 °C, thin foam ||| 60〜65 °Cに温め、薄い泡 ||| 打发加热至60–65 °C，薄奶泡
+f8d2867cc ||| steamed with lots of foam ||| 泡をたっぷり立てる ||| 打出大量奶泡
+4799de7b9 ||| weighed on the scale ||| スケールで計量 ||| 在秤上称量
+d045cd02c ||| machine water temperature ||| マシンの湯温 ||| 咖啡机水温
+74fa19105 ||| from the moment you press start ||| ボタンを押した時点から ||| 从按下按钮开始计
+5df382a83 ||| Pressure ||| 圧力 ||| 压力
+f147ddb08 ||| Bloom for 40 seconds over ice ||| 氷の上で40秒蒸らす ||| 在冰上闷蒸40秒
+9219d312c ||| Pour the rest of the hot water ||| 残りの湯を注ぐ ||| 注满剩余热水
+b90a036e4 ||| Ice in the server ||| サーバーに入れる氷 ||| 分享壶中的冰
+3e03b74ad ||| ice chills and dilutes the cup ||| 氷で冷やし、薄める ||| 冰块使咖啡降温并稀释
+3d3944052 ||| plus ||| ＋ ||| 加
+4b0b76610 ||| g of ice ||| g の氷 ||| 克冰
+44471a7d9 ||| including ice ||| 氷を含む ||| 含冰
+1916b0bf3 ||| drink right away ||| すぐに飲む ||| 立即饮用
+35f485b3e ||| Pour in cold or room-temperature water and stir until evenly wet ||| 冷水か常温の水を注ぎ、全体が湿るように混ぜる ||| 倒入冷水或凉开水，搅拌至均匀湿润
+e0b24d2a2 ||| Filter through a paper filter or cloth bag ||| ペーパーフィルターか布袋でこす ||| 用滤纸或布袋过滤
+ae884efe3 ||| Fresh milk when serving ||| 飲むときに牛乳 ||| 饮用时加鲜奶
+d712f49c2 ||| Water or milk when serving ||| 飲むときに水かミルク ||| 饮用时加水或奶
+da711c739 ||| 1 part concentrate : 1 part ||| 原液1：1 ||| 1份原液：1份
+8c75b7007 ||| add condensed milk to taste ||| お好みで練乳を加える ||| 按口味加炼乳
+983366de8 ||| cold or room-temperature water ||| 冷水か常温の水 ||| 冷水或常温水
+93fd052cd ||| strong concentrate ||| 濃い原液 ||| 浓缩原液
+5d2ab2d4a ||| steeped in the fridge at 4 °C ||| 4 °Cの冷蔵庫で浸す ||| 在4 °C冰箱中浸泡
+dfc1a4296 ||| concentrate, diluted 1:1 when serving ||| 原液。飲むときに1:1で割る ||| 原液，饮用时按1:1稀释
+9fe2af9a4 ||| Light roasts are still hard: use hotter water and a slightly finer grind to get enough sweetness. ||| 浅煎りの豆はまだ硬いので、湯温を高めにし、少し細かく挽いて甘さを十分に引き出します。 ||| 浅烘焙的豆子仍较硬：用更热的水、稍细的研磨，才能萃取出足够的甜感。
+3d2f82849 ||| Dark roasts turn bitter easily: keep the water cooler, pour gently and don't go over time. ||| 深煎りは苦くなりやすいので、湯温を低めにし、やさしく注ぎ、時間をかけすぎないようにします。 ||| 深烘焙容易发苦：水温低一些、轻柔注水、不要超时。
+7d2afcc82 ||| Strong fruit and fermentation aromas: use a slightly lower temperature so the cup isn't harsh. ||| フルーツや発酵の香りが強いときは、温度を少し下げて刺激の強い一杯にならないようにします。 ||| 果香和发酵香浓烈时：温度稍低一些，避免口感刺激。
+d9a459c1a ||| Washed gives a clean, bright cup. If it feels thin, add 1 g more coffee. ||| Washedはすっきりとクリーンな一杯になります。薄く感じたら豆を1 g増やします。 ||| Washed带来清爽干净的一杯。如果觉得单薄，就多加1克咖啡粉。
+2985a34bb ||| Place the press lightly, without packing it down. About 2 to 3 seconds per drop is right. ||| 中ぶたは軽くのせ、強く押さえつけません。2〜3秒に1滴くらいがちょうどよい速さです。 ||| 压板轻轻放上，不要压紧。大约2至3秒一滴最合适。
+d149a3d0a ||| Keep the dose fixed and adjust the grind first. Shot runs under 22 seconds: grind finer. Over 35 seconds: grind coarser. ||| 粉量は固定し、まず挽き目を調整します。22秒未満で落ちきるなら細かく、35秒を超えるなら粗く挽きます。 ||| 保持粉量不变，先调整研磨度。萃取不到22秒：调细。超过35秒：调粗。
+5ed8a7c00 ||| Keep cold and use within 7 days. Grind coarse so the liquid is clear and easy to filter. ||| 冷やして7日以内に飲みきってください。粗く挽くと液が澄み、こしやすくなります。 ||| 冷藏保存，7天内饮用完。粗研磨能让液体清澈、易于过滤。
+1ce52c509 ||| Rinse the paper filter with hot water before adding the coffee to remove the paper taste. ||| 粉を入れる前にペーパーフィルターを湯ですすぎ、紙のにおいを取ります。 ||| 放入咖啡粉前先用热水冲洗滤纸，去除纸味。
+d2695a666 ||| Sharply sour and weak: grind one step finer or raise the temperature by 1 to 2 °C. Bitter and drying: grind coarser or lower it by 1 to 2 °C. ||| 酸味が強く薄いときは、1段階細かく挽くか1〜2 °C上げます。苦く口が渇くときは、粗く挽くか1〜2 °C下げます。 ||| 酸涩寡淡：研磨调细一档或升高1至2 °C。苦而口干：调粗研磨或降低1至2 °C。
+3bac6b217 ||| 16–20 hours ||| 16〜20時間 ||| 16–20小时
+0e5499d06 ||| 14–18 hours ||| 14〜18時間 ||| 14–18小时
+9ca0db181 ||| Timeline of the pours ||| 注湯のタイムライン ||| 注水时间轴
+1d6d2c350 ||| BREW RECIPE · MEDILI ||| 抽出レシピ · MEDILI ||| 冲煮配方 · MEDILI
+1903589a5 ||| Coffee: {1} g ||| コーヒー：{1} g ||| 咖啡：{1}克
+59005ce16 ||| Steps: ||| 手順： ||| 步骤：
+95c3f9f59 ||| Start ||| 開始 ||| 开始
+eab3723f5 ||| · pour ||| · 注湯 ||| · 注水
+84575e0be ||| medili.vn · A recipe is a starting point; taste, then adjust to your liking. ||| medili.vn · レシピは出発点です。味わってから好みに合わせて調整を。 ||| medili.vn · 配方只是起点，品尝后再按口味调整。
+633de0577 ||| g coarse-ground coffee ||| g（粗挽きの粉） ||| 克粗研磨咖啡粉
+1ab96a732 ||| Pour ||| 注湯 ||| 注水
+577bfd324 ||| Time ||| 時間 ||| 时间
+cb555993a ||| What to do ||| やること ||| 操作
+e0c57fd01 ||| Pour 1 is {1} g more: more acidic ||| 1回目が{1} g多い：酸味が強め ||| 第1次多{1}克：更酸
+a8384cb66 ||| Pour 2 is {1} g more: sweeter ||| 2回目が{1} g多い：甘め ||| 第2次多{1}克：更甜
+70ccd2983 ||| Timeline in hours of steeping. ||| 浸漬時間（時間単位）のタイムライン。 ||| 以浸泡小时数为时间轴。
+4b24b56f4 ||| Timeline of a shot, in seconds. ||| ショットのタイムライン（秒単位）。 ||| 一份萃取的时间轴，以秒计。
+b0f91a856 ||| Bars show the water in each pour; the dashed line is the total water poured. ||| 棒は各回の注湯量、破線はそれまでに注いだ湯の合計です。 ||| 柱表示每次注水量，虚线表示累计注水总量。
+29a0a5edd ||| Recipe copied. ||| レシピをコピーしました。 ||| 已复制配方。
+3d9283a74 ||| Your browser blocked copying; please use Print or Save image. ||| ブラウザでコピーがブロックされました。印刷か画像保存をご利用ください。 ||| 浏览器阻止了复制，请使用打印或保存图片。
+1659768d6 ||| STEPS ||| 手順 ||| 步骤
+029bf0eaf ||| medili.vn · Devoted to the taste of Di Linh ||| medili.vn · Di Linhの味に魅せられて ||| medili.vn · 迷恋Di Linh的味道
+d5409fce1 ||| Recipe image saved. ||| レシピの画像を保存しました。 ||| 配方图片已保存。
+706d373d2 ||| Couldn't save the image in this browser; please use Print or Copy. ||| このブラウザでは画像を保存できませんでした。印刷かコピーをご利用ください。 ||| 无法在此浏览器中保存图片，请使用打印或复制。

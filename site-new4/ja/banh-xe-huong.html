@@ -1,0 +1,855 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="MeDiliがベトナムの人になじみのある言葉で作ったコーヒーのフレーバーホイール：9つの香りのグループ、大まかなものから具体的なものへの3段階、各香りの由来、焙煎度ごとに際立つグループ、鼻を鍛えるためのテイスティングシート。"><meta property="og:title" content="MeDiliフレーバーホイール"><meta property="og:description" content="MeDiliがベトナムの人になじみのある言葉で作ったコーヒーのフレーバーホイール：9つの香りのグループ、大まかなものから具体的なものへの3段階、各香りの由来、焙煎度ごとに際立つグループ、鼻を鍛えるためのテイスティングシート。"><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>MeDiliフレーバーホイール</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.inl{color:var(--moss);font-weight:600}
+.quiz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.q{border:0;padding:0;margin:0 0 14px;min-width:0}.q legend{padding:0;font-weight:600}
+.res{background:var(--tint);border-radius:14px;padding:16px}.res h3{font:800 2rem/1.1 var(--display);margin:2px 0 4px;color:var(--accent)}
+.res p{margin:6px 0}.rp{font-weight:600}.rp small{font-weight:400;color:var(--muted)}
+.tinyn{font-size:.78rem;color:var(--muted)}
+.gumap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gm{border-top:3px solid var(--copper);padding-top:8px}.gm h3{margin:0;font:800 1.3rem var(--display)}.gm small{color:var(--muted)}
+ol.steps{margin:0 0 8px;padding-left:20px}ol.steps li{margin-bottom:4px;font-size:.9rem}ol.steps li.on{font-weight:700;color:var(--accent)}
+.sop.tight li{grid-template-columns:36px minmax(0,1fr)}.sop.tight .n{font-size:1.5rem}
+.st.off{opacity:.45}
+@media (max-width:820px){.quiz{grid-template-columns:minmax(0,1fr)}}
+
+:root{--ground:#8FA65E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#5D7340}}
+:root[data-theme="dark"]{--ground:#5D7340}
+.mths button{min-width:52px}
+.sgn3{font:italic 600 13.5px var(--sign)!important;fill:var(--accent)!important}
+.sgn{font-size:18px}
+.calc.three{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-bottom:12px}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px}
+.calc input{font-size:.95rem}
+
+:root{--floor:#C69A62;--wall:#EFE3CD}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--floor:#6B4F31;--wall:#3A2D22}}
+:root[data-theme="dark"]{--floor:#6B4F31;--wall:#3A2D22}
+.shophead{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}.shophead>div:last-child{flex:1 1 320px;min-width:0}
+.logoP{background:#F6F0E4;border-radius:12px;padding:8px 12px;display:inline-block}.logoP img{display:block;height:auto;max-width:100%}
+.flow{list-style:none;display:flex;flex-wrap:wrap;gap:6px 24px;padding:0;margin:0;counter-reset:f;font-weight:600;font-size:.9rem;color:var(--muted)}
+.flow li{counter-increment:f}.flow li::before{content:counter(f) ". ";color:var(--accent)}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:0}
+.whob{text-align:left;padding:12px 16px;border:2px solid var(--rule);border-radius:12px;background:var(--panel);color:var(--ink);cursor:pointer;font:inherit}
+.whob b{display:block;font-size:1.02rem}.whob small{color:var(--muted)}.whob.on{border-color:var(--accent)}
+.ah{font:800 1.45rem var(--display);margin:0 0 8px}
+.ctl{min-width:0}.ctl .card{padding:14px}
+.recbox{background:var(--tint);border-radius:12px;padding:10px;margin-top:12px;display:grid;gap:6px}
+.recb{text-align:left;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:7px 10px;color:var(--ink);cursor:pointer;font:inherit}.recb b{display:block;font-size:.9rem}.recb small{color:var(--muted)}.recb.on{border-color:var(--accent)}
+.line{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule)}.line small{display:block;color:var(--muted)}
+.qty{display:flex;align-items:center;gap:6px;white-space:nowrap}.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+a.btn{text-decoration:none;display:inline-block}
+.bagn{font:italic 600 6.5px var(--sign)!important;fill:#4A2A1A!important}.bagn2{font:700 4.6px var(--body)!important;fill:#A23B24!important}
+.bag.off{opacity:.25}.bag.on polygon{stroke:var(--accent)!important;stroke-width:2.4}
+.bench{align-items:start}
+.sgn3{font:italic 600 13px var(--sign)!important;fill:var(--accent)!important}
+.tag.big rect{fill:var(--accent)}
+
+.sent{margin-top:10px;background:var(--tint);border-radius:12px;padding:12px}.sent>b{display:block;margin-bottom:4px}
+.ordertxt{white-space:pre-wrap;overflow-wrap:anywhere;font:500 .78rem/1.5 var(--mono);margin:6px 0 0;user-select:all}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}.qrs svg{display:block;width:100%;height:auto;border-radius:6px}.qrs small{display:block;text-align:center;margin-top:4px;color:var(--muted)}
+:root{--skin:#EBC9A6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--skin:#8C6A4D}}:root[data-theme="dark"]{--skin:#8C6A4D}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.ctl .card{padding:16px}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style>
+<style>
+/* Khung chung sau khi gộp Manus: menu nhóm, chân trang, màu phong thủy Thổ (nâu, vàng đất, đỏ; không xanh lá, không đen). */
+:root{--moss:#8D4E22;--good:#8D4E22;
+  --i-red:#B33A24;--i-red2:#7A2414;--i-gold:#D9B77E;--i-gold2:#B8894A;--i-coffee:#6B4226;--i-brown:#8D5A32;--i-milk:#E9D3AE;
+  --seg1:#9E3B26;--seg2:#B8894A;--seg3:#6B4226;--seg4:#D9B77E;--seg-t1:#FFF6EC;--seg-t2:#2E1C12;--cmp2:#C9A46A;
+  --cx1:#BB8526;--cx2:#7A348E;--cx3:#83470D;--cx4:#CB4D54}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--panel)}
+.mnav{display:none!important}
+
+/* menu */
+.mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
+.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p a:hover{color:var(--accent)}
+.mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-m{margin:0;font-size:inherit}
+.mh-m>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font:600 .86rem var(--body);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;white-space:nowrap;user-select:none}
+.mh-m>summary::-webkit-details-marker{display:none}
+.mh-m>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mh-m[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-m>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-pan{position:absolute;left:0;right:0;top:100%;background:var(--panel);border-bottom:1px solid var(--rule);box-shadow:0 18px 30px rgba(46,28,18,.16);max-height:calc(100vh - 60px - env(safe-area-inset-top,0px));overflow:auto;overscroll-behavior:contain}
+.mh-grid{max-width:1560px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 26px;padding-block:18px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-g{margin:0 0 6px;font:600 .72rem/1.3 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mh-c ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-c a{display:block;color:var(--ink);text-decoration:none;font:500 .95rem/1.35 var(--body);padding:6px 0;border-bottom:1px solid transparent}
+.mh-c a:hover{color:var(--accent)}
+.mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
+.mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
+.mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.mh-i{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none}
+.mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
+@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+@media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
+
+/* chân trang */
+.mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
+.mf-in{max-width:1560px;margin:auto;padding-block:30px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:26px}
+.mf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border-bottom:1px solid var(--rule);padding-bottom:24px}
+.mf-k{flex-basis:100%;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mf-h{margin:0;font:italic 600 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sign);color:var(--ink);text-wrap:balance}
+.mf-h em{color:var(--accent)}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:22px 30px}
+.mf-brand b{display:block;font:italic 600 1.35rem/1.25 var(--sign);color:var(--accent)}
+.mf-brand span{display:block;margin-top:6px}.mf-brand small{display:block;margin-top:6px;color:var(--muted);letter-spacing:.06em}
+.mf-t{margin:0 0 6px;font:600 .72rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mf-col{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mf-col a{color:var(--ink);text-decoration:none;padding:2px 0}.mf-col a:hover{color:var(--accent);text-decoration:underline}
+.mf-col p{margin:0 0 6px}.mf-n{white-space:nowrap;user-select:all}
+.mf-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:.84rem}
+.mf-base i{font:italic 600 1rem var(--sign);color:var(--accent)}
+@media (max-width:980px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-brand{grid-column:1/-1}}
+@media (max-width:520px){.mf-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ảnh thật */
+.pf{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.pf img{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;border:1px solid var(--rule);background:var(--tint)}
+.pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.pfw img{aspect-ratio:3/1;object-fit:cover}
+.split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
+@media (max-width:700px){.pfw img{aspect-ratio:2/1}}
+.pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
+.pgal{display:grid;gap:10px}
+.pgal>h2{margin:0}
+.pgal>p{margin:0;color:var(--muted);max-width:72ch}
+
+/* chọn ngôn ngữ */
+.mh-l{position:relative;margin:0}
+.mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
+.mh-l>summary::-webkit-details-marker{display:none}
+.mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
+.mh-lp a:hover{background:var(--tint);color:var(--accent)}
+.mh-lp a[aria-current]{color:var(--accent)}
+@media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
+/* nút Zalo, Facebook nổi góc trái bên dưới */
+.fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
+.fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
+.fl-b svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fl-b:hover{transform:translateY(-2px) scale(1.05)}
+.fl-b:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.fl-b::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;background:var(--ink);color:var(--panel);font:600 .8rem var(--body);letter-spacing:0;padding:6px 11px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{opacity:1;transform:translate(0,-50%)}}
+@media (max-width:600px){.fl-c{gap:8px}.fl-b{width:46px;height:46px;font-size:.6rem}.fl-b svg{width:17px;height:17px}}
+@media (max-width:1020px){body:has(.nx-bar) .fl-c{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+/* chừa chỗ cho nút nổi ở cuối chân trang */
+@media (min-width:601px){.mf-base{padding-left:76px}}
+@media (max-width:600px){footer.mf{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}}
+@media print{.fl-c{display:none}}
+
+/* thành phần dùng chung cho trang mới */
+.wrap.art{max-width:980px}
+.k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.eye{font:600 .8rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0}
+section>h2 em,.p-h2 em{font-style:normal;color:var(--accent)}
+.p-h2{font:800 2.05rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em;text-wrap:balance}
+.p-head{display:grid;gap:4px}
+.p-head h1{margin:6px 0 0}
+.p-head .lead{font-size:1.06rem;color:var(--muted);max-width:68ch;margin:10px 0 0}
+.p-sig{font:italic 600 1.25rem var(--sign);color:var(--accent);margin:10px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+a.btn{text-decoration:none;display:inline-block}
+.btn.ghost{border-color:var(--rule)}
+.p-sec{display:grid;gap:10px}
+.p-sec>.lead{margin:0;max-width:72ch;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.facts>div{border-top:2px solid var(--accent);padding-top:8px;min-width:0}
+.facts b{display:block;font:800 2.4rem/1.05 var(--display);color:var(--accent)}
+.facts span{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.g3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.g2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.g4{grid-template-columns:minmax(0,1fr)}}
+.box{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:18px 20px;min-width:0}
+.box h3{font:800 1.45rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em}
+.box p{margin:0 0 8px}.box p:last-child{margin-bottom:0}
+.box .k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.box .ft{margin-top:10px;padding-top:10px;border-top:1px solid var(--rule);font-size:.88rem;color:var(--muted)}
+.box .ft b{color:var(--ink)}
+.box>svg.pi{width:34px;height:34px;color:var(--accent)}
+svg.pi{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+svg.pi .fi{fill:var(--accent);stroke:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font:600 .76rem var(--body);border:1px solid var(--rule);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.lnk{color:var(--accent);font-weight:600;text-decoration:none}.lnk:hover{text-decoration:underline}
+.lnks{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px}
+.quote{margin:0;font:italic 600 clamp(1.4rem,3vw,2.1rem)/1.3 var(--sign);color:var(--accent);max-width:34ch;text-wrap:balance}
+.split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:20px 30px;align-items:center}
+.split img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--rule)}
+.illw{max-width:320px;width:100%;justify-self:center}
+@media (max-width:820px){.split{grid-template-columns:minmax(0,1fr)}.illw{max-width:210px}}
+.pst{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:st}
+.pst>li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:4px 16px;align-items:start;background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 16px;min-width:0}
+.pst>li .n{grid-row:1/3;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--tint);color:var(--accent)}
+.pst>li .n svg{width:24px;height:24px}
+.pst h3{margin:0;font:700 1.05rem/1.3 var(--body)}
+.pst h3 small{font:600 .74rem var(--body);letter-spacing:.06em;color:var(--muted);margin-right:6px}
+.pst p{margin:0;font-size:.93rem}
+.pst.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pst.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.pst.three{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.pst.two{grid-template-columns:minmax(0,1fr)}}
+.trip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.trip a{display:flex;flex-direction:column;height:100%;background:var(--panel);border:1px solid var(--rule);border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none}
+.trip img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;max-width:100%}
+.trip b{font:800 1.25rem/1.15 var(--display);padding:10px 14px 0}
+.trip b small{display:block;font:600 .72rem var(--body);letter-spacing:.08em;color:var(--accent);margin-bottom:2px}
+.trip span{padding:4px 14px 14px;color:var(--muted);font-size:.88rem}
+.trip a:hover b{color:var(--accent)}
+@media (max-width:1180px){.trip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,32%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.trip li{scroll-snap-align:start}}
+@media (max-width:640px){.trip{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:minmax(0,1fr);overflow:visible}}
+.seg{display:flex;gap:2px;height:28px;margin:6px 0 4px}
+.seg i{display:flex;align-items:center;padding:0 8px;border-radius:4px;font:700 .78rem var(--mono);font-style:normal;white-space:nowrap;overflow:hidden;min-width:0}
+.seg i.s1{background:var(--seg1);color:var(--seg-t1)}.seg i.s2{background:var(--seg2);color:var(--seg-t2)}
+.seg i.s3{background:var(--seg3);color:var(--seg-t1)}.seg i.s4{background:var(--seg4);color:var(--seg-t2)}
+.areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:8px}
+.areas>div{border-top:1px solid var(--rule);padding-top:10px;min-width:0}
+.areas .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.areas b{font:700 1rem var(--body)}.areas span{display:block;color:var(--muted);font-size:.86rem}
+.areas strong{display:block;font:800 1.9rem/1.1 var(--display);margin-top:4px}
+.areas strong small{font:600 .8rem var(--body);color:var(--muted);margin-left:6px}
+@media (max-width:900px){.areas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cmp{display:grid;gap:10px;margin-top:8px}
+.cmp>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center}
+.cmp span{font-size:.88rem}.cmp span b{display:block;font-size:.95rem}
+.cmp .tr{position:relative;height:24px;margin-right:64px}
+.cmp .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0;background:var(--accent)}
+.cmp .tr i.b{background:var(--cmp2)}
+.cmp .tr em{position:absolute;top:50%;transform:translateY(-50%);font:700 .9rem var(--mono);font-style:normal;color:var(--ink);white-space:nowrap}
+@media (max-width:520px){.cmp>div{grid-template-columns:minmax(0,1fr)}}
+.loc{display:grid;gap:4px}
+.loc .ttl{display:flex;gap:10px;align-items:center}
+.loc .ttl svg{color:var(--accent)}
+.sel{user-select:all}
+.cp{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.cp strong{font:700 1.25rem var(--mono);user-select:all;overflow-wrap:anywhere}
+.note{font-size:.86rem;color:var(--muted);margin:0}
+.p-form{display:grid;gap:12px}
+.p-form .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:620px){.p-form .row2{grid-template-columns:minmax(0,1fr)}}
+.p-form label{display:grid;gap:4px;font:600 .9rem var(--body)}
+.p-form label small{font-weight:400;color:var(--muted)}
+.p-form input,.p-form select,.p-form textarea{font:500 1rem var(--body);padding:9px 11px;border:1px solid var(--rule);border-radius:10px;background:var(--bg);color:var(--ink);width:100%;min-width:0}
+.p-form textarea{resize:vertical}
+.p-form fieldset{border:0;margin:0;padding:0;min-width:0}
+.p-form legend{font:600 .9rem var(--body);padding:0;margin-bottom:6px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{display:inline-flex;flex-direction:row;align-items:center;gap:6px;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font:600 .86rem var(--body);cursor:pointer;background:var(--panel)}
+.opts input{width:auto;margin:0;accent-color:var(--accent)}
+.opts label:has(input:checked){border-color:var(--accent);background:var(--tint)}
+.msg{white-space:pre-wrap;font:500 .84rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:0;overflow-wrap:anywhere;user-select:all}
+.fstat{font:500 .86rem var(--body);color:var(--muted);min-height:1.3em;margin:0}
+.p-art{max-width:70ch;font-size:1.04rem;line-height:1.78}
+.p-art h2{font:800 1.75rem/1.2 var(--display);margin:30px 0 8px;letter-spacing:.01em}
+.p-art p{margin:0 0 14px}
+.p-art ul,.p-art ol{margin:0 0 14px;padding-left:22px}.p-art li{margin-bottom:6px}
+.p-art .rbox{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 18px;margin:18px 0}
+.p-art .rbox h3{margin:0 0 6px;font:700 1rem var(--body)}
+.p-art .rbox ol{margin:0}
+.p-art .pf,.p-art .pfs{margin:20px 0}
+.p-art blockquote{margin:22px 0;padding:0 0 0 18px;border-left:3px solid var(--accent);font:italic 600 1.3rem/1.45 var(--sign);color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font:600 .8rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.meta b{color:var(--accent)}
+.art-fig{max-width:880px}
+.art-fig svg{display:block;width:100%;height:auto;max-height:340px;background:var(--tint);border-radius:16px}
+.jcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.jcards a{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--rule);border-radius:16px;overflow:hidden;color:var(--ink);text-decoration:none;min-width:0}
+.jcards .th{background:var(--tint);display:grid;place-items:center;aspect-ratio:3/2;max-width:100%}
+.jcards .th svg{display:block;width:100%;height:100%}
+.jcards .bd{padding:12px 16px 16px;display:grid;gap:4px}
+.jcards .meta{font-size:.72rem}
+.jcards h3{margin:2px 0 0;font:800 1.35rem/1.15 var(--display);text-wrap:balance}
+.jcards p{margin:0;color:var(--muted);font-size:.9rem}
+.jcards a:hover h3{color:var(--accent)}
+@media (max-width:1000px){.jcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.jcards{grid-template-columns:minmax(0,1fr)}}
+.jfeat{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);padding:0;overflow:hidden;text-decoration:none;color:var(--ink)}
+.jfeat .th{background:var(--tint);display:grid;place-items:center;padding:14px;min-width:0}
+.jfeat .th svg{display:block;width:100%;max-width:340px;height:auto}
+.jfeat .bd{padding:20px 24px;display:grid;gap:6px;align-content:center;min-width:0}
+.jfeat h3{font:800 2.1rem/1.1 var(--display);margin:0;letter-spacing:.01em}
+.jfeat p{margin:0}.jfeat .bd>p:not(.meta){color:var(--muted);max-width:60ch}
+.jfeat:hover h3{color:var(--accent)}
+@media (max-width:760px){.jfeat{grid-template-columns:minmax(0,1fr)}.jfeat .th svg{max-width:280px}}
+.mdl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin-top:4px}
+.mdl a{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center;border-top:1px solid var(--rule);padding-top:10px;color:var(--ink);text-decoration:none;min-width:0}
+.mdl a svg.pi{width:30px;height:30px;color:var(--accent)}
+.mdl b{display:block;font:700 1rem var(--body)}.mdl small{display:block;color:var(--muted);font-size:.86rem}
+.mdl a:hover b{color:var(--accent)}
+.kser{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink)}
+.kser svg.pi{width:34px;height:34px;color:var(--accent);margin-bottom:4px}
+.kser p{color:var(--muted);font-size:.92rem}
+.kser .lnk{margin-top:auto;padding-top:6px}
+.kser:hover h3{color:var(--accent)}
+.g5k{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:1280px){.g5k{grid-template-columns:repeat(2,minmax(0,1fr))}.g5k>:first-child{grid-column:1/-1}}
+@media (max-width:560px){.g5k{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:1100px){.mdl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mdl{grid-template-columns:minmax(0,1fr)}}
+.ill .o{stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.ill text{font:600 12px var(--body);fill:var(--muted)}
+@media (max-width:620px){.p-h2{font-size:1.75rem}.facts b{font-size:2rem}}
+
+.mnote{font-size:.84rem;color:var(--muted);margin:8px 0 0;line-height:1.45}
+#scene .gl{fill:var(--panel);fill-opacity:.18}
+#scene .glt{fill:var(--panel);fill-opacity:.12}
+#scene .lcdb{fill:#2E1C12;stroke:none}
+#scene .lcd{font:700 7.6px var(--mono);fill:#F3D9A4}
+#scene .wtx{font:700 8px var(--body);fill:#3A2416}
+#scene .flowT{font-size:12.5px}
+#scene .ped{fill:#E6DCC8}#scene .ped2{fill:#CFC2A8}#scene .ped3{fill:#B7A98C}
+#scene .lcd.sm{font-size:6.5px}
+#scene .nowr{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-dasharray:4 3}
+#scene .flowL{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-dasharray:3 6;opacity:.75}
+.running #scene .flowL,#scene.running .flowL{animation:flowA .8s linear infinite}
+@keyframes flowA{to{stroke-dashoffset:-18}}
+#tok{display:none;fill:var(--accent);stroke:var(--panel);stroke-width:2}
+.running #tok{display:block}
+.lg{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.82rem;margin:2px 0 0;color:var(--muted)}
+.lg span{display:inline-flex;align-items:center;gap:6px}
+.sw2{display:inline-block;width:16px;height:0;border-top:2.5px solid;flex:none}.sw2.d{border-top-style:dashed}
+.sw3{display:inline-block;width:11px;height:11px;border-radius:3px;flex:none}
+#tip{color:var(--muted)}
+.rd{display:flex;flex-direction:column;gap:4px}
+.rd>svg.pi{width:30px;height:30px;color:var(--accent);margin-bottom:2px}
+.rd h3{font:800 1.4rem/1.15 var(--display);margin:2px 0 4px}
+.rd .ft{margin-top:auto}
+.src>h2{color:var(--ink)}.src>.lead{color:var(--muted);font-size:.95rem}
+.src ul{line-height:1.5}.src li{margin-bottom:4px}
+.src .lnks{margin-top:12px}
+.cpst{font-size:.84rem;color:var(--muted)}
+.chw{position:relative;margin-top:6px}
+.c2{display:block;width:100%;height:auto}
+.c2 text{font:500 12px var(--mono);fill:var(--muted)}
+.c2 .ttl{font:600 12.5px var(--body);fill:var(--ink)}
+.c2 .lab{font:600 12.5px var(--body);fill:var(--ink)}
+.c2 .val{font:700 12px var(--mono);fill:var(--ink);paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round}
+.flowx{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:fx;margin-top:6px}
+.flowx>div{background:var(--tint);border-radius:14px;padding:12px 14px;min-width:0;position:relative}
+.flowx b{display:block;font:800 1.15rem/1.15 var(--display);margin-bottom:4px}
+.flowx p{margin:0;font-size:.88rem}
+.flowx .k{margin-bottom:4px;color:var(--accent)}
+@media (max-width:980px){.flowx{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.flowx{grid-template-columns:minmax(0,1fr)}}
+.medili{background:var(--tint);border-radius:14px;padding:14px 16px}
+.medili h3{margin:0 0 6px;font:800 1.3rem var(--display)}
+.medili ul{margin:0;padding-left:18px}.medili li{margin-bottom:4px}
+@media (prefers-reduced-motion:reduce){.running #tok{display:none}#scene .flowL{animation:none!important}}
+
+/* Bánh xe hương MeDili */
+@media (min-width:1181px){.bx{grid-template-columns:minmax(0,1fr) 360px}}
+.wheelw{max-width:680px;margin:6px auto 0}
+#wheel{display:block;width:100%;height:auto}
+#wheel path{stroke:#FDFAF2;stroke-width:1.2;cursor:pointer;transition:opacity .2s}
+#wheel path:hover{filter:brightness(1.06)}
+#wheel path.sel{stroke:#3A2416;stroke-width:2.6}
+#wheel path:focus{outline:none}#wheel path:focus-visible{stroke:var(--moss);stroke-width:3}
+#wheel text{pointer-events:none;font-family:var(--body)}
+#wheel .t1{font:800 15.5px var(--display);letter-spacing:.02em}
+#wheel .t1s{font:800 13px var(--display);letter-spacing:.02em}
+#wheel .t2{font:600 10.5px var(--body)}
+#wheel .t3{font:500 10px var(--body)}
+#wheel .hub{fill:var(--panel);stroke:var(--rule)}
+#wheel .hubT{font:italic 600 17px var(--sign);fill:var(--accent)}
+#wheel .hubS{font:600 9.5px var(--body);fill:var(--muted);letter-spacing:.1em}
+#wheel .star{fill:#FFF6EC;stroke:#3A2416;stroke-width:1}
+.og .ogh,.og3 .bar span:first-child{display:flex;align-items:center;gap:8px}
+.og .ogh{font:800 1.3rem/1.15 var(--display)}
+.og .ogh i,.og3 i.dot{display:block;width:13px;height:13px;border-radius:50%;background:var(--c);flex:none}
+.og p{margin:6px 0 0;font-size:.92rem}.og .ogx{color:var(--muted);font-size:.86rem}
+.og3 .bar{grid-template-columns:150px minmax(0,1fr) 40px}
+.rdl{margin:4px 0 0;padding-left:20px;font-size:.88rem}.rdl li{margin-bottom:5px}
+.flist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 22px}
+.fg h3{display:flex;align-items:center;gap:8px;margin:0 0 4px;font:800 1.25rem var(--display)}
+.fg h3 i{display:block;width:12px;height:12px;border-radius:3px;background:var(--c)}
+.fg h4{margin:8px 0 4px;font:600 .74rem var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.fg .chs{display:flex;flex-wrap:wrap;gap:5px}
+.fg button{font:600 .8rem var(--body);border:1px solid var(--rule);background:var(--panel);color:var(--ink);border-radius:999px;padding:4px 10px;cursor:pointer}
+.fg button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.fg button.hl{box-shadow:inset 0 0 0 2px var(--accent)}
+@media (max-width:1000px){.flist{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.flist{grid-template-columns:minmax(0,1fr)}}
+.cup3{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr) minmax(0,1.1fr);gap:18px 26px;align-items:start}
+@media (max-width:1000px){.cup3{grid-template-columns:minmax(0,1fr)}}
+.picked{display:flex;flex-wrap:wrap;gap:6px;min-height:34px;margin-top:4px}
+.picked button{font:600 .82rem var(--body);border-radius:999px;border:1px solid var(--accent);background:var(--tint);color:var(--ink);padding:5px 10px;cursor:pointer}
+.picked .em{color:var(--muted);font-size:.86rem}
+.radw svg{display:block;width:100%;max-width:340px;height:auto;margin:auto}
+#radar text{font:600 12px var(--body);fill:var(--ink)}
+#radar .grid{fill:none;stroke:var(--rule);stroke-width:1}
+#radar .area{fill:var(--accent);fill-opacity:.25;stroke:var(--accent);stroke-width:2}
+#sheet{min-height:200px}
+.dact{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+</style><link rel="alternate" hreflang="vi" href="https://www.medili.vn/banh-xe-huong.html"><link rel="alternate" hreflang="en" href="https://www.medili.vn/en/banh-xe-huong.html"><link rel="alternate" hreflang="ja" href="https://www.medili.vn/ja/banh-xe-huong.html"><link rel="alternate" hreflang="zh-Hans" href="https://www.medili.vn/zh/banh-xe-huong.html"><link rel="alternate" hreflang="x-default" href="https://www.medili.vn/banh-xe-huong.html"><script>const __tl=s=>{let n=0;for(const c of String(s))n+=/[⺀-鿿가-힯＀-￯]/.test(c)?1.85:1;return n};</script><style>:root{--body:"Be Vietnam Pro","Noto Sans JP",system-ui,sans-serif;--display:"Big Shoulders Display","Noto Sans JP","Be Vietnam Pro",system-ui,sans-serif}body{line-break:strict;word-break:normal;overflow-wrap:anywhere}h1,h2,h3,h4,.btn,.lede{word-break:auto-phrase}</style></head><body><div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a><nav class="mh-p" aria-label="メインメニュー"><a href="cau-chuyen.html">物語</a><a href="vung-trong.html">栽培地</a><a href="anh-vuon.html">農園の写真</a><a href="xuong-rang.html">焙煎所</a><a href="horeca.html">HORECA</a><a href="quan-medili.html">MeDili Café</a><a href="journal.html">知識</a><a href="gia-ca-phe.html">コーヒー価格</a></nav><details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>メニュー</span></summary><nav class="mh-pan" aria-label="すべてのページ"><div class="mh-grid"><div class="mh-c"><p class="mh-g">MeDili</p><ul><li><a href="./">ホーム</a></li><li><a href="cau-chuyen.html">MeDiliの物語</a></li><li><a href="doi-ngu.html">チーム</a></li><li><a href="quan-medili.html">MeDili Caféの店舗</a></li><li><a href="lien-he.html">お問い合わせ</a></li></ul></div><div class="mh-c"><p class="mh-g">栽培と生産</p><ul><li><a href="vung-trong.html">Di Linhの栽培地</a></li><li><a href="anh-vuon.html">農園の写真</a></li><li><a href="vuon.html">農園の12か月</a></li><li><a href="trai-ca-phe.html">チェリーの構造</a></li><li><a href="len-men-men-bia.html">ビール酵母による発酵</a></li><li><a href="len-men-trai-cay.html">フルーツとの共発酵</a></li></ul></div><div class="mh-c"><p class="mh-g">焙煎と抽出</p><ul><li><a href="xuong-rang.html">焙煎所と生産能力</a></li><li><a href="rang.html">焙煎ルーム</a></li><li><a href="huong-dan-pha.html">抽出ガイド</a></li><li><a href="quay-pha.html">ブリューバー</a></li><li><a href="cong-thuc-pha.html">抽出レシピマシン</a></li><li><a href="cold-brew.html">コールドブリューマシン</a></li><li><a href="tim-gu.html">好みのコーヒー診断</a></li></ul></div><div class="mh-c"><p class="mh-g">購入・お取引</p><ul><li><a href="cua-hang.html">コーヒーストア</a></li><li><a href="mua-hang.html">購入ルーム</a></li><li><a href="horeca.html">HORECA向けソリューション</a></li><li><a href="dong-hanh-cung-quan.html">カフェとともに</a></li><li><a href="nhan-xanh.html">生豆を選ぶ · 卸売</a></li><li><a href="gia-ca-phe.html">本日のコーヒー価格</a></li><li><a href="chinh-sach.html">MeDiliのポリシー</a></li><li><a href="giao-hang.html">配送と返品</a></li><li><a href="gio-hang.html">カート</a></li><li><a href="tim-kiem.html">検索</a></li></ul></div><div class="mh-c"><p class="mh-g">コーヒーの知識</p><ul><li><a href="journal.html">すべての記事</a></li><li><a href="chiet-xuat.html">抽出マシン</a></li><li><a href="phan-biet-ca-phe.html">コーヒー判別マシン</a></li><li><a href="trai-chin.html">完熟チェリーマシン</a></li><li><a href="vi-sinh.html">微生物マシン</a></li><li><a href="tien-chat-huong.html">香りの前駆体マシン</a></li><li><a href="banh-xe-huong.html" aria-current="page">MeDiliフレーバーホイール</a></li><li><a href="journal-phin.html">フィンと、時間が落ちるリズム</a></li><li><a href="journal-tu-qua.html">コーヒーチェリーから風味へ</a></li><li><a href="journal-di-linh.html">一杯のコーヒーに宿るDi Linh</a></li><li><a href="tu-vuon-den-ly.html">農園から一杯へ</a></li><li><a href="suc-khoe.html">コーヒーと体</a></li></ul></div></div></nav></details><details class="mh-l"><summary aria-label="言語 · Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.3 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.3-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>JA</span></summary><div class="mh-lp"><a href="../banh-xe-huong.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../en/banh-xe-huong.html" hreflang="en" lang="en">English</a><a href="banh-xe-huong.html" hreflang="ja" lang="ja" aria-current="true">日本語</a><a href="../zh/banh-xe-huong.html" hreflang="zh-Hans" lang="zh-Hans">中文</a></div></details><a class="mh-i" href="tim-kiem.html" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a><a class="mh-i" href="gio-hang.html" aria-label="カート"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="mh-cn" hidden></span></a><a class="mh-go" href="cua-hang.html">ストア</a></div></div>
+<div class="wrap">
+<header>
+  <span class="lgw"><img class="lgL" src="../assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div class="brandbar"><span>Di Linhの味に魅せられて</span><span>コーヒーの知識</span><span>Zalo <a href="#lien-he">0966 770 788</a></span></div>
+  <h1><em>MeDili</em>フレーバーホイール</h1>
+  <p>9つの香りのグループを、大まかなものから具体的なものへ3段階で、ベトナムの人になじみのある香りで表しました：熟したジャックフルーツ、パームシュガー、ローストピーナッツ、Di Linhの胡椒。マスをタップするとその香りの由来がわかり、焙煎度を選ぶとどのグループが際立つかが見えます。最後に自分のテイスティングシートを書きましょう。</p>
+</header>
+
+<div class="bench bx">
+  <div class="card">
+    <div class="fighead">
+      <div><b>図1</b> <span id="figsub">MeDiliフレーバーホイール。内側の輪は大まかなグループ、外側の輪は具体的な香りです。</span></div>
+      <button class="btn small" id="clr" type="button">選択を解除</button>
+    </div>
+    <div class="wheelw"><svg id="wheel" viewBox="0 0 680 680" role="img" aria-label="MeDiliフレーバーホイール：内側の輪に9つの香りのグループ、中間の輪にサブグループ、外側の輪に具体的な香り。全一覧は「香りリスト」にあります。"></svg></div>
+    <div id="detail" aria-live="polite"></div>
+  </div>
+
+  <aside class="card ctl">
+    <div class="head2"><h3>MeDiliのコーヒー</h3><small>商品説明より</small></div>
+    <div class="row" id="prods"></div>
+    <p class="mnote" id="pNote"></p>
+    <hr>
+    <div class="sl" style="margin-top:0"><label for="iL">焙煎度 <output id="oL"></output></label><input id="iL" type="range" min="1" max="8" step="1"><p id="lNote"></p></div>
+    <span class="lbl" style="margin-top:12px">この焙煎度での由来別の香りグループ</span>
+    <div class="bars og3" id="obars"></div>
+    <p class="mnote">ホイール上の薄いマスは、選んだ焙煎度では目立ちにくい香りです。欠点臭は焙煎度に左右されないため、そのまま表示されます。</p>
+    <hr>
+    <span class="lbl">読み方</span>
+    <ol class="rdl">
+      <li>香りを嗅ぎ、味わってから、<b>内側の輪</b>のグループを選びます：甘み、フルーティー、ナッツ…</li>
+      <li>もっとはっきりわかれば<b>中間の輪</b>へ：カカオか、ローストナッツか？</li>
+      <li><b>外側の輪</b>の名前を挙げるのは確信があるときだけ。迷ったら内側の輪で止めても正解です。</li>
+      <li><b>欠点臭</b>はホイールの一番下にあります。ここに当てはまる香りがあれば、農園、発酵槽、乾燥場、倉庫のどこに問題があったかをさかのぼって探します。</li>
+    </ol>
+  </aside>
+</div>
+
+<section class="p-sec">
+  <p class="eye">香りの4つの由来</p>
+  <h2 class="p-h2" style="margin:0">カップの香りは<em>どこから来るのか。</em></h2>
+  <p class="lead" style="margin:0 0 4px">コーヒーのテイスターは、香りをそれが生まれるタイミングで分類することがよくあります。この分類は鼻を鍛えるためのもので、厳密な化学ではありません。ひとつの香りが複数の経路から生じることもあります。</p>
+  <div class="g4"><div class="box og"><span class="ogh" style="--c:var(--cx2)"><i></i>酵素由来</span><p>実が育ち熟す過程で生まれ、豆の中にもともと含まれています。軽く揮発しやすく、浅煎りで最もはっきり現れます。</p><p class="ogx"><b>例：</b>ジャガイモ、エンドウ豆、キュウリ、ティーローズ、コーヒーの花、レモン、アプリコット、リンゴ、はちみつ。</p></div><div class="box og"><span class="ogh" style="--c:var(--cx1)"><i></i>糖のカラメル化</span><p>焙煎中に糖とアミノ酸が反応し、中煎りで最も強く現れます：メイラード反応とカラメル化。</p><p class="ogx"><b>例：</b>バニラ、バター、トースト、キャラメル、ダークチョコレート、ローストアーモンド、ローストピーナッツ、ローストヘーゼルナッツ、クルミ。</p></div><div class="box og"><span class="ogh" style="--c:var(--cx4)"><i></i>乾留</span><p>繊維質とクロロゲン酸が長く加熱されて生じ、深煎りで際立ちます：木、スパイス、煙。</p><p class="ogx"><b>例：</b>シダー、クローブ、胡椒、コリアンダーシード、麦芽、パイプタバコ、焙煎コーヒー。</p></div><div class="box og"><span class="ogh" style="--c:var(--cx3)"><i></i>欠点臭</span><p>良い豆からではなく、傷んだ実、過発酵、湿気やカビ、古い豆から生じます。どの焙煎度でも現れることがあります。</p><p class="ogx"><b>例：</b>土、藁、果皮と果肉、なめし革、煮込み肉、たばこの煙、薬品、ゴム。</p></div></div>
+</section>
+
+<section class="card" id="danh-sach">
+  <h2>香りリスト</h2>
+  <p class="lead">ホイールと同じ内容を、スマートフォンで読みやすくしたものです。香りをタップすると図1に詳細が表示されます。</p>
+  <div class="flist" id="flist"></div>
+</section>
+
+<section class="card" id="phieu">
+  <h2>MeDiliテイスティングシート</h2>
+  <p class="lead">詳細欄の「シートに追加」を押して香りを記録し、5つの味の目盛りを調整してから、シートをコピーします。毎杯きちんと記録すれば、1か月後には自分の鼻がどのグループに敏感かがわかります。</p>
+  <div class="cup3">
+    <div>
+      <span class="lbl">選んだ香り</span><div class="picked" id="picked"></div>
+      <div class="sl"><label for="sC">酸味 <output id="oC"></output></label><input id="sC" type="range" min="0" max="5" step="1" value="2"></div>
+      <div class="sl"><label for="sN">甘み <output id="oN"></output></label><input id="sN" type="range" min="0" max="5" step="1" value="3"></div>
+      <div class="sl"><label for="sD">苦み <output id="oD"></output></label><input id="sD" type="range" min="0" max="5" step="1" value="3"></div>
+      <div class="sl"><label for="sT">ボディ <output id="oT"></output></label><input id="sT" type="range" min="0" max="5" step="1" value="3"></div>
+      <div class="sl"><label for="sH">余韻 <output id="oH"></output></label><input id="sH" type="range" min="0" max="5" step="1" value="3"></div>
+    </div>
+    <div class="radw"><svg id="radar" viewBox="0 0 300 280" role="img" aria-label="5項目の味のチャート：酸味、甘み、苦み、ボディ、余韻"></svg></div>
+    <div><pre class="msg" id="sheet"></pre><button class="btn small" id="cpSh" type="button">シートをコピー</button> <span class="cpst" id="cpShS" role="status"></span></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>4週間で鼻を鍛える</h2>
+  <p class="lead">本物の香りを嗅ぎ、こまめに記録することで鼻は敏感になります。始めるのに高価なアロマキットは必要ありません。</p>
+  <ol class="pst two"><li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3s-7.5-4.7-7.5-10.4A4.2 4.2 0 0 1 12 7.3a4.2 4.2 0 0 1 7.5 2.6c0 5.7-7.5 10.4-7.5 10.4z"/></svg></span><h3>1週目：まず本物を嗅ぐ</h3><p>台所から6つの香りを選びます：レモン、オレンジ、リンゴ、はちみつ、ローストピーナッツ、カカオ。目を閉じてそれぞれ10秒嗅ぎ、名前を声に出して言います。感じたことを一文で書き留めましょう。</p></li><li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2M8 3v3M11 3v3"/></svg></span><h3>2週目：コーヒーと結びつける</h3><p>2種類のコーヒーを淹れます。たとえばRobusta ClassicとArabica Premium。粉の香りを嗅ぎ、次に熱いうちと冷めてからのカップの香りを嗅ぎます。1週目の6つの香りを探してみましょう。</p></li><li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v5.8M12 15.2V21M3 12h5.8M15.2 12H21M5.6 5.6l4.1 4.1M14.3 14.3l4.1 4.1M18.4 5.6l-4.1 4.1M9.7 14.3l-4.1 4.1"/></svg></span><h3>3週目：内側から外側へ</h3><p>味わうたびに、まず内側の輪でグループを選び（甘み、フルーティー、ナッツ…）、それから中間のグループと具体的な香りを探します。自信がなければ内側の輪で止めましょう。</p></li><li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2.8h6V4M8.5 9.5h7M8.5 13h7M8.5 16.5h4"/></svg></span><h3>4週目：記録して比べる</h3><p>一杯ごとに下のテイスティングシートを使いましょう。1か月後にシートを見比べると、自分の鼻がどのグループに敏感で、どのグループがまだ弱いかがわかります。</p></li></ol>
+</section>
+
+<section class="card src"><p style="margin:0;font-size:.88rem;color:var(--muted);max-width:110ch"><b style="color:var(--ink)">複数の資料をもとに構成。</b>このホイールはMeDiliがベトナムのコーヒー愛好家のために作成したもので、評価で使われる国際標準のホイールに代わるものではありません。各香りに由来を割り当てているのは、鼻を鍛えるための単純化です。焙煎度ごとの3グループの際立ち度は定性的な図解で、香りの前駆体マシンと共通です。各コーヒーラインの香りの例は、MeDiliの商品説明に基づいています。</p><div class="lnks"><a class="lnk" href="phan-biet-ca-phe.html">コーヒー判別マシン</a><a class="lnk" href="tien-chat-huong.html">香りの前駆体マシン</a><a class="lnk" href="vi-sinh.html">微生物マシン</a><a class="lnk" href="trai-chin.html">完熟チェリーマシン</a><a class="lnk" href="rang.html">焙煎ルーム</a><a class="lnk" href="tim-gu.html">好みのコーヒー診断</a><a class="lnk" href="mua-hang.html">購入ルーム</a></div></section>
+
+<section class="contact" id="lien-he"><div><img class="lgK" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83"><div class="tagline">Di Linhの味に魅せられて</div><p>販売元：DSunfood有限会社、143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM。<br>農園・焙煎所：Thôn 11, Xã Di Linh, Lâm Đồng。</p></div><div class="zalo"><span>MeDili Zalo</span><strong data-sel>0966 770 788</strong><div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Zaloでメッセージ</a><button type="button" data-copy="0966770788" data-done="番号をコピーしました">番号をコピー</button></div><small>メール：cafe@medili.vn</small></div></section>
+</div>
+<footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">いつだって<em>おいしいコーヒー一杯</em>のための時間はあります。</p><a class="btn main" href="quan-medili.html">MeDiliで会いましょう</a></div><div class="mf-grid"><div class="mf-brand"><b>コーヒーに夢中、Di Linhに夢中。</b><span>受け継いだものを守り、ひとつひとつの風味を大切に。</span><small>Di Linh · ラムドン省 · ベトナム</small></div><nav class="mf-col" aria-label="探索"><p class="mf-t">探索</p><a href="cau-chuyen.html">MeDiliの物語</a><a href="doi-ngu.html">MeDiliのチーム</a><a href="vung-trong.html">Di Linhの栽培地</a><a href="anh-vuon.html">MeDili農園の写真</a><a href="xuong-rang.html">焙煎所と生産能力</a><a href="rang.html">焙煎ルーム</a><a href="huong-dan-pha.html">抽出ガイド</a><a href="quay-pha.html">ブリューバー</a><a href="tim-gu.html">好みのコーヒー診断</a><a href="cong-thuc-pha.html">抽出レシピマシン</a><a href="chiet-xuat.html">抽出マシン</a><a href="cold-brew.html">コールドブリューマシン</a><a href="journal.html">コーヒーの知識</a></nav><nav class="mf-col" aria-label="MeDiliとあなた"><p class="mf-t">MeDiliとあなた</p><a href="cua-hang.html">MeDiliストア</a><a href="mua-hang.html">購入ルーム</a><a href="horeca.html">HORECA向けソリューション</a><a href="dong-hanh-cung-quan.html">カフェとともに</a><a href="nhan-xanh.html">卸売向け生豆</a><a href="gia-ca-phe.html">本日のコーヒー価格</a><a href="quan-medili.html">MeDili Caféの店舗</a><a href="lien-he.html">お問い合わせと地図</a><a href="chinh-sach.html">MeDiliのポリシー</a><a href="giao-hang.html">配送と返品</a><a href="bao-mat.html">プライバシーポリシー</a></nav><div class="mf-col"><p class="mf-t">販売元 · DSunfood</p><p>DSunfood有限会社<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>農園・焙煎所<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">MeDiliへの道順 ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">ZaloでMeDiliにメッセージ ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>MeDili Coffee Farm · Cà Sẻ Di Linh</i></div></div></footer><nav class="fl-c" aria-label="MeDiliへのクイック連絡"><a class="fl-b" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener" aria-label="ZaloでMeDiliにメッセージ" data-tip="ZaloでMeDiliにメッセージ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a><a class="fl-b" href="https://www.facebook.com/share/192oMLdBnq/" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a></nav>
+<script>
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'コピーしました'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='番号を選択しました。ご自身でコピーしてください'}
+setTimeout(()=>{b.textContent=o},2400)}))})();
+window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
+const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};
+const badge=()=>{const n=get().reduce((a,x)=>a+(+x.q||0),0);document.querySelectorAll('.mh-cn').forEach(e=>{e.textContent=n>99?'99+':n;e.hidden=!n})};
+const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badge()};
+const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
+badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
+
+const $=id=>document.getElementById(id);
+const vn=(n,d=1)=>(+n).toFixed(d);
+const fm=n=>Math.round(n).toLocaleString('ja-JP');
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const lerp=(a,b,t)=>a+(b-a)*t;
+const NB=' ';
+const g1=n=>Number.isInteger(+n)?String(n):vn(n,1);
+const f1=n=>(+n).toFixed(1);
+const P=(x,y,z=0)=>[OX+(x-y)*.866*U,OY+(x+y)*.5*U-z*U];
+const pts=a=>a.map(q=>q.map(f1).join(',')).join(' ');
+const pa=p=>!p?'':(p[0]==='#'||p.startsWith('rgb')||p.startsWith('var('))?` style="fill:${p}"`:` class="${p}"`;
+const poly=(a,p='')=>`<polygon points="${pts(a)}"${pa(p)}/>`;
+function box(x,y,z,w,d,h,c=['f1','f2','f3']){return poly([P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[1])+poly([P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)],c[2])+poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[0])}
+const RX=r=>r*U*1.2247,RY=r=>r*U*.7071;
+function cyl(cx,cy,z,r,h,c='f2',top='f1'){const [a,b]=P(cx,cy,z),[,t]=P(cx,cy,z+h),rx=RX(r),ry=RY(r);return `<path${pa(c)} d="M${f1(a-rx)} ${f1(t)}V${f1(b)}A${f1(rx)} ${f1(ry)} 0 0 0 ${f1(a+rx)} ${f1(b)}V${f1(t)}Z"/><ellipse${pa(top)} cx="${f1(a)}" cy="${f1(t)}" rx="${f1(rx)}" ry="${f1(ry)}"/>`}
+function frus(cx,cy,z0,r0,z1,r1,c,top){const [a,b0]=P(cx,cy,z0),[,b1]=P(cx,cy,z1),x0=RX(r0),y0=RY(r0),x1=RX(r1),y1=RY(r1);return `<path${pa(c)} d="M${f1(a-x1)} ${f1(b1)}L${f1(a-x0)} ${f1(b0)}A${f1(x0)} ${f1(y0)} 0 0 0 ${f1(a+x0)} ${f1(b0)}L${f1(a+x1)} ${f1(b1)}Z"/><ellipse${pa(top)} cx="${f1(a)}" cy="${f1(b1)}" rx="${f1(x1)}" ry="${f1(y1)}"/>`}
+const sph=(cx,cy,z,r,c,id)=>{const [a,b]=P(cx,cy,z);return `<circle${id?` id="${id}"`:''}${pa(c)} cx="${f1(a)}" cy="${f1(b-r*U)}" r="${f1(r*U)}"/>`};
+const disc=(cx,cy,z,r,c)=>{const [a,b]=P(cx,cy,z);return `<ellipse${pa(c)} cx="${f1(a)}" cy="${f1(b)}" rx="${f1(RX(r))}" ry="${f1(RY(r))}"/>`};
+const face=(x,y,z)=>{const q=P(x,y,z);return `matrix(.866 .5 0 1 ${f1(q[0])} ${f1(q[1])})`};
+const faceR=(x,y,z)=>{const q=P(x,y,z);return `matrix(.866 -.5 0 1 ${f1(q[0])} ${f1(q[1])})`};
+const lcd=(x,y,z,w,id,R)=>`<g transform="${(R?faceR:face)(x,y,z)}"><rect class="lcdb" x="0" y=".8" width="${w}" height="9" rx="1.4"/><text class="lcd" id="${id}" x="${w/2}" y="7.9" text-anchor="middle"></text></g>`;
+const stG=(i,inner)=>`<g class="st m" data-i="${i}" tabindex="0" role="button" aria-label="ステーション${i}：${ST[i-1].n}">${inner}</g>`;
+function bench(L,D,sign,sx){let h='<g class="m">';[[3,D-3],[L-3,D-3],[L-3,3]].forEach(([x,y])=>h+=cyl(x,y,-9,1.2,5,'cu2','cu2'));h+=box(0,0,-4,L,D,4,['wo','wo2','cu2'])+'</g>';
+ const pl=P(sx,D,-.6),w=__tl(sign)*8.3+16;
+ return h+`<g transform="matrix(.866 .5 0 1 ${f1(pl[0])} ${f1(pl[1])})"><rect width="${f1(w)}" height="24" rx="3" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:1.2"/><circle cx="8" cy="12" r="1.8" style="fill:#2A1B16"/><circle cx="${f1(w-8)}" cy="12" r="1.8" style="fill:#2A1B16"/><text class="sgn" x="${f1(w/2)}" y="17.5" text-anchor="middle">${sign}</text></g>`}
+let isOff=()=>false;
+function drawChips(){let h='';
+ for(let i=1;i<=ST.length;i++){const C=CHIP[i],l=chipLabel(i),w=40+__tl(l)*7,x=Math.min(C.x,VBW-w-8),q=P(...ANCH[i]),off=isOff(i);
+  h+=`<polyline class="lead-l${i===st.sel?' on':''}" points="${f1(q[0])},${f1(q[1])} ${f1(x+20)},${C.y+13}"/><g class="chip${i===st.sel?' on':''}${off?' off':''}" data-c="${i}"><rect x="${f1(x+6)}" y="${C.y}" rx="8" width="${f1(w)}" height="26"/><circle cx="${f1(x+6)}" cy="${C.y+13}" r="13"/><text class="num" x="${f1(x+6)}" y="${C.y+18.5}" text-anchor="middle">${i}</text><text class="lab" x="${f1(x+26)}" y="${C.y+18}">${l}</text></g>`}
+ const el=$('chips');el.innerHTML=h;el.querySelectorAll('.chip').forEach(g=>g.addEventListener('click',()=>select(+g.dataset.c)))}
+const vf=v=>typeof v==='function'?v():v;
+function renderStation(){const s=ST[st.sel-1],off=isOff(st.sel),kv=vf(s.kv)||[];
+ document.querySelectorAll('#scene .st').forEach(g=>{const i=+g.dataset.i;g.classList.toggle('on',i===st.sel);g.classList.toggle('off',isOff(i))});
+ document.querySelectorAll('#strip button').forEach((b,n)=>{b.classList.toggle('on',n+1===st.sel);b.classList.toggle('off',isOff(n+1));b.setAttribute('aria-pressed',n+1===st.sel)});
+ $('detail').innerHTML=`<div class="dh"><div class="dn">${st.sel}</div><h2>${s.n}<small>${vf(s.sub)}${off&&s.offNote?' · '+vf(s.offNote):''}</small></h2></div><div class="dgrid"><div><span class="lbl">${s.l1||'何が起きるか'}</span><p>${vf(s.mech)}</p>${s.check?`<span class="lbl">${s.l2||'測り方・見え方'}</span><p>${vf(s.check)}</p>`:''}</div><div><span class="lbl">現在の数値</span><dl class="kv">${kv.map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join('')}</dl>${s.fail?`<p style="margin-top:8px"></p><span class="lbl">${s.l3||'よくある誤解'}</span><p>${vf(s.fail)}</p>`:''}${s.tip?`<span class="lbl">${s.l4||'MeDiliでは'}</span><p>${vf(s.tip)}</p>`:''}</div></div>`}
+function select(i,noScroll){st.sel=i;renderStation();drawChips();if(noScroll)return;const sc=document.querySelector('.scroller'),q=P(...ANCH[i]);if(sc.scrollWidth>sc.clientWidth)sc.scrollLeft=q[0]/VBW*sc.scrollWidth-sc.clientWidth/2}
+function initStations(){$('strip').innerHTML=ST.map((s,i)=>`<button type="button" aria-pressed="false">${i+1} ${s.n}</button>`).join('');
+ $('strip').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>select(i+1));
+ document.querySelectorAll('#scene .st').forEach(g=>{g.addEventListener('click',()=>select(+g.dataset.i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(+g.dataset.i)}})})}
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;let timer=0;
+function stopRun(){clearTimeout(timer);timer=0;$('scene').classList.remove('running')}
+function tour(seq,ms,each){stopRun();if(still){each&&each(seq.length-1);select(seq[seq.length-1]);return}
+ $('scene').classList.add('running');let k=0;
+ const step=()=>{const i=seq[k],q=P(ANCH[i][0],ANCH[i][1],ANCH[i][2]-1),t=$('tok');t.setAttribute('cx',f1(q[0]));t.setAttribute('cy',f1(q[1]));each&&each(k);select(i);k++;
+  if(k<seq.length)timer=setTimeout(step,ms||650);else timer=setTimeout(()=>$('scene').classList.remove('running'),900)};step()}
+function pills(id,items,cur,cb){$(id).innerHTML=items.map(([k,n])=>`<button class="pill" type="button" data-k="${k}" aria-pressed="${String(cur)===String(k)}">${n}</button>`).join('');$(id).querySelectorAll('button').forEach(b=>b.onclick=()=>cb(b.dataset.k))}
+function interp(p,x){if(!p.length||x<p[0][0]||x>p[p.length-1][0])return null;for(let i=1;i<p.length;i++)if(x<=p[i][0]){const [x0,y0]=p[i-1],[x1,y1]=p[i];return y0+(y1-y0)*(x-x0)/((x1-x0)||1)}return p[p.length-1][1]}
+function lineSVG(o){const {W,H,l,r,t,b}=o,X=x=>l+(x-o.x0)/(o.x1-o.x0)*(W-l-r),Y=y=>t+(1-(y-o.y0)/(o.y1-o.y0))*(H-t-b);
+ let g=o.ttl?`<text class="ttl" x="${l}" y="12">${o.ttl}</text>`:'';
+ (o.bands||[]).forEach(([a,c,lab])=>g+=`<rect x="${f1(X(a))}" y="${t}" width="${f1(Math.max(0,X(c)-X(a)))}" height="${H-t-b}" style="fill:var(--good);fill-opacity:.13"/>`);
+ (o.hb||[]).forEach(([a,c])=>g+=`<rect x="${l}" y="${f1(Y(c))}" width="${W-l-r}" height="${f1(Math.max(0,Y(a)-Y(c)))}" style="fill:var(--good);fill-opacity:.13"/>`);
+ (o.yt||[]).forEach(v=>g+=`<line x1="${l}" x2="${W-r}" y1="${f1(Y(v))}" y2="${f1(Y(v))}" style="stroke:var(--rule);stroke-width:.8"/><text x="${l-5}" y="${f1(Y(v)+3.5)}" text-anchor="end">${o.yf?o.yf(v):v}</text>`);
+ (o.xt||[]).forEach(v=>g+=`<text x="${f1(X(v))}" y="${H-5}" text-anchor="middle">${o.xf?o.xf(v):v}</text>`);
+ (o.vl||[]).forEach(([x,lab])=>g+=`<line x1="${f1(X(x))}" x2="${f1(X(x))}" y1="${t}" y2="${H-b}" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3"/>${lab?`<text x="${f1(X(x)+3)}" y="${t+10}">${lab}</text>`:''}`);
+ (o.areas||[]).forEach(s=>g+=`<polygon points="${s.p.map(([x,y])=>f1(X(x))+','+f1(Y(y))).join(' ')}" style="fill:${s.c};fill-opacity:${s.o||.9}"/>`);
+ (o.ser||[]).forEach(s=>g+=`<polyline points="${s.p.map(([x,y])=>f1(X(x))+','+f1(Y(y))).join(' ')}" fill="none" style="stroke:${s.c};stroke-width:${s.w||2};stroke-linejoin:round${s.d?`;stroke-dasharray:${s.d}`:''}"/>`);
+ if(o.vx!=null){g+=`<line x1="${f1(X(o.vx))}" x2="${f1(X(o.vx))}" y1="${t}" y2="${H-b}" style="stroke:var(--ink);stroke-width:1.1"/>`;
+  (o.ser||[]).forEach(s=>{if(s.dot===false)return;const v=interp(s.p,o.vx);if(v!=null)g+=`<circle cx="${f1(X(o.vx))}" cy="${f1(Y(v))}" r="4" style="fill:${s.c};stroke:var(--panel);stroke-width:2"/>`})}
+ if(o.end){const L=(o.ser||[]).filter(s=>s.lab).map(s=>({y:Y(s.p[s.p.length-1][1]),s:s.lab})).sort((a,c)=>a.y-c.y);for(let i=1;i<L.length;i++)if(L[i].y-L[i-1].y<12)L[i].y=L[i-1].y+12;L.forEach(e=>g+=`<text x="${W-r+5}" y="${f1(e.y+3.5)}" style="fill:var(--ink)">${e.s}</text>`)}
+ (o.bands||[]).forEach(([a,c,lab])=>{if(lab)g+=`<text x="${f1((X(a)+X(c))/2)}" y="${H-b-6}" text-anchor="middle" style="paint-order:stroke;stroke:var(--panel);stroke-width:3px;stroke-linejoin:round;fill:var(--ink)">${lab}</text>`});
+ return g}
+const legend=(id,items)=>{$(id).innerHTML=items.map(s=>s.box?`<span><i class="sw3" style="background:${s.c}"></i>${s.n}</span>`:`<span><i class="sw2${s.d?' d':''}" style="border-color:${s.c}"></i>${s.n}</span>`).join('')};
+const cw=id=>{const e=$(id);return Math.max(300,Math.round((e&&e.clientWidth)||900))};
+const cp=async(txt,el)=>{try{await navigator.clipboard.writeText(txt);$(el).textContent='コピーしました。'}catch(e){$(el).textContent='コピーできませんでした。テキストを選択してご自身でコピーしてください。'}setTimeout(()=>$(el).textContent='',2600)};
+function rng(seed){let s=seed>>>0;return ()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296}}
+function gauss(r){let u=0,v=0;while(!u)u=r();while(!v)v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+const W={"sec": [{"n": "フローラル", "c": "#C74B7A", "d": "実が熟したときからある酵素由来の香り。軽く揮発しやすく、浅煎りで、カップがまだ温かいうちに最もはっきりします。", "l": "trai-chin.html", "g": [{"n": "白い花", "f": [{"n": "コーヒーの花", "o": "e"}, {"n": "ジャスミン", "o": "e"}, {"n": "ザボンの花", "o": "e"}]}, {"n": "バラ、お茶", "f": [{"n": "バラ", "o": "e"}, {"n": "烏龍茶", "o": "e"}, {"n": "紅茶", "o": "e"}]}]}, {"n": "フルーティー", "c": "#B33A24", "d": "完熟チェリーの糖と酸に、発酵で生まれるエステルが加わったものです。十分に熟し、きれいに発酵すればはっきり現れ、発酵しすぎると酒や酢のような香りになります。", "l": "vi-sinh.html", "g": [{"n": "ベリー", "f": [{"n": "マルベリー", "o": "e"}, {"n": "イチゴ", "o": "e"}, {"n": "ラズベリー", "o": "e"}]}, {"n": "トロピカルフルーツ", "f": [{"n": "熟したジャックフルーツ", "o": "e"}, {"n": "熟したバナナ", "o": "e"}, {"n": "マンゴー", "o": "e"}, {"n": "パッションフルーツ", "o": "e"}]}, {"n": "リンゴ、アプリコット、桃", "f": [{"n": "リンゴ", "o": "e"}, {"n": "アプリコット", "o": "e"}, {"n": "桃", "o": "e"}]}, {"n": "ドライフルーツ", "f": [{"n": "レーズン", "o": "s"}, {"n": "プルーン", "o": "s"}, {"n": "デーツ", "o": "s"}]}]}, {"n": "爽やかな酸味", "c": "#D9782E", "d": "豆にもともと含まれるクエン酸やリンゴ酸と、発酵で生まれる乳酸や酢酸に由来します。焙煎が深いほど酸味は弱まります。", "l": "tien-chat-huong.html", "g": [{"n": "柑橘", "f": [{"n": "レモン", "o": "e"}, {"n": "オレンジ", "o": "e"}, {"n": "ザボン", "o": "e"}, {"n": "みかん", "o": "e"}]}, {"n": "酸味のタイプ", "f": [{"n": "青リンゴ", "o": "e"}, {"n": "ヨーグルト", "o": "e"}, {"n": "ワイン", "o": "e"}, {"n": "Me", "o": "e"}]}]}, {"n": "甘み", "c": "#C9962B", "d": "中煎りで起こるショ糖のカラメル化とメイラード反応に由来します。Honey精製のRobusta Premiumは、キャラメルやブラウンシュガーの香りが出やすいです。", "l": "tien-chat-huong.html", "g": [{"n": "ブラウンシュガー", "f": [{"n": "パームシュガー", "o": "s"}, {"n": "糖蜜", "o": "s"}, {"n": "ブラウンシュガー", "o": "s"}]}, {"n": "キャラメル、蜜", "f": [{"n": "Caramel", "o": "s"}, {"n": "はちみつ", "o": "e"}, {"n": "バタースコッチ", "o": "s"}]}, {"n": "バニラ、バター", "f": [{"n": "バニラ", "o": "s"}, {"n": "バター", "o": "s"}]}]}, {"n": "ナッツ、カカオ", "c": "#8D5A32", "d": "中煎りから深煎りでのメイラード反応とストレッカー分解。Di LinhのRobustaはこのグループが強く出やすいです。", "l": "tien-chat-huong.html", "g": [{"n": "ローストナッツ", "f": [{"n": "ローストピーナッツ", "o": "s"}, {"n": "カシューナッツ", "o": "s"}, {"n": "アーモンド", "o": "s"}, {"n": "クルミ", "o": "s"}]}, {"n": "カカオ", "f": [{"n": "カカオ", "o": "s"}, {"n": "ミルクチョコレート", "o": "s"}, {"n": "ダークチョコレート", "o": "s"}]}]}, {"n": "スパイス", "c": "#A0482A", "d": "クロロゲン酸が分解して、クローブの香りがする4-ビニルグアイアコールなどのフェノール類になります。深煎りやRobustaでよりはっきりします。", "l": "tien-chat-huong.html", "g": [{"n": "温かみのあるスパイス", "f": [{"n": "シナモン", "o": "d"}, {"n": "八角", "o": "d"}, {"n": "クローブ", "o": "d"}]}, {"n": "辛いスパイス", "f": [{"n": "黒胡椒", "o": "d"}, {"n": "生姜", "o": "d"}, {"n": "コリアンダーシード", "o": "d"}]}]}, {"n": "ロースト、スモーキー", "c": "#5E3A24", "d": "深煎りで起こる乾留：ロースト香、煙、木の香り。ほどほどなら心地よく、強すぎると豆本来の香りをすべて覆い隠します。", "l": "rang.html", "g": [{"n": "穀物", "f": [{"n": "炒り米", "o": "s"}, {"n": "麦芽", "o": "s"}, {"n": "トースト", "o": "s"}]}, {"n": "深煎り", "f": [{"n": "焙煎コーヒー", "o": "d"}, {"n": "薪の煙", "o": "d"}, {"n": "パイプタバコ", "o": "d"}, {"n": "シダーウッド", "o": "d"}]}]}, {"n": "ハーブ", "c": "#A8924A", "d": "野菜、葉、草の青い香り。少しならフレッシュに感じますが、強ければ未熟な実か焙煎不足のサインです。", "l": "trai-chin.html", "g": [{"n": "野菜", "f": [{"n": "エンドウ豆", "o": "e"}, {"n": "キュウリ", "o": "e"}, {"n": "ジャガイモ", "o": "e"}]}, {"n": "葉、草", "f": [{"n": "干し草", "o": "e"}, {"n": "茶葉", "o": "e"}, {"n": "ハーブ", "o": "e"}]}]}, {"n": "欠点臭", "c": "#6E5A4A", "d": "傷んだ実、過発酵、乾燥や保管中の湿気とカビ、古い豆、焙煎不足が原因です。わずかな欠点豆でも、ロット全体の香りを損ねてしまいます。", "l": "vi-sinh.html", "g": [{"n": "過発酵", "f": [{"n": "酢", "o": "t"}, {"n": "強い酒の香り", "o": "t"}, {"n": "腐った果実", "o": "t"}, {"n": "玉ねぎ", "o": "t"}]}, {"n": "湿気、カビ", "f": [{"n": "カビ臭", "o": "t"}, {"n": "湿った土", "o": "t"}, {"n": "麻袋", "o": "t"}]}, {"n": "化学的な臭い", "f": [{"n": "薬品臭", "o": "t"}, {"n": "ゴム", "o": "t"}]}, {"n": "古い、生焼け", "f": [{"n": "紙、段ボール", "o": "t"}, {"n": "生の穀物", "o": "t"}, {"n": "藁", "o": "t"}]}]}], "orig": [{"k": "e", "n": "酵素由来", "c": "cx2", "d": "実が育ち熟す過程で生まれ、豆の中にもともと含まれています。軽く揮発しやすく、浅煎りで最もはっきり現れます。"}, {"k": "s", "n": "糖のカラメル化", "c": "cx1", "d": "焙煎中に糖とアミノ酸が反応し、中煎りで最も強く現れます：メイラード反応とカラメル化。"}, {"k": "d", "n": "乾留", "c": "cx4", "d": "繊維質とクロロゲン酸が長く加熱されて生じ、深煎りで際立ちます：木、スパイス、煙。"}, {"k": "t", "n": "欠点臭", "c": "cx3", "d": "良い豆からではなく、傷んだ実、過発酵、湿気やカビ、古い豆から生じます。どの焙煎度でも現れることがあります。"}], "prod": [{"k": "rc", "n": "Robusta Classic", "d": "力強く、はっきりとした苦み、まろやかな余韻、ダークチョコレート。", "f": ["ダークチョコレート", "カカオ"], "lv": 6}, {"k": "rp", "n": "Robusta Premium", "d": "バランスがよく、ブラウンシュガー、キャラメル、甘い余韻。", "f": ["ブラウンシュガー", "Caramel"], "lv": 4}, {"k": "ap", "n": "Arabica Premium", "d": "チョコレート、柑橘、穏やかな酸味、ほどよい苦み、甘い余韻。", "f": ["ミルクチョコレート", "レモン", "オレンジ"], "lv": 3}, {"k": "bl", "n": "Blend", "d": "力強いカカオから、バランスのよい香り高さと爽やかな酸味まで。", "f": ["カカオ", "レモン"], "lv": 4}]};
+
+const CX=340,CY=340,R0=74,R1=150,R2=228,R3=330;
+const LV=[null,{n:'Cinnamon',g:'浅煎り'},{n:'New England',g:'浅煎り'},{n:'City',g:'中浅煎り'},{n:'City+',g:'中煎り'},{n:'Full City',g:'中深煎り'},{n:'Vienna',g:'深煎り'},{n:'French',g:'深煎り'},{n:'Italian',g:'極深煎り'}];
+const AR={e:[.15,.95,1,.85,.6,.4,.25,.15,.08],s:[0,.35,.5,.75,1,.9,.65,.4,.25],d:[0,.05,.08,.15,.3,.5,.75,.95,1],t:[.7,.7,.7,.7,.7,.7,.7,.7,.7]};
+const ON={e:'酵素由来',s:'糖のカラメル化',d:'乾留',t:'欠点臭'};
+const OC={e:'var(--cx2)',s:'var(--cx1)',d:'var(--cx4)',t:'var(--cx3)'};
+const STR={e:'浅煎り',s:'中煎り',d:'深煎り',t:'すべての焙煎度'};
+const st={lv:4,prod:'',sel:null,picked:[]};
+const LEAF=[];W.sec.forEach((s,i)=>s.g.forEach((g,j)=>g.f.forEach(f=>LEAF.push({s:i,g:j,n:f.n,o:f.o}))));
+const N=LEAF.length,step=360/N;
+/* xoay để nhóm Mùi lỗi nằm ở đáy */
+const lastS=W.sec.length-1,iFirst=LEAF.findIndex(x=>x.s===lastS),nLast=LEAF.filter(x=>x.s===lastS).length,ROT=180-(iFirst+nLast/2)*step;
+const ang=i=>ROT+i*step;
+const pol=(r,a)=>{const t=(a-90)*Math.PI/180;return [CX+r*Math.cos(t),CY+r*Math.sin(t)]};
+function arc(r0,r1,a0,a1){const [x0,y0]=pol(r1,a0),[x1,y1]=pol(r1,a1),[x2,y2]=pol(r0,a1),[x3,y3]=pol(r0,a0),lg=a1-a0>180?1:0;
+ return `M${f1(x0)} ${f1(y0)}A${r1} ${r1} 0 ${lg} 1 ${f1(x1)} ${f1(y1)}L${f1(x2)} ${f1(y2)}A${r0} ${r0} 0 ${lg} 0 ${f1(x3)} ${f1(y3)}Z`}
+const hx=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)),toh=a=>'#'+a.map(v=>Math.round(clamp(v,0,255)).toString(16).padStart(2,'0')).join('');
+const tint=(h,t)=>toh(hx(h).map(v=>v+(253-v)*t));
+const lum=h=>{const [r,g,b]=hx(h).map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*r+.7152*g+.0722*b};
+const txc=h=>lum(h)>.32?'#3A2416':'#FFF6EC';
+function rtext(r,a,txt,cls,col){const [x,y]=pol(r,a),flip=(((a%360)+360)%360)>180;const rot=flip?a+90:a-90;
+ return `<text class="${cls}" x="${f1(x)}" y="${f1(y)}" transform="rotate(${f1(rot)} ${f1(x)} ${f1(y)})" text-anchor="middle" dominant-baseline="central" style="fill:${col}">${txt}</text>`}
+function ttext(r,a,txt,cls,col){const [x,y]=pol(r,a),n=(((a%360)+360)%360),flip=n>90&&n<270;const rot=flip?a+180:a;
+ return `<text class="${cls}" x="${f1(x)}" y="${f1(y)}" transform="rotate(${f1(rot)} ${f1(x)} ${f1(y)})" text-anchor="middle" dominant-baseline="central" style="fill:${col}">${txt}</text>`}
+function build(){let h='';let i=0;
+ W.sec.forEach((s,si)=>{const n=s.g.reduce((a,g)=>a+g.f.length,0),a0=ang(i),a1=ang(i+n);
+  h+=`<path data-k="s${si}" d="${arc(R0,R1,a0,a1)}" style="fill:${s.c}" tabindex="0" role="button" aria-label="${s.n}"/>`;
+  const am=(a0+a1)/2,arcL=(n*step)*Math.PI/180*(R0+R1)/2*.9,tw=t=>__tl(t)*8.4,wd=s.n.split(/,\s*|\s+/);
+  if(arcL>=tw(s.n))h+=ttext((R0+R1)/2,am,s.n,'t1',txc(s.c));
+  else if(wd.length>1){let l1,l2;if(s.n.includes(',')){const [p,q]=s.n.split(/,\s*/);l1=p+',';l2=q}else{const half=Math.ceil(wd.length/2);l1=wd.slice(0,half).join(' ');l2=wd.slice(half).join(' ')}
+   const nn=((am%360)+360)%360,fl=nn>90&&nn<270,rm=(R0+R1)/2;
+   if(arcL>=Math.max(tw(l1),tw(l2))){h+=ttext(fl?rm-9:rm+9,am,l1,'t1',txc(s.c))+ttext(fl?rm+9:rm-9,am,l2,'t1',txc(s.c))}else h+=rtext(rm+4,am,s.n,'t1s',txc(s.c))}
+  else h+=rtext((R0+R1)/2+4,am,s.n,(R1-R0-8)>=tw(s.n)?'t1':'t1s',txc(s.c));
+  let k=i;s.g.forEach((g,gi)=>{const m=g.f.length,b0=ang(k),b1=ang(k+m),c2=tint(s.c,.28);
+   h+=`<path data-k="g${si}_${gi}" d="${arc(R1,R2,b0,b1)}" style="fill:${c2}" tabindex="0" role="button" aria-label="${s.n}：${g.n}"/>`;
+   const bm=(b0+b1)/2;h+=rtext((R1+R2)/2,bm,g.n,'t2',txc(c2));
+   g.f.forEach((f,fi)=>{const c0=ang(k+fi),c1=ang(k+fi+1),c3=tint(s.c,.55),li=LEAF.findIndex(x=>x.s===si&&x.g===gi&&x.n===f.n);
+    h+=`<path data-k="f${li}" class="leaf" d="${arc(R2,R3,c0,c1)}" style="fill:${c3}" tabindex="0" role="button" aria-label="${f.n}、${s.n}のグループ"/>`;
+    h+=rtext((R2+R3)/2,(c0+c1)/2,f.n,'t3','#3A2416')});
+   k+=m});
+  i+=n});
+ h+=`<circle class="hub" cx="${CX}" cy="${CY}" r="${R0-4}"/><text class="hubT" x="${CX}" y="${CY-4}" text-anchor="middle">MeDili</text><text class="hubS" x="${CX}" y="${CY+16}" text-anchor="middle">フレーバーホイール</text><g id="stars"></g>`;
+ $('wheel').innerHTML=h;
+ $('wheel').querySelectorAll('path').forEach(p=>{const go=()=>pick(p.dataset.k);p.addEventListener('click',go);p.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})})}
+function leafHTML(li){const L=LEAF[li],s=W.sec[L.s],g=s.g[L.g],prods=W.prod.filter(p=>p.f.includes(L.n)).map(p=>p.n);
+ return `<div class="dh"><div class="dn" style="background:${s.c};color:${txc(s.c)}">${L.n.slice(0,1)}</div><h2>${L.n}<small>${s.n} · ${g.n}</small></h2></div>\n <div class="dgrid"><div><span class="lbl">由来</span><p><b style="color:${OC[L.o]}">${ON[L.o]}</b>. ${W.orig.find(o=>o.k===L.o).d}</p><span class="lbl">${s.n.toLowerCase()}のグループ</span><p>${s.d} <a class="lnk" href="${s.l}">詳しく見る</a></p></div>\n <div><span class="lbl">ひと目でわかる情報</span><dl class="kv"><dt>最もはっきり出るのは</dt><dd>${STR[L.o]}</dd><dt>${LV[st.lv].n}では</dt><dd>${L.o==='t'?'焙煎度に左右されない':vn(AR[L.o][st.lv]*100,0)+'% 際立ち度'}</dd><dt>MeDiliのコーヒー</dt><dd>${prods.length?prods.join('、'):'商品説明にはまだ記載なし'}</dd></dl>\n <p style="margin-top:8px"></p><span class="lbl">覚えるために嗅ぐもの</span><p>${L.o==='t'?'避けるべき香りです。早く気づけるよう覚えておき、問題のあった工程（実、発酵槽、乾燥場、倉庫）をさかのぼって探しましょう。':`目を閉じて本物の${L.n.toLowerCase()}を10秒間嗅ぎ、すぐ後にコーヒーの香りを嗅ぎます。`}</p>\n <div class="dact"><button class="btn small main" type="button" id="addP">${st.picked.includes(li)?'シートから削除':'シートに追加'}</button></div></div></div>`}
+function pick(k){if(!k)return;st.sel=k;const t=k[0],idx=k.slice(1);let h='';
+ if(t==='f')h=leafHTML(+idx);
+ else{const [si,gi]=idx.split('_').map(Number),s=W.sec[si],gs=gi==null||isNaN(gi)?s.g:[s.g[gi]];
+  h=`<div class="dh"><div class="dn" style="background:${s.c};color:${txc(s.c)}">${si+1}</div><h2>${gi==null||isNaN(gi)?s.n:s.g[gi].n}<small>${gi==null||isNaN(gi)?'内側の輪 · '+s.g.length+' サブグループ':'中間の輪 · グループ '+s.n}</small></h2></div>\n  <div class="dgrid"><div><span class="lbl">どこから来るか</span><p>${s.d} <a class="lnk" href="${s.l}">詳しく見る</a></p></div><div><span class="lbl">このグループの香り（タップで表示）</span><div class="fg"><div class="chs">${gs.map(g=>g.f.map(f=>{const li=LEAF.findIndex(x=>x.s===si&&x.n===f.n);return `<button type="button" data-li="${li}">${f.n}</button>`}).join('')).join('')}</div></div></div></div>`}
+ $('detail').innerHTML=h;
+ $('detail').querySelectorAll('[data-li]').forEach(b=>b.onclick=()=>pick('f'+b.dataset.li));
+ const ap=$('addP');if(ap)ap.onclick=()=>{const li=+idx;const i=st.picked.indexOf(li);if(i>=0)st.picked.splice(i,1);else if(st.picked.length<8)st.picked.push(li);pick(k);sheet();list()};
+ paint();list()}
+function paint(){const hl=st.prod?W.prod.find(p=>p.k===st.prod).f:[];
+ $('wheel').querySelectorAll('path').forEach(p=>{const k=p.dataset.k;p.classList.toggle('sel',k===st.sel);
+  if(k[0]==='f'){const L=LEAF[+k.slice(1)],v=AR[L.o][st.lv];p.style.opacity=f1(.4+.6*v)}});
+ let s='';hl.forEach(n=>{const li=LEAF.findIndex(x=>x.n===n);if(li<0)return;const [x,y]=pol(R3+12,ang(li+.5));s+=`<circle class="star" cx="${f1(x)}" cy="${f1(y)}" r="6.5"/><circle cx="${f1(x)}" cy="${f1(y)}" r="3" style="fill:#B33A24"/>`});
+ st.picked.forEach(li=>{const [x,y]=pol(R3+12,ang(li+.5));s+=`<circle cx="${f1(x)}" cy="${f1(y)}" r="5" style="fill:#C9962B;stroke:#3A2416;stroke-width:1"/>`});
+ $('stars').innerHTML=s}
+function list(){const hl=st.prod?W.prod.find(p=>p.k===st.prod).f:[];
+ $('flist').innerHTML=W.sec.map((s,si)=>`<div class="fg"><h3><i style="background:${s.c}"></i>${s.n}</h3>${s.g.map(g=>`<h4>${g.n}</h4><div class="chs">${g.f.map(f=>{const li=LEAF.findIndex(x=>x.s===si&&x.n===f.n);return `<button type="button" data-li="${li}" class="${st.sel==='f'+li?'on':''} ${hl.includes(f.n)?'hl':''}">${f.n}</button>`}).join('')}</div>`).join('')}</div>`).join('');
+ $('flist').querySelectorAll('[data-li]').forEach(b=>b.onclick=()=>{pick('f'+b.dataset.li);$('wheel').scrollIntoView({behavior:still?'auto':'smooth',block:'center'})})}
+function obars(){$('obars').innerHTML=['e','s','d'].map(o=>`<div class="bar"><span><i class="dot" style="--c:${OC[o]}"></i>${ON[o]}</span><div class="track"><i style="width:${f1(AR[o][st.lv]*100)}%;background:${OC[o]}"></i></div><span>${vn(AR[o][st.lv]*100,0)}%</span></div>`).join('')}
+const VI=[['sC','酸味'],['sN','甘み'],['sD','苦み'],['sT','ボディ'],['sH','余韻']];
+function radar(){const v=VI.map(([id])=>+$(id).value),cx=150,cy=140,R=96,pt=(i,r)=>{const a=(-90+i*72)*Math.PI/180;return [cx+r*Math.cos(a),cy+r*Math.sin(a)]};
+ let g='';[1,2,3,4,5].forEach(k=>g+=`<polygon class="grid" points="${VI.map((_,i)=>pt(i,R*k/5).map(f1).join(',')).join(' ')}"/>`);
+ VI.forEach((_,i)=>{const [x,y]=pt(i,R);g+=`<line x1="${cx}" y1="${cy}" x2="${f1(x)}" y2="${f1(y)}" style="stroke:var(--rule)"/>`});
+ g+=`<polygon class="area" points="${v.map((x,i)=>pt(i,R*x/5).map(f1).join(',')).join(' ')}"/>`;
+ VI.forEach(([,n],i)=>{const [x,y]=pt(i,R+20);g+=`<text x="${f1(x)}" y="${f1(y+4)}" text-anchor="middle">${n} ${v[i]}</text>`});
+ $('radar').innerHTML=g;VI.forEach(([id,n])=>$('o'+id.slice(1)).textContent=$(id).value+'/5')}
+function sheet(){const d=new Date(),pd=`${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`;
+ $('picked').innerHTML=st.picked.length?st.picked.map(li=>`<button type="button" data-li="${li}" title="シートから削除">${LEAF[li].n} ✕</button>`).join(''):'<span class="em">まだ香りが選ばれていません。外側の輪のマスを押してから「シートに追加」を押してください。</span>';
+ $('picked').querySelectorAll('[data-li]').forEach(b=>b.onclick=()=>{st.picked.splice(st.picked.indexOf(+b.dataset.li),1);sheet();paint()});
+ const prod=st.prod?W.prod.find(p=>p.k===st.prod).n:'________';
+ const t=`テイスティングシート · MeDili\nコーヒー：${prod} · 焙煎度：${LV[st.lv].n} · 日付：${pd}\n抽出方法：________ · 比率：________\n香り：${st.picked.length?st.picked.map(li=>LEAF[li].n.toLowerCase()).join('、'):'________'}\n${VI.map(([id,n])=>`${n} ${$(id).value}/5`).join(' · ')}\n最も強いグループ：${st.picked.length?[...new Set(st.picked.map(li=>W.sec[LEAF[li].s].n))].join('、'):'________'}\n欠点臭：${st.picked.some(li=>LEAF[li].o==='t')?'あり、ロットを再確認':'なし'}\nメモ：______________________________`;
+ $('sheet').textContent=t;st.sheet=t;radar()}
+function update(){pills('prods',[['','すべて']].concat(W.prod.map(p=>[p.k,p.n])),st.prod,k=>{st.prod=k;if(k){st.lv=W.prod.find(p=>p.k===k).lv}update()});
+ const P=st.prod?W.prod.find(p=>p.k===st.prod):null;$('pNote').textContent=P?`${P.d} ホイール上の赤い点は、商品説明に記載された香りです。`:'コーヒーのラインを選ぶと、MeDiliの商品説明に記載された香りに印が付きます。';
+ $('iL').value=st.lv;$('oL').textContent=LV[st.lv].n;$('lNote').textContent=`${LV[st.lv].g}。焙煎度は焙煎ルームと香りの前駆体マシンと共通です。`;
+ obars();paint();list();sheet();if(st.sel)pick(st.sel)}
+$('iL').addEventListener('input',()=>{st.lv=+$('iL').value;update()});
+VI.forEach(([id])=>$(id).addEventListener('input',sheet));
+$('clr').onclick=()=>{st.sel=null;st.picked=[];$('detail').innerHTML=intro();update()};
+$('cpSh').onclick=()=>cp(st.sheet,'cpShS');
+const intro=()=>`<div class="dh"><div class="dn">?</div><h2>ホイールのマスをタップ<small>または「香りリスト」の香りをタップ</small></h2></div><div class="dgrid"><div><p>内側の輪は9つの香りのグループです。中間の輪で各グループを細かく分けます。外側の輪は具体的な香りで、ベトナムの人がふだん嗅ぎ慣れているものの名前で呼んでいます。</p></div><div><p>マスの色が濃いほど、選んだ焙煎度でその香りが際立ちやすいことを示します。「欠点臭」のグループはホイールの一番下にあります。</p></div></div>`;
+build();$('detail').innerHTML=intro();update();
+</script>
+</body></html>

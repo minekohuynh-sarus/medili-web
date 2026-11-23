@@ -1,0 +1,213 @@
+# phan-biet-ca-phe.html (1)
+db66d88b2 ||| Tell Robusta Cà Sẻ Di Linh apart from high-yield Robusta, Arabica, Catimor, Moka, Culi, Liberica and Excelsa: look at the farm, examine the beans, sieve, weigh 100 beans, test in the lab and taste. Qualitative, quantitative, sensory. An interactive MeDili model, with sources. ||| Robusta Cà Sẻ Di Linhを、多収量Robusta、Arabica、Catimor、Moka、Culi、Liberica、Excelsaと見分ける：農園を見て、豆を観察し、ふるい、100粒を量り、ラボで分析し、味わう。定性・定量・官能。出典付きのMeDiliインタラクティブモデル。 ||| 区分Robusta Cà Sẻ Di Linh与高产Robusta、Arabica、Catimor、Moka、Culi、Liberica和Excelsa：看庄园、察生豆、过筛、称百粒重、实验室分析和品尝。定性、定量、感官。MeDili互动模型，附资料来源。
+6f7095461 ||| MeDili Coffee Identification Machine ||| MeDiliコーヒー判別マシン ||| MeDili咖啡辨别机
+72eafba0c ||| The <1>Coffee Identification</1> Machine ||| <1>コーヒー判別</1>マシン ||| <1>咖啡辨别</1>机
+15e5ceb3d ||| Eight coffee samples pass through eight stations: farm, ripe cherries, bean inspection table, sieve, scale, laboratory, tasting table and decision unit. Looking and tasting are qualitative; sieving, weighing and analysis are quantitative. The focus is Robusta Cà Sẻ Di Linh: how to recognize it, and how it differs from high-yield Robusta. ||| 8つのコーヒーサンプルが8つのステーションを通ります：農園、完熟チェリー、豆の観察台、ふるい、はかり、ラボ、テイスティング台、判定装置。見ることと味わうことは定性、ふるう・量る・分析することは定量です。主役はRobusta Cà Sẻ Di Linh。どう見分けるのか、多収量Robustaとどこが違うのか。 ||| 八个咖啡样品经过八个站点：庄园、成熟咖啡果、生豆检视台、筛子、秤、实验室、品尝台和判定装置。看和尝是定性；过筛、称重、分析是定量。重点是Robusta Cà Sẻ Di Linh：如何辨认，以及与高产Robusta有何不同。
+e9e5ef6b7 ||| Run the machine ||| マシンを動かす ||| 启动机器
+3565bb12d ||| A model table with eight stations: farm, ripe cherries, bean inspection table, sieve, 100-bean scale, laboratory, tasting table, decision unit. Tap each station for details. ||| 8つのステーションの模型台：農園、完熟チェリー、豆の観察台、ふるい、100粒はかり、ラボ、テイスティング台、判定装置。各ステーションを押すと詳細が見られます。 ||| 八个站点的模型台：庄园、成熟咖啡果、生豆检视台、筛子、百粒秤、实验室、品尝台、判定装置。点击各站点查看详情。
+9d9400e59 ||| Samples fed into the machine ||| マシンに入れるサンプル ||| 送入机器的样品
+36840bf7a ||| 8 samples ||| 8サンプル ||| 8个样品
+27a25c845 ||| Mystery sample ||| ミステリーサンプル ||| 神秘样品
+8d640e6f7 ||| Reveal the answer ||| 答えを見る ||| 揭晓答案
+dc5ac7f11 ||| Back to the reference profile ||| 基準プロファイルに戻る ||| 返回标准档案
+04df0f40a ||| Measurements ||| 測定値 ||| 测量值
+7d83fbd0c ||| 100-bean weight ||| 100粒重 ||| 百粒重
+e0e9b0db3 ||| Whole beans, moisture 12.5% or below. ||| 完全粒、水分12.5%以下。 ||| 完整生豆，含水量12.5%以下。
+2e54ff73a ||| Beans retained on screen 16 ||| スクリーン16以上の豆 ||| 16目以上的豆
+4d2f1bc66 ||| Screen holes 6.30 mm, 300 g sample. ||| ふるい目6.30 mm、サンプル300 g。 ||| 筛孔6.30毫米，样品300克。
+d5fa23dad ||| Peaberries per 100 beans ||| 100粒中のピーベリー ||| 每100粒中的圆豆
+2eae1bd4d ||| Center cut of the bean ||| 豆のセンターカット ||| 豆的中线
+bccf137a3 ||| Lab results available ||| ラボの分析結果あり ||| 有实验室结果
+220fb6832 ||| Fat ||| 脂質 ||| 脂肪
+08e08aa23 ||| On a dry-matter basis of the green coffee. ||| 生豆の乾物ベース。 ||| 以生豆干物质计。
+80be19fd4 ||| Two-indicator map ||| 2指標マップ ||| 双指标图
+74fb684ff ||| Caffeine against 100-bean weight for the eight samples ||| 8サンプルのカフェインと100粒重 ||| 八个样品的咖啡因与百粒重
+dd41175dd ||| Focus · Robusta Cà Sẻ Di Linh ||| 注目 · Robusta Cà Sẻ Di Linh ||| 重点 · Robusta Cà Sẻ Di Linh
+cab3066b0 ||| Cà Sẻ is a variety, <1>not a bean shape or a grade.</1> ||| Cà Sẻは品種であり、<1>豆の形や等級ではありません。</1> ||| Cà Sẻ是一个品种，<1>不是豆形，也不是等级。</1>
+eae56f796 ||| “Sẻ” (“sparrow”) is a folk name, not an official classification. Cà Sẻ, Robusta Sẻ, Ro Sẻ and small-bean Robusta all refer to the Robusta brought to Vietnam in the early 20th century and widely grown in the Central Highlands before the selected varieties of the WASI institute. The trees are propagated from seed, so the population is uneven: each tree has its own shape, cherries and yield. The name reflects the small beans, small cherries and compact canopy. ||| 「Sẻ」（スズメの意）は俗称で、正式な分類名ではありません。Cà Sẻ、Robusta Sẻ、Ro Sẻ、小粒Robustaはいずれも、20世紀初めにベトナムへ導入され、WASI研究所の選抜品種が登場する前に中部高原で広く栽培されていたRobustaを指します。種から増やすため集団は不均一で、木ごとに樹形も実も収量も異なります。名前は、小さな豆、小さな実、コンパクトな樹冠を表しています。 ||| “Sẻ”（意为麻雀）是民间叫法，并非正式分类名称。Cà Sẻ、Robusta Sẻ、Ro Sẻ或小粒Robusta，都是指20世纪初引入越南、在WASI研究院的选育品种出现之前广泛种植于西原地区的Robusta。由于以种子繁殖，群体并不整齐：每棵树的树形、果实和产量各不相同。这个名字反映了豆小、果小、树冠紧凑的特点。
+fa71ed406 ||| An analysis of 126 samples in WASI's gene bank showed that most Vietnamese Robusta material belongs to the ER genetic group, from the Congo River basin. From 1976, WASI began breeding on a large scale; the lines TR4, TR9, TR11, then TR14 and TR15 gradually replaced Cà Sẻ thanks to their high yields and large beans. Cà Sẻ is rarely planted now, but it is the foundation material of Vietnamese Robusta and holds many genes adapted to drought, pests and diseases. ||| WASIの遺伝子バンクにある126サンプルの分析では、ベトナムのRobusta素材の大部分が、コンゴ川流域に由来する遺伝グループERに属することが示されました。1976年からWASIは大規模な育種を始め、TR4、TR9、TR11、続いてTR14、TR15の系統が、高収量と大粒を理由に少しずつCà Sẻに取って代わりました。Cà Sẻが新たに植えられることは少なくなりましたが、ベトナムRobustaの基盤となる素材であり、干ばつや病害虫に適応した遺伝子を多く残しています。 ||| 对WASI基因库中126个样品的分析显示，越南Robusta材料大部分属于源自刚果河流域的ER遗传类群。从1976年起，WASI开始大规模选育；TR4、TR9、TR11，随后TR14、TR15等品系凭借高产和大粒逐渐取代了Cà Sẻ。Cà Sẻ如今很少新种，但它是越南Robusta的基础材料，保留了许多适应干旱和病虫害的基因。
+9ebdfaea5 ||| MeDili's Cà Sẻ farm ||| MeDiliのCà Sẻ農園 ||| MeDili的Cà Sẻ庄园
+f0ead9f45 ||| The Di Linh plateau sits at about 1,000 m; the Robusta grows at about 900–1,000 m. ||| Di Linh高原は標高約1,000 m。Robustaは約900〜1,000 mで栽培しています。 ||| Di Linh高原海拔约1,000米；Robusta种植在约900–1,000米处。
+dee475fdb ||| Farmed since 2010; the trees are 15 years old and cared for naturally. ||| 2010年から栽培。樹齢15年の木を、自然に寄り添って手入れしています。 ||| 自2010年开始耕种，树龄15年，以自然方式照料。
+9a0731781 ||| The cool climate ripens the cherries slowly: they are picked in several passes from November to early January, with at most 5% green cherries. ||| 涼しいので実はゆっくり熟します。11月から1月初めまで何度かに分けて摘み、未熟果は最大5%。 ||| 气候凉爽，果实成熟缓慢：从11月到次年1月初分多轮采摘，青果最多5%。
+d5492d421 ||| MeDili's observation: old Cà Sẻ trees give a delicious cup, rich in caffeine. ||| MeDiliの実感：樹齢の高いCà Sẻの木は、カフェイン豊富でおいしい一杯を生みます。 ||| MeDili的观察：多年生的Cà Sẻ树能冲出好喝、咖啡因丰富的咖啡。
+95d1187a8 ||| Seven signs of Cà Sẻ ||| Cà Sẻを見分ける7つのサイン ||| 辨认Cà Sẻ的七个特征
+768b75860 ||| <1>No graft scar at the base</1><2>The trees grow from seed. Walk a row of 20 trees and you'll see different shapes, leaves and cherries.</2><3>Farm · qualitative</3> ||| <1>根元に接ぎ木の跡がない</1><2>実生の木です。20本の列を歩くと、樹形、葉、実がそれぞれ違うのがわかります。</2><3>農園 · 定性</3> ||| <1>树干基部无嫁接痕</1><2>树由种子长成。走过一排20棵树，会看到树形、叶子、果实各不相同。</2><3>庄园 · 定性</3>
+1d0fd35fa ||| <1>Small cherries, dense clusters</1><2>Cherries smaller than grafted lines; color and ripeness vary from tree to tree.</2><3>Cherry · qualitative</3> ||| <1>実は小さく、房が密</1><2>実は接ぎ木の系統より小さく、色と熟度は木によって異なります。</2><3>実 · 定性</3> ||| <1>果实小，果串密</1><2>果实比嫁接品系小；颜色和成熟度因树而异。</2><3>果实 · 定性</3>
+62705a327 ||| <1>Small, dense beans with thick backs</1><2>Short and rounded, with a straight center cut like all Robusta.</2><3>Bean · qualitative</3> ||| <1>豆は小さく硬く、背が厚い</1><2>短く丸い形で、センターカットはすべてのRobustaと同じくまっすぐ。</2><3>豆 · 定性</3> ||| <1>豆小、结实、背厚</1><2>短圆形，中线笔直，与所有Robusta一样。</2><3>生豆 · 定性</3>
+23d9277f6 ||| <1>Light on the scale</1><2>An estimated 13–17 g per 100 beans; the TR4, TR9 and TR11 lines grown in Lâm Đồng weigh 21.6–29.6 g.</2><3>Weighing · quantitative</3> ||| <1>量ると軽い</1><2>100粒あたり推定13〜17 g。ラムドン省で栽培されるTR4、TR9、TR11の系統は21.6〜29.6 g。</2><3>計量 · 定量</3> ||| <1>称起来轻</1><2>估计每100粒13–17克；林同省种植的TR4、TR9、TR11品系为21.6–29.6克。</2><3>称重 · 定量</3>
+444dd88df ||| <1>Few large-screen beans</1><2>Most fall between screens 13 and 16; grafted lines in Lâm Đồng have 87–99% retained on screen 16.</2><3>Sieving · quantitative</3> ||| <1>大粒スクリーンの豆が少ない</1><2>大部分がスクリーン13〜16に収まります。ラムドン省の接ぎ木系統は87〜99%がスクリーン16以上。</2><3>ふるい · 定量</3> ||| <1>大目数豆少</1><2>大部分在13–16目之间；林同省的嫁接品系有87–99%在16目以上。</2><3>过筛 · 定量</3>
+a787d173b ||| <1>Strong, clearly bitter, long finish</1><2>Dark chocolate, cocoa; full body, low acidity. High-yield Robusta is bitter but lighter in flavor.</2><3>Tasting · sensory</3> ||| <1>濃厚で苦みがはっきり、余韻が長い</1><2>ダークチョコレート、カカオ。しっかりしたボディで酸味は少なめ。多収量品種も苦いが、味は軽め。</2><3>テイスティング · 官能</3> ||| <1>浓郁、苦味鲜明、余韵长</1><2>黑巧克力、可可；醇厚，酸度低。高产种也苦，但味道较淡。</2><3>品尝 · 感官</3>
+03a8f5f42 ||| <1>Farm records exist</1><2>Farm code, planting year, seed source. This is the strongest evidence; for certainty, run a DNA test.</2><3>Traceability</3> ||| <1>農園の記録がある</1><2>農園コード、植え付け年、種子の出所。これが最も強い証拠です。確実を期すならDNA検査を。</2><3>トレーサビリティ</3> ||| <1>有庄园档案</1><2>庄园编号、种植年份、种子来源。这是最有力的证据；要确定无疑，就做DNA检测。</2><3>溯源</3>
+bb891a15a ||| Cà Sẻ and high-yield Robusta, side by side ||| Cà Sẻと多収量Robustaを並べて ||| Cà Sẻ与高产Robusta并排对比
+202dabf4e ||| <1></1>Cà Sẻ Di Linh ||| <1></1>Cà Sẻ Di Linh ||| <1></1>Cà Sẻ Di Linh
+8950d109b ||| <1></1>High-yield Robusta ||| <1></1>多収量Robusta ||| <1></1>高产Robusta
+17a5fd352 ||| Robusta brought to Vietnam in the early 20th century, widely grown in the Central Highlands before the WASI varieties ||| 20世紀初めにベトナムへ導入され、WASI品種の登場前に中部高原で広く栽培されたRobusta ||| 20世纪初引入越南的Robusta，在WASI品种出现之前广泛种植于西原地区
+35ff53e37 ||| WASI lines selected since 1976: TR4, TR9, TR11, TR14, TR15; TRS1 is a hybrid of TR4, TR9, TR11 and TR12 ||| 1976年以降に選抜されたWASIの系統：TR4、TR9、TR11、TR14、TR15。TRS1はTR4、TR9、TR11、TR12の交配 ||| 1976年起选育的WASI品系：TR4、TR9、TR11、TR14、TR15；TRS1由TR4、TR9、TR11、TR12杂交而成
+63219b1e7 ||| Propagation ||| 繁殖方法 ||| 繁殖方式
+c16bcda79 ||| From seed, so every tree is different ||| 実生のため、木ごとに異なる ||| 由种子繁殖，所以每棵树都不同
+2da499142 ||| Grafting and cuttings give a uniform farm; several lines must be interplanted ||| 接ぎ木や挿し木で農園は均一。複数の系統を混植する必要がある ||| 芽接、扦插，庄园整齐划一；必须间种多个品系
+2c112108e ||| 100-bean weight ||| 100粒重 ||| 百粒重
+feeadd581 ||| Est. 13–17 g ||| 推定13〜17 g ||| 估计13–17克
+fb38dc26e ||| 15.3–29.6 g depending on line and region; 19.2–29.6 g in Lâm Đồng ||| 系統と地域により15.3〜29.6 g、ラムドン省では19.2〜29.6 g ||| 因品系和地区而异，为15.3–29.6克；林同省为19.2–29.6克
+877f6b0ed ||| Retained on screen 16 ||| スクリーン16以上 ||| 16目以上
+2cbb888e7 ||| Est. 55–70% ||| 推定55〜70% ||| 估计55–70%
+a885f3ed0 ||| 63–99%; 86.9–99.2% in Lâm Đồng ||| 63〜99%、ラムドン省では86.9〜99.2% ||| 63–99%；林同省为86.9–99.2%
+c74a58954 ||| Yield ||| 収量 ||| 产量
+aceb529ee ||| Est. 2–3 tonnes of green coffee/ha ||| 推定2〜3トン（生豆）/ha ||| 估计每公顷2–3吨生豆
+648c740fe ||| 3.7–7.3 tonnes of green coffee/ha in trials ||| 試験で3.7〜7.3トン（生豆）/ha ||| 试验中每公顷3.7–7.3吨生豆
+84c77e28a ||| 2.2–2.7% according to trade literature ||| 業界資料では2.2〜2.7% ||| 据商业资料为2.2–2.7%
+b586aaa90 ||| Robusta in general is about 2.2% ||| Robusta全般で約2.2% ||| Robusta一般约为2.2%
+8002dc44c ||| The cup ||| カップの味 ||| 杯中风味
+ea9dd4f7b ||| Strong, clearly bitter, long finish, full body; dark chocolate, cocoa ||| 濃厚で苦みがはっきり、余韻が長く、しっかりしたボディ。ダークチョコレート、カカオ ||| 浓郁、苦味鲜明、余韵长、醇厚；黑巧克力、可可
+cfbfdab57 ||| Clearly bitter, woody, roasted grain; lighter in flavor ||| 苦みがはっきり、木、焙煎穀物。味は軽め ||| 苦味鲜明、木质、烤谷物；味道较淡
+3fcdd0a53 ||| Strengths ||| 長所 ||| 优点
+1c636e720 ||| A gene pool adapted to drought, pests and diseases; the story of the region ||| 干ばつや病害虫に適応した遺伝資源。地域の物語 ||| 适应干旱和病虫害的基因资源；产区的故事
+276efd257 ||| High yields, large uniform beans, rust resistance ||| 高収量、大きくそろった豆、さび病への耐性 ||| 高产、豆大且均匀、抗锈病
+fb93853d8 ||| Weaknesses ||| 短所 ||| 缺点
+4fc6ff963 ||| Low yields, small beans, few large-screen beans ||| 低収量、小粒、大粒スクリーンの豆が少ない ||| 产量低、豆小、大目数豆少
+564110abb ||| Needs intensive farming; TRS1 copes poorly with drought ||| 集約栽培が必要。TRS1は干ばつに弱い ||| 需要集约栽培；TRS1耐旱性差
+7f0650206 ||| Both are the same Robusta species, so their caffeine, fat and sugar ranges overlap; chemical analysis cannot tell them apart. The differences lie in the tree, bean size, yield and the cup. The “estimated” figures for Cà Sẻ are inferred from the seed-grown common Robusta control in the TRS1 variety trial (TRS1 beat the control by 50.2% in yield and 25.4% in 100-bean weight); they are not measurements from the Di Linh farm itself. ||| 同じRobusta種なので、両者のカフェイン、脂質、糖は重なり合い、化学分析では区別できません。違いは木、豆の大きさ、収量、そしてカップの味に表れます。Cà Sẻの「推定」値は、TRS1品種試験で対照区とした実生の一般的なRobustaから推算したもので（TRS1は対照区を収量で50.2%、100粒重で25.4%上回った）、Di Linhの農園で実測した値ではありません。 ||| 两者同属Robusta种，咖啡因、脂肪、糖分相互重叠；化学分析无法区分。差异在于树、豆的大小、产量和杯中风味。Cà Sẻ的“估计”数值，是根据TRS1品种试验中以种子繁殖的普通Robusta对照推算的（TRS1的产量比对照高50.2%，百粒重高25.4%），并非Di Linh庄园的实测数据。
+46f89b493 ||| Figure 2: bean size of Robusta lines by region ||| 図2：地域別のRobusta系統の豆の大きさ ||| 图2：各地区Robusta品系的豆子大小
+d0c23d91d ||| Each dot is one Robusta line in one region, from variety trial data. The same TR4 line weighs 15.3 g per 100 beans in Gia Lai but 21.6 g in Lâm Đồng. So compare bean size only within the same region and the same crop. The dashed outline marks the estimated range for Cà Sẻ. ||| 各点は、品種試験のデータに基づく、ある地域でのRobusta系統1つです。同じTR4でも、100粒あたりザライ省では15.3 g、ラムドン省では21.6 g。そのため豆の大きさは、同じ地域・同じ収穫期の中でだけ比べます。破線で囲んだ範囲がCà Sẻの推定範囲です。 ||| 每个点代表一个地区的一个Robusta品系，数据来自品种试验。同为TR4：在嘉莱省每100粒15.3克，在林同省却是21.6克。因此只能在同一地区、同一产季内比较豆子大小。虚线框内为Cà Sẻ的估计范围。
+9fe2a62e7 ||| 100-bean weight and percentage of beans retained on screen 16 for Robusta lines in Đắk Lắk, Gia Lai and Lâm Đồng ||| ダクラク省、ザライ省、ラムドン省のRobusta系統の100粒重とスクリーン16以上の豆の割合 ||| 多乐省、嘉莱省、林同省Robusta品系的百粒重与16目以上豆的比例
+b0bcb352e ||| View the data for Figure 2 ||| 図2のデータを見る ||| 查看图2的数据
+cf3bcb4c9 ||| Line ||| 系統 ||| 品系
+df95be720 ||| 100 beans, g ||| 100粒重、g ||| 百粒重，克
+bc70a4506 ||| TR4 ||| TR4 ||| TR4
+91fd82d4a ||| TR9 ||| TR9 ||| TR9
+4120afb75 ||| TR11 ||| TR11 ||| TR11
+6263d24e4 ||| TR14 ||| TR14 ||| TR14
+ef91a6e54 ||| TR15 ||| TR15 ||| TR15
+539c84f4f ||| TR16 ||| TR16 ||| TR16
+aef787905 ||| TR6 ||| TR6 ||| TR6
+8a735916d ||| TRS1 ||| TRS1 ||| TRS1
+0ea7475f7 ||| TRS1, average of 4 regions ||| TRS1、4地域の平均 ||| TRS1，4个地区平均
+dbbc8db60 ||| Sensory identification machine ||| 五感で判別するマシン ||| 感官辨识机
+5ec784ee0 ||| Choose what you can see, smell and taste. The machine adds up the evidence and ranks the eight samples. The weights were set by MeDili from descriptions in the literature, not from a measured model; use it to train your eyes, nose and palate. Tap a choice again to clear it. ||| 見て、嗅いで、味わってわかることを選んでください。マシンが証拠を積み上げ、8つのサンプルを順位づけします。重みは資料の記述をもとにMeDiliが設定したもので、測定に基づくモデルではありません。目、鼻、舌のトレーニングにお使いください。もう一度押すと選択を解除できます。 ||| 选择您能看到、闻到、尝到的特征。机器会累计证据，为八个样品排序。权重由MeDili根据资料中的描述设定，并非测量模型；用来训练眼、鼻、舌。再点一次即可取消选择。
+818163242 ||| Fill in as a sample ||| サンプルで試す ||| 按样品试填
+e279b1d72 ||| Quantitative: eight samples, eight indicators ||| 定量：8サンプル、8指標 ||| 定量：八个样品，八项指标
+7185f448f ||| Data compiled from research and industry literature. Cells marked “Est.” are MeDili's estimates for the model; cells with a dash have no reliable figure yet, and MeDili does not fill them in itself. ||| 研究資料と業界資料をもとにまとめたデータです。「推定」とあるセルはMeDiliがモデル用に推定した値です。横線のセルは信頼できる数値がまだないもので、MeDiliが独自に埋めることはしていません。 ||| 数据综合自研究资料和行业资料。标有“估计”的格子是MeDili为模型估算的数值；横线格表示尚无可靠数据，MeDili不自行填写。
+cb9523ce8 ||| Sample ||| サンプル ||| 样品
+d8e3283db ||| Caffeine, % dry matter ||| カフェイン、乾物% ||| 咖啡因，干物质%
+ae871bfc6 ||| Fat, % ||| 脂質、% ||| 脂肪，%
+f9a2603c2 ||| Sucrose, % ||| ショ糖、% ||| 蔗糖，%
+dca7ab860 ||| Peaberries (culi) ||| ピーベリー（culi） ||| 圆豆（culi）
+451bf345b ||| Green coffee yield ||| 生豆収量 ||| 生豆产量
+aaefeb1f8 ||| 16-OMC ||| 16-OMC ||| 16-OMC
+66ecce7c1 ||| Est. 13–17 ||| 推定13〜17 ||| 估计13–17
+7787f44ca ||| Est. 2–3 t/ha ||| 推定2〜3トン/ha ||| 估计2–3吨/公顷
+061419df1 ||| High ||| 高い ||| 高
+b8ceb3922 ||| 15.3–29.6; Lâm Đồng 19.2–29.6 ||| 15.3〜29.6、ラムドン省19.2〜29.6 ||| 15.3–29.6；林同省19.2–29.6
+8750464f1 ||| 63–99%; Lâm Đồng 87–99% ||| 63〜99%、ラムドン省87〜99% ||| 63–99%；林同省87–99%
+ceb5dff3f ||| 3.7–7.3 t/ha ||| 3.7〜7.3トン/ha ||| 3.7–7.3吨/公顷
+ee30d4072 ||| <1></1>Arabica (Typica, Bourbon) ||| <1></1>Arabica（Typica、Bourbon） ||| <1></1>Arabica（Typica、Bourbon）
+691869547 ||| Est. 18 ||| 推定18 ||| 估计18
+dbdac7773 ||| Est. 80% ||| 推定80% ||| 估计80%
+1a479af31 ||| Low ||| 低い ||| 低
+5d39b837f ||| Trace ||| 痕跡量 ||| 痕量
+797e7f8ce ||| <1></1>Catimor ||| <1></1>Catimor ||| <1></1>Catimor
+5807ed069 ||| Est. 16–18 ||| 推定16〜18 ||| 估计16–18
+74f04b8e5 ||| Est. 70–85% ||| 推定70〜85% ||| 估计70–85%
+44a8760c6 ||| 1.67 t/ha ||| 1.67トン/ha ||| 1.67吨/公顷
+6dc038ddb ||| <1></1>Moka Cầu Đất ||| <1></1>Moka Cầu Đất ||| <1></1>Moka Cầu Đất
+7ac761779 ||| If it is Mokka: about ½ of Arabica ||| Mokkaであれば：Arabicaの約½ ||| 若为Mokka：约为Arabica的½
+5da89ecba ||| Est. 10–13 ||| 推定10〜13 ||| 估计10–13
+e060632fa ||| Est. 20–40% ||| 推定20〜40% ||| 估计20–40%
+6ba5943e3 ||| 1–2 kg/tree/year ||| 1〜2 kg/本/年 ||| 1–2公斤/棵/年
+a192539cc ||| <1></1>Culi (peaberry) ||| <1></1>Culi（ピーベリー） ||| <1></1>Culi（圆豆）
+65aab5d31 ||| Same as the parent tree ||| 母樹に準じる ||| 同母株
+a1b9daa25 ||| Sorted separately ||| 別にふるい分け ||| 单独筛分
+2be21d32d ||| 4–5% per crop; culi lots from 90% ||| 1収穫期あたり4〜5%、culiロットは90%以上 ||| 每季4–5%；culi批次90%以上
+71676e38d ||| Depends on the species ||| 種による ||| 视物种而定
+53eeb27f3 ||| <1></1>Liberica (jackfruit coffee) ||| <1></1>Liberica（ジャックフルーツコーヒー） ||| <1></1>Liberica（菠萝蜜咖啡）
+6f8407fd6 ||| Close to Arabica ||| Arabicaに近い ||| 接近Arabica
+2d7909171 ||| ≈ 21 (0.212 g per bean) ||| ≈ 21（1粒0.212 g） ||| ≈ 21（每粒0.212克）
+c252500df ||| Export grade from 90% ||| 輸出品は90%以上 ||| 出口货90%以上
+1c2b10ae7 ||| <1></1>Excelsa (Chari) ||| <1></1>Excelsa（Chari） ||| <1></1>Excelsa（Chari）
+2db493a2d ||| Smaller than Liberica ||| Libericaより小さい ||| 比Liberica小
+4e394d4d0 ||| Higher than Liberica ||| Libericaより高い ||| 比Liberica高
+c22a7a01a ||| Caffeine, fat and sucrose are on a dry-matter basis of the green coffee. 16-OMC (16-O-methylcafestol) is a chemical marker of Robusta, used to detect Robusta blended into Arabica. ||| カフェイン、脂質、ショ糖は生豆の乾物ベースです。16-OMC（16-O-メチルカフェストール）はRobustaの化学的な指標で、Arabicaに混ぜられたRobustaの検出に使われます。 ||| 咖啡因、脂肪、蔗糖以生豆干物质计。16-OMC（16-O-甲基咖啡醇）是Robusta的化学标记，用于检测掺入Arabica中的Robusta。
+5fd362264 ||| Parameters the machine uses (mean ± deviation) ||| マシンが使うパラメータ（平均 ± 偏差） ||| 机器使用的参数（平均值 ± 偏差）
+289b8ac9c ||| Central values are taken from the table above. Where there is no figure yet, such as the fat content of Liberica, MeDili sets a wide range so the machine does not rely much on it. ||| 中心値は上の表から選んでいます。Libericaの脂質のようにまだ数値がない項目は、マシンがあまり頼らないよう、MeDiliが幅を広く設定しています。 ||| 中心值取自上表。尚无数据之处，如Liberica的脂肪含量，MeDili设定了较宽的范围，使机器不过多依赖它。
+38bd5b49b ||| Qualitative: bean shape and easily confused pairs ||| 定性：豆の形と間違えやすいペア ||| 定性：豆形与易混淆的组合
+d901b87ba ||| Figure 3 draws the green beans of the eight samples at the same scale, flat side up. Lengths are estimated from 100-bean weight and bean shape; Liberica alone uses the measured 11.46 mm. This is a conceptual drawing. ||| 図3は、8サンプルの生豆を同じ縮尺で、平らな面を上にして描いています。長さは100粒重と豆の形から推定し、Libericaのみ実測値の11.46 mmを使用。概念図です。 ||| 图3以同一比例绘制八个样品的生豆，平面朝上。长度根据百粒重和豆形估算；唯有Liberica采用实测的11.46毫米。这是概念示意图。
+047d3eaeb ||| Compare pair by pair ||| ペアごとに比較 ||| 逐对比较
+a323927ee ||| Sample A ||| サンプルA ||| 样品A
+c99cb6214 ||| Sample B ||| サンプルB ||| 样品B
+a7c43524e ||| View the full qualitative table for all eight samples ||| 8サンプルすべての定性表を見る ||| 查看全部八个样品的完整定性表
+6cc8a4429 ||| <1></1>Cà Sẻ ||| <1></1>Cà Sẻ ||| <1></1>Cà Sẻ
+bb1c1e716 ||| <1></1>High-yield ||| <1></1>多収量品種 ||| <1></1>高产种
+8996f0937 ||| <1></1>Arabica ||| <1></1>Arabica ||| <1></1>Arabica
+f27c50cc1 ||| <1></1>Moka ||| <1></1>Moka ||| <1></1>Moka
+e292247a5 ||| <1></1>Culi ||| <1></1>Culi ||| <1></1>Culi
+48b854f3b ||| <1></1>Liberica ||| <1></1>Liberica ||| <1></1>Liberica
+99456d654 ||| <1></1>Excelsa ||| <1></1>Excelsa ||| <1></1>Excelsa
+774a038de ||| Species, group ||| 種、グループ ||| 物种、类群
+5d8b78a28 ||| Robusta, old variety ||| Robusta、在来品種 ||| Robusta，老品种
+15a2f3a9b ||| Robusta, selected lines ||| Robusta、選抜系統 ||| Robusta，选育品系
+ca3130728 ||| Arabica, heirloom variety ||| Arabica、古い品種 ||| Arabica，古老品种
+bcf10dc00 ||| Arabica, hybrid variety ||| Arabica、交配品種 ||| Arabica，杂交品种
+1f252b1b3 ||| Arabica, Bourbon group ||| Arabica、Bourbon系 ||| Arabica，Bourbon类
+406aceb68 ||| A bean shape, found in every variety ||| 豆の形状のひとつで、どの品種にも現れる ||| 一种豆形，各品种都有
+f0dce33c2 ||| Coffea liberica ||| Coffea liberica ||| Coffea liberica
+02c2e6fd7 ||| Coffea dewevrei ||| Coffea dewevrei ||| Coffea dewevrei
+828731fda ||| Seedling-grown: planted from seed over many generations, an uneven population ||| 実生：何世代も種から育てられ、集団は不均一 ||| 实生：多代以种子种植，群体不整齐
+d68c1fc9a ||| Grafting, cuttings: TR4, TR9, TR11, TR14, TR15; TRS1 alone is grown from hybrid seed ||| 接ぎ木、挿し木：TR4、TR9、TR11、TR14、TR15。TRS1のみ交配種子から栽培 ||| 芽接、扦插：TR4、TR9、TR11、TR14、TR15；唯有TRS1用杂交种子种植
+1299e28c3 ||| Grown from seed; Arabica self-pollinates, so varieties are fairly stable ||| 種から栽培。Arabicaは自家受粉なので、品種はかなり安定している ||| 以种子种植；Arabica自花授粉，因此品种相当稳定
+85c532bf3 ||| A cross of Timor Hybrid and Caturra, created in Portugal in 1959 ||| Timor HybridとCaturraの交配で、1959年にポルトガルで作出 ||| Timor Hybrid与Caturra杂交，1959年在葡萄牙育成
+53f77b41e ||| Grown from seed; often described as a dwarf form of Bourbon ||| 種から栽培。Bourbonの矮性型とされることが多い ||| 以种子种植；常被描述为Bourbon的矮化类型
+a1d1fa890 ||| Not a variety: the cherry develops one bean instead of two ||| 品種ではない：実の中で豆が2粒ではなく1粒だけ育つ ||| 不是品种：果实只孕育一粒豆，而非两粒
+d7a7d0fb7 ||| A separate species; a true tree with a deep taproot ||| 別の種。本格的な高木で、直根が深い ||| 独立物种；真正的乔木，主根深
+0ef19548b ||| Once classed as a variety of Liberica; a 2025 genetic study separated it into its own species ||| かつてはLibericaの変種とされていたが、2025年の遺伝子研究で独立した種とされた ||| 曾被归为Liberica的一个变种；2025年的基因研究将其分为独立物种
+d99ebbcfe ||| Tree ||| 木 ||| 树
+ded8301c6 ||| Every tree has its own shape, with different leaves and cherries; the canopy is usually compact; no graft scar at the base. ||| 木ごとに樹形が違い、葉も実も異なる。樹冠はたいていコンパクト。根元に接ぎ木の跡がない。 ||| 每棵树形态各异，叶和果实也不同；树冠通常紧凑；基部没有嫁接痕。
+ca44d06b3 ||| The farm is as uniform as if cast from a mold, with graft scars at the base; several lines must be interplanted because Robusta needs cross-pollination. TR9 is short and compact, with dark bronze young leaves. ||| 農園は型で抜いたように均一で、根元に接ぎ木の跡がある。Robustaは他家受粉が必要なため、複数の系統を混植しなければならない。TR9は低くコンパクトで、新葉は濃い銅色。 ||| 庄园整齐如一，基部有嫁接痕；因Robusta需要异花授粉，必须间种多个品系。TR9矮小紧凑，嫩叶呈深古铜色。
+3fad67671 ||| Typica is tall with horizontal branches and bronze young leaves; its leaves are smaller and glossier than Robusta's. ||| Typicaは背が高く、枝は水平に伸び、新葉は銅色。葉はRobustaより小さく、つやがある。 ||| Typica高大，枝条平展，嫩叶古铜色；叶片比Robusta小，更有光泽。
+febf7326b ||| Short trees with short internodes and a compact canopy; rust-resistant thanks to the Robusta genes in Timor Hybrid. ||| 低木で節間が短く、樹冠はコンパクト。Timor HybridのRobusta遺伝子のおかげで、さび病に強い。 ||| 树矮，节间短，树冠紧凑；得益于Timor Hybrid中的Robusta基因而抗锈病。
+39188a482 ||| Small trees with few leaves, looking thin; the original Mokka form grows bushy like a hedge. ||| 木は小さく葉が少なく、やせて見える。原型のMokkaは生け垣のように茂る。 ||| 树小叶少，看起来瘦弱；原始的Mokka类型长得像篱笆一样茂密。
+221db7266 ||| Same as the parent tree; every farm has them. ||| 母樹に準じる。どの農園にもある。 ||| 同母株；每个庄园都有。
+6fbcd914a ||| A large tree with big, thick leaves and a deep taproot. ||| 大きな高木で、葉は大きく厚く、直根が深い。 ||| 高大乔木，叶片大而厚，主根深。
+09ba02996 ||| Trees grow up to about 15 m, with thick, tough leaves and deep roots; drought-tolerant, with few pests and diseases. ||| 樹高は約15 mにもなり、葉は厚く丈夫で、根が深い。干ばつに強く、病害虫が少ない。 ||| 树高可达约15米，叶厚而坚韧，根深；耐旱，病虫害少。
+ce570e483 ||| Cherry ||| 実 ||| 果实
+89b88e40c ||| Small cherries in dense clusters; color and ripeness vary from tree to tree. ||| 実は小さく房が密。色と熟度は木によって異なる。 ||| 果实小，果串密；颜色和成熟度因树而异。
+e30d316da ||| Large cherries, uniform within a line. ||| 実は大きく、同じ系統内でそろっている。 ||| 果实大，同一品系内整齐。
+05c4f4c83 ||| Red, medium-sized cherries; fewer per node than Robusta. ||| 実は赤く中くらい。節ごとの実はRobustaより少ない。 ||| 果实红色，大小中等；每节果实比Robusta少。
+d61b21bb7 ||| Red, medium-sized cherries, heavy-bearing. ||| 実は赤く中くらいで、実付きがよい。 ||| 果实红色，大小中等，结果多。
+f380eab38 ||| Small, round cherries. ||| 実は小さく丸い。 ||| 果实小而圆。
+0953eea33 ||| Looks like a normal cherry from outside. ||| 外見は普通の実と同じ。 ||| 外观与普通果实无异。
+558f6ae64 ||| Large cherries, thick skin, lots of pulp: pulp to bean about 60 : 40. ||| 実は大きく、皮が厚く、果肉が多い。果肉と豆の比は約60 : 40。 ||| 果实大，果皮厚，果肉多：果肉与豆约为60 : 40。
+146c2467d ||| Cherries and beans smaller than Liberica, with a thinner parchment. ||| 実も豆もLibericaより小さく、パーチメントが薄い。 ||| 果实和豆都比Liberica小，内果皮更薄。
+81a37d628 ||| Small, dense, thick-backed, short and rounded. ||| 小さく硬く、背が厚く、短く丸い形。 ||| 小而结实，背厚，短圆形。
+f2cac2c83 ||| Large, uniform, rounded and slightly long. ||| 大きくそろい、やや長めの丸い形。 ||| 大而均匀，圆而略长。
+9eadb026d ||| Flat, elongated, with a wide flat side. ||| 平たく細長く、平らな面が広い。 ||| 扁平细长，平面宽。
+47533337b ||| Flat, oblong, medium to large. ||| 平たく細長く、中粒〜大粒。 ||| 扁平修长，中到大粒。
+96d5f169d ||| Very small, round like a pea. ||| とても小さく、えんどう豆のように丸い。 ||| 很小，圆如豌豆。
+c235ef53b ||| Evenly round, no flat side. ||| 均一に丸く、平らな面がない。 ||| 圆润均匀，没有平面。
+e5b185b99 ||| The largest of all species: about 11.5 mm long, asymmetrical, with a hooked pointed tip. ||| 種の中で最も大きい：長さ約11.5 mm、形はいびつで、とがった先が鉤状。 ||| 各物种中最大：长约11.5毫米，形状不对称，尖端带钩。
+a63ac45d1 ||| Medium-sized, a slightly lopsided teardrop shape. ||| 中くらいで、やや傾いたしずく形。 ||| 中等大小，略歪的水滴形。
+ac47dbce8 ||| Center cut ||| センターカット ||| 中线
+b1b069ff1 ||| Straight ||| まっすぐ ||| 直
+fc7087e76 ||| S-curved ||| S字に曲がる ||| S形弯曲
+73c5db905 ||| Curved, short ||| 曲がっていて短い ||| 弯而短
+0b081ee9e ||| A line along the round body ||| 丸い豆に沿った1本の線 ||| 沿圆形豆身的一条线
+decd6025f ||| Wrinkled, off-center ||| しわがあり、ずれている ||| 有皱褶，偏斜
+dd7d5614a ||| Slightly wrinkled, off-center ||| ややしわがあり、ずれている ||| 略有皱褶，偏斜
+fedf3e337 ||| Region, altitude ||| 地域、標高 ||| 地区、海拔
+d991608e8 ||| About 900–1,000 m, Di Linh plateau ||| 約900〜1,000 m、Di Linh高原 ||| 约900–1,000米，Di Linh高原
+20b9bbce0 ||| Varies by region: Đắk Lắk, Gia Lai, Lâm Đồng; TR9 suits about 500–800 m ||| 地域による：ダクラク省、ザライ省、ラムドン省。TR9は約500〜800 mに適する ||| 视地区而定：多乐省、嘉莱省、林同省；TR9适合约500–800米
+91b671f66 ||| Highlands; Cầu Đất at about 1,500 m and above ||| 高地。Cầu Đấtは約1,500 m以上 ||| 高海拔地区；Cầu Đất约1,500米以上
+f3f881751 ||| Sơn La, Lâm Đồng, Quảng Trị… ||| ソンラ省、ラムドン省、クアンチ省… ||| 山罗省、林同省、广治省…
+5a306e26a ||| About 1,500–1,600 m, Cầu Đất ||| 約1,500〜1,600 m、Cầu Đất ||| 约1,500–1,600米，Cầu Đất
+e3199ab65 ||| Depends on the farm ||| 農園による ||| 视庄园而定
+e9acf69c0 ||| Kon Tum, Quảng Trị, Lâm Đồng; about 800 m ||| コントゥム省、クアンチ省、ラムドン省。約800 m ||| 昆嵩省、广治省、林同省；约800米
+58af5d4ef ||| Grown in Vietnam, India and Indonesia ||| ベトナム、インド、インドネシアで栽培 ||| 越南、印度、印度尼西亚有种植
+351112fc1 ||| Harvest season ||| 収穫期 ||| 采收季
+4d3886ee5 ||| November to early January, picked in several passes ||| 11月から1月初め、何度かに分けて摘む ||| 11月至次年1月初，分多轮采摘
+2de9939b0 ||| Varies by line; TR9, TR14, TR15 ripen late ||| 系統による。TR9、TR14、TR15は晩生 ||| 视品系而定；TR9、TR14、TR15晚熟
+dd52276c4 ||| Varies by region ||| 地域による ||| 视地区而定
+50e3c84a1 ||| Varies by crop ||| 収穫期による ||| 视产季而定
+8a3fbc9b4 ||| Depends on the region ||| 地域に準じる ||| 依地区而定
+331c383c3 ||| Flavor ||| 風味 ||| 风味
+94dd3315d ||| Clearly bitter, woody, roasted grain; lighter in flavor than Cà Sẻ ||| 苦みがはっきり、木、焙煎穀物。Cà Sẻより味は軽い ||| 苦味鲜明、木质、烤谷物；味道比Cà Sẻ淡
+b84675da1 ||| Floral, citrus, fruity; bright acidity, sweet ||| 花、柑橘、フルーツ。爽やかな酸味、甘い ||| 花香、柑橘、果香；明亮酸质，甜

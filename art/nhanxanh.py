@@ -75,7 +75,7 @@ Q = {
         ('chua', 'Chua thanh, thơm hoa', 'Pha phễu, Arabica vị thanh.', '#D9B77E'),
         ('trai', 'Ngọt trái chín, hương lên men', 'Natural, Honey: mận chín, nho khô, rượu vang nhẹ.', '#A23B24'),
         ('mau', 'Chưa rõ, muốn thử mẫu', 'MeDili chuẩn bị mẫu vài dòng gần nhu cầu.', 'none')]),
-    'loai': ('Robusta hay Arabica?', 'Loại', 'Có thể lấy cả hai để phối blend.', [
+    'loai': ('Robusta hay Arabica?', 'Loại cà phê', 'Có thể lấy cả hai để phối blend.', [
         ('R', 'Robusta', 'Đậm, đắng, nhiều caffeine. Giá mềm hơn.', None),
         ('A', 'Arabica', 'Chua thanh, thơm. Giá cao hơn.', None),
         ('RA', 'Cả hai, để phối', 'Robusta làm nền, Arabica làm hương.', None),
@@ -561,8 +561,8 @@ function render(){const a=ans();$('q-ro').disabled=a.loai==='A';
  $('nx-bar-c').textContent=done+'/'+app.length;$('nx-bar-t').textContent=S.length?S[0][0].L.n+' · '+pct(S[0][0].f)+'%':'Trả lời vài câu để xem gợi ý';
  const T=tips(a);$('nx-tips').innerHTML=T.map(t=>`<li>${escH(t)}</li>`).join('');$('nx-tipw').hidden=!T.length;
  const pk=picks();$('nx-sum').classList.toggle('empty',!done&&!pk.length);$('nx-pk').closest('.sec').classList.toggle('has',pk.length>0);$('nx-pk').innerHTML=pk.length?pk.map(l=>`<span class="nxc" style="--c:${l.c}">${escH(l.code)}</span>`).join(''):'<span class="note">Chưa đánh dấu. Bấm ô Quan tâm trong danh mục bên dưới.</span>';
- const nm=$('nx-name').value.trim(),ph=$('nx-ph').value.replace(/[\s.]/g,''),t=msg(a,S,nm,ph);$('nx-msg').textContent=t;
- const g=$('nx-gf');if(nm&&/^(0|\+84)\d{9,10}$/.test(ph)){const q=encodeURIComponent;g.href=FORM+'&'+FN.name+'='+q(nm)+'&'+FN.phone+'='+q(ph)+'&'+FN.txt+'='+q(t);g.classList.remove('off');g.removeAttribute('aria-disabled')}
+ const nm=$('nx-name').value.trim(),ph=$('nx-ph').value.replace(/[\s.()-]/g,''),t=msg(a,S,nm,ph);$('nx-msg').textContent=t;
+ const g=$('nx-gf');if(nm&&/^(0\d{9,10}|\+\d{8,15})$/.test(ph)){const q=encodeURIComponent;g.href=FORM+'&'+FN.name+'='+q(nm)+'&'+FN.phone+'='+q(ph)+'&'+FN.txt+'='+q(t);g.classList.remove('off');g.removeAttribute('aria-disabled')}
  else{g.removeAttribute('href');g.classList.add('off');g.setAttribute('aria-disabled','true')}
  save()}
 F.addEventListener('input',render);F.addEventListener('change',render);F.addEventListener('submit',e=>e.preventDefault());

@@ -1,0 +1,132 @@
+# vi-sinh.html (2) — cách lên men, trạm, phiếu bồn, nhận định
+00637ffdc ||| Wet, submerged ||| ウェット（浸水） ||| 湿式浸水
+e4edf6875 ||| Pulp the cherries and soak the mucilage-covered beans in clean water. The water limits oxygen, so lactic acid bacteria usually lead. ||| 果肉を除き、ミューシレージのついた豆をきれいな水に浸します。水が酸素を遮るので、たいてい乳酸菌が優勢になります。 ||| 脱去果皮，把带果胶层的豆子浸在干净的水里。水限制了氧气，乳酸菌通常领先。
+c59d70a75 ||| Dry tank fermentation ||| 槽内のドライ発酵 ||| 池内干式发酵
+106b340b0 ||| Pulp the cherries and leave the mucilage-covered beans to drain in the tank without water. More oxygen gives acetic acid bacteria a chance. ||| 果肉を除き、ミューシレージのついた豆を水に浸さずに槽で水切りします。酸素が多いので、酢酸菌にチャンスが生まれます。 ||| 脱去果皮，让带果胶层的豆子在池中沥干，不浸水。氧气更多，醋酸菌有机可乘。
+db26fca9f ||| Sealed anaerobic tank ||| 密閉嫌気槽 ||| 密闭厌氧池
+64bfbd9f8 ||| A sealed tank with a CO₂ release valve. Almost no oxygen, so acetic acid bacteria are blocked and alcohol and lactic acid are retained. ||| CO₂排出弁付きの密閉槽。酸素がほとんどないので酢酸菌は抑えられ、アルコールと乳酸が残ります。 ||| 带CO₂排气阀的密闭池。几乎没有氧气，醋酸菌被阻断，酒精和乳酸得以保留。
+591c001b0 ||| Natural, whole cherry ||| Natural（果実まるごと） ||| Natural（整果）
+687f41d93 ||| Whole cherries are dried on raised beds. Microbes eat both pulp and mucilage with plenty of oxygen; as the cherries dry, the microbes slow down. ||| 果実をまるごと乾燥棚で干します。微生物は酸素の多い中で果肉とミューシレージの両方を食べ、実が乾くにつれて活動が鈍くなります。 ||| 整果在晾晒架上晒干。微生物在充足的氧气中吃果肉和果胶层；果实逐渐变干，微生物也慢下来。
+4bf9c8c06 ||| Clean ||| 清潔 ||| 干净
+214a323c3 ||| Poor ||| 不十分 ||| 较差
+06afa3f8b ||| Yeasts ||| 酵母 ||| 酵母
+6b35a1320 ||| Lactic acid bacteria ||| 乳酸菌 ||| 乳酸菌
+ed17c4d9b ||| Acetic acid bacteria ||| 酢酸菌 ||| 醋酸菌
+5113c6e9b ||| Contaminant microbes ||| 雑菌 ||| 杂菌
+e738f0fb1 ||| Microbe sources ||| 微生物の供給源 ||| 微生物来源
+c5a73d7e8 ||| Cherries, soil, water, air, tools, people ||| 果実、土、水、空気、器具、人 ||| 果实、土壤、水、空气、器具、人
+50009efb9 ||| Microbes enter the tank with the cherries and everything that touches them. With a clean tank, clean water and fresh cherries, most are the yeasts and lactic acid bacteria already on the skins; a dirty tank and dirty water add contaminant microbes. ||| 微生物は果実と、果実に触れるあらゆるものと一緒に槽に入ります。槽と水が清潔で果実が新鮮なら、大部分は果皮にもともといる酵母と乳酸菌です。槽や水が汚れていると雑菌が加わります。 ||| 微生物随果实以及接触果实的一切进入发酵池。池净、水净、果鲜时，大部分是果皮上原有的酵母和乳酸菌；池脏、水脏则会加入杂菌。
+e191b86a6 ||| Cleanliness ||| 清潔さ ||| 清洁度
+5f1816ef0 ||| Starting contaminant microbes ||| 初期の雑菌 ||| 初始杂菌
+e9a15db20 ||| high, about ||| 多い、約 ||| 高，约
+1d43b8a0b ||| low, about ||| 少ない、約 ||| 低，约
+87c376b41 ||| Starting acetic acid bacteria ||| 初期の酢酸菌 ||| 初始醋酸菌
+cb119463d ||| Wash tanks, pulpers and baskets with clean water after every batch and let them dry. Don't set bags of cherries on the ground. ||| バッチごとに槽、果肉除去機、かごをきれいな水で洗い、乾かす。果実の袋を地面に置かない。 ||| 每批之后用净水清洗发酵池、脱皮机和篮子，并晾干。不要把装果实的袋子放在地上。
+43639d71f ||| Thinking fermentation needs an “old starter” and not washing the tank. A dirty tank also keeps the microbes that cause off-flavors. ||| 発酵には「古い種」が必要だと考え、槽を洗わない。汚れた槽は欠点臭の原因となる微生物も残す。 ||| 以为发酵需要“老菌种”而不清洗发酵池。脏池也会留下导致异味的微生物。
+fe8860759 ||| Process picked cherries the same day; don't leave bags overnight. ||| 収穫した実はその日のうちに加工し、袋のまま一晩置かない。 ||| 采回的果实当天加工，不要装袋过夜。
+09abb3f82 ||| Microbe food · cherries at {1} °Brix ||| 微生物のえさ · 果実{1} °Brix ||| 微生物的食物 · 果实{1} °Brix
+598d02a55 ||| Mucilage contains free sugars, pectin and a little acid and minerals. Sugar is released gradually as the pectin is broken down, so microbes have food for many hours instead of eating it all at once. ||| ミューシレージには遊離糖、ペクチン、少量の酸とミネラルが含まれます。ペクチンが分解されるにつれて糖が少しずつ放出されるので、微生物は一度に食べ尽くさず、何時間もえさがあります。 ||| 果胶层含有游离糖、果胶以及少量的酸和矿物质。糖随着果胶被分解而逐渐释放，所以微生物在许多小时内都有食物，而不是一下子吃完。
+0fe53e07c ||| Cherry Brix ||| 果実のBrix ||| 果实Brix
+98da8e238 ||| Remaining sugar ||| 残りの糖 ||| 剩余糖分
+456313e6b ||| about 30% of the alcohol-insoluble part ||| アルコール不溶部分の約30% ||| 约占不溶于酒精部分的30%
+409d5b136 ||| Squeeze a bean between two fingers: still slippery means the mucilage hasn't come off; rough and gritty means it has. ||| 豆を2本の指でつまむ。まだぬるぬるしていればミューシレージははがれておらず、ざらざらしてきしむならはがれています。 ||| 用两指捏豆子：仍然滑腻说明果胶层还没脱落；粗糙、有沙沙感说明已经脱落。
+6999aa4f5 ||| Thinking mucilage is just sugar. The slimy part is pectin. ||| ミューシレージは糖だけだと思う。ぬめりの正体はペクチン。 ||| 以为果胶层只是糖。产生黏滑感的是果胶。
+7937c0079 ||| Measure the cherry Brix before the tank to predict how fast it will ferment. ||| 槽に入れる前に果実のBrixを測り、発酵の速さを予測する。 ||| 入池前测量果实Brix，预估发酵速度。
+cfba59e12 ||| Fermentation tank ||| 発酵槽 ||| 发酵池
+189344e96 ||| {1} · hour {2} ||| {1} · {2}時間目 ||| {1} · 第{2}小时
+d9c7004a8 ||| The three microbe groups share one sugar supply; whichever suits the conditions grows faster and shapes the batch's aroma. ||| 3つの微生物グループが同じ糖を分け合います。条件に合ったグループが速く増え、バッチの香りを決めます。 ||| 三组微生物共享同一糖源；适应条件的一组生长更快，决定这批的香气。
+e9ca8b9b9 ||| very little ||| ごくわずか ||| 极少
+8aa45e2cf ||| little ||| 少ない ||| 少
+153118588 ||| Measure pH, Brix and temperature every 6 hours; smell it each time you measure. ||| 6時間ごとにpH、Brix、温度を測り、測るたびににおいをかぐ。 ||| 每6小时测量pH、Brix和温度；每次测量都闻一闻气味。
+0416564a7 ||| Setting a fixed time for every batch. In hot weather, the tank ferments twice as fast. ||| どのバッチも決まった時間にしてしまう。暑い日は発酵が2倍速く進む。 ||| 每批都定死时间。天热时发酵快一倍。
+1df26bd6b ||| MeDili stops its brewer's yeast tanks at pH 4.3. ||| MeDiliはビール酵母の槽をpH 4.3で止めます。 ||| MeDili的啤酒酵母发酵池在pH 4.3时停止。
+d52f7c98f ||| {1} cells/g ||| {1}細胞/g ||| {1}个细胞/g
+277f53422 ||| Yeasts eat sugar and produce alcohol, CO₂ and fruity esters. Some species secrete pectin-cutting enzymes that help the mucilage come off. ||| 酵母は糖を食べてアルコール、CO₂、果物の香りのエステルを作ります。ペクチンを分解する酵素を出す種もあり、ミューシレージがはがれやすくなります。 ||| 酵母吃糖，产生酒精、CO₂和果香酯类。有些种类会分泌分解果胶的酶，帮助果胶层脱落。
+013b0c4e3 ||| Alcohol ||| アルコール ||| 酒精
+dcadf0afb ||| (relative) ||| （相対値） ||| （相对值）
+44da1c8e4 ||| Peak ||| ピーク ||| 峰值
+584c529ef ||| A smell of ripe fruit and light alcohol means the yeasts are at work. ||| 熟した果実や軽いお酒のにおいは、酵母が働いているしるし。 ||| 有熟果和淡淡酒香，说明酵母正在工作。
+d52f17eaf ||| A strong, lingering alcohol smell: the tank has run too long, and the alcohol will soon turn to vinegar if there's oxygen. ||| 強いお酒のにおいが続く：発酵が長すぎ、酸素があればアルコールがまもなく酢になる。 ||| 浓烈酒味持续不散：发酵太久，有氧时酒精很快会变成醋。
+c98ac674b ||| A brewer's yeast starter helps beneficial yeasts take hold early. See Fermentation with Brewer's Yeast. ||| ビール酵母のスターターで、有益な酵母が早くから優勢になります。「ビール酵母による発酵」を参照。 ||| 用啤酒酵母起始，可让有益酵母尽早占据优势。见“啤酒酵母发酵”。
+c513d7ef8 ||| Lactic acid bacteria eat sugar, mainly make lactic acid and bring the pH down. Heterofermentative types also make acetic acid, CO₂ and alcohol. They prefer little oxygen, so they usually lead in submerged and sealed tanks. ||| 乳酸菌は糖を食べて主に乳酸を作り、pHを下げます。ヘテロ型は酢酸、CO₂、アルコールも作ります。酸素が少ない環境を好むので、浸水槽や密閉槽では優勢になりがちです。 ||| 乳酸菌吃糖，主要产生乳酸，使pH下降。异型发酵的种类还会产生乙酸、CO₂和酒精。它们喜欢低氧环境，所以在浸水池和密闭池中通常领先。
+56b5f53eb ||| Gentle sourness, a light yogurt smell. ||| 穏やかな酸味と、軽いヨーグルトのにおい。 ||| 酸味柔和，有淡淡的酸奶味。
+b4f38fe69 ||| Thinking lactic acid bacteria make coffee sweeter. They make acid, not sugar. ||| 乳酸菌がコーヒーを甘くすると思う。乳酸菌が作るのは酸で、糖ではない。 ||| 以为乳酸菌会让咖啡更甜。它们产生的是酸，不是糖。
+29a32a811 ||| Sealed tanks and clean water help this group dominate. ||| 密閉槽ときれいな水が、このグループを優勢にする。 ||| 密闭池和净水有助于这组占优势。
+53801e7d8 ||| Acetic acid bacteria need oxygen and feed on the alcohol made by yeasts, turning it into acetic acid with a vinegar smell. They thrive in open tanks, with lots of stirring, thick damp drying layers, and when the tank runs too long. ||| 酢酸菌は酸素を必要とし、酵母が作ったアルコールを食べて、酢のにおいのする酢酸に変えます。槽が開いている、かき混ぜが多い、乾燥層が厚く湿っている、発酵が長すぎる、といった場合に勢いを増します。 ||| 醋酸菌需要氧气，以酵母产生的酒精为食，把它变成带醋味的乙酸。开口池、频繁翻动、晾晒层厚且潮湿以及发酵过久时，它们会大量繁殖。
+e3e7de77b ||| Vinegar level ||| 酢の度合い ||| 醋味程度
+7abe46734 ||| A vinegar smell and sourness that hits your nose when you open the tank. ||| 槽を開けたとき、酢のにおいと鼻をつく酸っぱさ。 ||| 打开发酵池时，醋味和酸味直冲鼻子。
+06228dbfe ||| Blaming acetic acid bacteria whenever acetic acid shows up; heterofermentative lactic acid bacteria make a little too. ||| 酢酸があるとすぐ酢酸菌のせいにする。ヘテロ型乳酸菌も少し作る。 ||| 一发现乙酸就怪醋酸菌；异型发酵乳酸菌也会产生一点。
+648086909 ||| Keep the tank low in oxygen and stop at the right time. ||| 槽の酸素を少なく保ち、適切なタイミングで止める。 ||| 保持发酵池低氧，并适时停止。
+cb14090a1 ||| Measuring pH, Brix, temperature ||| pH・Brix・温度の測定 ||| 测量pH、Brix、温度
+b5ce69319 ||| pH tells you how sour the tank is, Brix how much sugar is left, and temperature how fast it is fermenting. Those three numbers plus the smell are enough to decide when to stop. ||| pHは槽の酸っぱさ、Brixは残りの糖、温度は発酵の速さを教えてくれます。この3つの数字とにおいがあれば、止めどきを決められます。 ||| pH告诉你发酵池有多酸，Brix告诉你还剩多少糖，温度告诉你发酵快慢。这三个数字加上气味，就足以决定何时停止。
+5bc238a17 ||| Current pH ||| 現在のpH ||| 当前pH
+d29856dcb ||| Reaches pH 4.3 at ||| pH 4.3到達 ||| 达到pH 4.3的时间
+0e487c05a ||| not within 96 hours ||| 96時間以内に到達せず ||| 96小时内未达到
+d9c48079b ||| Sugar left ||| 残りの糖 ||| 剩余糖
+b40e88c7e ||| Calibrate the pH meter with pH 4 and pH 7 buffer solutions before each round. ||| 毎回の作業前に、pH 4とpH 7の標準液でpH計を校正する。 ||| 每批前用pH 4和pH 7标准缓冲液校准pH计。
+709fa915b ||| Watching only the clock. After the same 30 hours, tanks at 18 °C and 30 °C give very different results. ||| 時計だけを見る。同じ30時間でも、18 °Cと30 °Cの槽では結果が大きく違う。 ||| 只看时钟。同样30小时，18 °C和30 °C的发酵池结果差别很大。
+5a4c39d81 ||| The tank log sheet is at the bottom of the page. ||| 発酵槽の記録票はページの下にあります。 ||| 发酵池记录表在页面底部。
+8309b7ee3 ||| Washing and drying ||| 洗浄と乾燥 ||| 清洗与晾晒
+c86bd23f7 ||| Natural: turn evenly, dry in thin layers ||| Natural：均一に返し、薄く広げて干す ||| Natural：均匀翻动，薄层晾晒
+5a63d3f86 ||| Not at the stop point yet ||| まだ止めどきではない ||| 尚未到停止点
+83ef9e662 ||| Suggested stop: hour {1} ||| 推奨の止めどき：{1}時間目 ||| 建议停止：第{1}小时
+700cc624e ||| Natural has no washing step. The cherries are dried in thin layers and turned several times a day so they dry evenly, avoiding trapped moisture that lets contaminant microbes and mold grow. ||| Naturalには洗浄の工程がありません。実を薄く広げ、1日に何度も返して均一に乾かし、湿気がこもって雑菌やカビが増えるのを防ぎます。 ||| Natural没有清洗步骤。果实薄层晾晒，每天翻动多次让其均匀干燥，避免积湿导致杂菌和霉菌滋生。
+2e22984b8 ||| Once the pH target is reached and the mucilage has come off, drain the water, wash the mucilage away and move the beans to the drying beds right away. Washing stops the microbes working on the bean surface. ||| pHの目安に達し、ミューシレージがはがれたら、水を抜いてミューシレージを洗い落とし、すぐに乾燥棚へ移します。洗い終えると、豆の表面での微生物の活動が止まります。 ||| 达到pH节点且果胶层已脱落时，排水、洗净果胶层，立即送上晾晒架。洗完后，豆子表面的微生物活动随之停止。
+5f7f46c54 ||| not applicable ||| 該当なし ||| 不适用
+392565c5f ||| Dry down to ||| 乾燥の目標水分 ||| 晒至含水量
+b25154963 ||| Wash until the beans feel rough and the water runs clear. Dry in a thin layer, turning evenly. ||| 豆がざらざらになり、水が澄むまで洗う。薄く広げて干し、均一に返す。 ||| 洗到豆子摸起来粗糙、水变清。薄层晾晒，均匀翻动。
+226445949 ||| Leaving washed wet beans in a pile: the microbes keep working and mold is likely. ||| 洗った後、濡れた豆を山積みにする：微生物が働き続け、カビやすい。 ||| 洗完后把湿豆堆成堆：微生物继续工作，容易发霉。
+766401d2d ||| Get them onto the beds the same day and cover them from rain at night. ||| その日のうちに乾燥棚へ移し、夜は雨よけをする。 ||| 当天送上晾晒架，夜间遮雨。
+c42bc649e ||| Microbe Machine · Di Linh Farm ||| 微生物マシン · Di Linh農園 ||| 微生物机 · Di Linh庄园
+ed3d227eb ||| {1} h · pH {2} ||| {1}時間 · pH {2} ||| {1}小时 · pH {2}
+c045e01eb ||| Microbe sources · ||| 微生物の供給源 · ||| 微生物来源 ·
+2fa78dadf ||| Mucilage · {1} °Brix ||| ミューシレージ · {1} °Brix ||| 果胶层 · {1} °Brix
+15cc7f661 ||| Tank · hour {1} · pH {2} ||| 槽 · {1}時間目 · pH {2} ||| 发酵池 · 第{1}小时 · pH {2}
+7666c6442 ||| Yeasts · {1} ||| 酵母 · {1} ||| 酵母 · {1}
+3a757359e ||| Thin layers, turned evenly ||| 薄く広げて均一に返す ||| 薄层晾晒，均匀翻动
+ef09b13e4 ||| Stop at hour {1} ||| {1}時間目で止める ||| 第{1}小时停止
+2b6616e53 ||| Temperature, cleanliness ||| 温度・清潔さ ||| 温度、清洁度
+b23955799 ||| hour {1} ||| {1}時間目 ||| 第{1}小时
+17665ad4c ||| Largest group ||| 最も多いグループ ||| 数量最多的一组
+ea279004b ||| IN THE TANK NOW ||| いまの槽の中 ||| 此刻池中
+f4378df0f ||| Concept drawing · figures from an illustrative model ||| コンセプト図 · 数値は説明用モデルによる ||| 概念图 · 数据来自示意模型
+8a7109d40 ||| pH · horizontal axis: hours ||| pH · 横軸：時間 ||| pH · 横轴：小时
+9c5c4f8a7 ||| Hour {1}: fruit juice pH about {2}. Natural stops by dryness, not by pH. ||| {1}時間目：果汁のpHは約{2}。NaturalはpHではなく乾燥度で止める。 ||| 第{1}小时：果汁pH约{2}。Natural按干燥程度停止，不按pH。
+d2fb4e332 ||| Hour {1}: pH {2}. The shaded band is pH 4.1–4.5, around MeDili's 4.3 stop point. ||| {1}時間目：pH {2}。色付きの帯はpH 4.1〜4.5で、MeDiliの止めどき4.3の前後です。 ||| 第{1}小时：pH {2}。阴影带为pH 4.1–4.5，位于MeDili停止点4.3附近。
+87e3db504 ||| Cells per gram (log scale) · horizontal axis: hours ||| 1グラムあたりの細胞数（対数目盛） · 横軸：時間 ||| 每克细胞数（对数刻度） · 横轴：小时
+bcacf88f8 ||| Cells/g, log scale ||| 細胞数/g（対数目盛） ||| 细胞数/g，对数刻度
+41f95488c ||| Relative index, 1 = starting sugar · horizontal axis: hours ||| 相対値（1は最初の糖の量） · 横軸：時間 ||| 相对指数，1为初始糖量 · 横轴：小时
+9169987c9 ||| Relative index ||| 相対値 ||| 相对指数
+24e4e5ec6 ||| Risk of onion-like, rancid smells ||| タマネギ臭・酸敗臭のおそれ ||| 有洋葱味、酸败味的风险
+b45e08ecf ||| Contaminant microbes produce butyric and propionic acids when the tank is dirty and runs long. Wash the tank, change to clean water and shorten the time. ||| 槽が汚れて発酵が長いと、雑菌が酪酸やプロピオン酸を作ります。槽を洗い、きれいな水に替え、時間を短くしてください。 ||| 发酵池脏且发酵时间长时，杂菌会产生丁酸、丙酸。清洗发酵池，换净水，缩短时间。
+096760ac0 ||| Clear vinegar smell ||| はっきりした酢のにおい ||| 醋味明显
+79b0e8f50 ||| Acetic acid bacteria have turned much of the alcohol into acetic acid. Reduce oxygen and stop earlier. ||| 酢酸菌が多くのアルコールを酢酸に変えています。酸素を減らし、早めに止めてください。 ||| 醋酸菌已把大量酒精变成乙酸。减少氧气，提早停止。
+4ec7fb5c8 ||| Acetic acid is rising ||| 酢酸が増えている ||| 乙酸正在增加
+6b339000d ||| Natural gets plenty of oxygen: dry in thin layers, turn evenly, avoid thick, damp piles. ||| Naturalは酸素が多い：薄く広げ、均一に返し、厚く湿った山を避ける。 ||| Natural氧气多：薄层晾晒，均匀翻动，避免厚而潮湿的堆。
+5f55985b1 ||| Natural is on track ||| Naturalは順調 ||| Natural进展正常
+ef0045002 ||| Keep the drying layer thin, turn it several times a day and cover it from rain at night. ||| 干す層を薄く保ち、1日に何度も返し、夜は雨よけをする。 ||| 保持晾晒层薄，每天翻动多次，夜间遮雨。
+1f60df90d ||| Not done yet ||| まだ終わっていない ||| 尚未完成
+fc2b5a4b0 ||| The tank hasn't reached pH 4.3 within 96 hours; check the temperature. ||| 96時間以内にpH 4.3に達していません。温度を確認してください。 ||| 发酵池96小时内未达到pH 4.3，请检查温度。
+1ba89e729 ||| Expected to reach pH 4.3 at hour {1}. ||| {1}時間目にpH 4.3に達する見込みです。 ||| 预计在第{1}小时达到pH 4.3。
+9be27985a ||| pH {1}: the mucilage may not have come off yet, and stopping now risks a green, raw taste. {2} ||| pH {1}：ミューシレージがまだはがれていない可能性があり、いま止めると青臭くなりやすい。{2} ||| pH {1}：果胶层可能还没脱落，现在停止容易有生青味。{2}
+93a081ef1 ||| Past the stop point ||| 止めどきを過ぎている ||| 已过停止点
+13c2ea619 ||| pH {1}, acetic acid {2}. Wash right away. ||| pH {1}、酢酸：{2}。すぐに洗ってください。 ||| pH {1}，乙酸：{2}。应立即清洗。
+6e9dd50e8 ||| Good stopping zone ||| 止めどきの適正範囲 ||| 理想停止区间
+f934dcc36 ||| pH {1}, acetic acid still low. Check that the mucilage has come off, then wash and move to the drying beds. ||| pH {1}、酢酸はまだ少ない。ミューシレージがはがれたか確かめてから洗い、乾燥棚へ移す。 ||| pH {1}，乙酸仍低。确认果胶层已脱落后清洗，送上晾晒架。
+6e306ef85 ||| Reaches pH 4.3 ||| pH 4.3到達 ||| 达到pH 4.3
+208d04141 ||| not yet ||| まだ ||| 尚未
+0c30dbc25 ||| (Natural, not applicable) ||| （Natural、該当なし） ||| （Natural，不适用）
+1680ee5e4 ||| beyond 96 hours ||| 96時間超 ||| 超过96小时
+90b41eaec ||| FERMENTATION TANK SHEET · MeDili⏎Lot: ________ Date: ________ Done by: ________⏎Method: {1} · Cherry Brix: ____ °Brix · Tank: ____ kg⏎Stop target: pH 4.3, mucilage off, no vinegar smell⏎⏎Hour | pH | Brix | °C | Smell (fruit, alcohol, sour, vinegar, onion) | Notes⏎0 | ___ | ____ | ___ | ______________________________________ | ______⏎6 | ___ | ____ | ___ | ______________________________________ | ______⏎12 | ___ | ____ | ___ | ______________________________________ | ______⏎18 | ___ | ____ | ___ | ______________________________________ | ______⏎24 | ___ | ____ | ___ | ______________________________________ | ______⏎30 | ___ | ____ | ___ | ______________________________________ | ______⏎36 | ___ | ____ | ___ | ______________________________________ | ______⏎⏎Stopped at: hour ____, pH ____ · Washed: ____ · On the beds: ____⏎Model forecast for {2} °C: reaches pH 4.3 at {3} ||| 発酵槽記録票 · MeDili⏎ロット：________ 日付：________ 担当：________⏎発酵方法：{1} · 果実のBrix：____ °Brix · 槽：____ kg⏎止めどき：pH 4.3、ミューシレージがはがれ、酢のにおいがない⏎⏎時間 | pH | Brix | °C | におい（果物、お酒、酸味、酢、タマネギ） | メモ⏎0 | ___ | ____ | ___ | ______________________________________ | ______⏎6 | ___ | ____ | ___ | ______________________________________ | ______⏎12 | ___ | ____ | ___ | ______________________________________ | ______⏎18 | ___ | ____ | ___ | ______________________________________ | ______⏎24 | ___ | ____ | ___ | ______________________________________ | ______⏎30 | ___ | ____ | ___ | ______________________________________ | ______⏎36 | ___ | ____ | ___ | ______________________________________ | ______⏎⏎止めた時刻：____時間目、pH ____ · 洗浄完了：____ · 乾燥棚へ：____⏎{2} °Cでのモデル予測：pH 4.3到達は{3} ||| 发酵池记录表 · MeDili⏎批次：________ 日期：________ 操作人：________⏎发酵方式：{1} · 果实Brix：____ °Brix · 池：____ kg⏎停止节点：pH 4.3、果胶层脱落、无醋味⏎⏎小时 | pH | Brix | °C | 气味（果香、酒味、酸、醋、洋葱） | 备注⏎0 | ___ | ____ | ___ | ______________________________________ | ______⏎6 | ___ | ____ | ___ | ______________________________________ | ______⏎12 | ___ | ____ | ___ | ______________________________________ | ______⏎18 | ___ | ____ | ___ | ______________________________________ | ______⏎24 | ___ | ____ | ___ | ______________________________________ | ______⏎30 | ___ | ____ | ___ | ______________________________________ | ______⏎36 | ___ | ____ | ___ | ______________________________________ | ______⏎⏎停止时间：第____小时，pH ____ · 清洗完成：____ · 上架：____⏎{2} °C模型预测：达到pH 4.3的时间为{3}
+94dfbe237 ||| Cool: the tank ferments slowly with clean aromas and needs more hours. ||| 涼しい：発酵はゆっくりで香りはクリーン、より長い時間が必要。 ||| 凉爽：发酵慢，香气干净，需要更多小时。
+586b614c0 ||| The usual temperature range at highland mills. ||| 高地の加工場でよくある温度帯。 ||| 高原加工厂常见的温度范围。
+0f3ba5baa ||| Hot: the tank ferments twice as fast and easily overshoots if you don't measure. ||| 暑い：発酵が2倍速く、測らないと止めどきを過ぎやすい。 ||| 炎热：发酵快一倍，不测量很容易过头。
+aa62a5832 ||| Natural: monitor the first 4 days on the beds. ||| Natural：乾燥棚での最初の4日間を観察。 ||| Natural：观察上架后的前4天。
+998746912 ||| The tank hasn't reached pH 4.3 within 96 hours. ||| 96時間以内にpH 4.3に達していません。 ||| 发酵池96小时内未达到pH 4.3。
+10ed8af85 ||| The model reaches pH 4.3 at hour {1}. ||| モデルでは{1}時間目にpH 4.3に達します。 ||| 模型在第{1}小时达到pH 4.3。
+cff642ab3 ||| {1}, {2} °C, hour {3}: pH {4} ||| {1}、{2} °C、{3}時間目：pH {4} ||| {1}，{2} °C，第{3}小时：pH {4}
+# từ ngắn dùng chung (vi-sinh, tien-chat-huong)
+0467562c6 ||| moderate ||| 中程度 ||| 中等
+5128d5a1d ||| high ||| 多い ||| 多
+ecd6f14aa ||| low ||| 低い ||| 低
+db10c4792 ||| high ||| 高い ||| 高

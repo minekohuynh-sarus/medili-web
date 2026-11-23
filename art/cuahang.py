@@ -736,8 +736,12 @@ def search_index(out_dir):
 
 def sitemap(out_dir):
     urls = [SITE if f == 'index.html' else SITE + f for f in sorted(os.listdir(out_dir)) if f.endswith('.html') and f != 'gio-hang.html']
+    for lang in ('en', 'ja', 'zh'):   # bản tiếng Anh, Nhật, Trung (24/11/2026)
+        d = os.path.join(out_dir, lang)
+        if os.path.isdir(d):
+            urls += [SITE + lang + '/' + ('' if f == 'index.html' else f) for f in sorted(os.listdir(d)) if f.endswith('.html') and f != 'gio-hang.html']
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
             + ''.join(f'<url><loc>{u}</loc></url>\n' for u in urls) + '</urlset>\n')
 
 
-ROBOTS = f'User-agent: *\nAllow: /\nDisallow: /gio-hang.html\n\nSitemap: {SITE}sitemap.xml\n'
+ROBOTS = f'User-agent: *\nAllow: /\nDisallow: /gio-hang.html\nDisallow: /en/gio-hang.html\nDisallow: /ja/gio-hang.html\nDisallow: /zh/gio-hang.html\n\nSitemap: {SITE}sitemap.xml\n'

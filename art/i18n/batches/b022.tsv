@@ -1,0 +1,226 @@
+# phan-biet-ca-phe.html (2)
+d78ce9398 ||| Nutty, herbal, cherry, berries; medium acidity ||| ナッツ、ハーブ、チェリー、ベリー。ほどよい酸味 ||| 坚果、草本、樱桃、浆果；酸度适中
+00138d4d2 ||| Tangerine peel, almond, strawberry, vanilla; some sources describe chocolate, dried fruit, spices ||| みかんの皮、アーモンド、イチゴ、バニラ。チョコレート、ドライフルーツ、スパイスと記す資料もある ||| 橘皮、杏仁、草莓、香草；也有资料描述为巧克力、果干、香料
+3fd0415fb ||| Same as the parent tree; round beans roast more evenly, and the flavor may be rounder, but it is not guaranteed ||| 母樹に準じる。丸い豆は均一に焼けやすく、味がまろやかになることもあるが、保証はない ||| 同母株；圆豆烘焙更均匀，味道可能更圆润，但不能保证
+a733d4b0d ||| Ripe jackfruit, mango, lychee, passion fruit when well processed; wood, leather when poorly processed ||| 精製がよければ熟したジャックフルーツ、マンゴー、ライチ、パッションフルーツ。精製が悪いと木、なめし革 ||| 处理得好时有熟菠萝蜜、芒果、荔枝、百香果；处理不佳时有木头、皮革味
+c38bf0858 ||| Fruity acidity, dark fruit, chocolate, spice, hazelnut; low bitterness ||| フルーツのような酸味、ダークフルーツ、チョコレート、スパイス、ヘーゼルナッツ。苦みは少ない ||| 果酸、深色水果、巧克力、香料、榛子；苦味少
+dcf7ee3e5 ||| Scoring scale ||| 評価基準 ||| 评分标准
+6be45a265 ||| Fine Robusta ||| Fine Robusta ||| Fine Robusta
+5df5d896f ||| SCA ||| SCA ||| SCA
+d394899da ||| Follows the parent tree's species ||| 母樹の種に準じる ||| 依母株的物种而定
+892795416 ||| No widely used dedicated scale yet ||| 広く使われる専用の基準はまだない ||| 尚无通用的专属标准
+2b812b7b1 ||| Low; Typica in Cầu Đất totals only about 2.5–3 tonnes a year for the whole area ||| 低い。Cầu ĐấtのTypicaは地域全体で年間約2.5〜3トンのみ ||| 低；Cầu Đất的Typica全区每年仅约2.5–3吨
+e9973a1d4 ||| 1.67 tonnes of green coffee/ha, the control in a variety trial ||| 1.67トン（生豆）/ha、品種試験の対照区 ||| 每公顷1.67吨生豆，品种试验中的对照
+4d1ec0d93 ||| About 1–2 kg per tree per year ||| 1本あたり年間約1〜2 kg ||| 每棵树每年约1–2公斤
+5c74ea61a ||| About 4–5% of a crop's output ||| 1収穫期の生産量の約4〜5% ||| 约占一季产量的4–5%
+f50e8d0d0 ||| No reliable figures yet in Vietnam ||| ベトナムでは信頼できる数値がまだない ||| 越南尚无可靠数据
+9db7bf4a8 ||| Higher than Liberica in good conditions ||| 条件がよければLibericaより高い ||| 条件好时比Liberica高
+6640c732b ||| Easily confused with ||| 間違えやすい相手 ||| 易混淆对象
+9109b9653 ||| High-yield Robusta grown in harsh areas (its beans are small too), or lots sieved to keep the small beans. ||| 厳しい地域で育った多収量Robusta（豆も小さくなる）、または小さい豆だけをふるい分けたロット。 ||| 种在条件恶劣地区的高产Robusta（豆也小），或经过筛选只取小豆的批次。
+7d93b7335 ||| Cà Sẻ, when high-yield Robusta grown in harsh areas has smaller beans: TR4 in Gia Lai is only 15.3 g per 100 beans. ||| Cà Sẻ。多収量品種も厳しい地域では豆が小さくなるため：ザライ省のTR4は100粒あたりわずか15.3 g。 ||| Cà Sẻ，当高产种种在条件恶劣地区而豆变小时：嘉莱省的TR4每100粒仅15.3克。
+1ba2799c8 ||| Catimor: same species, almost identical bean shape. ||| Catimor：同じ種で、豆の形はほぼ同じ。 ||| Catimor：同一物种，豆形几乎相同。
+c9e424f51 ||| Heirloom Arabica: almost identical bean shape. ||| 古い品種のArabica：豆の形はほぼ同じ。 ||| 古老品种的Arabica：豆形几乎相同。
+e3903ec90 ||| Arabica, often loosely called “Moka” to make it easier to sell. ||| 売りやすくするため、まとめて「Moka」と呼ばれることが多いArabica。 ||| 常被笼统称为“Moka”以便销售的Arabica。
+f79798c24 ||| Cà Sẻ: Sẻ is a variety, Culi is a bean shape. There are Culi Sẻ, high-yield Culi and Arabica Culi. ||| Cà Sẻ：Sẻは品種、Culiは豆の形。Culi Sẻ、多収量品種のCuli、ArabicaのCuliがある。 ||| Cà Sẻ：Sẻ是品种，Culi是豆形。有Culi Sẻ、高产种Culi、Arabica Culi。
+74b393b1e ||| Excelsa: both are lumped together as “jackfruit coffee”. ||| Excelsa：どちらもまとめて「ジャックフルーツコーヒー」と呼ばれる。 ||| Excelsa：两者都被笼统称为“菠萝蜜咖啡”。
+3b56c3c69 ||| Liberica: both are lumped together as “jackfruit coffee”. ||| Liberica：どちらもまとめて「ジャックフルーツコーヒー」と呼ばれる。 ||| Liberica：两者都被笼统称为“菠萝蜜咖啡”。
+1f67fb051 ||| Figure 4: sensory profile, Cà Sẻ next to another sample ||| 図4：官能プロファイル、Cà Sẻを他のサンプルと並べて ||| 图4：感官档案，Cà Sẻ与其他样品对照
+e30217944 ||| Relative intensity on a 10-point scale, converted by MeDili from sensory descriptions in the literature; not cupping scores. ||| 10段階の相対的な強さで、資料の官能的な記述をMeDiliが数値化したもの。カッピングの点数ではありません。 ||| 10分制的相对强度，由MeDili根据资料中的感官描述换算而来；并非杯测（cupping）分数。
+14bd11022 ||| Compare with ||| 比較対象 ||| 对比
+58f7fb2fc ||| Six-axis chart: aroma, acidity, sweetness, bitterness, body, aftertaste ||| 6軸チャート：香り、酸味、甘み、苦み、ボディ、余韻 ||| 六轴图：香气、酸度、甜度、苦味、醇厚度、余韵
+7955d5590 ||| Which scale to score by ||| どの基準で採点するか ||| 按哪种标准评分
+efa6b613d ||| <1>Robusta:</1> the Fine Robusta scale, covering fragrance/aroma, flavor, aftertaste, salt/acid ratio, bitter/sweet ratio, mouthfeel, balance, uniformity, clean cup and overall. 80 points and above is Fine Robusta. ||| <1>Robusta：</1>Fine Robustaの基準。フレグランス／アロマ、フレーバー、アフターテイスト、塩味と酸味の比、苦味と甘味の比、マウスフィール、バランス、均一性、クリーンさ、総合評価で構成されます。80点以上がFine Robustaです。 ||| <1>Robusta：</1>Fine Robusta标准，包括干湿香、风味、余韵、咸酸比、苦甜比、口感、平衡度、一致性、干净度和整体评价。80分以上为Fine Robusta。
+6473031c4 ||| <1>Arabica:</1> the SCA scale. Catimor, Typica and Moka are all scored on it. ||| <1>Arabica：</1>SCAの基準。Catimor、Typica、Mokaもすべてこの基準で採点します。 ||| <1>Arabica：</1>SCA标准。Catimor、Typica、Moka都按此标准评分。
+c635e595c ||| <1>Liberica, Excelsa:</1> no widely used dedicated scale yet; the Arabica form is usually borrowed. ||| <1>Liberica、Excelsa：</1>広く使われる専用の基準はまだなく、Arabicaの評価シートを借りることが多い。 ||| <1>Liberica、Excelsa：</1>尚无通用的专属标准；通常借用Arabica的评分表。
+48d0a57f6 ||| <1>To compare varieties:</1> roast light to medium with the same roast profile, rest 8–24 hours, 5 cups per sample, taste blind. A dark roast hides the differences. ||| <1>品種を比べるなら：</1>浅煎り〜中煎りで同じ焙煎プロファイル、8〜24時間休ませ、1サンプル5カップ、ブラインドで味わう。深煎りは違いを覆い隠します。 ||| <1>若要比较品种：</1>浅度至中度烘焙，使用同一烘焙曲线，静置8–24小时，每个样品5杯，盲测。深烘会掩盖差异。
+353b3a64a ||| Record the form using the <1>MeDili Flavor Wheel</1>. ||| <1>MeDiliフレーバーホイール</1>に沿って記録します。 ||| 按<1>MeDili风味轮</1>填写评分表。
+3a6e9527c ||| Six things <1>that are easy to get wrong when selling coffee.</1> ||| <1>コーヒーを売るときに言い間違えやすい</1>6つのこと。 ||| 卖咖啡时<1>容易说错的六件事。</1>
+cceac814d ||| Cà Sẻ is not Culi ||| Cà SẻはCuliではない ||| Cà Sẻ不是Culi
+90963e46f ||| Sẻ is a tree variety. Culi is a bean shape: the cherry develops a single round bean; it occurs in every variety, about 4–5% of a crop. There are Culi Sẻ, high-yield Culi and Arabica Culi. ||| Sẻは木の品種。Culiは豆の形で、実の中で丸い豆が1粒だけ育ったもの。どの品種にもあり、1収穫期の約4〜5%。Culi Sẻ、多収量品種のCuli、ArabicaのCuliがあります。 ||| Sẻ是树的品种。Culi是豆形：果实只孕育一粒圆豆，各品种都有，约占一季的4–5%。有Culi Sẻ、高产种Culi、Arabica Culi。
+88f1d542c ||| Small beans aren't necessarily Sẻ ||| 小粒だからSẻとは限らない ||| 豆小不一定是Sẻ
+3de9a5c37 ||| The TR4 line grown in Gia Lai is only 15.3 g per 100 beans, on a par with Cà Sẻ. Drought, poor nutrition, picking unripe cherries or sieving out the small beans all make beans smaller. ||| ザライ省で栽培されたTR4は100粒あたりわずか15.3 gで、Cà Sẻと同程度。干ばつ、栄養不足、未熟な実の収穫、小さい豆だけをふるい分けることは、いずれも豆を小さくします。 ||| 嘉莱省种植的TR4品系每100粒仅15.3克，与Cà Sẻ相当。干旱、营养不足、采摘未熟果或筛选出小豆，都会使豆子变小。
+bf60f9420 ||| Caffeine can't prove the variety ||| カフェインでは品種を証明できない ||| 咖啡因无法证明品种
+3e9d2bf09 ||| Robusta has nearly twice the caffeine of Arabica, but within one species caffeine varies with region, ripeness and year. No caffeine threshold separates Sẻ from high-yield Robusta. ||| RobustaのカフェインはArabicaのほぼ2倍ですが、同じ種の中ではカフェインは地域、熟度、年によって変わります。Sẻと多収量品種を分けるカフェインの境界値はありません。 ||| Robusta的咖啡因几乎是Arabica的两倍，但在同一物种内，咖啡因随地区、成熟度、年份而变化。没有任何咖啡因阈值能把Sẻ和高产种分开。
+9d1e11cf0 ||| “Moka” is not a general name for good Arabica ||| 「Moka」はおいしいArabicaの総称ではない ||| “Moka”不是优质Arabica的统称
+e203ce328 ||| Moka Cầu Đất is a specific Arabica variety, often described as a dwarf form of Bourbon: very small, round beans, only about 1–2 kg per tree per year. ||| Moka Cầu Đấtは特定のArabica品種で、Bourbonの矮性型とされることが多い。豆はとても小さく丸く、1本あたり年間約1〜2 kgしかとれません。 ||| Moka Cầu Đất是一个具体的Arabica品种，常被描述为Bourbon的矮化类型：豆很小、圆，每棵树每年只产约1–2公斤。
+e1c42be0e ||| Green bean color doesn't reveal the variety ||| 生豆の色で品種はわからない ||| 生豆颜色不能说明品种
+e81a26e71 ||| Color changes with processing, moisture and storage time. Read the bean shape and center cut instead of the color. ||| 色は精製方法、水分、保管期間で変わります。色ではなく、豆の形とセンターカットを読みましょう。 ||| 颜色随处理法、含水量、储存时间而变。要看豆形和中线，而不是颜色。
+613b4dfe0 ||| Culi is not “twice as strong” ||| Culiは「2倍強い」わけではない ||| Culi并非“浓一倍”
+46b85c8dd ||| Culi carries the composition of its parent tree. Round beans tumble evenly, so they roast more evenly and the cup may taste rounder, but it is not guaranteed. ||| Culiの成分は母樹と同じです。丸い豆は均一に転がるので焼きムラが少なく、味がまろやかになることもありますが、保証はありません。 ||| Culi的成分与母株相同。圆豆滚动均匀，烘焙更均匀，口感可能更圆润，但不能保证。
+162910225 ||| Names on the market ||| 市場での呼び名 ||| 市场上的名称
+299f60e98 ||| Many trade names are variety names; many others are bean shapes, regions, grades or processing methods. Ask the right question and you'll buy the wrong thing less often. ||| 販売名の多くは品種名ですが、豆の形、地域、等級、精製方法を指す名前も多くあります。正しく質問すれば、買い間違いが減ります。 ||| 许多商品名是品种名，也有很多是豆形、产区、等级或处理法。问对问题，就能少买错。
+6973f462e ||| Name ||| 呼び名 ||| 名称
+8aa37273b ||| What it really is ||| 実際は何か ||| 实际是什么
+a24d0a934 ||| How to check ||| 確かめ方 ||| 如何核查
+dd95657ca ||| Cà Sẻ, Robusta Sẻ, Ro Sẻ, small-bean Robusta ||| Cà Sẻ、Robusta Sẻ、Ro Sẻ、小粒Robusta ||| Cà Sẻ、Robusta Sẻ、Ro Sẻ、小粒Robusta
+bffdde4ef ||| An old Robusta variety, grown from seed, with small beans. A folk name, not a classification. ||| 種から育てる古いRobusta品種で、豆は小さい。俗称で、分類名ではない。 ||| 老Robusta品种，以种子种植，豆小。民间叫法，并非分类名称。
+ee4772929 ||| Farm records, trees without graft scars; weigh 100 beans; sieve. ||| 農園の記録、接ぎ木跡のない木。100粒を量る。ふるう。 ||| 庄园档案、无嫁接痕的树；称百粒重；过筛。
+345890f90 ||| High-yield Robusta, Ro ghép (grafted Robusta), TR4, TR9, TR11, TR14, TRS1 ||| 多収量Robusta、Ro ghép（接ぎ木のRobusta）、TR4、TR9、TR11、TR14、TRS1 ||| 高产Robusta、Ro ghép（嫁接Robusta）、TR4、TR9、TR11、TR14、TRS1
+1d706fd3d ||| High-yield lines selected by the WASI institute, mostly propagated by grafting. ||| WASI研究所が選抜した高収量の系統で、大部分は接ぎ木で増やす。 ||| WASI研究院选育的高产品系，大多以嫁接繁殖。
+2236aa9d6 ||| Large, uniform beans; in Lâm Đồng usually over 20 g per 100 beans. ||| 豆は大きくそろう。ラムドン省では100粒あたり20 gを超えることが多い。 ||| 豆大且均匀；在林同省通常每100粒超过20克。
+a32879023 ||| A bean shape: the cherry has a single round bean. Both Robusta and Arabica have it, about 4–5% of a crop. ||| 豆の形：実の中に丸い豆が1粒だけ。RobustaにもArabicaにもあり、1収穫期の約4〜5%。 ||| 豆形：果实里只有一粒圆豆。Robusta和Arabica都有，约占一季的4–5%。
+28c921cac ||| Count the round beans in 100 beans; sorted culi lots are 90% or more. ||| 100粒中の丸い豆を数える。選別済みのculiロットは90%以上。 ||| 数100粒中的圆豆；已分选的culi批次在90%以上。
+78f023fb5 ||| Moka ||| Moka ||| Moka
+1a6209094 ||| An Arabica variety often described as a dwarf form of Bourbon; very small, round beans. One source says only about 500 pure trees remain in Cầu Đất. ||| Bourbonの矮性型とされることが多いArabica品種。豆はとても小さく丸い。Cầu Đấtには純粋な木が約500本しか残っていないとする資料もある。 ||| 常被描述为Bourbon矮化类型的Arabica品种；豆很小、圆。有资料称Cầu Đất仅剩约500棵纯种树。
+647d8b421 ||| Ask about the farm and altitude; weigh 100 beans; expensive because rare. ||| 農園と標高を尋ねる。100粒を量る。希少なので高価。 ||| 询问庄园、海拔；称百粒重；因稀有而价高。
+a38570463 ||| A place name, not a variety name. Typica, Bourbon, Moka and Catimor all grow there. ||| 地域名で、品種名ではない。そこにはTypica、Bourbon、Moka、Catimorがある。 ||| 产区名，并非品种名。那里有Typica、Bourbon、Moka、Catimor。
+ea1fa7e8c ||| Ask for the lot's specific variety. ||| ロットの具体的な品種を尋ねる。 ||| 询问该批次的具体品种。
+165615693 ||| An Arabica cross of Timor Hybrid and Caturra, widely grown in Vietnam. ||| Timor HybridとCaturraを交配したArabicaで、ベトナムで広く栽培されている。 ||| Timor Hybrid与Caturra杂交的Arabica，越南广泛种植。
+37957cdbb ||| Short trees, short internodes; ask the farm. ||| 木は低く、節間が短い。農園に尋ねる。 ||| 树矮、节间短；询问庄园。
+1cb672670 ||| Cà phê mít (jackfruit coffee), Cherry, Chari ||| Cà phê mít（ジャックフルーツコーヒー）、Cherry、Chari ||| Cà phê mít（菠萝蜜咖啡）、Cherry、Chari
+768bad4ec ||| A market name lumping Liberica and Excelsa together; they are now two different species. ||| LibericaとExcelsaをまとめた市場での呼び名。現在は別々の2つの種。 ||| 市场上对Liberica和Excelsa的统称；如今是两个不同的物种。
+e7ff16141 ||| Large, lopsided beans with a hook are Liberica; teardrop-shaped ones are Excelsa. ||| 大きくいびつで鉤があるのがLiberica、しずく形がExcelsa。 ||| 豆大、歪斜、带钩的是Liberica；水滴形的是Excelsa。
+031066d01 ||| A quality grade: 80 points and above on the Fine Robusta scale. Not a variety. ||| 品質の等級：Fine Robustaの基準で80点以上。品種ではない。 ||| 品质等级：Fine Robusta标准80分以上。不是品种。
+307fb84ce ||| Ask for the lot's score sheet. ||| ロットの評価シートを求める。 ||| 索取该批次的评分表。
+8e3bc72a1 ||| Honey, Natural, Washed ||| Honey、Natural、Washed ||| Honey、Natural、Washed
+56b4e4348 ||| Processing methods, not varieties. ||| 精製方法で、品種ではない。 ||| 处理法，不是品种。
+055672458 ||| Ask about the process, look at the beans and taste. ||| 工程を尋ね、豆を見て、味わう。 ||| 询问流程，看豆并品尝。
+7194e2eff ||| Butter-roasted, flavored ||| バター焙煎、香料入り ||| 黄油烘焙、加香
+e724fc638 ||| Ways of coating and marinating during roasting. Says nothing about the variety. ||| 焙煎時にまぶしたり漬け込んだりする方法。品種については何も語らない。 ||| 烘焙时的裹料、腌渍方式。与品种无关。
+d71cb5d0f ||| Read the ingredients on the package. ||| パッケージの原材料表示を読む。 ||| 阅读包装上的成分表。
+2848e49a8 ||| Sample inspection procedure when buying green coffee ||| 生豆購入時のサンプル検査手順 ||| 采购生豆时的样品检验流程
+bd596fd79 ||| The ten steps MeDili uses when receiving a sample. Steps 1–6 are done at the roastery in one session; steps 7–8 need a sample roaster and a tasting table; step 9 only when certification is needed. ||| サンプルを受け取ったときにMeDiliが使う10のステップ。ステップ1〜6は焙煎所で1回の作業で行い、7〜8にはサンプルロースターとテイスティング台が必要。9は証明が必要なときだけ行います。 ||| MeDili收到样品时使用的十个步骤。第1–6步在烘焙厂一次内完成；第7–8步需要样品烘焙机和品尝台；第9步仅在需要认证时进行。
+72e1dab91 ||| <1>Step 1</1><2>Take a sample</2> ||| <1>ステップ1</1><2>サンプリング</2> ||| <1>第1步</1><2>取样</2>
+f63f94310 ||| About 300 g, mixed from several bags. Record the lot code and the name it was offered under. ||| 約300 gを複数の袋から混ぜて取る。ロット番号と売り込み時の呼び名を記録。 ||| 约300克，从多袋中混合抽取。记录批次编号和报盘时的名称。
+1b4b8a856 ||| <1>Step 2</1><2>Measure moisture</2> ||| <1>ステップ2</1><2>水分測定</2> ||| <1>第2步</1><2>测含水量</2>
+1e341ab97 ||| At most 12.5% under TCVN 4193. With high moisture, every weight reading is wrong. ||| TCVN 4193では最大12.5%。水分が高いと、計量値はすべて狂います。 ||| 按TCVN 4193最高12.5%。含水量高，所有称重数据都会失真。
+962e59e0c ||| <1>Step 3</1><2>Inspect 100 beans</2> ||| <1>ステップ3</1><2>100粒を観察</2> ||| <1>第3步</1><2>检视100粒豆</2>
+daa6a0b82 ||| Turn them flat side up and count straight cuts, S-cuts, wrinkled off-center cuts and round beans. ||| 平らな面を上にして、まっすぐな溝、S字、しわ・ずれ、丸い豆を数える。 ||| 平面朝上，数直沟、S形、皱褶偏斜和圆豆。
+121be6ae8 ||| <1>Step 4</1><2>Sieve</2> ||| <1>ステップ4</1><2>ふるい分け</2> ||| <1>第4步</1><2>过筛</2>
+afeea2353 ||| Screens 18 (7.10 mm), 16 (6.30 mm), 13 (5.00 mm). Weigh each layer. ||| スクリーン18（7.10 mm）、16（6.30 mm）、13（5.00 mm）。各段を量る。 ||| 18目（7.10毫米）、16目（6.30毫米）、13目（5.00毫米）。逐层称重。
+a5752f9c1 ||| <1>Step 5</1><2>Weigh 100 beans</2> ||| <1>ステップ5</1><2>100粒を量る</2> ||| <1>第5步</1><2>称百粒重</2>
+d816304d3 ||| Whole, unbroken beans. Weigh 3 times and take the average. ||| 割れのない完全粒で。3回量って平均をとる。 ||| 完整未破损的豆。称3次，取平均值。
+a197b4e9c ||| <1>Step 6</1><2>Count defects</2> ||| <1>ステップ6</1><2>欠点を数える</2> ||| <1>第6步</1><2>计算瑕疵</2>
+8e61c6c64 ||| Black, brown, immature and broken beans, foreign matter; calculate as a percentage by weight. ||| 黒豆、褐色豆、未熟豆、割れ豆、異物を、重量%で計算。 ||| 黑豆、褐豆、未熟豆、破碎豆、杂质，按重量百分比计算。
+000c03dee ||| <1>Step 7</1><2>Roast the sample</2> ||| <1>ステップ7</1><2>サンプル焙煎</2> ||| <1>第7步</1><2>烘焙样品</2>
+81fa64a43 ||| Roast light to medium, with the same roast profile for every sample. ||| 浅煎り〜中煎りで、すべてのサンプルを同じ焙煎プロファイルで。 ||| 浅度至中度烘焙，所有样品用同一烘焙曲线。
+27e4bdbde ||| <1>Step 8</1><2>Taste</2> ||| <1>ステップ8</1><2>テイスティング</2> ||| <1>第8步</1><2>品尝</2>
+e5d7f9ee1 ||| Rest 8–24 hours, 5 cups per sample, taste blind. Fine Robusta or SCA scale. ||| 8〜24時間休ませ、1サンプル5カップ、ブラインドで。Fine RobustaまたはSCAの基準で。 ||| 静置8–24小时，每个样品5杯，盲测。用Fine Robusta或SCA标准。
+b4604b6f6 ||| <1>Step 9</1><2>Lab if needed</2> ||| <1>ステップ9</1><2>必要ならラボ分析</2> ||| <1>第9步</1><2>必要时送实验室</2>
+52a855fcb ||| Caffeine and 16-OMC by HPLC or NMR; DNA to identify the line. ||| カフェインと16-OMCはHPLCまたはNMRで。系統の特定にはDNA。 ||| 咖啡因、16-OMC用HPLC或NMR检测；DNA用于鉴定品系。
+2dbccc5b2 ||| <1>Step 10</1><2>Keep a sample</2> ||| <1>ステップ10</1><2>サンプル保管</2> ||| <1>第10步</1><2>留样</2>
+11401f9f5 ||| Keep part of the sample as a reference until the lot is used up, and fill in the form. ||| 一部を対照サンプルとしてロットがなくなるまで保管し、記録票に書く。 ||| 留一部分作为对照样品直到该批次用完，并填写记录表。
+39afdac1d ||| TCVN 4193:2014 for Robusta ||| Robustaに関するTCVN 4193:2014 ||| 适用于Robusta的TCVN 4193:2014
+1364c07fb ||| Grade ||| 等級 ||| 等级
+ed50845ed ||| Max. defective beans ||| 欠点豆の上限 ||| 瑕疵豆上限
+ad0813a97 ||| Max. foreign matter ||| 異物の上限 ||| 杂质上限
+888bfc86a ||| R1 18a ||| R1 18a ||| R1 18a
+2bd7104b0 ||| R1 18b ||| R1 18b ||| R1 18b
+c284e9548 ||| R1 16a ||| R1 16a ||| R1 16a
+40996f8ac ||| R1 16b ||| R1 16b ||| R1 16b
+5bd880678 ||| R1 16c ||| R1 16c ||| R1 16c
+ba41f7bf5 ||| R2 13a ||| R2 13a ||| R2 13a
+d69c43ef9 ||| R2 13b ||| R2 13b ||| R2 13b
+c1e46229f ||| R2 13c ||| R2 13c ||| R2 13c
+09ffce442 ||| R3 ||| R3 ||| R3
+b1aee857b ||| Percentages by weight, sample about 300 g. Maximum moisture 12.5%. Grade 1 Robusta may contain at most 0.5% jackfruit coffee and 3% Arabica; grades 2 and 3 at most 1% and 5%. Grade 1 Arabica may contain no Robusta or jackfruit coffee. Screen holes: no. 18 is 7.10 mm, 16 is 6.30 mm, 14 is 5.60 mm, 13 is 5.00 mm. ||| 重量%で計算、サンプル約300 g。水分は最大12.5%。1等級のRobustaに混入できるのはジャックフルーツコーヒー最大0.5%、Arabica最大3%。2・3等級はそれぞれ最大1%と5%。1等級のArabicaにはRobustaもジャックフルーツコーヒーも混入できない。ふるい目：18番は7.10 mm、16番は6.30 mm、14番は5.60 mm、13番は5.00 mm。 ||| 按重量百分比计算，样品约300克。含水量最高12.5%。一级Robusta最多可混入0.5%菠萝蜜咖啡和3% Arabica；二、三级最多分别为1%和5%。一级Arabica不得混入Robusta和菠萝蜜咖啡。筛孔：18号为7.10毫米，16号为6.30毫米，14号为5.60毫米，13号为5.00毫米。
+f12bf96ec ||| Sample inspection form ||| サンプル検査票 ||| 样品检验表
+889e5bf7f ||| <1>Compiled from multiple sources.</1> The machine is an illustrative model. Each sample has a typical range of values for six indicators and a center-cut type; the machine calculates which sample the measurements match best, adding up the evidence the way a naive Bayes classifier does. Figures marked “Est.” are MeDili's estimates for the model. For two varieties of the same species, such as Cà Sẻ and high-yield Robusta, only farm records and a DNA test give a certain answer. ||| <1>複数の資料をもとに構成。</1>このマシンは説明用のモデルです。各サンプルには6つの指標とセンターカットの型について典型的な値の範囲があり、マシンは単純ベイズ分類器のやり方で証拠を積み上げ、測定値がどのサンプルに最も合うかを計算します。「推定」とある数値はMeDiliがモデル用に推定したものです。Cà Sẻと多収量品種のように同じ種の2品種では、農園の記録とDNA検査だけが確かな答えを出せます。 ||| <1>综合多方资料。</1>本机器是示意模型。每个样品在六项指标和中线类型上都有一个典型数值范围；机器按朴素贝叶斯分类器的方式累计证据，计算测量值与哪个样品最吻合。标有“估计”的数值是MeDili为模型估算的。对于同一物种的两个品种，如Cà Sẻ和高产种，只有庄园档案和DNA检测才能给出确定答案。
+f8d81f2ae ||| <1>Ripe Cherry Machine</1><2>Microbe Machine</2><3>Aroma Precursor Machine</3><4>MeDili Flavor Wheel</4><5>Anatomy of the Cà Sẻ Cherry</5><6>All coffee knowledge</6> ||| <1>完熟チェリーマシン</1><2>微生物マシン</2><3>香りの前駆体マシン</3><4>MeDiliフレーバーホイール</4><5>Cà Sẻの実の解剖</5><6>コーヒーの知識をすべて見る</6> ||| <1>成熟咖啡果机</1><2>微生物机</2><3>香气前体机</3><4>MeDili风味轮</4><5>Cà Sẻ果实解剖</5><6>全部咖啡知识</6>
+be600529b ||| Cà Sẻ Di Linh ||| Cà Sẻ Di Linh ||| Cà Sẻ Di Linh
+216af50af ||| Cà Sẻ ||| Cà Sẻ ||| Cà Sẻ
+02445eb63 ||| seedling trees ||| 実生の木 ||| 实生树
+cd8862715 ||| small, dense clusters ||| 小さく、房が密 ||| 小，果串密
+1f3812b0a ||| strongly bitter, long finish ||| 苦みが強く、余韻が長い ||| 苦味浓，余韵长
+4339bc8dd ||| High, like all Robusta ||| 高い（どのRobustaも同様） ||| 高，与所有Robusta一样
+80b837424 ||| uniform grafted trees ||| そろった接ぎ木 ||| 整齐的嫁接树
+04485eca9 ||| clearly bitter, medium body ||| 苦みがはっきり、ボディは中程度 ||| 苦味鲜明，醇厚度中等
+7e7dcb8d0 ||| tall trees, small leaves ||| 背が高く、葉が小さい ||| 树高，叶小
+dfb2ea5b9 ||| medium, sparse ||| 中くらいで、まばら ||| 中等，稀疏
+31364edb0 ||| bright acidity, aromatic ||| 爽やかな酸味、香り高い ||| 明亮酸质，芬芳
+6e62c1d77 ||| Trace levels only ||| 痕跡量のみ ||| 仅痕量
+faef424a5 ||| trace ||| 痕跡 ||| 痕量
+5d8654760 ||| short trees, short internodes ||| 低木、節間が短い ||| 树矮，节间短
+b97b14fec ||| medium, heavy-bearing ||| 中くらいで、実付きがよい ||| 中等，结果多
+d38e78630 ||| medium acidity, herbal ||| ほどよい酸味、ハーブ ||| 酸度适中，草本
+2ff63a48a ||| Moka Cầu Đất ||| Moka Cầu Đất ||| Moka Cầu Đất
+45e40db7a ||| small dwarf trees ||| 矮性の小さな木 ||| 矮小的树
+f1c23939b ||| small, round ||| 小さく丸い ||| 小，圆
+a80c6895f ||| intensely aromatic, bright acidity ||| 香りが強く、爽やかな酸味 ||| 香气浓郁，明亮酸质
+8ceff7844 ||| Culi (peaberry) ||| Culi（ピーベリー） ||| Culi（圆豆）
+1542d2307 ||| same as the parent tree ||| 母樹に準じる ||| 同母株
+d7f79f0bd ||| like normal cherries ||| 普通の実と同じ ||| 与普通果实相同
+8f6bc9620 ||| Liberica (jackfruit coffee) ||| Liberica（ジャックフルーツコーヒー） ||| Liberica（菠萝蜜咖啡）
+8d5c0c01b ||| tall tree, large leaves ||| 高木で、葉が大きい ||| 高大乔木，叶大
+aec91fbc2 ||| large, thick-skinned ||| 大きく、皮が厚い ||| 大，果皮厚
+d53f1d61b ||| ripe jackfruit, tropical ||| 熟したジャックフルーツ、トロピカル ||| 熟菠萝蜜，热带风味
+51edb135c ||| tall tree ||| 高木 ||| 高大乔木
+49740b2b8 ||| medium, dark red ||| 中くらいで、濃い赤 ||| 中等，深红色
+e34bc3ef7 ||| fruity acidity, low bitterness ||| フルーツのような酸味、苦みは少ない ||| 果酸，苦味少
+ff632f5d5 ||| Green bean shape ||| 生豆の形 ||| 生豆形状
+dda9db34c ||| Turn the flat side up and look at the bean shape. ||| 平らな面を上にして、豆の形を見る。 ||| 平面朝上，看豆形。
+a5b78f9a4 ||| Evenly round, no flat side ||| 均一に丸く、平らな面がない ||| 圆润均匀，没有平面
+2f359dd49 ||| Flat on one side, short and rounded, thick-backed ||| 片面が平らで、短く丸く、背が厚い ||| 一面扁平，短圆，背厚
+8457085c6 ||| Flat, elongated, wide flat side ||| 平たく細長く、平らな面が広い ||| 扁平细长，平面宽
+d50bdfa95 ||| Very small, round like a pea ||| とても小さく、えんどう豆のように丸い ||| 很小，圆如豌豆
+9c025d3b2 ||| Very large, lopsided, hooked pointed tip ||| とても大きくいびつで、とがった先が鉤状 ||| 很大，歪斜，尖端带钩
+6a52a1869 ||| Medium-sized, slightly lopsided teardrop ||| 中くらいで、やや傾いたしずく形 ||| 中等大小，略歪的水滴形
+b4fbfe694 ||| The groove on the flat side of the bean. ||| 豆の平らな面にある溝。 ||| 豆平面上的沟纹。
+506d9340d ||| Straight, neat ||| まっすぐで整っている ||| 笔直整齐
+96b339abd ||| Wrinkled, off-center, irregular ||| しわがあり、ずれていて不規則 ||| 有皱褶、偏斜、不规则
+3f71475f6 ||| No flat side ||| 平らな面がない ||| 没有平面
+42fbd67db ||| Bean size ||| 豆の大きさ ||| 豆子大小
+b08d64317 ||| Screen 16 holes are 6.30 mm, screen 13 holes 5.00 mm. ||| スクリーン16の穴は6.30 mm、スクリーン13は5.00 mm。 ||| 16目筛孔为6.30毫米，13目为5.00毫米。
+5a81ee37f ||| Small: passes screen 16, retained on screen 13 ||| 小：スクリーン16を通り、スクリーン13に残る ||| 小：漏过16目，留在13目上
+56e16730f ||| Medium: retained on screen 16 ||| 中：スクリーン16に残る ||| 中：留在16目上
+2614599db ||| Large: retained on screen 18 ||| 大：スクリーン18に残る ||| 大：留在18目上
+4c4a04fd6 ||| Very large: 11 mm long or more ||| 特大：長さ11 mm以上 ||| 特大：长11毫米以上
+0e189a2b7 ||| Aroma of freshly ground coffee ||| 挽きたての粉の香り ||| 刚研磨咖啡粉的气味
+6c312b432 ||| Smell it dry right after grinding. ||| 挽いた直後に、乾いた状態で嗅ぐ。 ||| 研磨后立即干闻。
+6bececb76 ||| Dark chocolate, cocoa, roasted nuts ||| ダークチョコレート、カカオ、ローストナッツ ||| 黑巧克力、可可、烤坚果
+eb1960264 ||| Floral, citrus, fresh fruit ||| 花、柑橘、フレッシュフルーツ ||| 花香、柑橘、新鲜水果
+8f3d5af17 ||| Ripe jackfruit, tropical fruit, wood ||| 熟したジャックフルーツ、トロピカルフルーツ、木 ||| 熟菠萝蜜、热带水果、木头
+b1fb8f58f ||| Dark fruit, fermented acidity, spice ||| ダークフルーツ、発酵した酸味、スパイス ||| 深色水果、发酵酸、香料
+e9a1eb587 ||| Grain, earth, dry wood ||| 穀物、土、乾いた木 ||| 谷物、泥土、干木
+9ec631de8 ||| Herbal, leafy, slightly pungent ||| ハーブ、葉、かすかな刺激臭 ||| 草本、叶子、微辛
+fd44241b9 ||| Acidity ||| 酸味 ||| 酸度
+f10adf214 ||| Taste when the cup has cooled to about 60 °C. ||| カップが約60 °Cまで冷めたら味わう。 ||| 杯子冷却至约60 °C时品尝。
+806d0d863 ||| Almost none ||| ほとんどない ||| 几乎没有
+32ee30f3b ||| Low, lightly bright acidity ||| 低め、かすかに爽やかな酸味 ||| 低，微有明亮酸质
+f316b2de0 ||| Clear, bright ||| はっきりして明るい ||| 鲜明、明亮
+f962498be ||| Tart and astringent, like dark fruit ||| ダークフルーツのような酸味と渋み ||| 像深色水果般酸涩
+abce75365 ||| Bitterness ||| 苦み ||| 苦味
+fbbe89b4d ||| Very clear, lingering ||| とてもはっきりして長く続く ||| 非常明显，持久
+4b4a3d044 ||| Clear, moderate ||| はっきり、ほどほど ||| 明显，适度
+465641019 ||| Body ||| ボディ ||| 醇厚度
+30ee05803 ||| The thick, syrupy feel in the mouth. ||| 口の中での厚み、とろみ。 ||| 口中的厚实、稠滑感。
+24ab34e41 ||| Thick, syrupy ||| 厚く、とろりとしている ||| 厚实、稠滑
+248df487e ||| Light, thin ||| 軽く、薄い ||| 轻、薄
+06e059a95 ||| The taste that remains after swallowing. ||| 飲み込んだ後に残る味。 ||| 吞咽后留下的味道。
+e275b2998 ||| Long, intense ||| 長く、濃い ||| 悠长、浓郁
+8bc03c624 ||| Short, dry, astringent ||| 短く、乾いて、渋い ||| 短、干、涩
+862831140 ||| Trees on the farm ||| 農園の木 ||| 庄园里的树
+0a5127adc ||| If you can see the farm or photos of it. ||| 農園や農園の写真を見られる場合。 ||| 如果能看到庄园或庄园照片。
+89f1f0839 ||| Old seedling trees, each with its own shape ||| 樹齢の高い実生の木で、木ごとに樹形が違う ||| 多年生实生树，每棵形态各异
+3958eeddc ||| Uniform grafted trees, several lines interplanted ||| そろった接ぎ木で、複数の系統を混植 ||| 整齐的嫁接树，间种多个品系
+5731ef2e4 ||| Low shrubs, short internodes, small glossy leaves ||| 低い低木で、節間が短く、葉は小さくつやがある ||| 低矮灌木，节间短，叶小有光泽
+b55bbe5ed ||| Tall trees, horizontal branches, bronze young leaves ||| 背が高く、枝は水平、新葉は銅色 ||| 树高，枝条平展，嫩叶古铜色
+55679c6a4 ||| Small dwarf trees, very small beans ||| 小さく矮性の木で、豆はとても小さい ||| 树小而矮，豆很小
+2d74cdabc ||| Trees over 5 m tall, large thick leaves ||| 5 mを超える高木で、葉は大きく厚い ||| 高于5米的乔木，叶大而厚
+97b614b5e ||| Peaberries ||| ピーベリー ||| 圆豆
+d8cbedf6d ||| straight cut ||| まっすぐな溝 ||| 直沟纹
+b16d7e168 ||| S-shaped cut ||| S字の溝 ||| S形沟纹
+227d46a68 ||| wrinkled, off-center cut ||| しわがあり、ずれた溝 ||| 皱褶偏斜沟纹
+603fe4f04 ||| round, no flat side ||| 丸く、平らな面がない ||| 圆，无平面
+4c01bc31f ||| wrinkled cut ||| しわのある溝 ||| 皱褶沟纹
+53e7dad86 ||| round, culi ||| 丸い、culi ||| 圆，culi
+bb28afb13 ||| Mystery sample no. ||| ミステリーサンプル No. ||| 神秘样品编号
+6d808f2f4 ||| Your lot ||| あなたのロット ||| 您的批次
+1b84fd8b8 ||| Farm and trees ||| 農園と木 ||| 庄园与树
+d8a55daa4 ||| farm not seen yet ||| 農園は未確認 ||| 尚未看庄园
+ba8071703 ||| no observations yet ||| 観察データなし ||| 尚无观察
+216beb2cf ||| The first evidence is out on the farm. Trees grown from seed (seedlings) each have their own shape, with different leaves and cherries; grafted trees are identical because they come from the same line. Arabica is a shrub with small, glossy leaves; Liberica and Excelsa are tall trees with large, thick leaves. ||| 最初の証拠は農園にあります。種から育った木（実生）は木ごとに樹形、葉、実が異なり、接ぎ木の木は同じ系統なので型で抜いたように同じです。Arabicaは葉が小さくつやのある低木、LibericaとExcelsaは葉が大きく厚い高木です。 ||| 第一个证据在庄园里。由种子长成的树（实生）每棵形态各异，叶和果实也不同；嫁接树来自同一品系，所以一模一样。Arabica是叶小而有光泽的灌木；Liberica和Excelsa是叶大而厚的高大乔木。
+7e4b5014e ||| Look at the base: a graft scar is a ridge or a kink in the trunk near the ground. Walk a row of 20 trees: big differences in shape, leaves and cherries are a sign of seedling trees. ||| 根元を見る：接ぎ木の跡は、地面近くの幹にある盛り上がりやずれです。20本の列を歩き、樹形、葉、実の違いが大きければ実生の木のしるし。 ||| 看树干基部：嫁接痕是靠近地面处树干上的一道凸棱或错位。走过一排20棵树：树形、叶、果实差异大，就是实生树的迹象。
+edd08b707 ||| Observation ||| 観察 ||| 观察
+461d69804 ||| None yet. Fill it in with the Sensory identification machine. ||| まだありません。「五感で判別するマシン」で入力してください。 ||| 暂无。请在“感官辨识机”中填写。
+088194505 ||| Taking “Sẻ trees” on trust without seeing the farm. Once the beans have left the farm, even chemical analysis struggles to tell Cà Sẻ from high-yield Robusta. ||| 農園を見ずに「Sẻの木」という言葉を信じること。豆が農園を離れたら、化学分析でもCà Sẻと多収量品種を区別するのは難しい。 ||| 没看庄园就相信“Sẻ树”的说法。豆子一旦离开庄园，化学分析也很难区分Cà Sẻ和高产种。
+b280a76ba ||| The MeDili farm has been farmed since 2010; the trees are 15 years old and cared for naturally; each lot records its farm code. ||| MeDiliの農園は2010年から栽培。樹齢15年の木を自然に寄り添って手入れし、ロットごとに農園コードを記録しています。 ||| MeDili庄园自2010年开始耕种，树龄15年，以自然方式照料；每批都记录庄园编号。
+0e610292c ||| Cherries · ||| 実 · ||| 果实 ·
+a0a2fcf0b ||| cherries not seen yet ||| 実は未確認 ||| 尚未看果实
+4ab2318c1 ||| Scale: ||| 評価基準 ||| 评分标准
+4a7088595 ||| Caffeine · ||| カフェイン · ||| 咖啡因 ·
+dac7aef7d ||| Caffeine {1}% ||| カフェイン {1}% ||| 咖啡因 {1}%
+69e75845e ||| · caffeine {1}% ||| · カフェイン {1}% ||| · 咖啡因 {1}%
+phan-biet-ca-phe.html::3932e8d6a ||| Sweetness ||| 甘み ||| 甜度
+phan-biet-ca-phe.html::7a4a81d32 ||| Bitterness ||| 苦み ||| 苦味
+phan-biet-ca-phe.html::12d4066e3 ||| Acidity ||| 酸味 ||| 酸度

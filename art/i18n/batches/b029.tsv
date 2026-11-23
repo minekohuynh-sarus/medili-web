@@ -1,0 +1,260 @@
+# trai-chin.html
+79daa4629 ||| How coffee cherries grow and ripen: the stages from flower to ripe cherry, how sugar travels from leaf to bean, Brix, strip picking in one go or selective picking in several passes, and how altitude matters. An interactive MeDili model. ||| コーヒーの実はどう育ち、熟すのか：花から完熟までの段階、葉から豆への糖の道筋、Brix、一度にしごき摘みするか何度かに分けて選び摘みするか、そして標高の影響。MeDiliのインタラクティブモデル。 ||| 咖啡果如何生长和成熟：从开花到成熟的各个阶段、糖分从叶片到种子的路径、Brix、一次性采摘还是分多轮精选采摘，以及海拔的影响。MeDili互动模型。
+8a0724eed ||| MeDili Ripe Cherry Machine ||| MeDili完熟チェリーマシン ||| MeDili成熟咖啡果机
+1c2d7f03f ||| The <1>Ripe Cherry</1> Machine ||| <1>完熟チェリー</1>マシン ||| <1>成熟咖啡果</1>机
+9669b9ebe ||| A Robusta cherry in Di Linh needs about 9–11 months from flowering to ripeness. Drag the day slider to watch the cherry grow, the bean fill, the skin change color and the Brix rise; then try strip picking in one go or selective picking in several passes to see how the batch arriving at the mill differs. ||| Di LinhのRobustaの実は、開花から完熟まで約9〜11か月かかります。日数のスライダーを動かすと、実が育ち、豆が充実し、果皮の色が変わり、Brixが上がる様子が見られます。次に、一度にしごき摘みするか何度かに分けて選び摘みするかを試し、工場に届く実のバッチがどう変わるかを確かめてください。 ||| Di Linh的Robusta果实从开花到成熟约需9–11个月。拖动日期滑块，可看到果实长大、种子充实、果皮变色和Brix上升；再试试一次性采摘或分多轮精选采摘，看看运到加工厂的果实批次有何不同。
+214562df4 ||| Play the whole season ||| シーズン全体を見る ||| 播放整季
+d6d49b692 ||| A model table with nine stations: sun and leaves, flowering, four stages of the cherry, Brix measurement, picking, flotation sorting. Tap each station for details. ||| 9つのステーションの模型台：日光と葉、開花、実の4つの段階、Brix測定、収穫、浮力選別。各ステーションを押すと詳細が見られます。 ||| 九站模型台：阳光与叶片、开花、果实的四个阶段、测Brix、采摘、浮选。点击各站点查看详情。
+9a6f64ff0 ||| Variety and growing area ||| 品種と産地 ||| 品种与产区
+082de010f ||| Farm altitude ||| 農園の標高 ||| 庄园海拔
+93095d4bd ||| Days after flowering ||| 開花後の日数 ||| 开花后天数
+83f20230d ||| Number of flowerings ||| 開花の回数 ||| 开花批次
+c39c28cc0 ||| Picking method ||| 摘み方 ||| 采摘方式
+4f43331db ||| Interval between picking passes ||| 収穫の間隔 ||| 各轮采摘间隔
+79558a3f7 ||| The MeDili farm picks in 3 passes, from November to early January. ||| MeDili農園は11月から1月初めまで3回に分けて摘みます。 ||| MeDili庄园分3轮采摘，从11月到次年1月初。
+e68b30624 ||| Strip-picking day ||| しごき摘みの日 ||| 一次性采摘日
+3aca473da ||| Defaults to the day with the most ripe cherries. ||| 初期値は完熟した実が最も多い日です。 ||| 默认为成熟果最多的那天。
+db682471f ||| Pulp-juice Brix of a typical cherry ||| 典型的な実の果汁のBrix ||| 典型果实的果汁Brix
+ee09c4c68 ||| Pulp-juice Brix by days after flowering ||| 開花後の日数ごとの果汁のBrix ||| 果汁Brix随开花后天数的变化
+d667941bd ||| Figure 2: inside the cherry, day by day ||| 図2：日ごとの実の内部 ||| 图2：逐日看果实内部
+894562b98 ||| Drag the day slider in Figure 1 and the cross-section changes with it. The timeline follows compiled literature for Arabica; for Robusta, MeDili scales it by the same proportions because the literature has no separate milestones. ||| 図1の日数スライダーを動かすと、断面も変わります。時期の目安はArabicaについての資料をまとめたものです。Robustaについては資料に個別の目安がないため、MeDiliが同じ比率で換算しています。 ||| 拖动图1的日期滑块，剖面随之变化。时间节点取自关于Arabica的综合资料；对于Robusta，由于资料中没有单独的节点，MeDili按相同比例换算。
+bb8a8bfc3 ||| Cross-section of a coffee cherry: skin, pulp, parchment, perisperm and endosperm by day ||| コーヒーの実の断面：果皮、果肉、パーチメント、外胚乳、内胚乳の日ごとの変化 ||| 咖啡果剖面：果皮、果肉、内果皮、外胚乳和胚乳的逐日变化
+5ba49d535 ||| Figure 3: strip picking in one go or selective picking in several passes ||| 図3：一度にしごき摘みか、何度かに分けて選び摘みか ||| 图3：一次性采摘还是分多轮精选采摘
+7b9ff4319 ||| 400 cherries on a group of trees. Flowering follows the number of flowerings you choose, and each cherry ripens a few weeks earlier or later than others. The colored bands show the ripeness of the cherries on the trees by day; the dashed lines are the picking passes. This is an illustrative model, not farm measurements. ||| 木のグループにある400個の実。選んだ回数で開花し、実ごとに熟す時期が数週間ずれます。色の帯は樹上の実が日ごとにどの熟度にあるかを示し、破線は収穫の回です。これは説明用のモデルで、農園の実測値ではありません。 ||| 一组树上的400颗果实。按您选择的批次开花，每颗果实成熟早晚相差几周。色带显示树上果实每天的成熟度分布；虚线是各轮采摘。这是示意模型，并非庄园实测数据。
+cea558b65 ||| A hand picking among coffee clusters with green, half-ripe, ripe and overripe cherries ||| 未熟、半熟、完熟、熟しすぎの実が混じるコーヒーの房の間で摘む手 ||| 在混有青果、半熟果、成熟果和过熟果的咖啡果串间采摘的手
+2e3990699 ||| A real photo: the same branch carries green, half-ripe, ripe and overripe cherries. That's why selective picking usually takes several passes. ||| 実際の写真：同じ枝に未熟、半熟、完熟、熟しすぎの実がついています。そのため選び摘みは何度かに分けて行うのが普通です。 ||| 实拍照片：同一根枝条上有青果、半熟果、成熟果和过熟果。所以精选采摘通常要分好几轮。
+06067a0c8 ||| Share of green, half-ripe, ripe, overripe and tree-dried cherries by day ||| 日ごとの未熟、半熟、完熟、熟しすぎ、樹上乾燥の実の割合 ||| 青果、半熟果、成熟果、过熟果和树上干果比例的逐日变化
+ca4423770 ||| Batch arriving at the mill · right column is the share of ripe cherries ||| 工場に届くバッチ · 右の列は完熟果の割合 ||| 运到加工厂的批次 · 右栏为成熟果比例
+0a30b193c ||| Selective picking: each pass takes ripe, overripe and dried cherries, plus a few half-ripe ones; the last pass strips whatever remains. Strip picking: everything on the branch is taken in a single day. ||| 選び摘み：毎回、完熟、熟しすぎ、乾燥した実を摘み、半熟の実も少し混じります。最後の回で残りをすべて摘み取ります。しごき摘み：1日で枝の実をすべて取ります。 ||| 精选采摘：每轮采摘成熟、过熟和干的果实，混有少量半熟果；最后一轮扫尾，采光剩余果实。一次性采摘：一天内把枝上果实全部摘完。
+26e9f8237 ||| From leaf to bean: the sugar's path ||| 葉から豆への糖の道 ||| 糖从叶片到种子的路径
+9a7e4337b ||| The sweetness in a cup of coffee starts with the leaf, but sugar enters the bean and the pulp by two routes, at two different times. ||| 一杯のコーヒーの甘さは葉から始まります。ただし、糖が豆と果肉に入る道筋は2つあり、時期も異なります。 ||| 咖啡的甜味始于叶片，但糖分进入种子和果肉走的是两条路，时间也不同。
+890d347ad ||| <1>1 · Leaf</1><2>Photosynthesis</2> ||| <1>1 · 葉</1><2>光合成</2> ||| <1>1 · 叶片</1><2>光合作用</2>
+c948827d8 ||| Sun, CO₂ and water make sugar. Only with healthy leaves, and a tree not carrying too many cherries for its leaves, do the beans get enough nourishment. ||| 日光、CO₂、水から糖がつくられます。葉が健康で、葉の量に対して実をつけすぎていなければ、豆に十分な栄養が届きます。 ||| 阳光、CO₂和水生成糖。叶片健康、挂果量与叶量相称，种子才有足够养分。
+416f09c78 ||| <1>2 · Phloem</1><2>Sucrose sets off</2> ||| <1>2 · 師管</1><2>ショ糖の移動</2> ||| <1>2 · 韧皮部</1><2>蔗糖启程</2>
+7334e4b60 ||| Sugar travels through the tree as sucrose, to the flowers, cherries and growing beans. ||| 糖はショ糖の形で木全体をめぐり、花や実、育ちつつある豆へ届きます。 ||| 糖以蔗糖的形式输送到全树，送往花、果实和正在生长的种子。
+04c06ba8f ||| <1>3 · Bean</1><2>Bean filling</2> ||| <1>3 · 豆</1><2>豆の充実</2> ||| <1>3 · 种子</1><2>种子充实</2>
+2f8e14a4e ||| In Arabica, around days 130–190 after flowering, the endosperm accumulates sucrose and storage proteins. At harvest, sucrose in the bean averages 9.4% of dry matter in Arabica and 6% in Robusta. ||| Arabicaでは開花後130〜190日ごろ、内胚乳がショ糖と貯蔵タンパク質を蓄えます。収穫時の豆のショ糖は、平均で乾物のArabica 9.4%、Robusta 6%です。 ||| Arabica在开花后约130–190天，胚乳积累蔗糖和贮藏蛋白。收获时，种子中蔗糖平均占干物质的9.4%（Arabica）和6%（Robusta）。
+dece3b524 ||| <1>4 · Pulp</1><2>Sweetens late in the season</2> ||| <1>4 · 果肉</1><2>シーズン終盤に甘くなる</2> ||| <1>4 · 果肉</1><2>季末变甜</2>
+29cb8aab7 ||| In roughly the last two months, the pulp builds up sugar quickly and the skin changes color. This is the sugar a refractometer measures. ||| 最後の約2か月で、果肉は急速に糖を蓄え、果皮の色が変わります。屈折計で測れるのはこの糖です。 ||| 大约最后两个月，果肉迅速积累糖分，果皮变色。折光仪测到的就是这部分糖。
+f9df507bb ||| <1>5 · Roaster</1><2>Sugar becomes aroma</2> ||| <1>5 · 焙煎機</1><2>糖が香りに変わる</2> ||| <1>5 · 烘焙机</1><2>糖化为香气</2>
+a94638d5f ||| Sucrose in the bean is almost entirely broken down in a medium roast, forming caramel and joining in the Maillard reaction. See the <1>Aroma Precursor Machine</1>. ||| 豆のショ糖は中煎りでほぼすべて分解され、カラメルを生み、メイラード反応に加わります。<1>香りの前駆体マシン</1>をご覧ください。 ||| 种子中的蔗糖在中度烘焙时几乎全部分解，生成焦糖并参与美拉德反应。请看<1>香气前体机</1>。
+d3cd2f147 ||| Six things <1>about ripe cherries.</1> ||| <1>完熟した実についての</1>6つのこと。 ||| <1>关于成熟果的</1>六件事。
+7fa470cae ||| Brix belongs to the pulp, not the bean ||| Brixは果肉の値で、豆の値ではない ||| Brix测的是果肉，不是种子
+483021521 ||| A refractometer measures the sugar and solubles in the pulp juice. The bean receives sucrose from the tree through the vascular system during bean filling, around 130–190 days after flowering in Arabica. The pulp, by contrast, sweetens quickly in roughly the last two months. The two happen in different parts of the cherry, so a high Brix tells you the cherry is ripe but cannot measure the sugar in the bean. ||| 屈折計は果肉の汁に含まれる糖と可溶成分を測ります。豆は充実期に維管束を通して木からショ糖を受け取ります（Arabicaでは開花後約130〜190日）。一方、果肉は最後の約2か月で急速に甘くなります。この2つは実の別々の部分で起こるので、Brixが高ければ実が熟したことはわかっても、豆の糖は測れません。 ||| 折光仪测量的是果汁中的糖和可溶物。种子在充实阶段通过维管系统从树上获得蔗糖，Arabica约在开花后130–190天。果肉则在大约最后两个月迅速变甜。两者发生在果实的不同部位，所以Brix高说明果实已熟，却测不出种子里的糖。
+e9d28a2e7 ||| Higher farms ripen more slowly; higher doesn't automatically mean more sugar ||| 標高が高いと熟すのは遅いが、高ければ糖が多いとは限らない ||| 高海拔成熟较慢，但并非越高糖越多
+348b17208 ||| Every 100 m up, it's about 0.6 °C cooler, so the cherries ripen more slowly and the beans have more time to fill. A study of 16 Arabica lots on Réunion Island found that temperature during bean development determined chlorogenic acid and fatty acid content; glucose rose with altitude, but total soluble sugars did not change with climate. Sweetness in the cup also comes from ripeness, processing and roasting. ||| 標高が100 m上がるごとに約0.6 °C涼しくなり、実はゆっくり熟し、豆が充実する時間が延びます。レユニオン島のArabica 16ロットを調べた研究では、豆が育つ時期の気温がクロロゲン酸と脂肪酸の量を左右し、グルコースは標高とともに増えましたが、可溶性糖の総量は気候によって変わりませんでした。カップの甘さは、熟度、精製、焙煎にも左右されます。 ||| 海拔每升高100米，气温约低0.6 °C，果实成熟变慢，种子有更多时间充实。一项针对留尼汪岛16批Arabica的研究发现，种子发育期的温度决定绿原酸和脂肪酸含量；葡萄糖随海拔升高而增加，但可溶性糖总量不随气候变化。杯中的甜味还取决于成熟度、处理和烘焙。
+ab6220d37 ||| Robusta ripens more slowly than Arabica ||| RobustaはArabicaより熟すのが遅い ||| Robusta比Arabica成熟慢
+fbf904160 ||| Arabica needs about 6–8 months from flowering to ripe cherry; Robusta needs 9–11 months. So in Di Linh, flowers that open in March are only ready for picking in November. ||| Arabicaは開花から完熟まで約6〜8か月、Robustaは9〜11か月かかります。そのためDi Linhでは、3月に咲いた花が収穫期を迎えるのは11月です。 ||| Arabica从开花到果实成熟约需6–8个月，Robusta需9–11个月。所以在Di Linh，3月开花，要到11月才进入采收季。
+87505be13 ||| Red is a sign, not a measure ||| 赤い色は目安であって、尺度ではない ||| 红色只是信号，不是标准
+15adce1dc ||| As cherries ripen, chlorophyll in the skin falls and the red pigment anthocyanin rises. But some varieties ripen yellow, and a dark red cherry may already be overripe. Only looking at the color, squeezing for softness and measuring Brix together gives certainty. ||| 熟すにつれて果皮の葉緑素が減り、赤い色素アントシアニンが増えます。ただし黄色く熟す品種もあり、濃い赤の実はすでに熟しすぎていることもあります。色を見て、軽く押して柔らかさを確かめ、Brixを測る。この3つを合わせて初めて確かになります。 ||| 成熟时，果皮中的叶绿素减少，红色花青素增加。但有些品种成熟时是黄色的，深红色的果实可能已经过熟。看颜色、捏一捏软硬、测Brix，三者结合才可靠。
+dfee16c39 ||| Strip picking with green cherries is a double loss ||| 未熟果まで一緒にしごき摘みすると二重の損 ||| 连青果一起采是双重损失
+8570ba3e8 ||| Green cherries haven't filled their beans, so they weigh little and drag grassy, astringent notes into the whole batch. Stripping hard also breaks fruiting branches and knocks off leaves, so the next crop bears less. Selective picking takes more labor, but the batch is uniform and fermentation and drying are easier to control. ||| 未熟な実は豆が充実していないので軽く、バッチ全体に青臭さと渋みを持ち込みます。強くしごくと実をつける枝が折れ、葉も落ちて、翌年の実が減ります。選び摘みは手間がかかりますが、バッチがそろい、発酵と乾燥を管理しやすくなります。 ||| 青果种子未充实，分量轻，还会把生涩味带进整批。用力捋采还会折断结果枝、打落叶片，下一季结果更少。精选采摘更费工，但批次整齐，发酵和晾晒更容易控制。
+32a9df40e ||| Overripe is a defect too ||| 熟しすぎも欠点 ||| 过熟也是缺陷
+33ce10ce0 ||| Cherries left too long on the tree, or picked and left overnight before pulping, have already started fermenting inside the skin. A batch with many of these easily picks up vinegary, boozy smells. ||| 木に長く置きすぎた実や、摘んでから一晩置いて果肉除去した実は、すでに果皮の中で発酵が始まっています。そうした実が多いバッチは、酢のような酸っぱいにおいや酒のようなにおいがつきやすくなります。 ||| 在树上留得太久，或采回后放过夜才去皮的果实，已在果皮内开始发酵。这样的果实多了，批次容易带上醋酸味、酒味。
+475bfd0b2 ||| Measuring Brix in the field ||| 農園でBrixを測る ||| 在庄园测Brix
+41c0590b6 ||| Brix is a tool for choosing the picking day, not a quality score. Measure every pass and keep records; after a few crops, the farm will have its own thresholds. ||| Brixは収穫日を決めるための道具で、品質の点数ではありません。毎回測って記録すれば、数シーズン後には農園独自の基準ができます。 ||| Brix是选择采摘日的工具，不是品质分数。每轮都测并记录，几季之后，庄园就会有自己的阈值。
+75935e31f ||| Sampling ||| サンプル選び ||| 取样
+6c1494c42 ||| For each lot, choose 10 representative trees and take 10 cherries from mid-canopy on each, from all sides of the tree. ||| ロットごとに代表的な木を10本選び、1本につき樹冠の中ほどから、四方まんべんなく10個の実を取ります。 ||| 每批选10棵有代表性的树，每棵从树冠中部、各个方向取10颗果实。
+b5e5132e8 ||| <1>Tools, quantity</1>100 cherries per lot ||| <1>道具・数量</1>1ロットあたり100個 ||| <1>工具、数量</1>每批100颗果实
+f751cc106 ||| <1>Note</1>Don't just pick the best-looking cherries. ||| <1>注意</1>いちばんきれいな実だけを摘まない。 ||| <1>注意</1>不要只挑最好看的果实。
+8967fbb3a ||| Extract the juice ||| 果汁を取る ||| 取汁
+67e08c097 ||| Squeeze a few cherries for pulp juice and put 2–3 drops on the refractometer prism to cover it fully. ||| 数個の実を絞って果汁を取り、屈折計のプリズム全体を覆うように2〜3滴落とします。 ||| 挤几颗果实取果汁，滴2–3滴，盖满折光仪棱镜。
+a176e47a5 ||| <1>Tools, quantity</1>Refractometer 0–32 °Brix ||| <1>道具・数量</1>屈折計 0〜32 °Brix ||| <1>工具、数量</1>折光仪 0–32 °Brix
+614dde2a5 ||| <1>Note</1>No skin or bubbles in the juice. ||| <1>注意</1>果汁に皮や泡が混じらないように。 ||| <1>注意</1>果汁中不能混有果皮和气泡。
+fc2d76aa8 ||| Read and wipe ||| 読み取りと拭き取り ||| 读数与擦拭
+1a399cdbb ||| Read the °Brix, rinse the prism with clean water and blot it dry before measuring the next sample. ||| °Brixを読み取り、プリズムをきれいな水で洗い、水気を拭き取ってから次のサンプルを測ります。 ||| 读取°Brix，用清水冲洗棱镜，擦干后再测下一个样品。
+a09638d27 ||| <1>Tools, quantity</1>5 readings per tree ||| <1>道具・数量</1>1本あたり5回読み取り ||| <1>工具、数量</1>每棵树读数5次
+73672bc92 ||| <1>Note</1>Calibrate to 0 with distilled water before each session. ||| <1>注意</1>毎回、作業前に蒸留水で0に校正する。 ||| <1>注意</1>每次开始前用蒸馏水校准归零。
+54ac8ac85 ||| Record ||| 記録 ||| 记录
+f74577e0f ||| Record the date, lot, cherry color and °Brix, and average each lot. ||| 日付、ロット、実の色、°Brixを記録し、ロットごとに平均を出します。 ||| 记录日期、批次、果实颜色和°Brix，并计算每批平均值。
+1b36315ac ||| <1>Tools, quantity</1>Brix log by lot ||| <1>道具・数量</1>ロット別のBrix記録帳 ||| <1>工具、数量</1>按批次的Brix记录本
+32db8ae3a ||| <1>Note</1>Record green and overripe cherries too, for comparison. ||| <1>注意</1>比較のため、未熟果と熟しすぎの実も記録する。 ||| <1>注意</1>青果和过熟果也要记录，以便比较。
+af54fa8a2 ||| Compare with the cup ||| カップと比べる ||| 与杯中风味对比
+dbde15fc8 ||| After a crop or two, compare the Brix at picking with the cupping score of each batch to learn the Brix range at which your farm tastes best. ||| 1〜2シーズン後、収穫時のBrixを各バッチのカッピングの点数と比べ、自分の農園がどのBrixの範囲で最もおいしくなるかを知りましょう。 ||| 一两季后，把采摘时的Brix与每批的杯测（cupping）分数对比，了解自家庄园在哪个Brix区间最好喝。
+b2bbddaab ||| <1>Tools, quantity</1>The farm's own data ||| <1>道具・数量</1>農園独自のデータ ||| <1>工具、数量</1>庄园自己的数据
+4744ca9ed ||| <1>Note</1>Each variety and each lot has its own thresholds. ||| <1>注意</1>品種ごと、ロットごとに基準は異なる。 ||| <1>注意</1>每个品种、每个批次都有自己的阈值。
+84fcb1ee6 ||| On the MeDili farm ||| MeDili農園では ||| 在MeDili庄园
+3257d321e ||| Already doing ||| 実施中 ||| 正在做
+13018eaa1 ||| Watering the whole lot evenly so it flowers at once and the next crop ripens more uniformly (<1>The Farm in 12 Months</1>). ||| ロット全体に均一に水をやって一斉に開花させ、翌年の実がまとまって熟すようにしています（<1>農園の12か月</1>）。 ||| 整批均匀灌溉，使其一次开花，下一季成熟更集中（<1>庄园的十二个月</1>）。
+2f569d402 ||| Splitting the harvest into 3 passes, from November to early January, with at most 5% green cherries per batch (<1>Cherry Anatomy</1>). ||| 収穫を11月から1月初めまでの3回に分け、1バッチの未熟果は最大5%（<1>チェリーの構造</1>）。 ||| 把采收季分成3轮，从11月到次年1月初；每批青果最多5%（<1>咖啡果结构</1>）。
+2ea870a34 ||| Worth adding ||| 今後取り入れたいこと ||| 建议增加
+ba8ab00b5 ||| Measure the Brix of 100 cherries per lot before each picking pass, recorded with the lot's flowering date. ||| 各収穫の前にロットごとに100個の実のBrixを測り、そのロットの開花日と一緒に記録する。 ||| 每轮采摘前，每批测100颗果实的Brix，并与该批开花日期一起记录。
+f946db601 ||| Pulp the picked cherries or put them on the drying beds the same day, never overnight. ||| 摘んだ実はその日のうちに果肉除去するか乾燥棚に上げ、一晩置かない。 ||| 采回的果实当天去皮或上架晾晒，不过夜。
+6d34a6ae9 ||| Float-sort before processing and set the floaters aside so they don't drag defect flavors into the good batch. ||| 精製の前に浮力選別を行い、浮いた実を分けて、よいバッチに欠点の香りを持ち込まないようにする。 ||| 处理前先浮选，把浮果单独分开，免得把缺陷风味带进好批次。
+2e218fd5a ||| <1>Compiled from multiple sources.</1> Stage milestones follow compiled literature; ripening time changes with temperature using a simple model: 100 m higher is 0.6 °C cooler, and the cherries need correspondingly more time. The Brix curve, the spread of ripeness between cherries and the picking methods are illustrations, meant for understanding and as a starting point, not a replacement for farm measurements. ||| <1>複数の資料をもとに構成。</1>段階の目安は資料をまとめたものです。熟すまでの時間は簡単なモデルで気温に応じて変えています：標高が100 m上がると0.6 °C涼しくなり、実はそれに応じた時間を余分に必要とします。Brixの曲線、実ごとの熟度のずれ、摘み方は説明用で、理解と出発点のためのものであり、農園の実測値の代わりにはなりません。 ||| <1>综合多方资料。</1>阶段节点依据综合资料；成熟时间用一个简单模型随温度变化：海拔升高100米，气温低0.6 °C，果实需要相应更多时间。Brix曲线、果实间的成熟度差异和采摘方式均为示意，用于理解和作为起点，不能替代庄园实测数据。
+5565a8257 ||| <1>Coffee Identification Machine</1><2>Cherry Anatomy</2><3>The Farm in 12 Months</3><4>Microbe Machine</4><5>Aroma Precursor Machine</5><6>All coffee knowledge</6> ||| <1>コーヒー判別マシン</1><2>チェリーの構造</2><3>農園の12か月</3><4>微生物マシン</4><5>香りの前駆体マシン</5><6>コーヒーの知識をすべて見る</6> ||| <1>咖啡辨别机</1><2>咖啡果结构</2><3>庄园的十二个月</3><4>微生物机</4><5>香气前体机</5><6>全部咖啡知识</6>
+4da7596d3 ||| Robusta needs 9–11 months from flower to ripe cherry. In Di Linh, flowers open around March and picking starts in November. ||| Robustaは花から完熟まで9〜11か月。Di Linhでは3月ごろに開花し、11月から収穫します。 ||| Robusta从开花到果实成熟需9–11个月。在Di Linh约3月开花，11月开始采收。
+89d63bb22 ||| Arabica needs 6–8 months. In Cầu Đất, at about 1,500 m, the cool weather makes cherries ripen more slowly than in lower areas. ||| Arabicaは6〜8か月。標高約1,500 mのCầu Đấtは涼しいので、低地より実がゆっくり熟します。 ||| Arabica需6–8个月。在海拔约1,500米的Cầu Đất，气候凉爽，果实比低海拔地区成熟得慢。
+d909a2bda ||| Young cherry ||| 幼果 ||| 幼果
+c7e456111 ||| Endosperm takes over ||| 内胚乳の置き換わり ||| 胚乳取代
+be42a532e ||| Bean filling ||| 豆の充実 ||| 种子充实
+6dc3a85c9 ||| Color change ||| 色づき ||| 转色
+2463ad373 ||| Just ripe ||| 完熟 ||| 适熟
+e637afe7d ||| Overripe ||| 熟しすぎ ||| 过熟
+7e7de138d ||| Dried on the tree ||| 樹上で乾燥 ||| 树上干果
+699e311fd ||| Half-ripe ||| 半熟 ||| 半熟
+4381ae656 ||| Dried ||| 乾燥 ||| 干果
+f292ae18c ||| Sun and leaves ||| 日光と葉 ||| 阳光与叶片
+f40e6d26f ||| Photosynthesis makes sugar ||| 光合成で糖をつくる ||| 光合作用制造糖
+5f4694b01 ||| Leaves use sun, CO₂ and water to make sugar. Sugar travels through the tree as sucrose, via the phloem, to the flowers, cherries and beans. With healthy leaves and enough sun and water, the cherries have a sugar supply to grow and fill their beans. ||| 葉は日光、CO₂、水を使って糖をつくります。糖はショ糖の形で師管を通って木全体をめぐり、花、実、豆へ届きます。葉が健康で、日光と水が十分なら、実は育って豆を充実させるための糖を得られます。 ||| 叶片利用阳光、CO₂和水制造糖。糖以蔗糖的形式经韧皮部输送到全树，送往花、果实和种子。叶片健康、阳光和水分充足，果实才有糖源来生长并充实种子。
+5b9cf98ce ||| Form of sugar transported in the tree ||| 木の中を運ばれる糖の形 ||| 树内输送的糖的形式
+50de7d02d ||| Pathway ||| 通り道 ||| 通道
+4913b6c27 ||| Phloem ||| 師管 ||| 韧皮部
+068218fe7 ||| Biggest recipient ||| 最も多く受け取る ||| 接收最多
+fbf06dd87 ||| Cherries filling their beans ||| 豆が充実しつつある実 ||| 正在充实种子的果实
+2d8d074fe ||| Leaves thick and glossy, with no scorched edges. A tree carrying too many cherries for its leaves runs short of sugar for the beans, which end up shriveled and small. ||| 葉が厚く、つやがあり、縁が焼けていないこと。葉の量に対して実をつけすぎた木は豆に回す糖が足りず、豆は痩せて小さくなる。 ||| 叶片厚、有光泽、边缘不焦。挂果量相对叶量过多的树，供给种子的糖不足，种子瘪小。
+741d18ee7 ||| Thinking good leaves are enough. A tree loaded with too many cherries for its leaves still gives light beans with thin aromas. ||| 葉がよければ十分だと思うこと。葉に対して実をつけすぎた木は、それでも軽い豆と薄い香りしか生まない。 ||| 以为叶片好就够了。挂果相对叶量过多的树，种子依然轻，香气单薄。
+b18409136 ||| Prune and keep shade trees moderate so leaves get enough sun without scorching. See The Farm in 12 Months. ||| 剪定し、日陰樹をほどほどに保って、葉が焼けずに十分な日光を受けられるようにする。「農園の12か月」をご覧ください。 ||| 修剪枝条，适度保留遮荫树，让叶片有足够阳光又不晒伤。请看“庄园的十二个月”。
+7fdf19264 ||| Flowering ||| 開花 ||| 开花
+c4322dac5 ||| Day 0, assuming March 10 in Di Linh ||| 0日目、Di Linhで3月10日と仮定 ||| 第0天，假设为Di Linh的3月10日
+4a07037f5 ||| After the first watering of the dry season, the flower buds open within a few days, and once pollinated they set fruit. If flowering happens in {1} rounds, the cherries on the same branch also ripen in {2} rounds, a few weeks apart. ||| 乾季最初の灌水の後、つぼみは数日で開き、受粉すると実がつきます。開花が{1}回に分かれれば、同じ枝の実も{2}回に分かれて、数週間ずれて熟します。 ||| 旱季第一次灌溉后，花芽几天内开放，授粉后坐果。开花分{1}批，同一枝上的果实也分{2}批成熟，相差几周。
+93e5a1e9e ||| Flowering rounds ||| 開花の回数 ||| 开花批次
+f6186eb46 ||| rounds ||| 回 ||| 批
+002b214e5 ||| Later rounds open later by ||| 後の回の開花の遅れ ||| 后续批次推迟开花
+2884bacce ||| none ||| なし ||| 无
+a014ae341 ||| Cross-pollinated; needs wind and insects ||| 他家受粉。風と昆虫が必要 ||| 异花授粉，需要风和昆虫
+91dc84e72 ||| Record the opening date of each flowering round in the lot to forecast picking days. ||| ロット内の各回の開花日を記録し、収穫日を予測する。 ||| 记录批次中每批开花的日期，以预估采摘日。
+7575f9ebd ||| Uneven watering makes flowering scattered, so the harvest drags on and it's hard to pick evenly ripe cherries. ||| 水やりがむらになると開花がばらつき、収穫期が長引いて、均一に熟した実を摘むのが難しくなる。 ||| 灌溉不均会使开花零散，采收季拖长，难以采到成熟度均匀的果实。
+c6f6f1fe7 ||| The MeDili farm calendar waters the whole lot evenly so it flowers at once. ||| MeDili農園の年間計画では、ロット全体に均一に水をやって一斉に開花させます。 ||| MeDili庄园的日程是整批均匀灌溉，使其一次开花。
+1234fdbc9 ||| Weeks 0–{1} ||| 0〜{1}週 ||| 第0–{1}周
+a68d06af2 ||| The cherry is small; the skin and the young silverskin tissue (perisperm) grow first. The seed inside is soft, almost all water, with no distinct endosperm yet. ||| 実は小さく、果皮と若い外胚乳（perisperm）が先に育ちます。中の種子は柔らかくほぼ水分で、内胚乳はまだはっきりしません。 ||| 果实小，果皮和幼嫩的外胚乳（perisperm）先长大。里面的种子柔软，几乎全是水，还没有明显的胚乳。
+41cd1c0f6 ||| {1} weeks ||| {1}週 ||| {1}周
+5352d7f40 ||| Most of the seed ||| 種子の大部分 ||| 种子的大部分
+34a997462 ||| Perisperm grows until weeks 11–12 ||| 外胚乳は11〜12週まで成長 ||| 外胚乳生长至第11–12周
+39c899e37 ||| Hard, pale cherries; cut across, the inside is clear and watery. ||| 実は硬く色が薄い。横に切ると中は透明で水っぽい。 ||| 果实硬、颜色浅，横切可见内部透明多汁。
+4ad95e76f ||| Seeing a big cherry and assuming the bean is formed. At this point the bean has stored almost nothing. ||| 実が大きいのを見て、豆ができたと思い込むこと。この時期の豆はまだほとんど何も蓄えていない。 ||| 看到果实变大就以为种子已长成。此时种子还没积累多少物质。
+ff42cdd5f ||| Keep moisture and nutrition steady; young cherries drop heavily if the tree suffers drought. ||| 水分と栄養を安定させる。木が干ばつにあうと幼果が多く落ちる。 ||| 保持水分和养分稳定，树若遭干旱，幼果会大量脱落。
+6989174a1 ||| Weeks {1}–{2} ||| {1}〜{2}週 ||| 第{1}–{2}周
+0e805d12f ||| The endosperm, the part that becomes the coffee bean, grows and takes the place of the perisperm until it fills the seed cavity. What remains of the perisperm becomes the thin silverskin clinging to the bean. ||| コーヒー豆になる部分である内胚乳がしだいに大きくなり、外胚乳に置き換わって種子の空間を満たします。残った外胚乳は、豆にはりつく薄いシルバースキンになります。 ||| 胚乳，即日后成为咖啡豆的部分，逐渐长大并取代外胚乳，直到填满种腔。剩下的外胚乳成为贴在豆子外的薄银皮。
+e315baa77 ||| Fills the seed cavity around week 19 ||| 19週ごろに種子の空間を満たす ||| 约第19周填满种腔
+2e751af8f ||| Seed size ||| 種子の大きさ ||| 种子大小
+f420521a3 ||| close to final ||| ほぼ最終の大きさ ||| 接近最终大小
+19e84d9b3 ||| Cut across, the milky-white bean grows while the clear layer thins. ||| 横に切ると、乳白色の豆の部分が大きくなり、透明な層が薄くなっていく。 ||| 横切可见乳白色的种仁逐渐变大，透明层变薄。
+406b0a042 ||| Water shortage at this stage gives small beans and many shriveled ones. ||| この時期に水が不足すると、豆が小さくなり、痩せた豆が増える。 ||| 此阶段缺水，种子会小，瘪粒多。
+324a3e39e ||| This is the time to keep up watering and fertilize on schedule in the rainy season. ||| この時期は灌水を保ち、雨季の適切な時期に施肥する。 ||| 此时要保持灌溉，并在雨季按时施肥。
+931facd8a ||| The bean has reached full size. The tree moves sucrose, storage proteins and oil into it. This is when the bean stores aroma precursors: sugars, amino acids, lipids, organic acids, caffeine. ||| 豆は十分な大きさに達しました。木はショ糖、貯蔵タンパク質、油を豆に送り込みます。豆が香りの前駆体（糖、アミノ酸、脂質、有機酸、カフェイン）を蓄えるのはこの時期です。 ||| 种子已达到足够大小。树把蔗糖、贮藏蛋白和油脂运进种子。这正是种子积累香气前体的时候：糖、氨基酸、脂类、有机酸、咖啡因。
+2a1e0c5bd ||| Days 130–190 after flowering ||| 開花後130〜190日 ||| 开花后第130–190天
+5467a26c9 ||| Sucrose at picking ||| 収穫時のショ糖 ||| 采摘时的蔗糖
+ed18de9ce ||| about 6% of dry matter ||| 乾物の約6% ||| 约占干物质的6%
+7e80d4c34 ||| about 9.4% of dry matter ||| 乾物の約9.4% ||| 约占干物质的9.4%
+3df21a786 ||| Cherries feel heavy; cut across, the bean is firm and hard to squeeze. ||| 実は手に重く、横に切ると豆は締まっていて押しつぶしにくい。 ||| 果实压手，横切可见种仁结实，难以捏动。
+3328de8cb ||| Thinking the cherry only starts to get sweet when it changes color. The bean stores its sugar earlier, while the skin is still green. ||| 実が色づいてから甘くなり始めると思うこと。豆は果皮が色づく前から糖を蓄えている。 ||| 以为果实转色后才开始变甜。种子早在果皮转色之前就已积累糖分。
+11e903e15 ||| Don't let the tree overbear at this stage, or the beans will be light with thin aromas. ||| この時期に実をつけすぎないようにする。豆が軽く、香りが薄くなる。 ||| 此阶段不要让树挂果过多，否则种子轻、香气薄。
+b98a6e98e ||| Color change and ripening ||| 色づきと完熟 ||| 转色与成熟
+4ab050fad ||| Just ripe around weeks {1}–{2} ||| {1}〜{2}週ごろに完熟 ||| 约第{1}–{2}周适熟
+538f03ecd ||| Chlorophyll in the skin falls, red pigment rises, and the cherry turns half-ripe, then ripe red. The pulp builds up sugar quickly in roughly the last two months, and the Brix rises. Left too long, the cherry becomes overripe, darkens, then dries on the tree. ||| 果皮の葉緑素が減り、赤い色素が増え、実は半熟から赤く完熟します。果肉は最後の約2か月で急速に糖を蓄え、Brixが上がります。長く置きすぎると熟しすぎて色が濃くなり、やがて樹上で乾きます。 ||| 果皮叶绿素减少，红色素增加，果实先半熟再红熟。果肉在大约最后两个月迅速积累糖分，Brix上升。留得太久，果实就会过熟、颜色变深，然后在树上干掉。
+cb53d88d1 ||| days {1}–{2} ||| {1}〜{2}日目 ||| 第{1}–{2}天
+f593150aa ||| Window ||| 時期 ||| 时间段
+50c04d819 ||| {1} to {2} ||| {1}〜{2} ||| {1}至{2}
+83433695e ||| Overripe after ||| 熟しすぎになる日 ||| 过熟时间
+03bd399d7 ||| day {1} ||| {1}日目 ||| 第{1}天
+872139472 ||| Evenly red, soft to a gentle squeeze, beans slip out easily. ||| 均一に赤く、軽く押すと柔らかく、豆がつるりと出る。 ||| 果实均匀红色，轻捏变软，种子容易滑出。
+a14754f5c ||| Assuming dark red cherries are the best. Often they are already overripe. ||| 濃い赤の実が一番おいしいと思うこと。実際にはすでに熟しすぎていることが多い。 ||| 以为深红色果实最好。其实往往已经过熟。
+aa8ac9673 ||| Pick in passes to catch the just-ripe window. ||| 何回かに分けて摘み、ちょうど完熟の時期を逃さない。 ||| 分轮采摘，抓住适熟期。
+ed3dace01 ||| Brix measurement ||| Brix測定 ||| 测Brix
+41fa8fa25 ||| Dried cherry, no juice left ||| 実が乾き、果汁が残っていない ||| 果实已干，没有果汁
+065ae9024 ||| {1} °Brix now ||| 現在 {1} °Brix ||| 当前 {1} °Brix
+9b7c2dc9f ||| A refractometer measures the refraction of the pulp juice to estimate solubles, mainly sugar. Brix rises with ripeness, so it's a good tool for choosing the picking day, but it says nothing about the sugar in the bean. ||| 屈折計は果汁の屈折率を測り、可溶成分（主に糖）を推定します。Brixは熟度とともに上がるので収穫日を決めるのに役立ちますが、豆の糖についてはわかりません。 ||| 折光仪测量果汁的折射率来估算可溶物，主要是糖。Brix随成熟度上升，是选择采摘日的好工具，但不能说明种子里的糖。
+5a683812c ||| Brix now ||| 現在のBrix ||| 当前Brix
+ba0114d8f ||| not measurable ||| 測定不可 ||| 无法测量
+99f8f72d4 ||| Typical for specialty ripe cherries ||| スペシャルティの完熟果の目安 ||| 精品成熟果通常为
+78899b8c2 ||| Cherry stage ||| 実の段階 ||| 果实阶段
+bac226491 ||| Calibrate to 0 with distilled water, measure juice from many cherries and take the average. ||| 蒸留水で0に校正し、多くの実の果汁を測って平均をとる。 ||| 用蒸馏水校准归零，测多颗果实的果汁，取平均值。
+93ed99b56 ||| Using Brix as a quality score. Brix also rises when cherries are overripe or have lost water. ||| Brixを品質の点数として使うこと。熟しすぎや水分が抜けた実でもBrixは上がる。 ||| 把Brix当作品质分数。果实过熟或失水时Brix也会升高。
+15e2ea28e ||| Keep a Brix log by lot and compare it with cupping scores after a few crops. ||| ロット別のBrix記録帳をつくり、数シーズン後にカッピングの点数と比べる。 ||| 建立按批次的Brix记录本，几季后与杯测（cupping）分数对比。
+15b32d635 ||| Picking ||| 収穫 ||| 采摘
+2c533d16f ||| Selective picking, {1} passes ||| 選び摘み {1}回 ||| 精选采摘{1}轮
+76303779b ||| Strip picking on day {1} ||| {1}日目にしごき摘み ||| 第{1}天一次性采摘
+64e6d3675 ||| Pickers come back every {1} days and take only ripe, overripe and dried cherries, plus a few half-ripe ones. The last pass strips whatever remains on the tree. ||| 摘み手は{1}日ごとに戻ってきて、完熟、熟しすぎ、乾燥した実だけを摘み、半熟の実も少し混じります。最後の回で木に残った実をすべて摘み取ります。 ||| 采摘工每隔{1}天回来一次，只采成熟、过熟和干的果实，混有少量半熟果。最后一轮扫尾，采光树上剩余果实。
+188914b4d ||| Strip the whole branch in one go: fast and cheap on labor, but it takes green, half-ripe and overripe cherries too. ||| 一度で枝ごとしごき取る：速く人件費も安いが、未熟、半熟、熟しすぎの実まで取ってしまう。 ||| 一次捋光整根枝条：快、省人工，但青果、半熟果和过熟果都会被采下。
+0f88eda0b ||| Ripe cherries in the batch ||| バッチ中の完熟果 ||| 批次中的成熟果
+0ed638d58 ||| Green cherries ||| 未熟果 ||| 青果
+1b43b323c ||| Overripe, dried ||| 熟しすぎ・乾燥 ||| 过熟、干果
+2c2f31ef5 ||| Count 100 random cherries from the basket each pass. ||| 毎回、かごから無作為に100個を数える。 ||| 每轮从筐中随机数100颗果实。
+a8bf064a6 ||| Strip-picking for speed and planning to sort later. Once green cherries are in the batch, they're hard to remove completely. ||| 速さのためにしごき摘みし、後で選別しようとすること。未熟果が一度バッチに混じると、すべて取り除くのは難しい。 ||| 为图快一次性采摘，打算之后再分拣。青果一旦混入批次就很难全部挑出。
+abe834ebd ||| MeDili standard: at most 5% green cherries per batch. ||| MeDiliの基準：1バッチの未熟果は最大5%。 ||| MeDili标准：每批青果最多5%。
+f72330d69 ||| About {1}% floaters ||| 浮く実 約{1}% ||| 浮果约{1}%
+0a0c822c6 ||| Pour the cherries into a water tank. Firm ripe cherries sink; dried, empty, insect-damaged and many overripe cherries float. Skim off the floaters so they don't drag defect flavors into the good batch. ||| 実を水槽に入れます。締まった完熟果は沈み、乾燥した実、中身のない実、虫食いの実、熟しすぎの実の多くは浮きます。浮いた実を別にすくい取り、よいバッチに欠点の香りを持ち込まないようにします。 ||| 把果实倒入水槽。结实的成熟果下沉；干果、瘪果、虫蛀果和许多过熟果浮起。把浮果单独捞出，免得把缺陷风味带进好批次。
+50c6f1b73 ||| Estimated floaters ||| 浮く実（推定） ||| 浮果（估计）
+6ec7dda19 ||| Ripe cherries remaining ||| 残った完熟果 ||| 剩余成熟果
+cc5306ff7 ||| Selective picking ||| 選び摘み ||| 精选采摘
+6b95381cb ||| Strip picking ||| しごき摘み ||| 一次性采摘
+abac2c870 ||| Clean water, changed every few batches. Skim the floating layer carefully. ||| きれいな水を使い、数バッチごとに替える。浮いた層を丁寧にすくう。 ||| 使用清水，每几批更换一次。仔细捞出浮层。
+0b3bf94a1 ||| Mixing the floaters back into the batch to make up the weight. ||| 重さを稼ぐために浮いた実をバッチに戻すこと。 ||| 为凑重量把浮果混回批次。
+9ef513a5e ||| After float sorting, process the same day. See the Microbe Machine. ||| 浮力選別の後は、その日のうちに精製する。微生物マシンをご覧ください。 ||| 浮选后当天处理。请看微生物机。
+4e41fe850 ||| Ripe Cherry Machine · Di Linh Farm ||| 完熟チェリーマシン · Di Linh農園 ||| 成熟咖啡果机 · Di Linh庄园
+fbe7a83e6 ||| STRIP ||| しごき ||| 捋采
+6d0622625 ||| SELECT ||| 選び ||| 精选
+11d4576fa ||| weeks {1}–{2} ||| {1}〜{2}週 ||| 第{1}–{2}周
+fca132afd ||| floaters ||| 浮き ||| 浮果
+fbd549f57 ||| Flowering · {1} rounds ||| 開花 · {1}回 ||| 开花 · {1}批
+4c88d82fe ||| Young cherry · weeks 0–{1} ||| 幼果 · 0〜{1}週 ||| 幼果 · 第0–{1}周
+67535dcdd ||| Endosperm · weeks {1}–{2} ||| 内胚乳 · {1}〜{2}週 ||| 胚乳 · 第{1}–{2}周
+a9b1db415 ||| Bean filling · weeks {1}–{2} ||| 豆の充実 · {1}〜{2}週 ||| 种子充实 · 第{1}–{2}周
+e6503a5e2 ||| Just ripe · weeks {1}–{2} ||| 完熟 · {1}〜{2}週 ||| 适熟 · 第{1}–{2}周
+99c0b1067 ||| Brix · dried cherry ||| Brix · 乾燥した実 ||| Brix · 干果
+4fa4914d0 ||| Selective, {1} passes · {2}% ripe ||| 選び摘み{1}回 · 完熟{2}% ||| 精选{1}轮 · 成熟{2}%
+fef39d866 ||| Strip picking · {1}% ripe ||| しごき摘み · 完熟{1}% ||| 一次性采摘 · 成熟{1}%
+7b44d28af ||| Float sorting · {1}% floaters ||| 浮力選別 · 浮き{1}% ||| 浮选 · 浮果{1}%
+789962865 ||| Variety, altitude ||| 品種、標高 ||| 品种、海拔
+3f1ae5c21 ||| Average temperature ||| 平均気温 ||| 平均气温
+3a4381e1f ||| about {1}{2} °C ||| 約{1}{2} °C ||| 约{1}{2} °C
+d7e9672e4 ||| Flower to ripe ||| 花から完熟まで ||| 从开花到成熟
+f2e262139 ||| {1} days, {2} months ||| {1}日、{2}か月 ||| {1}天，{2}个月
+22e44ee55 ||| Viewing ||| 表示中 ||| 当前查看
+11d50683d ||| day {1} · week {2} ||| {1}日目 · {2}週 ||| 第{1}天 · 第{2}周
+86ae92f5d ||| Pulp-juice Brix ||| 果汁のBrix ||| 果汁Brix
+5043b76cd ||| no juice left ||| 果汁なし ||| 已无果汁
+293d19b61 ||| Picked batch ||| 収穫バッチ ||| 采摘批次
+71d89c05e ||| {1}% ripe · {2} passes ||| 完熟{1}% · {2}回 ||| 成熟{1}% · {2}轮
+2c99c9252 ||| ONE CROP, FROM FLOWER TO MILL ||| ひとつの収穫期、花から工場まで ||| 一季果实，从开花到加工厂
+08c85491b ||| °Brix · horizontal axis: days after flowering ||| °Brix · 横軸：開花後の日数 ||| °Brix · 横轴：开花后天数
+f88bd2f33 ||| just ripe ||| 完熟 ||| 适熟
+429abc8aa ||| Day {1} ({2}): the cherry has dried on the tree. ||| {1}日目（{2}）：実は樹上で乾いています。 ||| 第{1}天（{2}）：果实已在树上干掉。
+ab5939894 ||| Day {1} ({2}): {3}, Brix about {4} °Bx. ||| {1}日目（{2}）：{3}、Brixは約{4} °Bx。 ||| 第{1}天（{2}）：{3}，Brix约{4} °Bx。
+ac4f36aaf ||| final ||| 最終 ||| 扫尾
+a58de0f63 ||| strip ||| しごき ||| 捋采
+cc67cc7c0 ||| Cherries on the tree by ripeness (%) ||| 熟度別の樹上の実（%） ||| 树上果实按成熟度（%）
+2c81a86f2 ||| Cherries on the tree by ripeness · horizontal axis: days after flowering ||| 熟度別の樹上の実 · 横軸：開花後の日数 ||| 树上果实按成熟度 · 横轴：开花后天数
+cf2877c86 ||| Final pass ||| 最終回 ||| 扫尾轮
+e74aba184 ||| Pass ||| 収穫 ||| 轮次
+55f36aa3d ||| Selective picking total ||| 選び摘みの合計 ||| 精选采摘合计
+c93e260f1 ||| Strip picking · {1} ||| しごき摘み · {1} ||| 一次性采摘 · {1}
+a591ec9ca ||| Endosperm (bean) ||| 内胚乳（豆） ||| 胚乳（种仁）
+872ff23f1 ||| day {1} · {2} ||| {1}日目 · {2} ||| 第{1}天 · {2}
+d722b8581 ||| Cherry size ||| 実の大きさ ||| 果实大小
+597ce0218 ||| Endosperm in the seed cavity ||| 種子の空間に占める内胚乳 ||| 种腔内的胚乳
+8d9e704fb ||| Dry matter in the bean ||| 豆の乾物 ||| 种仁中的干物质
+0fb512603 ||| Pulp Brix ||| 果肉のBrix ||| 果肉Brix
+63e198f04 ||| dried ||| 乾燥 ||| 干
+2de46d0ca ||| Endosperm ||| 内胚乳 ||| 胚乳
+3c54edfcc ||| Filling ||| 充実 ||| 充实
+ae16a77b7 ||| Over ||| 過熟 ||| 过熟
+a5575d25b ||| <1>flowering</1><2>week {1}</2><3>week {2}</3><4>week {3}</4> ||| <1>開花</1><2>{1}週</2><3>{2}週</3><4>{3}週</4> ||| <1>开花</1><2>第{1}周</2><3>第{2}周</3><4>第{3}周</4>
+5c5ef6410 ||| The cherry has dried on the tree: prone to mold, microbial contamination and defect flavors. ||| 実は樹上で乾いています：カビ、微生物汚染、欠点の香りが出やすい。 ||| 果实已在树上干掉：容易发霉、受微生物污染、产生缺陷风味。
+0778258b4 ||| The perisperm takes up almost the whole seed; the endosperm hasn't clearly formed yet. ||| 外胚乳が種子のほぼ全体を占め、内胚乳はまだはっきりできていない。 ||| 外胚乳几乎占满种子，胚乳尚未明显形成。
+c83c7543a ||| The endosperm grows, pushing the perisperm into a thin layer. ||| 内胚乳がしだいに大きくなり、外胚乳を薄い層へと押しやる。 ||| 胚乳逐渐长大，把外胚乳挤成薄层。
+b3249768f ||| The bean stores sucrose, proteins and oil: most aroma precursors enter the bean at this stage. ||| 豆がショ糖、タンパク質、油を蓄える：香りの前駆体の大部分はこの段階で豆に入る。 ||| 种仁积累蔗糖、蛋白质和油脂：大部分香气前体在这个阶段进入种仁。
+f6bdcba0e ||| The skin changes color and the pulp starts sweetening fast. ||| 果皮が色づき、果肉が急速に甘くなり始める。 ||| 果皮转色，果肉开始迅速变甜。
+6eef5108f ||| The best picking window: the bean is full and the pulp is sweet. ||| 最もよい収穫の時期：豆は充実し、果肉は甘い。 ||| 最佳采摘期：种仁饱满，果肉甜。
+ad31bb47b ||| The pulp starts fermenting inside the skin; pick quickly. ||| 果肉が果皮の中で発酵し始める。急いで摘むべき。 ||| 果肉开始在果皮内发酵，应尽快采摘。
+ce8e824ee ||| Batch contains {1}% green cherries ||| バッチに未熟果が{1}%混入 ||| 批次混有{1}%青果
+e2e96985f ||| Over MeDili's 5% threshold. Green cherries drag grassy, astringent notes into the whole batch; pick selectively or move the picking day later. ||| MeDiliの基準5%を超えています。未熟果はバッチ全体に青臭さと渋みを持ち込みます。選び摘みにするか、収穫日を遅らせてください。 ||| 超过MeDili的5%阈值。青果会把生涩味带进整批；请精选采摘或推迟采摘日。
+c65002c7e ||| Batch has {1}% green cherries ||| バッチの未熟果は{1}% ||| 批次有{1}%青果
+1812fb571 ||| Above MeDili's 5% green-cherry limit per batch. Move the picking day later or add a selective picking pass. ||| MeDiliの1バッチあたり未熟果5%の基準を超えています。収穫日を遅らせるか、選び摘みを1回増やしてください。 ||| 超过MeDili每批青果5%的上限。请推迟采摘日或增加一轮精选采摘。
+cfdca41a8 ||| Batch is only {1}% ripe cherries ||| バッチの完熟果は{1}%だけ ||| 批次只有{1}%成熟果
+743d57104 ||| Half-ripe {1}%, overripe and dried {2}%. Half-ripe cherries aren't sweet enough, and overripe ones easily ferment inside the skin: pick selectively in several passes for a more even batch. ||| 半熟{1}%、熟しすぎと乾燥{2}%。半熟の実は甘さが足りず、熟しすぎの実は果皮の中で発酵しやすい：何回かに分けて選び摘みすると、バッチがそろいます。 ||| 半熟果{1}%，过熟和干果{2}%。半熟果甜度不足，过熟果容易在果皮内发酵：分多轮精选采摘，批次更均匀。
+a3d27007a ||| {1}% overripe or dried cherries ||| 熟しすぎまたは乾燥した実が{1}% ||| {1}%过熟或干果
+82393b79d ||| Prone to fermented and moldy smells. Space the picking passes closer together. ||| 発酵臭やカビ臭がつきやすい。収穫の間隔を縮めてください。 ||| 容易带发酵味、霉味。请缩短采摘间隔。
+5cac3ea63 ||| Batch passes: {1}% ripe cherries ||| 合格バッチ：完熟果{1}% ||| 批次合格：成熟果{1}%
+4d7e8a93e ||| Green cherries {1}%, under MeDili's 5% threshold. ||| 未熟果{1}%、MeDiliの基準5%未満。 ||| 青果{1}%，低于MeDili的5%阈值。
+a0bfc6f4a ||| slower ||| 遅い ||| 慢
+942375bc4 ||| faster ||| 早い ||| 快
+436c0cdb6 ||| , {2} days {1} than at {3} m ||| （{3} mより{2}日{1}） ||| ，比{3}米{1}{2}天
+ae3f1a9d0 ||| At {1} m, the cherries need about {2} days from flower to ripe{3}. ||| {1} mでは、花から完熟まで約{2}日かかります{3}。 ||| 在{1}米，果实从开花到成熟约需{2}天{3}。
+c08a0389b ||| Estimated average about {1} °C. Every 100 m higher is about 0.6 °C cooler. ||| 平均気温は約{1} °Cと推定。標高が100 m上がるごとに約0.6 °C涼しくなります。 ||| 估计平均气温约{1} °C。海拔每升高100米，气温约低0.6 °C。
+9da71348b ||| Around {1} if flowering on March 10 · week {2} · {3}. ||| 3月10日に開花した場合、{1}ごろ · {2}週 · {3}。 ||| 若3月10日开花，约为{1} · 第{2}周 · {3}。
+39c3c7a5d ||| Picking passes ||| 収穫回数 ||| 采摘轮数
+5cf496efe ||| Selective picking in several passes ||| 何回かに分けて選び摘み ||| 分多轮精选采摘
+fee42e7cb ||| Strip picking in one go ||| 一度にしごき摘み ||| 一次性采摘
+65ae2ee51 ||| {1}, {2} m, day {3} after flowering: {4} ||| {1}、{2} m、開花後{3}日目：{4} ||| {1}，{2}米，开花后第{3}天：{4}

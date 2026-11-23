@@ -1,0 +1,79 @@
+# vi-sinh.html (1) — đầu trang, ba nhóm thợ, lớp nhớt, nguồn vi sinh, sáu điều
+207256e07 ||| Who is at work in a coffee fermentation tank: yeasts, lactic acid bacteria and acetic acid bacteria. Where the microbes come from, how the mucilage feeds them, and how temperature, oxygen and time change the outcome. An interactive model by MeDili. ||| コーヒーの発酵槽で働いているのは誰か：酵母、乳酸菌、酢酸菌。微生物はどこから来るのか、ミューシレージがどう養うのか、温度・酸素・時間で結果がどう変わるのか。MeDiliのインタラクティブモデル。 ||| 是谁在咖啡发酵池里工作：酵母、乳酸菌和醋酸菌。微生物从哪里来，果胶层如何喂养它们，温度、氧气和时间如何改变结果。MeDili的互动模型。
+58a8e7ea8 ||| MeDili Microbe Machine ||| MeDili微生物マシン ||| MeDili微生物机
+25758212d ||| The <1>Microbe</1> Machine ||| <1>微生物</1>マシン ||| <1>微生物</1>机
+20442c251 ||| A fermentation tank is a contest among three crews of tiny workers: yeasts, lactic acid bacteria and acetic acid bacteria. Choose the fermentation method, temperature and cleanliness, then drag the time to see which crew wins, how the pH falls and when to stop. ||| 発酵槽は、酵母、乳酸菌、酢酸菌という3つの小さな職人集団の競争の場です。発酵方法、温度、清潔さを選び、時間を動かして、どの集団が勝つか、pHがどう下がるか、いつ止めるべきかを見てみましょう。 ||| 发酵池是三组微小工匠的竞赛：酵母、乳酸菌和醋酸菌。选择发酵方式、温度和清洁度，再拖动时间，看看哪一组胜出、pH如何下降、何时该停止。
+d14fa440e ||| Watch the whole batch ||| バッチ全体を見る ||| 查看整批
+0a11400a7 ||| An eight-station model table: microbe sources, mucilage, fermentation tank, yeasts, lactic acid bacteria, acetic acid bacteria, measuring, washing and drying. Tap each station for details. ||| 8ステーションのモデル台：微生物の供給源、ミューシレージ、発酵槽、酵母、乳酸菌、酢酸菌、測定、洗浄と乾燥。各ステーションを押すと詳細が見られます。 ||| 八站模型台：微生物来源、果胶层、发酵池、酵母、乳酸菌、醋酸菌、测量、清洗与晾晒。点击各站点查看详情。
+41075cd12 ||| Fermentation method ||| 発酵方法 ||| 发酵方式
+e6c5c15db ||| 4 methods ||| 4つの方法 ||| 4种方式
+8e61d195e ||| Cleanliness of tank, water and tools ||| 槽・水・器具の清潔さ ||| 池、水、器具的清洁度
+f96d00b25 ||| Incoming cherry Brix ||| 投入する果実のBrix ||| 入池果实Brix
+454c6ffb1 ||| Ripe specialty cherries usually measure 18–24 °Brix. See the <1>Ripe Cherry Machine</1>. ||| スペシャルティ用の完熟果は通常18〜24 °Brix。<1>完熟チェリーマシン</1>を参照。 ||| 精品级成熟果通常为18–24 °Brix。见<1>成熟咖啡果机</1>。
+356d377b6 ||| Tank pH by hour ||| 槽内pHの時間変化 ||| 池内pH随时间变化
+4dad92e73 ||| Figure 2: who is working in the tank ||| 図2：槽の中で働いているのは誰か ||| 图2：谁在池中工作
+6289a544c ||| Cells per gram on a log scale: each gridline is 10 times the last. The vertical line marks the hour being viewed. An illustrative model, not counts from a real tank. ||| 1グラムあたりの細胞数（対数目盛）：目盛り1つで10倍。縦線は表示中の時刻です。説明用のモデルで、実際の槽で数えた値ではありません。 ||| 每克细胞数，对数刻度：每一格是10倍。竖线是当前查看的小时。示意模型，并非真实发酵池的计数。
+2ec375933 ||| Numbers of yeasts, lactic acid bacteria, acetic acid bacteria and contaminant microbes by hour ||| 酵母、乳酸菌、酢酸菌、雑菌の数の時間変化 ||| 酵母、乳酸菌、醋酸菌和杂菌数量随时间变化
+11818a2d5 ||| Figure 3: what the tank produces ||| 図3：槽が生み出すもの ||| 图3：发酵池产生什么
+358cefdaf ||| Sugar in the mucilage is released gradually; yeasts turn it into alcohol and lactic acid bacteria into lactic acid; with oxygen, acetic acid bacteria turn the alcohol into acetic acid. Relative index, where 1 is the starting sugar. ||| ミューシレージの糖は少しずつ放出され、酵母がアルコールに、乳酸菌が乳酸に変えます。酸素があると、酢酸菌がアルコールを酢酸に変えます。相対値で、1は最初の糖の量です。 ||| 果胶层中的糖逐渐释放，酵母把糖变成酒精，乳酸菌把糖变成乳酸；有氧气时，醋酸菌把酒精变成乙酸。相对指数，1为初始糖量。
+26cbfb738 ||| Remaining sugar, alcohol, lactic acid and acetic acid by hour ||| 残りの糖、アルコール、乳酸、酢酸の時間変化 ||| 剩余糖、酒精、乳酸、乙酸随时间变化
+d50044a5c ||| Three crews ||| 3つの職人集団 ||| 三组工匠
+ce75bee7c ||| Each crew eats one thing, <1>needs one thing and leaves one thing behind.</1> ||| それぞれが何かを食べ、<1>何かを必要とし、何かを残す。</1> ||| 每组吃一样东西，<1>需要一样东西，留下一样东西。</1>
+e2ce15c5a ||| <1></1>Yeasts ||| <1></1>酵母 ||| <1></1>酵母
+64221ff8d ||| Examples: Pichia, Candida, Saccharomyces… ||| 例：Pichia、Candida、Saccharomyces… ||| 例如：Pichia、Candida、Saccharomyces…
+aadd8f302 ||| Eats ||| 食べるもの ||| 吃
+5ac3f6f8e ||| Sugar in the mucilage and fruit pulp ||| ミューシレージと果肉の糖 ||| 果胶层和果肉中的糖
+393b01531 ||| Needs ||| 必要なもの ||| 需要
+5947b0298 ||| Oxygen not required; grows faster with oxygen ||| 酸素は必須ではないが、あると速く増える ||| 不必须氧气；有氧时生长更快
+5092ef890 ||| Produces ||| 生み出すもの ||| 产生
+d870be35f ||| Alcohol, CO₂, fruity aromatic esters, some pectin-cutting enzymes ||| アルコール、CO₂、果物の香りのエステル、ペクチンを分解する酵素の一部 ||| 酒精、CO₂、带果香的酯类、一些分解果胶的酶
+7dc505319 ||| Good when ||| 良い場合 ||| 有益时
+2fef30a86 ||| Moderately active, giving clean fruit aromas ||| 適度に働き、クリーンな果実の香りを生む ||| 适度活跃，带来干净的果香
+61e327e0b ||| Harmful when ||| 悪い場合 ||| 有害时
+322b51e3f ||| Left too long, the extra alcohol becomes feedstock for vinegar ||| 長く置きすぎると、多くなったアルコールが酢の原料になる ||| 放置太久，大量酒精会成为醋的原料
+939aac8b4 ||| <1></1>Lactic acid bacteria ||| <1></1>乳酸菌 ||| <1></1>乳酸菌
+213e1df9b ||| Examples: Leuconostoc, Lactiplantibacillus, Weissella… ||| 例：Leuconostoc、Lactiplantibacillus、Weissella… ||| 例如：Leuconostoc、Lactiplantibacillus、Weissella…
+1dd534979 ||| Little oxygen; copes with submerged and sealed tanks ||| 酸素は少なくてよい。浸水槽や密閉槽にも耐える ||| 氧气少；能适应浸水池和密闭池
+11f9998b2 ||| Mainly lactic acid; heterofermentative types also make acetic acid, CO₂ and alcohol ||| 主に乳酸。ヘテロ型は酢酸、CO₂、アルコールも作る ||| 主要是乳酸；异型发酵菌还产生乙酸、CO₂和酒精
+ea6068007 ||| Lowers pH steadily, with gentle acidity and a rounded mouthfeel ||| pHを均一に下げ、穏やかな酸味と丸みのある口当たり ||| 平稳降低pH，酸味柔和，口感圆润
+ad985ec77 ||| Tank run too long, harsh sourness ||| 発酵が長すぎると、酸味がきつい ||| 发酵过长，酸味刺激
+30414c457 ||| <1></1>Acetic acid bacteria ||| <1></1>酢酸菌 ||| <1></1>醋酸菌
+cff75682a ||| Examples: Acetobacter, Gluconobacter ||| 例：Acetobacter、Gluconobacter ||| 例如：Acetobacter、Gluconobacter
+08cab50be ||| Alcohol made by yeasts ||| 酵母が作ったアルコール ||| 酵母产生的酒精
+647fc7fd7 ||| Oxygen, required ||| 酸素（必須） ||| 氧气，必需
+7f1166d0e ||| Acetic acid, a vinegar smell ||| 酢酸、酢のにおい ||| 乙酸，醋味
+47f0bf4c5 ||| Very little, adding a touch of wine-like brightness ||| ごく少量なら、ワインのような爽やかな酸味を少し加える ||| 极少量时，带来一点葡萄酒般的清爽酸味
+143bd2916 ||| Open tanks, lots of stirring, thick damp drying layers: vinegar smell, harsh sourness ||| 開いた槽、頻繁なかき混ぜ、厚く湿った乾燥層：酢のにおい、きつい酸味 ||| 开口池、频繁翻动、晾晒层厚且潮湿：醋味、酸味刺激
+3710f7573 ||| Mucilage: food for microbes ||| ミューシレージ：微生物のえさ ||| 果胶层：微生物的食物
+4e2892af3 ||| Mucilage is the clear, slippery layer clinging to the parchment, between the fruit pulp and the bean. It is mostly water. The dry part consists of free sugars (glucose, fructose, sucrose), pectin and other fibers, plus a little organic acid, amino acids and minerals. ||| ミューシレージは、パーチメントのまわりにつく透明でぬるぬるした層で、果肉と豆の間にあります。大部分は水です。固形分は遊離糖（ブドウ糖、果糖、ショ糖）、ペクチンなどの繊維、少量の有機酸、アミノ酸、ミネラルです。 ||| 果胶层是附着在羊皮纸外、位于果肉与豆子之间的透明滑腻层。大部分是水。干物质包括游离糖（葡萄糖、果糖、蔗糖）、果胶及其他纤维，以及少量有机酸、氨基酸和矿物质。
+587d5d534 ||| Pectin is what makes it slimy. When researchers separated the alcohol-insoluble part of the mucilage, they found about 30% pectic substances, 8% cellulose and 18% other neutral polysaccharides. Fermentation breaks down the pectin so the mucilage comes off when washed; the sugar feeds the microbes. ||| ぬめりを生むのはペクチンです。研究者がミューシレージのアルコール不溶部分を分けたところ、約30%がペクチン質、8%がセルロース、18%がその他の中性多糖でした。発酵でペクチンが分解され、洗うとミューシレージがはがれます。糖は微生物を養います。 ||| 真正产生黏滑感的是果胶。研究人员分离果胶层中不溶于酒精的部分，发现约30%是果胶物质、8%是纤维素、18%是其他中性多糖。发酵会分解果胶，让果胶层在清洗时脱落；糖则喂养微生物。
+9d1452f09 ||| Natural keeps the whole cherry, so microbes have both the pulp and the mucilage to eat. Honey keeps part of the mucilage during drying. Washed ferments and then washes the mucilage off. See <1>Cherry Anatomy</1>. ||| Naturalは果実をまるごと残すので、微生物は果肉とミューシレージの両方を食べられます。Honeyは乾燥中にミューシレージの一部を残します。Washedは発酵させてからミューシレージを洗い落とします。<1>チェリーの構造</1>を参照。 ||| Natural保留整颗果实，所以微生物可以吃果肉和果胶层。Honey在晾晒时保留部分果胶层。Washed先发酵，再把果胶层洗净。见<1>咖啡果结构</1>。
+49cd5584c ||| Where the microbes come from ||| 微生物はどこから来るのか ||| 微生物从哪里来
+d260644ef ||| Microbes don't appear out of nowhere in the tank. They come in with the cherries and with everything that touches them. Every farm and every mill has its own microbial community, which is why the same coffee variety smells different from place to place. ||| 微生物は槽の中で自然に生まれるわけではありません。果実や、果実に触れるすべてのものと一緒にやって来ます。農園や加工場ごとに独自の微生物の集まりがあるので、同じ品種でも場所によって香りが違います。 ||| 微生物不会在池中凭空产生。它们随果实以及接触果实的一切而来。每个庄园、每个加工厂都有自己的微生物群落，所以同一品种的咖啡在不同地方香气各异。
+87c2479d5 ||| Cherry skin ||| 果皮 ||| 果皮
+9b114ddec ||| Microbes already live on the skin and stem. Bruised and overripe cherries carry more. ||| 微生物はもともと果皮や果柄にすんでいます。傷んだ実や熟しすぎた実ほど多く運びます。 ||| 微生物本来就生活在果皮和果柄上。碰伤果和过熟果带得更多。
+df7404fb8 ||| Soil ||| 土 ||| 土壤
+a98441a7d ||| Fallen cherries, bags set on the ground, wheels and feet carry soil into the mill. ||| 落ちた実、地面に置いた袋、車輪、人の足が土を加工場に運び込みます。 ||| 落果、放在地上的袋子、车轮和人的脚把泥土带进加工厂。
+855ec90db ||| Pulping water, soaking water, washing water. Dirty water poured into a tank adds contaminant microbes. ||| 果肉除去の水、浸漬の水、洗浄の水。汚れた水を槽に入れると、雑菌も加えることになります。 ||| 脱皮用水、浸泡用水、清洗用水。往池里倒脏水就是加入杂菌。
+69b572bb1 ||| Air ||| 空気 ||| 空气
+90fe15d65 ||| Dust and spores drifting through the mill, especially near the composting husk pile. ||| 加工場に舞うほこりや胞子。特に堆肥にしている果皮の山の近く。 ||| 加工厂中飘浮的灰尘和孢子，尤其在堆肥果皮堆附近。
+0113d3b8e ||| Tanks, pulpers, bags and baskets that aren't properly washed keep the microbes of the previous batch. ||| よく洗っていない槽、果肉除去機、袋、かごは前のバッチの微生物を残します。 ||| 没洗干净的发酵池、脱皮机、袋子和篮子会留下上一批的微生物。
+65ae37a4b ||| People ||| 人 ||| 人
+d75f0a41e ||| Hands, clothes and boots of pickers and tank workers. ||| 摘み手や槽の作業者の手、服、長靴。 ||| 采摘者和发酵池工人的手、衣服和靴子。
+1ecdde0f7 ||| Six things <1>about microbes in the tank.</1> ||| <1>槽の中の微生物について</1>6つのこと。 ||| 关于<1>发酵池微生物的</1>六件事。
+5ed5c912b ||| Fermentation starts at picking ||| 発酵は収穫した瞬間に始まる ||| 发酵从采摘那一刻就开始
+af1804916 ||| Microbes are already on the cherry skins, in the soil, water and air, and on the pickers' hands. Cherries left in bags overnight have already started fermenting, even before reaching the tank. That's why same-day processing matters as much as the tank recipe. ||| 微生物は果皮、土、水、空気、摘み手の手にもともといます。収穫した実を袋に入れたまま一晩置くと、槽に入れる前から発酵が始まっています。だからこそ当日中の加工は、槽のレシピと同じくらい大切です。 ||| 微生物本来就存在于果皮、土壤、水、空气和采摘者的手上。采回的果实装在袋里过夜，即使还没进池，也已经开始发酵。因此当天加工和发酵配方一样重要。
+1d75b668c ||| Longer doesn't mean better ||| 長ければおいしいわけではない ||| 时间更长不等于更好喝
+bb6ae0f0a ||| Once the sugar runs out, the tank adds no more sweetness, only acid. An open tank gives acetic acid bacteria time to turn alcohol into vinegar; a dirty tank lets contaminant microbes produce butyric and propionic acids, signs of overfermentation. ||| 糖がなくなると、槽は甘みを加えず酸だけを増やします。開いた槽では酢酸菌がアルコールを酢に変える時間ができ、汚れた槽では雑菌が酪酸やプロピオン酸を作ります。これは過発酵のサインです。 ||| 糖耗尽后，发酵池不会再增加甜味，只会增加酸。开口池让醋酸菌有时间把酒精变成醋；脏池让杂菌产生丁酸、丙酸，这是过度发酵的信号。
+b5862d8e1 ||| Low pH doesn't mean tasty ||| pHが低ければおいしいわけではない ||| pH低不等于好喝
+e7c6756aa ||| pH tells you how sour the tank is, not which acid makes it sour. At the same pH 4.0, a tank rich in lactic acid tastes rounded, while one rich in acetic acid smells of vinegar. Measuring pH must go hand in hand with smelling and tasting. ||| pHは槽がどれだけ酸っぱいかを示しますが、どの酸による酸っぱさかはわかりません。同じpH 4.0でも、乳酸が多い槽は丸い味に、酢酸が多い槽は酢のにおいになります。pHの測定は、においと味見とセットで行います。 ||| pH告诉你发酵池有多酸，却不告诉你是哪种酸。同样是pH 4.0，乳酸多的池口感圆润，乙酸多的池有醋味。测pH必须同时闻和尝。
+985d2760e ||| Acetic acid isn't always from acetic acid bacteria ||| 酢酸があっても酢酸菌のせいとは限らない ||| 有乙酸不一定是醋酸菌造成的
+12afe25a3 ||| Heterofermentative lactic acid bacteria make lactic acid, acetic acid, CO₂ and alcohol, so even a sealed tank has a little acetic acid. Large amounts usually come from acetic acid bacteria when oxygen is present. ||| ヘテロ型乳酸菌は乳酸、酢酸、CO₂、アルコールを作るので、密閉槽にも少しは酢酸があります。多量の場合は、たいてい酸素があるときの酢酸菌によるものです。 ||| 异型发酵乳酸菌会同时产生乳酸、乙酸、CO₂和酒精，所以密闭池里也有少量乙酸。大量乙酸通常来自有氧时的醋酸菌。
+008fc66c5 ||| Lactic acid bacteria don't make coffee sweeter ||| 乳酸菌はコーヒーを甘くしない ||| 乳酸菌不会让咖啡更甜
+8795d28d7 ||| They eat sugar and make acid. Their contribution is a pleasant acidity and a rounded mouthfeel; the sweetness in the cup comes from the sugar left in the bean and from roasting. ||| 乳酸菌は糖を食べて酸を作ります。その役割は心地よい酸味と丸い口当たりで、カップの甘みは豆に残った糖と焙煎から生まれます。 ||| 它们吃糖产酸。它们的贡献是宜人的酸度和圆润的口感；杯中的甜味来自豆子里剩余的糖和烘焙。
+a56a6af0b ||| Oxygen decides who wins ||| 酸素が勝者を決める ||| 氧气决定谁胜出
+314553bb0 ||| Acetic acid bacteria need oxygen to turn alcohol into vinegar. Submerged or sealed tanks hold them back; open lids, lots of stirring and thick, damp drying layers make them stronger. ||| 酢酸菌はアルコールを酢に変えるのに酸素が必要です。浸水槽や密閉槽では抑えられ、ふたを開ける、頻繁にかき混ぜる、厚く湿った状態で乾燥させると勢いを増します。 ||| 醋酸菌需要氧气才能把酒精变成醋。浸水池或密闭池能抑制它们；开盖、频繁翻动、晾晒层厚且潮湿则会让它们变强。
+6377e26ce ||| Tank log sheet ||| 発酵槽の記録票 ||| 发酵池记录表
+0c4f9006b ||| Copy the sheet, print it and stick it next to the tank. Measure pH, Brix and temperature together and note the smell; stop by pH and smell, and use the clock only to plan. ||| 記録票をコピーして印刷し、槽のそばに貼ります。pH、Brix、温度を同時に測ってにおいを記録し、pHとにおいで止めます。時計は予定を立てるためだけに使います。 ||| 复制记录表，打印后贴在发酵池旁。同时测量pH、Brix和温度并记录气味；按pH和气味停止，时钟只用来预估。
+20d76e31f ||| <1>Compiled from multiple sources.</1> The curves are an illustrative model: the three microbe groups grow according to temperature, sugar and pH; acetic acid bacteria need alcohol and oxygen; sugar in the mucilage is released gradually. MeDili tuned the model so a submerged tank at 22 °C reaches pH 4.3 after about 30 hours and nears 4.0 after 72 hours, in line with real-world measurements. Every real tank is different, so always measure. ||| <1>複数の資料をもとに構成。</1>曲線は説明用のモデルです。3つの微生物グループは温度、糖、pHに応じて増え、酢酸菌にはアルコールと酸素が必要で、ミューシレージの糖は少しずつ放出されます。MeDiliは、22 °Cの浸水槽が約30時間でpH 4.3に達し、72時間で4.0近くまで下がるようにモデルを調整しました。これは実際の測定値と同じ傾向です。実際の槽はそれぞれ違うので、必ず測ってください。 ||| <1>综合多方资料。</1>曲线为示意模型：三组微生物随温度、糖和pH生长；醋酸菌需要酒精和氧气；果胶层中的糖逐渐释放。MeDili调整了模型，使22 °C的浸水池约30小时达到pH 4.3，72小时后接近4.0，与实际测量趋势一致。每个真实的发酵池都不同，所以一定要测量。
+da7478daf ||| <1>Coffee Identification Machine</1><2>Fermentation with Brewer's Yeast</2><3>Co-fermentation with Fruit</3><4>Ripe Cherry Machine</4><5>Aroma Precursor Machine</5><6>All coffee knowledge</6> ||| <1>コーヒー判別マシン</1><2>ビール酵母による発酵</2><3>フルーツとの共発酵</3><4>完熟チェリーマシン</4><5>香りの前駆体マシン</5><6>コーヒーの知識すべて</6> ||| <1>咖啡辨别机</1><2>啤酒酵母发酵</2><3>与水果共同发酵</3><4>成熟咖啡果机</4><5>香气前体机</5><6>全部咖啡知识</6>

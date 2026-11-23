@@ -1,0 +1,915 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="生豆を仕入れる卸売のお客様向けアンケート：好みの味、RobustaかArabicaか、Robusta Sẻ、Fine Robustaか多収量品種か、完熟度、Natural・Honey・Washedの精製、スクリーン14〜18。MeDiliが生豆のラインを提案し、サンプルをお送りします。毎日のお見積もりはお問い合わせください。"><meta property="og:title" content="MeDiliの生豆を選ぶ"><meta property="og:description" content="生豆を仕入れる卸売のお客様向けアンケート：好みの味、RobustaかArabicaか、Robusta Sẻ、Fine Robustaか多収量品種か、完熟度、Natural・Honey・Washedの精製、スクリーン14〜18。MeDiliが生豆のラインを提案し、サンプルをお送りします。毎日のお見積もりはお問い合わせください。"><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>MeDiliの生豆を選ぶ</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.inl{color:var(--moss);font-weight:600}
+.quiz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.q{border:0;padding:0;margin:0 0 14px;min-width:0}.q legend{padding:0;font-weight:600}
+.res{background:var(--tint);border-radius:14px;padding:16px}.res h3{font:800 2rem/1.1 var(--display);margin:2px 0 4px;color:var(--accent)}
+.res p{margin:6px 0}.rp{font-weight:600}.rp small{font-weight:400;color:var(--muted)}
+.tinyn{font-size:.78rem;color:var(--muted)}
+.gumap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gm{border-top:3px solid var(--copper);padding-top:8px}.gm h3{margin:0;font:800 1.3rem var(--display)}.gm small{color:var(--muted)}
+ol.steps{margin:0 0 8px;padding-left:20px}ol.steps li{margin-bottom:4px;font-size:.9rem}ol.steps li.on{font-weight:700;color:var(--accent)}
+.sop.tight li{grid-template-columns:36px minmax(0,1fr)}.sop.tight .n{font-size:1.5rem}
+.st.off{opacity:.45}
+@media (max-width:820px){.quiz{grid-template-columns:minmax(0,1fr)}}
+
+:root{--ground:#8FA65E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#5D7340}}
+:root[data-theme="dark"]{--ground:#5D7340}
+.mths button{min-width:52px}
+.sgn3{font:italic 600 13.5px var(--sign)!important;fill:var(--accent)!important}
+.sgn{font-size:18px}
+.calc.three{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-bottom:12px}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px}
+.calc input{font-size:.95rem}
+
+:root{--floor:#C69A62;--wall:#EFE3CD}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--floor:#6B4F31;--wall:#3A2D22}}
+:root[data-theme="dark"]{--floor:#6B4F31;--wall:#3A2D22}
+.shophead{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}.shophead>div:last-child{flex:1 1 320px;min-width:0}
+.logoP{background:#F6F0E4;border-radius:12px;padding:8px 12px;display:inline-block}.logoP img{display:block;height:auto;max-width:100%}
+.flow{list-style:none;display:flex;flex-wrap:wrap;gap:6px 24px;padding:0;margin:0;counter-reset:f;font-weight:600;font-size:.9rem;color:var(--muted)}
+.flow li{counter-increment:f}.flow li::before{content:counter(f) ". ";color:var(--accent)}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:0}
+.whob{text-align:left;padding:12px 16px;border:2px solid var(--rule);border-radius:12px;background:var(--panel);color:var(--ink);cursor:pointer;font:inherit}
+.whob b{display:block;font-size:1.02rem}.whob small{color:var(--muted)}.whob.on{border-color:var(--accent)}
+.ah{font:800 1.45rem var(--display);margin:0 0 8px}
+.ctl{min-width:0}.ctl .card{padding:14px}
+.recbox{background:var(--tint);border-radius:12px;padding:10px;margin-top:12px;display:grid;gap:6px}
+.recb{text-align:left;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:7px 10px;color:var(--ink);cursor:pointer;font:inherit}.recb b{display:block;font-size:.9rem}.recb small{color:var(--muted)}.recb.on{border-color:var(--accent)}
+.line{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule)}.line small{display:block;color:var(--muted)}
+.qty{display:flex;align-items:center;gap:6px;white-space:nowrap}.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+a.btn{text-decoration:none;display:inline-block}
+.bagn{font:italic 600 6.5px var(--sign)!important;fill:#4A2A1A!important}.bagn2{font:700 4.6px var(--body)!important;fill:#A23B24!important}
+.bag.off{opacity:.25}.bag.on polygon{stroke:var(--accent)!important;stroke-width:2.4}
+.bench{align-items:start}
+.sgn3{font:italic 600 13px var(--sign)!important;fill:var(--accent)!important}
+.tag.big rect{fill:var(--accent)}
+
+.sent{margin-top:10px;background:var(--tint);border-radius:12px;padding:12px}.sent>b{display:block;margin-bottom:4px}
+.ordertxt{white-space:pre-wrap;overflow-wrap:anywhere;font:500 .78rem/1.5 var(--mono);margin:6px 0 0;user-select:all}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}.qrs svg{display:block;width:100%;height:auto;border-radius:6px}.qrs small{display:block;text-align:center;margin-top:4px;color:var(--muted)}
+:root{--skin:#EBC9A6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--skin:#8C6A4D}}:root[data-theme="dark"]{--skin:#8C6A4D}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.ctl .card{padding:16px}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style>
+<style>
+/* Khung chung sau khi gộp Manus: menu nhóm, chân trang, màu phong thủy Thổ (nâu, vàng đất, đỏ; không xanh lá, không đen). */
+:root{--moss:#8D4E22;--good:#8D4E22;
+  --i-red:#B33A24;--i-red2:#7A2414;--i-gold:#D9B77E;--i-gold2:#B8894A;--i-coffee:#6B4226;--i-brown:#8D5A32;--i-milk:#E9D3AE;
+  --seg1:#9E3B26;--seg2:#B8894A;--seg3:#6B4226;--seg4:#D9B77E;--seg-t1:#FFF6EC;--seg-t2:#2E1C12;--cmp2:#C9A46A;
+  --cx1:#BB8526;--cx2:#7A348E;--cx3:#83470D;--cx4:#CB4D54}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--panel)}
+.mnav{display:none!important}
+
+/* menu */
+.mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
+.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p a:hover{color:var(--accent)}
+.mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-m{margin:0;font-size:inherit}
+.mh-m>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font:600 .86rem var(--body);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;white-space:nowrap;user-select:none}
+.mh-m>summary::-webkit-details-marker{display:none}
+.mh-m>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mh-m[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-m>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-pan{position:absolute;left:0;right:0;top:100%;background:var(--panel);border-bottom:1px solid var(--rule);box-shadow:0 18px 30px rgba(46,28,18,.16);max-height:calc(100vh - 60px - env(safe-area-inset-top,0px));overflow:auto;overscroll-behavior:contain}
+.mh-grid{max-width:1560px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 26px;padding-block:18px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-g{margin:0 0 6px;font:600 .72rem/1.3 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mh-c ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-c a{display:block;color:var(--ink);text-decoration:none;font:500 .95rem/1.35 var(--body);padding:6px 0;border-bottom:1px solid transparent}
+.mh-c a:hover{color:var(--accent)}
+.mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
+.mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
+.mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.mh-i{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none}
+.mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
+@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+@media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
+
+/* chân trang */
+.mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
+.mf-in{max-width:1560px;margin:auto;padding-block:30px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:26px}
+.mf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border-bottom:1px solid var(--rule);padding-bottom:24px}
+.mf-k{flex-basis:100%;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mf-h{margin:0;font:italic 600 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sign);color:var(--ink);text-wrap:balance}
+.mf-h em{color:var(--accent)}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:22px 30px}
+.mf-brand b{display:block;font:italic 600 1.35rem/1.25 var(--sign);color:var(--accent)}
+.mf-brand span{display:block;margin-top:6px}.mf-brand small{display:block;margin-top:6px;color:var(--muted);letter-spacing:.06em}
+.mf-t{margin:0 0 6px;font:600 .72rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mf-col{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mf-col a{color:var(--ink);text-decoration:none;padding:2px 0}.mf-col a:hover{color:var(--accent);text-decoration:underline}
+.mf-col p{margin:0 0 6px}.mf-n{white-space:nowrap;user-select:all}
+.mf-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:.84rem}
+.mf-base i{font:italic 600 1rem var(--sign);color:var(--accent)}
+@media (max-width:980px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-brand{grid-column:1/-1}}
+@media (max-width:520px){.mf-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ảnh thật */
+.pf{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.pf img{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;border:1px solid var(--rule);background:var(--tint)}
+.pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.pfw img{aspect-ratio:3/1;object-fit:cover}
+.split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
+@media (max-width:700px){.pfw img{aspect-ratio:2/1}}
+.pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
+.pgal{display:grid;gap:10px}
+.pgal>h2{margin:0}
+.pgal>p{margin:0;color:var(--muted);max-width:72ch}
+
+/* chọn ngôn ngữ */
+.mh-l{position:relative;margin:0}
+.mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
+.mh-l>summary::-webkit-details-marker{display:none}
+.mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
+.mh-lp a:hover{background:var(--tint);color:var(--accent)}
+.mh-lp a[aria-current]{color:var(--accent)}
+@media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
+/* nút Zalo, Facebook nổi góc trái bên dưới */
+.fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
+.fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
+.fl-b svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fl-b:hover{transform:translateY(-2px) scale(1.05)}
+.fl-b:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.fl-b::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;background:var(--ink);color:var(--panel);font:600 .8rem var(--body);letter-spacing:0;padding:6px 11px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{opacity:1;transform:translate(0,-50%)}}
+@media (max-width:600px){.fl-c{gap:8px}.fl-b{width:46px;height:46px;font-size:.6rem}.fl-b svg{width:17px;height:17px}}
+@media (max-width:1020px){body:has(.nx-bar) .fl-c{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+/* chừa chỗ cho nút nổi ở cuối chân trang */
+@media (min-width:601px){.mf-base{padding-left:76px}}
+@media (max-width:600px){footer.mf{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}}
+@media print{.fl-c{display:none}}
+
+/* thành phần dùng chung cho trang mới */
+.wrap.art{max-width:980px}
+.k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.eye{font:600 .8rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0}
+section>h2 em,.p-h2 em{font-style:normal;color:var(--accent)}
+.p-h2{font:800 2.05rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em;text-wrap:balance}
+.p-head{display:grid;gap:4px}
+.p-head h1{margin:6px 0 0}
+.p-head .lead{font-size:1.06rem;color:var(--muted);max-width:68ch;margin:10px 0 0}
+.p-sig{font:italic 600 1.25rem var(--sign);color:var(--accent);margin:10px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+a.btn{text-decoration:none;display:inline-block}
+.btn.ghost{border-color:var(--rule)}
+.p-sec{display:grid;gap:10px}
+.p-sec>.lead{margin:0;max-width:72ch;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.facts>div{border-top:2px solid var(--accent);padding-top:8px;min-width:0}
+.facts b{display:block;font:800 2.4rem/1.05 var(--display);color:var(--accent)}
+.facts span{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.g3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.g2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.g4{grid-template-columns:minmax(0,1fr)}}
+.box{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:18px 20px;min-width:0}
+.box h3{font:800 1.45rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em}
+.box p{margin:0 0 8px}.box p:last-child{margin-bottom:0}
+.box .k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.box .ft{margin-top:10px;padding-top:10px;border-top:1px solid var(--rule);font-size:.88rem;color:var(--muted)}
+.box .ft b{color:var(--ink)}
+.box>svg.pi{width:34px;height:34px;color:var(--accent)}
+svg.pi{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+svg.pi .fi{fill:var(--accent);stroke:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font:600 .76rem var(--body);border:1px solid var(--rule);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.lnk{color:var(--accent);font-weight:600;text-decoration:none}.lnk:hover{text-decoration:underline}
+.lnks{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px}
+.quote{margin:0;font:italic 600 clamp(1.4rem,3vw,2.1rem)/1.3 var(--sign);color:var(--accent);max-width:34ch;text-wrap:balance}
+.split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:20px 30px;align-items:center}
+.split img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--rule)}
+.illw{max-width:320px;width:100%;justify-self:center}
+@media (max-width:820px){.split{grid-template-columns:minmax(0,1fr)}.illw{max-width:210px}}
+.pst{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:st}
+.pst>li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:4px 16px;align-items:start;background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 16px;min-width:0}
+.pst>li .n{grid-row:1/3;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--tint);color:var(--accent)}
+.pst>li .n svg{width:24px;height:24px}
+.pst h3{margin:0;font:700 1.05rem/1.3 var(--body)}
+.pst h3 small{font:600 .74rem var(--body);letter-spacing:.06em;color:var(--muted);margin-right:6px}
+.pst p{margin:0;font-size:.93rem}
+.pst.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pst.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.pst.three{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.pst.two{grid-template-columns:minmax(0,1fr)}}
+.trip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.trip a{display:flex;flex-direction:column;height:100%;background:var(--panel);border:1px solid var(--rule);border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none}
+.trip img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;max-width:100%}
+.trip b{font:800 1.25rem/1.15 var(--display);padding:10px 14px 0}
+.trip b small{display:block;font:600 .72rem var(--body);letter-spacing:.08em;color:var(--accent);margin-bottom:2px}
+.trip span{padding:4px 14px 14px;color:var(--muted);font-size:.88rem}
+.trip a:hover b{color:var(--accent)}
+@media (max-width:1180px){.trip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,32%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.trip li{scroll-snap-align:start}}
+@media (max-width:640px){.trip{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:minmax(0,1fr);overflow:visible}}
+.seg{display:flex;gap:2px;height:28px;margin:6px 0 4px}
+.seg i{display:flex;align-items:center;padding:0 8px;border-radius:4px;font:700 .78rem var(--mono);font-style:normal;white-space:nowrap;overflow:hidden;min-width:0}
+.seg i.s1{background:var(--seg1);color:var(--seg-t1)}.seg i.s2{background:var(--seg2);color:var(--seg-t2)}
+.seg i.s3{background:var(--seg3);color:var(--seg-t1)}.seg i.s4{background:var(--seg4);color:var(--seg-t2)}
+.areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:8px}
+.areas>div{border-top:1px solid var(--rule);padding-top:10px;min-width:0}
+.areas .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.areas b{font:700 1rem var(--body)}.areas span{display:block;color:var(--muted);font-size:.86rem}
+.areas strong{display:block;font:800 1.9rem/1.1 var(--display);margin-top:4px}
+.areas strong small{font:600 .8rem var(--body);color:var(--muted);margin-left:6px}
+@media (max-width:900px){.areas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cmp{display:grid;gap:10px;margin-top:8px}
+.cmp>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center}
+.cmp span{font-size:.88rem}.cmp span b{display:block;font-size:.95rem}
+.cmp .tr{position:relative;height:24px;margin-right:64px}
+.cmp .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0;background:var(--accent)}
+.cmp .tr i.b{background:var(--cmp2)}
+.cmp .tr em{position:absolute;top:50%;transform:translateY(-50%);font:700 .9rem var(--mono);font-style:normal;color:var(--ink);white-space:nowrap}
+@media (max-width:520px){.cmp>div{grid-template-columns:minmax(0,1fr)}}
+.loc{display:grid;gap:4px}
+.loc .ttl{display:flex;gap:10px;align-items:center}
+.loc .ttl svg{color:var(--accent)}
+.sel{user-select:all}
+.cp{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.cp strong{font:700 1.25rem var(--mono);user-select:all;overflow-wrap:anywhere}
+.note{font-size:.86rem;color:var(--muted);margin:0}
+.p-form{display:grid;gap:12px}
+.p-form .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:620px){.p-form .row2{grid-template-columns:minmax(0,1fr)}}
+.p-form label{display:grid;gap:4px;font:600 .9rem var(--body)}
+.p-form label small{font-weight:400;color:var(--muted)}
+.p-form input,.p-form select,.p-form textarea{font:500 1rem var(--body);padding:9px 11px;border:1px solid var(--rule);border-radius:10px;background:var(--bg);color:var(--ink);width:100%;min-width:0}
+.p-form textarea{resize:vertical}
+.p-form fieldset{border:0;margin:0;padding:0;min-width:0}
+.p-form legend{font:600 .9rem var(--body);padding:0;margin-bottom:6px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{display:inline-flex;flex-direction:row;align-items:center;gap:6px;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font:600 .86rem var(--body);cursor:pointer;background:var(--panel)}
+.opts input{width:auto;margin:0;accent-color:var(--accent)}
+.opts label:has(input:checked){border-color:var(--accent);background:var(--tint)}
+.msg{white-space:pre-wrap;font:500 .84rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:0;overflow-wrap:anywhere;user-select:all}
+.fstat{font:500 .86rem var(--body);color:var(--muted);min-height:1.3em;margin:0}
+.p-art{max-width:70ch;font-size:1.04rem;line-height:1.78}
+.p-art h2{font:800 1.75rem/1.2 var(--display);margin:30px 0 8px;letter-spacing:.01em}
+.p-art p{margin:0 0 14px}
+.p-art ul,.p-art ol{margin:0 0 14px;padding-left:22px}.p-art li{margin-bottom:6px}
+.p-art .rbox{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 18px;margin:18px 0}
+.p-art .rbox h3{margin:0 0 6px;font:700 1rem var(--body)}
+.p-art .rbox ol{margin:0}
+.p-art .pf,.p-art .pfs{margin:20px 0}
+.p-art blockquote{margin:22px 0;padding:0 0 0 18px;border-left:3px solid var(--accent);font:italic 600 1.3rem/1.45 var(--sign);color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font:600 .8rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.meta b{color:var(--accent)}
+.art-fig{max-width:880px}
+.art-fig svg{display:block;width:100%;height:auto;max-height:340px;background:var(--tint);border-radius:16px}
+.jcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.jcards a{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--rule);border-radius:16px;overflow:hidden;color:var(--ink);text-decoration:none;min-width:0}
+.jcards .th{background:var(--tint);display:grid;place-items:center;aspect-ratio:3/2;max-width:100%}
+.jcards .th svg{display:block;width:100%;height:100%}
+.jcards .bd{padding:12px 16px 16px;display:grid;gap:4px}
+.jcards .meta{font-size:.72rem}
+.jcards h3{margin:2px 0 0;font:800 1.35rem/1.15 var(--display);text-wrap:balance}
+.jcards p{margin:0;color:var(--muted);font-size:.9rem}
+.jcards a:hover h3{color:var(--accent)}
+@media (max-width:1000px){.jcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.jcards{grid-template-columns:minmax(0,1fr)}}
+.jfeat{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);padding:0;overflow:hidden;text-decoration:none;color:var(--ink)}
+.jfeat .th{background:var(--tint);display:grid;place-items:center;padding:14px;min-width:0}
+.jfeat .th svg{display:block;width:100%;max-width:340px;height:auto}
+.jfeat .bd{padding:20px 24px;display:grid;gap:6px;align-content:center;min-width:0}
+.jfeat h3{font:800 2.1rem/1.1 var(--display);margin:0;letter-spacing:.01em}
+.jfeat p{margin:0}.jfeat .bd>p:not(.meta){color:var(--muted);max-width:60ch}
+.jfeat:hover h3{color:var(--accent)}
+@media (max-width:760px){.jfeat{grid-template-columns:minmax(0,1fr)}.jfeat .th svg{max-width:280px}}
+.mdl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin-top:4px}
+.mdl a{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center;border-top:1px solid var(--rule);padding-top:10px;color:var(--ink);text-decoration:none;min-width:0}
+.mdl a svg.pi{width:30px;height:30px;color:var(--accent)}
+.mdl b{display:block;font:700 1rem var(--body)}.mdl small{display:block;color:var(--muted);font-size:.86rem}
+.mdl a:hover b{color:var(--accent)}
+.kser{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink)}
+.kser svg.pi{width:34px;height:34px;color:var(--accent);margin-bottom:4px}
+.kser p{color:var(--muted);font-size:.92rem}
+.kser .lnk{margin-top:auto;padding-top:6px}
+.kser:hover h3{color:var(--accent)}
+.g5k{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:1280px){.g5k{grid-template-columns:repeat(2,minmax(0,1fr))}.g5k>:first-child{grid-column:1/-1}}
+@media (max-width:560px){.g5k{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:1100px){.mdl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mdl{grid-template-columns:minmax(0,1fr)}}
+.ill .o{stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.ill text{font:600 12px var(--body);fill:var(--muted)}
+@media (max-width:620px){.p-h2{font-size:1.75rem}.facts b{font-size:2rem}}
+
+/* Chọn nhân xanh: màu dòng nhân theo bảng màu Thổ (nâu, cam, vàng mật, hồng, đỏ, tím); không xanh lá, không xanh dương, không đen. */
+:root{--nx1:#6B4226;--nx2:#C8692A;--nx3:#B8862A;--nx4:#C74B7A;--nx5:var(--accent);--nx6:#7A348E;--nx7:#A0699A;
+  --L-skin:#B33A24;--L-unripe:#D7B45E;--L-pulp:#EDBB8C;--L-muc:#C99A3E;--L-par:#F1E2C2;--L-bean:#B39A62;--L-cut:#7A6438;--L-bad:#5E3A24;--L-hole:var(--bg)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--nx1:#B07A50;--nx2:#EE9A5A;--nx3:#D9AE55;--nx4:#E07AA0;--nx6:#A06BCD;--nx7:#CFA0C8;
+  --L-skin:#C8553D;--L-unripe:#C9A24E;--L-pulp:#C99A6A;--L-muc:#B8893A;--L-par:#D9C19A;--L-bean:#9E8656;--L-cut:#5E4B2A;--L-bad:#8A4A2A;--L-hole:#5A4232}}
+:root[data-theme="dark"]{--nx1:#B07A50;--nx2:#EE9A5A;--nx3:#D9AE55;--nx4:#E07AA0;--nx6:#A06BCD;--nx7:#CFA0C8;
+  --L-skin:#C8553D;--L-unripe:#C9A24E;--L-pulp:#C99A6A;--L-muc:#B8893A;--L-par:#D9C19A;--L-bean:#9E8656;--L-cut:#5E4B2A;--L-bad:#8A4A2A;--L-hole:#5A4232}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nxfacts b{font-size:1.45rem;line-height:1.15}
+@media (max-width:620px){.nxfacts b{font-size:1.3rem}}
+.nxw{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(300px,1fr);gap:18px;align-items:start}
+@media (max-width:1020px){.nxw{grid-template-columns:minmax(0,1fr)}}
+.nxf{display:grid;gap:16px;min-width:0}
+.nxg{display:grid;gap:18px}
+.nxgh{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:2px 12px;align-items:center;border-bottom:1px solid var(--rule);padding-bottom:12px}
+.nxgh .lt{grid-row:1/3;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--accent);color:var(--on-accent);font:800 1.3rem var(--display)}
+.nxgh h3{margin:0;font:800 1.4rem/1.15 var(--display);letter-spacing:.01em}
+.nxgh p{margin:0;font-size:.88rem;color:var(--muted);grid-column:2}
+.nxgh .cnt{grid-row:1/3;grid-column:3;font:600 .82rem var(--mono);color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:3px 10px}
+.nxgh .cnt.full{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.nxq{border:0;margin:0;padding:0;min-width:0;display:grid;gap:6px}
+.nxq legend{padding:0;font:700 1.04rem/1.35 var(--body);display:flex;gap:10px;align-items:baseline;margin-bottom:2px}
+.nxq legend .qn{font:700 .8rem var(--mono);color:var(--accent)}
+.nxq .hint{margin:0 0 4px;font-size:.86rem;color:var(--muted);max-width:76ch}
+.nxo{display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,1fr));gap:8px}
+@media (max-width:760px){.nxo{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.nxo{grid-template-columns:minmax(0,1fr);gap:6px}.nxg{gap:16px}.nxg.box{padding:14px}.nxs-h,.nxs-b,.nxs-f{padding-left:14px;padding-right:14px}}
+label.op{position:relative;display:grid;align-content:start;gap:3px;border:1px solid var(--rule);border-radius:12px;padding:10px 12px 11px 38px;background:var(--bg);cursor:pointer;min-width:0;transition:border-color .15s,background-color .15s}
+label.op input{position:absolute;left:13px;top:13px;width:16px;height:16px;margin:0;accent-color:var(--accent)}
+label.op b{font:700 .96rem/1.3 var(--body)}
+label.op span{font-size:.82rem;line-height:1.42;color:var(--muted)}
+label.op:hover{border-color:var(--accent)}
+label.op:has(input:checked){border-color:var(--accent);background:var(--tint);box-shadow:inset 0 0 0 1px var(--accent)}
+label.op:has(input:focus-visible){outline:3px solid var(--moss);outline-offset:2px}
+label.op.hasx{padding-right:40px}
+label.op.alt{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:0 10px;padding-top:8px;padding-bottom:8px}
+label.op.alt input{top:10px}
+@media (max-width:560px){label.op{padding:9px 12px 9px 36px}label.op input{top:11px;left:12px}}
+.swc{position:absolute;right:11px;top:11px;width:20px;height:20px;border-radius:50%;background:var(--c);box-shadow:0 0 0 2px var(--panel),0 0 0 3px var(--rule)}
+.swc.none{border:2px dashed var(--muted);box-shadow:none}
+svg.sv{position:absolute;right:9px;top:9px;width:24px;height:24px}
+svg.sv ellipse{fill:var(--L-bean);stroke:var(--L-cut);stroke-width:.8}svg.sv path{stroke:var(--L-cut);stroke-width:1.2;stroke-linecap:round}
+.nxq[disabled]{opacity:.5}
+.nxq .skip{display:none;font-size:.86rem;color:var(--muted);margin:0}
+.nxq[disabled] .skip{display:block}
+.nxq[disabled] .qlnk{display:none}
+.qlnk{margin:2px 0 0;font-size:.88rem}
+/* phiếu bên phải */
+.nxs{position:sticky;top:70px;display:flex;flex-direction:column;padding:0;max-height:calc(100vh - 86px);overflow:hidden}
+.nxs-h{padding:18px 20px 12px;display:grid;gap:10px;border-bottom:1px solid var(--rule)}
+.nxs-b{flex:1 1 auto;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:14px 20px;display:grid;gap:14px;align-content:start}
+.nxs-f{padding:12px 20px 14px;border-top:1px solid var(--rule);display:grid;gap:6px}
+@media (max-width:1020px){.nxs{position:static;max-height:none;overflow:visible}.nxs-b{overflow:visible}}
+.nxs h3{margin:0;font:800 1.4rem/1.15 var(--display)}
+.nxs .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.nxs .top b{font:700 .9rem var(--mono);color:var(--accent)}
+.nx-meter{display:flex;gap:3px}.nx-meter i{flex:1;height:6px;border-radius:3px;background:var(--tint)}.nx-meter i.on{background:var(--accent)}
+.sgl{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.sgl .em{font-size:.88rem;color:var(--muted);border:1px dashed var(--rule);border-radius:12px;padding:12px}
+.sg{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;border:1px solid var(--rule);border-left:6px solid var(--c);border-radius:12px;padding:10px 12px;background:var(--bg)}
+.sg-k{grid-column:1/-1;font:600 .7rem var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sg-n{font:700 .95rem/1.3 var(--body);color:var(--ink);text-decoration:none}
+.sg-n:hover{color:var(--accent);text-decoration:underline}
+.sg-p{font:800 1.35rem/1 var(--display);color:var(--accent);align-self:start;white-space:nowrap}
+.sg-c{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;font:500 .78rem var(--mono);color:var(--muted)}
+.sg-f{grid-column:1/-1;height:6px;border-radius:3px;background:var(--tint);overflow:hidden}.sg-f i{display:block;height:100%;background:var(--c)}
+.nxcs{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:4px}
+.nxc{font:600 .74rem/1.3 var(--body);padding:2px 8px;border-radius:999px;border:1px solid var(--rule);color:var(--ink);white-space:nowrap}
+.nxc.y{border-color:var(--accent)}.nxc.m{border-style:dashed;color:var(--muted)}.nxc.n{color:var(--muted);background:var(--tint);border-color:transparent}
+.tips{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.tips li{position:relative;padding:8px 10px 8px 32px;border-radius:10px;background:var(--tint);font-size:.86rem;line-height:1.45}
+.tips li::before{content:'!';position:absolute;left:10px;top:9px;width:15px;height:15px;border-radius:50%;background:var(--accent);color:var(--on-accent);font:800 .68rem/15px var(--body);text-align:center}
+.pkl{display:flex;flex-wrap:wrap;gap:4px}
+.pkl .nxc{border-left:5px solid var(--c)}
+.nxs .cta{margin-top:0;gap:6px}
+.nxs .cta .btn{flex:1 1 auto;text-align:center}
+.btn.off{opacity:.55;cursor:not-allowed}
+.nxs details summary{cursor:pointer;font:600 .86rem var(--body);color:var(--accent)}
+.nxs details .msg{margin-top:8px;max-height:260px;overflow:auto}
+.nxs .sec{display:grid;gap:6px}
+/* danh mục */
+.nxfl{display:flex;flex-wrap:wrap;gap:6px}
+.nxt table{font-size:.88rem}
+.nxt th{font:600 .72rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.nxt{min-width:0}
+.nxt td,.nxt th{padding:10px 12px 10px 0;vertical-align:top}
+.nxt td{white-space:normal}.nxt td[data-l="Sàng"],.nxt td[data-l="Vụ"]{white-space:nowrap}
+.nxt tr.gr td{font-size:.84rem;color:var(--muted);padding-top:20px;border-bottom:2px solid var(--rule)}
+.nxt tr.gr b{font:700 .78rem var(--body);letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.nxt .nxdn{display:grid;grid-template-columns:10px minmax(0,1fr);gap:3px 12px;min-width:250px}
+.nxt .nxdn i{grid-row:1/3;width:10px;border-radius:5px;background:var(--c)}
+.nxt .nxdn b{font:700 .95rem/1.3 var(--body)}
+.nxt .nxdn small{color:var(--muted);font-size:.8rem;line-height:1.4}
+.nxt td.code{font:600 .8rem var(--mono);white-space:nowrap}
+.nxt tr.ln{transition:background-color .3s}
+.nxt tr.ln.hl{background:var(--tint)}
+.nxt tr.ln.sugd .nxdn b::after{content:'  ★ gợi ý';font:600 .72rem var(--body);color:var(--accent);white-space:nowrap}
+.pk{display:inline-flex;align-items:center;gap:6px;font:600 .8rem var(--body);cursor:pointer;white-space:nowrap;border:1px solid var(--rule);border-radius:999px;padding:4px 10px}
+.pk:has(input:checked){border-color:var(--accent);background:var(--tint)}
+.pk input{width:15px;height:15px;accent-color:var(--accent);margin:0}
+@media (max-width:820px){
+ .nxt{overflow:visible}
+ .nxt thead{display:none}
+ .nxt table,.nxt tbody,.nxt tr,.nxt td{display:block;width:100%}
+ .nxt tr.ln{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px;border:1px solid var(--rule);border-left:6px solid var(--c);border-radius:12px;padding:12px 14px;margin-bottom:8px;background:var(--panel)}
+ .nxt tr.ln[hidden],.nxt tr.gr[hidden]{display:none}
+ .nxt tr.ln td{border:0;padding:0}
+ .nxt tr.ln td:first-child{grid-column:1/-1}
+ .nxt .nxdn{min-width:0;grid-template-columns:minmax(0,1fr)}.nxt .nxdn i{display:none}
+ .nxt tr.ln td[data-l]::before{content:attr(data-l);display:block;font:600 .66rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
+ .nxt tr.ln td[data-l="Quan tâm"]::before{display:none}
+ .nxt tr.ln td[data-l="Quan tâm"]{align-self:end}
+ .nxt tr.gr td{border:0;padding:14px 0 6px}
+}
+/* giải thích */
+.nxx{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.nxx{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:680px){.nxx{grid-template-columns:minmax(0,1fr)}}
+.nxx .box{display:flex;flex-direction:column;gap:6px}
+.nxx .box p{margin:0}
+.nxx .box .pf img{aspect-ratio:3/2;object-fit:cover}
+.nxx .lnks{margin-top:auto;padding-top:4px}
+.nxph .pfs{margin:4px 0 0}.nxph .pf img{aspect-ratio:3/2;object-fit:cover}
+svg.fig{display:block;width:100%;max-width:340px;height:auto;margin:4px auto 8px}
+svg.fig .t1{font:700 12.5px var(--body);fill:var(--ink)}svg.fig .t2{font:500 10.5px var(--body);fill:var(--muted)}
+svg.fig .Ls{fill:var(--L-skin)}svg.fig .Lu{fill:var(--L-unripe)}svg.fig .Lp{fill:var(--L-pulp)}svg.fig .Lm{fill:var(--L-muc)}
+svg.fig .Lt{fill:var(--L-par)}svg.fig .Lb{fill:var(--L-bean);stroke:var(--L-cut);stroke-width:.8}svg.fig .Lc,svg.fig .Lc2{fill:none;stroke:var(--L-cut);stroke-width:1.4;stroke-linecap:round}
+svg.fig .pl{fill:var(--tint);stroke:var(--rule)}svg.fig .ho{fill:var(--L-hole);stroke:var(--muted);stroke-width:1.2}
+svg.fig .belt{stroke:var(--muted);stroke-width:3;stroke-linecap:round}svg.fig .bd{fill:var(--L-bad)}
+svg.fig .cam{fill:var(--muted)}svg.fig .lens{fill:var(--panel)}svg.fig .beam{stroke:var(--accent);stroke-width:1.2;stroke-dasharray:3 3}
+svg.fig .jet{fill:none;stroke:var(--muted);stroke-width:1.6;stroke-linecap:round}
+svg.fig .flow,svg.fig .flowd{fill:none;stroke:var(--rule);stroke-width:2.2;stroke-dasharray:5 4}
+svg.fig .bin{fill:var(--panel);stroke:var(--muted);stroke-width:1.2}svg.fig .bin.bad{stroke:var(--accent)}
+.nxprice{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding:12px 16px;border-radius:12px;background:var(--tint);border:1px solid var(--rule)}
+.nxprice .k{color:var(--accent)}.nxprice b{font:700 1.05rem/1.35 var(--body);color:var(--ink);margin-right:auto}
+.gia{margin:0;font:700 1rem/1.4 var(--body);color:var(--accent)}
+/* báo giá */
+.nxquote{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 28px;align-items:center;background:var(--tint)}
+.nxquote h3{margin:4px 0 6px}.nxquote .cta{margin:0}
+@media (max-width:760px){.nxquote{grid-template-columns:minmax(0,1fr)}}
+.pr-head{display:none}
+#bang-cau-hoi,#danh-muc,#hieu-nhanh,#bao-gia,#nx-sum,.nxt tr.ln{scroll-margin-top:72px}
+.nx-bar{display:none}
+@media (max-width:1020px){.nx-bar{position:fixed;left:max(10px,env(safe-area-inset-left,0px));right:max(10px,env(safe-area-inset-right,0px));bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:var(--ink);color:var(--bg);text-decoration:none;box-shadow:0 8px 24px rgba(46,28,18,.28);font:600 .86rem var(--body)}
+ .nx-bar[hidden]{display:none}.nx-bar .c{font:700 .78rem var(--mono);background:var(--accent);color:var(--on-accent);border-radius:999px;padding:3px 8px;white-space:nowrap}
+ .nx-bar .t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nx-bar b{white-space:nowrap}}
+@media (prefers-reduced-motion:reduce){label.op,.nxt tr.ln{transition:none}}
+/* bản in: phiếu câu hỏi trên giấy A4 */
+@media print{
+ @page{size:A4;margin:11mm 12mm}
+ :root{color-scheme:light}
+ body{background:#fff!important;color:#3A2416!important;font-size:11px}
+ .mh,.mf,.contact,.p-head,.nxfacts,#danh-muc,#hieu-nhanh,#bao-gia,.nx-bar,.nxs-f,.nxs details,.qlnk,.nx-intro .note,.nx-intro .eye{display:none!important}
+ .wrap{padding:0!important;gap:8px!important;max-width:none!important}
+ .pr-head{display:flex!important;justify-content:space-between;align-items:center;gap:12px;border-bottom:2px solid #9E3B26;padding-bottom:6px;margin-bottom:6px}
+ .pr-head img{width:120px;height:auto}
+ .pr-head div{text-align:right;font-size:10px;line-height:1.5}
+ .pr-head b{font:800 16px var(--display);letter-spacing:.04em;color:#9E3B26;display:block}
+ .nx-intro h2{font-size:18px;margin:0}
+ .nxw{display:block}
+ .box{border:0!important;padding:0!important;background:none!important}
+ .nxg{gap:7px;margin-bottom:8px;break-inside:auto}
+ .nxgh{padding-bottom:4px}
+ .nxgh .lt{width:22px;height:22px;font-size:12px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .nxgh h3{font-size:14px}.nxgh p,.nxgh .cnt{display:none}
+ .nxq{break-inside:avoid;gap:2px}
+ .nxq legend{font-size:11.5px}
+ .nxq .hint{font-size:9.5px;margin:0}
+ .nxq[disabled]{opacity:1}.nxq .skip{display:none!important}
+ .nxo{display:flex;flex-wrap:wrap;gap:3px 16px}
+ label.op{display:inline-flex;align-items:center;gap:5px;border:0;padding:0;background:none!important;box-shadow:none!important}
+ label.op input,label.op span,.swc,svg.sv{display:none}
+ label.op b{font-weight:500;font-size:11px}
+ label.op::before{content:'';display:inline-block;width:10px;height:10px;border:1.3px solid #6B4226;border-radius:2px;font:800 10px/10px var(--body);text-align:center;color:#9E3B26}
+ label.op:has(input:checked)::before{content:'✓'}
+ label.op:has(input:checked) b{font-weight:800}
+ .p-form .row2{grid-template-columns:1fr 1fr}
+ .p-form label{font-size:10.5px}
+ .p-form input,.p-form textarea{border:0;border-bottom:1px solid #8D7A66;border-radius:0;padding:4px 2px;font-size:11px;background:none}
+ .p-form textarea{min-height:44px}
+ .p-form input::placeholder,.p-form textarea::placeholder{color:transparent}
+ .nxs{display:block;position:static;max-height:none;overflow:visible;border:1px solid #CFC4AE!important;padding:8px 10px!important;margin-top:8px;break-inside:avoid}
+ .nxs-h,.nxs-b{padding:0;border:0;overflow:visible;gap:6px}.nxs-b{margin-top:6px}
+ .sg,.tips li,.nxc{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ label.op.alt{display:inline-flex;padding:0}
+ .nxs.empty,.nxs .nx-meter,.nxs .sec-pk:not(.has){display:none!important}
+ .gia{font-size:11px}
+ .nxs h3{font-size:14px}.nxs .top b{font-size:11px}
+ .sg{padding:5px 8px;gap:2px 8px;border-left-width:4px}.sg-n{font-size:11px}.sg-p{font-size:14px}.sg-k{font-size:8px}.sg-c{font-size:9px}.sg-f{height:4px}
+ .nxc{font-size:8.5px;padding:1px 6px}.tips li{font-size:9.5px;padding:4px 8px 4px 24px}.tips li::before{top:4px;left:6px}
+ .nxt{display:none}
+}
+</style><link rel="alternate" hreflang="vi" href="https://www.medili.vn/nhan-xanh.html"><link rel="alternate" hreflang="en" href="https://www.medili.vn/en/nhan-xanh.html"><link rel="alternate" hreflang="ja" href="https://www.medili.vn/ja/nhan-xanh.html"><link rel="alternate" hreflang="zh-Hans" href="https://www.medili.vn/zh/nhan-xanh.html"><link rel="alternate" hreflang="x-default" href="https://www.medili.vn/nhan-xanh.html"><style>:root{--body:"Be Vietnam Pro","Noto Sans JP",system-ui,sans-serif;--display:"Big Shoulders Display","Noto Sans JP","Be Vietnam Pro",system-ui,sans-serif}body{line-break:strict;word-break:normal;overflow-wrap:anywhere}h1,h2,h3,h4,.btn,.lede{word-break:auto-phrase}</style></head><body><div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a><nav class="mh-p" aria-label="メインメニュー"><a href="cau-chuyen.html">物語</a><a href="vung-trong.html">栽培地</a><a href="anh-vuon.html">農園の写真</a><a href="xuong-rang.html">焙煎所</a><a href="horeca.html">HORECA</a><a href="quan-medili.html">MeDili Café</a><a href="journal.html">知識</a><a href="gia-ca-phe.html">コーヒー価格</a></nav><details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>メニュー</span></summary><nav class="mh-pan" aria-label="すべてのページ"><div class="mh-grid"><div class="mh-c"><p class="mh-g">MeDili</p><ul><li><a href="./">ホーム</a></li><li><a href="cau-chuyen.html">MeDiliの物語</a></li><li><a href="doi-ngu.html">チーム</a></li><li><a href="quan-medili.html">MeDili Caféの店舗</a></li><li><a href="lien-he.html">お問い合わせ</a></li></ul></div><div class="mh-c"><p class="mh-g">栽培と生産</p><ul><li><a href="vung-trong.html">Di Linhの栽培地</a></li><li><a href="anh-vuon.html">農園の写真</a></li><li><a href="vuon.html">農園の12か月</a></li><li><a href="trai-ca-phe.html">チェリーの構造</a></li><li><a href="len-men-men-bia.html">ビール酵母による発酵</a></li><li><a href="len-men-trai-cay.html">フルーツとの共発酵</a></li></ul></div><div class="mh-c"><p class="mh-g">焙煎と抽出</p><ul><li><a href="xuong-rang.html">焙煎所と生産能力</a></li><li><a href="rang.html">焙煎ルーム</a></li><li><a href="huong-dan-pha.html">抽出ガイド</a></li><li><a href="quay-pha.html">ブリューバー</a></li><li><a href="cong-thuc-pha.html">抽出レシピマシン</a></li><li><a href="cold-brew.html">コールドブリューマシン</a></li><li><a href="tim-gu.html">好みのコーヒー診断</a></li></ul></div><div class="mh-c"><p class="mh-g">購入・お取引</p><ul><li><a href="cua-hang.html">コーヒーストア</a></li><li><a href="mua-hang.html">購入ルーム</a></li><li><a href="horeca.html">HORECA向けソリューション</a></li><li><a href="dong-hanh-cung-quan.html">カフェとともに</a></li><li><a href="nhan-xanh.html" aria-current="page">生豆を選ぶ · 卸売</a></li><li><a href="gia-ca-phe.html">本日のコーヒー価格</a></li><li><a href="chinh-sach.html">MeDiliのポリシー</a></li><li><a href="giao-hang.html">配送と返品</a></li><li><a href="gio-hang.html">カート</a></li><li><a href="tim-kiem.html">検索</a></li></ul></div><div class="mh-c"><p class="mh-g">コーヒーの知識</p><ul><li><a href="journal.html">すべての記事</a></li><li><a href="chiet-xuat.html">抽出マシン</a></li><li><a href="phan-biet-ca-phe.html">コーヒー判別マシン</a></li><li><a href="trai-chin.html">完熟チェリーマシン</a></li><li><a href="vi-sinh.html">微生物マシン</a></li><li><a href="tien-chat-huong.html">香りの前駆体マシン</a></li><li><a href="banh-xe-huong.html">MeDiliフレーバーホイール</a></li><li><a href="journal-phin.html">フィンと、時間が落ちるリズム</a></li><li><a href="journal-tu-qua.html">コーヒーチェリーから風味へ</a></li><li><a href="journal-di-linh.html">一杯のコーヒーに宿るDi Linh</a></li><li><a href="tu-vuon-den-ly.html">農園から一杯へ</a></li><li><a href="suc-khoe.html">コーヒーと体</a></li></ul></div></div></nav></details><details class="mh-l"><summary aria-label="言語 · Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.3 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.3-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>JA</span></summary><div class="mh-lp"><a href="../nhan-xanh.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../en/nhan-xanh.html" hreflang="en" lang="en">English</a><a href="nhan-xanh.html" hreflang="ja" lang="ja" aria-current="true">日本語</a><a href="../zh/nhan-xanh.html" hreflang="zh-Hans" lang="zh-Hans">中文</a></div></details><a class="mh-i" href="tim-kiem.html" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a><a class="mh-i" href="gio-hang.html" aria-label="カート"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="mh-cn" hidden></span></a><a class="mh-go" href="cua-hang.html">ストア</a></div></div>
+<div class="wrap pg">
+<header class="p-head"><span class="lgw"><img class="lgL" src="../assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><p class="eye">卸売 · 生豆</p><h1>生豆選び、<em>好みに合う味、合うロットを。</em></h1><p class="lead">焙煎所、自家焙煎のカフェ、商社のためのアンケートです。好みの味、コーヒーの種類、完熟度、精製、スクリーン、収穫期、数量について、13問に約3分で答えてください。MeDiliが最も合う生豆のラインを提案し、サンプルをお送りします。毎日のお見積もりはお問い合わせください。</p><div class="cta"><a class="btn main" href="#bang-cau-hoi">回答を始める</a><a class="btn" href="#danh-muc">生豆の一覧を見る</a></div></header>
+<div class="facts nxfacts">
+ <div><b>Robusta · Arabica</b><span>Robusta Sẻ、Fine Robusta、多収量品種、Culi、Arabica Cầu Đất。</span></div>
+ <div><b>Natural · Honey · Washed</b><span>と色彩選別済みの商業グレード。</span></div>
+ <div><b>スクリーン14 · 16 · 18</b><span>完熟度89〜99%。</span></div>
+ <div><b>60 kg袋</b><span>5 kg未満のサンプルから、1回1トン超の注文まで。</span></div>
+</div>
+
+<div class="pr-head" aria-hidden="true"><span class="lgw"><img class="lgL" src="../assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div><b>生豆選択シート</b>MeDili Café · Zalo 0966 770 788 · cafe@medili.vn<br>毎日のお見積もりはお問い合わせください。<br>日付：........................</div></div>
+<section class="p-sec nx-intro" id="bang-cau-hoi">
+ <p class="eye">アンケート</p>
+ <h2 class="p-h2"><em>あなたの焙煎所の</em>ニーズに合わせて答えてください。</h2>
+ <p class="note">わからない質問は飛ばすか、「まだわからない」を選んでください。回答は次回のためにこのブラウザに保存されます。</p>
+</section>
+<div class="nxw">
+ <form class="nxf" id="nxf" novalidate><section class="box nxg" data-q="muc gu" aria-labelledby="g-A"><div class="nxgh"><span class="lt" aria-hidden="true">A</span><h3 id="g-A">あなたとコーヒー</h3><p>誰のために焙煎し、どんな一杯を目指すのかをMeDiliが理解するための2問です。</p><span class="cnt" aria-label="回答済みの質問数">0/2</span></div><fieldset class="nxq" id="q-muc"><legend><span class="qn">01</span>生豆を何に使いますか？</legend><p class="hint">業態ごとに必要な品質と価格は異なります。</p><div class="nxo" style="--n:4"><label class="op"><input type="radio" name="muc" value="xr"><b>焙煎所、焙煎コーヒーのブランド</b><span>コーヒー豆を焙煎して小売・卸売。</span></label><label class="op"><input type="radio" name="muc" value="quan"><b>自家焙煎のカフェ、チェーン</b><span>自店のバーのために焙煎。</span></label><label class="op"><input type="radio" name="muc" value="tm"><b>生豆の転売</b><span>流通、包装、輸出。</span></label><label class="op"><input type="radio" name="muc" value="sx"><b>加工、製造</b><span>インスタント、缶コーヒー、工業用原料。</span></label><label class="op alt"><input type="radio" name="muc" value="khac"><b>その他の目的</b><span>メモ欄にご記入ください。</span></label></div></fieldset><fieldset class="nxq" id="q-gu"><legend><span class="qn">02</span>目指すコーヒーの味</legend><p class="hint">最も近い味を選んでください。これは出発点で、サンプルを試していただいた後にMeDiliがさらに調整します。</p><div class="nxo" style="--n:3"><label class="op hasx"><input type="radio" name="gu" value="dam"><b>伝統的な濃く苦い味</b><span>フィン、アイスミルクコーヒー。しっかりしたボディ、はっきりした苦み、酸味は少なめ。</span><i class="swc" style="--c:#5A3420" aria-hidden="true"></i></label><label class="op hasx"><input type="radio" name="gu" value="ngot"><b>濃くて甘い余韻</b><span>やわらかな苦み、長く甘い余韻、角がない。</span><i class="swc" style="--c:#8D5A32" aria-hidden="true"></i></label><label class="op hasx"><input type="radio" name="gu" value="can"><b>マシン抽出向けのバランス型</b><span>エスプレッソ、RobustaとArabicaのブレンド。</span><i class="swc" style="--c:#B8894A" aria-hidden="true"></i></label><label class="op hasx"><input type="radio" name="gu" value="chua"><b>爽やかな酸味、花の香り</b><span>ハンドドリップ、すっきりしたArabica。</span><i class="swc" style="--c:#D9B77E" aria-hidden="true"></i></label><label class="op hasx"><input type="radio" name="gu" value="trai"><b>熟した果実の甘さ、発酵の香り</b><span>Natural、Honey：熟したプラム、レーズン、軽いワイン。</span><i class="swc" style="--c:#A23B24" aria-hidden="true"></i></label><label class="op hasx"><input type="radio" name="gu" value="mau"><b>まだわからない、サンプルを試したい</b><span>ニーズに近いいくつかのラインのサンプルをMeDiliが用意します。</span><i class="swc none" style="--c:transparent" aria-hidden="true"></i></label></div></fieldset></section><section class="box nxg" data-q="loai ro chin sc sang vu" aria-labelledby="g-B"><div class="nxgh"><span class="lt" aria-hidden="true">B</span><h3 id="g-B">生豆の仕様</h3><p>種類、品種、完熟度、精製、豆の大きさ、収穫期についての6問。説明はページ下部にあります。</p><span class="cnt" aria-label="回答済みの質問数">0/6</span></div><fieldset class="nxq" id="q-loai"><legend><span class="qn">03</span>RobustaかArabicaか？</legend><p class="hint">両方を選んでブレンドすることもできます。</p><div class="nxo" style="--n:4"><label class="op"><input type="radio" name="loai" value="R"><b>Robusta</b><span>濃く、苦く、カフェインが多い。価格は手頃。</span></label><label class="op"><input type="radio" name="loai" value="A"><b>Arabica</b><span>爽やかな酸味、香り高い。価格は高め。</span></label><label class="op"><input type="radio" name="loai" value="RA"><b>両方、ブレンド用</b><span>Robustaをベースに、Arabicaで香りを。</span></label><label class="op"><input type="radio" name="loai" value="x"><b>まだわからない</b><span>好みの味に合わせてMeDiliが提案します。</span></label></div></fieldset><fieldset class="nxq" id="q-ro"><legend><span class="qn">04</span>どのRobustaですか？</legend><p class="hint">多収量品種とRobusta Sẻは品種です。Fine Robustaは品質の等級、Culiは豆の形です。</p><div class="nxo" style="--n:4"><label class="op"><input type="radio" name="ro" value="cs"><b>多収量Robusta</b><span>TR4、TR9、TRS1などの選抜された高収量系統。豆は大きくそろい、苦みがはっきりしてボディは中程度。</span></label><label class="op"><input type="radio" name="ro" value="fine"><b>Fine Robusta</b><span>完熟摘み、丁寧な精製、カッピングで80点以上。甘くクリーンな味。</span></label><label class="op"><input type="radio" name="ro" value="se"><b>Robusta Sẻ Di Linh</b><span>種から育てる古いRobusta品種。豆は小さく硬く、濃厚で余韻が長い。数量が少なく、収穫期ごとに選別。</span></label><label class="op"><input type="radio" name="ro" value="culi"><b>Culi Robusta</b><span>1つの実に丸い豆が1粒。丸い豆は均一に焼けやすい。</span></label><label class="op alt"><input type="radio" name="ro" value="x"><b>まだわからない</b><span>好みの味に合わせてMeDiliが提案します。</span></label></div><p class="skip">Arabicaを選んだので、この質問は飛ばします。</p><p class="qlnk"><a class="lnk" href="phan-biet-ca-phe.html#ca-se">Robusta Sẻと多収量品種の見分け方</a></p></fieldset><fieldset class="nxq" id="q-chin"><legend><span class="qn">05</span>収穫時の完熟度</legend><p class="hint">収穫した実に占める完熟果の割合。高いほど甘くクリーンな味になり、価格も上がります。</p><div class="nxo" style="--n:4"><label class="op"><input type="radio" name="chin" value="99"><b>完熟率99%</b><span>ほぼすべて完熟果を選別。</span></label><label class="op"><input type="radio" name="chin" value="97"><b>完熟率97〜98%</b><span>高品質品の水準。</span></label><label class="op"><input type="radio" name="chin" value="95"><b>完熟率95%</b><span>品質と価格のバランス。</span></label><label class="op"><input type="radio" name="chin" value="90"><b>約90%</b><span>まずまずの品質で手頃な価格。</span></label><label class="op alt"><input type="radio" name="chin" value="0"><b>指定なし</b><span>商業グレード、完熟率の保証なし。</span></label></div></fieldset><fieldset class="nxq" id="q-sc"><legend><span class="qn">06</span>精製方法</legend><p class="hint">果皮の除き方と乾燥のさせ方が、甘み、酸味、香りの大部分を決めます。</p><div class="nxo" style="--n:4"><label class="op"><input type="radio" name="sc" value="tm"><b>商業グレード</b><span>通常の乾燥、色彩選別済み。濃く苦く、お得な価格。</span></label><label class="op"><input type="radio" name="sc" value="natural"><b>Natural</b><span>完熟した実を丸ごと乾燥。熟した果実の甘さ、しっかりしたボディ。</span></label><label class="op"><input type="radio" name="sc" value="honey"><b>Honey</b><span>果皮を除き、ミューシレージを残して乾燥。甘く、まろやか。</span></label><label class="op"><input type="radio" name="sc" value="washed"><b>Washed（ウェットプロセス）</b><span>果皮を除き、発酵させ、ミューシレージを洗い流す。クリーンで爽やかな酸味。</span></label><label class="op alt"><input type="radio" name="sc" value="x"><b>まだわからない</b><span>好みの味に合わせてMeDiliが提案します。</span></label></div></fieldset><fieldset class="nxq" id="q-sang"><legend><span class="qn">07</span>スクリーンサイズ</legend><p class="hint">スクリーンが大きいほど豆は大きくそろい、焼き色が均一になりやすい。</p><div class="nxo" style="--n:4"><label class="op hasx"><input type="radio" name="sang" value="18"><b>S18</b><span>大粒、ふるい目7.14 mm。</span><svg class="sv" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="5.85" ry="8.43"/><path d="M12 6.10V17.90"/></svg></label><label class="op hasx"><input type="radio" name="sang" value="16"><b>S16</b><span>中粒、ふるい目6.35 mm。</span><svg class="sv" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="5.21" ry="7.49"/><path d="M12 6.75V17.25"/></svg></label><label class="op hasx"><input type="radio" name="sang" value="14"><b>S14</b><span>小粒、ふるい目5.56 mm。Arabicaによくある。</span><svg class="sv" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="4.56" ry="6.56"/><path d="M12 7.41V16.59"/></svg></label><label class="op"><input type="radio" name="sang" value="x"><b>指定なし</b><span>好みに最も合うロットで。</span></label></div></fieldset><fieldset class="nxq" id="q-vu"><legend><span class="qn">08</span>収穫期</legend><p class="hint">ロットの収穫期。</p><div class="nxo" style="--n:3"><label class="op"><input type="radio" name="vu" value="26"><b>ニュークロップ2026〜2027</b><span>新鮮な豆で香りがはっきり。収穫中で、順次入荷。</span></label><label class="op"><input type="radio" name="vu" value="25"><b>2025〜2026年の収穫期</b><span>豆が落ち着いていて、焙煎が読みやすい。</span></label><label class="op"><input type="radio" name="vu" value="x"><b>指定なし</b><span>好みに合うほうのロットを選ぶ。</span></label></div></fieldset></section><section class="box nxg" data-q="sl tan mau giao ben" aria-labelledby="g-C"><div class="nxgh"><span class="lt" aria-hidden="true">C</span><h3 id="g-C">数量と受け渡し</h3><p>数量、サンプル、受け取り方法。1袋 = 60 kg。</p><span class="cnt" aria-label="回答済みの質問数">0/5</span></div><fieldset class="nxq" id="q-sl"><legend><span class="qn">09</span>1回あたりの購入量は？</legend><p class="hint">1袋 = 60 kg。</p><div class="nxo" style="--n:4"><label class="op"><input type="radio" name="sl" value="mau"><b>サンプル</b><span>5 kg未満。</span></label><label class="op"><input type="radio" name="sl" value="le"><b>1袋未満</b><span>5〜59 kg。</span></label><label class="op"><input type="radio" name="sl" value="bao"><b>1〜16袋</b><span>60〜960 kg。</span></label><label class="op"><input type="radio" name="sl" value="tan"><b>17袋以上</b><span>約1トン以上。</span></label></div></fieldset><fieldset class="nxq" id="q-tan"><legend><span class="qn">10</span>購入の頻度は？</legend><p class="hint">MeDiliが収穫期ごとの在庫計画を立てるのに役立ちます。</p><div class="nxo" style="--n:4"><label class="op"><input type="radio" name="tan" value="1"><b>1回のみ</b><span>お試し購入、またはプロジェクト単位。</span></label><label class="op"><input type="radio" name="tan" value="thang"><b>毎月</b><span>毎月定期的に仕入れ。</span></label><label class="op"><input type="radio" name="tan" value="tuan"><b>毎週</b><span>焙煎量が多く、回転が速い。</span></label><label class="op"><input type="radio" name="tan" value="vu"><b>収穫期通しの契約</b><span>収穫期全体の数量と納品スケジュールを確定。</span></label></div></fieldset><fieldset class="nxq" id="q-mau"><legend><span class="qn">11</span>サンプルは必要ですか？</legend><p class="hint">大口注文を確定する前にサンプルを試すことをおすすめします。</p><div class="nxo" style="--n:4"><label class="op"><input type="radio" name="mau" value="nhan"><b>生豆サンプル</b><span>いつものプロファイルで試し焼きするため。</span></label><label class="op"><input type="radio" name="mau" value="rang"><b>焙煎済みサンプル</b><span>すぐに味わい、今使っているロットと比べるため。</span></label><label class="op"><input type="radio" name="mau" value="ca2"><b>両方</b><span>生豆は焙煎用、焙煎豆は試飲用。</span></label><label class="op"><input type="radio" name="mau" value="khong"><b>不要</b><span>商品は知っているので、見積もりだけ必要。</span></label></div></fieldset><fieldset class="nxq" id="q-giao"><legend><span class="qn">12</span>受け取り方法は？</legend><p class="hint">配送料は見積もりに明記します。</p><div class="nxo" style="--n:3"><label class="op"><input type="radio" name="giao" value="hcm"><b>ホーチミン市内配送</b><span>市内は指定場所までお届け。</span></label><label class="op"><input type="radio" name="giao" value="tinh"><b>他の省への配送</b><span>貨物取扱所や運送会社を通じて。</span></label><label class="op"><input type="radio" name="giao" value="lay"><b>引き取り</b><span>MeDiliと受け取り時間を約束。</span></label></div></fieldset><fieldset class="nxq" id="q-ben"><legend><span class="qn">13</span>購入者の区分</legend><p class="hint">MeDiliが税金と請求書を正しく案内するため。</p><div class="nxo" style="--n:3"><label class="op"><input type="radio" name="ben" value="dn"><b>法人</b><span>法人の納税者番号あり。</span></label><label class="op"><input type="radio" name="ben" value="hkd"><b>個人事業</b><span>個人事業として登録済み。</span></label><label class="op"><input type="radio" name="ben" value="cn"><b>個人</b><span>事業登録なしで購入。</span></label></div></fieldset></section><section class="box nxg" aria-labelledby="g-D">
+ <div class="nxgh"><span class="lt" aria-hidden="true">D</span><h3 id="g-D">お問い合わせ</h3><p>MeDiliから提案、サンプル、見積もりをお送りするために。オンラインフォームには名前と電話番号が必要です。</p></div>
+ <div class="p-form">
+  <div class="row2">
+   <label for="nx-name">ご担当者<input id="nx-name" autocomplete="name" maxlength="80" placeholder="例：ミンさん"></label>
+   <label for="nx-ph">電話番号またはZalo<input id="nx-ph" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="0901234567"></label>
+  </div>
+  <div class="row2">
+   <label for="nx-org">焙煎所、カフェ、会社名 <small>任意</small><input id="nx-org" autocomplete="organization" maxlength="100" placeholder="例：Mộc焙煎所"></label>
+   <label for="nx-area">受け取り地域 <small>任意</small><input id="nx-area" maxlength="80" placeholder="例：Thủ Đức、ホーチミン市"></label>
+  </div>
+  <label for="nx-note">備考 <small>任意</small><textarea id="nx-note" rows="3" maxlength="400" placeholder="今使っているロット、焙煎機、水分や包装についての特別な要望…"></textarea></label>
+ </div>
+</section></form>
+ <aside class="box nxs" id="nx-sum" aria-labelledby="nx-h">
+  <div class="nxs-h"><div class="top"><h3 id="nx-h">あなたのシート</h3><b id="nx-cnt">0 / 13</b></div>
+   <div class="nx-meter" id="nx-meter" aria-hidden="true"></div><p class="vh" id="nx-best" role="status"></p></div>
+  <div class="nxs-b">
+   <div class="sec"><p class="k">MeDiliのおすすめ</p><ol class="sgl" id="nx-sug"></ol></div>
+   <div class="sec" id="nx-tipw" hidden><p class="k">注意点</p><ul class="tips" id="nx-tips"></ul></div>
+   <div class="sec sec-gia"><p class="k">生豆の価格</p><p class="gia">毎日のお見積もりはお問い合わせください。</p></div>
+   <div class="sec sec-pk"><p class="k">印をつけたライン</p><div class="pkl" id="nx-pk"></div></div>
+   <details><summary>送信するメッセージを見る</summary><pre class="msg" id="nx-msg"></pre></details>
+  </div>
+  <div class="nxs-f">
+   <div class="cta acts"><a class="btn main off" id="nx-gf" target="_blank" rel="noopener" aria-disabled="true">MeDiliに送るフォームを開く</a><button class="btn" type="button" id="nx-cp">メッセージをコピー</button>
+    <a class="btn" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">ZaloでMeDiliにメッセージ</a><button class="btn" type="button" id="nx-pr">シートを印刷</button><button class="btn ghost" type="button" id="nx-rs">やり直す</button></div>
+   <p class="fstat" id="nx-st" role="status"></p>
+  </div>
+ </aside>
+</div>
+<a class="nx-bar" id="nx-bar" href="#nx-sum" hidden><span class="c" id="nx-bar-c">0/13</span><span class="t" id="nx-bar-t">いくつか答えるとおすすめが表示されます</span><b>シートを見る ↓</b></a>
+
+<section class="box p-sec" id="danh-muc">
+ <p class="eye">生豆の一覧</p>
+ <h2 class="p-h2" style="margin:0">11ラインが在庫あり、<em>さらに収穫期ごとのRobusta Sẻ。</em></h2>
+ <p class="note">MeDiliコードは注文時に使います。見積もりにはロットの産地、収穫期、規格を明記します。「気になる」を押すと、そのラインがシートに入ります。</p>
+ <div class="nxprice"><span class="k">生豆の価格</span><b>毎日のお見積もりはお問い合わせください。</b><a class="btn main small" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">ZaloでMeDiliにメッセージ</a><button class="btn small" type="button" data-copy="0966770788" data-done="番号をコピーしました">番号0966 770 788をコピー</button></div>
+ <div class="nxfl" id="nx-fl" role="group" aria-label="一覧を絞り込む"><button type="button" class="pill" data-f="all" aria-pressed="true">すべて</button><button type="button" class="pill" data-f="R" aria-pressed="false">Robusta</button><button type="button" class="pill" data-f="A" aria-pressed="false">Arabica</button></div>
+ <div class="tw nxt"><table id="nx-tab"><thead><tr><th scope="col">ライン</th><th scope="col">精製</th><th scope="col">スクリーン</th><th scope="col">熟度</th><th scope="col">収穫期</th><th scope="col">MeDiliコード</th><th scope="col"><span class="vh">印</span></th></tr></thead><tbody><tr class="gr" data-sp="R"><td colspan="7"><b>商業グレードのRobusta</b> · 色彩選別済み、一般流通品</td></tr><tr class="ln" id="l-r18bm" data-id="r18bm" data-sp="R" style="--c:var(--nx1)"><td><div class="nxdn"><i aria-hidden="true"></i><b>Robusta S18 色彩選別済み</b><small>クリーンな商業グレードで、豆は大きくそろっています。フィン、ミルクコーヒー、ブレンドのベースに。</small></div></td><td data-l="精製">商業グレード</td><td data-l="スクリーン">S18</td><td data-l="熟度">保証なし</td><td data-l="収穫期">2025–2026</td><td data-l="MeDiliコード" class="code">MD-R18-BM</td><td data-l="気になる"><label class="pk"><input type="checkbox" name="pick" value="r18bm"><span>気になる</span></label></td></tr><tr class="ln" id="l-r16bm" data-id="r16bm" data-sp="R" style="--c:var(--nx1)"><td><div class="nxdn"><i aria-hidden="true"></i><b>Robusta S16 色彩選別済み</b><small>商業グレード、中粒。フィン、ブレンドのベース、加工用に。</small></div></td><td data-l="精製">商業グレード</td><td data-l="スクリーン">S16</td><td data-l="熟度">保証なし</td><td data-l="収穫期">2025–2026</td><td data-l="MeDiliコード" class="code">MD-R16-BM</td><td data-l="気になる"><label class="pk"><input type="checkbox" name="pick" value="r16bm"><span>気になる</span></label></td></tr><tr class="ln" id="l-rc18bm" data-id="rc18bm" data-sp="R" style="--c:var(--nx2)"><td><div class="nxdn"><i aria-hidden="true"></i><b>Culi Robusta S18 色彩選別済み</b><small>1粒の丸い豆を別に選別。濃いフィン、豆のままの販売に。</small></div></td><td data-l="精製">商業グレード</td><td data-l="スクリーン">S18</td><td data-l="熟度">保証なし</td><td data-l="収穫期">2025–2026</td><td data-l="MeDiliコード" class="code">MD-RC18-BM</td><td data-l="気になる"><label class="pk"><input type="checkbox" name="pick" value="rc18bm"><span>気になる</span></label></td></tr><tr class="gr" data-sp="R"><td colspan="7"><b>完熟摘みのRobusta</b> · HoneyとNatural、Fine Robustaの土台。カッピングの点数はロットごとに確認</td></tr><tr class="ln" id="l-r18h97" data-id="r18h97" data-sp="R" style="--c:var(--nx3)"><td><div class="nxdn"><i aria-hidden="true"></i><b>Robusta Honey S18 · 完熟率97〜98%</b><small>甘く、まろやか。甘い余韻のフィン、エスプレッソ、コールドブリューに。</small></div></td><td data-l="精製">Honey</td><td data-l="スクリーン">S18</td><td data-l="熟度">97–98%</td><td data-l="収穫期">2025–2026</td><td data-l="MeDiliコード" class="code">MD-R18-H97</td><td data-l="気になる"><label class="pk"><input type="checkbox" name="pick" value="r18h97"><span>気になる</span></label></td></tr><tr class="ln" id="l-r18h98" data-id="r18h98" data-sp="R" style="--c:var(--nx3)"><td><div class="nxdn"><i aria-hidden="true"></i><b>Robusta Honey S18 · 完熟率98% 選別品</b><small>より丁寧に選別し、よりクリーンな味。エスプレッソ、高品質Robustaに。</small></div></td><td data-l="精製">Honey</td><td data-l="スクリーン">S18</td><td data-l="熟度">98%</td><td data-l="収穫期">2025–2026</td><td data-l="MeDiliコード" class="code">MD-R18-H98</td><td data-l="気になる"><label class="pk"><input type="checkbox" name="pick" value="r18h98"><span>気になる</span></label></td></tr><tr class="ln" id="l-r18n99" data-id="r18n99" data-sp="R" style="--c:var(--nx4)"><td><div class="nxdn"><i aria-hidden="true"></i><b>Robusta Natural S18 · 完熟率99%</b><small>熟した果実の甘さ、しっかりしたボディ。マシン抽出、ハンドドリップ、コールドブリューに。</small></div></td><td data-l="精製">Natural</td><td data-l="スクリーン">S18</td><td data-l="熟度">99%</td><td data-l="収穫期">2025–2026</td><td data-l="MeDiliコード" class="code">MD-R18-N99</td><td data-l="気になる"><label class="pk"><input type="checkbox" name="pick" value="r18n99"><span>気になる</span></label></td></tr><tr class="gr" data-sp="R"><td colspan="7"><b>Robusta Sẻ Di Linh</b> · 収穫期ごとに選別、規格はロットごとに案内</td></tr><tr class="ln" id="l-rse" data-id="rse" data-sp="R" style="--c:var(--nx5)"><td><div class="nxdn"><i aria-hidden="true"></i><b>Robusta Sẻ Di Linh</b><small>種から育てる古いRobusta品種。濃いフィン、無添加焙煎、特別なラインに。</small></div></td><td data-l="精製">ロット別</td><td data-l="スクリーン">ロット別</td><td data-l="熟度">ロット別</td><td data-l="収穫期">収穫期による</td><td data-l="MeDiliコード" class="code">MD-RSE-DL</td><td data-l="気になる"><label class="pk"><input type="checkbox" name="pick" value="rse"><span>気になる</span></label></td></tr><tr class="gr" data-sp="A"><td colspan="7"><b>Arabica</b> · WashedとNatural</td></tr><tr class="ln" id="l-a18w99" data-id="a18w99" data-sp="A" style="--c:var(--nx6)"><td><div class="nxdn"><i aria-hidden="true"></i><b>Arabica Cầu Đất S18 · Washed · 完熟率99%</b><small>クリーンで爽やかな酸味、花の香り。ハンドドリップ、シングルオリジンのエスプレッソに。</small></div></td><td data-l="精製">Washed</td><td data-l="スクリーン">S18</td><td data-l="熟度">99%</td><td data-l="収穫期">2025–2026</td><td data-l="MeDiliコード" class="code">MD-A18-W99</td><td data-l="気になる"><label class="pk"><input type="checkbox" name="pick" value="a18w99"><span>気になる</span></label></td></tr><tr class="ln" id="l-a18w98m" data-id="a18w98m" data-sp="A" style="--c:var(--nx6)"><td><div class="nxdn"><i aria-hidden="true"></i><b>Arabica Cầu Đất S18 · Washed · 完熟率98% · ニュークロップ</b><small>2026〜2027年収穫期の新鮮な香り。ハンドドリップ、エスプレッソに。</small></div></td><td data-l="精製">Washed</td><td data-l="スクリーン">S18</td><td data-l="熟度">98%</td><td data-l="収穫期">2026–2027</td><td data-l="MeDiliコード" class="code">MD-A18-W98-VM</td><td data-l="気になる"><label class="pk"><input type="checkbox" name="pick" value="a18w98m"><span>気になる</span></label></td></tr><tr class="ln" id="l-a18w95" data-id="a18w95" data-sp="A" style="--c:var(--nx6)"><td><div class="nxdn"><i aria-hidden="true"></i><b>Arabica Cầu Đất S18 · Washed · 完熟率95%</b><small>バランスがよく、ブレンドしやすい。エスプレッソ、高級ブレンドに。</small></div></td><td data-l="精製">Washed</td><td data-l="スクリーン">S18</td><td data-l="熟度">95%</td><td data-l="収穫期">2025–2026</td><td data-l="MeDiliコード" class="code">MD-A18-W95</td><td data-l="気になる"><label class="pk"><input type="checkbox" name="pick" value="a18w95"><span>気になる</span></label></td></tr><tr class="ln" id="l-a14w97" data-id="a14w97" data-sp="A" style="--c:var(--nx6)"><td><div class="nxdn"><i aria-hidden="true"></i><b>Arabica Cầu Đất S14 · Washed · 完熟率97%</b><small>豆は小さめで、完熟度が高い。ブレンド、マシン抽出に。</small></div></td><td data-l="精製">Washed</td><td data-l="スクリーン">S14</td><td data-l="熟度">97–98%</td><td data-l="収穫期">2025–2026</td><td data-l="MeDiliコード" class="code">MD-A14-W97</td><td data-l="気になる"><label class="pk"><input type="checkbox" name="pick" value="a14w97"><span>気になる</span></label></td></tr><tr class="ln" id="l-a18n89" data-id="a18n89" data-sp="A" style="--c:var(--nx7)"><td><div class="nxdn"><i aria-hidden="true"></i><b>Arabica S18 · Natural · 完熟率89%</b><small>実を丸ごと乾燥。甘く、しっかりしたボディ。ブレンド、マシン抽出、コールドブリューに。</small></div></td><td data-l="精製">Natural</td><td data-l="スクリーン">S18</td><td data-l="熟度">89%</td><td data-l="収穫期">2025–2026</td><td data-l="MeDiliコード" class="code">MD-A18-N89</td><td data-l="気になる"><label class="pk"><input type="checkbox" name="pick" value="a18n89"><span>気になる</span></label></td></tr></tbody></table></div>
+</section>
+
+<section class="p-sec" id="hieu-nhanh">
+ <p class="eye">選ぶ前にざっと理解</p>
+ <h2 class="p-h2"><em>生豆ロットを決める</em>6つのこと。</h2>
+ <div class="nxx">
+  <div class="box"><figure class="pf "><img src="../assets/p-hai-chon.jpg" alt="完熟したコーヒーの実を摘む手" width="1200" height="800" loading="lazy"></figure><span class="k">熟度</span><h3>完熟した実が甘さを生む</h3>
+   <p>完熟度とは、収穫した実に占める完熟果の割合です。十分に熟した実は糖を多く蓄えるので、甘くクリーンな味になります。未熟な実は渋く、刺激のある味にします。選んで摘むほど手間がかかり、価格も上がります。</p></div>
+  <div class="box"><svg class="fig sc" viewBox="0 0 300 302" role="img" aria-label="4つの精製方法で乾燥させるときのコーヒーの実の断面：商業グレードとNaturalは果皮、果肉、ミューシレージがそのまま、Honeyはミューシレージが残り、Washedは豆を包むパーチメントだけ。"><ellipse class="Ls" cx="75" cy="54" rx="35" ry="41"/><path class="Lu" d="M75 13A35 41 0 0 0 44 73L75 54z"/><ellipse class="Lp" cx="75" cy="54" rx="30.5" ry="36.5"/><ellipse class="Lm" cx="75" cy="54" rx="25.5" ry="31.5"/><ellipse class="Lt" cx="75" cy="54" rx="20.5" ry="26.5"/><ellipse class="Lb" cx="67.4" cy="54" rx="7" ry="17.5"/><path class="Lc" d="M67.4 42v24"/><ellipse class="Lb" cx="82.6" cy="54" rx="7" ry="17.5"/><path class="Lc" d="M82.6 42v24"/><text class="t1" x="75" y="112" text-anchor="middle">商業グレード</text><text class="t2" x="75" y="126" text-anchor="middle">実を丸ごと乾燥、混ぜ摘み</text><ellipse class="Ls" cx="225" cy="54" rx="35" ry="41"/><ellipse class="Lp" cx="225" cy="54" rx="30.5" ry="36.5"/><ellipse class="Lm" cx="225" cy="54" rx="25.5" ry="31.5"/><ellipse class="Lt" cx="225" cy="54" rx="20.5" ry="26.5"/><ellipse class="Lb" cx="217.4" cy="54" rx="7" ry="17.5"/><path class="Lc" d="M217.4 42v24"/><ellipse class="Lb" cx="232.6" cy="54" rx="7" ry="17.5"/><path class="Lc" d="M232.6 42v24"/><text class="t1" x="225" y="112" text-anchor="middle">Natural</text><text class="t2" x="225" y="126" text-anchor="middle">完熟した実を丸ごと乾燥</text><ellipse class="Lm" cx="75" cy="176" rx="25.5" ry="31.5"/><ellipse class="Lt" cx="75" cy="176" rx="20.5" ry="26.5"/><ellipse class="Lb" cx="67.4" cy="176" rx="7" ry="17.5"/><path class="Lc" d="M67.4 164v24"/><ellipse class="Lb" cx="82.6" cy="176" rx="7" ry="17.5"/><path class="Lc" d="M82.6 164v24"/><text class="t1" x="75" y="234" text-anchor="middle">Honey</text><text class="t2" x="75" y="248" text-anchor="middle">ミューシレージ付きで乾燥</text><ellipse class="Lt" cx="225" cy="176" rx="20.5" ry="26.5"/><ellipse class="Lb" cx="217.4" cy="176" rx="7" ry="17.5"/><path class="Lc" d="M217.4 164v24"/><ellipse class="Lb" cx="232.6" cy="176" rx="7" ry="17.5"/><path class="Lc" d="M232.6 164v24"/><text class="t1" x="225" y="234" text-anchor="middle">Washed</text><text class="t2" x="225" y="248" text-anchor="middle">洗った豆を乾燥</text><circle class="Ls" cx="13" cy="290" r="5"/><text class="t2" x="22" y="294">果皮</text><circle class="Lp" cx="71" cy="290" r="5"/><text class="t2" x="80" y="294">果肉</text><circle class="Lm" cx="135" cy="290" r="5"/><text class="t2" x="144" y="294">ミューシレージ</text><circle class="Lt" cx="202" cy="290" r="5"/><text class="t2" x="211" y="294">パーチメント</text><circle class="Lb" cx="261" cy="290" r="5"/><text class="t2" x="270" y="294">生豆</text></svg><span class="k">精製</span><h3>乾燥時に残る実の部分</h3>
+   <p>Naturalは完熟した実を丸ごと乾燥させるので、熟した果実の甘さとしっかりしたボディになります。Honeyは果皮を除いてもミューシレージを残すので、まろやかな甘さ。Washedは乾燥前にミューシレージを洗い流すので、クリーンで爽やかな酸味。商業グレードは、熟した実と未熟な実を混ぜて摘み、丸ごと乾燥させます。</p></div>
+  <div class="box"><svg class="fig sg2" viewBox="0 0 300 134" role="img" aria-label="縮尺どおりに描いた3つのふるい目：スクリーン18は7.14 mm、16は6.35 mm、14は5.56 mm。"><rect class="pl" x="6" y="8" width="288" height="84" rx="12"/><circle class="ho" cx="58" cy="50" r="21.42"/><text class="t1" x="58" y="112" text-anchor="middle">スクリーン18</text><text class="t2" x="58" y="127" text-anchor="middle">7.14 mm</text><circle class="ho" cx="150" cy="50" r="19.05"/><text class="t1" x="150" y="112" text-anchor="middle">スクリーン16</text><text class="t2" x="150" y="127" text-anchor="middle">6.35 mm</text><circle class="ho" cx="242" cy="50" r="16.68"/><text class="t1" x="242" y="112" text-anchor="middle">スクリーン14</text><text class="t2" x="242" y="127" text-anchor="middle">5.56 mm</text></svg><span class="k">スクリーンサイズ</span><h3>スクリーン番号は穴の大きさ</h3>
+   <p>スクリーン番号は64分の1インチ単位：スクリーン18の穴は7.14 mm、16は6.35 mm、14は5.56 mm。S18のロットとは、大部分の豆がスクリーン18に残るロットのことです。大きく大きさのそろった豆ほど均一に焼けます。図は3つの穴を縮尺どおりに描いています。</p></div>
+  <div class="box"><svg class="fig bm" viewBox="0 0 300 150" role="img" aria-label="豆が色彩選別カメラの前を通り、欠点豆は圧縮空気で除去レーンへ吹き飛ばされ、合格した豆は先へ進みます。"><path class="belt" d="M8 70H176"/><ellipse class="Lb" cx="22" cy="62" rx="9" ry="6.2"/><ellipse class="Lb" cx="46" cy="62" rx="9" ry="6.2"/><ellipse class="bd" cx="70" cy="62" rx="9" ry="6.2"/><ellipse class="Lb" cx="94" cy="62" rx="9" ry="6.2"/><ellipse class="Lb" cx="118" cy="62" rx="9" ry="6.2"/><rect class="cam" x="108" y="10" width="34" height="20" rx="4"/><circle class="lens" cx="125" cy="20" r="5"/><path class="beam" d="M117 30L104 56M133 30L146 56"/><text class="t2" x="148" y="22">色彩選別カメラ</text><path class="jet" d="M170 108v-14M164 96c2 6 10 6 12 0M161 88c3 9 15 9 18 0"/><text class="t2" x="160" y="104" text-anchor="end">圧縮空気</text><path class="flow" d="M178 66H226"/><path class="flowd" d="M176 74C190 88 196 112 214 128"/><rect class="bin" x="230" y="48" width="62" height="36" rx="8"/><text class="t1" x="261" y="71" text-anchor="middle">合格</text><rect class="bin bad" x="216" y="116" width="76" height="30" rx="8"/><text class="t1" x="254" y="136" text-anchor="middle">除去</text><ellipse class="bd" cx="200" cy="104" rx="7" ry="5"/></svg><span class="k">色彩選別</span><h3>欠点豆を1粒ずつ取り除く機械</h3>
+   <p>色彩選別機はカメラで1粒ずつ検査します。黒豆、褐色豆、虫食い豆、カビ豆、色ムラのある豆を見つけると、圧縮空気で除去レーンへ落とします。色のそろった豆は均一に焼け、雑味の少ない一杯になります。</p></div>
+  <div class="box"><svg class="fig rb" viewBox="0 0 300 120" role="img" aria-label="Robustaの3つの豆のタイプ：多収量品種は大きくそろい、Robusta Sẻは小さく硬く、Culiは丸い1粒。"><ellipse class="Lb" cx="55" cy="50" rx="17" ry="25"/><path class="Lc2" d="M55 32.0V68.0"/><text class="t1" x="55" y="98" text-anchor="middle">多収量品種</text><text class="t2" x="55" y="113" text-anchor="middle">大きく、そろっている</text><ellipse class="Lb" cx="150" cy="50" rx="15" ry="21.5"/><path class="Lc2" d="M150 34.52V65.48"/><text class="t1" x="150" y="98" text-anchor="middle">Robusta Sẻ</text><text class="t2" x="150" y="113" text-anchor="middle">小さく、硬い</text><ellipse class="Lb" cx="245" cy="50" rx="15.5" ry="20"/><path class="Lc2" d="M241.9 36.0C252.75 46.0 252.75 54.0 241.9 64.0"/><text class="t1" x="245" y="98" text-anchor="middle">Culi</text><text class="t2" x="245" y="113" text-anchor="middle">丸く、1粒</text></svg><span class="k">Robusta</span><h3>品種、品質の等級、形</h3>
+   <p>多収量品種とは、選抜された高収量の系統で、大部分は接ぎ木で栽培され、豆は大きくそろっています。Robusta SẻはDi Linhの古いRobusta品種で、種から育ち、豆は小さく硬く、味は濃く、余韻が長い。Fine Robustaは品質の等級で、完熟摘み、丁寧な精製、カッピング80点以上。Culiは丸い豆が1粒だけ育った実です。</p>
+   <div class="lnks"><a class="lnk" href="phan-biet-ca-phe.html">コーヒー判別マシン</a></div></div>
+  <div class="box"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><circle class="fi" cx="12" cy="14.8" r="1.8"/></svg><span class="k">収穫期</span><h3>ニュークロップか前年の収穫か</h3>
+   <p>ニュークロップの豆は新鮮で香りがはっきりしていますが、水分が高めのことが多いので、焙煎プロファイルの調整が必要です。前年の豆は落ち着いていて焙煎が読みやすい一方、長く置くと香りがしだいに弱まります。どのロットも、大量に確定する前に試し焼きしましょう。</p>
+   <div class="lnks"><a class="lnk" href="rang.html">焙煎ルーム</a></div></div>
+ </div>
+ <div class="nxph"><div class="pfs"><figure class="pf "><img src="../assets/p-natural.jpg" alt="乾燥棚で実のまま乾かすコーヒーチェリー" width="900" height="900" loading="lazy"><figcaption>Natural：棚の上で実を丸ごと乾燥。</figcaption></figure><figure class="pf "><img src="../assets/p-honey.jpg" alt="ミューシレージが付いたまま乾燥棚で乾かすコーヒー豆" width="900" height="900" loading="lazy"><figcaption>Honey：ミューシレージが残った豆を棚の上で乾燥。</figcaption></figure><figure class="pf "><img src="../assets/p-xat-tuoi.jpg" alt="コーヒーの外皮を取り除くパルパー" width="900" height="900" loading="lazy"><figcaption>パルピング：機械で果皮を豆から取り除く。</figcaption></figure></div></div>
+</section>
+
+<section class="p-sec" id="bao-gia">
+ <p class="eye">MeDiliの見積もりの流れ</p>
+ <h2 class="p-h2">アンケートから<em>生豆の袋まで。</em></h2>
+ <ol class="pst two">
+  <li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2.8h6V4M8.5 9.5h7M8.5 13h7M8.5 16.5h4"/></svg></span><h3><small>ステップ1</small>シートを送る</h3><p>MeDili宛てのフォームを開くか、メッセージをコピーしてZaloに貼り付けてください。MeDiliがあなたの好みの味、数量、受け取り方法を確認します。</p></li>
+  <li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 4h9l-1.2 3c3 2.2 4 6 3.2 10.2A3 3 0 0 1 15.6 20H8.4a3 3 0 0 1-2.9-2.8C4.7 13 5.7 9.2 8.7 7z"/><path d="M8.6 7h6.8"/><ellipse class="fi" cx="12" cy="13.6" rx="2" ry="3"/></svg></span><h3><small>ステップ2</small>サンプルを試す</h3><p>好みに最も近いいくつかのラインの生豆か焙煎豆のサンプルをMeDiliがお送りしますので、試し焼きや試飲をしてください。</p></li>
+  <li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 20h12M5 7h14"/><path d="M5 7l-3 6h6zM19 7l-3 6h6z"/></svg></span><h3><small>ステップ3</small>毎日の見積もりを受け取る</h3><p>見積もりにはロット、産地、収穫期、規格、税金、配送料を明記します。</p></li>
+  <li><span class="n"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7h12v9H2zM14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span><h3><small>ステップ4</small>注文確定と配送</h3><p>60 kg袋で梱包し、1袋未満の注文はkg単位で小袋に詰めます。ホーチミン市内配送、他の省への配送、または予約して引き取り。</p></li>
+ </ol>
+ <div class="box nxquote"><div><p class="eye">生豆の価格</p><h3>毎日のお見積もりはお問い合わせください。</h3><p class="note">Zaloでメッセージを送るか、上のアンケートを送信してください。必要なロットと数量に合わせてMeDiliが見積もりをお送りします。</p></div><div class="cta"><a class="btn main" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">ZaloでMeDiliにメッセージ</a><a class="btn" href="#bang-cau-hoi">アンケートを送る</a></div></div>
+</section>
+
+<section class="contact" id="lien-he"><div><img class="lgK" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83"><div class="tagline">Di Linhの味に魅せられて</div><p>販売元：DSunfood有限会社、143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM。<br>農園・焙煎所：Thôn 11, Xã Di Linh, Lâm Đồng。</p></div><div class="zalo"><span>MeDili Zalo</span><strong data-sel>0966 770 788</strong><div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Zaloでメッセージ</a><button type="button" data-copy="0966770788" data-done="番号をコピーしました">番号をコピー</button></div><small>メール：cafe@medili.vn</small></div></section>
+</div>
+<footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">いつだって<em>おいしいコーヒー一杯</em>のための時間はあります。</p><a class="btn main" href="quan-medili.html">MeDiliで会いましょう</a></div><div class="mf-grid"><div class="mf-brand"><b>コーヒーに夢中、Di Linhに夢中。</b><span>受け継いだものを守り、ひとつひとつの風味を大切に。</span><small>Di Linh · ラムドン省 · ベトナム</small></div><nav class="mf-col" aria-label="探索"><p class="mf-t">探索</p><a href="cau-chuyen.html">MeDiliの物語</a><a href="doi-ngu.html">MeDiliのチーム</a><a href="vung-trong.html">Di Linhの栽培地</a><a href="anh-vuon.html">MeDili農園の写真</a><a href="xuong-rang.html">焙煎所と生産能力</a><a href="rang.html">焙煎ルーム</a><a href="huong-dan-pha.html">抽出ガイド</a><a href="quay-pha.html">ブリューバー</a><a href="tim-gu.html">好みのコーヒー診断</a><a href="cong-thuc-pha.html">抽出レシピマシン</a><a href="chiet-xuat.html">抽出マシン</a><a href="cold-brew.html">コールドブリューマシン</a><a href="journal.html">コーヒーの知識</a></nav><nav class="mf-col" aria-label="MeDiliとあなた"><p class="mf-t">MeDiliとあなた</p><a href="cua-hang.html">MeDiliストア</a><a href="mua-hang.html">購入ルーム</a><a href="horeca.html">HORECA向けソリューション</a><a href="dong-hanh-cung-quan.html">カフェとともに</a><a href="nhan-xanh.html">卸売向け生豆</a><a href="gia-ca-phe.html">本日のコーヒー価格</a><a href="quan-medili.html">MeDili Caféの店舗</a><a href="lien-he.html">お問い合わせと地図</a><a href="chinh-sach.html">MeDiliのポリシー</a><a href="giao-hang.html">配送と返品</a><a href="bao-mat.html">プライバシーポリシー</a></nav><div class="mf-col"><p class="mf-t">販売元 · DSunfood</p><p>DSunfood有限会社<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>農園・焙煎所<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">MeDiliへの道順 ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">ZaloでMeDiliにメッセージ ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>MeDili Coffee Farm · Cà Sẻ Di Linh</i></div></div></footer><nav class="fl-c" aria-label="MeDiliへのクイック連絡"><a class="fl-b" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener" aria-label="ZaloでMeDiliにメッセージ" data-tip="ZaloでMeDiliにメッセージ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a><a class="fl-b" href="https://www.facebook.com/share/192oMLdBnq/" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a></nav>
+<script>
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'コピーしました'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='番号を選択しました。ご自身でコピーしてください'}
+setTimeout(()=>{b.textContent=o},2400)}))})();
+window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
+const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};
+const badge=()=>{const n=get().reduce((a,x)=>a+(+x.q||0),0);document.querySelectorAll('.mh-cn').forEach(e=>{e.textContent=n>99?'99+':n;e.hidden=!n})};
+const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badge()};
+const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
+badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
+const FORM='https://docs.google.com/forms/d/e/1FAIpQLSfFnK1eOB8u1UJg-5mIVS_k9h7ElULoxnmVDvCEYVjeSLWS_w/viewform?usp=pp_url',FN={name:'entry.1445823936',phone:'entry.907299194',txt:'entry.730970220'};
+const D={"qs":["muc","gu","loai","ro","chin","sc","sang","vu","sl","tan","mau","giao","ben"],"lab":{"muc":{"xr":"焙煎所、焙煎コーヒーのブランド","quan":"自家焙煎のカフェ、チェーン","tm":"生豆の転売","sx":"加工、製造","khac":"その他の目的"},"gu":{"dam":"伝統的な濃く苦い味","ngot":"濃くて甘い余韻","can":"マシン抽出向けのバランス型","chua":"爽やかな酸味、花の香り","trai":"熟した果実の甘さ、発酵の香り","mau":"まだわからない、サンプルを試したい"},"loai":{"R":"Robusta","A":"Arabica","RA":"両方、ブレンド用","x":"まだわからない"},"ro":{"cs":"多収量Robusta","fine":"Fine Robusta","se":"Robusta Sẻ Di Linh","culi":"Culi Robusta","x":"まだわからない"},"chin":{"99":"完熟率99%","97":"完熟率97〜98%","95":"完熟率95%","90":"約90%","0":"指定なし"},"sc":{"tm":"商業グレード","natural":"Natural","honey":"Honey","washed":"Washed（ウェットプロセス）","x":"まだわからない"},"sang":{"18":"S18","16":"S16","14":"S14","x":"指定なし"},"vu":{"26":"ニュークロップ2026〜2027","25":"2025〜2026年の収穫期","x":"指定なし"},"sl":{"mau":"サンプル","le":"1袋未満","bao":"1〜16袋","tan":"17袋以上"},"tan":{"1":"1回のみ","thang":"毎月","tuan":"毎週","vu":"収穫期通しの契約"},"mau":{"nhan":"生豆サンプル","rang":"焙煎済みサンプル","ca2":"両方","khong":"不要"},"giao":{"hcm":"ホーチミン市内配送","tinh":"他の省への配送","lay":"引き取り"},"ben":{"dn":"法人","hkd":"個人事業","cn":"個人"}},"qt":{"muc":"目的","gu":"味の好み","loai":"コーヒーの種類","ro":"Robusta","chin":"熟度","sc":"精製","sang":"スクリーン","vu":"収穫期","sl":"1回の購入量","tan":"頻度","mau":"サンプル","giao":"受け取り","ben":"購入者"},"lines":[{"id":"r18bm","g":"tm","code":"MD-R18-BM","n":"Robusta S18 色彩選別済み","sp":"R","ro":"cs","sc":"tm","s":18,"ch":0,"vu":25,"c":"var(--nx1)","gu":{"dam":1,"ngot":0.3,"can":0.5,"chua":0,"trai":0}},{"id":"r16bm","g":"tm","code":"MD-R16-BM","n":"Robusta S16 色彩選別済み","sp":"R","ro":"cs","sc":"tm","s":16,"ch":0,"vu":25,"c":"var(--nx1)","gu":{"dam":1,"ngot":0.3,"can":0.4,"chua":0,"trai":0}},{"id":"rc18bm","g":"tm","code":"MD-RC18-BM","n":"Culi Robusta S18 色彩選別済み","sp":"R","ro":"culi","sc":"tm","s":18,"ch":0,"vu":25,"c":"var(--nx2)","gu":{"dam":1,"ngot":0.4,"can":0.4,"chua":0,"trai":0}},{"id":"r18h97","g":"fine","code":"MD-R18-H97","n":"Robusta Honey S18 · 完熟率97〜98%","sp":"R","ro":"fine","sc":"honey","s":18,"ch":97,"vu":25,"c":"var(--nx3)","gu":{"dam":0.6,"ngot":1,"can":0.8,"chua":0.1,"trai":0.5}},{"id":"r18h98","g":"fine","code":"MD-R18-H98","n":"Robusta Honey S18 · 完熟率98% 選別品","sp":"R","ro":"fine","sc":"honey","s":18,"ch":98,"vu":25,"c":"var(--nx3)","gu":{"dam":0.5,"ngot":1,"can":0.9,"chua":0.2,"trai":0.6}},{"id":"r18n99","g":"fine","code":"MD-R18-N99","n":"Robusta Natural S18 · 完熟率99%","sp":"R","ro":"fine","sc":"natural","s":18,"ch":99,"vu":25,"c":"var(--nx4)","gu":{"dam":0.5,"ngot":0.9,"can":0.6,"chua":0.2,"trai":1}},{"id":"rse","g":"se","code":"MD-RSE-DL","n":"Robusta Sẻ Di Linh","sp":"R","ro":"se","sc":null,"s":null,"ch":null,"vu":null,"c":"var(--nx5)","gu":{"dam":0.9,"ngot":0.9,"can":0.5,"chua":0,"trai":0.3}},{"id":"a18w99","g":"ara","code":"MD-A18-W99","n":"Arabica Cầu Đất S18 · Washed · 完熟率99%","sp":"A","ro":null,"sc":"washed","s":18,"ch":99,"vu":25,"c":"var(--nx6)","gu":{"dam":0,"ngot":0.3,"can":0.6,"chua":1,"trai":0.4}},{"id":"a18w98m","g":"ara","code":"MD-A18-W98-VM","n":"Arabica Cầu Đất S18 · Washed · 完熟率98% · ニュークロップ","sp":"A","ro":null,"sc":"washed","s":18,"ch":98,"vu":26,"c":"var(--nx6)","gu":{"dam":0,"ngot":0.3,"can":0.7,"chua":1,"trai":0.4}},{"id":"a18w95","g":"ara","code":"MD-A18-W95","n":"Arabica Cầu Đất S18 · Washed · 完熟率95%","sp":"A","ro":null,"sc":"washed","s":18,"ch":95,"vu":25,"c":"var(--nx6)","gu":{"dam":0.1,"ngot":0.3,"can":0.8,"chua":0.9,"trai":0.3}},{"id":"a14w97","g":"ara","code":"MD-A14-W97","n":"Arabica Cầu Đất S14 · Washed · 完熟率97%","sp":"A","ro":null,"sc":"washed","s":14,"ch":97,"vu":25,"c":"var(--nx6)","gu":{"dam":0.1,"ngot":0.3,"can":0.8,"chua":0.8,"trai":0.3}},{"id":"a18n89","g":"ara","code":"MD-A18-N89","n":"Arabica S18 · Natural · 完熟率89%","sp":"A","ro":null,"sc":"natural","s":18,"ch":89,"vu":25,"c":"var(--nx7)","gu":{"dam":0.2,"ngot":0.6,"can":0.8,"chua":0.5,"trai":0.9}}]};
+
+(()=>{const NB=' ',$=id=>document.getElementById(id),F=$('nxf');if(!F)return;
+const escH=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const QS=D.qs,LAB=D.lab,QT=D.qt,LINES=D.lines,byId=Object.fromEntries(LINES.map(l=>[l.id,l]));
+const val=n=>{const x=F.querySelector('input[name="'+n+'"]:checked');return x?x.value:null};
+function ans(){const a={};QS.forEach(k=>a[k]=val(k));if(a.loai==='A')a.ro=null;return a}
+const W={loai:3,ro:3,gu:2,sc:2,chin:2,sang:1.5,vu:1,muc:.8};
+const ROM={cs:{r18bm:1,r16bm:1,rc18bm:.6,r18h97:.5,r18h98:.5,r18n99:.5,rse:.2},fine:{r18h97:1,r18h98:1,r18n99:1,rse:.5},se:{rse:1},culi:{rc18bm:1}};
+const SCM={tm:{tm:1,natural:.5,honey:.2,washed:0},natural:{natural:1,tm:.4,honey:.5,washed:.1},honey:{honey:1,natural:.5,washed:.5,tm:.1},washed:{washed:1,honey:.5,natural:.1,tm:0}};
+const SGM={18:{18:1,16:.4,14:.1},16:{16:1,18:.8,14:.3},14:{14:1,16:.7,18:.6}};
+const SCL={tm:'商業グレード',natural:'Natural',honey:'Honey',washed:'Washed'},ROL={cs:'多収量系統',fine:'完熟摘みのライン',se:'Robusta Sẻ',culi:'Culi'};
+const chL=c=>c==null?'完熟度はロットによる':c===0?'完熟率の保証なし':c===97?'完熟率97〜98'+'%':'完熟率 '+c+'%';
+function parts(L,a){const P=[];
+ if(a.loai&&a.loai!=='x')P.push(['loai',a.loai==='RA'||L.sp===a.loai?1:0,L.sp==='R'?'Robusta':'Arabica']);
+ if(a.ro&&a.ro!=='x'){if(L.sp==='R'){const m=(ROM[a.ro]||{})[L.id];P.push(['ro',m===undefined?.1:m,ROL[L.ro]])}else if(a.loai!=='RA')P.push(['ro',0,'Arabica'])}
+ if(a.gu&&a.gu!=='mau')P.push(['gu',L.gu[a.gu],'']);
+ if(a.sc&&a.sc!=='x')P.push(['sc',L.sc?SCM[a.sc][L.sc]:.6,L.sc?SCL[L.sc]:'精製はロットによる']);
+ if(a.chin&&a.chin!=='0'){const r=+a.chin,c=L.ch;P.push(['chin',c==null?.6:c===0?.2:c>=r?1:Math.max(0,1-(r-c)/8),chL(c)])}
+ if(a.sang&&a.sang!=='x')P.push(['sang',L.s==null?(a.sang==='18'?.2:.8):SGM[a.sang][L.s],L.s?'S'+L.s:'スクリーンはロットによる']);
+ if(a.vu&&a.vu!=='x')P.push(['vu',L.vu==null?.8:(+a.vu===L.vu?1:(a.vu==='26'?.4:.7)),L.vu==null?'収穫期による':L.vu===26?'ニュークロップ':'2025〜2026年の収穫期']);
+ if(a.muc==='sx')P.push(['muc',L.g==='tm'?1:L.sp==='A'?.5:.4,'']);
+ return P}
+function rank(a){return LINES.map((L,i)=>{const P=parts(L,a);let s=0,w=0;P.forEach(([k,m])=>{s+=W[k]*m;w+=W[k]});return {L,P,f:w?s/w:0,w,i}}).sort((x,y)=>y.f-x.f||x.i-y.i)}
+function sugs(a){const sp=a.loai==='R'||a.loai==='A'?a.loai:((!a.loai||a.loai==='x')&&a.ro&&a.ro!=='x'?'R':null),R=rank(a).filter(x=>!sp||x.L.sp===sp);if(!R.length||!R[0].w)return [];
+ if(a.loai==='RA'){const r=R.find(x=>x.L.sp==='R'),A=R.find(x=>x.L.sp==='A'),o=R.find(x=>x!==r&&x!==A);return [[r,'Robustaのベース'],[A,'Arabicaの香り'],[o,'別の選択肢']]}
+ return R.slice(0,3).map((x,i)=>[x,['最も合う','第2候補','第3候補'][i]])}
+const pct=f=>Math.round(f*100);
+const sym=m=>m>=.95?['y','✓','一致']:m>=.45?['m','≈','近い']:['n','✗','ずれ'];
+function chipsH(P){return P.map(([k,m,t])=>{const [c,s,w]=sym(m);const lab=k==='gu'?(c==='y'?'好みどおり':c==='m'?'好みに近い':'好みと異なる'):k==='muc'?(c==='y'?'加工向き':'必要以上の品質'):t;
+ return `<span class="nxc ${c}" title="${w}">${s} ${escH(lab)}</span>`}).join('')}
+function sgH([x,lab]){const L=x.L;return `<li class="sg" style="--c:${L.c}"><span class="sg-k">${lab}</span><a class="sg-n" href="#l-${L.id}" data-id="${L.id}">${escH(L.n)}</a><b class="sg-p">${pct(x.f)}%</b>\n<span class="sg-c"><span>${L.code}</span></span><span class="sg-f" aria-hidden="true"><i style="width:${pct(x.f)}%"></i></span><span class="nxcs">${chipsH(x.P)}</span></li>`}
+function tips(a){const T=[],wantR=a.loai==='R'||((!a.loai||a.loai==='x')&&a.ro&&a.ro!=='x');
+ if(a.loai==='A'&&a.gu==='dam')T.push('伝統的な濃く苦い味には、たいていRobustaが必要です。Arabicaは爽やかな酸味で、ボディは軽めです。');
+ if(a.loai==='R'&&a.gu==='chua')T.push('爽やかな酸味の好みにはArabicaのほうが合います。それでもRobustaを選ぶなら、完熟度の高いHoneyかNaturalのほうがクリーンで甘い味になります。');
+ if(a.ro==='se'&&a.sang==='18')T.push('Robusta Sẻは豆が小さく、S18になることはまれです。S16か、スクリーン指定なしを選んでください。');
+ if(a.ro==='fine'&&(a.chin==='0'||a.chin==='90'||a.sc==='tm'))T.push('Fine Robustaには、完熟率95'+'%以上の収穫と丁寧な精製が必要です：Honey、Natural、Washed。');
+ if(a.sc==='tm'&&['99','97','95'].includes(a.chin))T.push('商業グレードは完熟率を保証しません。完熟率95'+'%以上をお望みなら、NaturalかHoneyを選んでください。');
+ if(wantR&&a.sc==='washed')T.push('Robusta Washedはまだ一覧にありません。ロットがあればMeDiliから個別にご案内します。最も近いのはRobusta Honeyです。');
+ if(a.loai==='A'&&a.sc==='honey')T.push('Arabica Honeyはまだ一覧にありません。ロットがあればMeDiliから個別にご案内します。最も近いのは完熟度の高いArabica Washedです。');
+ if(a.loai==='A'&&a.sang==='16')T.push('一覧のArabicaはS18とS14です。S16はロットごとに個別にご案内します。');
+ if((wantR||a.loai==='RA')&&a.vu==='26')T.push('2026〜2027年のRobustaは収穫中です。新しいロットが入荷するたびにMeDiliからご案内します。');
+ if(a.ro==='culi'&&(a.sang==='16'||a.sang==='14'))T.push('一覧のCuli RobustaはS18サイズです。');
+ if(a.muc==='sx'&&(['honey','natural','washed'].includes(a.sc)||a.ro==='fine'))T.push('工業用の加工には、色彩選別済みの商業グレードで通常は十分で、より経済的です。');
+ if(a.loai==='RA')T.push('ブレンドは通常Robusta'+NB+':'+NB+'Arabica = 9'+NB+':'+NB+'1から5'+NB+':'+NB+'5で始め、テイスティングで調整します。');
+ if(a.sl==='tan'&&a.mau==='khong')T.push('17袋以上の注文は、確定前にサンプルを試すことをおすすめします。');
+ if(a.gu==='mau')T.push('ニーズに近いいくつかのラインのサンプルをMeDiliが用意しますので、味わって選んでください。');
+ return T}
+const picks=()=>[...document.querySelectorAll('#nx-tab input[name="pick"]:checked')].map(x=>byId[x.value]).filter(Boolean);
+const today=()=>{const d=new Date();return d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日'};
+function msg(a,S,nm,ph){const L=['生豆選択シート · MEDILI','日付：'+today()];
+ const org=$('nx-org').value.trim();if(org)L.push('事業者：'+org);
+ QS.forEach(k=>{if(a[k])L.push(QT[k]+'：'+LAB[k][a[k]])});
+ const pk=picks();if(pk.length)L.push('気になるライン：'+pk.map(l=>l.code+' '+l.n).join('; '));
+ if(S.length)L.push('MeDiliのおすすめ：'+S.map(([x])=>x.L.code+' ('+pct(x.f)+'%)').join('、'));
+ const ar=$('nx-area').value.trim();if(ar)L.push('地域：'+ar);
+ const no=$('nx-note').value.trim();if(no)L.push('備考：'+no);
+ if(nm)L.push('連絡先：'+nm+(ph?' | '+ph:''));
+ return L.join('\n')}
+const KEY='medili-nhanxanh-1',FIELDS=['nx-name','nx-ph','nx-org','nx-area','nx-note'];
+function save(){try{const o={pick:picks().map(l=>l.id)};QS.forEach(k=>o[k]=val(k));FIELDS.forEach(id=>o[id]=$(id).value);localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+function load(){try{const o=JSON.parse(localStorage.getItem(KEY)||'null');if(!o)return;
+ QS.forEach(k=>{if(o[k]){const x=F.querySelector('input[name="'+k+'"][value="'+o[k]+'"]');if(x)x.checked=true}});
+ FIELDS.forEach(id=>{if(typeof o[id]==='string')$(id).value=o[id]});
+ (o.pick||[]).forEach(id=>{const x=document.querySelector('#nx-tab input[name="pick"][value="'+id+'"]');if(x)x.checked=true})}catch(e){}}
+let lastBest='';
+function render(){const a=ans();$('q-ro').disabled=a.loai==='A';
+ const app=QS.filter(k=>!(k==='ro'&&a.loai==='A')),done=app.filter(k=>a[k]).length;
+ $('nx-cnt').textContent=done+' / '+app.length;$('nx-meter').innerHTML=app.map((k,i)=>`<i class="${i<done?'on':''}"></i>`).join('');
+ document.querySelectorAll('.nxg[data-q]').forEach(g=>{const ks=g.dataset.q.split(' ').filter(k=>!(k==='ro'&&a.loai==='A')),n=ks.filter(k=>a[k]).length,c=g.querySelector('.cnt');c.textContent=n+'/'+ks.length;c.classList.toggle('full',n===ks.length)});
+ const S=sugs(a);
+ $('nx-sug').innerHTML=S.length?S.map(sgH).join(''):'<li class="em">AとBの質問にいくつか答えると、ここにおすすめが表示されます。</li>';
+ const best=S.length?`現時点で最も合うのは：${S[0][0].L.n}、一致度${pct(S[0][0].f)}%。`:'';if(best!==lastBest){$('nx-best').textContent=best;lastBest=best}
+ const ids=S.map(([x])=>x.L.id);document.querySelectorAll('#nx-tab tr.ln').forEach(tr=>tr.classList.toggle('sugd',ids.includes(tr.dataset.id)));
+ $('nx-bar-c').textContent=done+'/'+app.length;$('nx-bar-t').textContent=S.length?S[0][0].L.n+' · '+pct(S[0][0].f)+'%':'いくつか答えるとおすすめが表示されます';
+ const T=tips(a);$('nx-tips').innerHTML=T.map(t=>`<li>${escH(t)}</li>`).join('');$('nx-tipw').hidden=!T.length;
+ const pk=picks();$('nx-sum').classList.toggle('empty',!done&&!pk.length);$('nx-pk').closest('.sec').classList.toggle('has',pk.length>0);$('nx-pk').innerHTML=pk.length?pk.map(l=>`<span class="nxc" style="--c:${l.c}">${escH(l.code)}</span>`).join(''):'<span class="note">まだ印がありません。下の一覧の「気になる」を押してください。</span>';
+ const nm=$('nx-name').value.trim(),ph=$('nx-ph').value.replace(/[\s.()-]/g,''),t=msg(a,S,nm,ph);$('nx-msg').textContent=t;
+ const g=$('nx-gf');if(nm&&/^(0\d{9,10}|\+\d{8,15})$/.test(ph)){const q=encodeURIComponent;g.href=FORM+'&'+FN.name+'='+q(nm)+'&'+FN.phone+'='+q(ph)+'&'+FN.txt+'='+q(t);g.classList.remove('off');g.removeAttribute('aria-disabled')}
+ else{g.removeAttribute('href');g.classList.add('off');g.setAttribute('aria-disabled','true')}
+ save()}
+F.addEventListener('input',render);F.addEventListener('change',render);F.addEventListener('submit',e=>e.preventDefault());
+$('nx-tab').addEventListener('change',render);
+document.querySelectorAll('#nx-fl .pill').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#nx-fl .pill').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+ const f=b.dataset.f;document.querySelectorAll('#nx-tab tbody tr').forEach(tr=>{tr.hidden=f!=='all'&&tr.dataset.sp!==f})}));
+$('nx-sug').addEventListener('click',e=>{const a=e.target.closest('a.sg-n');if(!a)return;const tr=$('l-'+a.dataset.id);if(!tr)return;
+ if(tr.hidden)document.querySelector('#nx-fl .pill[data-f="all"]').click();setTimeout(()=>{tr.classList.add('hl');setTimeout(()=>tr.classList.remove('hl'),1800)},60)});
+const st=t=>{$('nx-st').textContent=t};
+$('nx-gf').addEventListener('click',e=>{if(!$('nx-gf').getAttribute('href')){e.preventDefault();st('セクションDに名前と電話番号を入力すると、MeDili宛てのフォームが開きます。');($('nx-name').value.trim()?$('nx-ph'):$('nx-name')).focus()}else st('フォームが新しいタブで開きました。最後に「送信」を押して完了してください。')});
+$('nx-cp').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('nx-msg').textContent);st('メッセージをコピーしました。Zalo MeDiliを開いて貼り付けてください。')}catch(e){const d=$('nx-msg').closest('details');if(d)d.open=true;const r=document.createRange();r.selectNodeContents($('nx-msg'));const s=getSelection();s.removeAllRanges();s.addRange(r);st('メッセージを選択しました。コピーしてZaloに貼り付けてください。')}});
+$('nx-pr').addEventListener('click',()=>window.print());
+$('nx-rs').addEventListener('click',()=>{F.reset();document.querySelectorAll('#nx-tab input[name="pick"]').forEach(x=>x.checked=false);try{localStorage.removeItem(KEY)}catch(e){}render();st('回答を消去しました。空のシートを印刷するには「シートを印刷」を押してください。');$('bang-cau-hoi').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
+load();render();
+if('IntersectionObserver' in window){const bar=$('nx-bar'),vis={f:false,s:false};const io=new IntersectionObserver(es=>{es.forEach(e=>{vis[e.target===F?'f':'s']=e.isIntersecting});bar.hidden=!(vis.f&&!vis.s)},{threshold:0});io.observe(F);io.observe($('nx-sum'))}
+})();
+</script>
+</body></html>

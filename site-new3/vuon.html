@@ -373,7 +373,10 @@ const FIX=[
 const fm=n=>Math.round(n).toLocaleString('de-DE');
 const vn=(n,d=1)=>n.toFixed(d).replace('.',',');
 const fm1=n=>n%1?vn(n):String(n);
-const tr=n=>n>=1e9?vn(n/1e9,2)+' tỷ':n>=1e6?fm(n/1e6)+' tr':fm(n/1000)+' k';
+const PGL=document.documentElement.lang||'vi';
+const MON=n=>PGL==='vi'?'T'+n:/^en/.test(PGL)?['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][n-1]:n+'月';
+const tr=n=>PGL!=='vi'?new Intl.NumberFormat(PGL,{notation:'compact',maximumFractionDigits:2}).format(n)+' VND':n>=1e9?vn(n/1e9,2)+' tỷ':n>=1e6?fm(n/1e6)+' tr':fm(n/1000)+' k';
+const seaName=x=>x==='mùa hái'?'mùa thu hoạch':x==='mưa'?'mùa mưa':x==='cuối mưa'?'cuối mùa mưa':x==='khô'?'mùa khô':x;
 const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
 const $=id=>document.getElementById(id);
 const DEF={A:20,D:1100,Y:3.4,R:5.4,C:30,P:150};
@@ -506,7 +509,7 @@ function drawWheel(i){
   const seg=(a0,a1,r0,r1,f,k)=>{const P2=(a,r)=>[c.x+r*Math.cos(a),c.y+r*Math.sin(a)],p=[P2(a0,r1),P2(a1,r1),P2(a1,r0),P2(a0,r0)];return `<path data-m="${k}" d="M${p[0]}A${r1} ${r1} 0 0 1 ${p[1]}L${p[2]}A${r0} ${r0} 0 0 0 ${p[3]}Z" style="fill:${f};stroke:var(--panel);stroke-width:2;cursor:pointer"/>`};
   M.forEach((m,k)=>{const a0=-Math.PI/2+k/12*Math.PI*2,a1=a0+Math.PI*2/12,fill=m.sea==='mưa'?'#7FB2BC':m.sea==='mùa hái'?'#B02A30':m.sea==='khô'?'#D6B26A':'#7CA655';s+=seg(a0,a1,50,c.r,fill,k);const am=(a0+a1)/2;s+=`<text x="${c.x+66*Math.cos(am)}" y="${c.y+66*Math.sin(am)+4}" text-anchor="middle" style="font:700 12px var(--mono);fill:#2A1B16!important;pointer-events:none">${m.n}</text>`});
   const a=-Math.PI/2+(i+.5)/12*Math.PI*2;
-  s+=`<line x1="${c.x}" y1="${c.y}" x2="${c.x+50*Math.cos(a)}" y2="${c.y+50*Math.sin(a)}" style="stroke:var(--accent);stroke-width:3"/><circle cx="${c.x}" cy="${c.y}" r="26" class="pa" style="stroke:var(--ink)"/><text x="${c.x}" y="${c.y+6}" text-anchor="middle" style="font:800 19px var(--display)">T${M[i].n}</text>`;
+  s+=`<line x1="${c.x}" y1="${c.y}" x2="${c.x+50*Math.cos(a)}" y2="${c.y+50*Math.sin(a)}" style="stroke:var(--accent);stroke-width:3"/><circle cx="${c.x}" cy="${c.y}" r="26" class="pa" style="stroke:var(--ink)"/><text x="${c.x}" y="${c.y+6}" text-anchor="middle" style="font:800 19px var(--display)">${MON(M[i].n)}</text>`;
   w.innerHTML=s;w.querySelectorAll('[data-m]').forEach(e=>e.addEventListener('click',()=>setM(+e.dataset.m)));
 }
 const CHIP=[null,{x:360,y:262,a:[32,35,9]},{x:178,y:262,a:[16,8,8]},{x:600,y:70,a:[47,7,4]},{x:826,y:176,a:[72,12,17]},{x:826,y:320,a:[58,31,1]},{x:840,y:420,a:[74,52,3]}];
@@ -526,7 +529,7 @@ function renderDetail(){
 }
 function renderMonth(){
   drawMonth(st.m);buildChips();renderDetail();renderSheet();
-  $('figsub').textContent=`vườn ${fm1(st.A)} ha, tháng ${M[st.m].n}, ${M[st.m].sea==='mùa hái'?'mùa thu hoạch':'mùa '+M[st.m].sea}`;
+  $('figsub').textContent=`vườn ${fm1(st.A)} ha, tháng ${M[st.m].n}, ${seaName(M[st.m].sea)}`;
   document.querySelectorAll('#strip button').forEach((b,i)=>{b.classList.toggle('on',i===st.m);b.setAttribute('aria-pressed',i===st.m)});
   document.querySelectorAll('#yr tr').forEach((r,i)=>r.classList.toggle('on',i===st.m));
   chartW();
@@ -551,11 +554,11 @@ function renderAll(){
   /* thu hoạch */
   $('hHarvest').textContent=`1 ha cho bao nhiêu trái, ${fm1(st.A)} ha cần bao nhiêu người`;
   $('thAll').textContent=`Trái tươi / ${fm1(st.A)} ha`;
-  $('hNeed').innerHTML=[['Số cây / ha',fm(st.D)+' cây'],['Trái tươi / cây',vn(h.tree)+' kg'],['Số trái / cây',fm(Math.round(h.fruits/100)*100)+' trái'],['Số trái / ha',vn(h.fruitsHa/1e6)+' triệu'],['Trái tươi / ha',fm(h.fresh*1000)+' kg'],['Số bao / ha',fm(h.bags)+' bao'],['Nhân / ha',fm(st.Y*1000)+' kg'],['Công hái / ha',fm(h.pickHa)+' công']].map(([x,y])=>`<div class="stat"><span>${x}</span><b>${y}</b></div>`).join('');
+  $('hNeed').innerHTML=[['Số cây / ha',fm(st.D)+' cây'],['Trái tươi / cây',vn(h.tree)+' kg'],['Số trái / cây',fm(Math.round(h.fruits/100)*100)+' trái'],['Số trái / ha',/^(ja|zh)/.test(PGL)?new Intl.NumberFormat(PGL,{notation:'compact',maximumFractionDigits:1}).format(h.fruitsHa):vn(h.fruitsHa/1e6)+' triệu'],['Trái tươi / ha',fm(h.fresh*1000)+' kg'],['Số bao / ha',fm(h.bags)+' bao'],['Nhân / ha',fm(st.Y*1000)+' kg'],['Công hái / ha',fm(h.pickHa)+' công']].map(([x,y])=>`<div class="stat"><span>${x}</span><b>${y}</b></div>`).join('');
   $('hTbl').innerHTML=[['Đợt 1','Tháng 11',.25,'Hái chọn chùm chín trước, trái chín từ 90%'],['Đợt 2','Tháng 12',.6,'Đỉnh vụ, hái theo khu, ghi mã lô, trái xanh tối đa 5%'],['Đợt 3','Đầu tháng 1',.15,'Hái sạch cây, tránh trái khô còn trên cành gây sâu bệnh']].map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]*100}%</td><td>${fm(h.fresh*r[2]*1000)} kg</td><td>${fm(h.fresh*r[2]*st.A)} tấn</td><td>${fm(h.pickHa*r[2])}</td><td>${r[3]}</td></tr>`).join('');
   $('hNote').textContent=`Cả ${fm1(st.A)} ha: ${fm(h.fresh*st.A)} tấn trái, ${fm(h.pickDays)} công hái, khoảng ${fm(h.people)} người mỗi ngày trong ${h.days} ngày. Theo trang lên men, cứ 1 tấn trái ra khoảng 180 kg nhân, tức tỷ lệ 5,6 : 1. Ở đây đang tính ${vn(st.R)} : 1.`;
   /* lịch */
-  $('yr').innerHTML=M.map((x,i)=>{const f=fer(x.n),r=[];if(f.ur)r.push(`Ure ${fm(f.ur)}`);if(f.lan)r.push(`Lân ${fm(f.lan)}`);if(f.ka)r.push(`Kali ${fm(f.ka)}`);return `<tr class="pick${i===st.m?' on':''}" tabindex="0"><td><b>T${x.n}</b></td><td>${x.ph}</td><td>${x.job.slice(0,2).join('. ')}</td><td>${x.org}</td><td>${r.join(', ')||'–'}</td><td>${x.w?fm(x.w):'–'}</td><td>${fm(labM(i))}</td></tr>`}).join('');
+  $('yr').innerHTML=M.map((x,i)=>{const f=fer(x.n),r=[];if(f.ur)r.push(`Ure ${fm(f.ur)}`);if(f.lan)r.push(`Lân ${fm(f.lan)}`);if(f.ka)r.push(`Kali ${fm(f.ka)}`);return `<tr class="pick${i===st.m?' on':''}" tabindex="0"><td><b>${MON(x.n)}</b></td><td>${x.ph}</td><td>${x.job.slice(0,2).join('. ')}</td><td>${x.org}</td><td>${r.join(', ')||'–'}</td><td>${x.w?fm(x.w):'–'}</td><td>${fm(labM(i))}</td></tr>`}).join('');
   $('yr').querySelectorAll('tr').forEach((r,i)=>{const go=()=>{setM(i);$('scene').scrollIntoView({behavior:still?'auto':'smooth',block:'center'})};r.onclick=go;r.onkeydown=e=>{if(e.key==='Enter')go()}});
   /* phân */
   const rows=[['Đạm N','408–504',a.b[0],a.n,'Ure',a.n/.46],['Lân P₂O₅','190–224',a.b[1],a.p,'Lân nung chảy',a.p/.16],['Kali K₂O','496–558',a.b[2],a.k,'Kali clorua',a.k/.6]];
@@ -594,7 +597,7 @@ function frame(ts){const dt=Math.min(50,ts-prev||16);prev=ts;tA+=dt;if(!document
 
 /* ====== KHỞI ĐỘNG ====== */
 const copyTo=async(t,msg,src,done)=>{try{await navigator.clipboard.writeText(t);$(msg).textContent=done}catch(e){const r=document.createRange();r.selectNodeContents($(src));const s=getSelection();s.removeAllRanges();s.addRange(r);$(msg).textContent='Đã chọn sẵn số, bạn hãy tự sao chép.'}};
-$('strip').innerHTML=M.map(m=>`<button type="button">T${m.n}</button>`).join('');
+$('strip').innerHTML=M.map(m=>`<button type="button">${MON(m.n)}</button>`).join('');
 $('strip').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>setM(i));
 $('fix').innerHTML=FIX.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('');
 [['A','A'],['Dn','D'],['Y','Y'],['R','R'],['C','C'],['P','P']].forEach(([i,k])=>$(i).addEventListener('input',e=>{st[k]=+e.target.value;renderAll()}));

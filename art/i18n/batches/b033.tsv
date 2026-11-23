@@ -1,0 +1,144 @@
+# vuon.html (1) — đầu trang, thông số, lịch 12 tháng, việc từng tháng
+dd3e35a23 ||| The MeDili Farm in 12 Months ||| MeDili農園の12か月 ||| MeDili庄园的十二个月
+740bb2551 ||| The <1>MeDili</1> Farm in 12 Months ||| <1>MeDili</1>農園の12か月 ||| <1>MeDili</1>庄园的十二个月
+054c8e109 ||| A year of caring for a 15-year-old Robusta Cà Sẻ farm in Di Linh the natural way: organic matter as the foundation, with just enough chemical fertilizer on top. Choose a month to see how the farm changes, the work to do, fertilizer, water, labor and the fresh cherry yield. ||| 樹齢15年のRobusta Cà Sẻ（Di Linh）の農園を、自然に寄り添って手入れする1年。有機物を土台に、化学肥料は必要な分だけ補います。月を選ぶと、農園の変化、作業、肥料、水、労働量、生果実の収量が見られます。 ||| 以自然方式照料Di Linh一片15年树龄的Robusta Cà Sẻ庄园的一年：以有机质为基础，化肥适量补充。选择月份，即可查看庄园的变化、要做的工作、肥料、用水、用工和鲜果产量。
+092acdae6 ||| The farm at harvest time ||| 収穫期の農園 ||| 采收季的庄园
+d606ec0f1 ||| Robusta ripens red, is picked, then dried. ||| Robustaが赤く熟し、収穫して乾燥させる。 ||| Robusta红熟后采摘，再晾晒。
+b4879f9bd ||| Ripe red Robusta on the branch ||| 枝で赤く熟したRobusta ||| 枝头红熟的Robusta
+f4f3dc0a5 ||| Ripe red Robusta on the branch. ||| 枝で赤く熟したRobusta。 ||| 枝头红熟的Robusta。
+4188fc5c3 ||| A cluster of ripe Robusta in a picker's hand ||| 摘み手の手にある熟したRobustaの房 ||| 采摘者手中的一串成熟Robusta
+e2098b1f8 ||| A Robusta cluster at harvest time. ||| 収穫期を迎えたRobustaの房。 ||| 进入采收季的Robusta果串。
+4d61da61d ||| Farm sounds: off ||| 農園の音：オフ ||| 庄园声音：关
+d250ab908 ||| Model of the MeDili coffee farm in a three-dimensional view, with tree rows, a compost shed, a well and pump, shade trees, ground cover and a soil cross-section. The farm changes with the month. ||| MeDiliのコーヒー農園の立体モデル。木の列、堆肥小屋、井戸とポンプ、日陰樹、被覆植物、土の断面があります。月ごとに農園が変わります。 ||| MeDili咖啡庄园的立体模型，包括树行、堆肥棚、水井和水泵、遮荫树、地表覆盖和土壤剖面。庄园随月份变化。
+f8a7285fa ||| Choose a month ||| 月を選ぶ ||| 选择月份
+8c4898590 ||| Farm settings ||| 農園の条件 ||| 庄园参数
+c2656dd88 ||| adjust to your actual farm ||| 実際の農園に合わせて調整 ||| 按实际庄园调整
+143224db6 ||| Area ||| 面積 ||| 面积
+63868a83c ||| Tree density ||| 植栽密度 ||| 种植密度
+c9762e0c8 ||| In Lâm Đồng, integrated crop management trials reached about 3.3–3.5 t/ha. ||| ラムドン省では、総合的な栽培管理の試験で約3.3〜3.5 t/haに達しました。 ||| 在林同省，综合栽培试验的产量约达3.3–3.5吨/公顷。
+eae4ce051 ||| Fresh-to-green ratio ||| 生果実と生豆の比率 ||| 鲜果/生豆比
+8e853d6e9 ||| Weigh it for real each crop. The riper the cherries, the better the ratio. ||| 毎シーズン実際に量りましょう。実が熟しているほど比率はよくなります。 ||| 每季应实际称量。果实越熟，比例越好。
+eda064720 ||| Chemical fertilizer cut ||| 化学肥料の削減 ||| 化肥减量
+a74f0ddb0 ||| Compared with the recommended rate. Cut gradually based on soil tests, not all at once. ||| 推奨量と比べた割合。土壌分析の結果に合わせて少しずつ減らし、一度に減らさない。 ||| 相对于推荐用量。根据土壤检测结果逐步减少，不要一次减完。
+8827b52f5 ||| Picking rate ||| 収穫の能率 ||| 采摘效率
+c7d5eb919 ||| Selectively picking ripe cherries is slower than stripping whole branches. ||| 熟した実だけを選んで摘むと、枝ごとしごき取るより時間がかかる。 ||| 选摘熟果比整枝捋摘慢。
+d5c3dc427 ||| View all 12 months ||| 12か月すべてを見る ||| 查看全部12个月
+2693cd01a ||| Labor by month (workdays/ha); tap a bar to choose a month ||| 月別の労働量（人日/ha）。棒を押すと月を選べます ||| 每月用工（工日/公顷），点击柱条选择月份
+92ad58c98 ||| Chart of labor by month ||| 月別の労働量のグラフ ||| 每月用工图
+450425558 ||| View the labor table by month ||| 月別の労働量の表を見る ||| 查看每月用工表
+dd90a2777 ||| Estimated from the settings on the right. The cherry count assumes 650 cherries/kg, so count for real: take 1 kg of ripe cherries, count them, then adjust. ||| 右側の条件から推定しています。果実数は1 kgあたり650個と仮定しているので、実際に数えてください。熟した実を1 kg取って数え、調整します。 ||| 根据右侧参数估算。果实数按每公斤650颗假设，建议实际数一数：取1公斤熟果，数完后再调整。
+e383a383d ||| Cherries per kg ||| 1 kgあたりの果実数 ||| 每公斤果数
+0fba3d5ad ||| Weight per bag (kg) ||| 1袋の重さ（kg） ||| 每袋重量（公斤）
+5d8d2f04c ||| Picking days in the season ||| シーズンの収穫日数 ||| 整季采摘天数
+2d543610f ||| Picking round ||| 収穫回 ||| 采摘批次
+a5846b195 ||| Fresh cherries / ha ||| 生果実 / ha ||| 鲜果 / 公顷
+647699e6e ||| Workdays / ha ||| 人日 / ha ||| 工日 / 公顷
+3f8ecf737 ||| Requirement ||| 要件 ||| 要求
+9bfeecc5a ||| 12-month calendar for 1 ha ||| 1 haあたりの12か月カレンダー ||| 每公顷12个月日历
+16a843cca ||| Tap a row to see that month on the farm. Fertilizer amounts change with the chemical fertilizer cut you choose. Actual dates depend on that year's weather. ||| 行を押すと、その月の農園が表示されます。肥料の量は、選んだ化学肥料の削減率で変わります。実際の日付はその年の天候によります。 ||| 点击一行即可在庄园上查看该月。施肥量随所选的化肥减量而变化。实际日期取决于当年的天气。
+0e2b30995 ||| Month ||| 月 ||| 月份
+37a1fd4cc ||| Stage ||| 段階 ||| 阶段
+0dd407df9 ||| Main tasks ||| 主な作業 ||| 主要工作
+5592e6d78 ||| Organic, microbial ||| 有機・微生物 ||| 有机、微生物
+9c5324913 ||| Mineral fertilizer (kg/ha) ||| 無機肥料（kg/ha） ||| 无机肥料（公斤/公顷）
+8e4ce6fbd ||| Water (m³/ha) ||| 水（m³/ha） ||| 用水（立方米/公顷）
+36232c4bc ||| Labor ||| 労働 ||| 用工
+ebed99ec5 ||| Fertilizing: organic as the base, mineral as a supplement ||| 施肥：有機を土台に、無機肥料で補う ||| 施肥：以有机肥为基础，无机肥补充
+1029885da ||| The recommended rate is a ceiling to weigh up. Only testing the soil of each plot tells you how much you can cut. ||| 推奨量は検討すべき上限です。区画ごとに土壌を分析して初めて、どれだけ減らせるかがわかります。 ||| 推荐用量是应权衡的上限。只有逐块检测土壤，才知道能减多少。
+646870e66 ||| Nutrients, kg/ha ||| 養分（kg/ha） ||| 养分（公斤/公顷）
+9df96aa1a ||| Common practice in Lâm Đồng ||| ラムドン省で一般的な施肥 ||| 林同省常见施肥方式
+57b2d4357 ||| Recommended ||| 推奨 ||| 推荐
+0d32cf3af ||| Commercial fertilizer ||| 市販肥料 ||| 商品肥料
+6bcc09a76 ||| Cost for one year ||| 1年間の費用 ||| 一年费用
+208b40127 ||| Unit prices are examples for comparison. Enter your own actual purchase prices. ||| 単価は比較用の例です。実際の購入価格を入力してください。 ||| 单价是用于比较的示例。请输入自己的实际采购价格。
+19e69ded3 ||| Excludes depreciation, land, processing, transport, taxes and management labor. The example green coffee price of 89,000 VND/kg is from Lâm Đồng on October 27, 2026; prices change daily. ||| 減価償却、土地代、加工、輸送、税金、管理の人件費は含みません。生豆価格の例89,000 VND/kgは2026年10月27日のラムドン省のもので、価格は毎日変わります。 ||| 不含折旧、土地、初加工、运输、税费和管理用工。生豆示例价格89,000 VND/公斤取自林同省2026年10月27日，价格每天变动。
+d36b3eba0 ||| This month's farm sheet ||| 今月の農園作業票 ||| 本月庄园工作单
+08e1925a6 ||| Send it to the farm team leader for the selected month. ||| 選んだ月の分を農園の班長に送ります。 ||| 按所选月份发给庄园组长。
+8bf62e14a ||| Copy the monthly sheet ||| 月の作業票をコピー ||| 复制月度工作单
+ffc831f9f ||| Limits to respect ||| 守るべき限度 ||| 需要守住的界限
+0a5c6427e ||| <1>Test the soil first.</1> Sample each plot in January and test pH, organic matter and NPK. Different farms need different amounts of fertilizer. ||| <1>まず土壌を分析する。</1>1月に区画ごとにサンプルを取り、pH、有機物、NPKを測ります。農園が違えば肥料の量も違います。 ||| <1>先测土。</1>1月逐块取样，检测pH、有机质和氮磷钾。不同的庄园，施肥量也不同。
+ebdc6c8d8 ||| <1>Cut gradually.</1> Cut about 20–30% in the first year and watch the yield before cutting further. ||| <1>少しずつ減らす。</1>1年目は約20〜30%減らし、収量を見てからさらに減らします。 ||| <1>逐步减量。</1>第一年减约20–30%，观察产量后再继续减。
+d0c2e8050 ||| <1>Pesticides.</1> Use them only when the threshold is exceeded, only products on the approved list, and keep the full pre-harvest interval. ||| <1>農薬。</1>被害が基準を超えたときだけ、許可された品目に限って使い、収穫前の使用禁止期間を守ります。 ||| <1>农药。</1>仅在超过防治阈值时使用，只用许可名录内的产品，并严格遵守采收前的安全间隔期。
+a716b5c49 ||| <1>Not “organic” yet.</1> A farm that still uses mineral fertilizer should only say “farmed the natural way” and not label itself “organic” without certification. ||| <1>まだ「有機」とは呼ばない。</1>無機肥料を使っている農園は「自然に寄り添った栽培」とだけ言い、認証がないうちは「有機（organic）」と表示しません。 ||| <1>还不能称为有机。</1>仍在使用无机肥的庄园只能说“以自然方式耕种”，在获得认证前不要标注“有机”（organic）。
+1353e5fc7 ||| <1>Compiled from multiple sources.</1> The farm is an illustrative model. The work calendar, labor figures, picking-round shares and unit prices are planning estimates for Di Linh, not measurements from the MeDili farm. Have a local agricultural extension officer review them. ||| <1>複数の資料をもとに構成。</1>農園は説明用のモデルです。作業カレンダー、労働量、収穫回ごとの割合、単価はDi Linhの計画用の推定で、MeDili農園の実測値ではありません。地元の農業普及員に見直してもらうとよいでしょう。 ||| <1>综合多方资料。</1>庄园为示意模型。工作日历、用工数、各批采摘比例和单价都是为Di Linh做规划的估算，并非MeDili庄园的实测数据。建议请当地农技推广人员复核。
+348d8e2d6 ||| End of the harvest ||| 収穫の終わり ||| 采收结束
+81adfa270 ||| Pick the remaining 15% of the crop ||| 残りの15%を収穫する ||| 采完剩余15%的产量
+46bd96181 ||| Prune dead, pest-damaged and diseased branches and suckers right after picking ||| 収穫後すぐに枯れ枝、病害虫に侵された枝、徒長枝を切る ||| 采收后立即剪除枯枝、病虫枝和徒长枝
+26cfa61f6 ||| Clear the branches and bring the husks to the compost shed ||| 枝を片付け、果皮を堆肥小屋に集める ||| 清理枝条，把果皮收集到堆肥棚
+a1ea2df80 ||| Take soil samples from each plot ||| 区画ごとに土壌サンプルを取る ||| 逐块采集土样
+8c47d1133 ||| Withhold water so the flower buds differentiate ||| 水を控えて花芽分化を促す ||| 控水促进花芽分化
+894a21af9 ||| Compost husks + manure + Trichoderma fungus ||| 果皮＋厩肥＋トリコデルマ菌で堆肥化 ||| 果皮＋厩肥＋木霉菌堆肥
+21317c6fe ||| Disinfect shears and saws between diseased trees. Avoid pruning in heavy dew. ||| 病気の木を切るたびにはさみとのこぎりを消毒する。露が多いときは剪定を避ける。 ||| 在病树之间对剪刀和锯子消毒。露水重时避免修剪。
+f40b42a85 ||| Flower bud differentiation ||| 花芽分化 ||| 花芽分化
+7f51b55b0 ||| First irrigation once the flower buds have emerged ||| 花芽が十分に出たら1回目の灌水 ||| 花芽充分冒出时进行第一次灌溉
+38f8a1641 ||| First fertilizer application right before or after irrigating ||| 灌水の直前か直後に1回目の施肥 ||| 灌溉前后立即进行第一次施肥
+61df74218 ||| Remove suckers ||| 徒長枝を除く ||| 抹除徒长枝
+e262b0b58 ||| Check for mealybugs at the base of bud clusters ||| 花芽の房の付け根にコナカイガラムシがいないか確認 ||| 检查芽簇基部是否有粉蚧
+76eceda37 ||| Apply a microbial solution with the irrigation water, if available ||| あれば微生物資材を灌水に混ぜて与える ||| 如有，随灌溉水施用微生物液
+926990749 ||| Water the whole plot evenly so the flowers open all at once and the next crop ripens more uniformly. ||| 区画全体に均一に灌水すると花が一斉に咲き、次のシーズンの実がそろって熟します。 ||| 整块均匀灌溉，让花一次开齐，下一季果实成熟更集中。
+094332e02 ||| Flowering ||| 開花 ||| 开花
+085098c40 ||| Second and third irrigation ||| 2回目と3回目の灌水 ||| 第二、第三次灌溉
+66ad76f42 ||| Protect bees and pollinating insects ||| ミツバチや送粉昆虫を守る ||| 保护蜜蜂和授粉昆虫
+ae140adec ||| No spraying while the flowers are open ||| 開花中は散布しない ||| 开花期间不喷药
+7d47e426a ||| No extra fertilizer at full bloom ||| 満開時は追肥しない ||| 盛花期不追肥
+684d4840b ||| Robusta is cross-pollinated, so it needs wind and insects. One badly timed spray can reduce fruit set. ||| Robustaは他家受粉なので、風と昆虫が必要です。タイミングを誤った散布1回で結実が減ることがあります。 ||| Robusta是异花授粉，需要风和昆虫。一次喷药时机不当就可能降低坐果率。
+bac3709c7 ||| Young fruit set ||| 幼果の結実 ||| 幼果坐果
+410751933 ||| Fourth irrigation ||| 4回目の灌水 ||| 第四次灌溉
+a52b35d38 ||| Mulch with chopped branches, leaves and dry grass ||| 刻んだ枝葉や枯れ草で株元をマルチングする ||| 用剁碎的枝叶和干草覆盖树盘
+4c3476396 ||| Watch for mealybugs and scale insects ||| コナカイガラムシとカイガラムシに注意 ||| 监测粉蚧和蚧壳虫
+eca2f3a6f ||| Clear the ditches to prepare for the rainy season ||| 雨季に備えて溝をさらう ||| 清理沟渠，为雨季做准备
+b8a899417 ||| Mulch layer 5–10 cm thick, 10–15 cm from the trunk ||| マルチの厚さ5〜10 cm、幹から10〜15 cm離す ||| 覆盖层厚5–10厘米，距树干10–15厘米
+0a8728956 ||| A farm with enough shade and mulch holds moisture longer and can stretch the irrigation cycle. ||| 日陰とマルチが十分な農園は湿り気が長く保たれ、灌水の間隔を延ばせます。 ||| 遮荫和覆盖充足的庄园保湿更久，可以延长灌溉周期。
+f4ea5fd9b ||| Start of the rainy season ||| 雨季の始まり ||| 雨季初
+6bf5fb77d ||| Rainy ||| 雨季 ||| 雨季
+de9d99070 ||| Spread organic fertilizer along the canopy drip line and cover lightly ||| 樹冠の外周に沿って有機肥料をまき、軽く覆土する ||| 沿树冠滴水线撒施有机肥，轻轻覆土
+d96e0e95c ||| Second fertilizer application, with all of the phosphate ||| 2回目の施肥、リン酸肥料は全量 ||| 第二次施肥，磷肥全部施入
+63f7d3eea ||| Apply lime if the soil is acidic ||| 土壌が酸性なら石灰を施す ||| 土壤偏酸时施石灰
+9689d5a11 ||| Sow cover-crop legumes between the rows ||| 列の間に被覆用のマメ科植物をまく ||| 行间播种覆盖用豆科作物
+a44a19a3f ||| Replant missing shade trees ||| 欠けた日陰樹を補植する ||| 补种遮荫树
+0436d2787 ||| Compost 10 t/ha (about 9 kg per tree), with Trichoderma ||| 堆肥（compost）10 t/ha（1株約9 kg）、トリコデルマ菌入り ||| 堆肥（compost）10吨/公顷（每株约9公斤），加木霉菌
+aa835de08 ||| Wait until the soil is moist enough before applying. Keep fertilizer away from the trunk. ||| 土が十分に湿ってから施肥する。肥料を幹に密着させない。 ||| 等土壤足够湿润再施肥。肥料不要紧贴树干。
+b4df914f7 ||| Rapid fruit growth ||| 果実の急速な肥大 ||| 果实快速膨大
+52c31162a ||| Mow the grass short, keep the ground cover, no herbicides ||| 草は低く刈り、被覆を残し、除草剤は使わない ||| 把草割低，保留地表覆盖，不用除草剂
+8ac8a2bcc ||| Check for leaf rust and pink disease ||| さび病と赤衣病を確認 ||| 检查锈病和粉红病
+db9dfe80b ||| Dig ditches across the slope against erosion ||| 侵食を防ぐため斜面を横切る溝を掘る ||| 沿等高线横向开沟防冲刷
+8940baab2 ||| Cut grass left as mulch ||| 刈った草はマルチとして残す ||| 割下的草留作覆盖物
+fd78f2619 ||| Keep the soil covered at all times to limit the washing away of fertilizer and topsoil. ||| 土を常に覆っておき、肥料や表土の流出を抑える。 ||| 让土壤始终有覆盖，减少肥料和表土流失。
+23efe7275 ||| Third fertilizer application ||| 3回目の施肥 ||| 第三次施肥
+377efd98d ||| Work the legume cover crop into the ditches as green manure ||| マメ科の被覆植物を溝にすき込んで緑肥にする ||| 把豆科覆盖作物压入沟中作绿肥
+0e7c3a31b ||| Watch for twig borers; cut and burn infested branches ||| 枝を食害するキクイムシに注意し、被害枝を切って焼く ||| 监测蛀枝小蠹，剪下并烧毁受害枝
+defc79f3e ||| Green manure on the farm ||| 農園での緑肥 ||| 庄园内压青
+43c71f0a9 ||| Apply only when the soil is moist; avoid days of heavy rain. ||| 土が湿っているときだけ施肥し、大雨の日は避ける。 ||| 只在土壤湿润时施肥，避开大雨天。
+0a691568a ||| Bean filling ||| 豆の充実期 ||| 籽粒充实
+cbbeb2bf4 ||| Cut out branches with pink disease ||| 赤衣病の枝を切り取る ||| 剪除感染粉红病的枝条
+b5435ae22 ||| Open up the canopy in damp spots ||| 湿った場所では樹冠の風通しをよくする ||| 潮湿处疏通树冠
+2b8b7568a ||| Drain standing water ||| 水たまりを排水する ||| 排除积水
+fc0c192b3 ||| Keep the mulch; don't dig around the trunk ||| マルチを残し、株元を耕さない ||| 保留覆盖层，不翻动树盘
+76961e1f5 ||| Humidity is high in the rainy season, and fungi develop in dense canopies. ||| 雨季は湿度が高く、茂った樹冠で菌類が発生します。 ||| 雨季湿度高，茂密的树冠里容易滋生真菌。
+9e3d6af5d ||| Fourth fertilizer application, the most potassium of the year ||| 4回目の施肥、カリは年間で最も多く ||| 第四次施肥，全年钾肥最多
+9d3e6ac51 ||| Clear weeds around the trunk ||| 株元の草を取り除く ||| 清除树盘周围杂草
+62d855005 ||| Repair ditches and paths ||| 溝と通路を補修する ||| 修整沟渠和道路
+5a139cb6f ||| Final cut of the ground cover ||| 被覆植物の最後の刈り取り ||| 最后一次割覆盖植物
+251362095 ||| No more nitrogen after this round, so the cherries ripen evenly. ||| この後は窒素を追加せず、実をそろって熟させる。 ||| 此后不再施氮肥，让果实成熟整齐。
+dbf023006 ||| Preparing for harvest ||| 収穫の準備 ||| 采收准备
+c109a1fb7 ||| Late rainy ||| 雨季の終わり ||| 雨季末
+2bde2221e ||| Count sample cherries to forecast the yield ||| サンプルの実を数えて収量を予測する ||| 数样本果实预测产量
+e5f4475a9 ||| Clear the ground under the canopy ||| 樹冠の下の地面をきれいにする ||| 清理树冠下的地面
+813c7d6b8 ||| Prepare tarps, bags, drying yards and the drying house ||| シート、袋、乾燥場、乾燥小屋を準備する ||| 准备防水布、袋子、晒场和烘干房
+465e5d621 ||| Book the picking crew and train them to choose ripe cherries ||| 収穫班と約束を取り付け、熟した実の選び方を教える ||| 约定采摘队，培训挑选熟果
+890059355 ||| Get the compost shed ready to take in husks ||| 堆肥小屋で果皮を受け入れる準備をする ||| 堆肥棚做好接收果皮的准备
+c890323d1 ||| Pickers are usually scarce at the peak of the harvest, so lock in your crew early. ||| 収穫のピークは人手が不足しがちなので、早めに人を確保する。 ||| 采收高峰期通常缺工，应尽早定好人手。
+7fa6dba2b ||| First picking round ||| 1回目の収穫 ||| 第一批采摘
+f39d5fd69 ||| Harvest ||| 収穫期 ||| 采收季
+39be29f68 ||| Selectively pick the clusters that ripen first, 25% of the crop ||| 先に熟した房を選んで摘む、収量の25% ||| 先选摘成熟的果串，占产量25%
+db9396727 ||| Spread tarps under the trees if cherries are falling ||| 実が落ちるなら木の下にシートを敷く ||| 若果实掉落，在树下铺防水布
+10b3b3e8e ||| Weigh and record a lot code for each block ||| 区画ごとに計量してロット番号を記録する ||| 按区称重并记录批次编号
+450ac4183 ||| Bring the cherries to the processing site the same day ||| 実はその日のうちに加工場へ運ぶ ||| 果实当天运回加工厂
+23678764e ||| Take fresh husks to the compost shed right away ||| 生の果皮はすぐ堆肥小屋へ ||| 鲜果皮立即送到堆肥棚
+66e5135b8 ||| Quality starts here: no more than 5% green cherries. ||| 品質はここから始まる。未熟果は5%以下。 ||| 品质从这里开始：青果不超过5%。
+a17101453 ||| Peak picking ||| 収穫最盛期 ||| 采收高峰
+08d249479 ||| Peak-season picking, 60% of the crop ||| ピーク時の収穫、収量の60% ||| 高峰期采摘，占产量60%
+179170000 ||| Weigh, record lots and check the ripeness ratio daily ||| 毎日、計量し、ロットを記録し、熟度の割合を確認する ||| 每天称重、记录批次、检查成熟比例
+b63fcc289 ||| Keep cherries clean; don't leave them overnight in bags ||| 実を清潔に保ち、袋に入れたまま一晩置かない ||| 保持果实清洁，不要在袋中过夜
+0e3b2b512 ||| Compost husks in piles and turn them regularly ||| 果皮を山にして堆肥化し、定期的に切り返す ||| 果皮堆垛堆肥，定期翻堆
+d0bc212f6 ||| This is the month that needs the most people all year. ||| 1年で最も人手が必要な月です。 ||| 这是全年最需要人手的月份。

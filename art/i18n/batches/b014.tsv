@@ -1,0 +1,134 @@
+# chuỗi JS không dấu (force.json) và tên riêng
+e34547816 ||| Floral ||| フローラル ||| 花香
+29a535a73 ||| Bright acidity ||| 爽やかな酸味 ||| 明亮酸质
+7ae56d6f7 ||| Citrus ||| 柑橘 ||| 柑橘
+4bc187946 ||| Lemon ||| レモン ||| 柠檬
+5e09769d1 ||| Orange ||| オレンジ ||| 橙子
+d88376853 ||| Vanilla ||| バニラ ||| 香草
+de49a734d ||| Cocoa ||| カカオ ||| 可可
+9060bcbab ||| Rubber ||| ゴム ||| 橡胶
+9d8180714 ||| Enzymatic ||| 酵素由来 ||| 酶促
+418b8205b ||| Espresso ||| エスプレッソ ||| 意式浓缩
+a56331210 ||| Pour-over, moka pot ||| ハンドドリップ、モカポット ||| 手冲、摩卡壶
+ee8fc1552 ||| Phin ||| フィン ||| 滴滤壶
+491930300 ||| Acids & CGA ||| 酸とCGA ||| 酸与CGA
+32608e1e8 ||| Acid ||| 酸 ||| 酸
+22859fa3d ||| Caffeine ||| カフェイン ||| 咖啡因
+bf6b586e8 ||| Cold brew ||| コールドブリュー ||| 冷萃
+8eea9b9e2 ||| Yield ||| 抽出量 ||| 出液量
+cd829aafb ||| Grind ||| 挽き目 ||| 研磨
+d17dd924e ||| acids · CGA · polyphenols ||| 酸 · CGA · ポリフェノール ||| 酸 · CGA · 多酚
+03e3d58d0 ||| LAST OUT ||| 最後に出る ||| 最后出来
+a1ea0e2c7 ||| g yield ||| g（抽出量） ||| 克出液
+5f40124e2 ||| {1}<1/><2>three cups: {2}</2> ||| {1}<1/><2>3杯：{2}</2> ||| {1}<1/><2>三杯：{2}</2>
+f8dea60c4 ||| yield ||| 抽出量 ||| 出液
+d10525a99 ||| Bottle ||| ボトル ||| 瓶装
+4446cf188 ||| Grinding loss ||| 粉砕ロス ||| 研磨损耗
+d2c65ad7b ||| Kraft, ||| クラフト紙、 ||| 牛皮纸，
+5269c14c3 ||| Storage & delivery ||| 保管と配送 ||| 储存与配送
+36a888eb4 ||| Storage ||| 保管 ||| 储存
+2ffee3115 ||| Roast City+ · {1}{2}kg ||| 焙煎 City+ · {1}{2}kg ||| 烘焙 City+ · {1}{2}kg
+8e462f50a ||| {1} bottles {2}{3}ml ||| {1}本 {2}{3}ml ||| {1}瓶 {2}{3}ml
+ed0970d41 ||| dilute 1:1 ||| 1:1で割る ||| 按1:1稀释
+af6245511 ||| <1>MFG</1>{1} ||| <1>製造日</1>{1} ||| <1>生产日期</1>{1}
+96a8c1762 ||| <1>EXP</1>{1} ||| <1>賞味期限</1>{1} ||| <1>保质期至</1>{1}
+cb5df6acd ||| Bottle TDS ||| ボトルのTDS ||| 瓶装TDS
+c67295d9f ||| Phin Robusta Classic ||| フィン用 Robusta Classic ||| 滴滤壶款 Robusta Classic
+d5034756d ||| Phin Robusta Premium ||| フィン用 Robusta Premium ||| 滴滤壶款 Robusta Premium
+f4e590527 ||| Phin Arabica Premium ||| フィン用 Arabica Premium ||| 滴滤壶款 Arabica Premium
+4b9a79f07 ||| Pour-over V60 ||| ハンドドリップ V60 ||| 手冲 V60
+3bb6eafb3 ||| Espresso 1:2 ||| エスプレッソ 1:2 ||| 意式浓缩 1:2
+5b07df127 ||| Ristretto 1:1.5 ||| リストレット 1:1.5 ||| 芮斯崔朵 1:1.5
+faacd9a4b ||| Lungo 1:3 ||| ルンゴ 1:3 ||| 朗戈 1:3
+175b7ad81 ||| Americano ||| アメリカーノ ||| 美式
+e3e1abd9b ||| Latte ||| ラテ ||| 拿铁
+d0f7b24e9 ||| Cappuccino ||| カプチーノ ||| 卡布奇诺
+6cc4797ae ||| Shot yield ||| ショットの抽出量 ||| 出液量
+7a6409fe4 ||| Yield ||| 抽出量 ||| 出液
+cb4a804c9 ||| done at {1} ||| {1}で完了 ||| {1}完成
+9e927a39b ||| {1} · roast: {2} · {3} · {4} ||| {1} · 焙煎：{2} · {3} · {4} ||| {1} · 烘焙：{2} · {3} · {4}
+dbb66acd9 ||| Roast ||| 焙煎 ||| 烘焙
+dbb0e2d4c ||| {1} · roast: {2} · {3} ||| {1} · 焙煎：{2} · {3} ||| {1} · 烘焙：{2} · {3}
+c953f8e1c ||| Espresso, Americano, Latte, Phin ||| エスプレッソ、アメリカーノ、ラテ、フィン ||| 意式浓缩、美式、拿铁、滴滤壶
+e0d0877af ||| Espresso, Americano, latte, phin ||| エスプレッソ、アメリカーノ、ラテ、フィン ||| 意式浓缩、美式、拿铁、滴滤壶
+c8070491c ||| Phin, espresso, Americano, latte ||| フィン、エスプレッソ、アメリカーノ、ラテ ||| 滴滤壶、意式浓缩、美式、拿铁
+6ff813837 ||| Ground for phin ||| フィン用に挽く ||| 研磨适合滴滤壶
+9b2e17a55 ||| {1}{2}<1>See the {3} page →</1> ||| {1}{2}<1>{3}のページを見る →</1> ||| {1}{2}<1>查看{3}页面 →</1>
+ca896c59d ||| Buying for: ||| 用途： ||| 购买用途：
+ba33e4311 ||| loses {1} kg in roasting ||| 焙煎で{1} kg減少 ||| 烘焙损耗{1}公斤
+a9b53b05c ||| Yeast ||| 酵母 ||| 酵母
+f5081c637 ||| Bags ||| 袋 ||| 袋装
+5ca17c38f ||| Espresso, latte, americano ||| エスプレッソ、ラテ、アメリカーノ ||| 意式浓缩、拿铁、美式
+554146009 ||| Espresso, latte ||| エスプレッソ、ラテ ||| 意式浓缩、拿铁
+942feae39 ||| Espresso, cappuccino, latte ||| エスプレッソ、カプチーノ、ラテ ||| 意式浓缩、卡布奇诺、拿铁
+b286a6913 ||| Espresso, flat white, cappuccino ||| エスプレッソ、フラットホワイト、カプチーノ ||| 意式浓缩、馥芮白、卡布奇诺
+8d67f1318 ||| {1} cups ||| {1}杯 ||| {1}杯
+cdff6c3a3 ||| 1–16 bags ||| 1〜16袋 ||| 1–16袋
+9a8a438ec ||| Sucrose ||| ショ糖 ||| 蔗糖
+dac7aef7d ||| Caffeine {1}% ||| カフェイン {1}% ||| 咖啡因 {1}%
+4ab2318c1 ||| Scale ||| スケール ||| 评分标准
+4a7088595 ||| Caffeine · ||| カフェイン · ||| 咖啡因 ·
+0b019f622 ||| TR4, TR11 · Gia Lai ||| TR4、TR11 · ザライ省 ||| TR4、TR11 · 嘉莱省
+69e75845e ||| · caffeine {1}% ||| · カフェイン {1}% ||| · 咖啡因 {1}%
+efa88695c ||| Dark Roast ||| 深煎り ||| 深度烘焙
+7b4167ea5 ||| Medium Roast ||| 中煎り ||| 中度烘焙
+b144ea45a ||| Robusta honey, washed ||| Robusta honey、washed ||| Robusta honey、washed
+aca7adbe1 ||| Crema ||| クレマ ||| 油脂（crema）
+8df88e9cb ||| Flat White ||| フラットホワイト ||| 馥芮白
+814d5c907 ||| Mocha ||| モカ ||| 摩卡
+d98cd7308 ||| 1:3 + chocolate ||| 1:3 + チョコレート ||| 1:3 + 巧克力
+b9d5f287d ||| Chocolate ||| チョコレート ||| 巧克力
+c8e960854 ||| Pour-over ||| ハンドドリップ ||| 手冲
+d3cd77d00 ||| French Press ||| フレンチプレス ||| 法压壶
+19471fcca ||| Drip bag ||| ドリップバッグ ||| 挂耳包
+149017260 ||| 1:8, diluted 1:1 ||| 1:8、1:1で割る ||| 1:8，按1:1稀释
+02e3840ad ||| Cold drip ||| コールドドリップ ||| 冰滴
+5059790b2 ||| Cold brew, cold drip ||| コールドブリュー、コールドドリップ ||| 冷萃、冰滴
+e2d212f0c ||| Cold brew, drip ||| コールドブリュー、ドリップ ||| 冷萃、滴滤
+c4b21fa83 ||| {1}<1>{2} · {3} · roast: {4}</1> ||| {1}<1>{2} · {3} · 焙煎：{4}</1> ||| {1}<1>{2} · {3} · 烘焙：{4}</1>
+a74563bfa ||| ml cream ||| ml クリーム ||| 毫升奶油
+59548a1e6 ||| ml chocolate ||| ml チョコレート ||| 毫升巧克力
+59aa83d17 ||| {1}<1/><2>{2} · roast: {3}</2> ||| {1}<1/><2>{2} · 焙煎：{3}</2> ||| {1}<1/><2>{2} · 烘焙：{3}</2>
+023bb6a1b ||| Floral, citrus, high acidity ||| 花の香り、柑橘、高い酸味 ||| 花香、柑橘、高酸度
+e73968b24 ||| Cold brew Robusta Premium ||| コールドブリュー Robusta Premium ||| 冷萃 Robusta Premium
+8e01f6bc7 ||| Hybrid ||| ハイブリッド式 ||| 混合式
+c1bfde052 ||| Roast {1} · {2} ||| 焙煎 {1} · {2} ||| 烘焙 {1} · {2}
+b44314fbe ||| {1} kg roasted ||| 焙煎豆 {1} kg ||| 烘焙豆{1}公斤
+ea417c786 ||| Label ||| 表示 ||| 标注
+cb5dfa683 ||| loss {1} kg, {2}% ||| 減少 {1} kg、{2}% ||| 损耗{1}公斤，{2}%
+b83a17fea ||| Liver ||| 肝臓 ||| 肝脏
+f2ce2e186 ||| Fast ||| 速い ||| 快
+14e4f66c6 ||| Heart ||| 心臓 ||| 心脏
+90e5029db ||| Chlorogenic acid ||| クロロゲン酸 ||| 绿原酸
+fdff5d5c0 ||| Trigonelline ||| トリゴネリン ||| 葫芦巴碱
+9b6599b2e ||| Lipids ||| 脂質 ||| 脂质
+26ed353d0 ||| Protein ||| タンパク質 ||| 蛋白质
+467d633b6 ||| Melanoidins ||| メラノイジン ||| 类黑精
+2def821e4 ||| Furaneol ||| フラネオール ||| 呋喃酮
+6792e8b84 ||| Guaiacol ||| グアイアコール ||| 愈创木酚
+28469b02b ||| Brewing ||| 抽出 ||| 冲煮
+084eef971 ||| Cup ||| カップ ||| 杯中
+65e437d47 ||| Sucrose {1} → {2}% ||| ショ糖 {1} → {2}% ||| 蔗糖 {1} → {2}%
+e1ac75c79 ||| Roast {1} ||| 焙煎 {1} ||| 烘焙 {1}
+bd0801d63 ||| Brew {1} ||| 抽出 {1} ||| 冲煮 {1}
+0bfa2915f ||| {1} · loss {2}% ||| {1} · 減少 {2}% ||| {1} · 损耗{2}%
+bb540f7ca ||| (loss ||| (減少 ||| (损耗
+7365b5b40 ||| {1}, {2}, brewed with {3} ||| {1}、{2}、{3}で抽出 ||| {1}，{2}，用{3}冲煮
+45d46c059 ||| Latte, cappuccino ||| ラテ、カプチーノ ||| 拿铁、卡布奇诺
+5308e93e0 ||| Roasting, grinding, brewing ||| 焙煎、粉砕、抽出 ||| 烘焙、研磨、冲煮
+26240a129 ||| Green ||| 緑 ||| 青果
+ab52ff580 ||| Perisperm ||| 外胚乳 ||| 外胚乳
+3dc07c05f ||| In Arabica ||| Arabicaの場合 ||| 以Arabica为参照
+9cd590b60 ||| Pectin ||| ペクチン ||| 果胶
+5a369ffdf ||| Oxygen ||| 酸素 ||| 氧气
+aefd38602 ||| Lactic acid ||| 乳酸 ||| 乳酸
+8b36dce59 ||| Acetic acid ||| 酢酸 ||| 乙酸
+4d0b346cf ||| Lactic · {1} ||| 乳酸 · {1} ||| 乳酸 · {1}
+e596d8564 ||| Acetic · {1} ||| 酢酸 · {1} ||| 乙酸 · {1}
+4dbe3a8a0 ||| Urea {1} ||| 尿素 {1} ||| 尿素 {1}
+189b64df3 ||| Potash {1} ||| 塩化カリ {1} ||| 钾肥 {1}
+e06139be2 ||| Urea ||| 尿素 ||| 尿素
+920d0bc53 ||| Potassium K₂O ||| カリウム K₂O ||| 钾 K₂O
+6153b5af7 ||| Potassium chloride ||| 塩化カリウム ||| 氯化钾
+fc4bb2e4a ||| Urea {1} kg ||| 尿素 {1} kg ||| 尿素 {1}公斤
+d275c8ace ||| Potash {1} kg ||| 塩化カリ {1} kg ||| 钾肥 {1}公斤

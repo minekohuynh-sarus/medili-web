@@ -1,0 +1,80 @@
+# tien-chat-huong.html (1) — đầu trang, hình, bảy chặng, sáu điều
+92ca5cc27 ||| Green coffee beans store sugars, amino acids, oils, organic acids, chlorogenic acids, caffeine and trigonelline. Roasting turns them into caramel, aroma compounds and brown color. An interactive MeDili model by variety, roast level and brewing method. ||| コーヒーの生豆には、糖、アミノ酸、油脂、有機酸、クロロゲン酸、カフェイン、トリゴネリンが蓄えられています。焙煎でそれらがカラメル、香気成分、褐色に変わります。品種、焙煎度、抽出方法で見るMeDiliのインタラクティブモデル。 ||| 咖啡生豆中储存着糖、氨基酸、油脂、有机酸、绿原酸、咖啡因和葫芦巴碱。烘焙时，它们变成焦糖、香气物质和褐色。MeDili按品种、烘焙度和冲煮方式制作的互动模型。
+2e34c5cc8 ||| MeDili Aroma Precursor Machine ||| MeDili香りの前駆体マシン ||| MeDili香气前体机
+aa82bd9b2 ||| The <1>Aroma Precursor</1> Machine ||| <1>香りの前駆体</1>マシン ||| <1>香气前体</1>机
+39138455d ||| Green coffee beans have almost no aroma. The aroma in the cup is built from what the bean has already stored: sugars, amino acids, oils, organic acids, chlorogenic acids, caffeine and trigonelline. Choose a variety, drag the roast level and pick a brewing method to see where each group of compounds goes. ||| コーヒーの生豆にはほとんど香りがありません。カップの香りは、豆がすでに蓄えているもの、つまり糖、アミノ酸、油脂、有機酸、クロロゲン酸、カフェイン、トリゴネリンから作られます。品種を選び、焙煎度を動かし、抽出方法を選んで、それぞれの成分がどこへ行くか見てみましょう。 ||| 咖啡生豆几乎没有香气。杯中的香气来自豆子早已储存的物质：糖、氨基酸、油脂、有机酸、绿原酸、咖啡因、葫芦巴碱。选择品种，拖动烘焙度，再选冲煮方式，看看每类物质去了哪里。
+51d92de4f ||| Test roast ||| 試し焙煎 ||| 试烘
+cfd52aba0 ||| A seven-station model table: green coffee, analysis rack, roaster, reactions, volatile aromas, brewing, cup. Tap each station for details. ||| 7ステーションのモデル台：生豆、分析ラック、焙煎機、反応、揮発する香り、抽出、カップ。各ステーションを押すと詳細が見られます。 ||| 七站模型台：生豆、分析架、烘焙机、反应、挥发香气、冲煮、杯子。点击各站点查看详情。
+0fcec7d84 ||| 2 varieties ||| 2品種 ||| 2个品种
+505ff51bc ||| Reset ||| 初期設定に戻す ||| 恢复默认
+82f05de31 ||| Remaining vs. green coffee ||| 生豆と比べた残存率 ||| 相对生豆的剩余比例
+83cce8ff9 ||| Percentage of sucrose, chlorogenic acids, trigonelline and caffeine remaining by roast level ||| 焙煎度別のショ糖、クロロゲン酸、トリゴネリン、カフェインの残存率 ||| 各烘焙度下蔗糖、绿原酸、葫芦巴碱、咖啡因的剩余百分比
+7e336ada6 ||| Figure 2: composition on a dry-matter basis ||| 図2：乾物ベースの成分 ||| 图2：按干物质计的成分
+47ed4cc79 ||| The green coffee and medium roast (City+) columns follow a compiled composition table. MeDili interpolated the other roast levels along known trends; the trigonelline line is illustrative because the source table lumps in its breakdown products. ||| 生豆と中煎り（City+）の列は、複数の資料をまとめた成分表によります。そのほかの焙煎度は、既知の変化の傾向に沿ってMeDiliが補間しました。トリゴネリンの線は、元の表がその分解生成物も合算しているため、説明用です。 ||| 生豆和中度烘焙（City+）两列依据综合成分表。其他烘焙度由MeDili按已知变化趋势插值；葫芦巴碱一行仅为示意，因为原表把它的分解产物也算在内。
+40aca5c1c ||| Figure 3: from precursors to aroma compounds ||| 図3：前駆体から香気成分へ ||| 图3：从前体到香气物质
+31ee0964f ||| Each row is a pathway: the precursor in the bean, the reaction during roasting and the main aroma compounds it creates. Brighter rows are the pathways that are strong at the roast level you chose. ||| 各行が1つの経路です：豆の中の前駆体、焙煎中の反応、そしてそれが生み出す主な香気成分。明るい行は、選んだ焙煎度で強く働いている経路です。 ||| 每一行是一条路径：豆中的前体、烘焙时的反应，以及它产生的主要香气物质。较亮的行是在你所选烘焙度下活跃的路径。
+6e284ed5a ||| <1>Precursor in the bean</1><2>During roasting</2><3>Aroma compounds, smells</3> ||| <1>豆の中の前駆体</1><2>焙煎中</2><3>香気成分・におい</3> ||| <1>豆中的前体</1><2>烘焙时</2><3>香气物质、气味</3>
+efbce877a ||| Sugars and amino acids ||| 糖とアミノ酸 ||| 糖和氨基酸
+76f100afd ||| Maillard ||| メイラード反応 ||| 美拉德反应
+3dc430992 ||| 2-furfurylthiol: roasty, toasted bread · furaneol: caramel · methional: boiled potato · pyrazines: roasted nuts, burnt when dark ||| 2-フルフリルチオール：焙煎香、トースト · フラネオール：キャラメル · メチオナール：ゆでたジャガイモ · ピラジン類：ローストナッツ、深煎りでは焦げ臭 ||| 2-糠基硫醇：烘烤香、烤面包 · 呋喃酮：焦糖 · 甲硫基丙醛：煮土豆 · 吡嗪类：烤坚果，深烘时有焦味
+5de117515 ||| Amino acids ||| アミノ酸 ||| 氨基酸
+bd4b87369 ||| Strecker degradation ||| ストレッカー分解 ||| 斯特雷克降解
+18cc9f68d ||| Strecker aldehydes such as 3-methylbutanal: malt, cocoa; a big part of the smell of freshly ground coffee ||| 3-メチルブタナールなどのストレッカーアルデヒド：麦芽、カカオ。挽きたてのコーヒーの香りの大きな部分を占める ||| 3-甲基丁醛等斯特雷克醛：麦芽、可可；是现磨咖啡粉香气的重要来源
+c667f6136 ||| Sucrose ||| ショ糖 ||| 蔗糖
+2c8cf59e8 ||| Caramelization ||| カラメル化 ||| 焦糖化
+bb0be51da ||| Caramel and burnt-sugar smells, brown color; acetic and formic acids form and then gradually evaporate ||| キャラメルや焦がし砂糖のにおい、褐色。酢酸やギ酸が生じ、少しずつ揮発する ||| 焦糖味、焦糖烧焦味、褐色；生成的乙酸、甲酸随后逐渐挥发
+13f9f017a ||| Breakdown to phenols ||| フェノール類への分解 ||| 分解为酚类
+0bb42e553 ||| 4-vinylguaiacol: clove · guaiacol: smoke, resin · vanillin: vanilla; the leftover quinic acid adds astringency and harsh sourness ||| 4-ビニルグアイアコール：クローブ · グアイアコール：煙、樹脂 · バニリン：バニラ。残ったキナ酸は渋みと強い酸味を残す ||| 4-乙烯基愈创木酚：丁香 · 愈创木酚：烟熏、树脂 · 香兰素：香草；剩下的奎宁酸带来涩感和尖锐酸味
+0fdcb80e0 ||| Thermal breakdown ||| 熱分解 ||| 热分解
+009af3dae ||| Pyridines: roasty smell; about 4–6% turns into niacin (vitamin B3) ||| ピリジン類：焙煎香。約4〜6%がナイアシン（ビタミンB3）になる ||| 吡啶类：烘烤味；约4–6%转化为烟酸（维生素B3）
+a643e2c8c ||| Carotenoids ||| カロテノイド ||| 类胡萝卜素
+9adf173f0 ||| Pigment breakdown ||| 色素の分解 ||| 色素分解
+5f990a655 ||| β-damascenone: ripe fruit ||| β-ダマセノン：熟した果実の香り ||| β-大马酮：熟果香
+474601507 ||| Stays, reacts little ||| 残る、あまり反応しない ||| 保留，反应不多
+8badd9eaa ||| Holds aroma compounds and gives a smooth mouthfeel; the diterpenes cafestol and kahweol reach the cup through metal filters ||| 香気成分を保ち、なめらかな口当たりを生む。ジテルペンのカフェストールとカーウェオールは金属フィルターを通ってカップに入る ||| 保留香气物质，带来顺滑口感；二萜咖啡醇和咖啡豆醇会通过金属滤网进入杯中
+8ee263201 ||| Compound names and smells from compiled sources; about 900 volatile compounds have been identified, but fewer than 20 play a clear role in coffee aroma. ||| 成分名とにおいは複数の資料による。約900の揮発性成分が確認されているが、コーヒーの香りにはっきり関わるのは20未満。 ||| 物质名称和气味依据综合资料；已鉴定出约900种挥发性物质，但在咖啡香气中作用明确的不到20种。
+eb867dabc ||| Oil in the cup by brewing method ||| 抽出方法別のカップに入る油分 ||| 不同冲煮方式进入杯中的油脂
+b2e1d5910 ||| Coffee oil carries two diterpenes, cafestol and kahweol. Paper filters hold back almost all of them; metal filters and long boiling let a lot through. ||| コーヒーの油分には、カフェストールとカーウェオールという2つのジテルペンが含まれます。ペーパーフィルターはほぼすべてを止めますが、金属フィルターや長く煮出す方法では多くが通ります。 ||| 咖啡油脂含有两种二萜：咖啡醇和咖啡豆醇。滤纸几乎能全部挡住；金属滤网和长时间煮沸则会让很多进入杯中。
+5d1678c89 ||| Oil, diterpenes in the cup ||| カップに入る油分・ジテルペン ||| 进入杯中的油脂、二萜
+52e82073c ||| Paper filter ||| ペーパーフィルター ||| 滤纸
+6dd8c5dae ||| Some passes through the metal filter; no specific measurements yet ||| 一部が金属フィルターを通る。個別の測定値はまだない ||| 部分会通过金属滤网；尚无专门测量数据
+7315eb749 ||| Lots of oil and fines, full body ||| 油分と微粉が多く、厚いボディ ||| 油脂和细粉多，醇厚
+5c919b9f1 ||| About 1 mg of cafestol and 1 mg of kahweol per cup ||| 1杯あたりカフェストール約1 mg、カーウェオール約1 mg ||| 每杯约含1毫克咖啡醇和1毫克咖啡豆醇
+b44ae4744 ||| Nordic boiled coffee ||| 北欧式の煮出しコーヒー ||| 北欧式煮咖啡
+db244fbed ||| About 7 mg of cafestol per cup ||| 1杯あたりカフェストール約7 mg ||| 每杯约含7毫克咖啡醇
+5526411da ||| How much caffeine reaches the cup depends on the dose and brewing method. Work it out from your habits in <1>Coffee and the Body</1>, and see which compounds come out first in the <2>Extraction Machine</2>. ||| カップに入るカフェインの量は、粉の量と抽出方法で決まります。<1>コーヒーと体</1>で飲む習慣から計算し、<2>抽出マシン</2>でどの成分が先に出るかを見てください。 ||| 进入杯中的咖啡因量取决于粉量和冲煮方式。在<1>咖啡与身体</1>按你的饮用习惯计算，在<2>萃取机</2>看看哪些物质先出来。
+6d6cf9ed4 ||| Acidity: pH vs. titratable acidity ||| 酸味：pHと滴定酸度は違う ||| 酸度：pH不同于可滴定酸度
+0ac5ff408 ||| <1>pH</1> measures the concentration of free H⁺ ions at the moment of measuring. <2>Titratable acidity</2> measures the total amount of acid, as the amount of base needed to bring the liquid to a set pH, and is closer to how sour it tastes on the tongue. ||| <1>pH</1>は測定時の遊離H⁺イオンの濃度を測ります。<2>滴定酸度</2>は、液を一定のpHにするのに必要なアルカリの量で酸の総量を測り、舌で感じる酸っぱさにより近い値です。 ||| <1>pH</1>测量的是测定时游离H⁺离子的浓度。<2>可滴定酸度</2>测量酸的总量，即把液体调到某一pH所需的碱量，更接近舌头感受到的酸味。
+3a4e18860 ||| Hot-brewed coffee and cold brew have similar pH, about 4.85–5.13, but the hot cup has higher titratable acidity, so it tastes more sour. ||| ホットで淹れたコーヒーとコールドブリューのpHは約4.85〜5.13とほぼ同じですが、ホットのほうが滴定酸度が高いため、飲むと酸っぱく感じます。 ||| 热冲咖啡和冷萃的pH相近，约4.85–5.13，但热冲咖啡的可滴定酸度更高，所以喝起来更酸。
+161ff31f5 ||| The acids in the cup are a whole system: citric and malic acids already in the bean decline during roasting; acetic and formic acids form during roasting and then evaporate; quinic acid rises with roast degree as chlorogenic acids break down. Brewing water high in alkalinity neutralizes some of them and flattens the acidity. ||| カップの酸はひとつの体系です。豆にもともとあるクエン酸やリンゴ酸は焙煎で減り、酢酸やギ酸は焙煎中に生じてから揮発し、キナ酸は焙煎が進むにつれクロロゲン酸から増えます。アルカリ度の高い水で淹れると酸の一部が中和され、酸味がぼやけます。 ||| 杯中的酸是一个完整的体系：豆中原有的柠檬酸、苹果酸在烘焙中逐渐减少；乙酸、甲酸在烘焙时生成后挥发；奎宁酸随烘焙度由绿原酸分解而增加。碱度高的冲煮水会中和部分酸，使酸味变淡。
+4d8e5d63b ||| Seven stages that protect aroma precursors ||| 香りの前駆体を守る7つの段階 ||| 守护香气前体的七个环节
+e26fe641a ||| Precursors are stored up on the farm, transformed in fermentation, preserved through drying and storage, cleared of defects in sorting, and only then unlocked in the roaster. If one stage fails, the roaster can't save it. ||| 前駆体は農園で蓄えられ、発酵で変化し、乾燥と保管で守られ、選別で欠点を除かれてから、ようやく焙煎機で引き出されます。どこか1つの段階で失敗すると、焙煎機では取り戻せません。 ||| 前体在庄园中积累，在发酵中转化，在晾晒和仓储中保存，在分拣中剔除瑕疵，最后才在烘焙机中被解锁。任何一个环节出错，烘焙都救不回来。
+697fbb393 ||| <1>01 · Store</1><2>Ripe cherries</2> ||| <1>01 · 蓄える</1><2>完熟した実</2> ||| <1>01 · 积累</1><2>成熟果</2>
+ba42c0414 ||| Beans store enough sugar, protein and oil when the cherries are properly ripe. Pick them green and the beans lack precursors from the start. ||| 実が適度に熟すと、豆は糖、タンパク質、油分を十分に蓄えます。未熟なうちに摘むと、豆はそもそも前駆体が足りません。 ||| 果实成熟度恰当时，豆子积累了足够的糖、蛋白质和油脂。采青果，豆子从根本上就缺少前体。
+936cc82b1 ||| <1>02 · Transform</1><2>Fermentation</2> ||| <1>02 · 変える</1><2>発酵</2> ||| <1>02 · 转化</1><2>发酵</2>
+89b10fa3c ||| Microbes eat the mucilage and create acids and esters; overfermentation pulls vinegar and onion smells into the beans. ||| 微生物がミューシレージを食べて酸とエステルを作ります。過発酵になると、酢やタマネギのにおいが豆に移ります。 ||| 微生物吃果胶层，产生酸和酯类；发酵过度会把醋味、洋葱味带进豆子。
+e2cc27712 ||| <1>03 · Preserve</1><2>Sun-drying, machine drying</2> ||| <1>03 · 守る</1><2>天日乾燥・機械乾燥</2> ||| <1>03 · 保存</1><2>晾晒、烘干</2>
+16bc1dba9 ||| Bring bean moisture down to 10–12% evenly. Thick layers and trapped moisture invite mold; drying too hot strips the aroma. ||| 豆の水分を均一に10〜12%まで下げます。厚く干したり湿気がこもったりするとカビやすく、高温で乾燥しすぎると香りが失われます。 ||| 把豆子含水量均匀降到10–12%。晾得太厚、积湿容易发霉；烘干温度过高会让豆子失去香气。
+07ca0aa4a ||| <1>04 · Preserve</1><2>Storage</2> ||| <1>04 · 守る</1><2>保管</2> ||| <1>04 · 保存</1><2>储存</2>
+3f4b44b05 ||| A dry, cool, ventilated store with bags raised off the floor. Beans kept too long, damp or hot lose aroma and pick up jute-bag and stale smells. ||| 乾燥して涼しく風通しのよい倉庫で、床から上げて保管します。長く置いたり、湿気や熱にさらしたりした生豆は香りが薄れ、麻袋臭や古い豆のにおいがつきます。 ||| 仓库要干燥、阴凉、通风，货物垫高离地。生豆放太久、受潮或受热，香气会变淡，出现麻袋味和陈味。
+448992788 ||| <1>05 · Remove defects</1><2>Sorting, color sorting</2> ||| <1>05 · 欠点を除く</1><2>選別・色彩選別</2> ||| <1>05 · 剔除瑕疵</1><2>分拣、色选</2>
+fc5e3cc63 ||| Remove stones, metal, black beans, insect-damaged beans and fermented beans. One defective bean is enough to ruin the smell of a whole roast batch. ||| 石、金属、黒豆、虫食い豆、発酵豆を取り除きます。欠点豆が1粒あるだけで、焙煎バッチ全体の香りが損なわれます。 ||| 剔除石子、金属、黑豆、虫蛀豆和发酵豆。一颗瑕疵豆就足以毁掉整批烘焙的气味。
+6164e3dc1 ||| <1>06 · Even out</1><2>Size and density grading</2> ||| <1>06 · そろえる</1><2>サイズ・比重選別</2> ||| <1>06 · 均匀</1><2>筛选大小、比重</2>
+1159896a0 ||| Beans of the same size and density roast evenly; small beans mixed with large ones end up burnt and underdone at the same time. ||| サイズと比重がそろった豆は均一に焼けます。大小が混ざると、焦げと生焼けが同時に出ます。 ||| 大小、比重一致的豆子在烘焙机中熟得均匀；大小豆混在一起，会同时出现焦豆和生豆。
+d2d2c6028 ||| <1>07 · Unlock</1><2>Roasting</2> ||| <1>07 · 引き出す</1><2>焙煎</2> ||| <1>07 · 解锁</1><2>烘焙</2>
+773cd2444 ||| The roaster doesn't create aroma from nothing; it turns existing precursors into hundreds of volatile aroma compounds. ||| 焙煎機はゼロから香りを作るのではなく、すでにある前駆体を何百もの揮発性香気成分に変えます。 ||| 烘焙机不是凭空创造香气，而是把已有的前体变成数百种挥发性香气物质。
+c0ca95027 ||| Six things <1>about beans and aroma.</1> ||| <1>豆と香りについて</1>6つのこと。 ||| 关于<1>豆子和香气的</1>六件事。
+2b31f9be2 ||| More bitter doesn't mean more caffeine ||| 苦いほどカフェインが多いわけではない ||| 越苦不代表咖啡因越多
+f6e6687e1 ||| Caffeine is bitter but makes up only 1–2.5% of the bean. The cup's bitterness also comes from chlorogenic acid breakdown products and Maillard reaction products, which increase with darker roasts. Robusta is more bitter because it has more of both caffeine and chlorogenic acids than Arabica. ||| カフェインは苦いものの、豆の1〜2.5%にすぎません。カップの苦みは、クロロゲン酸の分解生成物やメイラード反応の生成物からも生じ、深煎りほど増えます。RobustaがArabicaより苦いのは、カフェインとクロロゲン酸の両方が多いからです。 ||| 咖啡因虽苦，却只占豆子的1–2.5%。杯中的苦味还来自绿原酸的分解产物和美拉德反应产物，烘得越深越多。Robusta比Arabica更苦，是因为咖啡因和绿原酸都更多。
+4885e25a4 ||| Dark roasting doesn't increase caffeine ||| 深煎りでカフェインは増えない ||| 深烘不会增加咖啡因
+b9e9a8846 ||| Caffeine is heat-stable and is barely lost in roasting. On a dry-matter basis the figure creeps up slightly because the beans lose mass: Arabica from 1.2 to 1.3%, Robusta from 2.2 to 2.4% at a medium roast. Measured by the scoop, dark-roasted beans are lighter and more porous, so each scoop has less caffeine. ||| カフェインは熱に強く、焙煎でほとんど失われません。乾物ベースでは、豆の重さが減るぶん数値がわずかに上がります。中煎りでArabicaは1.2%から1.3%、Robustaは2.2%から2.4%へ。スプーンで量る場合、深煎りの豆は軽くて多孔質なので、1杯分のカフェインはむしろ少なくなります。 ||| 咖啡因耐热，烘焙时几乎不损失。按干物质计，因为豆子失重，数字会略微上升：中度烘焙时Arabica从1.2%升到1.3%，Robusta从2.2%升到2.4%。用勺子量的话，深烘豆更轻、更疏松，每勺的咖啡因反而更少。
+a67b4a89f ||| More oil doesn't mean more body ||| 油分が多いからボディが厚いわけではない ||| 油脂多不代表醇厚
+7aa21fc9d ||| A cup's body comes from oil, suspended fines, melanoidins and dissolved polysaccharides. A paper filter holds back almost all the oil, but filter coffee still has body if it is extracted enough. ||| カップのボディは、油分、浮遊する微粉、メラノイジン、溶けた多糖から生まれます。ペーパーフィルターは油分をほぼすべて止めますが、十分に抽出すればフィルターコーヒーにもボディがあります。 ||| 一杯咖啡的醇厚度（body）来自油脂、悬浮细粉、类黑素和溶解的多糖。滤纸几乎挡住全部油脂，但只要萃取充分，滤杯咖啡依然有醇厚度。
+5c4dc80a9 ||| Robusta has about 10% oil, Arabica about 16% ||| Robustaの油分は約10%、Arabicaは約16% ||| Robusta约含10%油脂，Arabica约16%
+e249d231f ||| According to commonly used composition tables, green Arabica contains about 16% lipids and Robusta about 10%, on a dry-matter basis. Figures vary between sources, but Arabica always has more oil. ||| よく使われる成分表によると、Arabicaの生豆は乾物ベースで約16%、Robustaは約10%の脂質を含みます。数値は資料によって違いますが、Arabicaのほうが常に油分が多いです。 ||| 按常用成分表，Arabica生豆约含16%脂质，Robusta约10%，以干物质计。不同资料数字有差异，但Arabica的油脂总是更多。
+607ecaabf ||| The embryo is tiny; the bean is almost all endosperm ||| 胚はとても小さく、豆はほぼすべて胚乳 ||| 胚非常小，豆子几乎全是胚乳
+24d63e5b5 ||| The embryo is the seedling at one end of the bean, just a few millimeters long. Nearly all of the bean's mass is endosperm, where the plant stores sugar, protein, oil and the aroma precursors. ||| 胚は豆の一端にある芽で、長さはわずか数ミリです。豆の重さのほぼすべては胚乳で、植物はそこに糖、タンパク質、油分、香りの前駆体を蓄えます。 ||| 胚是位于豆子一端的幼芽，只有几毫米长。豆子几乎全部质量都是胚乳，植物在这里储存糖、蛋白质、油脂和香气前体。
+d8c37f530 ||| About 900 volatiles, but fewer than 20 define the aroma ||| 揮発性成分は約900、香りを決めるのは20未満 ||| 约900种挥发性物质，决定气味的不到20种
+c5887ea6e ||| About 900 volatile compounds have been identified in roasted coffee, but fewer than 20 play a clear role in its aroma, such as 2-furfurylthiol (roasty), furaneol (caramel) and 4-vinylguaiacol (clove). ||| 焙煎コーヒーからは約900の揮発性成分が確認されていますが、香りにはっきり関わるのは20未満で、たとえば焙煎香の2-フルフリルチオール、キャラメル香のフラネオール、クローブ香の4-ビニルグアイアコールです。 ||| 烘焙咖啡中已鉴定出约900种挥发性物质，但在咖啡香气中作用明确的不到20种，例如带烘烤香的2-糠基硫醇、焦糖香的呋喃酮、丁香味的4-乙烯基愈创木酚。
+f33d06558 ||| <1>Compiled from multiple sources.</1> Green coffee and medium-roast composition from a compiled table; other roast levels interpolated: sucrose and free amino acids run down by medium roast, chlorogenic acids fall exponentially to match the medium-roast point, caffeine and oil stay nearly unchanged, and melanoidins rise. The three aroma groups by roast level are a qualitative illustration. The ten roast levels are shared with MeDili's Roasting Room. ||| <1>複数の資料をもとに構成。</1>生豆と中煎りの成分は資料をまとめた表によります。そのほかの焙煎度は補間です：ショ糖と遊離アミノ酸は中煎りまでに尽き、クロロゲン酸は中煎りの値に合わせて指数関数的に減り、カフェインと油分はほぼ変わらず、メラノイジンは増えます。焙煎度別の3つの香りグループは定性的な図解です。10段階の焙煎度はMeDiliの焙煎ルームと共通です。 ||| <1>综合多方资料。</1>生豆和中度烘焙的成分依据综合表；其他烘焙度为插值：蔗糖和游离氨基酸到中度烘焙时逐渐耗尽，绿原酸按指数下降以吻合中度烘焙的数值，咖啡因和油脂几乎不变，类黑素增加。按烘焙度划分的三类香气是定性示意。十个烘焙度与MeDili烘焙室通用。
+52500e70c ||| <1>Coffee Identification Machine</1><2>Roasting Room</2><3>Extraction Machine</3><4>MeDili Flavor Wheel</4><5>Ripe Cherry Machine</5><6>All coffee knowledge</6> ||| <1>コーヒー判別マシン</1><2>焙煎ルーム</2><3>抽出マシン</3><4>MeDiliフレーバーホイール</4><5>完熟チェリーマシン</5><6>コーヒーの知識すべて</6> ||| <1>咖啡辨别机</1><2>烘焙室</2><3>萃取机</3><4>MeDili风味轮</4><5>成熟咖啡果机</5><6>全部咖啡知识</6>

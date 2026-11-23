@@ -1,0 +1,865 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="4つのステップで自分だけの抽出レシピを。精製方法、焙煎度、淹れ方（V60、フィン、エスプレッソ、コールドブリュー）、テクニックを選ぶと、マシンが豆の量、湯量、温度、挽き目、時間、注湯ごとの量を計算し、好みに合うMeDiliのコーヒーをご提案します。"><meta property="og:title" content="MeDili抽出レシピマシン"><meta property="og:description" content="4つのステップで自分だけの抽出レシピを。精製方法、焙煎度、淹れ方（V60、フィン、エスプレッソ、コールドブリュー）、テクニックを選ぶと、マシンが豆の量、湯量、温度、挽き目、時間、注湯ごとの量を計算し、好みに合うMeDiliのコーヒーをご提案します。"><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>MeDili抽出レシピマシン</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.inl{color:var(--moss);font-weight:600}
+.quiz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.q{border:0;padding:0;margin:0 0 14px;min-width:0}.q legend{padding:0;font-weight:600}
+.res{background:var(--tint);border-radius:14px;padding:16px}.res h3{font:800 2rem/1.1 var(--display);margin:2px 0 4px;color:var(--accent)}
+.res p{margin:6px 0}.rp{font-weight:600}.rp small{font-weight:400;color:var(--muted)}
+.tinyn{font-size:.78rem;color:var(--muted)}
+.gumap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gm{border-top:3px solid var(--copper);padding-top:8px}.gm h3{margin:0;font:800 1.3rem var(--display)}.gm small{color:var(--muted)}
+ol.steps{margin:0 0 8px;padding-left:20px}ol.steps li{margin-bottom:4px;font-size:.9rem}ol.steps li.on{font-weight:700;color:var(--accent)}
+.sop.tight li{grid-template-columns:36px minmax(0,1fr)}.sop.tight .n{font-size:1.5rem}
+.st.off{opacity:.45}
+@media (max-width:820px){.quiz{grid-template-columns:minmax(0,1fr)}}
+
+:root{--ground:#8FA65E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#5D7340}}
+:root[data-theme="dark"]{--ground:#5D7340}
+.mths button{min-width:52px}
+.sgn3{font:italic 600 13.5px var(--sign)!important;fill:var(--accent)!important}
+.sgn{font-size:18px}
+.calc.three{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-bottom:12px}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px}
+.calc input{font-size:.95rem}
+
+:root{--floor:#C69A62;--wall:#EFE3CD}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--floor:#6B4F31;--wall:#3A2D22}}
+:root[data-theme="dark"]{--floor:#6B4F31;--wall:#3A2D22}
+.shophead{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}.shophead>div:last-child{flex:1 1 320px;min-width:0}
+.logoP{background:#F6F0E4;border-radius:12px;padding:8px 12px;display:inline-block}.logoP img{display:block;height:auto;max-width:100%}
+.flow{list-style:none;display:flex;flex-wrap:wrap;gap:6px 24px;padding:0;margin:0;counter-reset:f;font-weight:600;font-size:.9rem;color:var(--muted)}
+.flow li{counter-increment:f}.flow li::before{content:counter(f) ". ";color:var(--accent)}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:0}
+.whob{text-align:left;padding:12px 16px;border:2px solid var(--rule);border-radius:12px;background:var(--panel);color:var(--ink);cursor:pointer;font:inherit}
+.whob b{display:block;font-size:1.02rem}.whob small{color:var(--muted)}.whob.on{border-color:var(--accent)}
+.ah{font:800 1.45rem var(--display);margin:0 0 8px}
+.ctl{min-width:0}.ctl .card{padding:14px}
+.recbox{background:var(--tint);border-radius:12px;padding:10px;margin-top:12px;display:grid;gap:6px}
+.recb{text-align:left;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:7px 10px;color:var(--ink);cursor:pointer;font:inherit}.recb b{display:block;font-size:.9rem}.recb small{color:var(--muted)}.recb.on{border-color:var(--accent)}
+.line{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule)}.line small{display:block;color:var(--muted)}
+.qty{display:flex;align-items:center;gap:6px;white-space:nowrap}.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+a.btn{text-decoration:none;display:inline-block}
+.bagn{font:italic 600 6.5px var(--sign)!important;fill:#4A2A1A!important}.bagn2{font:700 4.6px var(--body)!important;fill:#A23B24!important}
+.bag.off{opacity:.25}.bag.on polygon{stroke:var(--accent)!important;stroke-width:2.4}
+.bench{align-items:start}
+.sgn3{font:italic 600 13px var(--sign)!important;fill:var(--accent)!important}
+.tag.big rect{fill:var(--accent)}
+
+.sent{margin-top:10px;background:var(--tint);border-radius:12px;padding:12px}.sent>b{display:block;margin-bottom:4px}
+.ordertxt{white-space:pre-wrap;overflow-wrap:anywhere;font:500 .78rem/1.5 var(--mono);margin:6px 0 0;user-select:all}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}.qrs svg{display:block;width:100%;height:auto;border-radius:6px}.qrs small{display:block;text-align:center;margin-top:4px;color:var(--muted)}
+:root{--skin:#EBC9A6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--skin:#8C6A4D}}:root[data-theme="dark"]{--skin:#8C6A4D}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.ctl .card{padding:16px}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style>
+<style>
+/* Khung chung sau khi gộp Manus: menu nhóm, chân trang, màu phong thủy Thổ (nâu, vàng đất, đỏ; không xanh lá, không đen). */
+:root{--moss:#8D4E22;--good:#8D4E22;
+  --i-red:#B33A24;--i-red2:#7A2414;--i-gold:#D9B77E;--i-gold2:#B8894A;--i-coffee:#6B4226;--i-brown:#8D5A32;--i-milk:#E9D3AE;
+  --seg1:#9E3B26;--seg2:#B8894A;--seg3:#6B4226;--seg4:#D9B77E;--seg-t1:#FFF6EC;--seg-t2:#2E1C12;--cmp2:#C9A46A;
+  --cx1:#BB8526;--cx2:#7A348E;--cx3:#83470D;--cx4:#CB4D54}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--panel)}
+.mnav{display:none!important}
+
+/* menu */
+.mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
+.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p a:hover{color:var(--accent)}
+.mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-m{margin:0;font-size:inherit}
+.mh-m>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font:600 .86rem var(--body);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;white-space:nowrap;user-select:none}
+.mh-m>summary::-webkit-details-marker{display:none}
+.mh-m>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mh-m[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-m>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-pan{position:absolute;left:0;right:0;top:100%;background:var(--panel);border-bottom:1px solid var(--rule);box-shadow:0 18px 30px rgba(46,28,18,.16);max-height:calc(100vh - 60px - env(safe-area-inset-top,0px));overflow:auto;overscroll-behavior:contain}
+.mh-grid{max-width:1560px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 26px;padding-block:18px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-g{margin:0 0 6px;font:600 .72rem/1.3 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mh-c ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-c a{display:block;color:var(--ink);text-decoration:none;font:500 .95rem/1.35 var(--body);padding:6px 0;border-bottom:1px solid transparent}
+.mh-c a:hover{color:var(--accent)}
+.mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
+.mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
+.mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.mh-i{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none}
+.mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
+@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+@media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
+
+/* chân trang */
+.mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
+.mf-in{max-width:1560px;margin:auto;padding-block:30px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:26px}
+.mf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border-bottom:1px solid var(--rule);padding-bottom:24px}
+.mf-k{flex-basis:100%;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mf-h{margin:0;font:italic 600 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sign);color:var(--ink);text-wrap:balance}
+.mf-h em{color:var(--accent)}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:22px 30px}
+.mf-brand b{display:block;font:italic 600 1.35rem/1.25 var(--sign);color:var(--accent)}
+.mf-brand span{display:block;margin-top:6px}.mf-brand small{display:block;margin-top:6px;color:var(--muted);letter-spacing:.06em}
+.mf-t{margin:0 0 6px;font:600 .72rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mf-col{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mf-col a{color:var(--ink);text-decoration:none;padding:2px 0}.mf-col a:hover{color:var(--accent);text-decoration:underline}
+.mf-col p{margin:0 0 6px}.mf-n{white-space:nowrap;user-select:all}
+.mf-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:.84rem}
+.mf-base i{font:italic 600 1rem var(--sign);color:var(--accent)}
+@media (max-width:980px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-brand{grid-column:1/-1}}
+@media (max-width:520px){.mf-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ảnh thật */
+.pf{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.pf img{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;border:1px solid var(--rule);background:var(--tint)}
+.pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.pfw img{aspect-ratio:3/1;object-fit:cover}
+.split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
+@media (max-width:700px){.pfw img{aspect-ratio:2/1}}
+.pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
+.pgal{display:grid;gap:10px}
+.pgal>h2{margin:0}
+.pgal>p{margin:0;color:var(--muted);max-width:72ch}
+
+/* chọn ngôn ngữ */
+.mh-l{position:relative;margin:0}
+.mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
+.mh-l>summary::-webkit-details-marker{display:none}
+.mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
+.mh-lp a:hover{background:var(--tint);color:var(--accent)}
+.mh-lp a[aria-current]{color:var(--accent)}
+@media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
+/* nút Zalo, Facebook nổi góc trái bên dưới */
+.fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
+.fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
+.fl-b svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fl-b:hover{transform:translateY(-2px) scale(1.05)}
+.fl-b:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.fl-b::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;background:var(--ink);color:var(--panel);font:600 .8rem var(--body);letter-spacing:0;padding:6px 11px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{opacity:1;transform:translate(0,-50%)}}
+@media (max-width:600px){.fl-c{gap:8px}.fl-b{width:46px;height:46px;font-size:.6rem}.fl-b svg{width:17px;height:17px}}
+@media (max-width:1020px){body:has(.nx-bar) .fl-c{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+/* chừa chỗ cho nút nổi ở cuối chân trang */
+@media (min-width:601px){.mf-base{padding-left:76px}}
+@media (max-width:600px){footer.mf{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}}
+@media print{.fl-c{display:none}}
+
+/* thành phần dùng chung cho trang mới */
+.wrap.art{max-width:980px}
+.k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.eye{font:600 .8rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0}
+section>h2 em,.p-h2 em{font-style:normal;color:var(--accent)}
+.p-h2{font:800 2.05rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em;text-wrap:balance}
+.p-head{display:grid;gap:4px}
+.p-head h1{margin:6px 0 0}
+.p-head .lead{font-size:1.06rem;color:var(--muted);max-width:68ch;margin:10px 0 0}
+.p-sig{font:italic 600 1.25rem var(--sign);color:var(--accent);margin:10px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+a.btn{text-decoration:none;display:inline-block}
+.btn.ghost{border-color:var(--rule)}
+.p-sec{display:grid;gap:10px}
+.p-sec>.lead{margin:0;max-width:72ch;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.facts>div{border-top:2px solid var(--accent);padding-top:8px;min-width:0}
+.facts b{display:block;font:800 2.4rem/1.05 var(--display);color:var(--accent)}
+.facts span{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.g3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.g2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.g4{grid-template-columns:minmax(0,1fr)}}
+.box{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:18px 20px;min-width:0}
+.box h3{font:800 1.45rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em}
+.box p{margin:0 0 8px}.box p:last-child{margin-bottom:0}
+.box .k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.box .ft{margin-top:10px;padding-top:10px;border-top:1px solid var(--rule);font-size:.88rem;color:var(--muted)}
+.box .ft b{color:var(--ink)}
+.box>svg.pi{width:34px;height:34px;color:var(--accent)}
+svg.pi{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+svg.pi .fi{fill:var(--accent);stroke:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font:600 .76rem var(--body);border:1px solid var(--rule);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.lnk{color:var(--accent);font-weight:600;text-decoration:none}.lnk:hover{text-decoration:underline}
+.lnks{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px}
+.quote{margin:0;font:italic 600 clamp(1.4rem,3vw,2.1rem)/1.3 var(--sign);color:var(--accent);max-width:34ch;text-wrap:balance}
+.split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:20px 30px;align-items:center}
+.split img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--rule)}
+.illw{max-width:320px;width:100%;justify-self:center}
+@media (max-width:820px){.split{grid-template-columns:minmax(0,1fr)}.illw{max-width:210px}}
+.pst{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:st}
+.pst>li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:4px 16px;align-items:start;background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 16px;min-width:0}
+.pst>li .n{grid-row:1/3;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--tint);color:var(--accent)}
+.pst>li .n svg{width:24px;height:24px}
+.pst h3{margin:0;font:700 1.05rem/1.3 var(--body)}
+.pst h3 small{font:600 .74rem var(--body);letter-spacing:.06em;color:var(--muted);margin-right:6px}
+.pst p{margin:0;font-size:.93rem}
+.pst.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pst.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.pst.three{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.pst.two{grid-template-columns:minmax(0,1fr)}}
+.trip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.trip a{display:flex;flex-direction:column;height:100%;background:var(--panel);border:1px solid var(--rule);border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none}
+.trip img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;max-width:100%}
+.trip b{font:800 1.25rem/1.15 var(--display);padding:10px 14px 0}
+.trip b small{display:block;font:600 .72rem var(--body);letter-spacing:.08em;color:var(--accent);margin-bottom:2px}
+.trip span{padding:4px 14px 14px;color:var(--muted);font-size:.88rem}
+.trip a:hover b{color:var(--accent)}
+@media (max-width:1180px){.trip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,32%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.trip li{scroll-snap-align:start}}
+@media (max-width:640px){.trip{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:minmax(0,1fr);overflow:visible}}
+.seg{display:flex;gap:2px;height:28px;margin:6px 0 4px}
+.seg i{display:flex;align-items:center;padding:0 8px;border-radius:4px;font:700 .78rem var(--mono);font-style:normal;white-space:nowrap;overflow:hidden;min-width:0}
+.seg i.s1{background:var(--seg1);color:var(--seg-t1)}.seg i.s2{background:var(--seg2);color:var(--seg-t2)}
+.seg i.s3{background:var(--seg3);color:var(--seg-t1)}.seg i.s4{background:var(--seg4);color:var(--seg-t2)}
+.areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:8px}
+.areas>div{border-top:1px solid var(--rule);padding-top:10px;min-width:0}
+.areas .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.areas b{font:700 1rem var(--body)}.areas span{display:block;color:var(--muted);font-size:.86rem}
+.areas strong{display:block;font:800 1.9rem/1.1 var(--display);margin-top:4px}
+.areas strong small{font:600 .8rem var(--body);color:var(--muted);margin-left:6px}
+@media (max-width:900px){.areas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cmp{display:grid;gap:10px;margin-top:8px}
+.cmp>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center}
+.cmp span{font-size:.88rem}.cmp span b{display:block;font-size:.95rem}
+.cmp .tr{position:relative;height:24px;margin-right:64px}
+.cmp .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0;background:var(--accent)}
+.cmp .tr i.b{background:var(--cmp2)}
+.cmp .tr em{position:absolute;top:50%;transform:translateY(-50%);font:700 .9rem var(--mono);font-style:normal;color:var(--ink);white-space:nowrap}
+@media (max-width:520px){.cmp>div{grid-template-columns:minmax(0,1fr)}}
+.loc{display:grid;gap:4px}
+.loc .ttl{display:flex;gap:10px;align-items:center}
+.loc .ttl svg{color:var(--accent)}
+.sel{user-select:all}
+.cp{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.cp strong{font:700 1.25rem var(--mono);user-select:all;overflow-wrap:anywhere}
+.note{font-size:.86rem;color:var(--muted);margin:0}
+.p-form{display:grid;gap:12px}
+.p-form .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:620px){.p-form .row2{grid-template-columns:minmax(0,1fr)}}
+.p-form label{display:grid;gap:4px;font:600 .9rem var(--body)}
+.p-form label small{font-weight:400;color:var(--muted)}
+.p-form input,.p-form select,.p-form textarea{font:500 1rem var(--body);padding:9px 11px;border:1px solid var(--rule);border-radius:10px;background:var(--bg);color:var(--ink);width:100%;min-width:0}
+.p-form textarea{resize:vertical}
+.p-form fieldset{border:0;margin:0;padding:0;min-width:0}
+.p-form legend{font:600 .9rem var(--body);padding:0;margin-bottom:6px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{display:inline-flex;flex-direction:row;align-items:center;gap:6px;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font:600 .86rem var(--body);cursor:pointer;background:var(--panel)}
+.opts input{width:auto;margin:0;accent-color:var(--accent)}
+.opts label:has(input:checked){border-color:var(--accent);background:var(--tint)}
+.msg{white-space:pre-wrap;font:500 .84rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:0;overflow-wrap:anywhere;user-select:all}
+.fstat{font:500 .86rem var(--body);color:var(--muted);min-height:1.3em;margin:0}
+.p-art{max-width:70ch;font-size:1.04rem;line-height:1.78}
+.p-art h2{font:800 1.75rem/1.2 var(--display);margin:30px 0 8px;letter-spacing:.01em}
+.p-art p{margin:0 0 14px}
+.p-art ul,.p-art ol{margin:0 0 14px;padding-left:22px}.p-art li{margin-bottom:6px}
+.p-art .rbox{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 18px;margin:18px 0}
+.p-art .rbox h3{margin:0 0 6px;font:700 1rem var(--body)}
+.p-art .rbox ol{margin:0}
+.p-art .pf,.p-art .pfs{margin:20px 0}
+.p-art blockquote{margin:22px 0;padding:0 0 0 18px;border-left:3px solid var(--accent);font:italic 600 1.3rem/1.45 var(--sign);color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font:600 .8rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.meta b{color:var(--accent)}
+.art-fig{max-width:880px}
+.art-fig svg{display:block;width:100%;height:auto;max-height:340px;background:var(--tint);border-radius:16px}
+.jcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.jcards a{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--rule);border-radius:16px;overflow:hidden;color:var(--ink);text-decoration:none;min-width:0}
+.jcards .th{background:var(--tint);display:grid;place-items:center;aspect-ratio:3/2;max-width:100%}
+.jcards .th svg{display:block;width:100%;height:100%}
+.jcards .bd{padding:12px 16px 16px;display:grid;gap:4px}
+.jcards .meta{font-size:.72rem}
+.jcards h3{margin:2px 0 0;font:800 1.35rem/1.15 var(--display);text-wrap:balance}
+.jcards p{margin:0;color:var(--muted);font-size:.9rem}
+.jcards a:hover h3{color:var(--accent)}
+@media (max-width:1000px){.jcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.jcards{grid-template-columns:minmax(0,1fr)}}
+.jfeat{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);padding:0;overflow:hidden;text-decoration:none;color:var(--ink)}
+.jfeat .th{background:var(--tint);display:grid;place-items:center;padding:14px;min-width:0}
+.jfeat .th svg{display:block;width:100%;max-width:340px;height:auto}
+.jfeat .bd{padding:20px 24px;display:grid;gap:6px;align-content:center;min-width:0}
+.jfeat h3{font:800 2.1rem/1.1 var(--display);margin:0;letter-spacing:.01em}
+.jfeat p{margin:0}.jfeat .bd>p:not(.meta){color:var(--muted);max-width:60ch}
+.jfeat:hover h3{color:var(--accent)}
+@media (max-width:760px){.jfeat{grid-template-columns:minmax(0,1fr)}.jfeat .th svg{max-width:280px}}
+.mdl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin-top:4px}
+.mdl a{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center;border-top:1px solid var(--rule);padding-top:10px;color:var(--ink);text-decoration:none;min-width:0}
+.mdl a svg.pi{width:30px;height:30px;color:var(--accent)}
+.mdl b{display:block;font:700 1rem var(--body)}.mdl small{display:block;color:var(--muted);font-size:.86rem}
+.mdl a:hover b{color:var(--accent)}
+.kser{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink)}
+.kser svg.pi{width:34px;height:34px;color:var(--accent);margin-bottom:4px}
+.kser p{color:var(--muted);font-size:.92rem}
+.kser .lnk{margin-top:auto;padding-top:6px}
+.kser:hover h3{color:var(--accent)}
+.g5k{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:1280px){.g5k{grid-template-columns:repeat(2,minmax(0,1fr))}.g5k>:first-child{grid-column:1/-1}}
+@media (max-width:560px){.g5k{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:1100px){.mdl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mdl{grid-template-columns:minmax(0,1fr)}}
+.ill .o{stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.ill text{font:600 12px var(--body);fill:var(--muted)}
+@media (max-width:620px){.p-h2{font-size:1.75rem}.facts b{font-size:2rem}}
+
+.rx-quick{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.rx-quick label{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font:600 .92rem var(--body);min-width:0;max-width:100%}
+.rx-quick select{font:500 .95rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:10px;padding:8px 10px;max-width:100%;min-width:0}
+.rx-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.rx-step{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:minmax(0,1fr);gap:10px;align-content:start;min-width:0}
+.rx-hd{display:flex;align-items:baseline;gap:12px}
+.rx-n{font:800 2.2rem/1 var(--display);color:var(--accent)}
+.rx-hd h2{font:800 1.5rem/1.1 var(--display);margin:0}
+.rx-opts{display:flex;flex-wrap:wrap;gap:6px}
+.rx-opts button{font:600 .88rem/1.2 var(--body);border:1px solid var(--rule);background:var(--bg);color:var(--ink);border-radius:999px;padding:8px 13px;cursor:pointer}
+.rx-opts button:hover{border-color:var(--accent)}
+.rx-opts button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.rx-opts.big button{display:grid;justify-items:center;gap:4px;border-radius:14px;padding:10px 12px;min-width:96px}
+.rx-opts.big svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.rx-d{margin:0;font-size:.9rem;color:var(--muted);min-height:2.6em}
+.rx-out{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:18px;align-items:start}
+.rx-fig{background:var(--tint);border-radius:20px;padding:18px;display:grid;gap:12px;position:sticky;top:calc(72px + env(safe-area-inset-top,0px))}
+.rx-fig svg.rx-scene{display:block;width:100%;max-width:300px;height:auto;margin:auto}
+.rx-scene .o{stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}
+.rx-scene .t{font:600 11px var(--body);fill:var(--muted)}
+.rx-drop{animation:rxdrop 1.6s ease-in infinite}
+.rx-drop.d2{animation-delay:.8s}
+@keyframes rxdrop{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(26px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.rx-drop{animation:none}}
+.rx-tl{display:block;width:100%;height:auto}
+.rx-tl text{font:600 10.5px var(--mono);fill:var(--muted)}
+.rx-tl .lb{font:600 10.5px var(--body);fill:var(--ink)}
+.rx-cap{margin:0;font-size:.84rem;color:var(--muted);text-align:center}
+.rx-card{background:var(--panel);border:2px solid var(--accent);border-radius:18px;padding:18px 20px;display:grid;grid-template-columns:minmax(0,1fr);gap:14px;min-width:0}
+.rx-ttl{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 14px}
+.rx-ttl h2{font:800 1.9rem/1.1 var(--display);margin:0}
+.rx-sum{display:flex;flex-wrap:wrap;gap:6px}
+.rx-sum span{font:600 .76rem var(--body);border:1px solid var(--rule);border-radius:999px;padding:4px 10px;background:var(--bg)}
+.rx-dose{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;background:var(--tint);border-radius:12px;padding:10px 12px}
+.rx-dose b{font:600 .92rem var(--body)}
+.rx-st{display:inline-flex;align-items:center;border:1px solid var(--rule);border-radius:999px;overflow:hidden;background:var(--panel)}
+.rx-st button{width:40px;height:40px;border:0;background:transparent;color:var(--ink);font:600 1.2rem/1 var(--body);cursor:pointer}
+.rx-st button:hover{background:var(--tint)}
+.rx-st input{width:64px;border:0;background:transparent;color:var(--ink);text-align:center;font:700 1.1rem var(--mono);padding:6px 0}
+.rx-par{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.rx-par div{background:var(--bg);border-radius:12px;padding:9px 11px;min-width:0}
+.rx-par span{display:block;font:600 .68rem/1.3 var(--body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.rx-par b{display:block;font:700 1.12rem/1.3 var(--mono);overflow-wrap:anywhere}
+.rx-par small{display:block;font-size:.78rem;color:var(--muted);line-height:1.35;margin-top:2px}
+.rx-pours{width:100%;border-collapse:collapse;font-size:.9rem}
+.rx-pours th{font:600 .7rem var(--body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);text-align:left;padding:4px 8px 6px 0;border-bottom:1px solid var(--rule)}
+.rx-pours td{padding:7px 8px 7px 0;border-bottom:1px solid var(--rule);vertical-align:top;white-space:normal}
+.rx-pours th{white-space:normal}
+.rx-pours td.m{font:700 .92rem var(--mono);white-space:nowrap}
+.rx-pours td small{display:block;color:var(--muted);font-size:.8rem}
+.rx-bal{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.rx-bal button{font:600 .82rem var(--body);border:1px solid var(--rule);background:var(--bg);color:var(--ink);border-radius:999px;padding:6px 11px;cursor:pointer}
+.rx-bal output{font:600 .82rem var(--body);color:var(--muted)}
+.rx-tips{margin:0;padding-left:1.1em;display:grid;gap:5px;font-size:.92rem}
+.rx-sp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.rx-sp a{display:grid;gap:2px;border:1px solid var(--rule);border-radius:12px;padding:9px 11px;text-decoration:none;color:var(--ink);background:var(--bg);min-width:0}
+.rx-sp a:hover{border-color:var(--accent)}
+.rx-sp i{display:block;width:18px;height:22px;border-radius:2px 2px 4px 4px;background:var(--c);clip-path:polygon(12% 0,88% 0,100% 10%,100% 100%,0 100%,0 10%)}
+.rx-sp b{font:700 .92rem/1.25 var(--body)}
+.rx-sp small{color:var(--muted);font-size:.78rem}
+.rx-act{display:flex;flex-wrap:wrap;gap:8px}
+.rx-msg{margin:0;font-size:.85rem;color:var(--muted);min-height:1.2em}
+.rx-cmp{overflow-x:auto}
+.rx-cmp table{border-collapse:collapse;width:100%;min-width:640px;font-size:.9rem}
+.rx-cmp th,.rx-cmp td{text-align:left;padding:8px 10px 8px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.rx-cmp th{font:600 .72rem var(--body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.rx-cmp td{white-space:normal}.rx-cmp td:first-child{font-weight:700;white-space:nowrap}
+.rx-fix{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
+.rx-fix .box h3{font:800 1.25rem/1.15 var(--display);margin:0 0 4px}
+@media (max-width:980px){.rx-out{grid-template-columns:minmax(0,1fr)}.rx-fig{position:static}}
+@media (max-width:760px){.rx-steps{grid-template-columns:minmax(0,1fr)}.rx-par{grid-template-columns:repeat(2,minmax(0,1fr))}.rx-sp{grid-template-columns:minmax(0,1fr)}}
+@media print{.mh,.mf,.p-head,.rx-quick,.rx-steps,.rx-fig,.rx-more,.contact,.rx-act,.rx-msg,.rx-bal button,.rx-dose .rx-st button{display:none!important}
+ .rx-out{display:block}.rx-card{border:1px solid #999}body{background:#fff}}
+</style><link rel="alternate" hreflang="vi" href="https://www.medili.vn/cong-thuc-pha.html"><link rel="alternate" hreflang="en" href="https://www.medili.vn/en/cong-thuc-pha.html"><link rel="alternate" hreflang="ja" href="https://www.medili.vn/ja/cong-thuc-pha.html"><link rel="alternate" hreflang="zh-Hans" href="https://www.medili.vn/zh/cong-thuc-pha.html"><link rel="alternate" hreflang="x-default" href="https://www.medili.vn/cong-thuc-pha.html"><style>:root{--body:"Be Vietnam Pro","Noto Sans JP",system-ui,sans-serif;--display:"Big Shoulders Display","Noto Sans JP","Be Vietnam Pro",system-ui,sans-serif}body{line-break:strict;word-break:normal;overflow-wrap:anywhere}h1,h2,h3,h4,.btn,.lede{word-break:auto-phrase}</style></head><body><div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a><nav class="mh-p" aria-label="メインメニュー"><a href="cau-chuyen.html">物語</a><a href="vung-trong.html">栽培地</a><a href="anh-vuon.html">農園の写真</a><a href="xuong-rang.html">焙煎所</a><a href="horeca.html">HORECA</a><a href="quan-medili.html">MeDili Café</a><a href="journal.html">知識</a><a href="gia-ca-phe.html">コーヒー価格</a></nav><details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>メニュー</span></summary><nav class="mh-pan" aria-label="すべてのページ"><div class="mh-grid"><div class="mh-c"><p class="mh-g">MeDili</p><ul><li><a href="./">ホーム</a></li><li><a href="cau-chuyen.html">MeDiliの物語</a></li><li><a href="doi-ngu.html">チーム</a></li><li><a href="quan-medili.html">MeDili Caféの店舗</a></li><li><a href="lien-he.html">お問い合わせ</a></li></ul></div><div class="mh-c"><p class="mh-g">栽培と生産</p><ul><li><a href="vung-trong.html">Di Linhの栽培地</a></li><li><a href="anh-vuon.html">農園の写真</a></li><li><a href="vuon.html">農園の12か月</a></li><li><a href="trai-ca-phe.html">チェリーの構造</a></li><li><a href="len-men-men-bia.html">ビール酵母による発酵</a></li><li><a href="len-men-trai-cay.html">フルーツとの共発酵</a></li></ul></div><div class="mh-c"><p class="mh-g">焙煎と抽出</p><ul><li><a href="xuong-rang.html">焙煎所と生産能力</a></li><li><a href="rang.html">焙煎ルーム</a></li><li><a href="huong-dan-pha.html">抽出ガイド</a></li><li><a href="quay-pha.html">ブリューバー</a></li><li><a href="cong-thuc-pha.html" aria-current="page">抽出レシピマシン</a></li><li><a href="cold-brew.html">コールドブリューマシン</a></li><li><a href="tim-gu.html">好みのコーヒー診断</a></li></ul></div><div class="mh-c"><p class="mh-g">購入・お取引</p><ul><li><a href="cua-hang.html">コーヒーストア</a></li><li><a href="mua-hang.html">購入ルーム</a></li><li><a href="horeca.html">HORECA向けソリューション</a></li><li><a href="dong-hanh-cung-quan.html">カフェとともに</a></li><li><a href="nhan-xanh.html">生豆を選ぶ · 卸売</a></li><li><a href="gia-ca-phe.html">本日のコーヒー価格</a></li><li><a href="chinh-sach.html">MeDiliのポリシー</a></li><li><a href="giao-hang.html">配送と返品</a></li><li><a href="gio-hang.html">カート</a></li><li><a href="tim-kiem.html">検索</a></li></ul></div><div class="mh-c"><p class="mh-g">コーヒーの知識</p><ul><li><a href="journal.html">すべての記事</a></li><li><a href="chiet-xuat.html">抽出マシン</a></li><li><a href="phan-biet-ca-phe.html">コーヒー判別マシン</a></li><li><a href="trai-chin.html">完熟チェリーマシン</a></li><li><a href="vi-sinh.html">微生物マシン</a></li><li><a href="tien-chat-huong.html">香りの前駆体マシン</a></li><li><a href="banh-xe-huong.html">MeDiliフレーバーホイール</a></li><li><a href="journal-phin.html">フィンと、時間が落ちるリズム</a></li><li><a href="journal-tu-qua.html">コーヒーチェリーから風味へ</a></li><li><a href="journal-di-linh.html">一杯のコーヒーに宿るDi Linh</a></li><li><a href="tu-vuon-den-ly.html">農園から一杯へ</a></li><li><a href="suc-khoe.html">コーヒーと体</a></li></ul></div></div></nav></details><details class="mh-l"><summary aria-label="言語 · Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.3 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.3-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>JA</span></summary><div class="mh-lp"><a href="../cong-thuc-pha.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../en/cong-thuc-pha.html" hreflang="en" lang="en">English</a><a href="cong-thuc-pha.html" hreflang="ja" lang="ja" aria-current="true">日本語</a><a href="../zh/cong-thuc-pha.html" hreflang="zh-Hans" lang="zh-Hans">中文</a></div></details><a class="mh-i" href="tim-kiem.html" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a><a class="mh-i" href="gio-hang.html" aria-label="カート"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="mh-cn" hidden></span></a><a class="mh-go" href="cua-hang.html">ストア</a></div></div>
+<div class="wrap pg">
+<header class="p-head"><span class="lgw"><img class="lgL" src="../assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><p class="eye">抽出レシピマシン</p><h1>4つのステップで、<em>あなただけのレシピを。</em></h1><p class="lead">精製方法、焙煎度、淹れ方、テクニックを選ぶと、マシンが豆の量、湯量、温度、挽き目、時間、注湯ごとの量を計算します。これは出発点です。淹れて、味わって、好みに合わせて調整してください。</p><div class="cta"><a class="btn main" href="#cong-thuc">選び始める</a><a class="btn" href="cua-hang.html">MeDiliのコーヒーを選ぶ</a><a class="btn" href="chiet-xuat.html">抽出マシン</a></div></header>
+<section class="box rx-quick" aria-label="MeDiliのコーヒーからすばやく選ぶ">
+ <label for="rx-q">お手元のMeDiliのコーヒーはどれですか？<select id="rx-q"><option value="">選ぶと最初の3ステップが自動で入力されます</option><option value="pc">フィン用 Robusta Classic</option><option value="pp">フィン用 Robusta Premium</option><option value="mc">エスプレッソ用 Robusta Classic</option><option value="mp">エスプレッソ用 Robusta Premium</option><option value="ms">エスプレッソ用 Robusta Specialty</option><option value="pa">フィン用 Arabica Premium</option><option value="ma">エスプレッソ用 Arabica Premium</option><option value="b91">エスプレッソ用 Blend 9:1</option><option value="b82">エスプレッソ用 Blend 8:2</option><option value="b73">エスプレッソ用 Blend 7:3</option><option value="b55">エスプレッソ用 Blend 5:5</option><option value="bm">Blend MeDili</option><option value="cat">Catimor</option><option value="cul">Culi</option><option value="ng-suong">Sương</option><option value="ng-rung">Rừng</option><option value="ng-suoi">Suối</option><option value="ng-nang">Nắng</option><option value="ng-nui">Núi</option><option value="ng-may">Mây</option></select></label>
+</section>
+<section class="rx-steps" id="cong-thuc" aria-label="4つのステップ">
+ <div class="rx-step"><div class="rx-hd"><span class="rx-n">01</span><h2>精製</h2></div><div class="rx-opts" id="rx-pc" role="group" aria-label="精製"></div><p class="rx-d" id="rx-pc-d"></p></div>
+ <div class="rx-step"><div class="rx-hd"><span class="rx-n">02</span><h2>焙煎度</h2></div><div class="rx-opts" id="rx-ro" role="group" aria-label="焙煎度"></div><p class="rx-d" id="rx-ro-d"></p></div>
+ <div class="rx-step"><div class="rx-hd"><span class="rx-n">03</span><h2>抽出方法</h2></div><div class="rx-opts big" id="rx-m" role="group" aria-label="抽出方法"></div><p class="rx-d" id="rx-m-d"></p></div>
+ <div class="rx-step"><div class="rx-hd"><span class="rx-n">04</span><h2>テクニック</h2></div><div class="rx-opts" id="rx-t" role="group" aria-label="テクニック"></div><p class="rx-d" id="rx-t-d"></p></div>
+</section>
+<section class="rx-out" aria-label="あなたのレシピ">
+ <div class="rx-fig"><div id="rx-scene"></div><div id="rx-tl"></div><p class="rx-cap" id="rx-cap"></p></div>
+ <div class="rx-card" id="rx-card" aria-live="polite">
+  <div class="rx-ttl"><h2>あなたのレシピ</h2><button type="button" class="btn small ghost" id="rx-reset">最初から選び直す</button></div>
+  <div class="rx-sum" id="rx-sum"></div>
+  <div class="rx-dose"><b>豆の量</b><div class="rx-st"><button type="button" id="rx-minus" aria-label="豆を減らす">−</button><input id="rx-dose" inputmode="decimal" aria-label="豆の量（グラム）"><button type="button" id="rx-plus" aria-label="豆を増やす">+</button></div><span id="rx-unit">g（粉）</span></div>
+  <div class="rx-par" id="rx-par"></div>
+  <div class="rx-bal" id="rx-bal" hidden><button type="button" id="rx-sweet">甘めに</button><button type="button" id="rx-bright">酸味強めに</button><output id="rx-bal-o"></output></div>
+  <table class="rx-pours" id="rx-pours"></table>
+  <div><p class="eye">好みに合わせて調整</p><ul class="rx-tips" id="rx-tips"></ul></div>
+  <div><p class="eye">このレシピに合うMeDiliのコーヒー</p><div class="rx-sp" id="rx-sp" style="margin-top:6px"></div></div>
+  <div class="rx-act"><button type="button" class="btn main" id="rx-img">レシピを画像で保存</button><button type="button" class="btn" id="rx-print">レシピを印刷</button><button type="button" class="btn" id="rx-copy">レシピをコピー</button></div>
+  <p class="rx-msg" id="rx-msg" role="status"></p>
+ </div>
+</section>
+<section class="p-sec rx-more">
+ <p class="eye">簡単比較</p>
+ <h2 class="p-h2">4つの淹れ方、<em>4つの味わい。</em></h2>
+ <div class="rx-cmp"><table>
+  <thead><tr><th>抽出方法</th><th>比率</th><th>湯</th><th>挽き目</th><th>時間</th><th>カップの味わい</th><th>向いている</th></tr></thead>
+  <tbody>
+   <tr><td>ハンドドリップ V60</td><td>1:15〜1:17</td><td>90〜96 °C</td><td>中挽き〜中粗挽き</td><td>3分〜3分30秒</td><td>クリーンで香りがはっきり、爽やかな酸味</td><td>浅煎り〜中煎りのArabica</td></tr>
+   <tr><td>フィン</td><td>1:3〜1:5</td><td>90〜96 °C</td><td>中煎り</td><td>4〜5分</td><td>濃厚、しっかりしたボディ、はっきりした苦み</td><td>中煎り〜深煎りのRobusta</td></tr>
+   <tr><td>エスプレッソ</td><td>1:1.5〜1:3</td><td>90〜94 °C</td><td>細挽き</td><td>20〜35秒</td><td>濃密で厚いクレマ、ミルクのベースに</td><td>Blend、Robusta Premium</td></tr>
+   <tr><td>コールドブリュー</td><td>1:5〜1:10</td><td>冷水</td><td>粗挽き</td><td>14〜20時間</td><td>まろやかで甘く、酸味が少ない</td><td>Robusta Honey、blend</td></tr>
+  </tbody></table></div>
+</section>
+<section class="p-sec rx-more">
+ <p class="eye">カップの味を読み解く</p>
+ <h2 class="p-h2">味わってから、<em>一度に1つだけ調整。</em></h2>
+ <div class="rx-fix">
+  <div class="box"><h3>酸味が強く、薄い</h3><p>抽出不足です。挽き目を1段階細かくするか、湯温を1〜2 °C上げるか、時間を延ばします。</p></div>
+  <div class="box"><h3>焦げたような苦み、口が渇く</h3><p>過抽出です。粗く挽くか、温度を下げるか、時間を短くするか、やさしく注ぎます。</p></div>
+  <div class="box"><h3>薄く、ボディが足りない</h3><p>豆を1〜2 g増やすか、湯を減らします。比率を1:16から1:15へ。</p></div>
+  <div class="box"><h3>甘く、まろやかで、長い余韻</h3><p>それがあなたのレシピです。「画像で保存」ボタンで記録しておけば、次も同じように淹れられます。</p></div>
+ </div>
+</section>
+
+<section class="contact" id="lien-he"><div><img class="lgK" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83"><div class="tagline">Di Linhの味に魅せられて</div><p>販売元：DSunfood有限会社、143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM。<br>農園・焙煎所：Thôn 11, Xã Di Linh, Lâm Đồng。</p></div><div class="zalo"><span>MeDili Zalo</span><strong data-sel>0966 770 788</strong><div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Zaloでメッセージ</a><button type="button" data-copy="0966770788" data-done="番号をコピーしました">番号をコピー</button></div><small>メール：cafe@medili.vn</small></div></section>
+</div>
+<footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">いつだって<em>おいしいコーヒー一杯</em>のための時間はあります。</p><a class="btn main" href="quan-medili.html">MeDiliで会いましょう</a></div><div class="mf-grid"><div class="mf-brand"><b>コーヒーに夢中、Di Linhに夢中。</b><span>受け継いだものを守り、ひとつひとつの風味を大切に。</span><small>Di Linh · ラムドン省 · ベトナム</small></div><nav class="mf-col" aria-label="探索"><p class="mf-t">探索</p><a href="cau-chuyen.html">MeDiliの物語</a><a href="doi-ngu.html">MeDiliのチーム</a><a href="vung-trong.html">Di Linhの栽培地</a><a href="anh-vuon.html">MeDili農園の写真</a><a href="xuong-rang.html">焙煎所と生産能力</a><a href="rang.html">焙煎ルーム</a><a href="huong-dan-pha.html">抽出ガイド</a><a href="quay-pha.html">ブリューバー</a><a href="tim-gu.html">好みのコーヒー診断</a><a href="cong-thuc-pha.html">抽出レシピマシン</a><a href="chiet-xuat.html">抽出マシン</a><a href="cold-brew.html">コールドブリューマシン</a><a href="journal.html">コーヒーの知識</a></nav><nav class="mf-col" aria-label="MeDiliとあなた"><p class="mf-t">MeDiliとあなた</p><a href="cua-hang.html">MeDiliストア</a><a href="mua-hang.html">購入ルーム</a><a href="horeca.html">HORECA向けソリューション</a><a href="dong-hanh-cung-quan.html">カフェとともに</a><a href="nhan-xanh.html">卸売向け生豆</a><a href="gia-ca-phe.html">本日のコーヒー価格</a><a href="quan-medili.html">MeDili Caféの店舗</a><a href="lien-he.html">お問い合わせと地図</a><a href="chinh-sach.html">MeDiliのポリシー</a><a href="giao-hang.html">配送と返品</a><a href="bao-mat.html">プライバシーポリシー</a></nav><div class="mf-col"><p class="mf-t">販売元 · DSunfood</p><p>DSunfood有限会社<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>農園・焙煎所<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">MeDiliへの道順 ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">ZaloでMeDiliにメッセージ ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>MeDili Coffee Farm · Cà Sẻ Di Linh</i></div></div></footer><nav class="fl-c" aria-label="MeDiliへのクイック連絡"><a class="fl-b" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener" aria-label="ZaloでMeDiliにメッセージ" data-tip="ZaloでMeDiliにメッセージ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a><a class="fl-b" href="https://www.facebook.com/share/192oMLdBnq/" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a></nav>
+<script>
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'コピーしました'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='番号を選択しました。ご自身でコピーしてください'}
+setTimeout(()=>{b.textContent=o},2400)}))})();
+window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
+const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};
+const badge=()=>{const n=get().reduce((a,x)=>a+(+x.q||0),0);document.querySelectorAll('.mh-cn').forEach(e=>{e.textContent=n>99?'99+':n;e.hidden=!n})};
+const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badge()};
+const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
+badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
+
+const PC={washed:{n:'Washed',d:'果肉を除き、発酵させ、ミューシレージを洗い流してから乾燥。クリーンですっきりした、爽やかな酸味の一杯。',t:0,g:0},
+ honey:{n:'Honey',d:'ミューシレージの一部を残して乾燥。Washedより甘く、ボディがまろやか。',t:-1,g:0},
+ natural:{n:'Natural',d:'実を丸ごと乾燥。熟した果実の香り、濃い甘み、しっかりしたボディ。',t:-1,g:20},
+ anaerobic:{n:'嫌気性Natural',d:'乾燥の前に、密閉した容器で実をねかせます。熟した果実やワインのような、はっきりした発酵の香り。',t:-2,g:40}};
+const RO={rs:{n:'極浅煎り',d:'豆はまだ硬く、爽やかな酸味と花の香りが豊か。',t:2,g:-60},
+ s:{n:'浅煎り',d:'爽やかな酸味、はっきりしたフルーツの香り。',t:1,g:-30},
+ sv:{n:'中浅煎り',d:'酸味と甘みのバランス。',t:0,g:0},
+ v:{n:'中煎り',d:'キャラメルの甘み、中程度のボディ、やわらかな酸味。',t:-1,g:20},
+ vd:{n:'中深煎り',d:'黒糖、カカオ、ほのかな苦み。',t:-2,g:40},
+ d:{n:'深煎り',d:'濃厚ではっきりした苦み、ダークチョコレート。伝統的なフィンの一杯の焙煎スタイル。',t:-3,g:60}};
+const ICON={v60:'<svg viewBox="0 0 36 36" aria-hidden="true"><path d="M7 9h22l-8 13h-6z"/><path d="M12 26h12v5H12z"/><path d="M15 22v4M21 22v4"/></svg>',
+ phin:'<svg viewBox="0 0 36 36" aria-hidden="true"><path d="M11 7h14v10H11z"/><path d="M8 17h20"/><path d="M12 20h12l-1.5 11h-9z"/></svg>',
+ esp:'<svg viewBox="0 0 36 36" aria-hidden="true"><path d="M8 8h16v5H8z"/><path d="M24 10h6"/><path d="M11 18h12v6a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z"/><path d="M23 20h2a2.5 2.5 0 0 1 0 5h-2"/></svg>',
+ cold:'<svg viewBox="0 0 36 36" aria-hidden="true"><path d="M11 6h14v3H11z"/><path d="M10 9h16v20a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2z"/><path d="M10 17h16"/><circle cx="27" cy="27" r="5"/><path d="M27 24.5V27l1.8 1.2"/></svg>'};
+const M={
+ v60:{n:'ハンドドリップ V60',d:'円すい形ドリッパー、ペーパーフィルター、手で注ぐ。クリーンで香りがはっきりした一杯で、浅煎り〜中煎りのArabicaに向いています。',temp:94,cold:0,
+  T:{'46':{n:'4:6 · 5回注湯',d:'最初の2回で酸味と甘みを、残りの3回で濃さを調整します。',dose:20,r:15,g:950,end:210},
+     one:{n:'蒸らしてから1回で注ぐ',d:'45秒蒸らし、湯を一度に全部注ぎ、軽く回して落ちきるまで待ちます。',dose:15,r:16.5,g:650,end:180},
+     three:{n:'3回注湯',d:'蒸らしてから2回に分けて同量を注ぎます。簡単で、バランスのよい一杯に。',dose:15,r:16,g:750,end:180},
+     pulse:{n:'パルス注湯',d:'蒸らしてから4回に分けて少しずつ注ぎ、粉が常に湯に浸かった状態を保ちます。甘く厚みのある一杯に。',dose:15,r:16,g:700,end:195}}},
+ phin:{n:'フィン',d:'アルミかステンレスのフィンで、ゆっくりしたたらせます。濃くしっかりしたボディの一杯で、中煎り〜深煎りのRobustaに向いています。',temp:94,cold:0,
+  T:{nong:{n:'ホットのブラックフィン',d:'ホットのブラックを、ゆっくり味わう。',dose:20,r:5,g:600,end:270},
+     da:{n:'アイスのブラックフィン',d:'氷が溶けて薄まるので、濃いめに淹れます。',dose:22,r:3.6,g:600,end:270},
+     sua:{n:'フィンのアイスミルク',d:'サイゴン式のミルクコーヒー：濃いコーヒー、練乳、氷。',dose:25,r:2.8,g:580,end:270},
+     bx:{n:'バクシウ',d:'ミルクが多く、コーヒーは少なめで、コクがありまろやか。',dose:15,r:3,g:600,end:240}}},
+ esp:{n:'エスプレッソ',d:'9気圧のマシン。量が少なく濃密で、クレマがたっぷり。アメリカーノ、ラテ、カプチーノのベースになります。',temp:93,cold:0,
+  T:{esp:{n:'エスプレッソ 1:2',d:'標準的なダブルショット。濃さと甘みのバランスがよい。',dose:18,r:2,g:250,end:28},
+     ris:{n:'リストレット 1:1.5',d:'より短いショット。濃密で甘く、苦みは少なめ。',dose:18,r:1.5,g:230,end:23},
+     lun:{n:'ルンゴ 1:3',d:'より長いショット。軽く香りがはっきりしますが、苦くなりやすい。',dose:18,r:3,g:280,end:36},
+     ame:{n:'アメリカーノ',d:'1:2のショットにお湯を加えたもの。',dose:18,r:2,g:250,end:28},
+     lat:{n:'ラテ',d:'1:2のショットに温めたミルク、薄い泡。',dose:18,r:2,g:250,end:28},
+     cap:{n:'カプチーノ',d:'1:2のショットに泡たっぷりのミルク。',dose:18,r:2,g:250,end:28}}},
+ cold:{n:'コールドブリュー',d:'冷たい水に何時間も浸します。まろやかで甘く、酸味が少なく、爽やかな一杯。',temp:0,cold:1,
+  T:{cot:{n:'濃縮原液 1:5',d:'濃い原液をつくり、飲むときに水かミルクで1:1に割ります。',dose:100,r:5,g:1100,end:16},
+     lien:{n:'そのまま飲める 1:10',d:'薄めに浸し、こしたらすぐに飲めます。割る必要はありません。',dose:60,r:10,g:1100,end:18},
+     sua:{n:'コールドブリューミルク',d:'1:5の原液を牛乳で割り、お好みで練乳を加えます。',dose:100,r:5,g:1100,end:16},
+     jp:{n:'急冷式アイスコーヒー',d:'氷の上に熱いコーヒーを素早く落とします。ハンドドリップのような香りで、すぐに冷たくなります。',dose:20,r:15,g:650,end:165}}}};
+const PICK={"v60":["aw","an","ng-suong","acd","ma"],"phin":["pc","ng-nui","pp","ng-nang","pa","cul"],"esp":["mp","b73","ng-rung","ng-may","ma","b91","mc"],"cold":["ng-nang","ng-suoi","pp","b55"]},SP=[{"id":"pc","n":"フィン用 Robusta Classic","file":"sp-phin-robusta-classic.html","col":"#6B4226","pk":["natural"],"rk":"d","m":"phin","st":"ban","price":"280,000 VND/kg"},{"id":"pp","n":"フィン用 Robusta Premium","file":"sp-phin-robusta-premium.html","col":"#A23B24","pk":["honey","washed"],"rk":"v","m":"phin","st":"ban","price":"320,000 VND/kg"},{"id":"mc","n":"エスプレッソ用 Robusta Classic","file":"sp-may-robusta-classic.html","col":"#6B4226","pk":["natural"],"rk":"d","m":"esp","st":"ban","price":"280,000 VND/kg"},{"id":"mp","n":"エスプレッソ用 Robusta Premium","file":"sp-may-robusta-premium.html","col":"#A23B24","pk":["honey","washed"],"rk":"v","m":"esp","st":"ban","price":"320,000 VND/kg"},{"id":"ms","n":"エスプレッソ用 Robusta Specialty","file":"sp-may-robusta-specialty.html","col":"#7A1F2B","pk":["lot"],"rk":null,"m":"esp","st":"ban","price":"550,000 VND/kg"},{"id":"pa","n":"フィン用 Arabica Premium","file":"sp-phin-arabica-premium.html","col":"#B5832F","pk":["honey","washed"],"rk":"d","m":"phin","st":"ban","price":"550,000 VND/kg"},{"id":"ma","n":"エスプレッソ用 Arabica Premium","file":"sp-may-arabica-premium.html","col":"#B5832F","pk":["honey","washed"],"rk":"v","m":"esp","st":"ban","price":"550,000 VND/kg"},{"id":"b91","n":"エスプレッソ用 Blend 9:1","file":"sp-may-blend-premium-9-1.html","col":"#8A5A32","pk":["lot"],"rk":"v","m":"esp","st":"ban","price":"345,000 VND/kg"},{"id":"b82","n":"エスプレッソ用 Blend 8:2","file":"sp-may-blend-premium-8-2.html","col":"#8A5A32","pk":["lot"],"rk":"v","m":"esp","st":"ban","price":"365,000 VND/kg"},{"id":"b73","n":"エスプレッソ用 Blend 7:3","file":"sp-may-blend-premium-7-3.html","col":"#8A5A32","pk":["lot"],"rk":"v","m":"esp","st":"ban","price":"389,000 VND/kg"},{"id":"b55","n":"エスプレッソ用 Blend 5:5","file":"sp-may-blend-premium-5-5.html","col":"#8A5A32","pk":["lot"],"rk":"v","m":"esp","st":"ban","price":"435,000 VND/kg"},{"id":"bm","n":"Blend MeDili","file":"sp-blend-medili.html","col":"#4A2A1A","pk":["lot"],"rk":null,"m":"esp","st":"ban","price":"400,000 VND/kg"},{"id":"cat","n":"Catimor","file":"sp-catimor.html","col":"#C9A15B","pk":["lot"],"rk":null,"m":"phin","st":"ban","price":"400,000 VND/kg"},{"id":"cul","n":"Culi","file":"sp-culi.html","col":"#B0792A","pk":["lot"],"rk":null,"m":"phin","st":"ban","price":"350,000 VND/kg"},{"id":"ng-suong","n":"Sương","file":"sp-ngu-hanh-suong.html","col":"#9C8466","pk":["honey","washed"],"rk":"d","m":"phin","st":"ban","price":"112,500 VND/250 g袋"},{"id":"ng-rung","n":"Rừng","file":"sp-ngu-hanh-rung.html","col":"#C8962E","pk":["lot"],"rk":"v","m":"phin","st":"ban","price":"87,500 VND/250 g袋"},{"id":"ng-suoi","n":"Suối","file":"sp-ngu-hanh-suoi.html","col":"#8A6F5A","pk":["honey"],"rk":"v","m":"phin","st":"ban","price":"100,000 VND/250 g袋"},{"id":"ng-nang","n":"Nắng","file":"sp-ngu-hanh-nang.html","col":"#B33A24","pk":["honey"],"rk":"v","m":"phin","st":"ban","price":"87,500 VND/250 g袋"},{"id":"ng-nui","n":"Núi","file":"sp-ngu-hanh-nui.html","col":"#5A3A28","pk":["natural"],"rk":"d","m":"phin","st":"ban","price":"100,000 VND/250 g袋"},{"id":"ng-may","n":"Mây","file":"sp-ngu-hanh-may.html","col":"#C98F7A","pk":["lot"],"rk":"v","m":"phin","st":"ban","price":"105,000 VND/250 g袋"},{"id":"frd","n":"Fine Robusta Di Linh","file":"sp-fine-robusta-di-linh.html","col":"#8B4A2B","pk":["lot"],"rk":"d","m":"phin","st":"sap","price":"お問い合わせ · 近日発売"},{"id":"rh","n":"Robusta Honey Di Linh","file":"sp-fine-robusta-honey-di-linh.html","col":"#C27B2C","pk":["honey"],"rk":"d","m":"phin","st":"sap","price":"お問い合わせ · 近日発売"},{"id":"acd","n":"Arabica Cầu Đất","file":"sp-arabica-cau-dat.html","col":"#A86B3C","pk":["lot"],"rk":null,"m":"phin","st":"sap","price":"お問い合わせ · 近日発売"},{"id":"sig","n":"MeDili Signature","file":"sp-signature-coffee.html","col":"#5C2A3A","pk":["lot"],"rk":"d","m":"phin","st":"sap","price":"お問い合わせ · 近日発売"},{"id":"an","n":"Arabica Natural Cầu Đất","file":"sp-arabica-natural-cau-dat.html","col":"#9E4B6E","pk":["natural"],"rk":null,"m":"phin","st":"sap","price":"お問い合わせ · 近日発売"},{"id":"aw","n":"Arabica Washed Cầu Đất","file":"sp-arabica-washed-cau-dat.html","col":"#C08A3E","pk":["washed"],"rk":null,"m":"phin","st":"sap","price":"お問い合わせ · 近日発売"}],SPI=Object.fromEntries(SP.map(x=>[x.id,x]));
+const K='medili-congthuc-1';
+let S={pc:'washed',ro:'sv',m:'v60',t:'46',dose:20,sh:0};
+try{const v=JSON.parse(localStorage.getItem(K)||'null');if(v&&M[v.m]&&M[v.m].T[v.t])S=Object.assign(S,v)}catch(e){}
+const $=id=>document.getElementById(id);
+const fm=n=>Math.round(n).toLocaleString('ja-JP');
+const f1=n=>(Math.round(n*10)/10).toLocaleString('ja-JP');
+const mmss=s=>{s=Math.round(s);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
+const E=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const grindTxt=g=>g<350?'細挽き、エスプレッソマシン用':g<600?'中細挽き、食卓塩くらい':g<850?'中挽き、砂くらい':g<1050?'中粗挽き、海塩くらい':'粗挽き、粗塩くらい';
+
+function recipe(){
+ const m=M[S.m],t=m.T[S.t],ro=RO[S.ro],pc=PC[S.pc],d=+S.dose;
+ const esp=S.m==='esp';
+ const temp=m.cold&&S.t!=='jp'?null:Math.max(86,Math.min(96,(S.t==='jp'?94:m.temp)+(esp?Math.round(ro.t/2):ro.t)+pc.t));
+ const gAdj=esp?Math.round(ro.g/4)+Math.round(pc.g/4):ro.g+pc.g,g=Math.max(150,t.g+gAdj);
+ const R={temp,g,pours:[],ing:[],par:[],tips:[],end:t.end,unit:'s'};
+ let W=d*t.r;
+ if(S.m==='v60'){
+  R.water=W;
+  if(S.t==='46'){const q=W*.2,sh=Math.max(-q*.6,Math.min(q*.6,+S.sh||0));
+   R.pours=[{at:0,w:q+sh,n:'中心から外へ均一に注ぎ、粉がふくらむのを待つ'},{at:45,w:q-sh,n:'2回目：酸味と甘みを調整するグループ'},{at:90,w:q,n:'濃さを調整するグループの開始'},{at:130,w:q,n:''},{at:165,w:q,n:'最後の注湯、落ちきるまで待つ'}];R.bal=sh}
+  else if(S.t==='one'){const b=d*2;R.pours=[{at:0,w:b,n:'蒸らし、軽く回して粉全体を湿らせる'},{at:45,w:W-b,n:'最後まで続けて注ぎ、1:45までに終える'},{at:105,w:0,n:'軽く回して粉の表面を平らにする'}]}
+  else if(S.t==='three'){const b=d*2.5;R.pours=[{at:0,w:b,n:'45秒蒸らす'},{at:45,w:W*.6-b,n:'湯量の60%まで注ぐ'},{at:90,w:W*.4,n:'全量まで注ぎ、落ちきるまで待つ'}]}
+  else {const b=d*2,p=(W-b)/4;R.pours=[{at:0,w:b,n:'40秒蒸らす'},{at:40,w:p,n:'1回目'},{at:65,w:p,n:'2回目'},{at:90,w:p,n:'3回目'},{at:115,w:p,n:'4回目、落ちきるまで待つ'}]}
+  R.par=[['湯',fm(W)+' g',''],['比率','1:'+f1(t.r),''],['温度',temp+' °C','沸かしたての湯を少し冷ます'],['挽き目','≈ '+g+' µm',grindTxt(g)],['時間',mmss(t.end),'落ちきるまでの時間を含む'],['抽出量','≈ '+fm(W-d*2)+' ml','粉は豆の量の約2倍の湯を含む']];
+ } else if(S.m==='phin'){
+  R.water=W;const b=d;R.pours=[{at:0,w:b,n:'蒸らし：粉の表面を均一に湿らせ、ふくらむのを待つ'},{at:40,w:W-b,n:'いっぱいまで注ぎ、ふたをして、落ちるのを待つ'}];
+  if(S.t==='da')R.ing=[['角氷','≈ 150 g'],['砂糖','お好みで']];
+  if(S.t==='sua')R.ing=[['練乳',fm(d)+' ml'],['角氷','≈ 150 g']];
+  if(S.t==='bx')R.ing=[['練乳',fm(d*2)+' ml'],['牛乳',fm(d*4)+' ml'],['角氷','≈ 120 g']];
+  R.par=[['湯',fm(W)+' ml',''],['比率','1:'+f1(t.r),S.t==='nong'?'':'ミルクと氷を加えるので濃いめに淹れる'],['温度',temp+' °C','沸騰した湯を約30秒冷ます'],['挽き目','≈ '+g+' µm',grindTxt(g)],['時間',mmss(t.end),'落ちきるまで'],['抽出量','≈ '+fm(W-d*1.6)+' ml','濃いコーヒー']];
+ } else if(esp){
+  const y=d*t.r;R.water=y;R.pours=[{at:0,w:0,n:'抽出を開始、最初の数秒は湯が粉にしみ込む'},{at:7,w:y*.15,n:'最初のしずくが出る、濃い茶色'},{at:t.end,w:y*.85,n:'目標量で止める '+f1(y)+' g'}];
+  if(S.t==='ame')R.ing=[['お湯',fm(y*4)+' ml']];
+  if(S.t==='lat')R.ing=[['牛乳',fm(d*11)+' ml','60〜65 °Cに温め、薄い泡']];
+  if(S.t==='cap')R.ing=[['牛乳',fm(d*7)+' ml','泡をたっぷり立てる']];
+  R.par=[['ショットの抽出量',f1(y)+' g','スケールで計量'],['比率','1:'+f1(t.r),''],['温度',temp+' °C','マシンの湯温'],['挽き目','≈ '+g+' µm',grindTxt(g)],['時間',(t.end-3)+'–'+(t.end+2)+' 秒','ボタンを押した時点から'],['圧力','9 bar','']];
+ } else {
+  if(S.t==='jp'){const tot=d*t.r,ice=tot*.4,hot=tot*.6;R.water=hot;R.pours=[{at:0,w:d*2,n:'氷の上で40秒蒸らす'},{at:40,w:hot-d*2,n:'残りの湯を注ぐ'}];R.ing=[['サーバーに入れる氷',fm(ice)+' g','氷で冷やし、薄める']];
+   R.par=[['お湯',fm(hot)+' g','＋ '+fm(ice)+' g の氷'],['比率','1:'+f1(t.r),'氷を含む'],['温度',temp+' °C',''],['挽き目','≈ '+g+' µm',grindTxt(g)],['時間',mmss(t.end),''],['抽出量','≈ '+fm(tot-d*2)+' ml','すぐに飲む']]}
+  else {R.unit='h';R.water=W;R.pours=[{at:0,w:W,n:'冷水か常温の水を注ぎ、全体が湿るように混ぜる'},{at:t.end,w:0,n:'ペーパーフィルターか布袋でこす'}];
+   if(S.t!=='lien')R.ing=[[S.t==='sua'?'飲むときに牛乳':'飲むときに水かミルク','原液1：1',S.t==='sua'?'お好みで練乳を加える':'']];
+   R.par=[['湯',fm(W)+' ml','冷水か常温の水'],['比率','1:'+f1(t.r),S.t==='lien'?'そのまま飲める':'濃い原液'],['温度','冷水','4 °Cの冷蔵庫で浸す'],['挽き目','≈ '+g+' µm',grindTxt(g)],['時間',(t.end-2)+'–'+(t.end+2)+' 時間',''],['抽出量','≈ '+fm(W-d*2)+' ml',S.t==='lien'?'':'原液。飲むときに1:1で割る']]}
+ }
+ // gợi ý chỉnh
+ const T=R.tips;
+ if(S.ro==='rs'||S.ro==='s')T.push('浅煎りの豆はまだ硬いので、湯温を高めにし、少し細かく挽いて甘さを十分に引き出します。');
+ if(S.ro==='vd'||S.ro==='d')T.push('深煎りは苦くなりやすいので、湯温を低めにし、やさしく注ぎ、時間をかけすぎないようにします。');
+ if(S.pc==='natural'||S.pc==='anaerobic')T.push('フルーツや発酵の香りが強いときは、温度を少し下げて刺激の強い一杯にならないようにします。');
+ if(S.pc==='washed')T.push('Washedはすっきりとクリーンな一杯になります。薄く感じたら豆を1 g増やします。');
+ if(S.m==='phin')T.push('中ぶたは軽くのせ、強く押さえつけません。2〜3秒に1滴くらいがちょうどよい速さです。');
+ if(esp)T.push('粉量は固定し、まず挽き目を調整します。22秒未満で落ちきるなら細かく、35秒を超えるなら粗く挽きます。');
+ if(S.m==='cold'&&S.t!=='jp')T.push('冷やして7日以内に飲みきってください。粗く挽くと液が澄み、こしやすくなります。');
+ if(S.m==='v60')T.push('粉を入れる前にペーパーフィルターを湯ですすぎ、紙のにおいを取ります。');
+ T.push('酸味が強く薄いときは、1段階細かく挽くか1〜2 °C上げます。苦く口が渇くときは、粗く挽くか1〜2 °C下げます。');
+ return R}
+
+function picks(){const L=(PICK[S.m]||[]).map(i=>SPI[i]).filter(Boolean);
+ return L.map((x,i)=>[x,(x.pk.includes(S.pc)?2:0)+(x.rk===S.ro?1.5:0)+(x.st==='ban'?.6:0)-i*.01]).sort((a,b)=>b[1]-a[1]).slice(0,3).map(a=>a[0])}
+
+// ---------- hình dụng cụ ----------
+const LIQ='var(--i-coffee)',MILK='var(--i-milk)',CON='#E9D3AE',ICE='rgba(255,246,234,.75)',STREAM='#C69A62';
+function scene(R){const m=S.m,t=S.t;let s='';
+ const drops=x=>`<ellipse class="rx-drop" cx="${x}" cy="0" rx="2.4" ry="3.6" fill="${LIQ}"/><ellipse class="rx-drop d2" cx="${x}" cy="0" rx="2" ry="3" fill="${LIQ}"/>`;
+ const ice=(x,y)=>`<rect x="${x}" y="${y}" width="20" height="18" rx="4" fill="${ICE}" stroke="var(--rule)"/>`;
+ // ly có thành nghiêng: x0,x1 mép trên, y0,y1 đỉnh và đáy, k độ nghiêng mỗi bên
+ const G=(x0,x1,y0,y1,k)=>({l:y=>x0+k*(y-y0)/(y1-y0),r:y=>x1-k*(y-y0)/(y1-y0)});
+ const band=(g,ya,yb,fill,op)=>`<path d="M${g.l(ya)} ${ya}H${g.r(ya)}L${g.r(yb)} ${yb}H${g.l(yb)}z" fill="${fill}"${op?` opacity="${op}"`:''}/>`;
+ if(m==='v60'||(m==='cold'&&t==='jp')){
+  s+=`<path class="o" d="M150 30c20-12 44-6 52 12" fill="none"/><path d="M152 40c-14 6-28 12-38 22" stroke="${STREAM}" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+  s+=`<path class="o" d="M60 60h100l-34 52h-32z" fill="var(--panel)"/><path d="M68 66h84" stroke="var(--rule)" stroke-width="2"/><path d="M84 72l14 34M136 72l-14 34M110 70v38" stroke="var(--rule)" stroke-width="1.5"/>`;
+  s+=`<g transform="translate(110,116)">${drops(0)}</g>`;
+  const g=G(72,148,146,200,6);s+=`<path class="o" d="M72 146H148L142 200H78z" fill="var(--panel)"/>`+band(g,t==='jp'?168:176,200,LIQ);
+  if(t==='jp')s+=ice(84,160)+ice(112,154);
+  s+=`<path class="o" d="M72 146H148L142 200H78z" fill="none"/><rect class="o" x="66" y="138" width="88" height="10" rx="4" fill="var(--i-gold2)"/>`;
+ } else if(m==='phin'){
+  s+=`<rect class="o" x="84" y="22" width="52" height="10" rx="4" fill="var(--i-gold2)"/><path class="o" d="M86 34h48l-4 46H90z" fill="var(--i-gold)"/><rect class="o" x="66" y="80" width="88" height="9" rx="4" fill="var(--i-gold2)"/>`;
+  s+=`<g transform="translate(110,96)">${drops(0)}</g>`;
+  const g=G(70,150,122,204,8),milk={sua:16,bx:34}[t]||0,cof={nong:52,da:40,sua:30,bx:18}[t];
+  s+=`<path class="o" d="M70 122H150L142 204H78z" fill="var(--panel)"/>`;
+  if(milk)s+=band(g,204-milk,204,t==='bx'?MILK:CON);
+  s+=band(g,204-milk-cof,204-milk,LIQ,.95);
+  if(t!=='nong')s+=ice(82,150)+ice(108,142)+ice(96,164);
+  s+=`<path class="o" d="M70 122H150L142 204H78z" fill="none"/>`;
+ } else if(m==='esp'){
+  s+=`<rect class="o" x="52" y="30" width="116" height="20" rx="6" fill="var(--i-brown)"/><path class="o" d="M80 50h60v14H80z" fill="var(--i-gold2)"/><path class="o" d="M140 56h44" stroke-width="7"/>`;
+  s+=`<g transform="translate(102,72)">${drops(0)}</g><g transform="translate(118,72)">${drops(0)}</g>`;
+  if(t==='lat'||t==='ame'||t==='cap'){const g=G(74,146,102,204,6);s+=`<path class="o" d="M74 102H146L140 204H80z" fill="var(--panel)"/>`;
+   if(t==='ame')s+=band(g,126,204,LIQ,.85);
+   else s+=band(g,t==='cap'?112:120,t==='cap'?146:132,'#F6EAD6')+band(g,t==='cap'?146:132,178,MILK)+band(g,178,204,LIQ,.9);
+   s+=`<path class="o" d="M74 102H146L140 204H80z" fill="none"/>`}
+  else{const h=t==='ris'?24:t==='lun'?42:32;
+   s+=`<path class="o" d="M82 136h56v34a20 20 0 0 1-20 20h-16a20 20 0 0 1-20-20z" fill="var(--panel)"/><path class="o" d="M138 146h8a10 10 0 0 1 0 20h-9" fill="none"/>`;
+   s+=`<path d="M85 ${186-h}h50v${h-16}a17 17 0 0 1-17 17h-16a17 17 0 0 1-17-17z" fill="${LIQ}"/><path d="M85 ${186-h}h50v5H85z" fill="var(--i-gold)"/>`;
+   s+=`<path class="o" d="M82 136h56v34a20 20 0 0 1-20 20h-16a20 20 0 0 1-20-20z" fill="none"/><ellipse class="o" cx="110" cy="196" rx="44" ry="7" fill="var(--panel)"/>`}
+ } else {
+  s+=`<rect class="o" x="62" y="34" width="96" height="16" rx="5" fill="var(--i-gold2)"/><path class="o" d="M58 50h104v146a10 10 0 0 1-10 10H68a10 10 0 0 1-10-10z" fill="var(--panel)"/>`;
+  s+=`<path d="M61 ${t==='lien'?84:110}h98v86a8 8 0 0 1-8 8H69a8 8 0 0 1-8-8z" fill="${LIQ}" opacity=".88"/><path d="M61 172h98v24a8 8 0 0 1-8 8H69a8 8 0 0 1-8-8z" fill="var(--i-brown)"/>`;
+  s+=`<path class="o" d="M58 50h104v146a10 10 0 0 1-10 10H68a10 10 0 0 1-10-10z" fill="none"/>`;
+  s+=`<circle class="o" cx="186" cy="62" r="20" fill="var(--panel)"/><path class="o" d="M186 50v12l8 6" fill="none"/><text class="t" x="186" y="100" text-anchor="middle">${t==='lien'?'16〜20時間':'14〜18時間'}</text>`;
+ }
+ return `<svg class="rx-scene" viewBox="0 0 220 220" role="img" aria-label="${E(M[S.m].T[S.t].n)}">${s}</svg>`}
+
+// ---------- trục thời gian ----------
+function timeline(R){const W=640,H=130,x0=34,x1=W-16,y0=100,top=18;const end=Math.max(R.end,...R.pours.map(p=>p.at))||1;
+ const X=a=>x0+(x1-x0)*a/end;let cum=0;const pts=[[X(0),y0]];const tot=R.pours.reduce((a,p)=>a+p.w,0)||1;
+ let s=`<line x1="${x0}" y1="${y0}" x2="${x1}" y2="${y0}" stroke="var(--rule)" stroke-width="2"/>`;
+ R.pours.forEach((p,i)=>{const x=X(p.at);const yPrev=y0-(y0-top)*cum/tot;cum+=p.w;const y=y0-(y0-top)*cum/tot;
+  pts.push([x,yPrev],[x,y]);
+  if(p.w>0)s+=`<rect x="${x-4}" y="${y}" width="8" height="${y0-y}" rx="3" fill="var(--accent)" opacity="${.35+.5*(i===0?1:.7)}"/>`;
+  s+=`<circle cx="${x}" cy="${y0}" r="4" fill="var(--accent)"/><text x="${x}" y="${y0+16}" text-anchor="middle">${R.unit==='h'?(p.at?p.at+' 時間':'0'):mmss(p.at)}</text>`;
+  if(p.w>0&&R.unit!=='h'&&S.m!=='esp')s+=`<text class="lb" x="${x+6}" y="${Math.max(top+8,y-4)}">${fm(cum)} g</text>`});
+ pts.push([X(end),y0-(y0-top)*cum/tot]);
+ s+=`<polyline points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="var(--ink)" stroke-width="2" stroke-dasharray="5 4"/>`;
+ s+=`<line x1="${X(end)}" y1="${top}" x2="${X(end)}" y2="${y0}" stroke="var(--muted)" stroke-dasharray="3 4"/><text x="${X(end)}" y="${y0+30}" text-anchor="end">${R.unit==='h'?end+' 時間':mmss(end)}で完了</text>`;
+ return `<svg class="rx-tl" viewBox="0 0 ${W} ${H+8}" role="img" aria-label="注湯のタイムライン">${s}</svg>`}
+
+// ---------- vẽ ----------
+function opts(id,obj,cur,k,big){$(id).innerHTML=Object.entries(obj).map(([v,o])=>`<button type="button" data-k="${k}" data-v="${v}" aria-pressed="${v===cur}">${big?ICON[v]:''}<span>${E(o.n)}</span></button>`).join('')}
+function save(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+function text(R){const m=M[S.m],t=m.T[S.t];const L=['抽出レシピ · MEDILI',`${PC[S.pc].n} · 焙煎：${RO[S.ro].n.toLowerCase()} · ${m.n} · ${t.n}`,'',`コーヒー：${f1(S.dose)} g`];
+ R.par.forEach(p=>L.push(`${p[0]}：${p[1]}${p[2]?' ('+p[2]+')':''}`));R.ing.forEach(i=>L.push(`${i[0]}：${i[1]}${i[2]?' ('+i[2]+')':''}`));
+ L.push('','手順：');R.pours.forEach((p,i)=>L.push(`${i+1}. ${R.unit==='h'?(p.at?p.at+' 時間':'開始'):mmss(p.at)}${p.w>0&&S.m!=='esp'?' · 注湯 '+fm(p.w)+' g':''}${p.n?' · '+p.n:''}`));
+ L.push('','medili.vn · レシピは出発点です。味わってから好みに合わせて調整を。');return L.join('\n')}
+function render(){
+ const m=M[S.m],t=m.T[S.t];opts('rx-pc',PC,S.pc,'pc');opts('rx-ro',RO,S.ro,'ro');opts('rx-m',M,S.m,'m',1);opts('rx-t',m.T,S.t,'t');
+ $('rx-pc-d').textContent=PC[S.pc].d;$('rx-ro-d').textContent=RO[S.ro].d;$('rx-m-d').textContent=m.d;$('rx-t-d').textContent=t.d;
+ const R=recipe();
+ $('rx-sum').innerHTML=[PC[S.pc].n,'焙煎 '+RO[S.ro].n.toLowerCase(),m.n,t.n].map(x=>`<span>${E(x)}</span>`).join('');
+ $('rx-dose').value=S.dose;$('rx-unit').textContent=S.m==='cold'&&S.t!=='jp'?'g（粗挽きの粉）':'g（粉）';
+ $('rx-par').innerHTML=R.par.map(p=>`<div><span>${p[0]}</span><b>${p[1]}</b>${p[2]?`<small>${p[2]}</small>`:''}</div>`).join('')+
+  R.ing.map(i=>`<div><span>${i[0]}</span><b>${i[1]}</b>${i[2]?`<small>${i[2]}</small>`:''}</div>`).join('');
+ $('rx-pours').innerHTML=`<thead><tr><th>時間</th><th>${S.m==='esp'?'抽出量':'注湯'}</th><th>やること</th></tr></thead><tbody>`+R.pours.map(p=>`<tr><td class="m">${R.unit==='h'?(p.at?p.at+' 時間':'開始'):mmss(p.at)}</td><td class="m">${p.w>0?fm(p.w)+' g':'–'}</td><td>${E(p.n)}</td></tr>`).join('')+'</tbody>';
+ $('rx-bal').hidden=!(S.m==='v60'&&S.t==='46');$('rx-bal-o').textContent=!S.sh?'バランスがよい':S.sh>0?`1回目が${fm(S.sh*2)} g多い：酸味が強め`:`2回目が${fm(-S.sh*2)} g多い：甘め`;
+ $('rx-tips').innerHTML=R.tips.map(x=>`<li>${E(x)}</li>`).join('');
+ $('rx-sp').innerHTML=picks().map(x=>`<a href="${x.file}"><i style="--c:${x.col}" aria-hidden="true"></i><b>${E(x.n)}</b><small>${E(x.price)}</small></a>`).join('');
+ $('rx-scene').innerHTML=scene(R);$('rx-tl').innerHTML=timeline(R);
+ $('rx-cap').textContent=S.m==='cold'&&S.t!=='jp'?'浸漬時間（時間単位）のタイムライン。':S.m==='esp'?'ショットのタイムライン（秒単位）。':'棒は各回の注湯量、破線はそれまでに注いだ湯の合計です。';
+ $('rx-msg').textContent='';save();window._R=R}
+
+function setMethod(m){S.m=m;const T=M[m].T;if(!T[S.t])S.t=Object.keys(T)[0];S.dose=T[S.t].dose;S.sh=0}
+document.querySelector('.rx-steps').addEventListener('click',e=>{const b=e.target.closest('button[data-k]');if(!b)return;const k=b.dataset.k,v=b.dataset.v;
+ if(k==='m'){setMethod(v)}else if(k==='t'){S.t=v;S.dose=M[S.m].T[v].dose;S.sh=0}else S[k]=v;render()});
+const clampDose=v=>{const lim={v60:[8,60],phin:[10,40],esp:[12,24],cold:[20,300]}[S.m],jp=S.m==='cold'&&S.t==='jp';const [a,b]=jp?[10,60]:lim;return Math.max(a,Math.min(b,v))};
+$('rx-minus').addEventListener('click',()=>{S.dose=clampDose(+S.dose-(S.m==='esp'?.5:S.m==='cold'&&S.t!=='jp'?10:1));render()});
+$('rx-plus').addEventListener('click',()=>{S.dose=clampDose(+S.dose+(S.m==='esp'?.5:S.m==='cold'&&S.t!=='jp'?10:1));render()});
+$('rx-dose').addEventListener('change',e=>{const v=parseFloat(String(e.target.value).replace(',','.'));if(!isNaN(v))S.dose=clampDose(v);render()});
+$('rx-sweet').addEventListener('click',()=>{S.sh=(+S.sh||0)-2.5;render()});
+$('rx-bright').addEventListener('click',()=>{S.sh=(+S.sh||0)+2.5;render()});
+$('rx-reset').addEventListener('click',()=>{S={pc:'washed',ro:'sv',m:'v60',t:'46',dose:20,sh:0};$('rx-q').value='';render()});
+$('rx-copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(text(window._R));$('rx-msg').textContent='レシピをコピーしました。'}catch(e){$('rx-msg').textContent='ブラウザでコピーがブロックされました。印刷か画像保存をご利用ください。'}});
+$('rx-print').addEventListener('click',()=>window.print());
+$('rx-img').addEventListener('click',()=>{try{const R=window._R,c=document.createElement('canvas'),W=1080,P=72,nr=1+R.par.length+R.ing.length,HH=Math.max(1080,330+Math.ceil(nr/2)*92+80+R.pours.length*44+150);c.width=W;c.height=HH;const g=c.getContext('2d');
+  const F='"Be Vietnam Pro",system-ui,sans-serif',D='"Big Shoulders Display","Be Vietnam Pro",sans-serif';
+  g.fillStyle='#EFE4D2';g.fillRect(0,0,W,HH);g.fillStyle='#FDFAF2';g.fillRect(40,40,W-80,HH-80);g.strokeStyle='#9E3B26';g.lineWidth=4;g.strokeRect(40,40,W-80,HH-80);
+  let y=130;g.fillStyle='#9E3B26';g.font=`700 30px ${F}`;g.fillText('抽出レシピ · MEDILI',P,y);y+=74;
+  g.fillStyle='#4A2C1A';g.font=`800 64px ${D}`;g.fillText(M[S.m].T[S.t].n,P,y);y+=50;
+  g.fillStyle='#6B5C50';g.font=`500 30px ${F}`;g.fillText(`${PC[S.pc].n} · 焙煎：${RO[S.ro].n.toLowerCase()} · ${M[S.m].n}`,P,y);y+=60;
+  const rows=[['コーヒー',f1(S.dose)+' g'],...R.par.map(p=>[p[0],p[1]]),...R.ing.map(i=>[i[0],i[1]])];
+  rows.forEach(([a,b],i)=>{const cx=P+(i%2)*470,cy=y+Math.floor(i/2)*92;g.fillStyle='#F5E7CF';g.fillRect(cx,cy,450,78);g.fillStyle='#6B5C50';g.font=`600 22px ${F}`;g.fillText(a.toUpperCase(),cx+18,cy+30);g.fillStyle='#4A2C1A';g.font=`700 32px ${F}`;g.fillText(b,cx+18,cy+66)});
+  y+=Math.ceil(rows.length/2)*92+30;g.fillStyle='#9E3B26';g.font=`700 26px ${F}`;g.fillText('手順',P,y);y+=44;g.font=`500 27px ${F}`;g.fillStyle='#4A2C1A';
+  R.pours.forEach(p=>{const tt=(R.unit==='h'?(p.at?p.at+' 時間':'開始'):mmss(p.at))+(p.w>0&&S.m!=='esp'?' · 注湯 '+fm(p.w)+' g':'')+(p.n?' · '+p.n:'');g.fillText(tt.length>58?tt.slice(0,57)+'…':tt,P,y);y+=44});
+  g.fillStyle='#9E3B26';g.font=`italic 600 28px Georgia,serif`;g.fillText('medili.vn · Di Linhの味に魅せられて',P,HH-80);
+  const a=document.createElement('a');a.download='cong-thuc-pha-medili.png';a.href=c.toDataURL('image/png');document.body.append(a);a.click();a.remove();$('rx-msg').textContent='レシピの画像を保存しました。'}
+ catch(e){$('rx-msg').textContent='このブラウザでは画像を保存できませんでした。印刷かコピーをご利用ください。'}});
+$('rx-q').addEventListener('change',e=>{const x=SPI[e.target.value];if(!x)return;applySP(x);render()});
+function applySP(x){if(x.pk[0]&&PC[x.pk[0]])S.pc=x.pk[0];if(x.rk)S.ro=x.rk;S.m=x.m;S.t=Object.keys(M[x.m].T)[0];S.dose=M[x.m].T[S.t].dose;S.sh=0}
+const sp=new URLSearchParams(location.search).get('sp');if(sp&&SPI[sp]){applySP(SPI[sp]);$('rx-q').value=sp}
+render();
+</script>
+</body></html>

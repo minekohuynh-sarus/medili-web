@@ -1,0 +1,978 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="咖啡果如何生长和成熟：从开花到成熟的各个阶段、糖分从叶片到种子的路径、Brix、一次性采摘还是分多轮精选采摘，以及海拔的影响。MeDili互动模型。"><meta property="og:title" content="MeDili成熟咖啡果机"><meta property="og:description" content="咖啡果如何生长和成熟：从开花到成熟的各个阶段、糖分从叶片到种子的路径、Brix、一次性采摘还是分多轮精选采摘，以及海拔的影响。MeDili互动模型。"><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>MeDili成熟咖啡果机</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.inl{color:var(--moss);font-weight:600}
+.quiz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.q{border:0;padding:0;margin:0 0 14px;min-width:0}.q legend{padding:0;font-weight:600}
+.res{background:var(--tint);border-radius:14px;padding:16px}.res h3{font:800 2rem/1.1 var(--display);margin:2px 0 4px;color:var(--accent)}
+.res p{margin:6px 0}.rp{font-weight:600}.rp small{font-weight:400;color:var(--muted)}
+.tinyn{font-size:.78rem;color:var(--muted)}
+.gumap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gm{border-top:3px solid var(--copper);padding-top:8px}.gm h3{margin:0;font:800 1.3rem var(--display)}.gm small{color:var(--muted)}
+ol.steps{margin:0 0 8px;padding-left:20px}ol.steps li{margin-bottom:4px;font-size:.9rem}ol.steps li.on{font-weight:700;color:var(--accent)}
+.sop.tight li{grid-template-columns:36px minmax(0,1fr)}.sop.tight .n{font-size:1.5rem}
+.st.off{opacity:.45}
+@media (max-width:820px){.quiz{grid-template-columns:minmax(0,1fr)}}
+
+:root{--ground:#8FA65E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#5D7340}}
+:root[data-theme="dark"]{--ground:#5D7340}
+.mths button{min-width:52px}
+.sgn3{font:italic 600 13.5px var(--sign)!important;fill:var(--accent)!important}
+.sgn{font-size:18px}
+.calc.three{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-bottom:12px}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px}
+.calc input{font-size:.95rem}
+
+:root{--floor:#C69A62;--wall:#EFE3CD}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--floor:#6B4F31;--wall:#3A2D22}}
+:root[data-theme="dark"]{--floor:#6B4F31;--wall:#3A2D22}
+.shophead{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}.shophead>div:last-child{flex:1 1 320px;min-width:0}
+.logoP{background:#F6F0E4;border-radius:12px;padding:8px 12px;display:inline-block}.logoP img{display:block;height:auto;max-width:100%}
+.flow{list-style:none;display:flex;flex-wrap:wrap;gap:6px 24px;padding:0;margin:0;counter-reset:f;font-weight:600;font-size:.9rem;color:var(--muted)}
+.flow li{counter-increment:f}.flow li::before{content:counter(f) ". ";color:var(--accent)}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:0}
+.whob{text-align:left;padding:12px 16px;border:2px solid var(--rule);border-radius:12px;background:var(--panel);color:var(--ink);cursor:pointer;font:inherit}
+.whob b{display:block;font-size:1.02rem}.whob small{color:var(--muted)}.whob.on{border-color:var(--accent)}
+.ah{font:800 1.45rem var(--display);margin:0 0 8px}
+.ctl{min-width:0}.ctl .card{padding:14px}
+.recbox{background:var(--tint);border-radius:12px;padding:10px;margin-top:12px;display:grid;gap:6px}
+.recb{text-align:left;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:7px 10px;color:var(--ink);cursor:pointer;font:inherit}.recb b{display:block;font-size:.9rem}.recb small{color:var(--muted)}.recb.on{border-color:var(--accent)}
+.line{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule)}.line small{display:block;color:var(--muted)}
+.qty{display:flex;align-items:center;gap:6px;white-space:nowrap}.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+a.btn{text-decoration:none;display:inline-block}
+.bagn{font:italic 600 6.5px var(--sign)!important;fill:#4A2A1A!important}.bagn2{font:700 4.6px var(--body)!important;fill:#A23B24!important}
+.bag.off{opacity:.25}.bag.on polygon{stroke:var(--accent)!important;stroke-width:2.4}
+.bench{align-items:start}
+.sgn3{font:italic 600 13px var(--sign)!important;fill:var(--accent)!important}
+.tag.big rect{fill:var(--accent)}
+
+.sent{margin-top:10px;background:var(--tint);border-radius:12px;padding:12px}.sent>b{display:block;margin-bottom:4px}
+.ordertxt{white-space:pre-wrap;overflow-wrap:anywhere;font:500 .78rem/1.5 var(--mono);margin:6px 0 0;user-select:all}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}.qrs svg{display:block;width:100%;height:auto;border-radius:6px}.qrs small{display:block;text-align:center;margin-top:4px;color:var(--muted)}
+:root{--skin:#EBC9A6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--skin:#8C6A4D}}:root[data-theme="dark"]{--skin:#8C6A4D}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.ctl .card{padding:16px}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style>
+<style>
+/* Khung chung sau khi gộp Manus: menu nhóm, chân trang, màu phong thủy Thổ (nâu, vàng đất, đỏ; không xanh lá, không đen). */
+:root{--moss:#8D4E22;--good:#8D4E22;
+  --i-red:#B33A24;--i-red2:#7A2414;--i-gold:#D9B77E;--i-gold2:#B8894A;--i-coffee:#6B4226;--i-brown:#8D5A32;--i-milk:#E9D3AE;
+  --seg1:#9E3B26;--seg2:#B8894A;--seg3:#6B4226;--seg4:#D9B77E;--seg-t1:#FFF6EC;--seg-t2:#2E1C12;--cmp2:#C9A46A;
+  --cx1:#BB8526;--cx2:#7A348E;--cx3:#83470D;--cx4:#CB4D54}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--panel)}
+.mnav{display:none!important}
+
+/* menu */
+.mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
+.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p a:hover{color:var(--accent)}
+.mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-m{margin:0;font-size:inherit}
+.mh-m>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font:600 .86rem var(--body);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;white-space:nowrap;user-select:none}
+.mh-m>summary::-webkit-details-marker{display:none}
+.mh-m>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mh-m[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-m>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-pan{position:absolute;left:0;right:0;top:100%;background:var(--panel);border-bottom:1px solid var(--rule);box-shadow:0 18px 30px rgba(46,28,18,.16);max-height:calc(100vh - 60px - env(safe-area-inset-top,0px));overflow:auto;overscroll-behavior:contain}
+.mh-grid{max-width:1560px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 26px;padding-block:18px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-g{margin:0 0 6px;font:600 .72rem/1.3 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mh-c ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-c a{display:block;color:var(--ink);text-decoration:none;font:500 .95rem/1.35 var(--body);padding:6px 0;border-bottom:1px solid transparent}
+.mh-c a:hover{color:var(--accent)}
+.mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
+.mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
+.mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.mh-i{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none}
+.mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
+@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+@media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
+
+/* chân trang */
+.mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
+.mf-in{max-width:1560px;margin:auto;padding-block:30px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:26px}
+.mf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border-bottom:1px solid var(--rule);padding-bottom:24px}
+.mf-k{flex-basis:100%;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mf-h{margin:0;font:italic 600 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sign);color:var(--ink);text-wrap:balance}
+.mf-h em{color:var(--accent)}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:22px 30px}
+.mf-brand b{display:block;font:italic 600 1.35rem/1.25 var(--sign);color:var(--accent)}
+.mf-brand span{display:block;margin-top:6px}.mf-brand small{display:block;margin-top:6px;color:var(--muted);letter-spacing:.06em}
+.mf-t{margin:0 0 6px;font:600 .72rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mf-col{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mf-col a{color:var(--ink);text-decoration:none;padding:2px 0}.mf-col a:hover{color:var(--accent);text-decoration:underline}
+.mf-col p{margin:0 0 6px}.mf-n{white-space:nowrap;user-select:all}
+.mf-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:.84rem}
+.mf-base i{font:italic 600 1rem var(--sign);color:var(--accent)}
+@media (max-width:980px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-brand{grid-column:1/-1}}
+@media (max-width:520px){.mf-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ảnh thật */
+.pf{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.pf img{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;border:1px solid var(--rule);background:var(--tint)}
+.pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.pfw img{aspect-ratio:3/1;object-fit:cover}
+.split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
+@media (max-width:700px){.pfw img{aspect-ratio:2/1}}
+.pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
+.pgal{display:grid;gap:10px}
+.pgal>h2{margin:0}
+.pgal>p{margin:0;color:var(--muted);max-width:72ch}
+
+/* chọn ngôn ngữ */
+.mh-l{position:relative;margin:0}
+.mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
+.mh-l>summary::-webkit-details-marker{display:none}
+.mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
+.mh-lp a:hover{background:var(--tint);color:var(--accent)}
+.mh-lp a[aria-current]{color:var(--accent)}
+@media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
+/* nút Zalo, Facebook nổi góc trái bên dưới */
+.fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
+.fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
+.fl-b svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fl-b:hover{transform:translateY(-2px) scale(1.05)}
+.fl-b:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.fl-b::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;background:var(--ink);color:var(--panel);font:600 .8rem var(--body);letter-spacing:0;padding:6px 11px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{opacity:1;transform:translate(0,-50%)}}
+@media (max-width:600px){.fl-c{gap:8px}.fl-b{width:46px;height:46px;font-size:.6rem}.fl-b svg{width:17px;height:17px}}
+@media (max-width:1020px){body:has(.nx-bar) .fl-c{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+/* chừa chỗ cho nút nổi ở cuối chân trang */
+@media (min-width:601px){.mf-base{padding-left:76px}}
+@media (max-width:600px){footer.mf{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}}
+@media print{.fl-c{display:none}}
+
+/* thành phần dùng chung cho trang mới */
+.wrap.art{max-width:980px}
+.k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.eye{font:600 .8rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0}
+section>h2 em,.p-h2 em{font-style:normal;color:var(--accent)}
+.p-h2{font:800 2.05rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em;text-wrap:balance}
+.p-head{display:grid;gap:4px}
+.p-head h1{margin:6px 0 0}
+.p-head .lead{font-size:1.06rem;color:var(--muted);max-width:68ch;margin:10px 0 0}
+.p-sig{font:italic 600 1.25rem var(--sign);color:var(--accent);margin:10px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+a.btn{text-decoration:none;display:inline-block}
+.btn.ghost{border-color:var(--rule)}
+.p-sec{display:grid;gap:10px}
+.p-sec>.lead{margin:0;max-width:72ch;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.facts>div{border-top:2px solid var(--accent);padding-top:8px;min-width:0}
+.facts b{display:block;font:800 2.4rem/1.05 var(--display);color:var(--accent)}
+.facts span{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.g3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.g2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.g4{grid-template-columns:minmax(0,1fr)}}
+.box{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:18px 20px;min-width:0}
+.box h3{font:800 1.45rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em}
+.box p{margin:0 0 8px}.box p:last-child{margin-bottom:0}
+.box .k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.box .ft{margin-top:10px;padding-top:10px;border-top:1px solid var(--rule);font-size:.88rem;color:var(--muted)}
+.box .ft b{color:var(--ink)}
+.box>svg.pi{width:34px;height:34px;color:var(--accent)}
+svg.pi{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+svg.pi .fi{fill:var(--accent);stroke:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font:600 .76rem var(--body);border:1px solid var(--rule);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.lnk{color:var(--accent);font-weight:600;text-decoration:none}.lnk:hover{text-decoration:underline}
+.lnks{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px}
+.quote{margin:0;font:italic 600 clamp(1.4rem,3vw,2.1rem)/1.3 var(--sign);color:var(--accent);max-width:34ch;text-wrap:balance}
+.split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:20px 30px;align-items:center}
+.split img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--rule)}
+.illw{max-width:320px;width:100%;justify-self:center}
+@media (max-width:820px){.split{grid-template-columns:minmax(0,1fr)}.illw{max-width:210px}}
+.pst{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:st}
+.pst>li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:4px 16px;align-items:start;background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 16px;min-width:0}
+.pst>li .n{grid-row:1/3;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--tint);color:var(--accent)}
+.pst>li .n svg{width:24px;height:24px}
+.pst h3{margin:0;font:700 1.05rem/1.3 var(--body)}
+.pst h3 small{font:600 .74rem var(--body);letter-spacing:.06em;color:var(--muted);margin-right:6px}
+.pst p{margin:0;font-size:.93rem}
+.pst.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pst.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.pst.three{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.pst.two{grid-template-columns:minmax(0,1fr)}}
+.trip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.trip a{display:flex;flex-direction:column;height:100%;background:var(--panel);border:1px solid var(--rule);border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none}
+.trip img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;max-width:100%}
+.trip b{font:800 1.25rem/1.15 var(--display);padding:10px 14px 0}
+.trip b small{display:block;font:600 .72rem var(--body);letter-spacing:.08em;color:var(--accent);margin-bottom:2px}
+.trip span{padding:4px 14px 14px;color:var(--muted);font-size:.88rem}
+.trip a:hover b{color:var(--accent)}
+@media (max-width:1180px){.trip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,32%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.trip li{scroll-snap-align:start}}
+@media (max-width:640px){.trip{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:minmax(0,1fr);overflow:visible}}
+.seg{display:flex;gap:2px;height:28px;margin:6px 0 4px}
+.seg i{display:flex;align-items:center;padding:0 8px;border-radius:4px;font:700 .78rem var(--mono);font-style:normal;white-space:nowrap;overflow:hidden;min-width:0}
+.seg i.s1{background:var(--seg1);color:var(--seg-t1)}.seg i.s2{background:var(--seg2);color:var(--seg-t2)}
+.seg i.s3{background:var(--seg3);color:var(--seg-t1)}.seg i.s4{background:var(--seg4);color:var(--seg-t2)}
+.areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:8px}
+.areas>div{border-top:1px solid var(--rule);padding-top:10px;min-width:0}
+.areas .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.areas b{font:700 1rem var(--body)}.areas span{display:block;color:var(--muted);font-size:.86rem}
+.areas strong{display:block;font:800 1.9rem/1.1 var(--display);margin-top:4px}
+.areas strong small{font:600 .8rem var(--body);color:var(--muted);margin-left:6px}
+@media (max-width:900px){.areas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cmp{display:grid;gap:10px;margin-top:8px}
+.cmp>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center}
+.cmp span{font-size:.88rem}.cmp span b{display:block;font-size:.95rem}
+.cmp .tr{position:relative;height:24px;margin-right:64px}
+.cmp .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0;background:var(--accent)}
+.cmp .tr i.b{background:var(--cmp2)}
+.cmp .tr em{position:absolute;top:50%;transform:translateY(-50%);font:700 .9rem var(--mono);font-style:normal;color:var(--ink);white-space:nowrap}
+@media (max-width:520px){.cmp>div{grid-template-columns:minmax(0,1fr)}}
+.loc{display:grid;gap:4px}
+.loc .ttl{display:flex;gap:10px;align-items:center}
+.loc .ttl svg{color:var(--accent)}
+.sel{user-select:all}
+.cp{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.cp strong{font:700 1.25rem var(--mono);user-select:all;overflow-wrap:anywhere}
+.note{font-size:.86rem;color:var(--muted);margin:0}
+.p-form{display:grid;gap:12px}
+.p-form .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:620px){.p-form .row2{grid-template-columns:minmax(0,1fr)}}
+.p-form label{display:grid;gap:4px;font:600 .9rem var(--body)}
+.p-form label small{font-weight:400;color:var(--muted)}
+.p-form input,.p-form select,.p-form textarea{font:500 1rem var(--body);padding:9px 11px;border:1px solid var(--rule);border-radius:10px;background:var(--bg);color:var(--ink);width:100%;min-width:0}
+.p-form textarea{resize:vertical}
+.p-form fieldset{border:0;margin:0;padding:0;min-width:0}
+.p-form legend{font:600 .9rem var(--body);padding:0;margin-bottom:6px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{display:inline-flex;flex-direction:row;align-items:center;gap:6px;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font:600 .86rem var(--body);cursor:pointer;background:var(--panel)}
+.opts input{width:auto;margin:0;accent-color:var(--accent)}
+.opts label:has(input:checked){border-color:var(--accent);background:var(--tint)}
+.msg{white-space:pre-wrap;font:500 .84rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:0;overflow-wrap:anywhere;user-select:all}
+.fstat{font:500 .86rem var(--body);color:var(--muted);min-height:1.3em;margin:0}
+.p-art{max-width:70ch;font-size:1.04rem;line-height:1.78}
+.p-art h2{font:800 1.75rem/1.2 var(--display);margin:30px 0 8px;letter-spacing:.01em}
+.p-art p{margin:0 0 14px}
+.p-art ul,.p-art ol{margin:0 0 14px;padding-left:22px}.p-art li{margin-bottom:6px}
+.p-art .rbox{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 18px;margin:18px 0}
+.p-art .rbox h3{margin:0 0 6px;font:700 1rem var(--body)}
+.p-art .rbox ol{margin:0}
+.p-art .pf,.p-art .pfs{margin:20px 0}
+.p-art blockquote{margin:22px 0;padding:0 0 0 18px;border-left:3px solid var(--accent);font:italic 600 1.3rem/1.45 var(--sign);color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font:600 .8rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.meta b{color:var(--accent)}
+.art-fig{max-width:880px}
+.art-fig svg{display:block;width:100%;height:auto;max-height:340px;background:var(--tint);border-radius:16px}
+.jcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.jcards a{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--rule);border-radius:16px;overflow:hidden;color:var(--ink);text-decoration:none;min-width:0}
+.jcards .th{background:var(--tint);display:grid;place-items:center;aspect-ratio:3/2;max-width:100%}
+.jcards .th svg{display:block;width:100%;height:100%}
+.jcards .bd{padding:12px 16px 16px;display:grid;gap:4px}
+.jcards .meta{font-size:.72rem}
+.jcards h3{margin:2px 0 0;font:800 1.35rem/1.15 var(--display);text-wrap:balance}
+.jcards p{margin:0;color:var(--muted);font-size:.9rem}
+.jcards a:hover h3{color:var(--accent)}
+@media (max-width:1000px){.jcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.jcards{grid-template-columns:minmax(0,1fr)}}
+.jfeat{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);padding:0;overflow:hidden;text-decoration:none;color:var(--ink)}
+.jfeat .th{background:var(--tint);display:grid;place-items:center;padding:14px;min-width:0}
+.jfeat .th svg{display:block;width:100%;max-width:340px;height:auto}
+.jfeat .bd{padding:20px 24px;display:grid;gap:6px;align-content:center;min-width:0}
+.jfeat h3{font:800 2.1rem/1.1 var(--display);margin:0;letter-spacing:.01em}
+.jfeat p{margin:0}.jfeat .bd>p:not(.meta){color:var(--muted);max-width:60ch}
+.jfeat:hover h3{color:var(--accent)}
+@media (max-width:760px){.jfeat{grid-template-columns:minmax(0,1fr)}.jfeat .th svg{max-width:280px}}
+.mdl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin-top:4px}
+.mdl a{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center;border-top:1px solid var(--rule);padding-top:10px;color:var(--ink);text-decoration:none;min-width:0}
+.mdl a svg.pi{width:30px;height:30px;color:var(--accent)}
+.mdl b{display:block;font:700 1rem var(--body)}.mdl small{display:block;color:var(--muted);font-size:.86rem}
+.mdl a:hover b{color:var(--accent)}
+.kser{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink)}
+.kser svg.pi{width:34px;height:34px;color:var(--accent);margin-bottom:4px}
+.kser p{color:var(--muted);font-size:.92rem}
+.kser .lnk{margin-top:auto;padding-top:6px}
+.kser:hover h3{color:var(--accent)}
+.g5k{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:1280px){.g5k{grid-template-columns:repeat(2,minmax(0,1fr))}.g5k>:first-child{grid-column:1/-1}}
+@media (max-width:560px){.g5k{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:1100px){.mdl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mdl{grid-template-columns:minmax(0,1fr)}}
+.ill .o{stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.ill text{font:600 12px var(--body);fill:var(--muted)}
+@media (max-width:620px){.p-h2{font-size:1.75rem}.facts b{font-size:2rem}}
+
+.mnote{font-size:.84rem;color:var(--muted);margin:8px 0 0;line-height:1.45}
+#scene .gl{fill:var(--panel);fill-opacity:.18}
+#scene .glt{fill:var(--panel);fill-opacity:.12}
+#scene .lcdb{fill:#2E1C12;stroke:none}
+#scene .lcd{font:700 7.6px var(--mono);fill:#F3D9A4}
+#scene .wtx{font:700 8px var(--body);fill:#3A2416}
+#scene .flowT{font-size:12.5px}
+#scene .ped{fill:#E6DCC8}#scene .ped2{fill:#CFC2A8}#scene .ped3{fill:#B7A98C}
+#scene .lcd.sm{font-size:6.5px}
+#scene .nowr{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-dasharray:4 3}
+#scene .flowL{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-dasharray:3 6;opacity:.75}
+.running #scene .flowL,#scene.running .flowL{animation:flowA .8s linear infinite}
+@keyframes flowA{to{stroke-dashoffset:-18}}
+#tok{display:none;fill:var(--accent);stroke:var(--panel);stroke-width:2}
+.running #tok{display:block}
+.lg{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.82rem;margin:2px 0 0;color:var(--muted)}
+.lg span{display:inline-flex;align-items:center;gap:6px}
+.sw2{display:inline-block;width:16px;height:0;border-top:2.5px solid;flex:none}.sw2.d{border-top-style:dashed}
+.sw3{display:inline-block;width:11px;height:11px;border-radius:3px;flex:none}
+#tip{color:var(--muted)}
+.rd{display:flex;flex-direction:column;gap:4px}
+.rd>svg.pi{width:30px;height:30px;color:var(--accent);margin-bottom:2px}
+.rd h3{font:800 1.4rem/1.15 var(--display);margin:2px 0 4px}
+.rd .ft{margin-top:auto}
+.src>h2{color:var(--ink)}.src>.lead{color:var(--muted);font-size:.95rem}
+.src ul{line-height:1.5}.src li{margin-bottom:4px}
+.src .lnks{margin-top:12px}
+.cpst{font-size:.84rem;color:var(--muted)}
+.chw{position:relative;margin-top:6px}
+.c2{display:block;width:100%;height:auto}
+.c2 text{font:500 12px var(--mono);fill:var(--muted)}
+.c2 .ttl{font:600 12.5px var(--body);fill:var(--ink)}
+.c2 .lab{font:600 12.5px var(--body);fill:var(--ink)}
+.c2 .val{font:700 12px var(--mono);fill:var(--ink);paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round}
+.flowx{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:fx;margin-top:6px}
+.flowx>div{background:var(--tint);border-radius:14px;padding:12px 14px;min-width:0;position:relative}
+.flowx b{display:block;font:800 1.15rem/1.15 var(--display);margin-bottom:4px}
+.flowx p{margin:0;font-size:.88rem}
+.flowx .k{margin-bottom:4px;color:var(--accent)}
+@media (max-width:980px){.flowx{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.flowx{grid-template-columns:minmax(0,1fr)}}
+.medili{background:var(--tint);border-radius:14px;padding:14px 16px}
+.medili h3{margin:0 0 6px;font:800 1.3rem var(--display)}
+.medili ul{margin:0;padding-left:18px}.medili li{margin-bottom:4px}
+@media (prefers-reduced-motion:reduce){.running #tok{display:none}#scene .flowL{animation:none!important}}
+
+/* Cỗ máy Trái chín */
+#scene .sun{fill:#E3B341}#scene .ray{stroke:#E3B341;stroke-width:2.4;stroke-linecap:round}
+#scene .can1{fill:#A9743F}#scene .can2{fill:#8D5A32}#scene .can3{fill:#C08A4E}
+#scene .flw{fill:#FFF6EC;stroke:#C9A15B;stroke-width:1}
+#scene .ped{fill:#E6DCC8}#scene .ped2{fill:#CFC2A8}#scene .ped3{fill:#B7A98C}
+#scene .bsk{fill:#A67B47}#scene .bskT{fill:#6E4A2A}
+#scene .wat{fill:#E7CFA2;fill-opacity:.55}
+#scene .lcd.sm{font-size:6.5px}
+#scene .nowr{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-dasharray:4 3}
+.cut2{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px 28px;align-items:center}
+@media (max-width:900px){.cut2{grid-template-columns:minmax(0,1fr)}}
+.cutw svg{display:block;width:100%;height:auto}
+.cutw text{font:600 12.5px var(--body);fill:var(--ink)}
+.cutw .lead2{stroke:var(--ink);stroke-width:1;opacity:.6}
+.gb .bar{grid-template-columns:178px minmax(0,1fr) 62px}
+.gb .bar i{background:var(--cx3)}
+.tl2{position:relative;display:flex;height:34px;margin-top:14px;border-radius:8px;overflow:hidden;font:600 .72rem var(--body)}
+.tl2>div{display:flex;align-items:center;justify-content:center;text-align:center;padding:0 3px;line-height:1.1;color:#3A2416;border-right:1px solid var(--panel);min-width:0;overflow:hidden}
+@media (max-width:480px){.tl2{font-size:.66rem}.tl2>div{padding:0 1px}}
+.tl2 .mk{position:absolute;top:-4px;bottom:-4px;width:3px;background:var(--accent);border-radius:2px;box-shadow:0 0 0 2px var(--panel)}
+.tlx{display:flex;justify-content:space-between;font:500 .74rem var(--mono);color:var(--muted);margin-top:4px}
+#mix .mrow2{display:grid;grid-template-columns:150px minmax(0,1fr) 64px;gap:10px;align-items:center;padding:5px 0;font-size:.88rem;border-bottom:1px solid var(--rule)}
+#mix .mrow2.tot{font-weight:700}
+#mix .mrow2.sel span:first-child{color:var(--accent)}
+#mix .stk{display:flex;height:20px;border-radius:5px;overflow:hidden;background:var(--tint)}
+#mix .stk i{display:block;height:100%;font:700 .7rem/20px var(--mono);font-style:normal;text-align:center;color:#FFF6EC;overflow:hidden;white-space:nowrap}
+#mix .stk i.lt{color:#3A2416}
+#mix b{font:700 .9rem var(--mono);text-align:right}
+@media (max-width:620px){#mix .mrow2{grid-template-columns:96px minmax(0,1fr) 52px}}
+</style><link rel="alternate" hreflang="vi" href="https://www.medili.vn/trai-chin.html"><link rel="alternate" hreflang="en" href="https://www.medili.vn/en/trai-chin.html"><link rel="alternate" hreflang="ja" href="https://www.medili.vn/ja/trai-chin.html"><link rel="alternate" hreflang="zh-Hans" href="https://www.medili.vn/zh/trai-chin.html"><link rel="alternate" hreflang="x-default" href="https://www.medili.vn/trai-chin.html"><script>const __tl=s=>{let n=0;for(const c of String(s))n+=/[⺀-鿿가-힯＀-￯]/.test(c)?1.85:1;return n};</script><style>:root{--body:"Be Vietnam Pro","Noto Sans SC",system-ui,sans-serif;--display:"Big Shoulders Display","Noto Sans SC","Be Vietnam Pro",system-ui,sans-serif}body{line-break:strict;word-break:normal;overflow-wrap:anywhere}</style></head><body><div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a><nav class="mh-p" aria-label="主要栏目"><a href="cau-chuyen.html">故事</a><a href="vung-trong.html">种植区</a><a href="anh-vuon.html">庄园照片</a><a href="xuong-rang.html">烘焙厂</a><a href="horeca.html">HORECA</a><a href="quan-medili.html">MeDili咖啡馆</a><a href="journal.html">知识</a><a href="gia-ca-phe.html">咖啡价格</a></nav><details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>菜单</span></summary><nav class="mh-pan" aria-label="全部页面"><div class="mh-grid"><div class="mh-c"><p class="mh-g">MeDili</p><ul><li><a href="./">首页</a></li><li><a href="cau-chuyen.html">MeDili的故事</a></li><li><a href="doi-ngu.html">团队</a></li><li><a href="quan-medili.html">MeDili Café门店</a></li><li><a href="lien-he.html">联系我们</a></li></ul></div><div class="mh-c"><p class="mh-g">种植与生产</p><ul><li><a href="vung-trong.html">Di Linh种植区</a></li><li><a href="anh-vuon.html">庄园照片</a></li><li><a href="vuon.html">庄园的十二个月</a></li><li><a href="trai-ca-phe.html">咖啡果结构</a></li><li><a href="len-men-men-bia.html">啤酒酵母发酵</a></li><li><a href="len-men-trai-cay.html">与水果共同发酵</a></li></ul></div><div class="mh-c"><p class="mh-g">烘焙与冲煮</p><ul><li><a href="xuong-rang.html">烘焙厂与产能</a></li><li><a href="rang.html">烘焙室</a></li><li><a href="huong-dan-pha.html">冲煮指南</a></li><li><a href="quay-pha.html">冲煮吧台</a></li><li><a href="cong-thuc-pha.html">冲煮配方机</a></li><li><a href="cold-brew.html">冷萃机</a></li><li><a href="tim-gu.html">寻找您的咖啡口味</a></li></ul></div><div class="mh-c"><p class="mh-g">购买与合作</p><ul><li><a href="cua-hang.html">咖啡商店</a></li><li><a href="mua-hang.html">选购室</a></li><li><a href="horeca.html">HORECA解决方案</a></li><li><a href="dong-hanh-cung-quan.html">与咖啡馆同行</a></li><li><a href="nhan-xanh.html">选择生豆 · 批发</a></li><li><a href="gia-ca-phe.html">今日咖啡价格</a></li><li><a href="chinh-sach.html">MeDili政策</a></li><li><a href="giao-hang.html">配送与退换货</a></li><li><a href="gio-hang.html">购物车</a></li><li><a href="tim-kiem.html">搜索</a></li></ul></div><div class="mh-c"><p class="mh-g">咖啡知识</p><ul><li><a href="journal.html">全部文章</a></li><li><a href="chiet-xuat.html">萃取机</a></li><li><a href="phan-biet-ca-phe.html">咖啡辨别机</a></li><li><a href="trai-chin.html" aria-current="page">成熟咖啡果机</a></li><li><a href="vi-sinh.html">微生物机</a></li><li><a href="tien-chat-huong.html">香气前体机</a></li><li><a href="banh-xe-huong.html">MeDili风味轮</a></li><li><a href="journal-phin.html">滴滤壶与时间滴落的节奏</a></li><li><a href="journal-tu-qua.html">从咖啡果到风味</a></li><li><a href="journal-di-linh.html">一杯咖啡里的Di Linh</a></li><li><a href="tu-vuon-den-ly.html">从庄园到杯中</a></li><li><a href="suc-khoe.html">咖啡与身体</a></li></ul></div></div></nav></details><details class="mh-l"><summary aria-label="语言 · Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.3 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.3-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>ZH</span></summary><div class="mh-lp"><a href="../trai-chin.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../en/trai-chin.html" hreflang="en" lang="en">English</a><a href="../ja/trai-chin.html" hreflang="ja" lang="ja">日本語</a><a href="trai-chin.html" hreflang="zh-Hans" lang="zh-Hans" aria-current="true">中文</a></div></details><a class="mh-i" href="tim-kiem.html" aria-label="搜索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a><a class="mh-i" href="gio-hang.html" aria-label="购物车"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="mh-cn" hidden></span></a><a class="mh-go" href="cua-hang.html">商店</a></div></div>
+<div class="wrap">
+<header>
+  <span class="lgw"><img class="lgL" src="../assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div class="brandbar"><span>迷恋Di Linh的味道</span><span>咖啡知识</span><span>Zalo <a href="#lien-he">0966 770 788</a></span></div>
+  <h1><em>成熟咖啡果</em>机</h1>
+  <p>Di Linh的Robusta果实从开花到成熟约需9–11个月。拖动日期滑块，可看到果实长大、种子充实、果皮变色和Brix上升；再试试一次性采摘或分多轮精选采摘，看看运到加工厂的果实批次有何不同。</p>
+</header>
+
+<div class="bench">
+  <div class="card">
+    <div class="fighead">
+      <div><b>图1</b> <span id="figsub"></span></div>
+      <button class="btn small" id="run2" type="button">播放整季</button>
+    </div>
+    <div class="scroller"><svg id="scene" viewBox="0 0 1040 720" aria-label="九站模型台：阳光与叶片、开花、果实的四个阶段、测Brix、采摘、浮选。点击各站点查看详情。"></svg></div>
+    <div class="strip" id="strip" role="group" aria-label="选择站点"></div>
+    <div id="detail" aria-live="polite"></div>
+  </div>
+
+  <aside class="card ctl">
+    <div class="head2"><h3>品种与产区</h3><small>2个品种</small></div>
+    <div class="row" id="vars"></div>
+    <p class="mnote" id="vNote"></p>
+    <div class="sl"><label for="iA">庄园海拔 <output id="oA"></output></label><input id="iA" type="range" step="50"><p id="aNote"></p></div>
+    <hr>
+    <div class="sl" style="margin-top:0"><label for="iD">开花后天数 <output id="oD"></output></label><input id="iD" type="range" min="0" step="1"><p id="dNote"></p></div>
+    <div class="head2" style="margin-top:12px"><h3>开花批次</h3></div>
+    <div class="row" id="waves"></div>
+    <div class="head2" style="margin-top:12px"><h3>采摘方式</h3></div>
+    <div class="row" id="meth"></div>
+    <div class="sl" id="gGap"><label for="iG">各轮采摘间隔 <output id="oG"></output></label><input id="iG" type="range" min="7" max="35" step="1"><p id="gNote">MeDili庄园分3轮采摘，从11月到次年1月初。</p></div>
+    <div class="sl" id="gStrip"><label for="iS">一次性采摘日 <output id="oS"></output></label><input id="iS" type="range" step="1"><p>默认为成熟果最多的那天。</p></div>
+    <div class="row" style="margin-top:14px"><button class="btn main" id="run" type="button">播放整季</button><button class="btn" id="reset" type="button">恢复默认</button></div>
+    <div class="stats" id="stats"></div>
+    <div id="verdict"></div>
+    <hr>
+    <span class="lbl">典型果实的果汁Brix</span>
+    <div class="charts"><svg class="ch" id="cB" viewBox="0 0 340 150" role="img" aria-label="果汁Brix随开花后天数的变化"></svg></div>
+    <div id="tip"></div>
+  </aside>
+</div>
+
+<section class="card" id="ben-trong">
+  <h2>图2：逐日看果实内部</h2>
+  <p class="lead">拖动图1的日期滑块，剖面随之变化。时间节点取自关于Arabica的综合资料；对于Robusta，由于资料中没有单独的节点，MeDili按相同比例换算。</p>
+  <div class="cut2">
+    <div class="cutw"><svg id="cut" viewBox="0 0 560 330" role="img" aria-label="咖啡果剖面：果皮、果肉、内果皮、外胚乳和胚乳的逐日变化"></svg></div>
+    <div><div class="bars gb" id="gbars"></div><div id="tline"></div><p class="mnote" id="cutNote"></p></div>
+  </div>
+</section>
+
+<section class="card" id="hai">
+  <h2>图3：一次性采摘还是分多轮精选采摘</h2>
+  <p class="lead">一组树上的400颗果实。按您选择的批次开花，每颗果实成熟早晚相差几周。色带显示树上果实每天的成熟度分布；虚线是各轮采摘。这是示意模型，并非庄园实测数据。</p>
+  <figure class="pf" style="max-width:760px;margin:6px 0 14px"><img src="../assets/p-mua-chin.jpg" alt="在混有青果、半熟果、成熟果和过熟果的咖啡果串间采摘的手" width="1500" height="1000" loading="lazy"><figcaption>实拍照片：同一根枝条上有青果、半熟果、成熟果和过熟果。所以精选采摘通常要分好几轮。</figcaption></figure>
+  <div class="lg" id="lg3"></div>
+  <div class="chw" id="w3"><svg id="c3" class="c2" role="img" aria-label="青果、半熟果、成熟果、过熟果和树上干果比例的逐日变化"></svg></div>
+  <span class="lbl" style="margin-top:14px">运到加工厂的批次 · 右栏为成熟果比例</span>
+  <div id="mix"></div>
+  <p class="mnote">精选采摘：每轮采摘成熟、过熟和干的果实，混有少量半熟果；最后一轮扫尾，采光剩余果实。一次性采摘：一天内把枝上果实全部摘完。</p>
+</section>
+
+<section class="card">
+  <h2>糖从叶片到种子的路径</h2>
+  <p class="lead">咖啡的甜味始于叶片，但糖分进入种子和果肉走的是两条路，时间也不同。</p>
+  <div class="flowx">
+    <div><span class="k">1 · 叶片</span><b>光合作用</b><p>阳光、CO₂和水生成糖。叶片健康、挂果量与叶量相称，种子才有足够养分。</p></div>
+    <div><span class="k">2 · 韧皮部</span><b>蔗糖启程</b><p>糖以蔗糖的形式输送到全树，送往花、果实和正在生长的种子。</p></div>
+    <div><span class="k">3 · 种子</span><b>种子充实</b><p>Arabica在开花后约130–190天，胚乳积累蔗糖和贮藏蛋白。收获时，种子中蔗糖平均占干物质的9.4%（Arabica）和6%（Robusta）。</p></div>
+    <div><span class="k">4 · 果肉</span><b>季末变甜</b><p>大约最后两个月，果肉迅速积累糖分，果皮变色。折光仪测到的就是这部分糖。</p></div>
+    <div><span class="k">5 · 烘焙机</span><b>糖化为香气</b><p>种子中的蔗糖在中度烘焙时几乎全部分解，生成焦糖并参与美拉德反应。请看<a class="lnk" href="tien-chat-huong.html">香气前体机</a>。</p></div>
+  </div>
+</section>
+
+<section class="p-sec">
+  <p class="eye">MeDili再读一遍</p>
+  <h2 class="p-h2" style="margin:0"><em>关于成熟果的</em>六件事。</h2>
+  <div class="g3"><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11c0-4 3-6.5 7-8M15.5 9.5c.3-2.2-.2-4.2-1-6"/><circle cx="9" cy="15.5" r="4.2" class="fi"/><circle cx="16.5" cy="13.5" r="4"/></svg><h3>Brix测的是果肉，不是种子</h3><p>折光仪测量的是果汁中的糖和可溶物。种子在充实阶段通过维管系统从树上获得蔗糖，Arabica约在开花后130–190天。果肉则在大约最后两个月迅速变甜。两者发生在果实的不同部位，所以Brix高说明果实已熟，却测不出种子里的糖。</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 19.5l6.2-9.2 4.1 5 3-4L22 19.5z"/><circle class="fi" cx="17.5" cy="5.8" r="2.2"/></svg><h3>高海拔成熟较慢，但并非越高糖越多</h3><p>海拔每升高100米，气温约低0.6 °C，果实成熟变慢，种子有更多时间充实。一项针对留尼汪岛16批Arabica的研究发现，种子发育期的温度决定绿原酸和脂肪酸含量；葡萄糖随海拔升高而增加，但可溶性糖总量不随气候变化。杯中的甜味还取决于成熟度、处理和烘焙。</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><circle class="fi" cx="12" cy="14.8" r="1.8"/></svg><h3>Robusta比Arabica成熟慢</h3><p>Arabica从开花到果实成熟约需6–8个月，Robusta需9–11个月。所以在Di Linh，3月开花，要到11月才进入采收季。</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.2"/><path d="M15 15l5.5 5.5"/><ellipse class="fi" cx="10.5" cy="10.5" rx="2" ry="3"/></svg><h3>红色只是信号，不是标准</h3><p>成熟时，果皮中的叶绿素减少，红色花青素增加。但有些品种成熟时是黄色的，深红色的果实可能已经过熟。看颜色、捏一捏软硬、测Brix，三者结合才可靠。</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 20h12M5 7h14"/><path d="M5 7l-3 6h6zM19 7l-3 6h6z"/></svg><h3>连青果一起采是双重损失</h3><p>青果种子未充实，分量轻，还会把生涩味带进整批。用力捋采还会折断结果枝、打落叶片，下一季结果更少。精选采摘更费工，但批次整齐，发酵和晾晒更容易控制。</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c1 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-4.5 3-6.5 1 2 2 2.4 3 2.5.3-3-1-5 0-7z"/></svg><h3>过熟也是缺陷</h3><p>在树上留得太久，或采回后放过夜才去皮的果实，已在果皮内开始发酵。这样的果实多了，批次容易带上醋酸味、酒味。</p></div></div>
+</section>
+
+<div class="cols">
+  <section class="card">
+    <h2>在庄园测Brix</h2>
+    <p class="lead">Brix是选择采摘日的工具，不是品质分数。每轮都测并记录，几季之后，庄园就会有自己的阈值。</p>
+    <ol class="sop tight"><li><span class="n">1</span><div><h3>取样</h3><p>每批选10棵有代表性的树，每棵从树冠中部、各个方向取10颗果实。</p></div><p><span class="lbl">工具、数量</span>每批100颗果实</p><p><span class="lbl">注意</span>不要只挑最好看的果实。</p></li><li><span class="n">2</span><div><h3>取汁</h3><p>挤几颗果实取果汁，滴2–3滴，盖满折光仪棱镜。</p></div><p><span class="lbl">工具、数量</span>折光仪 0–32 °Brix</p><p><span class="lbl">注意</span>果汁中不能混有果皮和气泡。</p></li><li><span class="n">3</span><div><h3>读数与擦拭</h3><p>读取°Brix，用清水冲洗棱镜，擦干后再测下一个样品。</p></div><p><span class="lbl">工具、数量</span>每棵树读数5次</p><p><span class="lbl">注意</span>每次开始前用蒸馏水校准归零。</p></li><li><span class="n">4</span><div><h3>记录</h3><p>记录日期、批次、果实颜色和°Brix，并计算每批平均值。</p></div><p><span class="lbl">工具、数量</span>按批次的Brix记录本</p><p><span class="lbl">注意</span>青果和过熟果也要记录，以便比较。</p></li><li><span class="n">5</span><div><h3>与杯中风味对比</h3><p>一两季后，把采摘时的Brix与每批的杯测（cupping）分数对比，了解自家庄园在哪个Brix区间最好喝。</p></div><p><span class="lbl">工具、数量</span>庄园自己的数据</p><p><span class="lbl">注意</span>每个品种、每个批次都有自己的阈值。</p></li></ol>
+  </section>
+  <section class="card">
+    <h2>在MeDili庄园</h2>
+    <div class="medili">
+      <h3>正在做</h3>
+      <ul>
+        <li>整批均匀灌溉，使其一次开花，下一季成熟更集中（<a class="lnk" href="vuon.html">庄园的十二个月</a>）。</li>
+        <li>把采收季分成3轮，从11月到次年1月初；每批青果最多5%（<a class="lnk" href="trai-ca-phe.html">咖啡果结构</a>）。</li>
+      </ul>
+      <h3 style="margin-top:12px">建议增加</h3>
+      <ul>
+        <li>每轮采摘前，每批测100颗果实的Brix，并与该批开花日期一起记录。</li>
+        <li>采回的果实当天去皮或上架晾晒，不过夜。</li>
+        <li>处理前先浮选，把浮果单独分开，免得把缺陷风味带进好批次。</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<section class="card src"><p style="margin:0;font-size:.88rem;color:var(--muted);max-width:110ch"><b style="color:var(--ink)">综合多方资料。</b>阶段节点依据综合资料；成熟时间用一个简单模型随温度变化：海拔升高100米，气温低0.6 °C，果实需要相应更多时间。Brix曲线、果实间的成熟度差异和采摘方式均为示意，用于理解和作为起点，不能替代庄园实测数据。</p><div class="lnks"><a class="lnk" href="phan-biet-ca-phe.html">咖啡辨别机</a><a class="lnk" href="trai-ca-phe.html">咖啡果结构</a><a class="lnk" href="vuon.html">庄园的十二个月</a><a class="lnk" href="vi-sinh.html">微生物机</a><a class="lnk" href="tien-chat-huong.html">香气前体机</a><a class="lnk" href="journal.html">全部咖啡知识</a></div></section>
+
+<section class="contact" id="lien-he"><div><img class="lgK" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83"><div class="tagline">迷恋Di Linh的味道</div><p>经销商：DSunfood有限责任公司，143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM。<br>庄园与烘焙厂：Thôn 11, Xã Di Linh, Lâm Đồng。</p></div><div class="zalo"><span>MeDili Zalo</span><strong data-sel>0966 770 788</strong><div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Zalo留言</a><button type="button" data-copy="0966770788" data-done="号码已复制">复制号码</button></div><small>邮箱：cafe@medili.vn</small></div></section>
+</div>
+<footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">总有时间享用<em>一杯好咖啡。</em></p><a class="btn main" href="quan-medili.html">相约MeDili</a></div><div class="mf-grid"><div class="mf-brand"><b>迷恋咖啡，迷恋Di Linh。</b><span>守护传承，珍惜每一份风味。</span><small>Di Linh · 林同省 · 越南</small></div><nav class="mf-col" aria-label="探索"><p class="mf-t">探索</p><a href="cau-chuyen.html">MeDili的故事</a><a href="doi-ngu.html">MeDili团队</a><a href="vung-trong.html">Di Linh种植区</a><a href="anh-vuon.html">MeDili庄园照片</a><a href="xuong-rang.html">烘焙厂与产能</a><a href="rang.html">烘焙室</a><a href="huong-dan-pha.html">冲煮指南</a><a href="quay-pha.html">冲煮吧台</a><a href="tim-gu.html">寻找您的咖啡口味</a><a href="cong-thuc-pha.html">冲煮配方机</a><a href="chiet-xuat.html">萃取机</a><a href="cold-brew.html">冷萃机</a><a href="journal.html">咖啡知识</a></nav><nav class="mf-col" aria-label="MeDili与您"><p class="mf-t">MeDili与您</p><a href="cua-hang.html">MeDili商店</a><a href="mua-hang.html">选购室</a><a href="horeca.html">HORECA解决方案</a><a href="dong-hanh-cung-quan.html">与咖啡馆同行</a><a href="nhan-xanh.html">批发生豆</a><a href="gia-ca-phe.html">今日咖啡价格</a><a href="quan-medili.html">MeDili Café门店</a><a href="lien-he.html">联系方式与地图</a><a href="chinh-sach.html">MeDili政策</a><a href="giao-hang.html">配送与退换货</a><a href="bao-mat.html">隐私政策</a></nav><div class="mf-col"><p class="mf-t">经销 · DSunfood</p><p>DSunfood有限责任公司<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>庄园与烘焙厂<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">前往MeDili的路线 ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">通过Zalo联系MeDili ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>MeDili Coffee Farm · Cà Sẻ Di Linh</i></div></div></footer><nav class="fl-c" aria-label="快速联系MeDili"><a class="fl-b" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener" aria-label="通过Zalo联系MeDili" data-tip="通过Zalo联系MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a><a class="fl-b" href="https://www.facebook.com/share/192oMLdBnq/" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a></nav>
+<script>
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'已复制'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='号码已选中，请自行复制'}
+setTimeout(()=>{b.textContent=o},2400)}))})();
+window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
+const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};
+const badge=()=>{const n=get().reduce((a,x)=>a+(+x.q||0),0);document.querySelectorAll('.mh-cn').forEach(e=>{e.textContent=n>99?'99+':n;e.hidden=!n})};
+const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badge()};
+const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
+badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
+
+const $=id=>document.getElementById(id);
+const vn=(n,d=1)=>(+n).toFixed(d);
+const fm=n=>Math.round(n).toLocaleString('zh-CN');
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const lerp=(a,b,t)=>a+(b-a)*t;
+const NB=' ';
+const g1=n=>Number.isInteger(+n)?String(n):vn(n,1);
+const f1=n=>(+n).toFixed(1);
+const P=(x,y,z=0)=>[OX+(x-y)*.866*U,OY+(x+y)*.5*U-z*U];
+const pts=a=>a.map(q=>q.map(f1).join(',')).join(' ');
+const pa=p=>!p?'':(p[0]==='#'||p.startsWith('rgb')||p.startsWith('var('))?` style="fill:${p}"`:` class="${p}"`;
+const poly=(a,p='')=>`<polygon points="${pts(a)}"${pa(p)}/>`;
+function box(x,y,z,w,d,h,c=['f1','f2','f3']){return poly([P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[1])+poly([P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)],c[2])+poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[0])}
+const RX=r=>r*U*1.2247,RY=r=>r*U*.7071;
+function cyl(cx,cy,z,r,h,c='f2',top='f1'){const [a,b]=P(cx,cy,z),[,t]=P(cx,cy,z+h),rx=RX(r),ry=RY(r);return `<path${pa(c)} d="M${f1(a-rx)} ${f1(t)}V${f1(b)}A${f1(rx)} ${f1(ry)} 0 0 0 ${f1(a+rx)} ${f1(b)}V${f1(t)}Z"/><ellipse${pa(top)} cx="${f1(a)}" cy="${f1(t)}" rx="${f1(rx)}" ry="${f1(ry)}"/>`}
+function frus(cx,cy,z0,r0,z1,r1,c,top){const [a,b0]=P(cx,cy,z0),[,b1]=P(cx,cy,z1),x0=RX(r0),y0=RY(r0),x1=RX(r1),y1=RY(r1);return `<path${pa(c)} d="M${f1(a-x1)} ${f1(b1)}L${f1(a-x0)} ${f1(b0)}A${f1(x0)} ${f1(y0)} 0 0 0 ${f1(a+x0)} ${f1(b0)}L${f1(a+x1)} ${f1(b1)}Z"/><ellipse${pa(top)} cx="${f1(a)}" cy="${f1(b1)}" rx="${f1(x1)}" ry="${f1(y1)}"/>`}
+const sph=(cx,cy,z,r,c,id)=>{const [a,b]=P(cx,cy,z);return `<circle${id?` id="${id}"`:''}${pa(c)} cx="${f1(a)}" cy="${f1(b-r*U)}" r="${f1(r*U)}"/>`};
+const disc=(cx,cy,z,r,c)=>{const [a,b]=P(cx,cy,z);return `<ellipse${pa(c)} cx="${f1(a)}" cy="${f1(b)}" rx="${f1(RX(r))}" ry="${f1(RY(r))}"/>`};
+const face=(x,y,z)=>{const q=P(x,y,z);return `matrix(.866 .5 0 1 ${f1(q[0])} ${f1(q[1])})`};
+const faceR=(x,y,z)=>{const q=P(x,y,z);return `matrix(.866 -.5 0 1 ${f1(q[0])} ${f1(q[1])})`};
+const lcd=(x,y,z,w,id,R)=>`<g transform="${(R?faceR:face)(x,y,z)}"><rect class="lcdb" x="0" y=".8" width="${w}" height="9" rx="1.4"/><text class="lcd" id="${id}" x="${w/2}" y="7.9" text-anchor="middle"></text></g>`;
+const stG=(i,inner)=>`<g class="st m" data-i="${i}" tabindex="0" role="button" aria-label="第${i}站：${ST[i-1].n}">${inner}</g>`;
+function bench(L,D,sign,sx){let h='<g class="m">';[[3,D-3],[L-3,D-3],[L-3,3]].forEach(([x,y])=>h+=cyl(x,y,-9,1.2,5,'cu2','cu2'));h+=box(0,0,-4,L,D,4,['wo','wo2','cu2'])+'</g>';
+ const pl=P(sx,D,-.6),w=__tl(sign)*8.3+16;
+ return h+`<g transform="matrix(.866 .5 0 1 ${f1(pl[0])} ${f1(pl[1])})"><rect width="${f1(w)}" height="24" rx="3" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:1.2"/><circle cx="8" cy="12" r="1.8" style="fill:#2A1B16"/><circle cx="${f1(w-8)}" cy="12" r="1.8" style="fill:#2A1B16"/><text class="sgn" x="${f1(w/2)}" y="17.5" text-anchor="middle">${sign}</text></g>`}
+let isOff=()=>false;
+function drawChips(){let h='';
+ for(let i=1;i<=ST.length;i++){const C=CHIP[i],l=chipLabel(i),w=40+__tl(l)*7,x=Math.min(C.x,VBW-w-8),q=P(...ANCH[i]),off=isOff(i);
+  h+=`<polyline class="lead-l${i===st.sel?' on':''}" points="${f1(q[0])},${f1(q[1])} ${f1(x+20)},${C.y+13}"/><g class="chip${i===st.sel?' on':''}${off?' off':''}" data-c="${i}"><rect x="${f1(x+6)}" y="${C.y}" rx="8" width="${f1(w)}" height="26"/><circle cx="${f1(x+6)}" cy="${C.y+13}" r="13"/><text class="num" x="${f1(x+6)}" y="${C.y+18.5}" text-anchor="middle">${i}</text><text class="lab" x="${f1(x+26)}" y="${C.y+18}">${l}</text></g>`}
+ const el=$('chips');el.innerHTML=h;el.querySelectorAll('.chip').forEach(g=>g.addEventListener('click',()=>select(+g.dataset.c)))}
+const vf=v=>typeof v==='function'?v():v;
+function renderStation(){const s=ST[st.sel-1],off=isOff(st.sel),kv=vf(s.kv)||[];
+ document.querySelectorAll('#scene .st').forEach(g=>{const i=+g.dataset.i;g.classList.toggle('on',i===st.sel);g.classList.toggle('off',isOff(i))});
+ document.querySelectorAll('#strip button').forEach((b,n)=>{b.classList.toggle('on',n+1===st.sel);b.classList.toggle('off',isOff(n+1));b.setAttribute('aria-pressed',n+1===st.sel)});
+ $('detail').innerHTML=`<div class="dh"><div class="dn">${st.sel}</div><h2>${s.n}<small>${vf(s.sub)}${off&&s.offNote?' · '+vf(s.offNote):''}</small></h2></div><div class="dgrid"><div><span class="lbl">${s.l1||'发生了什么'}</span><p>${vf(s.mech)}</p>${s.check?`<span class="lbl">${s.l2||'如何测量与观察'}</span><p>${vf(s.check)}</p>`:''}</div><div><span class="lbl">当前数值</span><dl class="kv">${kv.map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join('')}</dl>${s.fail?`<p style="margin-top:8px"></p><span class="lbl">${s.l3||'常见误解'}</span><p>${vf(s.fail)}</p>`:''}${s.tip?`<span class="lbl">${s.l4||'在MeDili'}</span><p>${vf(s.tip)}</p>`:''}</div></div>`}
+function select(i,noScroll){st.sel=i;renderStation();drawChips();if(noScroll)return;const sc=document.querySelector('.scroller'),q=P(...ANCH[i]);if(sc.scrollWidth>sc.clientWidth)sc.scrollLeft=q[0]/VBW*sc.scrollWidth-sc.clientWidth/2}
+function initStations(){$('strip').innerHTML=ST.map((s,i)=>`<button type="button" aria-pressed="false">${i+1} ${s.n}</button>`).join('');
+ $('strip').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>select(i+1));
+ document.querySelectorAll('#scene .st').forEach(g=>{g.addEventListener('click',()=>select(+g.dataset.i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(+g.dataset.i)}})})}
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;let timer=0;
+function stopRun(){clearTimeout(timer);timer=0;$('scene').classList.remove('running')}
+function tour(seq,ms,each){stopRun();if(still){each&&each(seq.length-1);select(seq[seq.length-1]);return}
+ $('scene').classList.add('running');let k=0;
+ const step=()=>{const i=seq[k],q=P(ANCH[i][0],ANCH[i][1],ANCH[i][2]-1),t=$('tok');t.setAttribute('cx',f1(q[0]));t.setAttribute('cy',f1(q[1]));each&&each(k);select(i);k++;
+  if(k<seq.length)timer=setTimeout(step,ms||650);else timer=setTimeout(()=>$('scene').classList.remove('running'),900)};step()}
+function pills(id,items,cur,cb){$(id).innerHTML=items.map(([k,n])=>`<button class="pill" type="button" data-k="${k}" aria-pressed="${String(cur)===String(k)}">${n}</button>`).join('');$(id).querySelectorAll('button').forEach(b=>b.onclick=()=>cb(b.dataset.k))}
+function interp(p,x){if(!p.length||x<p[0][0]||x>p[p.length-1][0])return null;for(let i=1;i<p.length;i++)if(x<=p[i][0]){const [x0,y0]=p[i-1],[x1,y1]=p[i];return y0+(y1-y0)*(x-x0)/((x1-x0)||1)}return p[p.length-1][1]}
+function lineSVG(o){const {W,H,l,r,t,b}=o,X=x=>l+(x-o.x0)/(o.x1-o.x0)*(W-l-r),Y=y=>t+(1-(y-o.y0)/(o.y1-o.y0))*(H-t-b);
+ let g=o.ttl?`<text class="ttl" x="${l}" y="12">${o.ttl}</text>`:'';
+ (o.bands||[]).forEach(([a,c,lab])=>g+=`<rect x="${f1(X(a))}" y="${t}" width="${f1(Math.max(0,X(c)-X(a)))}" height="${H-t-b}" style="fill:var(--good);fill-opacity:.13"/>`);
+ (o.hb||[]).forEach(([a,c])=>g+=`<rect x="${l}" y="${f1(Y(c))}" width="${W-l-r}" height="${f1(Math.max(0,Y(a)-Y(c)))}" style="fill:var(--good);fill-opacity:.13"/>`);
+ (o.yt||[]).forEach(v=>g+=`<line x1="${l}" x2="${W-r}" y1="${f1(Y(v))}" y2="${f1(Y(v))}" style="stroke:var(--rule);stroke-width:.8"/><text x="${l-5}" y="${f1(Y(v)+3.5)}" text-anchor="end">${o.yf?o.yf(v):v}</text>`);
+ (o.xt||[]).forEach(v=>g+=`<text x="${f1(X(v))}" y="${H-5}" text-anchor="middle">${o.xf?o.xf(v):v}</text>`);
+ (o.vl||[]).forEach(([x,lab])=>g+=`<line x1="${f1(X(x))}" x2="${f1(X(x))}" y1="${t}" y2="${H-b}" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3"/>${lab?`<text x="${f1(X(x)+3)}" y="${t+10}">${lab}</text>`:''}`);
+ (o.areas||[]).forEach(s=>g+=`<polygon points="${s.p.map(([x,y])=>f1(X(x))+','+f1(Y(y))).join(' ')}" style="fill:${s.c};fill-opacity:${s.o||.9}"/>`);
+ (o.ser||[]).forEach(s=>g+=`<polyline points="${s.p.map(([x,y])=>f1(X(x))+','+f1(Y(y))).join(' ')}" fill="none" style="stroke:${s.c};stroke-width:${s.w||2};stroke-linejoin:round${s.d?`;stroke-dasharray:${s.d}`:''}"/>`);
+ if(o.vx!=null){g+=`<line x1="${f1(X(o.vx))}" x2="${f1(X(o.vx))}" y1="${t}" y2="${H-b}" style="stroke:var(--ink);stroke-width:1.1"/>`;
+  (o.ser||[]).forEach(s=>{if(s.dot===false)return;const v=interp(s.p,o.vx);if(v!=null)g+=`<circle cx="${f1(X(o.vx))}" cy="${f1(Y(v))}" r="4" style="fill:${s.c};stroke:var(--panel);stroke-width:2"/>`})}
+ if(o.end){const L=(o.ser||[]).filter(s=>s.lab).map(s=>({y:Y(s.p[s.p.length-1][1]),s:s.lab})).sort((a,c)=>a.y-c.y);for(let i=1;i<L.length;i++)if(L[i].y-L[i-1].y<12)L[i].y=L[i-1].y+12;L.forEach(e=>g+=`<text x="${W-r+5}" y="${f1(e.y+3.5)}" style="fill:var(--ink)">${e.s}</text>`)}
+ (o.bands||[]).forEach(([a,c,lab])=>{if(lab)g+=`<text x="${f1((X(a)+X(c))/2)}" y="${H-b-6}" text-anchor="middle" style="paint-order:stroke;stroke:var(--panel);stroke-width:3px;stroke-linejoin:round;fill:var(--ink)">${lab}</text>`});
+ return g}
+const legend=(id,items)=>{$(id).innerHTML=items.map(s=>s.box?`<span><i class="sw3" style="background:${s.c}"></i>${s.n}</span>`:`<span><i class="sw2${s.d?' d':''}" style="border-color:${s.c}"></i>${s.n}</span>`).join('')};
+const cw=id=>{const e=$(id);return Math.max(300,Math.round((e&&e.clientWidth)||900))};
+const cp=async(txt,el)=>{try{await navigator.clipboard.writeText(txt);$(el).textContent='已复制。'}catch(e){$(el).textContent='无法复制，请自行选择文本复制。'}setTimeout(()=>$(el).textContent='',2600)};
+function rng(seed){let s=seed>>>0;return ()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296}}
+function gauss(r){let u=0,v=0;while(!u)u=r();while(!v)v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+
+const U=7,OX=196,OY=118,VBW=1040;
+const VAR={rob:{n:'Robusta Di Linh',sh:'Robusta',T0:270,a0:1000,t0:21,amin:400,amax:1300,gap:21,note:'Robusta从开花到果实成熟需9–11个月。在Di Linh约3月开花，11月开始采收。'},
+ ara:{n:'Arabica Cầu Đất',sh:'Arabica',T0:240,a0:1500,t0:18,amin:800,amax:1900,gap:12,note:'Arabica需6–8个月。在海拔约1,500米的Cầu Đất，气候凉爽，果实比低海拔地区成熟得慢。'}};
+const DEF={v:'rob',alt:1000,s:.7,waves:2,meth:'sel',gap:21};
+const st={...DEF,sel:5,day:210,sday:0};
+const WAV={1:{w:[1],o:[0]},2:{w:[.6,.4],o:[0,14]},3:{w:[.45,.35,.2],o:[0,12,24]}};
+const PH=[{n:'幼果',a:0,b:.37,i:3},{n:'胚乳取代',a:.37,b:.57,i:4},{n:'种子充实',a:.57,b:.83,i:5},{n:'转色',a:.83,b:.97,i:6},{n:'适熟',a:.97,b:1.06,i:6},{n:'过熟',a:1.06,b:1.16,i:6},{n:'树上干果',a:1.16,b:9,i:6}];
+const CL=[{n:'青果',c:'#D8D0A8',lt:1},{n:'半熟',c:'#DFA13A',lt:1},{n:'成熟',c:'#B33A24'},{n:'过熟',c:'#7A2414'},{n:'干果',c:'#4E3A2C'}];
+const cls=s=>s<.88?0:s<.97?1:s<1.06?2:s<1.16?3:4;
+const CS=[[0,'#D8D0A8'],[.83,'#D8D0A8'],[.88,'#DDBB55'],[.93,'#D9782E'],[.97,'#C0432A'],[1.01,'#B33A24'],[1.06,'#8E2A1A'],[1.16,'#5E2A1C'],[1.3,'#4A3326']];
+const BX=[[0,3],[.57,4.5],[.83,7],[.88,10],[.97,17],[1.01,20],[1.06,22.5],[1.16,26]];
+const SZ=[[0,.22],[.2,.42],[.37,.86],[.57,1],[1.06,1],[1.16,.93],[1.4,.82]];
+const EN=[[0,0],[.3,0],[.57,1],[2,1]],DM=[[0,0],[.5,.04],[.83,1],[2,1]];
+const hx=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)),toh=a=>'#'+a.map(v=>Math.round(v).toString(16).padStart(2,'0')).join('');
+function col(s){if(s<=CS[0][0])return CS[0][1];for(let i=1;i<CS.length;i++)if(s<=CS[i][0]){const t=(s-CS[i-1][0])/(CS[i][0]-CS[i-1][0]),a=hx(CS[i-1][1]),b=hx(CS[i][1]);return toh(a.map((v,k)=>v+(b[k]-v)*t))}return CS[CS.length-1][1]}
+const ip=(tb,s)=>interp(tb,clamp(s,tb[0][0],tb[tb.length-1][0]));
+const brix=s=>s>=1.16?null:ip(BX,s);
+const temp=()=>{const V=VAR[st.v];return V.t0-.6*(st.alt-V.a0)/100};
+const dur=()=>{const V=VAR[st.v];return Math.round(V.T0*(V.t0-5)/(temp()-5))};
+const phase=s=>PH.find(p=>s>=p.a&&s<p.b)||PH[PH.length-1];
+const wk=f=>Math.round(f*dur()/7);
+const D0=new Date(2026,2,10);
+const dmy=d=>{const x=new Date(D0);x.setDate(x.getDate()+Math.round(d));return (x.getMonth()+1)+'月'+x.getDate()+'日'};
+
+/* ====== 400 TRÁI VÀ HAI CÁCH HÁI ====== */
+let CH=null,CHK='';
+function cherries(){const T=dur(),key=st.v+T+st.waves;if(key===CHK)return CH;const r=rng(11),W=WAV[st.waves],a=[];
+ for(let i=0;i<400;i++){let u=r(),k=0,acc=0;for(;k<W.w.length;k++){acc+=W.w[k];if(u<=acc)break}k=Math.min(k,W.w.length-1);
+  a.push({b:W.o[k]+r()*4,T:T*(1+.045*gauss(r)),e:r()})}
+ CH=a;CHK=key;return a}
+const sOf=(c,d)=>(d-c.b)/c.T;
+function onTree(d){const n=[0,0,0,0,0];cherries().forEach(c=>n[cls(sOf(c,d))]++);return n.map(v=>v/4)}
+function bestStrip(){const T=dur();let best=0,bd=Math.round(T);for(let d=Math.round(.85*T);d<=Math.round(1.25*T);d++){const r=onTree(d)[2];if(r>best){best=r;bd=d}}return bd}
+function strip(d){const n=[0,0,0,0,0];cherries().forEach(c=>n[cls(sOf(c,d))]++);return {passes:[{day:d,cnt:n}],tot:n}}
+function selective(){const C=cherries(),T=dur(),pk=new Array(C.length).fill(false),passes=[];let day=Math.round(.85*T);
+ while(day<1.4*T){let r=0;C.forEach(c=>{if(sOf(c,day)>=.97)r++});if(r>=.25*C.length)break;day++}
+ for(let p=0;p<9;p++){const n=[0,0,0,0,0];C.forEach((c,i)=>{if(pk[i])return;const k=cls(sOf(c,day));if(k>=2||(k===1&&c.e<.08)||(k===0&&c.e<.01)){pk[i]=true;n[k]++}});
+  passes.push({day,cnt:n});const left=pk.filter(x=>!x).length;
+  if(left<=C.length*.04||p===7){if(left){const m=[0,0,0,0,0],d2=day+st.gap;C.forEach((c,i)=>{if(!pk[i]){pk[i]=true;m[cls(sOf(c,d2))]++}});passes.push({day:d2,cnt:m,vet:true})}break}
+  day+=st.gap}
+ const tot=[0,0,0,0,0];passes.forEach(p=>p.cnt.forEach((v,k)=>tot[k]+=v));return {passes,tot}}
+const pct=(n,k)=>{const s=n.reduce((a,b)=>a+b,0);return s?n[k]/s*100:0};
+let R={};
+function calc(){const T=dur(),s=st.day/T,ph=phase(s),sel=selective(),stp=strip(st.sday),act=st.meth==='sel'?sel:stp,t=act.tot;
+ const fl=clamp(pct(t,4)+.5*pct(t,3)+3,0,100);
+ R={T,s,ph,b:brix(s),sel,stp,act,ripe:pct(t,2),green:pct(t,0),un:pct(t,1),over:pct(t,3)+pct(t,4),fl,np:act.passes.length};return R}
+
+/* ====== 9 TRẠM ====== */
+const ST=[
+ {n:'阳光与叶片',sub:'光合作用制造糖',mech:'叶片利用阳光、CO₂和水制造糖。糖以蔗糖的形式经韧皮部输送到全树，送往花、果实和种子。叶片健康、阳光和水分充足，果实才有糖源来生长并充实种子。',
+  kv:()=>[['树内输送的糖的形式','蔗糖'],['通道','韧皮部'],['接收最多','正在充实种子的果实']],check:'叶片厚、有光泽、边缘不焦。挂果量相对叶量过多的树，供给种子的糖不足，种子瘪小。',
+  fail:'以为叶片好就够了。挂果相对叶量过多的树，种子依然轻，香气单薄。',tip:'修剪枝条，适度保留遮荫树，让叶片有足够阳光又不晒伤。请看“庄园的十二个月”。'},
+ {n:'开花',sub:()=>'第0天，假设为Di Linh的3月10日',mech:()=>`旱季第一次灌溉后，花芽几天内开放，授粉后坐果。开花分${st.waves}批，同一枝上的果实也分${st.waves}批成熟，相差几周。`,
+  kv:()=>[['开花批次',st.waves+' 批'],['后续批次推迟开花',st.waves>1?WAV[st.waves].o.slice(1).map(x=>x+' 天').join('、'):'无'],['Robusta','异花授粉，需要风和昆虫']],
+  check:'记录批次中每批开花的日期，以预估采摘日。',fail:'灌溉不均会使开花零散，采收季拖长，难以采到成熟度均匀的果实。',tip:'MeDili庄园的日程是整批均匀灌溉，使其一次开花。'},
+ {n:'幼果',sub:()=>`第0–${wk(.37)}周`,mech:'果实小，果皮和幼嫩的外胚乳（perisperm）先长大。里面的种子柔软，几乎全是水，还没有明显的胚乳。',
+  kv:()=>[['延长',`${wk(.37)}周`],['种子的大部分','外胚乳'],['以Arabica为参照','外胚乳生长至第11–12周']],check:'果实硬、颜色浅，横切可见内部透明多汁。',fail:'看到果实变大就以为种子已长成。此时种子还没积累多少物质。',tip:'保持水分和养分稳定，树若遭干旱，幼果会大量脱落。'},
+ {n:'胚乳取代',sub:()=>`第${wk(.37)}–${wk(.57)}周`,mech:'胚乳，即日后成为咖啡豆的部分，逐渐长大并取代外胚乳，直到填满种腔。剩下的外胚乳成为贴在豆子外的薄银皮。',
+  kv:()=>[['延长',`${wk(.57)-wk(.37)}周`],['以Arabica为参照','约第19周填满种腔'],['种子大小','接近最终大小']],check:'横切可见乳白色的种仁逐渐变大，透明层变薄。',fail:'此阶段缺水，种子会小，瘪粒多。',tip:'此时要保持灌溉，并在雨季按时施肥。'},
+ {n:'种子充实',sub:()=>`第${wk(.57)}–${wk(.83)}周`,mech:'种子已达到足够大小。树把蔗糖、贮藏蛋白和油脂运进种子。这正是种子积累香气前体的时候：糖、氨基酸、脂类、有机酸、咖啡因。',
+  kv:()=>[['延长',`${wk(.83)-wk(.57)}周`],['以Arabica为参照','开花后第130–190天'],['采摘时的蔗糖',st.v==='rob'?'约占干物质的6%':'约占干物质的9.4%']],check:'果实压手，横切可见种仁结实，难以捏动。',fail:'以为果实转色后才开始变甜。种子早在果皮转色之前就已积累糖分。',tip:'此阶段不要让树挂果过多，否则种子轻、香气薄。'},
+ {n:'转色与成熟',sub:()=>`约第${wk(.97)}–${wk(1.06)}周适熟`,mech:'果皮叶绿素减少，红色素增加，果实先半熟再红熟。果肉在大约最后两个月迅速积累糖分，Brix上升。留得太久，果实就会过熟、颜色变深，然后在树上干掉。',
+  kv:()=>[['适熟',`第${Math.round(.97*R.T)}–${Math.round(1.06*R.T)}天`],['时间段',`${dmy(.97*R.T)}至${dmy(1.06*R.T)}`],['过熟时间',`第${Math.round(1.06*R.T)}天`]],check:'果实均匀红色，轻捏变软，种子容易滑出。',fail:'以为深红色果实最好。其实往往已经过熟。',tip:'分轮采摘，抓住适熟期。'},
+ {n:'测Brix',sub:()=>R.b==null?'果实已干，没有果汁':`当前 ${vn(R.b,1)} °Brix`,mech:'折光仪测量果汁的折射率来估算可溶物，主要是糖。Brix随成熟度上升，是选择采摘日的好工具，但不能说明种子里的糖。',
+  kv:()=>[['当前Brix',R.b==null?'无法测量':vn(R.b,1)+' °Brix'],['精品成熟果通常为','18–24 °Brix'],['果实阶段',R.ph.n]],check:'用蒸馏水校准归零，测多颗果实的果汁，取平均值。',fail:'把Brix当作品质分数。果实过熟或失水时Brix也会升高。',tip:'建立按批次的Brix记录本，几季后与杯测（cupping）分数对比。'},
+ {n:'采摘',sub:()=>st.meth==='sel'?`精选采摘${R.np}轮`:`第${st.sday}天一次性采摘`,mech:()=>st.meth==='sel'?`采摘工每隔${st.gap}天回来一次，只采成熟、过熟和干的果实，混有少量半熟果。最后一轮扫尾，采光树上剩余果实。`:'一次捋光整根枝条：快、省人工，但青果、半熟果和过熟果都会被采下。',
+  kv:()=>[['批次中的成熟果',vn(R.ripe,0)+'%'],['青果',vn(R.green,0)+'%'],['半熟',vn(R.un,0)+'%'],['过熟、干果',vn(R.over,0)+'%']],check:'每轮从筐中随机数100颗果实。',fail:'为图快一次性采摘，打算之后再分拣。青果一旦混入批次就很难全部挑出。',tip:'MeDili标准：每批青果最多5%。'},
+ {n:'浮选',sub:()=>`浮果约${vn(R.fl,0)}%`,mech:'把果实倒入水槽。结实的成熟果下沉；干果、瘪果、虫蛀果和许多过熟果浮起。把浮果单独捞出，免得把缺陷风味带进好批次。',
+  kv:()=>[['浮果（估计）',vn(R.fl,0)+'%'],['剩余成熟果',vn(R.ripe,0)+'%'],['采摘方式',st.meth==='sel'?'精选采摘':'一次性采摘']],check:'使用清水，每几批更换一次。仔细捞出浮层。',fail:'为凑重量把浮果混回批次。',tip:'浮选后当天处理。请看微生物机。'}];
+
+/* ====== DỰNG CẢNH ====== */
+const ANCH=[null,[8,14,13],[21,14,8.6],[33,13,5.4],[44,13,6.6],[55,13,7.6],[66,13,7.9],[77,12.5,4.2],[91,13,5.2],[111,14,6.6]];
+const CHIP=[null,{x:176,y:12},{x:244,y:50},{x:318,y:90},{x:396,y:130},{x:474,y:170},{x:552,y:212},{x:634,y:256},{x:716,y:304},{x:800,y:356}];
+const PED=[[29,1.25],[40,2.05],[51,2.7],[62,2.9]];
+function buildScene(){
+ let h=bench(124,24,'成熟咖啡果机 · Di Linh庄园',46);
+ h+=`<polyline class="flowL" points="${pts([P(11,6,9.5),P(30,5,9),P(68,5,9)])}"/>`;
+ /* 1 nắng và lá */
+ const sp=P(-4,8,13);let s=`<g>${[0,45,90,135,180,225,270,315].map(a=>{const r1=19,r2=27,c=Math.cos(a*Math.PI/180),n=Math.sin(a*Math.PI/180);return `<line class="ray" x1="${f1(sp[0]+c*r1)}" y1="${f1(sp[1]+n*r1)}" x2="${f1(sp[0]+c*r2)}" y2="${f1(sp[1]+n*r2)}"/>`}).join('')}<circle class="sun" cx="${f1(sp[0])}" cy="${f1(sp[1])}" r="15"/></g>`;
+ s+=cyl(8,14,0,.75,9.4,'cu2','cu2');
+ const cp=P(8,14,11.2);[[-22,6,'can2',22],[20,8,'can2',21],[0,-11,'can1',27],[-12,-3,'can3',17],[13,-6,'can3',16],[2,10,'can1',15]].forEach(([dx,dy,c,r])=>s+=`<ellipse class="${c}" cx="${f1(cp[0]+dx)}" cy="${f1(cp[1]+dy)}" rx="${r}" ry="${f1(r*.78)}"/>`);
+ h+=stG(1,s);
+ /* 2 hoa */
+ s=cyl(21,14,0,.45,7.6,'cu2','cu2');const b0=P(15.6,14,7.1),b1=P(26.4,14,7.8);
+ s+=`<path d="M${f1(b0[0])} ${f1(b0[1])}L${f1(b1[0])} ${f1(b1[1])}" style="stroke:#6B4226;stroke-width:4;stroke-linecap:round;fill:none"/>`;
+ for(let k=0;k<7;k++){const q=P(16.4+k*1.5,14,7.25+k*.09);[[-5,-3],[4,-5],[0,3],[-4,4],[5,2],[0,-7]].forEach(([dx,dy])=>s+=`<circle class="flw" cx="${f1(q[0]+dx)}" cy="${f1(q[1]+dy-4)}" r="3"/>`);s+=`<circle cx="${f1(q[0])}" cy="${f1(q[1]-4)}" r="1.6" style="fill:#DDBB55;stroke:none"/>`}
+ h+=stG(2,s);
+ /* 3–6 bệ trái */
+ PED.forEach(([x,r],k)=>{let t=box(x,9,0,8,8,2.6,['ped','ped2','ped3'])+lcd(x+.4,17,2.4,48,'kP'+(k+3));
+  t+=sph(x+4,13,2.6,r,k===3?'#B33A24':'#D8D0A8',k===3?'chRipe':'');
+  if(k===3)t+=sph(x+1.7,15.4,2.6,1.4,'#DFA13A');
+  h+=stG(k+3,t)});
+ h+='<g id="now"></g>';
+ /* 7 Brix */
+ s=box(73.5,10.5,0,7,4,1.9,['#E6DCC8','#CFC2A8','#B7A98C'])+box(74.3,11,1.9,2.2,3,.8,['#C9A15B','#A9823F','#8D6A33'])+lcd(73.9,14.5,1.75,40,'kB')+'<g id="liveCh"></g>';
+ h+=stG(7,s);
+ /* 8 hái: hai rổ */
+ s='';[[87,'kS1','捋采'],[96,'kS2','精选']].forEach(([x,id,lb])=>{s+=cyl(x,13,0,3.2,2.8,'bsk','bskT')+`<g id="${id}"></g>`+`<g transform="${face(x-2,16.2,1.9)}"><text class="wtx" x="0" y="8" style="font-size:8px;fill:#FFF6EC">${lb}</text></g>`});
+ h+=stG(8,s)+'<g id="bskOn"></g>';
+ /* 9 tuyển nổi */
+ s=box(103,8,0,15,11,5.2,['glt','gl','gl'])+poly([P(103,8,4.5),P(118,8,4.5),P(118,19,4.5),P(103,19,4.5)],'wat')+'<g id="flt"></g>'+lcd(103.8,19,2,52,'kF');
+ h+=stG(9,s);
+ h+='<g id="flow"></g><g id="chips"></g><circle id="tok" r="7"/>';
+ $('scene').innerHTML=h;[3,4,5,6].forEach(i=>$('kP'+i).classList.add('sm'));initStations()}
+function dots(id,x,y,z,r,n,mix,seed){const q=P(x,y,z),g=rng(seed);let s='';const tot=mix.reduce((a,b)=>a+b,0)||1;
+ for(let i=0;i<n;i++){let u=g()*tot,k=0;while(k<4&&u>mix[k]){u-=mix[k];k++}const a=g()*Math.PI*2,rr=Math.sqrt(g())*RX(r)*.82;s+=`<circle cx="${f1(q[0]+Math.cos(a)*rr)}" cy="${f1(q[1]+Math.sin(a)*rr*.58)}" r="2.6" style="fill:${CL[k].c};stroke:#3A2416;stroke-width:.5"/>`}
+ $(id).innerHTML=s}
+function renderScene(){const r=R,T=r.T;
+ PED.forEach(([x],k)=>{const p=PH[k];$('kP'+(k+3)).textContent=k<3?`第${wk(p.a)}–${wk(p.b)}周`:`第${wk(.83)}–${wk(1.06)}周`});
+ const pi=r.ph.i-3,px=PED[pi][0]+4;$('now').innerHTML=disc(px,13,2.61,3.7,'nowr');
+ const q=P(79,17.6,0),rad=2*ip(SZ,r.s);$('liveCh').innerHTML=`<circle cx="${f1(q[0])}" cy="${f1(q[1]-rad*U)}" r="${f1(rad*U)}" style="fill:${col(r.s)};stroke:#3A2416;stroke-width:1"/>`;
+ $('kB').textContent=r.b==null?'— °Bx':vn(r.b,1)+' °Bx';
+ dots('kS1',87,13,2.8,3.2,34,r.stp.tot,3);dots('kS2',96,13,2.8,3.2,34,r.sel.tot,5);
+ const bx=st.meth==='sel'?96:87;$('bskOn').innerHTML=disc(bx,13,0,4.1,'nowr');
+ const g=rng(9);let s='';const nf=Math.round(r.fl/2.5);for(let i=0;i<nf;i++){const q2=P(104+g()*13,9+g()*9,4.52);s+=`<circle cx="${f1(q2[0])}" cy="${f1(q2[1])}" r="2.4" style="fill:${g()<.5?'#4E3A2C':'#7A2414'};stroke:#3A2416;stroke-width:.4"/>`}$('flt').innerHTML=s;
+ $('kF').textContent='浮果 '+vn(r.fl,0)+'%';
+ drawFlow();drawChips()}
+function chipLabel(i){const r=R;return ['','阳光与叶片',`开花 · ${st.waves}批`,`幼果 · 第0–${wk(.37)}周`,`胚乳 · 第${wk(.37)}–${wk(.57)}周`,`种子充实 · 第${wk(.57)}–${wk(.83)}周`,`适熟 · 第${wk(.97)}–${wk(1.06)}周`,
+ r.b==null?'Brix · 干果':`Brix ${vn(r.b,1)} °Bx`,st.meth==='sel'?`精选${r.np}轮 · 成熟${vn(r.ripe,0)}%`:`一次性采摘 · 成熟${vn(r.ripe,0)}%`,`浮选 · 浮果${vn(r.fl,0)}%`][i]}
+function drawFlow(){const r=R,V=VAR[st.v];
+ const rows=[['品种、海拔',`${V.sh} · ${fm(st.alt)}${NB}m`],['平均气温',`约${vn(temp(),1)}${NB} °C`],['从开花到成熟',`${r.T}天，${vn(r.T/30.4,1)}个月`],['当前查看',`第${st.day}天 · 第${Math.round(st.day/7)}周`],['果实阶段',r.ph.n],['果汁Brix',r.b==null?'已无果汁':vn(r.b,1)+NB+'°Bx'],['采摘批次',`成熟${vn(r.ripe,0)}% · ${r.np}轮`]];
+ const x=16,rh=27,h=50+rows.length*rh+20,y=712-h,w=330;
+ let g=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="${x+16}" y="${y+26}" class="lab12" style="letter-spacing:.08em">一季果实，从开花到加工厂</text>`;
+ rows.forEach(([a,b],i)=>{const yy=y+48+i*rh;g+=`<text class="flowT" x="${x+16}" y="${yy+4}">${a}</text><text x="${x+w-16}" y="${yy+4}" text-anchor="end" class="mono flowT">${b}</text>`});
+ g+=`<text x="${x+16}" y="${y+h-10}" class="tiny mutedt">概念图 · 数据为模型估算</text>`;$('flow').innerHTML=g}
+
+/* ====== BIỂU ĐỒ ====== */
+function drawB(){const T=R.T,xmax=Math.round(1.3*T),p=[];for(let d=0;d<=xmax;d+=3){const b=brix(d/T);if(b!=null)p.push([d,b])}
+ const step=T>250?100:50,xt=[];for(let v=0;v<=xmax;v+=step)xt.push(v);
+ $('cB').innerHTML=lineSVG({W:340,H:150,l:28,r:12,t:18,b:22,x0:0,x1:xmax,y0:0,y1:28,xt,yt:[0,10,20],ttl:'°Brix · 横轴：开花后天数',bands:[[.97*T,1.06*T,'适熟']],ser:[{c:'var(--accent)',p}],vx:clamp(st.day,0,xmax)});
+ $('tip').textContent=R.b==null?`第${st.day}天（${dmy(st.day)}）：果实已在树上干掉。`:`第${st.day}天（${dmy(st.day)}）：${R.ph.n.toLowerCase()}，Brix约${vn(R.b,1)} °Bx。`}
+function draw3(){const T=R.T,W=cw('w3'),mob=W<760,H=mob?240:300,d0=Math.round(.75*T),d1=Math.round(1.32*T),cum=[];
+ for(let d=d0;d<=d1;d+=2){const f=onTree(d);let a=0;cum.push([d,f.map(v=>a+=v)])}
+ const areas=CL.map((c,k)=>({c:c.c,o:.92,p:cum.map(([d,a])=>[d,k?a[k-1]:0]).concat(cum.slice().reverse().map(([d,a])=>[d,a[k]]))}));
+ const vl=(st.meth==='sel'?R.sel.passes.map((p,i)=>[p.day,mob?'':(p.vet?'扫尾':'L'+(i+1))]):[[st.sday,mob?'':'捋采']]);
+ const step=T>250?20:15,xt=[];for(let v=Math.ceil(d0/step)*step;v<=d1;v+=step*(mob?2:1))xt.push(v);
+ $('c3').setAttribute('viewBox',`0 0 ${W} ${H}`);
+ $('c3').innerHTML=lineSVG({W,H,l:mob?34:42,r:14,t:22,b:24,x0:d0,x1:d1,y0:0,y1:100,xt,xf:v=>mob?v:v+' ('+dmy(v)+')',yt:[0,50,100],yf:v=>v+'%',ttl:mob?'树上果实按成熟度（%）':'树上果实按成熟度 · 横轴：开花后天数',areas,vl,vx:clamp(st.day,d0,d1)});
+ legend('lg3',CL.map(c=>({c:c.c,n:c.n,box:1})))}
+function mixRows(){const row=(lab,cnt,cls2)=>{const s=cnt.reduce((a,b)=>a+b,0)||1;return `<div class="mrow2 ${cls2||''}"><span>${lab}</span><div class="stk">${cnt.map((v,k)=>v?`<i class="${CL[k].lt?'lt':''}" style="width:${f1(v/s*100)}%;background:${CL[k].c}" title="${CL[k].n} ${vn(v/s*100,0)}%">${v/s>=.09?vn(v/s*100,0):''}</i>`:'').join('')}</div><b>${vn(cnt[2]/s*100,0)}%</b></div>`};
+ let h='';R.sel.passes.forEach((p,i)=>h+=row(`${p.vet?'扫尾轮':'轮次 '+(i+1)} · ${dmy(p.day)}`,p.cnt));
+ h+=row(`精选采摘合计`,R.sel.tot,'tot'+(st.meth==='sel'?' sel':''));h+=row(`一次性采摘 · ${dmy(st.sday)}`,R.stp.tot,'tot'+(st.meth==='strip'?' sel':''));
+ $('mix').innerHTML=h}
+function drawCut(){const s=R.s,k=ip(SZ,s),cx=168,cy=165,ax=96*k+14,ay=128*k+14,en=ip(EN,s),dm=ip(DM,s),ex=col(s);
+ const dmc=toh(hx('#F7F0DE').map((v,i)=>v+(hx('#D8C597')[i]-v)*dm));
+ let g=`<ellipse cx="${cx}" cy="${cy}" rx="${f1(ax)}" ry="${f1(ay)}" style="fill:${ex};stroke:#3A2416;stroke-width:1.4"/><ellipse cx="${cx}" cy="${cy}" rx="${f1(ax-11)}" ry="${f1(ay-11)}" style="fill:#EFD6AE"/>`;
+ const sx=(ax-11)*.43,sy=(ay-11)*.74,xr=cx+sx+3,ee=Math.sqrt(en),dg=Math.PI/180;
+ [-1,1].forEach(d=>{const x=cx+d*(sx+3);g+=`<ellipse cx="${f1(x)}" cy="${cy}" rx="${f1(sx)}" ry="${f1(sy)}" style="fill:#F3E6C6;stroke:#C9A15B;stroke-width:2.2"/><ellipse cx="${f1(x)}" cy="${cy}" rx="${f1(sx-4)}" ry="${f1(sy-4)}" style="fill:#EDE4CB;fill-opacity:.75"/>`;
+  if(en>0)g+=`<ellipse cx="${f1(x+d*(1-Math.sqrt(en))*(sx-4)*.35)}" cy="${cy}" rx="${f1((sx-4)*Math.sqrt(en))}" ry="${f1((sy-4)*Math.sqrt(en))}" style="fill:${dmc};stroke:#B9A274;stroke-width:1"/>`});
+ const L=[[cx+ax*Math.cos(-50*dg),cy+ay*Math.sin(-50*dg),'果皮'],[cx+(ax-5.5)*.0+(ax-11)*.93*Math.cos(-12*dg),cy+(ay-11)*.93*Math.sin(-12*dg),'果肉'],[xr+sx*Math.cos(-35*dg),cy+sy*Math.sin(-35*dg),'内果皮'],[xr+(sx-4)*.93*Math.cos(30*dg),cy+(sy-4)*.93*Math.sin(30*dg),en<.95?'外胚乳':'银皮'],[xr+(1-ee)*(sx-4)*.35,cy+sy*.12,'胚乳（种仁）']];
+ const lx=340;L.forEach(([x,y,t],i)=>{const ty=60+i*48;g+=`<line class="lead2" x1="${f1(x)}" y1="${f1(y)}" x2="${lx-6}" y2="${ty-4}"/><text x="${lx}" y="${ty}">${t}</text>`});
+ g+=`<text x="${lx}" y="${300}" style="font:500 12px var(--mono);fill:var(--muted)">第${st.day}天 · ${R.ph.n.toLowerCase()}</text>`;
+ $('cut').innerHTML=g;
+ const B=[['果实大小',k,vn(k*100,0)+'%'],['种腔内的胚乳',en,vn(en*100,0)+'%'],['种仁中的干物质',dm,vn(dm*100,0)+'%'],['果肉Brix',(R.b||0)/26,R.b==null?'干':vn(R.b,1)+' °Bx']];
+ $('gbars').innerHTML=B.map(([n,v,t])=>`<div class="bar"><span>${n}</span><div class="track"><i style="width:${f1(clamp(v,0,1)*100)}%"></i></div><span>${t}</span></div>`).join('');
+ const segs=[['幼果',.37,'#EFE3C2'],['胚乳',.2,'#E6D4A6'],['充实',.26,'#D9C08A'],['转色',.14,'#E2A15A'],['成熟',.09,'#C0563B'],['过熟',.1,'#8E3A2A']],tot=1.16;
+ $('tline').innerHTML=`<div class="tl2">${segs.map(([n,f,c])=>`<div style="flex:${f};background:${c}">${n}</div>`).join('')}<i class="mk" style="left:calc(${f1(clamp(R.s/tot,0,1)*100)}% - 1px)"></i></div><div class="tlx"><span>开花</span><span>第${wk(.57)}周</span><span>第${wk(.97)}周</span><span>第${wk(1.16)}周</span></div>`;
+ $('cutNote').textContent=R.ph.n==='树上干果'?'果实已在树上干掉：容易发霉、受微生物污染、产生缺陷风味。':{'幼果':'外胚乳几乎占满种子，胚乳尚未明显形成。','胚乳取代':'胚乳逐渐长大，把外胚乳挤成薄层。','种子充实':'种仁积累蔗糖、蛋白质和油脂：大部分香气前体在这个阶段进入种仁。','转色':'果皮转色，果肉开始迅速变甜。','适熟':'最佳采摘期：种仁饱满，果肉甜。','过熟':'果肉开始在果皮内发酵，应尽快采摘。'}[R.ph.n]}
+
+/* ====== ĐIỀU KHIỂN ====== */
+function verdict(){const r=R;let k='good',t,m;
+ if(r.green>15){k='bad';t=`批次混有${vn(r.green,0)}%青果`;m='超过MeDili的5%阈值。青果会把生涩味带进整批；请精选采摘或推迟采摘日。'}
+ else if(r.green>5){k='warn';t=`批次有${vn(r.green,0)}%青果`;m='超过MeDili每批青果5%的上限。请推迟采摘日或增加一轮精选采摘。'}
+ else if(r.ripe<60){k='warn';t=`批次只有${vn(r.ripe,0)}%成熟果`;m=`半熟果${vn(r.un,0)}%，过熟和干果${vn(r.over,0)}%。半熟果甜度不足，过熟果容易在果皮内发酵：分多轮精选采摘，批次更均匀。`}
+ else if(r.over>15){k='warn';t=`${vn(r.over,0)}%过熟或干果`;m='容易带发酵味、霉味。请缩短采摘间隔。'}
+ else{t=`批次合格：成熟果${vn(r.ripe,0)}%`;m=`青果${vn(r.green,0)}%，低于MeDili的5%阈值。`}
+ const d=r.T-VAR[st.v].T0;m+=` 在${fm(st.alt)}米，果实从开花到成熟约需${r.T}天${d?`，比${fm(VAR[st.v].a0)}米${d>0?'慢':'快'}${Math.abs(d)}天`:''}。`;
+ $('verdict').className=k;$('verdict').innerHTML=`<b>${k==='good'?'✓':k==='warn'?'!':'✕'} ${t}</b>${m}`}
+function sliders(){const V=VAR[st.v],T=R.T;
+ $('iA').min=V.amin;$('iA').max=V.amax;$('iA').value=st.alt;$('oA').textContent=fm(st.alt)+NB+'m';$('aNote').textContent=`估计平均气温约${vn(temp(),1)} °C。海拔每升高100米，气温约低0.6 °C。`;
+ $('iD').max=Math.round(1.3*T);$('iD').value=st.day;$('oD').textContent=`第${st.day}天`;$('dNote').textContent=`若3月10日开花，约为${dmy(st.day)} · 第${Math.round(st.day/7)}周 · ${R.ph.n.toLowerCase()}。`;
+ $('iG').value=st.gap;$('oG').textContent=st.gap+' 天';
+ $('iS').min=Math.round(.85*T);$('iS').max=Math.round(1.25*T);$('iS').value=st.sday;$('oS').textContent=`第${st.sday}天 · ${dmy(st.sday)}`;
+ $('gGap').hidden=st.meth!=='sel';$('gStrip').hidden=st.meth!=='strip'}
+function stats(){const r=R,t=(a,b)=>`<div class="stat"><span>${a}</span><b>${b}</b></div>`;
+ $('stats').innerHTML=t('果实阶段',r.ph.n)+t('果汁Brix',r.b==null?'—':vn(r.b,1)+NB+'°Bx')+t('批次中的成熟果',vn(r.ripe,0)+'%')+t('采摘轮数',r.np)}
+function update(full){if(full){st.sday=bestStrip()}calc();
+ pills('vars',Object.entries(VAR).map(([k,v])=>[k,v.n]),st.v,k=>{const f=st.day/R.T;st.v=k;st.alt=VAR[k].a0;st.gap=VAR[k].gap;stopRun();CHK='';calc();st.day=Math.round(f*R.T);update(1)});
+ pills('waves',[1,2,3].map(x=>[x,x+' 批']),st.waves,k=>{st.waves=+k;stopRun();update(1)});
+ pills('meth',[['sel','分多轮精选采摘'],['strip','一次性采摘']],st.meth,k=>{st.meth=k;stopRun();update()});
+ $('vNote').textContent=VAR[st.v].note;
+ sliders();stats();verdict();
+ $('figsub').textContent=`${VAR[st.v].sh}，${fm(st.alt)}米，开花后第${st.day}天：${R.ph.n.toLowerCase()}`;
+ renderScene();drawB();draw3();mixRows();drawCut();renderStation()}
+const onIn=(id,f,full)=>$(id).addEventListener('input',()=>{stopRun();stopSeason();f(+$(id).value);update(full)});
+onIn('iA',v=>{const fr=st.day/R.T;st.alt=v;CHK='';calc();st.day=Math.round(fr*R.T)},1);
+onIn('iD',v=>{st.day=v;const p=phase(v/R.T);st.sel=p.i});
+onIn('iG',v=>st.gap=v);onIn('iS',v=>st.sday=v);
+let sea=0;function stopSeason(){clearInterval(sea);sea=0}
+function season(){stopRun();stopSeason();const end=Math.round(1.2*R.T);if(still){st.day=end;st.sel=8;update();return}st.day=0;let last=-1;
+ sea=setInterval(()=>{st.day=Math.min(end,st.day+3);const p=phase(st.day/R.T);if(p.i!==last){last=p.i;st.sel=p.i}update();if(st.day>=end){stopSeason();st.sel=8;update()}},45)}
+$('run').onclick=season;$('run2').onclick=season;
+$('reset').onclick=()=>{stopRun();stopSeason();const v=st.v;Object.assign(st,DEF,{v,alt:VAR[v].a0,gap:VAR[v].gap});CHK='';calc();st.day=Math.round(DEF.s*R.T);st.sel=5;update(1)};
+buildScene();calc();st.day=Math.round(DEF.s*R.T);update(1);
+let rz=0;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(draw3,150)});
+</script>
+</body></html>

@@ -202,7 +202,7 @@ HOME_BODY = f'''{header('index.html')}
   <h1>Từ gốc Cà Sẻ.<br><em>Đến nghệ thuật rang.</em></h1>
   <p class="sub">MeDili là nhà rang cà phê trên cao nguyên Di Linh, chọn Cà Sẻ Di Linh làm nguyên liệu gốc. Vùng trồng canh tác từ năm 2010, xưởng rang đặt tại Thôn 11, xã Di Linh. MeDili rang cà phê cho gia đình, quán cà phê, nhà hàng và khách sạn.</p>
   <div class="cta"><a class="btn main" href="cua-hang.html">Chọn cà phê</a><a class="btn" href="tim-gu.html">Tìm gu của bạn</a><a class="btn" href="horeca.html">Giải pháp HORECA</a></div>
-  <a class="tick" href="gia-ca-phe.html"><span class="k">Giá cà phê <span id="tk-d">{ddmm(dl['date'])}</span></span><span>Nhân xô Lâm Đồng <b id="tk-v">{fm(dl['vn']['lamdong'])} đ/kg</b></span><span>Robusta London <b id="tk-r">{fm(dw['world']['robusta'])} USD/tấn</b></span><i>Xem bảng giá</i></a>""")}
+  <a class="tick" href="gia-ca-phe.html"><span class="k">Giá cà phê <span id="tk-d" translate="no">{ddmm(dl['date'])}</span></span><span>Nhân xô Lâm Đồng <b><span id="tk-v" translate="no">{fm(dl['vn']['lamdong'])}</span> đ/kg</b></span><span>Robusta London <b><span id="tk-r" translate="no">{fm(dw['world']['robusta'])}</span> USD/tấn</b></span><i>Xem bảng giá</i></a>""")}
 <div class="wrap hm">
 <section class="p-sec" id="bo-suu-tap">
  <p class="eye">Chương 02 · Bộ sưu tập MeDili</p>
@@ -316,8 +316,8 @@ HOME_CSS = '''
 HOME_JS = r'''
 fetch('gia-ca-phe.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(!j||!j.days)return;
 const f=n=>n.toLocaleString('vi-VN').replace(/,/g,'.'),by=k=>j.days.filter(x=>x[k[0]]&&x[k[0]][k[1]]).sort((a,b)=>a.date<b.date?-1:1).pop();
-const v=by(['vn','lamdong']),w=by(['world','robusta']);if(v){const [y,m,d]=v.date.split('-');document.getElementById('tk-d').textContent=d+'/'+m;document.getElementById('tk-v').textContent=f(v.vn.lamdong)+' đ/kg'}
-if(w)document.getElementById('tk-r').textContent=f(w.world.robusta)+' USD/tấn'}).catch(()=>{});
+const v=by(['vn','lamdong']),w=by(['world','robusta']);if(v){const [y,m,d]=v.date.split('-');document.getElementById('tk-d').textContent=d+'/'+m;document.getElementById('tk-v').textContent=f(v.vn.lamdong)}
+if(w)document.getElementById('tk-r').textContent=f(w.world.robusta)}).catch(()=>{});
 '''
 
 head_old = home_old[:home_old.index('<style>')]
@@ -348,12 +348,19 @@ for f, s in {**NEW, **UPD, 'index.html': HOME_FULL}.items():
     open(os.path.join(OUT, f), 'w', encoding='utf8').write(s)
 AM = os.path.join(HERE, '..', 'artifact-main')
 os.makedirs(AM, exist_ok=True)
-open(os.path.join(AM, 'index.html'), 'w', encoding='utf8').write(nguon_tong_hop(HOME))
+# khung xem trước trên Claude không tự mở thư mục: nút ngôn ngữ trỏ thẳng tới en/index.html
+open(os.path.join(AM, 'index.html'), 'w', encoding='utf8').write(re.sub(r'href="(en|ja|zh)/"', r'href="\1/index.html"', nguon_tong_hop(HOME)))
 shutil.copy(os.path.join(HERE, '..', 'run-check', 'gia-ca-phe.json'), os.path.join(OUT, 'gia-ca-phe.json'))
 # Mô hình 3D trang Hướng dẫn pha: gộp art/hd3d.js với three.js (giấy phép MIT, giữ ở cuối file) thành một file assets/hd3d.js.
 # Ảnh dự phòng assets/hd-*.webp (khi máy không chạy được 3D) chụp lại bằng: node hdshot.js
 subprocess.run([os.path.join(HERE, 'node_modules', '.bin', 'esbuild'), os.path.join(HERE, 'hd3d.js'), '--bundle', '--format=esm', '--minify',
                 '--target=es2020', '--legal-comments=eof', '--log-level=warning', '--outfile=' + os.path.join(OUT, 'assets', 'hd3d.js')], check=True)
+# bản tiếng Anh, Nhật, Trung trong /en /ja /zh, dịch theo từ điển art/i18n (24/11/2026)
+import i18n
+for _l, _miss in i18n.build().items():
+    if _miss:
+        print('!!', _l, 'thiếu', len(_miss), 'đoạn dịch:', list(_miss)[:3])
+shutil.rmtree(os.path.join(OUT, 'xx'), ignore_errors=True)
 # chỉ mục cho trang Tìm kiếm, sơ đồ trang và robots cho medili.vn
 open(os.path.join(OUT, 'tim-kiem.json'), 'w', encoding='utf8').write(cuahang.search_index(OUT))
 open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf8').write(cuahang.sitemap(OUT))

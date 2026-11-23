@@ -14,6 +14,7 @@ Kho này chứa toàn bộ web MeDili và bộ mã dựng web.
 | `kit.float_links()` | Nút **Zalo** và **FB** nổi ở góc trái bên dưới mọi trang (gắn sau chân trang). Link Facebook ở hằng số `FACEBOOK` trong `kit.py`. |
 | `artifact-main/index.html` | Trang chủ dạng mảnh (không có phần đầu trang) để đăng bản xem trước trên Claude; khung của Claude tự thêm phần đầu. Bản đầy đủ cho medili.vn là `site-new4/index.html`. |
 | `site-new3/`, `site-live/`, `artifact-files/`, `run-check/` | Dữ liệu đầu vào cho bộ dựng. |
+| `art/i18n.py`, `art/i18n/` | **Bản tiếng Anh, Nhật, Trung** (`site-new4/en`, `ja`, `zh`, chị Ngân yêu cầu 24/11/2026): dịch theo từ điển `i18n/en.json`, `ja.json`, `zh.json` (khóa là câu tiếng Việt), thuật ngữ ở `i18n/GLOSSARY.md`. `build_manus.py` tự ráp ba bản này, thêm nút chọn ngôn ngữ, hreflang, phông chữ Nhật/Trung, số và ngày theo từng ngôn ngữ. |
 | `hosting/sync.php` | Tác vụ chạy trên hosting: mỗi 30 phút đọc kho này, tải các file mới hoặc đã đổi trong `site-new4/` vào `public_html` của medili.vn. |
 
 ## Cập nhật web
@@ -21,6 +22,7 @@ Kho này chứa toàn bộ web MeDili và bộ mã dựng web.
 - **Sửa web:** dựng lại `site-new4/`, đẩy lên nhánh `main`. Hosting tự lấy bản mới trong vòng 30 phút.
 - **Giá cà phê:** tác vụ theo lịch "Cập nhật giá cà phê MeDili" chạy 13:38 và 19:38 (giờ Việt Nam). Mỗi lần: tra giá (Báo Lâm Đồng; dự phòng VietNamNet và bài báo giá trong ngày, cần ít nhất 2 báo khớp nhau), ghi `site-new4/gia-ca-phe.json` và bản sao `run-check/gia-ca-phe.json`, đẩy lên `main` với thông điệp "Giá cà phê dd/mm" (cách chính: công cụ GitHub `push_files`; dự phòng: `git push`), rồi cập nhật bản xem trước trên Claude kèm nhật ký `nhat-ky-gia.txt`. Lần 19:38 là lần kiểm tra lại, đủ dữ liệu thì dừng sớm.
 - **Đăng bản xem trước bằng tay:** không gửi `gia-ca-phe.json` (để tác vụ giá quản lý), tránh các khung 13:30–13:45 và 19:30–19:45.
+- **Sửa chữ tiếng Việt:** dựng lại rồi chạy `python3 art/i18n.py extract` và `python3 art/i18n.py status`; câu mới hoặc câu đã sửa phải được dịch (xem `art/i18n/GLOSSARY.md`) trước khi đẩy lên, nếu không bản EN/JA/ZH sẽ hiện câu tiếng Việt ở chỗ đó.
 - **Chữ của các trang cũ** (`gia-ca-phe`, `vuon`, `trai-ca-phe`, `len-men-*`, `rang`, `quay-pha`, `suc-khoe`, `tu-vuon-den-ly`, `mua-hang`) sửa thẳng trong `site-new3/*.html`; các bộ dựng cũ (`build_site.py`, `build_f2c.py`, `build_gia.py`) không còn dùng.
 
 ## Quy ước câu chữ (chị Ngân chốt 23/11/2026)

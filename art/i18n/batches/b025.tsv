@@ -1,0 +1,151 @@
+# cold-brew.html (2)
+11be82dfc ||| Coarse, like rock salt ||| 粗塩くらいの粗挽き ||| 粗，像粗盐
+8fa56feb7 ||| Grounds for the batch ||| バッチ用の粉 ||| 本批咖啡粉
+0f6a569ce ||| about 1 ||| 約1 ||| 约1
+49e2949a0 ||| Sieve-test 100 g of grounds: the less fine dust, the better. ||| 粉100 gをふるってみる：微粉は少ないほどよい。 ||| 取100克咖啡粉过筛测试：细粉越少越好。
+c9e306d7b ||| Worn grinder burrs make lots of fine dust: slow filtering, cloudy concentrate. ||| 臼刃が摩耗すると微粉が多く出る：こすのが遅くなり、原液が濁る。 ||| 磨盘磨损会产生大量细粉：过滤慢，原液浑浊。
+e3f1d2a9b ||| Grind in rounds of just enough for one steeping tank. ||| 浸漬タンク1つ分ずつ挽く。 ||| 每次只磨一桶浸泡所需的量。
+bbd49c55a ||| Cold steeping ||| 低温浸漬 ||| 冷浸泡
+21367aa7c ||| Stainless steel tank in the cold room ||| 冷蔵室内のステンレスタンク ||| 冷库中的不锈钢桶
+c63cb4977 ||| The grounds go into food-grade cloth filter bags, no more than 2.5{1}kg per bag so water penetrates evenly, placed in a 304 stainless steel tank. Pour chilled drinking water that meets standards at a 1:{2} ratio, press gently so all the grounds are wet, cover tightly and steep <1>{3} hours at {4}{5} °C</1>. Commercial steeping guidance is usually 16–20 hours in a refrigerator below 4.4{6} °C. ||| 粉を食品用の布フィルターバッグに入れ（水が均一にしみるよう1袋2.5{1}kgまで）、SUS304のステンレスタンクに置きます。基準を満たす冷やした飲用水を1:{2}の比率で注ぎ、軽く押して粉全体を湿らせ、しっかりふたをして<1>{4}{5} °Cで{3}時間</1>浸漬します。業務用の浸漬ガイダンスは、4.4{6} °C未満の冷蔵庫で16〜20時間が一般的です。 ||| 咖啡粉装入食品级布滤袋，每袋不超过2.5{1}kg以便水均匀渗透，放入304不锈钢桶。按1:{2}的比例倒入冷却的达标饮用水，轻压使粉全部浸湿，盖紧，在<1>{4}{5} °C下浸泡{3}小时</1>。商用浸泡指引通常是在4.4{6} °C以下的冰箱中浸泡16–20小时。
+43e255fda ||| Steeping water ||| 浸漬用の水 ||| 浸泡用水
+f48dfe061 ||| Temperature, time ||| 温度、時間 ||| 温度、时间
+24db00896 ||| Estimated EY ||| 推定EY ||| 估算EY
+606b180b3 ||| The cold room thermometer reads 2–5 °C. Record the start and end times on the batch record. ||| 冷蔵室の温度計が2〜5 °Cを示していること。開始と終了の時刻をロット記録票に書く。 ||| 冷库温度计读数为2–5 °C。在批次记录表上记下开始和结束时间。
+c96900108 ||| Steeping at room temperature for bottles sold to customers: microbes grow faster. ||| 販売用ボトルを室温で浸漬すること：微生物が速く増える。 ||| 对外销售的瓶装在室温下浸泡：微生物繁殖更快。
+b478c7074 ||| Stir gently once after the first hour so the grounds don't clump dry. ||| 最初の1時間後に一度やさしく混ぜ、粉が乾いたまま固まらないようにする。 ||| 第一个小时后轻轻搅动一次，以免咖啡粉结块未湿。
+7e05db0e1 ||| Filtering & TDS ||| ろ過とTDS測定 ||| 过滤与测TDS
+7df6ffb6b ||| Two-stage filtering, diluted ||| 2段階ろ過、希釈 ||| 两级过滤，稀释
+5d2d4410e ||| Two-stage filtering, batch standardized ||| 2段階ろ過、ロットの標準化 ||| 两级过滤，批次标准化
+3f35788b0 ||| Lift out the bags and let them drain for 15–20 minutes; don't squeeze hard, as squeezing makes the concentrate cloudy and harsh. Fine-filter through filter paper or food-grade filter cloth. Measure TDS with a refractometer to standardize each batch: concentrate bottles have the TDS written on the batch record; ready-to-drink bottles are diluted to the target TDS. ||| バッグを引き上げ、15〜20分水を切ります。強く絞ると原液が濁り、きつくなるので絞りません。ろ紙か食品用のろ過布で細かくこします。屈折計でTDSを測ってロットごとに標準化します：濃縮ボトルはTDSをロット記録票に書き、そのまま飲めるボトルは目標TDSまで希釈します。 ||| 提起滤袋，沥干15–20分钟，不要用力挤压，挤压会让原液浑浊、刺激。用滤纸或食品级滤布精滤。用折光仪测TDS以标准化每批：浓缩瓶装把TDS写在批次记录表上，即饮瓶装稀释到目标TDS。
+81ba5ebf5 ||| Filtered concentrate ||| ろ過後の原液 ||| 过滤后原液
+8a2d85d35 ||| Concentrate TDS, estimated ||| 原液のTDS（推定） ||| 原液TDS（估算）
+af0fba6fd ||| Water retained by the grounds ||| 粉かすに残る水 ||| 咖啡渣保留的水
+42fc6ec16 ||| Water added ||| 加える水 ||| 加水量
+9f907d72e ||| Ready-to-drink TDS ||| そのまま飲めるTDS ||| 即饮TDS
+311246138 ||| Clear concentrate, no sediment. Taste against the previous batch's reference sample. ||| 原液が澄んでいて、沈殿がないこと。前のロットの基準サンプルと比べて味わう。 ||| 原液清澈，无沉淀。与上一批的标准样品对比品尝。
+f083f3e2d ||| Filtering only once through a coarse mesh: fine sediment keeps extracting, and the bottles turn cloudy and increasingly bitter. ||| 粗い網で一度こすだけ：細かい沈殿物が抽出を続け、ボトルが濁り、だんだん苦くなる。 ||| 只用粗网过滤一次：细渣会继续萃取，瓶装变浑浊并越来越苦。
+f7df38de3 ||| If it is more than 10% off the reference TDS, adjust the next batch. ||| 基準TDSから10%以上ずれたら、次のバッチを調整する。 ||| 与基准TDS相差超过10%，就调整下一批。
+9b3f6a722 ||| Bottling ||| 充填 ||| 灌装
+bdb583e4a ||| Brown glass bottles ||| 茶色のガラスボトル ||| 棕色玻璃瓶
+ab34ee4c2 ||| Fill into {1}{2}ml brown glass bottles that have been washed, sanitized and dried upside down. Leave headspace in the neck, close with a tamper-evident cap, and label with the production date, expiry date and batch code right at filling. No nitrogen flushing and no canning until a process has been validated. ||| 洗浄・殺菌し、逆さにして乾かした{1}{2}mlの茶色のガラスボトルに充填します。首の部分に空間を残し、シールリング付きのキャップを閉め、充填と同時に製造日、賞味期限、ロット番号入りのラベルを貼ります。検証済みの工程ができるまでは、窒素充填も缶詰めもしません。 ||| 灌入已清洗、消毒并倒置晾干的{1}{2}ml棕色玻璃瓶。瓶颈处留出空间，盖上带防盗圈的瓶盖，灌装时立即贴上注明生产日期、保质期和批号的标签。在工艺经过验证之前，不充氮，也不装罐。
+d33b09d05 ||| Number of bottles ||| ボトル数 ||| 瓶数
+0af61bb24 ||| Filling loss ||| 充填ロス ||| 灌装损耗
+43a6c6756 ||| Batch code ||| ロット番号 ||| 批号
+49b8c3801 ||| Turn 5 bottles per batch upside down: no leaks at the cap. ||| ロットごとに5本を逆さにする：キャップから漏れないこと。 ||| 每批倒置5瓶：瓶盖不漏。
+9ea91c4fa ||| Damp bottles and unsealed caps: easily contaminated, and customers find it hard to trust. ||| ボトルが湿ったまま、キャップに封がない：汚染されやすく、お客様も信頼しにくい。 ||| 瓶子未干、瓶盖未密封：容易污染，顾客也难以信任。
+5e4c1540d ||| Brown bottles block some light, preserving color and aroma. ||| 茶色のボトルは光をさえぎり、色と香りを保つ。 ||| 棕色瓶遮挡部分光线，保持颜色和香气。
+c2599cdf8 ||| Bagging steeping bags ||| 水出しバッグの袋詰め ||| 冷泡袋装袋
+448888bec ||| g per filter bag ||| g入りフィルターバッグ ||| g/滤袋
+3ac493dc2 ||| Two foil pouches ||| アルミ袋2つ ||| 两个铝箔袋
+34b5317b3 ||| One foil pouch ||| アルミ袋1つ ||| 一个铝箔袋
+ace30123b ||| A dosing machine fills {1}{2}g of coarse grounds into food-grade non-woven filter bags, heat-sealed, with a string and MeDili tag. Every 5 bags go into a multi-layer foil pouch with a one-way valve, nitrogen-flushed, then sealed. {3} per box of {4} bags. ||| 定量充填機で粗挽きの粉{1}{2}gを食品用の不織布フィルターバッグに詰め、熱で封をし、ひもとMeDiliのタグをつけます。5袋ずつワンウェイバルブ付きの多層アルミ袋に入れ、窒素を充填して封をします。{4}袋入りの箱に{3}を入れます。 ||| 定量机把{1}{2}g粗粉装入食品级无纺布滤袋，热封，带挂绳和MeDili吊牌。每5个滤袋装入一个带单向阀的多层铝箔袋，充氮后封口。每盒{4}袋，装{3}。
+ddad169b0 ||| Number of bags ||| 袋数 ||| 袋数
+880e11315 ||| bags × ||| 袋 × ||| 袋 ×
+380797ab6 ||| Number of boxes ||| 箱数 ||| 盒数
+e5ebd06bd ||| boxes × ||| 箱 × ||| 盒 ×
+41be7273f ||| bags ||| 袋 ||| 袋
+13cebecc6 ||| Each bag makes ||| 1袋で ||| 每袋可冲
+bc5059c9d ||| ml of water, yielding about ||| mlの水で、約 ||| ml水，约得
+5872a3859 ||| ml of concentrate ||| mlの原液 ||| ml原液
+bf9a96bf2 ||| Used for ||| 用途 ||| 适用于
+0737c2a24 ||| the cold-steep bag format ||| 水出しバッグの形態 ||| 冷泡袋形式
+dad734717 ||| Weigh 10 random bags: no more than 1 g off. Foil pouches fully sealed, no leaks. ||| 無作為に10袋を量る：誤差は1 g以内。アルミ袋はしっかり封がされ、空気が漏れないこと。 ||| 随机称10袋：误差不超过1 g。铝箔袋封口严密，不漏气。
+272207148 ||| Bagging while the grounds still hold lots of gas: the foil pouches puff up. ||| 粉にガスが多く残っているうちに袋詰めすること：アルミ袋がふくらむ。 ||| 咖啡粉还含大量气体时就装袋：铝箔袋会鼓起。
+9b0d7c306 ||| Print steeping instructions on the back of the box and on the bag tags. ||| 抽出方法を箱の裏面とバッグのタグに印刷する。 ||| 把冷泡说明印在盒子背面和滤袋吊牌上。
+6e8edbf24 ||| Packaging ||| 包装 ||| 包装
+fb3bacc1c ||| The packaging carries the Cold Brew MeDili name in the brand colors: cream, coffee brown, earth red and earth yellow. The bottle has a moisture-resistant wrap-around label with the MeDili logo, a large COLD BREW wordmark and a red band showing the product format and volume; the back label carries all mandatory content. Steeping bags come in a two-color printed kraft box. See the samples in Figure 3. ||| 包装には、ブランドカラーのクリーム、コーヒーブラウン、アースレッド、アースイエローでCold Brew MeDiliの名を入れます。ボトルには耐湿性の巻きラベルを貼り、MeDiliのロゴ、大きなCOLD BREWの文字、製品の形態と容量を示す赤い帯を配します。裏ラベルには必須事項をすべて記載します。水出しバッグは2色刷りのクラフト紙の箱に入れます。見本は図3をご覧ください。 ||| 包装以品牌色奶油色、咖啡棕、土红和土黄印上Cold Brew MeDili的名称。瓶身贴防潮环绕标签，有MeDili标志、醒目的COLD BREW字样和标明产品形式与容量的红色色带；副标签印齐全部必备内容。冷泡袋装在双色印刷的牛皮纸盒里。样式见图3。
+a413dacd0 ||| ml, brown glass ||| ml、茶色のガラス ||| ml，棕色玻璃
+0e3f5a781 ||| Label ||| ラベル ||| 标签
+25056be07 ||| Moisture-resistant paper sticker ||| 耐湿性の紙ラベル ||| 防潮纸质贴标
+e58757415 ||| Steeping bag box ||| 水出しバッグの箱 ||| 冷泡袋盒
+d8f80eda8 ||| Check the label against the self-declaration before printing in bulk. ||| 大量に印刷する前に、ラベルを自己公表書と照合する。 ||| 大批量印刷前，将标签与自我公布书核对。
+655326b41 ||| A label missing the expiry date or storage instructions. ||| 賞味期限や保存方法が抜けたラベル。 ||| 标签缺少保质期或储存说明。
+ebef91e90 ||| Print 20 test labels and stick them on cold bottles to see whether they peel when condensation forms. ||| 試しに20枚印刷して冷えたボトルに貼り、結露ではがれないか確かめる。 ||| 试印20张标签贴在冷藏瓶上，看凝结水汽时会不会脱落。
+33a22562e ||| Dry storage, nationwide delivery ||| 常温倉庫、全国配送 ||| 干燥仓储，全国配送
+12a5e2e9e ||| 0–4 °C storage, same-day delivery ||| 0〜4 °Cで保管、当日配送 ||| 0–4 °C仓储，当日配送
+2b5e0b668 ||| Boxes of steeping bags are dry goods: store them dry, ventilated and out of the sun. Ship nationwide through marketplaces in carton boxes with shock-absorbing padding. ||| 水出しバッグの箱は常温品です：乾燥して風通しがよく、日の当たらない場所に保管します。モール経由で全国に、緩衝材入りの段ボール箱で配送します。 ||| 冷泡袋盒装是干货：存放于干燥、通风、避光处。通过平台配送全国，用加防震填充的纸箱打包。
+92d12bc17 ||| Bottles go into the 0–4 °C cold room right after filling, with the temperature recorded twice a day. Shelf life is 7 days from production. Deliver within the city on the same day in foam boxes with gel ice, reminding customers to refrigerate right away. Never send chilled bottles to other provinces by standard delivery. ||| ボトルは充填後すぐに0〜4 °Cの冷蔵室に入れ、温度を1日2回記録します。賞味期限は製造日から7日。市内に当日、保冷剤入りの発泡スチロール箱で配送し、すぐ冷蔵庫に入れるようお客様に伝えます。冷蔵ボトルを通常配送で他の省へ送ってはいけません。 ||| 瓶装灌装后立即放入0–4 °C冷库，每天记录两次温度。保质期为生产之日起7天。用放有冰袋的泡沫箱在市区当日配送，并提醒顾客立即冷藏。不要用普通快递把冷藏瓶装寄往外省。
+60afabde9 ||| Dry, below 30 ||| 乾燥、上限30 ||| 干燥，低于30
+7bcf77672 ||| Sales channel ||| 販売チャネル ||| 销售渠道
+20cbaa635 ||| E-commerce marketplaces nationwide ||| 全国のECモール ||| 全国电商平台
+5eedce632 ||| Storage temperature ||| 保管温度 ||| 仓储温度
+e7c234caa ||| 7 days ||| 7日 ||| 7天
+60f7dbea6 ||| Inner city, same-day delivery ||| 市内、当日配送 ||| 市区，当日配送
+7263c858b ||| Measure the bottle temperature at delivery: below 5 °C. ||| 配送時にボトルの温度を測る：5 °C未満。 ||| 配送时测瓶温：低于5 °C。
+442805538 ||| Leaving bottles out of the fridge while waiting for the courier. ||| 配送員を待つ間、ボトルを冷蔵庫の外に置いておくこと。 ||| 等快递员时把瓶装放在冰箱外。
+dceb92bc8 ||| Keep 2 sample bottles from each batch until expiry for comparison. ||| ロットごとにサンプル2本を期限まで保管し、照合に使う。 ||| 每批留存2瓶样品至保质期结束，以便核对。
+671737e1c ||| Check the foil pouches for leaks before packing the cartons. ||| 段ボールに詰める前に、アルミ袋から空気が漏れていないか確認する。 ||| 装箱前检查铝箔袋是否漏气。
+8e0b8e205 ||| A hot, humid store makes the grounds lose aroma quickly. ||| 高温多湿の倉庫では、粉の香りがすぐに失われる。 ||| 仓库湿热会使咖啡粉很快失去香气。
+533dfca9d ||| Older batches go out first, newer ones after. ||| 古いロットから先に出荷し、新しいロットは後に。 ||| 旧批次先出，新批次后出。
+cc6acefc9 ||| Cold Brew MeDili · Di Linh Farm ||| Cold Brew MeDili · Di Linh農園 ||| Cold Brew MeDili · Di Linh庄园
+f5e13859d ||| KEEP COLD ||| 要冷蔵 ||| 需冷藏
+d378e8f9f ||| DRY GOODS ||| 常温品 ||| 干货
+d7588bd41 ||| Ripe cherries · {1}{2}kg ||| 完熟チェリー · {1}{2}kg ||| 成熟咖啡果 · {1}{2}kg
+b31b88b9d ||| {1} · {2}{3}kg green ||| {1} · 生豆{2}{3}kg ||| {1} · 生豆{2}{3}kg
+9746c2e93 ||| Cold steeping (bottles) ||| 低温浸漬（ボトル） ||| 冷浸泡（瓶装）
+9267751c4 ||| Steep {1}{2} °C · {3} h ||| 浸漬 {1}{2} °C · {3}時間 ||| 浸泡 {1}{2} °C · {3}小时
+3d57c517c ||| Filtering (bottles) ||| ろ過（ボトル） ||| 过滤（瓶装）
+eb33fe3de ||| Filter · TDS {1}% ||| ろ過 · TDS {1}% ||| 过滤 · TDS {1}%
+061afb709 ||| Bottling (bottles) ||| 充填（ボトル） ||| 灌装（瓶装）
+47a246a0e ||| {1} bags of {2}{3}g ||| {1}袋 × {2}{3}g ||| {1}袋 × {2}{3}g
+5d70e16e2 ||| Bagging (steeping bags) ||| 袋詰め（水出しバッグ） ||| 装袋（冷泡袋）
+0f07cf874 ||| Nationwide delivery ||| 全国配送 ||| 全国配送
+6eaaace8a ||| Di Linh ripe cherries ||| Di Linhの完熟チェリー ||| Di Linh成熟咖啡果
+942f62c7d ||| Green coffee, 10–12% moisture ||| 生豆、水分10〜12% ||| 生豆，含水量10–12%
+b520a8302 ||| City+ roasted coffee ||| City+の焙煎豆 ||| City+烘焙咖啡
+c8ab6c227 ||| Coarse grounds in filter bags ||| フィルターバッグ入りの粗挽き粉 ||| 滤袋中的粗粉
+367ab8965 ||| Finished product ||| 製品 ||| 成品
+27b4e9f28 ||| boxes of ||| 箱 × ||| 盒 ×
+35ddf3978 ||| Diluted to TDS ||| TDSまで希釈 ||| 稀释至TDS
+e203ce519 ||| FROM FARM TO PRODUCT ||| 農園から製品まで ||| 从庄园到产品
+e43e0624e ||| Conceptual drawing · figures estimated by the model ||| 概念図 · 数値はモデルによる推定 ||| 概念图 · 数据为模型估算
+59fcfc913 ||| {1} °C · {2} h ||| {1} °C · {2}時間 ||| {1} °C · {2}小时
+0ac08df31 ||| the concentrate in the customer's cup ||| お客様のカップの原液 ||| 顾客杯中原液
+c277e7510 ||| the filtered concentrate ||| ろ過後の原液 ||| 过滤后原液
+127eabd78 ||| TDS of {1} (%) · horizontal axis: hours ||| {1}のTDS（%） · 横軸：時間 ||| {1}的TDS（%） · 横轴：小时
+7ceee9a8c ||| 18–24 hours ||| 18〜24時間 ||| 18–24小时
+58b2c5de8 ||| Customers steep in the fridge: the concentrate grows stronger by the hour ||| お客様が冷蔵室で抽出：時間とともに原液が濃くなる ||| 顾客在冰箱冷藏室冷泡：原液随时间逐渐变浓
+a1c2a4211 ||| The colder the steep, the slower the concentrate strengthens ||| 浸漬温度が低いほど、原液はゆっくり濃くなる ||| 浸泡越冷，原液变浓越慢
+7f0b1778a ||| Fridge 4 °C ||| 冷蔵室 4 °C ||| 冷藏室 4 °C
+629c872a1 ||| Steeping at ||| 浸漬 ||| 浸泡
+d390aaa01 ||| <1><2></2>{1}</1><3><4></4>Room temperature 24 °C, for comparison</3> ||| <1><2></2>{1}</1><3><4></4>比較用の室温24 °C</3> ||| <1><2></2>{1}</1><3><4></4>室温24 °C，用于对比</3>
+d42b58d35 ||| At {1} °C, {2} hours: TDS about {3}%. At 24 °C for the same time: about {4}%. ||| {1} °Cで{2}時間：TDS約{3}%。24 °Cで同じ時間なら：約{4}%。 ||| 在{1} °C下{2}小时：TDS约{3}%。在24 °C下同样时间：约{4}%。
+81817d366 ||| Pick ripe cherries on the Di Linh farm ||| Di Linhの農園で完熟した実を摘む ||| 在Di Linh庄园采摘成熟果
+a88f93170 ||| Pick only red ripe cherries and process them the same day. Write the farm code on the sacks. ||| 赤く熟した実だけを摘み、その日のうちに精製する。袋に農園コードを書く。 ||| 只采红熟果，当天处理。在麻袋上写庄园编号。
+d2be887c3 ||| {1}{2}kg fresh cherries ||| 生果{1}{2}kg ||| 鲜果{1}{2}kg
+9be84d0ec ||| Count 100 cherries from the basket: at least 90 ripe. ||| かごの実を100個数える：90個以上が完熟。 ||| 数筐中100颗果实：至少90颗成熟。
+b7d2d42de ||| Honey processing, dried on raised beds ||| Honey精製、棚の上で乾燥 ||| Honey处理，架上晾晒
+79ace0361 ||| Whole cherries dried on raised beds ||| 実を丸ごと棚の上で乾燥 ||| 整果架上晾晒
+529e21c3b ||| Pulp, keep the mucilage, dry on raised beds, turn daily, then hull to get the beans. ||| 果皮を除き、ミューシレージを残して棚の上で乾燥させ、毎日返してから脱穀して豆を取り出す。 ||| 脱皮，保留果胶层，架上晾晒，每天翻动，再脱壳取豆。
+a4b82dee3 ||| Dry whole cherries on raised beds, turning daily; once dry, hull to get the beans. ||| 実を丸ごと棚の上で乾燥させ、毎日返し、乾いたら脱穀して豆を取り出す。 ||| 整果在架上晾晒，每天翻动，晒干后脱壳取豆。
+62a139d82 ||| {1}{2}kg green coffee ||| 生豆{1}{2}kg ||| 生豆{1}{2}kg
+f54d3b0ed ||| Bean moisture 10–12%, no mold. ||| 豆の水分10〜12%、カビなし。 ||| 豆含水量10–12%，无霉变。
+f7f2bde19 ||| Roast City+, rest the beans ||| City+で焙煎し、豆を休ませる ||| 烘焙至City+，静置豆子
+afaaa99d5 ||| Roast specifically for cold brew, dropped at 210–220 °C. Rest 3–10 days in a sealed bin with a one-way valve. ||| コールドブリュー専用に焙煎し、210〜220 °Cで釜出し。ワンウェイバルブ付きの密閉容器で3〜10日休ませる。 ||| 专为冷萃烘焙，210–220 °C出锅。在带单向阀的密封桶中静置3–10天。
+792a04fa3 ||| {1}{2}kg roasted, about 17.5% loss ||| 焙煎豆{1}{2}kg、ロス約17.5% ||| 烘焙{1}{2}kg，损耗约17.5%
+d2b04c6d9 ||| Break beans to check even color; cup a sample. ||| 豆を割って色が均一か確かめ、サンプルをカッピングする。 ||| 掰开豆子看颜色是否均匀，杯测（cupping）样品。
+98af5d9c1 ||| bagging ||| 袋詰めする ||| 装袋
+6808e6bd8 ||| Coarse like rock salt, ground right before {1}. ||| 粗塩くらいの粗さで、{1}直前に挽く。 ||| 粗如粗盐，在{1}前研磨。
+9ae8764b4 ||| {1}{2}kg of grounds ||| 粉{1}{2}kg ||| 咖啡粉{1}{2}kg
+14c2572b1 ||| Little fine dust. ||| 微粉が少ない。 ||| 细粉少。
+6b07fd02f ||| Fill the filter bags ||| フィルターバッグに詰める ||| 装滤袋
+154bf866f ||| Dose {1}{2}g of grounds into food-grade non-woven filter bags, heat-seal, and attach a string and MeDili tag. ||| 粉{1}{2}gを食品用の不織布フィルターバッグに定量充填し、熱で封をして、ひもとMeDiliのタグをつける。 ||| 将{1}{2}g咖啡粉定量装入食品级无纺布滤袋，热封，系上挂绳和MeDili吊牌。
+27ac1b151 ||| {1} bags × {2}{3}g ||| {1}袋 × {2}{3}g ||| {1}袋 × {2}{3}g
+b8183d0fb ||| Weigh 10 bags: no more than 1{1}g off. ||| 10袋を量る：誤差は1{1}g以内。 ||| 称10袋：误差不超过1{1}g。
+68b7282c6 ||| Nitrogen-flushed foil pouches ||| 窒素充填のアルミ袋 ||| 充氮铝箔袋
+753131d75 ||| Every 5 filter bags go into a multi-layer foil pouch with a one-way valve, nitrogen-flushed, then sealed. ||| フィルターバッグ5袋ずつを、ワンウェイバルブ付きの多層アルミ袋に入れ、窒素を充填して封をする。 ||| 每5个滤袋装入一个带单向阀的多层铝箔袋，充氮后封口。
+25d6b8edc ||| {1} foil pouches ||| アルミ袋{1}袋 ||| 铝箔袋{1}个
+73bfe43e5 ||| Squeeze gently: no leaks. ||| 軽く押す：空気が漏れないこと。 ||| 轻捏：不漏气。
+50fd7a51b ||| Box and label ||| 箱詰め、ラベル貼り ||| 装盒、贴标
+010bb834d ||| Kraft Cold Brew MeDili box with steeping instructions printed on the back, marked with the production date, expiry date and batch code. ||| Cold Brew MeDiliのクラフト紙の箱。裏面に抽出方法を印刷し、製造日、賞味期限、ロット番号を記載する。 ||| Cold Brew MeDili牛皮纸盒，背面印有冷泡说明，注明生产日期、保质期、批号。
+739882dad ||| {1} boxes × {2} bags ||| {1}箱 × {2}袋 ||| {1}盒 × {2}袋
+5a3830bd5 ||| Label matches the self-declaration. ||| ラベルが自己公表書と一致していること。 ||| 标签与自我公布书一致。
+cf7a7788b ||| Dry storage ||| 常温倉庫で保管 ||| 干燥仓储
+56359b105 ||| A dry, ventilated store out of the sun, below 30 °C. Proposed shelf life is 6 months, to be established by testing and sensory checks over time. ||| 乾燥して風通しがよく、日の当たらない30 °C未満の倉庫。賞味期限は6か月を提案し、経時的な検査と官能評価で確定する。 ||| 干燥、通风、避光、30 °C以下的仓库。建议保质期6个月，需经随时间的检验和感官评估确定。
+1e762cfdf ||| Older batches go out first. ||| 古いロットから先に出荷。 ||| 旧批次先出。
+15ddcc521 ||| Nationwide delivery through marketplaces ||| モール経由で全国配送 ||| 通过平台配送全国
+5cb1a3742 ||| Carton boxes with shock-absorbing padding. Customer instructions: 1 bag with {1}{2}ml of filtered water, steep in the fridge for 18–24 hours, lift out the bag, dilute 1:1 with water, milk or ice. ||| 緩衝材入りの段ボール箱。お客様への案内：1袋を浄水{1}{2}mlで冷蔵室に18〜24時間浸し、バッグを取り出して、水、ミルク、氷で1:1に割る。 ||| 加防震填充的纸箱。顾客说明：1袋配{1}{2}ml过滤水，放冰箱冷藏室浸泡18–24小时，取出滤袋，按1:1兑水、牛奶或冰。
+bec594852 ||| About {1}{2}ml of concentrate per bag ||| 1袋あたり原液約{1}{2}ml ||| 每袋约{1}{2}ml原液
+fc3c8d31d ||| Ask customers for feedback after the first 2 weeks. ||| 最初の2週間後にお客様の感想を聞く。 ||| 头2周后询问顾客反馈。
+92a197428 ||| Put the grounds into food-grade cloth filter bags, no more than 2.5{1}kg per bag, and place them in a 304 stainless steel tank. Pour in chilled drinking water that meets standards, press so the grounds are wet, cover tightly and steep {2} hours at {3}{4} °C. ||| 粉を食品用の布フィルターバッグに入れ（1袋2.5{1}kgまで）、SUS304のステンレスタンクに置く。基準を満たす冷やした飲用水を注ぎ、押して粉を湿らせ、しっかりふたをして{3}{4} °Cで{2}時間浸漬する。 ||| 咖啡粉装入食品级布滤袋，每袋不超过2.5{1}kg，放入304不锈钢桶。倒入冷却的达标饮用水，按压使粉浸湿，盖紧，在{3}{4} °C下浸泡{2}小时。

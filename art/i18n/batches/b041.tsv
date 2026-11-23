@@ -1,0 +1,128 @@
+# len-men-trai-cay.html — cỗ máy lên men cùng trái cây
+d070fa3fb ||| Fruit Co-fermentation Machine ||| フルーツ共発酵マシン ||| 水果共同发酵机
+315f38a11 ||| The <1>Fruit Co-fermentation</1> Machine ||| <1>フルーツ共発酵</1>マシン ||| <1>水果共同发酵</1>机
+5083da960 ||| Coffee co-fermented with fruit in a sealed tank, as Washed, Honey or Natural. Choose a fruit, drag the ratio, watch pH and Brix change, then use the batch sheet for a 20 kg trial at the MeDili farm. ||| 密閉槽でコーヒーを果物と一緒に発酵させます。Washed、Honey、Naturalのいずれかで。果物を選び、割合を動かしてpHとBrixの変化を見たら、バッチ記録票を使ってMeDili農園で20 kgの試験をします。 ||| 咖啡在密闭池中与水果共同发酵，可采用Washed、Honey或Natural。选择水果，拖动比例，观察pH和Brix的变化，再用批次记录表在MeDili庄园做20公斤试验。
+1a69cf080 ||| Real photos ||| 実際の写真 ||| 实拍照片
+e90de5641 ||| Ripe coffee cherries co-fermented with longan, mulberry and passion fruit. ||| 熟したコーヒーの実を、ロンガン、マルベリー、パッションフルーツと一緒に発酵。 ||| 成熟咖啡果与龙眼、桑葚和百香果共同发酵。
+5985a2ead ||| <1>Figure 1</1> <2>A 7-station co-fermentation line, three-dimensional view, illustrative model</2> ||| <1>図1</1> <2>7ステーションの共発酵ライン、立体図、説明用モデル</2> ||| <1>图1</1> <2>七站共同发酵生产线，立体视图，示意模型</2>
+41dd80904 ||| Choose a fruit ||| 果物を選ぶ ||| 选择水果
+021cba0e7 ||| 6 options ||| 6つの選択肢 ||| 6种方案
+33f1c3274 ||| Starter yeast ||| スターター酵母 ||| 发酵酵母
+b1fa94ecd ||| 1 g/kg of coffee cherries ||| コーヒーの実1 kgあたり1 g ||| 每公斤咖啡果1克
+bad310d18 ||| Trial range 24–72 hours. Fruit makes the batch ferment faster, so stop by the measured pH. ||| 試験の目安は24〜72時間。果物で発酵が速くなるので、測ったpHで止める。 ||| 试验区间24–72小时。水果会让发酵更快，所以按实测pH停止。
+aedbd5130 ||| Fruit ratio ||| 果物の割合 ||| 水果比例
+758c48da0 ||| Based on the weight of coffee cherries. There's no standard rate yet, so try 5, 10 and 20%. ||| コーヒーの実の重さに対する割合。標準の量はまだないので、5、10、20%で試す。 ||| 以咖啡果重量计。目前没有标准用量，建议试5%、10%和20%。
+2dc12b6d4 ||| <1>Reaches pH 4.2 after</1><2></2> ||| <1>pH 4.2到達まで</1><2></2> ||| <1>达到pH 4.2需</1><2></2>
+ac3026fcd ||| The written procedure: a version for the farm ||| 文書化した手順：農園用 ||| 书面流程：庄园版
+9ab907335 ||| There is no common standard for fruit ratios yet. The figures below are trial benchmarks for the MeDili farm, compiled from references, and need adjusting through trial batches. ||| 果物の割合にはまだ共通の基準がありません。以下の数値は資料をもとにしたMeDili農園の試験の目安で、試験バッチを通じて調整が必要です。 ||| 水果比例尚无统一标准。以下数字是MeDili庄园的试验基准，综合自资料，需要通过试验批次调整。
+b90e1b096 ||| Co-fermentation spoils more easily than regular fermentation, because the fruit brings extra sugar and microbes. ||| 共発酵は通常の発酵より失敗しやすい。果物が糖と微生物を持ち込むから。 ||| 共同发酵比普通发酵更容易失败，因为水果带来了额外的糖和微生物。
+1aed5adcb ||| <1>Divide 80 kg of cherries</1> from the same lot evenly into 4 food-grade plastic tanks with one-way valves, 20 kg each. ||| <1>同じロットの実80 kgを</1>、ワンウェイバルブ付きの食品用プラスチック容器4つに20 kgずつ均等に分ける。 ||| <1>把同批80公斤咖啡果</1>平均分到4个带单向阀的食品级塑料桶中，每桶20公斤。
+674a11140 ||| <1>Tank A has no fruit</1> and serves as the control. Tanks B, C and D get 5%, 10% and 20% fruit, all of the same kind. ||| <1>容器Aは果物なし</1>で対照に。容器Bは5%、Cは10%、Dは20%の果物で、果物の種類は同じにする。 ||| <1>A桶不加水果</1>作为对照。B桶5%、C桶10%、D桶20%水果，用同一种水果。
+11ed78860 ||| <1>Measure pH, Brix and temperature</1> every 6 hours. Stop at pH 4.0–4.4; don't let it fall below 4.0. ||| <1>pH、Brix、温度を</1>6時間ごとに測る。pH 4.0〜4.4で止め、4.0を下回らせない。 ||| <1>测量pH、Brix和温度</1>，每6小时一次。达到pH 4.0–4.4时停止，不要低于4.0。
+95228f430 ||| <1>Dry and rest them separately</1>, roast them on the same profile, and blind-taste them against tank A. ||| <1>別々に乾燥・熟成させ</1>、同じ焙煎プロファイルで焙煎し、容器Aとブラインドで飲み比べる。 ||| <1>分别干燥、分别熟成</1>，用同一烘焙曲线烘焙，与A桶盲品对比。
+9f4b29f92 ||| <1>Keep only tanks that are clearly better than the control</1>. If they taste the same, the fruit isn't worth the extra cost. ||| <1>対照よりはっきり良い容器だけを残す</1>。味が同じなら、果物の費用をかける必要はない。 ||| <1>只保留明显优于对照的桶</1>。如果味道一样，就不必额外花钱买水果。
+148b94327 ||| <1>Clean fruit.</1> Discard bruised fruit, wash thoroughly and sanitize following food-safety procedures, because fruit skins can carry residues and mold. ||| <1>清潔な果物。</1>傷んだ果物を除き、よく洗い、食品安全の手順に沿って殺菌する。果皮には残留物やカビがあることがあるため。 ||| <1>干净的水果。</1>剔除碰伤果，彻底清洗，按食品安全流程消毒，因为果皮可能带有残留物和霉菌。
+f0e03263f ||| <1>Use real fruit.</1> No flavorings or essential oils. If you use them, the product is no longer co-fermented. ||| <1>本物の果物を使う。</1>香料や精油は使わない。使えば、それはもう共発酵ではない。 ||| <1>使用真水果。</1>不用香料、精油。如果用了，产品就不再是共同发酵。
+41e2bdca9 ||| <1>Tanks with one-way valves.</1> Fruit makes the batch produce more gas, so don't seal it airtight. Ventilate the tank room. ||| <1>ワンウェイバルブ付きの槽。</1>果物でガスが多く出るので、完全に密閉しない。槽のある部屋は換気する。 ||| <1>带单向阀的发酵池。</1>水果会让批次产气更多，不要完全封死。发酵间要通风。
+86de2aac3 ||| <1>Mold, rotten or paint-like smells:</1> discard the batch; drying won't save it. ||| <1>カビ、腐敗臭、塗料のようなにおい：</1>バッチは廃棄。乾燥では救えない。 ||| <1>发霉、腐臭、油漆味：</1>整批丢弃，靠干燥救不回来。
+05fddceb2 ||| Labeling and selling ||| 表示と販売 ||| 标签与销售
+c625b3bfe ||| This is what decides customer trust. ||| ここがお客様の信頼を左右します。 ||| 这部分决定了顾客的信任。
+03950459b ||| <1>State clearly on the package:</1> “Co-fermented with [fruit name]”, with the ratio and processing style. Disclosing this information is a good practice recommended by the specialty community. ||| <1>パッケージに明記する：</1>「[果物名]と共発酵」と、割合と精製方法を書く。情報の開示は、専門家が推奨するよい慣行です。 ||| <1>在包装上写明：</1>“与[水果名]共同发酵”，并注明比例和处理方式。公开信息是专业人士推荐的良好做法。
+947c7c5f2 ||| <1>Don't call it the variety's natural flavor.</1> Fruit coffee is a separate line, apart from the pure Di Linh origin line. ||| <1>品種本来の味とは呼ばない。</1>果物入りのコーヒーは別ラインとし、純粋なDi Linh産のラインとは分ける。 ||| <1>不要称为品种的天然风味。</1>加水果的咖啡是单独的产品线，与纯Di Linh产地线分开。
+ea860fdaf ||| <1>Allergies:</1> if you use fruit that commonly causes allergies, add a warning. ||| <1>アレルギー：</1>アレルギーを起こしやすい果物を使う場合は、注意書きを入れる。 ||| <1>过敏：</1>如使用易致敏的水果，须注明警示。
+8a031c274 ||| <1>Competitions:</1> Cup of Excellence does not accept fruit, spices or non-microbial additives. Check the rules before sending samples. ||| <1>競技会：</1>Cup of Excellenceは、果物、スパイス、微生物以外の添加物を認めていません。サンプルを送る前に規定を確認してください。 ||| <1>比赛：</1>Cup of Excellence不接受水果、香料或非微生物添加物。寄送样品前请问清规定。
+4bb52e072 ||| <1>Vietnamese regulations:</1> ask the agency that receives product declarations whether the fruit must be listed as an ingredient, because the international references MeDili found don't agree. ||| <1>ベトナムの規定：</1>製品届出の受付機関に、果物を原材料として表示する必要があるか確認してください。MeDiliが見つけた国際的な資料では見解が一致していません。 ||| <1>越南规定：</1>请向受理产品公告的机关询问水果是否须列为配料，因为MeDili找到的国际资料说法不一。
+ee63633f3 ||| <1>Compiled from multiple sources.</1> The machine's shape is a design concept. MeDili has not found a standard rate for fruit ratios, so the 5–20% ratio, the 24-hour starter and the fruit pH values are trial benchmarks, not measurements from Di Linh. The curves are an illustrative model. ||| <1>複数の資料をもとに構成。</1>マシンの形はデザイン上のアイデアです。MeDiliは果物の割合の標準量を見つけていないため、5〜20%の割合、24時間のスターター、果物のpHは試験の目安で、Di Linhでの実測値ではありません。曲線は説明用のモデルです。 ||| <1>综合多方资料。</1>机器外形是设计构想。MeDili尚未找到水果比例的标准用量，所以5–20%的比例、24小时的发酵引子和水果pH都是试验基准，并非Di Linh的实测数据。曲线为示意模型。
+8d3db4860 ||| Clearly tart and aromatic, pulls the pH down fast. Best at 5–10%. ||| 酸味と香りがはっきりして、pHを速く下げる。5〜10%が適量。 ||| 酸香明显，使pH快速下降。适合5–10%。
+e2d6af065 ||| Pineapple ||| パイナップル ||| 菠萝
+fc78e97cf ||| Already studied on Robusta Honey. Easy to buy at scale. ||| Robusta Honeyでの研究があります。大量に買いやすい。 ||| 已有针对Robusta Honey的研究。容易大量采购。
+d75999f7e ||| Sweet and quick to ferment. Needs to be kept cooler. ||| 甘く、発酵が速く進みやすい。より涼しく保つ必要がある。 ||| 甜，容易快速发酵。需要保持更凉。
+b4cff2fc1 ||| Orange peel contains essential oils, so use only the segments. ||| オレンジの皮には精油があるので、果肉の房だけを使う。 ||| 橙皮含精油，只用果瓣。
+bd597c1ac ||| Jackfruit ||| ジャックフルーツ ||| 菠萝蜜
+bee4dc64a ||| Sweet with a strong smell that can easily overpower the coffee. Measure the Brix for real. ||| 甘く香りが強いので、コーヒーを覆い隠しやすい。Brixは実際に測る必要がある。 ||| 甜、气味浓，容易盖过咖啡。Brix需要实测。
+5ac3d5137 ||| No fruit ||| 果物なし ||| 不加水果
+7de8142c7 ||| A control tank for comparison. ||| 比較用の対照の容器。 ||| 用于比较的对照桶。
+f9558f397 ||| Natural yeasts ||| 自然の酵母 ||| 天然酵母
+f6c33fc80 ||| Pulp: ||| 果肉： ||| 果肉：
+be5c6da68 ||| Whole fruit to buy ||| 購入する果物（丸ごと） ||| 需购买的整果
+f2dfbcd42 ||| Concept drawing · ratios are trial benchmarks ||| コンセプト図 · 割合は試験の目安 ||| 概念图 · 比例为试验基准
+260e865aa ||| {1} starter · {2} kg ||| {1}のスターター · {2} kg ||| {1}发酵引子 · {2} kg
+2ba153541 ||| Starter ||| スターター ||| 发酵引子
+222c321f5 ||| 3. starter ||| 3. スターター ||| 3. 发酵引子
+fc9fdc365 ||| Fruit starter ||| 果物のスターター ||| 水果发酵引子
+01dcebbe8 ||| Fruit and yeast get acquainted ||| 果物と酵母をなじませる ||| 让水果和酵母相互适应
+6e8c20284 ||| Use only clean {1} pulp, finely mashed. Mix it with activated yeast and hold for 24 hours at 24–26 °C. In the starter, the yeast gets used to the fruit sugar before going into the tank, so the batch starts faster and more steadily. {2} ||| 清潔な{1}の果肉だけを細かくつぶして使います。活性化した酵母と混ぜ、24〜26 °Cで24時間置きます。スターターの中で酵母が槽に入る前に果物の糖になじむので、バッチの立ち上がりが速く安定します。{2} ||| 只用干净的{1}果肉，捣碎。与活化好的酵母混合，在24–26 °C下保持24小时。在发酵引子中，酵母进池前就适应了水果的糖，所以批次启动更快、更稳定。{2}
+5382d1b5f ||| The control tank has no fruit. Just activate the yeast and inoculate the tank directly. ||| 対照の容器には果物を入れない。酵母を活性化して、そのまま槽に加える。 ||| 对照桶不加水果。只活化酵母后直接接种到池中。
+fb14debd9 ||| Fruit pulp ||| 果肉 ||| 果肉
+63cb0a1e3 ||| about {1} kg ||| 約{1} kg ||| 约{1} kg
+cd8fcfcdb ||| not inoculated ||| 接種なし ||| 不接种
+317de6dd4 ||| Starter incubation ||| スターターの培養 ||| 培养发酵引子
+36ada0614 ||| 24 hours, 24–26 °C ||| 24時間、24〜26 °C ||| 24小时，24–26 °C
+df28316ea ||| After 24 hours, the jar bubbles lightly and smells of clean ripe fruit, with no foul smell. Measure pH and Brix before pouring it into the tank. ||| 24時間後、容器は軽く泡立ち、清潔な熟した果物のにおいがして、悪臭がない。槽に入れる前にpHとBrixを測る。 ||| 24小时后，罐中轻微冒泡，有干净的熟果香，无臭味。倒入池中前测量pH和Brix。
+6d151c8a6 ||| Using bruised fruit or dirty tools lets foreign bacteria grow before the yeast. ||| 傷んだ果物や汚れた器具を使うと、酵母より先に雑菌が増える。 ||| 使用碰伤水果或脏器具，会让杂菌先于酵母繁殖。
+c6fad7dc7 ||| A 30 L food-grade plastic tank with a one-way valve lid, and an industrial blender. ||| 30 Lの食品用プラスチック容器（ワンウェイバルブ付きのふた）と業務用ミキサー。 ||| 30升食品级塑料桶（盖子带单向阀）和工业搅拌机。
+fb265e956 ||| Yeast eats the sugar in the mucilage and the fruit, releasing CO₂, alcohol and aromatic esters. It's still unclear whether the aromas come from the fruit or the microbes, so taste against the control. Hour {1}: pH {2}, Brix {3}. CO₂ pushes air out through the one-way valve, so the tank becomes low in oxygen on its own. The cooling jacket draws off heat to keep the yeast in its working temperature range. ||| 酵母はミューシレージと果物の糖を食べ、CO₂、アルコール、香りのエステルを出します。香りが果物由来か微生物由来かはまだはっきりしないので、対照と飲み比べる必要があります。{1}時間目：pH {2}、Brix {3}。CO₂がワンウェイバルブから空気を押し出すので、槽は自然に低酸素になります。冷却ジャケットが熱を取り、酵母を適した温度帯に保ちます。 ||| 酵母吃果胶层和水果中的糖，释放CO₂、酒精和带香气的酯类。目前还不清楚香气来自水果还是微生物，所以必须与对照比较品尝。第{1}小时：pH {2}，Brix {3}。CO₂把空气从单向阀推出，池内自然形成低氧环境。冷却夹套带走热量，让酵母保持在合适的工作温度范围。
+d92d20868 ||| The flow of water carries away the mucilage, fruit solids and most of the yeast. With its food gone and everything diluted, fermentation almost stops at once, so the timing of the wash decides the batch. ||| 水の流れがミューシレージ、果物のかす、酵母の大部分を洗い流します。えさを失い薄まるので、発酵はほぼすぐに止まります。だから洗うタイミングがバッチを決めます。 ||| 水流带走果胶层、水果残渣和大部分酵母。失去食物又被稀释，发酵几乎立刻停止，所以清洗的时机决定整批成败。
+969f3b7db ||| The {1} style isn't washed. Strain out the fruit solids first, then take the batch straight to the drying beds. Yeast and fruit sugar still cling to the beans, making mold likely, so stop the tank earlier than Washed and spread thinly. ||| {1}は洗いません。先に果物のかすをこし取り、バッチをそのまま乾燥棚へ移します。酵母と果物の糖が豆に残ってカビやすいので、Washedより早く槽を止め、薄く広げます。 ||| {1}方式不清洗。先滤出水果残渣，再把批次直接送上干燥架。酵母和水果糖分仍附着在豆子上，容易发霉，所以要比Washed更早停池，并摊薄。
+1e8591dea ||| Clean tanks, valves and tools. Prepare a pH pen, Brix refractometer, thermometer and scale. ||| 槽、バルブ、器具を清掃する。pHペン、Brix屈折計、温度計、はかりを用意する。 ||| 清洁发酵池、阀门和器具。准备pH笔、Brix折光仪、温度计和秤。
+92d9f1844 ||| Record the batch code, fruit type and ratio. ||| バッチ番号、果物の種類、割合を記録する。 ||| 记录批次编号、水果种类和比例。
+929fb3a35 ||| Fruit bought clean, from a clear source. ||| 果物は清潔で、出所がはっきりしたものを買う。 ||| 购买干净、来源清楚的水果。
+f378b7f81 ||| Sorting coffee cherries ||| コーヒーの実の選別 ||| 筛选咖啡果
+fd8367ed4 ||| Pick ripe, float-sort, remove floaters. ||| 熟した実を摘み、浮力選別で浮き実を除く。 ||| 采熟果，浮选，剔除瘪果。
+0f299282f ||| At least 90% ripe, Brix 18–22. ||| 熟度90%以上、Brix 18〜22。 ||| 成熟度90%以上，Brix 18–22。
+2487405af ||| Process the same day as picking. ||| 収穫当日に加工する。 ||| 采摘当天加工。
+80fdb7230 ||| Washed and Honey are pulped, keeping the mucilage. Natural keeps the whole cherry. ||| WashedとHoneyは果肉を除き、ミューシレージを残す。Naturalは実をまるごと残す。 ||| Washed和Honey脱去果皮，保留果胶层。Natural保留整果。
+9a37a01e0 ||| Don't crush the beans. ||| 豆をつぶさない。 ||| 不要压伤豆子。
+85a84be7e ||| Keep the skins away from the tanks. ||| 果皮は槽から離して置く。 ||| 果皮远离发酵池存放。
+77e9aed03 ||| Wash, trim bruised parts, take the pulp and mash it. Mix in activated yeast and hold for 24 hours. ||| 洗って傷んだ部分を除き、果肉を取ってつぶす。活性化した酵母を混ぜ、24時間置く。 ||| 清洗，去掉碰伤部分，取果肉捣碎。拌入活化酵母，保持24小时。
+7308bffbf ||| Fruit pulp at 5–20% of the coffee weight. 24–26 °C. ||| 果肉はコーヒーの重さの5〜20%。24〜26 °C。 ||| 果肉为咖啡重量的5–20%。24–26 °C。
+a19ebdfd8 ||| Activate the yeast at 25–29 °C for 15–30 minutes. ||| 酵母を25〜29 °Cで15〜30分活性化する。 ||| 在25–29 °C下活化酵母15–30分钟。
+05a2a52b8 ||| Load the coffee, pour in the starter, mix well and close the valved lid. ||| コーヒーを入れ、スターターを注ぎ、よく混ぜてバルブ付きのふたを閉める。 ||| 装入咖啡，倒入发酵引子，搅匀，盖上带阀盖子。
+661dff437 ||| Trial range 24–72 hours, 22–24 °C. ||| 試験の目安は24〜72時間、22〜24 °C。 ||| 试验区间24–72小时，22–24 °C。
+b6dd7a377 ||| Measure every 6 hours. Stop at pH 4.0–4.4. ||| 6時間ごとに測る。pH 4.0〜4.4で止める。 ||| 每6小时测一次。在pH 4.0–4.4时停止。
+40b31d0f1 ||| Wash or strain solids ||| 洗浄またはかすのろ過 ||| 清洗或滤渣
+177d7bb88 ||| Washed: wash clean. Honey, Natural: strain out the fruit solids, no washing. ||| Washed：きれいに洗う。Honey、Natural：果物のかすをこし取り、洗わない。 ||| Washed：洗净。Honey、Natural：滤出水果残渣，不清洗。
+fef48f8e9 ||| Don't let fruit solids onto the drying beds. ||| 果物のかすを乾燥棚にのせない。 ||| 不要让水果残渣上干燥架。
+aef16ac0f ||| Raised beds with a roof. Spread Honey and Natural thinly and turn often from the start. ||| 屋根付きの高床式乾燥棚。HoneyとNaturalは薄く広げ、最初からよく返す。 ||| 带棚顶的高架干燥床。Honey和Natural摊薄，从一开始就勤翻。
+7678550df ||| Mold means discarding the batch. ||| カビが出たらバッチは廃棄。 ||| 发霉就整批丢弃。
+fa1672192 ||| Seal in bags and label the lot. Blind-taste alongside the control. ||| 袋に密封し、ロットを記録する。対照とブラインドで飲み比べる。 ||| 密封装袋，标注批次。与对照一起盲品。
+e5368a730 ||| Taste every 2 weeks. ||| 2週間ごとに味見する。 ||| 每2周品尝一次。
+7dee40d54 ||| Scale up only batches that beat the control. ||| 対照より良いバッチだけを規模拡大する。 ||| 只有优于对照的批次才扩大规模。
+4d0948880 ||| pH drops fast below 4.0 ||| pHが急に4.0を下回る ||| pH快速跌破4.0
+a3d45ec36 ||| Fruit too sour, high ratio, warm tank ||| 果物が酸っぱすぎる、割合が高い、槽が熱い ||| 水果太酸、比例高、池温高
+b1d1b139d ||| Stop the batch at once. Next time, cut the fruit ratio or lower the temperature. ||| すぐにバッチを止める。次回は果物の割合を減らすか、温度を下げる。 ||| 立即停止该批。下批减少水果比例或降温。
+072013fe2 ||| Vigorous bubbling, foaming over ||| 激しく泡立ち、あふれる ||| 剧烈冒泡、溢沫
+b7d436747 ||| Starter too strong, tank too full ||| スターターが強すぎる、槽が満杯 ||| 发酵引子太强、池装太满
+51427e9b1 ||| Leave 20% headspace and split the starter into smaller portions. ||| 20%の空間を残し、スターターを小分けにする。 ||| 预留20%的空间，把发酵引子分成小份。
+8206e79d0 ||| Oxygen got in, ran too long ||| 酸素が入った、時間が長すぎる ||| 氧气进入、超时
+b08c4577e ||| Stop the batch and check the lid and valve. ||| バッチを止め、ふたとバルブを点検する。 ||| 停止该批，检查盖子和阀门。
+c97c792ef ||| Paint or solvent smell ||| 塗料臭、溶剤臭 ||| 油漆味、溶剂味
+41fa0a3d0 ||| Temperature too high, lots of sugar ||| 温度が高すぎる、糖が多い ||| 温度过高、糖多
+52fd8f87c ||| Set it apart. Next time, use less fruit and keep it cool. ||| 別にして除く。次回は果物を減らし、涼しく保つ。 ||| 单独剔除。下批减少水果并保持凉爽。
+971ef4835 ||| Mold on the drying beds ||| 乾燥棚でのカビ ||| 干燥架上发霉
+c9a2fd36e ||| Fruit solids still clinging, thick layer ||| 果物のかすが残っている、層が厚い ||| 水果残渣仍附着、层太厚
+1c2cf1715 ||| Strain thoroughly, spread thinly, turn constantly. Discard if there's a lot of mold. ||| よくこし、薄く広げ、絶えず返す。カビが多ければ廃棄。 ||| 彻底过滤，摊薄，不停翻动。霉多就丢弃。
+a3ae9855b ||| Tastes like the control ||| 対照と同じ味 ||| 味道与对照相同
+b57e39194 ||| Low ratio, short time ||| 割合が低い、時間が短い ||| 比例低、时间短
+8af7a7202 ||| Extend the time first. If it's still the same, there's no need for fruit. ||| まず時間を延ばす。それでも同じなら、果物は不要。 ||| 先延长时间。仍然一样就不必用水果。
+a36f10417 ||| Harsh, artificial fruit taste ||| 果物の味がきつく、人工的 ||| 果味刺激、像人工香精
+5b5566f59 ||| Ratio too high, overpowering the coffee ||| 割合が高すぎて、コーヒーを覆い隠す ||| 比例太高，盖过咖啡
+7019e1ace ||| Cut the fruit back to 5–10% and aim for balance. ||| 果物を5〜10%に減らし、バランスを優先する。 ||| 把水果降到5–10%，以平衡为先。
+f466cc1d2 ||| No yeast inoculation: natural microbes do the work, which is less predictable. ||| 酵母を接種しない：自然の微生物が働くので、予測しにくい。 ||| 不接种酵母：由天然微生物发酵，更难预测。
+1a8bd8d1e ||| {1} works well at {2}–{3} °C. Fruit adds extra heat, so stay at the low end of this range. ||| {1}は{2}〜{3} °Cでよく働きます。果物が熱を生むので、この範囲の低めに保ちます。 ||| {1}在{2}–{3} °C下表现良好。水果会额外产热，所以保持在该范围的低端。
+5927658de ||| Too sour ||| 酸っぱすぎる ||| 太酸
+f4a703670 ||| Expected pH {1}. Stop earlier, around hour {2}. ||| 予想pH {1}。もっと早く、{2}時間目ごろに止める。 ||| 预计pH {1}。提早停止，约第{2}小时。
+23a839e3c ||| {1} °C is above {2} °C. Increase cooling. ||| {1} °Cは{2} °Cより高い。冷却を強める。 ||| {1} °C高于{2} °C。加强冷却。
+7c25a66e5 ||| Expected pH {1}. Extend the time or check the temperature. ||| 予想pH {1}。時間を延ばすか、温度を確認する。 ||| 预计pH {1}。延长时间或检查温度。
+ec3dc4653 ||| pH {1} is already below the 4.0 mark. Cut it to about {2} hours. ||| pH {1}はすでに4.0を下回っています。約{2}時間に短縮する。 ||| pH {1}已低于4.0。缩短到约{2}小时。
+006f65a95 ||| Fruit ratio quite high ||| 果物の割合がかなり高い ||| 水果比例偏高
+5b70f20b2 ||| Above 20% easily overpowers the coffee flavor, so try it in a small batch. ||| 20%を超えるとコーヒーの味を覆いやすいので、小さなバッチで試す。 ||| 超过20%容易盖过咖啡味，宜先小批量试。
+a2b5a3126 ||| Farm flavor ||| 産地の味 ||| 产地风味
+49d4416ed ||| Fruit aroma ||| 果物の香り ||| 果香
+5fa8ab8e7 ||| %, pulp ||| %、果肉 ||| %，果肉
+17986e5f8 ||| kg, whole fruit about ||| kg、丸ごとの果実で約 ||| kg，整果约
+d96def0ec ||| g, water at least ||| g、水は最低 ||| g，水至少
+55688acf2 ||| Reaches pH 4.2 around hour {1} ||| {1}時間目ごろにpH 4.2到達 ||| 约第{1}小时达到pH 4.2
+1c5936a06 ||| Doesn't reach pH 4.2 within 120 hours ||| 120時間以内にpH 4.2に達しない ||| 120小时内未达到pH 4.2
+71d553ad5 ||| no fruit ||| 果物なし ||| 无水果
+72215b50c ||| BATCH SHEET {1}⏎MeDili Coffee Farm · Di Linh⏎⏎Coffee cherries: {2} kg | Starting Brix: {3} °Bx⏎Processing: {4}⏎Fruit: {5} {6}⏎Yeast: {7}⏎Starter: 24 hours, 24–26 °C⏎Minimum tank: {8} L⏎Hold temperature: {9} °C⏎Expected: {10} hours, pH {11}, Brix {12}⏎{13}. Measure every 6 hours.⏎Estimated CO₂: {14} L; a valve and ventilation are required⏎Estimated green coffee: {15}–{16} kg⏎Finished: {17} kg roasted, {18} packs of 250 g⏎Dry to 10.5–11.5% moisture, about {19} days⏎Label: co-fermented with {20} ||| バッチ記録票 {1}⏎MeDili Coffee Farm · Di Linh⏎⏎コーヒーの実：{2} kg | 初期Brix：{3} °Bx⏎精製方法：{4}⏎果物：{5} {6}⏎酵母：{7}⏎スターター：24時間、24〜26 °C⏎槽の最小容量：{8} L⏎保持温度：{9} °C⏎予定：{10}時間、pH {11}、Brix {12}⏎{13}。6時間ごとに測定。⏎CO₂推定量：{14} L、バルブと換気が必要⏎生豆推定量：{15}〜{16} kg⏎完成品：焙煎豆{17} kg、250 g入り{18}袋⏎水分10.5〜11.5%まで乾燥、約{19}日⏎表示：{20}と共発酵 ||| 批次记录表 {1}⏎MeDili Coffee Farm · Di Linh⏎⏎咖啡果：{2} kg | 初始Brix：{3} °Bx⏎处理方式：{4}⏎水果：{5} {6}⏎酵母：{7}⏎发酵引子：24小时，24–26 °C⏎池最小容量：{8} L⏎保持温度：{9} °C⏎预计：{10}小时，pH {11}，Brix {12}⏎{13}。每6小时测一次。⏎估计CO₂：{14} L，必须有阀门和通风⏎估计生豆：{15}–{16} kg⏎成品：烘焙豆{17} kg，250克装{18}包⏎干燥至含水量10.5–11.5%，约{19}天⏎标签：与{20}共同发酵

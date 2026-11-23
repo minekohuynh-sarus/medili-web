@@ -1,0 +1,143 @@
+# cold-brew.html (3)
+50f93b90b ||| {1}{2}L water · 1:{3} · {4}{5} °C · {6} h ||| 水{1}{2}L · 1:{3} · {4}{5} °C · {6}時間 ||| 水{1}{2}L · 1:{3} · {4}{5} °C · {6}小时
+7aec33e0f ||| Cold room thermometer at 2–5 °C; record times on the batch record. ||| 冷蔵室の温度計が2〜5 °C。時刻をロット記録票に記入。 ||| 冷库温度计2–5 °C，在批次记录表上记录时间。
+abb7dc349 ||| Lift the bags, filter in two stages ||| バッグを引き上げ、2段階でこす ||| 提起滤袋，两级过滤
+b512cbb86 ||| Drain for 15–20 minutes without squeezing hard. Fine-filter through filter paper or food-grade filter cloth. ||| 15〜20分水を切り、強く絞らない。ろ紙か食品用のろ過布で細かくこす。 ||| 沥干15–20分钟，不要用力挤压。用滤纸或食品级滤布精滤。
+6b6809c62 ||| {1}{2}L of concentrate ||| 原液{1}{2}L ||| 原液{1}{2}L
+f6632b436 ||| Clear concentrate, no sediment. ||| 原液が澄んでいて、沈殿がない。 ||| 原液清澈，无沉淀。
+584d0b10d ||| Measure TDS, dilute ||| TDSを測り、希釈する ||| 测TDS，稀释
+adddfd518 ||| Measure TDS, record the batch ||| TDSを測り、ロットを記録する ||| 测TDS，记录批次
+99624de35 ||| The concentrate only reaches a TDS of about {1}%, not enough to dilute to {2}%. Use more coffee or steep longer. ||| 原液のTDSは約{1}%にとどまり、{2}%まで希釈するには足りません。コーヒーを増やすか、浸漬時間を延ばしてください。 ||| 原液TDS只有约{1}%，不足以稀释到{2}%。增加咖啡用量或延长浸泡时间。
+e74c23098 ||| Measure the concentrate's TDS with a refractometer and add standard drinking water to a TDS of {1}%: add {2}{3}L. ||| 屈折計で原液のTDSを測り、基準を満たす飲用水を加えてTDS {1}%にする：{2}{3}L加える。 ||| 用折光仪测原液TDS，加入达标饮用水至TDS {1}%：加{2}{3}L。
+c45ed31da ||| Measure the concentrate's TDS with a refractometer and write it on the batch record. If it is more than 10% off the reference, adjust the next batch. ||| 屈折計で原液のTDSを測り、ロット記録票に書く。基準から10%以上ずれたら、次のバッチを調整する。 ||| 用折光仪测原液TDS，写在批次记录表上。与基准相差超过10%就调整下一批。
+96607597c ||| {1}{2}L ready to drink ||| そのまま飲める{1}{2}L ||| 即饮{1}{2}L
+a3d976c1e ||| TDS about {1}% ||| TDS約{1}% ||| TDS约{1}%
+7ad3d1b11 ||| Taste against the reference sample. ||| 基準サンプルと比べて味わう。 ||| 与标准样品对比品尝。
+66fe4da39 ||| Bottle and cap ||| 充填、キャップ締め ||| 灌装、封盖
+25d6cac75 ||| {1}{2}ml brown glass bottles, washed, sanitized and dried. Close with tamper-evident caps and label with the production date, expiry date and batch code right at filling. ||| 洗浄・殺菌・乾燥した{1}{2}mlの茶色のガラスボトル。シールリング付きのキャップを閉め、充填と同時に製造日、賞味期限、ロット番号入りのラベルを貼る。 ||| 已清洗、消毒、晾干的{1}{2}ml棕色玻璃瓶。盖上带防盗圈的瓶盖，灌装时立即贴上注明生产日期、保质期、批号的标签。
+b6d6cdfab ||| Turn 5 bottles upside down: no leaks. ||| 5本を逆さにする：漏れないこと。 ||| 倒置5瓶：不漏。
+cfcd318ed ||| Cold room 0–4 °C ||| 冷蔵室 0〜4 °C ||| 冷库 0–4 °C
+203542c02 ||| Move into the cold room immediately. Record the temperature twice a day. Keep 2 sample bottles per batch until expiry. ||| すぐに冷蔵室へ。温度を1日2回記録。ロットごとにサンプル2本を期限まで保管。 ||| 立即放入冷库。每天记录两次温度。每批留存2瓶样品至保质期结束。
+f970daadd ||| 7-day shelf life ||| 賞味期限7日 ||| 保质期7天
+40d4426ea ||| Bottles below 5 °C when leaving the store. ||| 出庫時にボトルが5 °C未満。 ||| 出库时瓶温低于5 °C。
+9216ceed4 ||| Foam boxes with gel ice, same-day delivery within the city, reminding customers to refrigerate right away. Never send to other provinces by standard delivery. ||| 保冷剤入りの発泡スチロール箱で市内に当日配送し、すぐ冷蔵庫に入れるようお客様に伝える。通常配送で他の省へ送らない。 ||| 用放有冰袋的泡沫箱在市区当日配送，提醒顾客立即冷藏。不要用普通快递寄往外省。
+823d0dacb ||| Inner city, same day ||| 市内、当日 ||| 市区，当日
+061043de7 ||| Bottles below 5 °C when they reach the customer. ||| お客様の手元に届いた時点で5 °C未満。 ||| 送达顾客时瓶温低于5 °C。
+63ec1e0a2 ||| Figure 2: recipe for a {1}{2}kg batch · {3} ||| 図2：{1}{2}kgバッチのレシピ · {3} ||| 图2：{1}{2}kg批次配方 · {3}
+ce97111bc ||| <1>Parameters</1>{1} ||| <1>パラメータ</1>{1} ||| <1>参数</1>{1}
+3e9c1bab0 ||| <1>Check</1>{1} ||| <1>確認</1>{1} ||| <1>检查</1>{1}
+6813fdf09 ||| READY TO DRINK ||| そのまま飲める ||| 即饮
+d2de376b4 ||| CONCENTRATE ||| 濃縮 ||| 浓缩
+64c2cd67e ||| Cold-steeped {1} hours · pure roast ||| {1}時間低温抽出 · 無添加焙煎 ||| 冷萃{1}小时 · 纯烘焙
+a3b4e791a ||| Cold Brew MeDili box of cold-steep bags, {1} bags of {2} g ||| Cold Brew MeDili水出しバッグの箱、{1}袋 × {2} g ||| Cold Brew MeDili冷泡袋盒，{1}袋 × {2} g
+2e223ccf6 ||| COLD-STEEP BAGS ||| 水出しバッグ ||| 冷泡袋
+da6107af9 ||| {1} BAGS × {2} G ||| {1}袋 × {2} G ||| {1}袋 × {2} G
+499631804 ||| Steep at home ||| おうちで抽出 ||| 在家冷泡
+f26ac364d ||| 1 bag + {1} ml ||| 1袋 + {1} ml ||| 1袋 + {1} ml
+fc0cc4f90 ||| in the fridge ||| 冷蔵室で ||| 冰箱冷藏
+e6381b16f ||| COLD BREW MEDILI – COLD-STEEP COFFEE BAGS ||| COLD BREW MEDILI – 水出しコーヒーバッグ ||| COLD BREW MEDILI – 冷泡咖啡袋
+a3f34f922 ||| COLD BREW MEDILI – READY-TO-DRINK COLD BREW COFFEE ||| COLD BREW MEDILI – そのまま飲めるコールドブリューコーヒー ||| COLD BREW MEDILI – 即饮冷萃咖啡
+ceaa3a3d7 ||| COLD BREW MEDILI – COLD BREW COFFEE CONCENTRATE ||| COLD BREW MEDILI – コールドブリューコーヒー濃縮 ||| COLD BREW MEDILI – 冷萃咖啡浓缩液
+da65de668 ||| 100% roasted ground Robusta coffee (Robusta Di Linh). ||| 焙煎粉砕Robustaコーヒー100%（Robusta Di Linh）。 ||| 100%烘焙研磨Robusta咖啡（Robusta Di Linh）。
+2bb53af41 ||| Water, roasted ground Robusta coffee (Robusta Di Linh). ||| 水、焙煎粉砕Robustaコーヒー（Robusta Di Linh）。 ||| 水、烘焙研磨Robusta咖啡（Robusta Di Linh）。
+83d2cfb96 ||| Net weight: {1} g ({2} bags × {3} g) ||| 内容量：{1} g（{2}袋 × {3} g） ||| 净含量：{1} g（{2}袋 × {3} g）
+1821473ec ||| Net volume: {1} ml ||| 内容量：{1} ml ||| 净含量：{1} ml
+347c935d5 ||| Put 1 bag in a jar with {1} ml of filtered water, cover tightly, steep in the fridge for 18–24 hours, then remove the bag. Dilute 1:1 with water, milk or ice. Keep the steeped concentrate in the fridge and use within 3 days. ||| 容器に1袋と浄水{1} mlを入れ、しっかりふたをして冷蔵室で18〜24時間浸し、バッグを取り出します。水、ミルク、氷で1:1に割ってください。抽出した原液は冷蔵室で保存し、3日以内にお飲みください。 ||| 将1袋与{1} ml过滤水放入瓶中，盖紧，放冰箱冷藏室浸泡18–24小时，取出滤袋。按1:1兑水、牛奶或冰。泡好的原液冷藏保存，3天内饮用完。
+bd3190117 ||| Shake well before use. Drink chilled or pour over ice. ||| よく振ってからお飲みください。冷やして、または氷に注いで。 ||| 饮用前摇匀。冷饮或倒在冰上。
+b3258cb82 ||| Shake well. Mix 1 part concentrate with 2 parts water, milk or ice. ||| よく振ってください。原液1に対し、水、ミルク、氷を2の割合で割ります。 ||| 摇匀。按1份原液兑2份水、牛奶或冰。
+6f921280d ||| Store in a dry, cool, well-ventilated place away from sunlight. After opening the foil pouch, reseal and use soon. ||| 直射日光を避け、湿気が少なく涼しい場所で保存。アルミ袋を開けたらしっかり閉じ、早めにお使いください。 ||| 存放于干燥、阴凉、通风处，避免阳光直射。铝箔袋开封后请密封并尽快使用。
+6dc9db5cc ||| Keep refrigerated at 0–4 °C. Close tightly and keep cold after opening. ||| 0〜4 °Cで冷蔵保存。開封後はしっかり閉めて冷蔵してください。 ||| 0–4 °C冷藏。开封后盖紧并冷藏。
+55023301b ||| Contains caffeine. Use with care for children, pregnant women and people sensitive to caffeine. ||| カフェインを含みます。お子様、妊娠中の方、カフェインに敏感な方はご注意ください。 ||| 含咖啡因。儿童、孕妇及对咖啡因敏感者请慎用。
+59d32585a ||| Do not consume if the bottle is bulging, leaking or smells unusual. Do not leave out of the fridge for more than 2 hours. Contains caffeine. ||| ボトルが膨らんでいる、漏れている、異臭がする場合は飲まないでください。冷蔵庫の外に2時間以上置かないでください。カフェインを含みます。 ||| 瓶身鼓胀、渗漏或有异味时请勿饮用。不要在冰箱外放置超过2小时。含咖啡因。
+eb1b168c2 ||| <1>Ingredients:</1> {1} ||| <1>原材料：</1>{1} ||| <1>配料：</1>{1}
+58cf371ab ||| <1>Directions:</1> {1} ||| <1>使用方法：</1>{1} ||| <1>使用方法：</1>{1}
+06979b917 ||| <1>Storage:</1> <2>{1}</2> ||| <1>保存方法：</1><2>{1}</2> ||| <1>储存方法：</1><2>{1}</2>
+b316734a8 ||| <1>Warning:</1> {1} ||| <1>注意：</1>{1} ||| <1>警示：</1>{1}
+f2a87e104 ||| <1>LOT</1>{1} ||| <1>ロット番号</1>{1} ||| <1>批号</1>{1}
+db6c7a86a ||| <1>Self-declaration no.:</1> ……/DSUNFOOD/{1} ||| <1>自己公表番号：</1>……/DSUNFOOD/{1} ||| <1>自我公布编号：</1>……/DSUNFOOD/{1}
+c4d01b18e ||| <1>Responsible organization:</1> DSunfood Co., Ltd., {1}. Tel. {2}. ||| <1>責任組織：</1>DSunfood有限会社、{1}。電話 {2}。 ||| <1>责任单位：</1>DSunfood有限责任公司，{1}。电话 {2}。
+5b20d1105 ||| <1>Origin:</1> Vietnam. Ingredients from the MeDili farm, {1}. ||| <1>原産国：</1>ベトナム。原料はMeDili農園産（{1}）。 ||| <1>原产地：</1>越南。原料来自MeDili庄园，{1}。
+c84897a8d ||| Cold Brew MeDili cold-steep bags · Box of {1} bags × {2} g · pure-roast Robusta Di Linh ||| Cold Brew MeDili 水出しバッグ · {1}袋 × {2} g入り · 無添加焙煎のRobusta Di Linh ||| Cold Brew MeDili冷泡袋 · 每盒{1}袋 × {2} g · 纯烘焙Robusta Di Linh
+6b986d69c ||| concentrate ||| 濃縮 ||| 浓缩
+cb350f25d ||| ready-to-drink ||| そのまま飲める ||| 即饮
+74033fae7 ||| Cold Brew MeDili {1} {2} ml · Robusta Di Linh cold-steeped {3} hours · Same-day chilled delivery ||| Cold Brew MeDili {1} {2} ml · Robusta Di Linhを{3}時間低温抽出 · 当日冷蔵配送 ||| Cold Brew MeDili {1} {2} ml · Robusta Di Linh冷萃{3}小时 · 当日冷链配送
+f97b31fad ||| 100% Robusta coffee from the MeDili farm, Di Linh, Lâm Đồng, pure-roasted to City+, coarse-ground. ||| ラムドン省Di LinhのMeDili農園産Robustaコーヒー100%。無添加でCity+に焙煎し、粗挽き。 ||| 100%来自林同省Di Linh MeDili庄园的Robusta咖啡，纯烘焙至City+，粗研磨。
+4c3a6a507 ||| Each {1} g bag steeped with {2} ml of filtered water in the fridge for 18–24 hours makes about {3} ml of concentrate. ||| {1} gのバッグ1袋を浄水{2} mlで冷蔵室に18〜24時間浸すと、約{3} mlの原液ができます。 ||| 每袋{1} g，用{2} ml过滤水在冰箱冷藏室泡18–24小时，可得约{3} ml原液。
+ba5ad0145 ||| Dilute 1:1 with water, fresh milk or ice, to taste. ||| お好みで水、牛乳、氷で1:1に割って。 ||| 按口味以1:1兑水、鲜奶或冰。
+ca28a8a04 ||| Box of {1} bags, packed in nitrogen-flushed foil pouches. ||| {1}袋入りの箱、窒素充填のアルミ袋で包装。 ||| 每盒{1}袋，装于充氮铝箔袋中。
+8e08cb3ea ||| Dry goods, nationwide delivery. ||| 常温品、全国配送。 ||| 干货，全国配送。
+b6aa1a50e ||| 100% Robusta coffee from the MeDili farm, Di Linh, Lâm Đồng, pure-roasted to City+. ||| ラムドン省Di LinhのMeDili農園産Robustaコーヒー100%。無添加でCity+に焙煎。 ||| 100%来自林同省Di Linh MeDili庄园的Robusta咖啡，纯烘焙至City+。
+df02563c6 ||| Cold-steeped {1} hours at {2} °C, filtered twice. No sugar, no preservatives. ||| {2} °Cで{1}時間低温抽出し、2回ろ過。砂糖・保存料不使用。 ||| 在{2} °C下冷萃{1}小时，过滤两次。无糖，无防腐剂。
+05970f3da ||| Mix 1 part concentrate with 2 parts water, milk or ice. ||| 原液1に対し、水、ミルク、氷を2の割合で割る。 ||| 按1份原液兑2份水、牛奶或冰。
+ba713be96 ||| Shake well; drink chilled or pour over ice. ||| よく振って、冷やして、または氷に注いで。 ||| 摇匀，冷饮或倒在冰上。
+6a3d138e1 ||| Store at 0–4 °C; use within 7 days of production. ||| 0〜4 °Cで保存し、製造日から7日以内にお飲みください。 ||| 0–4 °C储存，生产之日起7天内饮用。
+d3c3d49cf ||| Same-day delivery within Ho Chi Minh City, in foam boxes with gel ice. ||| ホーチミン市内に当日配送、保冷剤入りの発泡スチロール箱で。 ||| 胡志明市市区当日配送，使用放有冰袋的泡沫箱。
+851a8f0e5 ||| Digital scale ||| デジタルスケール ||| 电子秤
+5b1d1d115 ||| Weigh the grounds for each grinding round ||| 挽くたびに粉を量る ||| 每轮研磨称粉
+d4b0e08f9 ||| Check the scale regularly ||| 定期的に校正を確認 ||| 定期校验秤
+7e300f6fe ||| Dosing filter-bag packing machine ||| フィルターバッグ定量包装機 ||| 定量滤袋包装机
+94b1199b5 ||| Or hire a contract facility that already has a food safety certificate ||| または食品安全の証明書を持つ委託工場に依頼 ||| 或委托已有食品安全证书的加工厂
+35147c1c0 ||| Food-grade non-woven filter bags ||| 食品用の不織布フィルターバッグ ||| 食品级无纺布滤袋
+45e8b039b ||| {1} bags ||| {1}枚 ||| {1}个
+2c73ac977 ||| 3% extra for machine waste ||| 機械ロス分として3%多めに ||| 多备3%用于机器损耗
+ef0c01285 ||| Multi-layer foil pouches with one-way valves ||| ワンウェイバルブ付き多層アルミ袋 ||| 带单向阀的多层铝箔袋
+4a7de0a42 ||| 5 filter bags per foil pouch ||| アルミ袋1枚にフィルターバッグ5袋 ||| 每个铝箔袋装5个滤袋
+832c00d4f ||| Bag sealer with nitrogen flushing ||| 窒素充填機能付きシーラー ||| 带充氮功能的封口机
+a9ea1771c ||| 1 machine ||| 1台 ||| 1台
+0e3f756ac ||| Check the seals at the start of each shift ||| 各シフトの始めにシールを確認 ||| 每班开始时检查封口
+f2a6151b9 ||| Kraft boxes printed with Cold Brew MeDili ||| Cold Brew MeDili印刷のクラフト箱 ||| 印有Cold Brew MeDili的牛皮纸盒
+1eaf46541 ||| {1} boxes ||| {1}箱 ||| {1}盒
+0806f8807 ||| {1} bags per box ||| 1箱{1}袋 ||| 每盒{1}袋
+9223efac3 ||| Weigh grounds and water ||| 粉と水を量る ||| 称粉和水
+030604fcd ||| 1 liter of water is about 1 kg ||| 水1リットルは約1 kg ||| 1升水约1公斤
+6cef54db0 ||| 304 stainless steel tank with lid and bottom drain valve ||| ふた・底部排出バルブ付きSUS304タンク ||| 带盖和底部排水阀的304不锈钢桶
+f0b2c7e10 ||| From {1}{2}L ||| {1}{2}L以上 ||| {1}{2}L起
+02f6b0702 ||| Leave room for the grounds to swell ||| 粉がふくらむ余裕を残す ||| 为咖啡粉膨胀留出空间
+2e824f93c ||| Food-grade cloth or nylon mesh filter bags ||| 食品用の布またはナイロンメッシュのフィルターバッグ ||| 食品级布或尼龙网滤袋
+2f6874b51 ||| No more than 2.5 kg of grounds per bag ||| 1袋あたり粉2.5 kgまで ||| 每袋不超过2.5公斤粉
+20225d4fb ||| Filter paper or fine filter cloth, stainless steel funnel ||| ろ紙または目の細かいろ過布、ステンレスの漏斗 ||| 滤纸或细滤布，不锈钢漏斗
+c3e0fabd1 ||| Second-stage filtering ||| 2段目のろ過 ||| 第二级过滤
+b1e26c821 ||| Change the paper every batch ||| バッチごとに紙を交換 ||| 每批换纸
+70b34fce9 ||| Cold room or chiller at 0–4 °C ||| 0〜4 °Cの冷蔵室または冷蔵ショーケース ||| 0–4 °C冷库或冷藏柜
+fda9014b0 ||| Holds the tank and {1} bottles ||| タンクとボトル{1}本が入る ||| 可放下桶和{1}瓶
+c8e8bd53b ||| Keep a thermometer inside ||| 庫内に温度計を置く ||| 在库内放置温度计
+68044c7f4 ||| Thermometer, TDS refractometer ||| 温度計、TDS用屈折計 ||| 温度计、TDS折光仪
+2cd490183 ||| 1 set ||| 1式 ||| 1套
+f633209f6 ||| Record readings on the batch record ||| 数値をロット記録票に記入 ||| 将读数记入批次记录表
+b30d59948 ||| Brown glass bottles, tamper-evident caps ||| 茶色のガラスボトル、シールリング付きキャップ ||| 棕色玻璃瓶，带防盗圈瓶盖
+f2d2885ce ||| {1} sets ||| {1}セット ||| {1}套
+2432ece7d ||| 5% extra for breakage ||| 破損に備えて5%多めに ||| 多备5%以防破损
+98c6c9d05 ||| Moisture-resistant sticker labels ||| 耐湿性のステッカーラベル ||| 防潮贴纸标签
+eecacafad ||| {1} labels ||| {1}枚 ||| {1}张
+300a0effd ||| Print the production date, expiry date and batch code ||| 製造日、賞味期限、ロット番号を印刷 ||| 印上生产日期、保质期、批号
+38df1b9f3 ||| Foam boxes, gel ice ||| 発泡スチロール箱、保冷剤 ||| 泡沫箱、冰袋
+3733ca7d7 ||| Per delivery order ||| 配送注文に応じて ||| 按配送订单
+01cd51846 ||| Same-day delivery ||| 当日配送 ||| 当日配送
+921afc522 ||| Batch code: {1}   Date: {2}   Made by: __________⏎Coffee: {3}, roast date ________ (rest 3–10 days) ||| ロット番号：{1}　日付：{2}　作業者：__________⏎コーヒー：{3}、焙煎日 ________（3〜10日休ませる） ||| 批号：{1}　日期：{2}　操作人：__________⏎咖啡：{3}，烘焙日期 ________（静置3–10天）
+f1b13489d ||| BATCH RECORD · COLD BREW MEDILI COLD-STEEP BAGS⏎{1}⏎Coarse grounds: {2} kg · {3} g per bag · expected {4} bags⏎Check-weigh 10 bags (g): ___ ___ ___ ___ ___ ___ ___ ___ ___ ___⏎Nitrogen-flushed foil pouches: ______ pouches · seals: pass / fail⏎Boxing: ______ boxes × {5} bags · EXP {6}⏎Dry store: ______ °C · notes: ____________________ ||| ロット記録票 · COLD BREW MEDILI 水出しバッグ⏎{1}⏎粗挽き粉：{2} kg · 1袋{3} g · 予定 {4}袋⏎10袋の検量（g）：___ ___ ___ ___ ___ ___ ___ ___ ___ ___⏎窒素充填アルミ袋：______枚 · シール：合格 / 不合格⏎箱詰め：______箱 × {5}袋 · 賞味期限 {6}⏎常温倉庫：______ °C · メモ：____________________ ||| 批次记录表 · COLD BREW MEDILI 冷泡袋⏎{1}⏎粗粉：{2} kg · 每袋{3} g · 预计{4}袋⏎抽检10袋（g）：___ ___ ___ ___ ___ ___ ___ ___ ___ ___⏎充氮铝箔袋：______个 · 封口：合格 / 不合格⏎装盒：______盒 × {5}袋 · 保质期至 {6}⏎干燥仓库：______ °C · 备注：____________________
+2203db5c8 ||| Water added: ______ L (model {1} L) · TDS after dilution ____ % (target {2}%) ||| 加えた水：______ L（モデル {1} L） · 希釈後のTDS ____ %（目標 {2}%） ||| 加水量：______ L（模型 {1} L） · 稀释后TDS ____ %（目标 {2}%）
+8d1c58ed9 ||| BATCH RECORD · COLD BREW MEDILI {1}⏎{2}⏎Coarse grounds: {3} kg · water {4} L (1:{5}) · target {6} °C, {7} hours⏎Steeping started at: ______ · bags lifted at: ______⏎Cold room temperature: start ____ °C · midway ____ °C · at filtering ____ °C⏎Filtered concentrate: ______ L (model {8} L) · measured TDS ____ % (model {9}%){10}⏎Bottling: ______ bottles of {11} ml (model {12}) · EXP {13}⏎Keep 2 sample bottles until expiry · taste vs. reference: pass / fail⏎Notes: ____________________ ||| ロット記録票 · COLD BREW MEDILI {1}⏎{2}⏎粗挽き粉：{3} kg · 水 {4} L（1:{5}） · 目標 {6} °C、{7}時間⏎浸漬開始：______時 · バッグ引き上げ：______時⏎冷蔵室の温度：開始時 ____ °C · 途中 ____ °C · ろ過時 ____ °C⏎ろ過後の原液：______ L（モデル {8} L） · TDS実測 ____ %（モデル {9}%）{10}⏎充填：______本 × {11} ml（モデル {12}） · 賞味期限 {13}⏎サンプル2本を期限まで保管 · 基準サンプルとの比較：合格 / 不合格⏎メモ：____________________ ||| 批次记录表 · COLD BREW MEDILI {1}⏎{2}⏎粗粉：{3} kg · 水 {4} L（1:{5}） · 目标 {6} °C，{7}小时⏎开始浸泡：______时 · 提袋：______时⏎冷库温度：批次开始 ____ °C · 中途 ____ °C · 过滤时 ____ °C⏎过滤后原液：______ L（模型 {8} L） · 实测TDS ____ %（模型 {9}%）{10}⏎灌装：______瓶 × {11} ml（模型 {12}） · 保质期至 {13}⏎留存2瓶样品至保质期结束 · 与标准样品对比品尝：合格 / 不合格⏎备注：____________________
+34528b7f5 ||| Concentrate per bag ||| 1袋あたりの原液 ||| 每袋原液
+2ea0725e8 ||| 6 months ||| 6か月 ||| 6个月
+d81bb49c9 ||| Ready to drink ||| そのまま飲める量 ||| 即饮量
+451236f74 ||| Concentrate obtained ||| 得られる原液 ||| 所得原液
+74b5b1a31 ||| Concentrate TDS ||| 原液のTDS ||| 原液TDS
+73b9bebf3 ||| · not used for ||| · 対象外： ||| · 不适用于
+99c16b1bd ||| The cold-steep bag format ||| 水出しバッグの形態 ||| 冷泡袋形式
+61d240df6 ||| The concentrate and ready-to-drink bottle formats ||| 濃縮ボトルとそのまま飲めるボトルの形態 ||| 浓缩瓶装和即饮瓶装形式
+1ebb48f4e ||| Currently selected ||| 選択中 ||| 当前选择
+c6e77cb6f ||| How it's done ||| やり方 ||| 做法
+085bd3fad ||| This batch's parameters ||| このバッチのパラメータ ||| 本批次参数
+1ef7f660f ||| Cold room or chiller at 2–5 °C, as recommended. ||| 2〜5 °Cの冷蔵室または冷蔵ショーケースで、推奨どおりです。 ||| 2–5 °C冷库或冷藏柜，符合建议。
+bd91f4432 ||| A bit warm for a cold room; bring it down to 2–5 °C. ||| 冷蔵室としてはやや高めです。2〜5 °Cに下げてください。 ||| 对冷库来说略高，请降到2–5 °C。
+bb2832fa9 ||| Room temperature: only suits a café using it the same day. ||| 室温：カフェで当日中に使う場合にしか向きません。 ||| 室温：只适合咖啡馆当天使用。
+f2167f2b3 ||| Each bag is brewed with {1}{2}ml of water, a 1:8 ratio like the cold brew at the Brew Bar. ||| 1袋を水{1}{2}mlで抽出。ブリューバーのコールドブリューと同じ1:8の比率です。 ||| 每袋用{1}{2}ml水冲泡，比例1:8，与冲煮吧台的冷萃相同。
+7d0ac5ba0 ||| 10-station line, {1}, batch of {2}{3}kg roasted coffee ||| 10ステーションのライン、{1}、焙煎豆{2}{3}kgのバッチ ||| 十站生产线，{1}，每批{2}{3}kg烘焙咖啡
+6ef391d33 ||| Cold Brew MeDili {1} bottle, {2} ml, brown glass, wrap-around label ||| Cold Brew MeDili（{1}）ボトル、{2} ml、茶色のガラス、巻きラベル ||| Cold Brew MeDili {1}瓶装，{2} ml，棕色玻璃，环绕标签
+525e91e22 ||| Box of cold-steep bags, {1} bags × {2} g, two-color printed kraft paper ||| 水出しバッグの箱、{1}袋 × {2} g、2色刷りのクラフト紙 ||| 冷泡袋盒，{1}袋 × {2} g，双色印刷牛皮纸
+36a888eb4 ||| Storage ||| 保管 ||| 仓储
+5269c14c3 ||| Storage & delivery ||| 保管と配送 ||| 仓储与配送
+353fd5412 ||| bottles of ||| 本 × ||| 瓶 ×
+2ffee3115 ||| Roast City+ · {1}{2}kg ||| 焙煎 City+ · {1}{2}kg ||| 烘焙City+ · {1}{2}kg
+8e462f50a ||| {1} bottles of {2}{3}ml ||| {1}本 × {2}{3}ml ||| {1}瓶 × {2}{3}ml
+6146b42fa ||| Cold Brew MeDili bottle, {1}, {2} ml ||| Cold Brew MeDiliボトル、{1}、{2} ml ||| Cold Brew MeDili瓶装，{1}，{2} ml

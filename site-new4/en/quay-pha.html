@@ -1,0 +1,709 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="MeDili, a roaster from the Di Linh highlands. Pure coffee, pure-roasted from Cà Sẻ roots."><meta property="og:title" content="MeDili Brew Bar"><meta property="og:description" content="MeDili, a roaster from the Di Linh highlands. Pure coffee, pure-roasted from Cà Sẻ roots."><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>MeDili Brew Bar</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.inl{color:var(--moss);font-weight:600}
+.quiz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.q{border:0;padding:0;margin:0 0 14px;min-width:0}.q legend{padding:0;font-weight:600}
+.res{background:var(--tint);border-radius:14px;padding:16px}.res h3{font:800 2rem/1.1 var(--display);margin:2px 0 4px;color:var(--accent)}
+.res p{margin:6px 0}.rp{font-weight:600}.rp small{font-weight:400;color:var(--muted)}
+.tinyn{font-size:.78rem;color:var(--muted)}
+.gumap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gm{border-top:3px solid var(--copper);padding-top:8px}.gm h3{margin:0;font:800 1.3rem var(--display)}.gm small{color:var(--muted)}
+ol.steps{margin:0 0 8px;padding-left:20px}ol.steps li{margin-bottom:4px;font-size:.9rem}ol.steps li.on{font-weight:700;color:var(--accent)}
+.sop.tight li{grid-template-columns:36px minmax(0,1fr)}.sop.tight .n{font-size:1.5rem}
+.st.off{opacity:.45}
+@media (max-width:820px){.quiz{grid-template-columns:minmax(0,1fr)}}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style><style>
+/* Khung chung sau khi gộp Manus: menu nhóm, chân trang, màu phong thủy Thổ (nâu, vàng đất, đỏ; không xanh lá, không đen). */
+:root{--moss:#8D4E22;--good:#8D4E22;
+  --i-red:#B33A24;--i-red2:#7A2414;--i-gold:#D9B77E;--i-gold2:#B8894A;--i-coffee:#6B4226;--i-brown:#8D5A32;--i-milk:#E9D3AE;
+  --seg1:#9E3B26;--seg2:#B8894A;--seg3:#6B4226;--seg4:#D9B77E;--seg-t1:#FFF6EC;--seg-t2:#2E1C12;--cmp2:#C9A46A;
+  --cx1:#BB8526;--cx2:#7A348E;--cx3:#83470D;--cx4:#CB4D54}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--panel)}
+.mnav{display:none!important}
+
+/* menu */
+.mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
+.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p a:hover{color:var(--accent)}
+.mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-m{margin:0;font-size:inherit}
+.mh-m>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font:600 .86rem var(--body);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;white-space:nowrap;user-select:none}
+.mh-m>summary::-webkit-details-marker{display:none}
+.mh-m>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mh-m[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-m>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-pan{position:absolute;left:0;right:0;top:100%;background:var(--panel);border-bottom:1px solid var(--rule);box-shadow:0 18px 30px rgba(46,28,18,.16);max-height:calc(100vh - 60px - env(safe-area-inset-top,0px));overflow:auto;overscroll-behavior:contain}
+.mh-grid{max-width:1560px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 26px;padding-block:18px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-g{margin:0 0 6px;font:600 .72rem/1.3 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mh-c ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-c a{display:block;color:var(--ink);text-decoration:none;font:500 .95rem/1.35 var(--body);padding:6px 0;border-bottom:1px solid transparent}
+.mh-c a:hover{color:var(--accent)}
+.mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
+.mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
+.mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.mh-i{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none}
+.mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
+@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+@media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
+
+/* chân trang */
+.mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
+.mf-in{max-width:1560px;margin:auto;padding-block:30px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:26px}
+.mf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border-bottom:1px solid var(--rule);padding-bottom:24px}
+.mf-k{flex-basis:100%;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mf-h{margin:0;font:italic 600 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sign);color:var(--ink);text-wrap:balance}
+.mf-h em{color:var(--accent)}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:22px 30px}
+.mf-brand b{display:block;font:italic 600 1.35rem/1.25 var(--sign);color:var(--accent)}
+.mf-brand span{display:block;margin-top:6px}.mf-brand small{display:block;margin-top:6px;color:var(--muted);letter-spacing:.06em}
+.mf-t{margin:0 0 6px;font:600 .72rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mf-col{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mf-col a{color:var(--ink);text-decoration:none;padding:2px 0}.mf-col a:hover{color:var(--accent);text-decoration:underline}
+.mf-col p{margin:0 0 6px}.mf-n{white-space:nowrap;user-select:all}
+.mf-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:.84rem}
+.mf-base i{font:italic 600 1rem var(--sign);color:var(--accent)}
+@media (max-width:980px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-brand{grid-column:1/-1}}
+@media (max-width:520px){.mf-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ảnh thật */
+.pf{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.pf img{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;border:1px solid var(--rule);background:var(--tint)}
+.pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.pfw img{aspect-ratio:3/1;object-fit:cover}
+.split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
+@media (max-width:700px){.pfw img{aspect-ratio:2/1}}
+.pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
+.pgal{display:grid;gap:10px}
+.pgal>h2{margin:0}
+.pgal>p{margin:0;color:var(--muted);max-width:72ch}
+
+/* chọn ngôn ngữ */
+.mh-l{position:relative;margin:0}
+.mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
+.mh-l>summary::-webkit-details-marker{display:none}
+.mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
+.mh-lp a:hover{background:var(--tint);color:var(--accent)}
+.mh-lp a[aria-current]{color:var(--accent)}
+@media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
+/* nút Zalo, Facebook nổi góc trái bên dưới */
+.fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
+.fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
+.fl-b svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fl-b:hover{transform:translateY(-2px) scale(1.05)}
+.fl-b:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.fl-b::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;background:var(--ink);color:var(--panel);font:600 .8rem var(--body);letter-spacing:0;padding:6px 11px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{opacity:1;transform:translate(0,-50%)}}
+@media (max-width:600px){.fl-c{gap:8px}.fl-b{width:46px;height:46px;font-size:.6rem}.fl-b svg{width:17px;height:17px}}
+@media (max-width:1020px){body:has(.nx-bar) .fl-c{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+/* chừa chỗ cho nút nổi ở cuối chân trang */
+@media (min-width:601px){.mf-base{padding-left:76px}}
+@media (max-width:600px){footer.mf{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}}
+@media print{.fl-c{display:none}}
+</style><link rel="alternate" hreflang="vi" href="https://www.medili.vn/quay-pha.html"><link rel="alternate" hreflang="en" href="https://www.medili.vn/en/quay-pha.html"><link rel="alternate" hreflang="ja" href="https://www.medili.vn/ja/quay-pha.html"><link rel="alternate" hreflang="zh-Hans" href="https://www.medili.vn/zh/quay-pha.html"><link rel="alternate" hreflang="x-default" href="https://www.medili.vn/quay-pha.html"></head><body><div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a><nav class="mh-p" aria-label="Main sections"><a href="cau-chuyen.html">Story</a><a href="vung-trong.html">Growing Area</a><a href="anh-vuon.html">Farm Photos</a><a href="xuong-rang.html">Roastery</a><a href="horeca.html">HORECA</a><a href="quan-medili.html">MeDili Café</a><a href="journal.html">Knowledge</a><a href="gia-ca-phe.html">Coffee Prices</a></nav><details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></summary><nav class="mh-pan" aria-label="All pages"><div class="mh-grid"><div class="mh-c"><p class="mh-g">MeDili</p><ul><li><a href="./">Home</a></li><li><a href="cau-chuyen.html">The MeDili Story</a></li><li><a href="doi-ngu.html">Team</a></li><li><a href="quan-medili.html">MeDili Café</a></li><li><a href="lien-he.html">Contact</a></li></ul></div><div class="mh-c"><p class="mh-g">Growing & Production</p><ul><li><a href="vung-trong.html">Di Linh Growing Area</a></li><li><a href="anh-vuon.html">Farm Photos</a></li><li><a href="vuon.html">The Farm in 12 Months</a></li><li><a href="trai-ca-phe.html">Cherry Anatomy</a></li><li><a href="len-men-men-bia.html">Fermentation with Brewer's Yeast</a></li><li><a href="len-men-trai-cay.html">Co-fermentation with Fruit</a></li></ul></div><div class="mh-c"><p class="mh-g">Roasting & Brewing</p><ul><li><a href="xuong-rang.html">Roastery & Capacity</a></li><li><a href="rang.html">Roasting Room</a></li><li><a href="huong-dan-pha.html">Brewing Guide</a></li><li><a href="quay-pha.html" aria-current="page">Brew Bar</a></li><li><a href="cong-thuc-pha.html">Brew Recipe Machine</a></li><li><a href="cold-brew.html">Cold Brew Machine</a></li><li><a href="tim-gu.html">Find Your Coffee Taste</a></li></ul></div><div class="mh-c"><p class="mh-g">Buy & Partner</p><ul><li><a href="cua-hang.html">Coffee Store</a></li><li><a href="mua-hang.html">Buying Room</a></li><li><a href="horeca.html">HORECA Solutions</a></li><li><a href="dong-hanh-cung-quan.html">Partnering with Cafés</a></li><li><a href="nhan-xanh.html">Choose Green Coffee · Wholesale</a></li><li><a href="gia-ca-phe.html">Coffee Prices Today</a></li><li><a href="chinh-sach.html">MeDili Policies</a></li><li><a href="giao-hang.html">Delivery & Returns</a></li><li><a href="gio-hang.html">Cart</a></li><li><a href="tim-kiem.html">Search</a></li></ul></div><div class="mh-c"><p class="mh-g">Coffee Knowledge</p><ul><li><a href="journal.html">All articles</a></li><li><a href="chiet-xuat.html">Extraction Machine</a></li><li><a href="phan-biet-ca-phe.html">Coffee Identification Machine</a></li><li><a href="trai-chin.html">Ripe Cherry Machine</a></li><li><a href="vi-sinh.html">Microbe Machine</a></li><li><a href="tien-chat-huong.html">Aroma Precursor Machine</a></li><li><a href="banh-xe-huong.html">MeDili Flavor Wheel</a></li><li><a href="journal-phin.html">The Phin and the Falling Rhythm of Time</a></li><li><a href="journal-tu-qua.html">From Coffee Cherry to Flavor</a></li><li><a href="journal-di-linh.html">Di Linh in a Cup of Coffee</a></li><li><a href="tu-vuon-den-ly.html">From Farm to Cup</a></li><li><a href="suc-khoe.html">Coffee and the Body</a></li></ul></div></div></nav></details><details class="mh-l"><summary aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.3 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.3-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>EN</span></summary><div class="mh-lp"><a href="../quay-pha.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="quay-pha.html" hreflang="en" lang="en" aria-current="true">English</a><a href="../ja/quay-pha.html" hreflang="ja" lang="ja">日本語</a><a href="../zh/quay-pha.html" hreflang="zh-Hans" lang="zh-Hans">中文</a></div></details><a class="mh-i" href="tim-kiem.html" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a><a class="mh-i" href="gio-hang.html" aria-label="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="mh-cn" hidden></span></a><a class="mh-go" href="cua-hang.html">Shop</a></div></div>
+
+<div class="wrap">
+<header>
+  <span class="lgw"><img class="lgL" src="../assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div class="brandbar"><span>Devoted to the taste of Di Linh</span><span>Zalo <a href="#lien-he">0966770788</a></span></div>
+  <h1>The <em>MeDili</em> Brew Bar</h1>
+  <p>How to brew with a machine, phin, filter and cold brew, plus milk drinks, with amounts for every cup. Not sure what to drink? <a href="#gu" class="inl">Find your taste</a>, then watch how it's made right on the bar.</p>
+</header>
+
+<div class="bench">
+  <div class="card">
+    <div class="fighead">
+      <div><b>Figure 1</b> <span id="figsub"></span></div>
+      <button class="btn small" id="snd" aria-pressed="false">Bar sounds: off</button>
+    </div>
+    <div class="scroller"><svg id="scene" viewBox="0 0 1040 690" aria-label="The MeDili brew bar with a grinder, espresso machine, phin, filter, press, cold brew, iced milk station and serving tray. Tap each station for details."></svg></div>
+    <div class="strip" id="strip" role="group" aria-label="Brewing steps"></div>
+    <div id="detail" aria-live="polite"></div>
+  </div>
+
+  <aside class="card ctl">
+    <div class="head2"><h3>Choose a drink</h3><small id="count"></small></div>
+    <div class="row" id="groups"></div>
+    <div class="row" id="drinks"></div>
+    <hr>
+    <div class="sl" style="margin-top:0"><label for="N">Cups <output id="oN"></output></label><input id="N" type="range" min="1" max="30" step="1"></div>
+    <div class="head2" style="margin-top:12px"><h3>Strength</h3></div><div class="row" id="str"></div>
+    <div id="sweetBox"><div class="head2" style="margin-top:12px"><h3>Sweetness</h3></div><div class="row" id="swt"></div></div>
+    <div class="row" style="margin-top:14px"><button class="btn main" id="run">Try a brew</button><button class="btn" id="reset">About the standard recipes</button></div>
+    <hr>
+    <span class="lbl" id="needLbl"></span>
+    <div class="stats" id="stats"></div>
+    <dl class="kv" id="spec" style="margin-top:10px"></dl>
+    <div id="verdict"></div>
+    <hr>
+    <span class="lbl">Predicted flavor profile, 0–100</span>
+    <div class="bars" id="bars"></div>
+  </aside>
+</div>
+
+<section class="card" id="gu">
+  <h2>Find your coffee taste</h2>
+  <p class="lead">Answer 5 questions. MeDili will suggest the cup that suits you, the coffee and how to brew it. The choices below are examples; pick your own.</p>
+  <div class="quiz"><div id="qs"></div><div id="result" aria-live="polite"></div></div>
+</section>
+
+<section class="card">
+  <h2>Menu by taste</h2>
+  <p class="lead">Tap a drink to see how it's made on the bar.</p>
+  <div class="gumap" id="gumap"></div>
+</section>
+
+<section class="card">
+  <h2>Amounts for 1 cup</h2>
+  <p class="lead">Weighing in grams is more accurate than measuring with spoons. Condensed milk and cream are medium amounts; adjust to taste.</p>
+  <div class="tw"><table class="rich"><thead><tr><th>Drink</th><th>Coffee</th><th>Water</th><th>Milk, cream</th><th>Ice</th><th>Time</th><th>Cups / 250 g pack</th></tr></thead><tbody id="dose"></tbody></table></div>
+</section>
+
+<div class="cols">
+  <section class="card">
+    <h2>General rules at the bar</h2>
+    <ol class="sop tight" id="rules"></ol>
+  </section>
+  <section class="card">
+    <h2>Adjust the cup by taste</h2>
+    <div class="tw"><table class="rich"><thead><tr><th>How it tastes</th><th>Cause</th><th>Fix</th></tr></thead><tbody id="fix"></tbody></table></div>
+    <hr>
+    <h3 style="margin:0 0 6px">Brew sheet</h3>
+    <div id="sheet"></div>
+    <button class="btn main" id="copy">Copy recipe</button> <span id="copied" role="status" class="src"></span>
+  </section>
+</div>
+
+<section class="card src"><p style="margin:0;font-size:.88rem;color:var(--muted);max-width:110ch"><b style="color:var(--ink)">Compiled from multiple sources.</b> The recipes are starting points compiled from brewing references. Figures such as the condensed milk, ice and cream per cup, and the drip bag, moka and AeroPress recipes, are suggestions to try and then adjust to taste. The bar illustration is a model.</p></section>
+
+<section class="contact" id="lien-he">
+  <div>
+    <img class="lgK" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83">
+    <div class="tagline">Devoted to the taste of Di Linh</div>
+    <p>The Di Linh-origin coffee brand of MeDili Coffee Farm. Message us on Zalo and MeDili will help you find your taste and the right way to brew.</p>
+  </div>
+  <div class="zalo">
+    <span>Zalo MeDili</span> <strong id="zaloNo">0966 770 788</strong>
+    <div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Message on Zalo</a><button type="button" id="copyZalo">Copy number</button></div>
+    <small id="zaloMsg" role="status"></small>
+  </div>
+</section>
+</div>
+
+<script>
+/* ====== DỮ LIỆU ====== */
+const C={esp:'#3A2416',cre:'#B98B58',mi:'#F1E5CE',fo:'#FBF5E9',co:'#E9D7A3',bk:'#5A3520',am:'#7A4D2A',ice:'#CFE6EA',wa:'#C8DDE0',ch:'#4A2A1A',cr:'#FFF3D6',lt:'#B98B58'};
+const PR={
+ phin:{n:'Phin Robusta Classic',c:'Robusta Di Linh, Tân Nghĩa',l:'Dark Roast'},
+ sua:{n:'Phin Robusta Classic',c:'Robusta Di Linh, Tân Nghĩa',l:'Dark Roast'},
+ fine:{n:'Espresso Robusta Premium',c:'Robusta Di Linh',l:'Medium Roast'},
+ esp:{n:'Espresso Blend Robusta – Arabica Premium 7:3',c:'Arabica and Robusta blended 7:3',l:'medium-dark'},
+ arab:{n:'Espresso Arabica Premium',c:'Arabica Cầu Đất',l:'Medium Roast'},
+ cold:{n:'Phin Robusta Premium',c:'Robusta, honey & washed',l:'medium'},
+ drip:{n:'Phin Robusta Premium',c:'Robusta, honey & washed, pre-ground',l:'medium'}
+};
+const G={may:'Espresso machine',phin:'Phin',loc:'Hand filter',lanh:'Cold'};
+const shot=(extra,tail)=>r=>[[1,`Weigh ${vn0(r.c)} g and grind fine.`,20],[2,`Distribute evenly, tamp level, lock in the portafilter.`,20],[2,`Extract for 25–30 seconds to get ${Math.round(r.c*2)} g of espresso.`,28],...extra(r)];
+const phinB=(tail,w1=30,w2=50)=>r=>[[1,`Weigh ${vn0(r.c)} g and grind medium-coarse.`,20],[3,'Rinse the phin and cup with boiling water.',30],[3,`Add the coffee to the phin, shake it level and set the press lid on lightly.`,20],[3,`Pour ${w1} ml of water at 90–96 °C and bloom for 2–3 minutes.`,160],[3,`Pour another ${w2} ml and let it drip for 3–5 minutes.`,240],...tail(r)];
+const D={
+ espresso:{n:'Espresso',g:'may',p:'esp',c:18,w:0,yield:36,grind:'Fine',temp:'90–92 °C',time:'25–30 seconds',ratio:'1:2',bar:1,rt:[1,2,8],lay:[['Espresso',30,C.esp],['Crema',8,C.cre]],steps:shot(r=>[[8,'Serve right away while the crema is still there.',10]]),fl:[85,25,70,45,20],tag:['dam','den','sang','may','quen']},
+ americano:{n:'Americano',g:'may',p:'esp',c:18,w:120,yield:36,grind:'Fine',temp:'90–92 °C',time:'1 minute',ratio:'1:2 + water',rt:[1,2,8],lay:[['Hot water',120,C.am],['Espresso',45,C.bk],['Crema',6,C.cre]],steps:shot(r=>[[2,`Pour ${r.w} ml of hot water into the cup and add the espresso on top.`,15],[8,'Serve right away.',5]]),fl:[55,20,40,30,25],tag:['can','den','sang','may','quen']},
+ cappuccino:{n:'Cappuccino',g:'may',p:'esp',c:18,w:0,milk:120,yield:36,grind:'Fine',temp:'Milk 60–65 °C',time:'2 minutes',ratio:'1:1:1',rt:[1,2,7,8],lay:[['Espresso',60,C.esp],['Hot milk',60,C.mi],['Milk foam',60,C.fo]],steps:shot(r=>[[7,`Steam ${r.milk} ml of fresh milk to 60–65 °C with plenty of foam.`,50],[2,'Pour the milk and top the espresso with the foam.',20],[8,'Serve right away.',5]]),fl:[40,55,70,20,25],tag:['can','tuoi','sang','may','quen']},
+ latte:{n:'Latte',g:'may',p:'esp',c:18,w:0,milk:240,yield:36,grind:'Fine',temp:'Milk 60–65 °C',time:'2 minutes',ratio:'1:4',rt:[1,2,7,8],lay:[['Espresso',60,C.esp],['Hot milk',230,C.mi],['Thin foam',15,C.fo]],steps:shot(r=>[[7,`Steam ${r.milk} ml of fresh milk to 60–65 °C with a thin, fine foam.`,50],[2,'Pour the milk steadily into the center of the cup.',20],[8,'Serve right away.',5]]),fl:[25,60,55,10,25],tag:['thanh','tuoi','chieu','may','quen']},
+ flat:{n:'Flat White',g:'may',p:'esp',c:18,w:0,milk:120,yield:36,grind:'Fine',temp:'Milk 60–65 °C',time:'2 minutes',ratio:'1:2',rt:[1,2,7,8],lay:[['Espresso',60,C.esp],['Hot milk',115,C.mi],['Very thin foam',8,C.fo]],steps:shot(r=>[[7,`Steam ${r.milk} ml of fresh milk to 60–65 °C with a very fine foam.`,45],[2,'Pour the milk into the espresso, keeping a thin layer of foam.',20],[8,'Serve right away.',5]]),fl:[50,50,65,20,30],tag:['can','tuoi','sang','may','kham']},
+ mocha:{n:'Mocha',g:'may',p:'esp',c:18,w:0,milk:180,choc:20,sweet:'choc',yield:36,grind:'Fine',temp:'Milk 60–65 °C',time:'3 minutes',ratio:'1:3 + chocolate',rt:[1,2,7,8],lay:[['Chocolate',20,C.ch],['Espresso',60,C.esp],['Hot milk',170,C.mi],['Thin foam',15,C.fo]],steps:shot(r=>[[2,`Stir ${r.choc} ml of chocolate sauce into the espresso.`,15],[7,`Steam ${r.milk} ml of fresh milk to 60–65 °C.`,50],[2,'Pour the milk into the cup.',15],[8,'Serve right away.',5]]),fl:[40,75,70,15,15],tag:['ngot','tuoi','chieu','may','kham']},
+ den:{n:'Black phin',g:'phin',p:'phin',c:25,w:80,grind:'Medium-coarse',temp:'90–96 °C',time:'6–8 minutes',ratio:'1:3.2',rt:[1,3,8],lay:[['Phin coffee',65,C.esp]],steps:phinB(r=>[[8,'Add ice or sugar if you like.',10]]),fl:[85,30,90,30,30],tag:['dam','den','sang','phin','quen']},
+ sua:{n:'Hot milk coffee',g:'phin',p:'phin',c:25,w:80,cond:25,sweet:'cond',grind:'Medium-coarse',temp:'90–96 °C',time:'6–8 minutes',ratio:'1:3.2',rt:[1,3,8],lay:[['Condensed milk',22,C.co],['Phin coffee',65,C.esp]],steps:phinB(r=>[[3,`Put ${vn0(r.cond)} ml of condensed milk in the cup before setting the phin on it.`,10],[8,'Stir well and enjoy.',10]]),fl:[60,75,90,25,20],tag:['dam','ngot','sang','phin','quen']},
+ suada:{n:'Iced milk coffee',g:'phin',p:'sua',c:25,w:80,cond:30,ice:120,sweet:'cond',grind:'Medium-coarse',temp:'90–96 °C',time:'7–9 minutes',ratio:'1:3.2',rt:[1,3,7,8],lay:[['Condensed milk',28,C.co],['Phin coffee',65,C.esp],['Ice',110,C.ice]],steps:phinB(r=>[[7,`Stir with ${vn0(r.cond)} ml of condensed milk and pour into a glass with ${vn0(r.ice)} g of ice.`,20],[8,'Serve right away.',5]]),fl:[55,80,80,30,20],tag:['dam','ngot','nong','phin','quen']},
+ bacxiu:{n:'Iced bạc xỉu',g:'phin',p:'sua',c:20,w:60,cond:40,milk:80,ice:120,sweet:'cond',grind:'Medium-coarse',temp:'90–96 °C',time:'7–9 minutes',ratio:'Milk-heavy',rt:[1,3,7,8],lay:[['Condensed milk',38,C.co],['Fresh milk',78,C.mi],['Phin coffee',48,C.bk],['Ice',100,C.ice]],steps:phinB(r=>[[7,`Put ${vn0(r.cond)} ml of condensed milk and ${r.milk} ml of fresh milk in the glass and stir well.`,20],[7,`Add ${vn0(r.ice)} g of ice.`,8],[8,'Pour the coffee on top and stir when you drink.',8]],20,40),fl:[30,90,55,15,15],tag:['thanh','ngot','chieu','phin','quen']},
+ muoi:{n:'Salt coffee',g:'phin',p:'phin',c:25,w:95,cond:25,cream:40,ice:80,sweet:'cond',grind:'Medium-coarse',temp:'90–96 °C',time:'8–10 minutes',ratio:'Salted cream',rt:[1,3,7,8],lay:[['Condensed milk',22,C.co],['Phin coffee',75,C.esp],['Ice',60,C.ice],['Salted cream',40,C.cr]],steps:phinB(r=>[[7,'Whip the cream with salt at 200 ml of cream to 5 g of salt for 2–3 minutes.',150],[7,`Stir the coffee with ${vn0(r.cond)} ml of condensed milk and add ice.`,20],[8,`Top the glass with ${r.cream} ml of salted cream.`,10]],45,50),fl:[50,85,85,20,20],tag:['dam','ngot','chieu','phin','kham']},
+ pour:{n:'Pour-over',g:'loc',p:'arab',c:15,w:240,grind:'Medium-fine',temp:'90–96 °C',time:'2:30–4:00',ratio:'1:16',rt:[1,4,8],lay:[['Filter coffee',200,C.lt]],steps:r=>[[1,`Weigh ${vn0(r.c)} g and grind medium-fine.`,20],[4,'Rinse the paper filter with hot water and discard the rinse water.',20],[4,`Pour ${vn0(r.c*2)} ml to bloom for 30–45 seconds.`,40],[4,`Pour slowly in circles up to ${r.w} ml.`,130],[8,'Lift off the dripper, swirl the server gently and pour into the cup.',15]],fl:[35,30,35,85,95],tag:['thanh','den','toi','loc','kham']},
+ french:{n:'French Press',g:'loc',p:'phin',c:20,w:300,grind:'Coarse',temp:'90–96 °C',time:'4–5 minutes',ratio:'1:15',rt:[1,5,8],lay:[['Press coffee',260,C.am]],steps:r=>[[1,`Weigh ${vn0(r.c)} g and grind coarse.`,20],[5,`Pour ${r.w} ml of hot water and stir gently.`,20],[5,'Put the lid on and steep for 4 minutes.',240],[5,'Press the plunger slowly to the bottom.',20],[8,'Pour it all into the cup right away.',10]],fl:[55,40,75,45,60],tag:['can','den','sang','loc','quen']},
+ aero:{n:'AeroPress',g:'loc',p:'fine',c:15,w:200,grind:'Medium-fine',temp:'90–96 °C',time:'2 minutes',ratio:'1:13',rt:[1,5,8],lay:[['Press coffee',180,C.lt]],steps:r=>[[1,`Weigh ${vn0(r.c)} g and grind medium-fine.`,20],[5,`Pour ${r.w} ml of hot water and stir for 10 seconds.`,20],[5,'Steep for 1 minute.',60],[5,'Press gently for 30 seconds.',30],[8,'Add water if you prefer it lighter.',5]],fl:[40,40,50,70,80],tag:['thanh','den','chieu','loc','kham']},
+ moka:{n:'Moka pot',g:'loc',p:'phin',c:18,w:120,grind:'Medium-fine',temp:'Pre-heated water',time:'5 minutes',ratio:'Full basket',rt:[1,5,8],lay:[['Moka coffee',100,C.bk]],steps:r=>[[1,`Weigh ${vn0(r.c)} g and grind medium-fine, not as fine as espresso.`,20],[5,'Fill water below the safety valve, fill the basket with coffee and don\'t tamp.',30],[5,'Screw it tight and set it on low heat.',20],[5,'Turn off the heat when the coffee starts to sputter.',200],[8,'Pour into the cup right away.',5]],fl:[75,30,75,30,30],tag:['dam','den','sang','loc','quen']},
+ dripb:{n:'Drip bag',g:'loc',p:'drip',c:12,w:180,grind:'Pre-ground',temp:'90–96 °C',time:'3 minutes',ratio:'1:15',rt:[4,8],lay:[['Filter coffee',165,C.lt]],steps:r=>[[4,'Tear open the bag and hang it on the rim of the cup.',10],[4,'Pour 30 ml to bloom for 30 seconds.',35],[4,`Pour slowly up to ${r.w} ml.`,110],[8,'Lift out the bag and drink right away.',5]],fl:[40,35,40,70,80],tag:['thanh','den','chieu','quan','kham']},
+ cold:{n:'Cold brew',g:'lanh',p:'cold',c:17,w:235,ice:100,grind:'Coarse',temp:'Refrigerator',time:'18–24 hours',ratio:'1:8, diluted 1:1',rt:[1,6,7,8],lay:[['Cold brew',170,C.bk],['Ice',100,C.ice]],steps:r=>[[1,`Weigh ${vn0(r.c)} g and grind coarse.`,20],[6,`Mix with ${Math.round(r.c*8)} ml of clean water in a sealed jar.`,20],[6,'Steep for 18–24 hours in the refrigerator.',72000],[6,'Strain out the grounds, keep it cold and use within 7 days.',60],[7,`Mix 100 ml of concentrate with 100 ml of water and add ${vn0(r.ice)} g of ice.`,20],[8,'Serve right away.',5]],fl:[20,50,55,30,50],tag:['can','den','nong','quan','quen']},
+ colddrip:{n:'Cold drip',g:'lanh',p:'fine',c:12,w:132,ice:60,grind:'Medium-fine',temp:'Ice-cold water',time:'4–6 hours',ratio:'1:10',rt:[1,6,7,8],lay:[['Cold drip',120,C.lt],['Ice',60,C.ice]],steps:r=>[[1,`Weigh ${vn0(r.c)} g and grind medium-fine.`,20],[6,`Wet the grounds with ${vn0(r.c)} ml of water and rest for 10–15 minutes.`,800],[6,'Set the valve to 1 drop per second and drip for 4–6 hours.',18000],[6,'Bottle it and chill for 12–24 hours.',54000],[8,'Pour over ice and use within 2 weeks.',10]],fl:[25,50,40,65,80],tag:['thanh','den','nong','quan','kham']}
+};
+const ids=Object.keys(D);
+const QS=[
+ ['q1','How do you like your coffee?',[['dam','Strong, aromatic bitterness'],['can','Balanced, easy to drink'],['thanh','Clean, lightly aromatic']]],
+ ['q2','What do you drink it with?',[['den','Black'],['ngot','Condensed milk, sweet and rich'],['tuoi','Fresh milk, gentle']]],
+ ['q3','When do you usually drink it?',[['sang','Morning, need to wake up'],['chieu','Afternoon, to relax'],['nong','Hot weather, want something cool'],['toi','Evening, worried about staying up late']]],
+ ['q4','What equipment do you have?',[['phin','Phin'],['may','Espresso machine'],['loc','Dripper, press'],['quan','None yet, I drink at cafés']]],
+ ['q5','Do you prefer familiar or new?',[['quen','Familiar taste'],['kham','Try something new']]]
+];
+const WHY={dam:'you like a bold taste',can:'you like a balanced taste',thanh:'you like a light, clean taste',den:'you drink it black',ngot:'it goes with condensed milk',tuoi:'it goes with fresh milk',sang:'it suits the morning',chieu:'it suits the afternoon',nong:'it\'s cooling in hot weather',toi:'it\'s gentle, best in a small cup',phin:'it can be made with a phin',may:'it\'s made with a machine',loc:'it\'s made with a filter dripper',quan:'it\'s easy to order at a café',quen:'it\'s a familiar taste',kham:'it\'s a change from the usual'};
+const RULES=[
+ ['Scale','Use a 0.1 g scale for coffee and water.'],
+ ['Water','Clean, odorless filtered water. Hot water at 90–96 °C.'],
+ ['Grind','Grind right before brewing. Each method has its own grind size.'],
+ ['Preheat','Rinse cups, phins and drippers with hot water before brewing.'],
+ ['Cleaning','Flush the machine before and after every cup and wipe the steam wand right away.'],
+ ['Storing coffee','Sealed bag with a valve, kept cool. Use within a few weeks of opening.'],
+ ['Cold drinks','Keep cold brew in the refrigerator, labeled with the brew date.']
+];
+const FIX=[
+ ['Sour, weak','Underextraction: grind too coarse, water too cool, brewed too fast','Grind finer, use hotter water, extend the time'],
+ ['Bitter, astringent','Overextraction: grind too fine, steeped too long','Grind coarser, shorten the time'],
+ ['Phin won\'t drip','Ground too fine or pressed too tight','Grind coarser, set the press lid lightly'],
+ ['Phin drips fast, weak','Ground coarse, too little coffee','More coffee, moderate pressing'],
+ ['Espresso without crema','Beans too old, not enough pressure','Use fresh beans, check the machine'],
+ ['Big bubbles, off smell','Milk too hot, wand in the wrong position','Stop at 60–65 °C, keep the wand just below the surface']
+];
+const vn=(n,d=1)=>n.toFixed(d);
+const vn0=n=>{const r=Math.round(n*2)/2;return r%1?vn(r):String(r)};
+const fm=n=>Math.round(n).toLocaleString('en-US');
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const $=id=>document.getElementById(id);
+const fmtT=s=>s>=3600?`${vn(s/3600)} h`:s>=60?`${Math.floor(s/60)}:${String(Math.round(s%60)).padStart(2,'0')}`:`${Math.round(s)} s`;
+const SK={strength:1,sweet:1};
+const st={d:'suada',group:'phin',n:1,strength:1,sweet:1,step:0,fill:1,sound:false,sel:3};
+const STN=['Grinder and scale','Espresso machine','Phin','Dripper','Press, moka pot','Cold brew, cold drip','Milk, ice, cream','Serving tray'];
+function rec(id){
+  const d=D[id],q=st.strength,s=st.sweet,r={...d};
+  r.c=d.c*q;
+  if(d.cond)r.cond=d.cond*s;if(d.choc)r.choc=d.choc*s;
+  return r;
+}
+function steps(id){return D[id].steps(rec(id))}
+
+/* ====== HÌNH HỌC ====== */
+const U=8.4,OX=232,OY=92;
+const P=(x,y,z=0)=>[OX+(x-y)*.866*U,OY+(x+y)*.5*U-z*U];
+const pts=a=>a.map(q=>q.map(n=>n.toFixed(1)).join(',')).join(' ');
+const poly=(a,c='')=>`<polygon points="${pts(a)}" class="${c}"/>`;
+const line=(a,w,col)=>`<polyline points="${pts(a)}" fill="none" style="${w?`stroke-width:${w};`:''}${col?`stroke:var(--${col})`:''}"/>`;
+function box(x,y,z,w,d,h,c=['f1','f2','f3']){return poly([P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[1])+poly([P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)],c[2])+poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[0])}
+const RX=r=>r*U*1.2247,RY=r=>r*U*.7071;
+function cyl(cx,cy,z,r,h,c='f2',top='f1'){const [a,b]=P(cx,cy,z),[,t]=P(cx,cy,z+h),rx=RX(r),ry=RY(r);return `<path class="${c}" d="M${a-rx} ${t}V${b}A${rx} ${ry} 0 0 0 ${a+rx} ${b}V${t}Z"/><ellipse class="${top}" cx="${a}" cy="${t}" rx="${rx}" ry="${ry}"/>`}
+const stG=(i,inner)=>`<g class="st m" data-i="${i}" tabindex="0" role="button" aria-label="Station ${i}: ${STN[i-1]}">${inner}</g>`;
+const drip=(id,x,y,z)=>{const q=P(x,y,z);return `<circle id="${id}" cx="${q[0]}" cy="${q[1]}" r="2.6" style="fill:#3A2416;stroke:none" data-y="${q[1]}"/>`};
+function buildScene(){
+  let h='<g class="m">';
+  [[3,23],[97,23],[97,3]].forEach(([x,y])=>h+=cyl(x,y,-7,1.3,3,'dk3','dk2'));
+  h+=box(0,0,-4,100,27,4,['wo','wo2','dk3'])+'</g>';
+  /* 1 cối xay */
+  h+=stG(1,box(4,6,0,8,7,1,['f3','f3','f3'])+box(5,6.5,1,6,5,9,['dk2','dk3','dk3'])
+   +poly([P(5.5,7,10),P(10.5,7,10),P(11.5,6,14),P(4.5,6,14)],'wa')+poly([P(4.5,12,14),P(11.5,12,14),P(10.5,11.5,10),P(5.5,11.5,10)],'wa')+poly([P(4.5,6,14),P(11.5,6,14),P(11.5,12,14),P(4.5,12,14)],'cu')
+   +box(7,11.5,3,2,2,1.5)+box(5.5,13.5,0,5,4,.7,['f1','f2','f3'])+`<rect x="${P(8,17.5,.3)[0]-16}" y="${P(8,17.5,.3)[1]-5}" width="32" height="13" rx="2" style="fill:#1E1411"/><text id="scale" x="${P(8,17.5,.3)[0]}" y="${P(8,17.5,.3)[1]+5}" text-anchor="middle" style="font:700 10px var(--mono);fill:#8FE3B0"></text>`);
+  /* 2 máy espresso */
+  h+=stG(2,box(15,4,0,19,12,1.6,['f3','f3','f3'])+box(15,4,1.6,19,4,10)+box(15,4,11.6,19,12,3.4,['f1','f2','f3'])+box(16.5,8,1.6,16,8,.6,['dk2','dk3','dk3'])
+   +cyl(20,12,9.5,1.8,2.1,'f2','f1')+cyl(29,12,9.5,1.8,2.1,'f2','f1')+box(19,12,8.4,2,2,1.1,['dk2','dk3','dk3'])+line([P(20,13.5,8.8),P(20,18,8)],5,'ink')
+   +cyl(20,12,2.2,1.6,3.2,'pa','ac')+drip('d2',20,12,8)
+   +cyl(18,6,15,1.3,1.2,'pa','f1')+cyl(23,6,15,1.3,1.2,'pa','f1')+cyl(28,6,15,1.3,1.2,'pa','f1')
+   +`<circle cx="${P(24.5,16,13.2)[0]}" cy="${P(24.5,16,13.2)[1]}" r="9" class="pa"/><line x1="${P(24.5,16,13.2)[0]}" y1="${P(24.5,16,13.2)[1]}" x2="${P(24.5,16,13.2)[0]+6}" y2="${P(24.5,16,13.2)[1]-4}" style="stroke:var(--accent);stroke-width:2"/>`
+   +line([P(33,12,10),P(35,14,5.5)],3,'s3'));
+  /* 3 phin */
+  h+=stG(3,cyl(40,12,0,2.6,6,'pa','f1')+`<g id="ph"></g>`+cyl(40,12,6,3.2,.4,'f1','f2')+cyl(40,12,6.4,2.6,3,'f2','f1')+cyl(40,12,9.4,2.7,.4,'f1','f2')+drip('d3',40,12,6)
+   +cyl(40,5,0,2.4,4.6,'cu','cu2')+line([P(42,5,3),P(44,5,5.4)],4,'copper2'));
+  /* 4 lọc */
+  const cn=(x,y,z)=>poly([P(x-1,y+1,z),P(x+1,y+1,z),P(x+3,y+1,z+4),P(x-3,y+1,z+4)],'pa')+`<ellipse cx="${P(x,y,z+4)[0]}" cy="${P(x,y,z+4)[1]}" rx="${RX(2.6)}" ry="${RY(2.6)}" class="f2"/>`;
+  h+=stG(4,cyl(52,12,0,2.6,5.4,'wa','f1')+cn(52,12,5.6)+drip('d4',52,12,5)+cyl(52,5,0,2.2,5.6,'f2','f1')+line([P(54,5,3.6),P(56.4,5.4,7),P(54.4,8,9)],3,'s3'));
+  /* 5 bình ép */
+  h+=stG(5,cyl(62,12,0,2.4,8,'wa','f3')+line([P(62,12,8),P(62,12,11)],3,'ink')+cyl(62,12,11,1.2,.4,'f3','ac')
+   +cyl(68,12,0,2.4,3.6,'f2','f1')+cyl(68,12,3.6,1.7,.5,'f3','f3')+cyl(68,12,4.1,2.2,3.2,'f2','f1')+line([P(70,12,6),P(71.5,12,6)],4,'ink'));
+  /* 6 lạnh */
+  h+=stG(6,box(74,4,0,1,1,18,['wo','wo2','wo2'])+box(84,4,0,1,1,18,['wo','wo2','wo2'])+box(74,4,0,11,10,1,['wo','wo2','wo2'])+box(74,4,17,11,10,1.2,['wo','wo2','wo2'])+box(74,12.6,0,1,1,18,['wo','wo2','wo2'])+box(84,12.6,0,1,1,18,['wo','wo2','wo2'])
+   +cyl(79.6,8.8,13,3,4.4,'wa','f1')+`<g id="iceTop"></g>`+line([P(79.6,8.8,13),P(79.6,8.8,11)],3,'s3')+cyl(79.6,8.8,7,2.6,4,'cu2','cu')+line([P(79.6,8.8,7),P(79.6,8.8,5.2)],3,'s3')+cyl(79.6,8.8,1,2.8,4.2,'f2','wa')+drip('d6',79.6,8.8,5)
+   +cyl(74,17,0,2.6,6.5,'wa','f1')+cyl(74,17,6.5,2.2,.8,'cu','cu2'));
+  /* 7 sữa đá */
+  h+=stG(7,box(87,4,0,8,6.5,4.4,['f2','f2','f3'])+poly([P(87.6,4.6,4.4),P(94.4,4.6,4.4),P(94.4,10,4.4),P(87.6,10,4.4)],'wa')+cubes()+cyl(92,14,0,2.2,4,'f1','f2')+line([P(92,16,3),P(92,17,2)],3,'s3')+cyl(87.6,14.4,0,1.5,5.6,'pa','f2')+cyl(87.6,14.4,5.6,.8,1.2,'ac','ac'));
+  /* ray phục vụ */
+  h+='<g class="m">'+box(2,20.4,0,96,4.6,.8,['dk3','dk3','dk3'])+'</g>';
+  h+=`<polyline id="beltd" class="belt-d" points="${pts([P(3,22.7,.8)])} ${pts([P(92,22.7,.8)])}"/><g class="m" id="beans"></g>`;
+  h+=stG(8,box(90,20.6,.8,8,4.2,.5,['wo','wo2','wo2'])+`<g id="tray"></g>`);
+  const pl=P(30,27,-.6);
+  h+=`<g transform="matrix(.866 .5 0 1 ${pl[0]} ${pl[1]})"><rect width="245" height="26" rx="3" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:1.2"/><circle cx="8" cy="13" r="1.8" style="fill:#2A1B16"/><circle cx="237" cy="13" r="1.8" style="fill:#2A1B16"/><text class="sgn" x="122" y="18.5" text-anchor="middle">MeDili Coffee Farm · Di Linh</text></g>`;
+  /* đồng hồ */
+  const c={x:126,y:362,r:66};
+  h+=`<g><circle cx="${c.x}" cy="${c.y}" r="${c.r}" class="pa" style="stroke:var(--ink);stroke-width:2.4"/><circle cx="${c.x}" cy="${c.y}" r="52" fill="none" style="stroke:var(--tint);stroke-width:10"/><circle id="ring" cx="${c.x}" cy="${c.y}" r="52" fill="none" transform="rotate(-90 ${c.x} ${c.y})" style="stroke:var(--accent);stroke-width:10;stroke-linecap:round" stroke-dasharray="326.7" stroke-dashoffset="326.7"/><text id="clk" x="${c.x}" y="${c.y+3}" text-anchor="middle" class="mono" font-size="18"></text><text id="clk2" x="${c.x}" y="${c.y+22}" text-anchor="middle" class="tiny mutedt"></text></g>`;
+  /* ly */
+  h+=`<g id="glass"></g>`;
+  h+=`<g><rect x="790" y="600" width="238" height="74" rx="8" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="804" y="648" class="sgn2">MeDili Coffee Farm · Di Linh</text><text x="804" y="664" class="tiny mutedt">Brew bar model · trial recipes</text></g>`;
+  h+='<g id="tagB"></g><g id="chips"></g>';
+  $('scene').innerHTML=h;
+  document.querySelectorAll('.st').forEach(g=>{g.addEventListener('click',()=>selectS(+g.dataset.i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectS(+g.dataset.i)}})});
+  chipEv();
+}
+function cubes(){let s='';for(let i=0;i<14;i++){const q=P(88.2+(i*2.3%5.4),5+(i*1.7%4.4),4.5);s+=`<rect x="${q[0]-3}" y="${q[1]-3}" width="6" height="6" rx="1" style="fill:#EAF6F8;stroke:#7FB2BC;stroke-width:.6"/>`}return s}
+const CHIP=[null,{x:8,y:112,a:[8,9,8]},{x:300,y:10,a:[24,10,16]},{x:420,y:60,a:[40,10,10]},{x:540,y:110,a:[52,10,10]},{x:690,y:62,a:[64,10,11]},{x:806,y:128,a:[79.6,8,18]},{x:826,y:224,a:[91,8,5]},{x:848,y:330,a:[94,22,2]}];
+function chipLabel(i){const id=st.d,d=D[id],r=rec(id);
+  switch(i){case 1:return d.rt.includes(1)?`Weigh ${vn0(r.c)} g · ${d.grind}`:STN[0];
+  case 2:return d.g==='may'?`Machine · ${Math.round(r.c*2)} g espresso`:'Espresso machine';
+  case 3:return d.rt.includes(3)?`Phin · ${d.w} ml water`:'Phin';
+  case 4:return d.rt.includes(4)?`Filter · ${d.w} ml`:'Dripper';
+  case 5:return d.rt.includes(5)?`Press · ${d.w} ml`:'Press, moka pot';
+  case 6:return d.rt.includes(6)?`${d.n} · ${d.time}`:'Cold brew, drip';
+  case 7:{const a=[];if(d.milk)a.push(`${d.milk} ml milk`);if(r.cond)a.push(`${vn0(r.cond)} ml condensed milk`);if(d.ice)a.push(`${d.ice} g ice`);return a.length?a.join(' · '):'Milk, ice, cream'}
+  case 8:return d.n}}
+function chipEv(){}
+function buildChips(){let h='';const rt=D[st.d].rt;for(let i=1;i<=8;i++){const c0=CHIP[i],q=P(...c0.a),l=chipLabel(i),w=38+l.length*7.1,c={...c0,x:Math.min(c0.x,1040-w-12)},off=!rt.includes(i);h+=`<polyline class="lead-l" data-l="${i}" points="${q[0].toFixed(1)},${q[1].toFixed(1)} ${c.x+20},${c.y+13}"/><g class="chip${off?' off':''}" data-c="${i}"><rect x="${c.x+6}" y="${c.y}" rx="8" width="${w}" height="26"/><circle cx="${c.x+6}" cy="${c.y+13}" r="13"/><text class="num" x="${c.x+6}" y="${c.y+18.5}" text-anchor="middle">${i}</text><text class="lab" x="${c.x+26}" y="${c.y+18}">${l}</text></g>`}
+  const el=$('chips');el.innerHTML=h;el.querySelectorAll('.chip').forEach(g=>g.addEventListener('click',()=>selectS(+g.dataset.c)))}
+function selectS(i){st.sel=i;const s=steps(st.d),k=s.findIndex(x=>x[0]===i);if(k>=0)st.step=k;else st.step=-1;renderAll();const sc=document.querySelector('.scroller'),q=P(...CHIP[i].a);if(sc.scrollWidth>sc.clientWidth)sc.scrollLeft=q[0]/1040*sc.scrollWidth-sc.clientWidth/2}
+function drawGlass(){
+  const d=D[st.d],L=d.lay,x=58,y=486,w=86,h=172,tot=L.reduce((a,b)=>a+b[1],0),cap=Math.max(tot,240);
+  let g=`<rect x="40" y="474" width="318" height="196" rx="10" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="166" y="498" class="lab12 mutedt">CUP STRUCTURE</text>`;
+  const scale=(h-14)/cap,gid='gclip';
+  g+=`<defs><clipPath id="${gid}"><path d="M${x} ${y}L${x+6} ${y+h}H${x+w-6}L${x+w} ${y}Z"/></clipPath></defs><g clip-path="url(#${gid})">`;
+  const lim=tot*st.fill;let acc=0,yy=y+h;
+  L.forEach(l=>{const take=clamp(lim-acc,0,l[1]);acc+=l[1];const hh=take*scale;if(hh>0){yy-=hh;g+=`<rect x="${x-4}" y="${yy}" width="${w+8}" height="${hh}" style="fill:${l[2]};stroke:none"/>`;if(l[0]==='Ice'){for(let i=0;i<5;i++){const cy=yy+(i%3)*hh/3+4;if(cy<yy+hh-6)g+=`<rect x="${x+8+i*14}" y="${cy}" width="14" height="14" rx="2" transform="rotate(${i*14} ${x+15+i*14} ${cy+7})" style="fill:#EAF6F8;fill-opacity:.8;stroke:#7FB2BC"/>`}}}});
+  g+=`</g><path d="M${x} ${y}L${x+6} ${y+h}H${x+w-6}L${x+w} ${y}" fill="none" style="stroke:var(--ink);stroke-width:2.2"/>`;
+  [...L].reverse().forEach((l,i)=>{const ty=522+i*24,v=l[1]===0?'':`${l[1]} ml`;g+=`<rect x="166" y="${ty-10}" width="13" height="13" rx="3" style="fill:${l[2]};stroke:var(--ink);stroke-width:.8"/><text x="186" y="${ty+1}" class="lab12">${l[0]}</text><text x="342" y="${ty+1}" text-anchor="end" class="tiny mono">~${l[1]} ml</text>`});
+  $('glass').innerHTML=g;
+  const c=P(94,22.7,1.3);$('tray').innerHTML=st.fill>=1?cyl(94,22.7,1.3,1.4,3,'wa','f1'):'';
+  const col=L[Math.floor(L.length/2)][2];const ph=$('ph');const q=P(40,12,0),rr=RX(2.3);ph.innerHTML=`<rect x="${q[0]-rr}" y="${q[1]-22-(st.fill*24)}" width="${2*rr}" height="${24+st.fill*24}" style="fill:${col};stroke:none;opacity:.8"/>`;
+}
+function renderAll(){
+  const id=st.d,d=D[id],r=rec(id),n=st.n,s=steps(id);
+  document.querySelectorAll('.st').forEach(g=>{const i=+g.dataset.i;g.classList.toggle('on',i===st.sel);g.classList.toggle('off',!d.rt.includes(i))});
+  buildChips();
+  document.querySelectorAll('.chip').forEach(g=>g.classList.toggle('on',+g.dataset.c===st.sel));
+  document.querySelectorAll('.lead-l').forEach(g=>g.classList.toggle('on',+g.dataset.l===st.sel));
+  $('strip').innerHTML=s.map((x,i)=>`<button type="button" class="${i===st.step?'on':''}">Step ${i+1}</button>`).join('');
+  $('strip').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>{st.step=i;st.sel=s[i][0];renderAll()});
+  const cur=st.step>=0?s[st.step]:null,pr=PR[d.p],tot=s.reduce((a,b)=>a+b[2],0),done=s.slice(0,Math.max(0,st.step+1)).reduce((a,b)=>a+b[2],0);
+  $('detail').innerHTML=`<div class="dh"><div class="dn">${st.step>=0?st.step+1:'–'}</div><h2>${d.n}<small>${pr.n} · ${pr.c} · roast: ${pr.l}</small></h2></div>\n   <div class="dgrid"><div><span class="lbl">Step-by-step method</span><ol class="steps">${s.map((x,i)=>`<li class="${i===st.step?'on':''}">${x[1]}</li>`).join('')}</ol></div>\n   <div><span class="lbl">Why it's done this way</span><p>${why(d)}</p><span class="lbl">Station ${st.sel}: ${STN[st.sel-1]}</span><p>${d.rt.includes(st.sel)?stationText(st.sel):'This drink doesn\'t use this station.'}</p></div></div>`;
+  /* đồng hồ */
+  const prog=clamp(done/tot,0,1);$('ring').setAttribute('stroke-dashoffset',326.7*(1-prog));$('clk').textContent=fmtT(done);$('clk2').textContent='of '+fmtT(tot);
+  $('scale').textContent=vn0(r.c)+' g';
+  drawGlass();
+  const c=Math.floor(250/r.c);
+  const q=P(94,24,1);$('tagB').innerHTML=`<g class="tag big"><rect x="372" y="634" width="270" height="24" rx="6"/><text x="507" y="650" text-anchor="middle">A 250 g pack makes ${c} cup${c==1?'':'s'}</text></g>`;
+  $('figsub').textContent=`8-station bar, now making ${d.n}`;
+}
+function why(d){
+  if(d.g==='may')return '9 bar of pressure pushes water through the tamped coffee in about 30 seconds. Oils and gases form the crema, so the cup is small but very strong. Too fast tastes sour; too slow tastes bitter.';
+  if(d.g==='phin')return 'Gravity pulls the water through the coffee very slowly. The bloom lets the coffee swell and release gas so the water that follows soaks in evenly. Because the coffee ratio is high, a phin cup is stronger and fuller than filter coffee.';
+  if(d.g==='lanh')return 'Cold water dissolves slowly, so it takes many hours. Fewer sour and bitter compounds are extracted, so the cup is cool, rounded and easy to drink.';
+  return 'A high water ratio makes the cup light with clear aromas. Paper filters hold back the oils, so the taste is clean, while a press keeps the oils, so the body is fuller.';
+}
+function stationText(i){return ['Grind right before brewing to keep the aroma. Weigh the exact grams before each cup.','The portafilter needs a level tamp. At about 9 bar, the coffee flows in a thin stream like a mouse\'s tail.','A clean phin, with the press lid set just firm enough. Pour the water in two stages so the coffee blooms evenly.','Rinse the paper filter with hot water first. Pour slowly in circles and don\'t pour directly onto the paper wall.','Each tool has its own grind size and time; see the steps on the left.','Keep it cold throughout. Jars and tools must be clean, with the brew date on the label.','Condensed milk brings sweet richness, fresh milk lightness, and ice cools the drink and gradually dilutes it.','Serve right away to keep the aroma. Warm hot-drink cups before pouring.'][i-1]}
+function renderPanel(){
+  const id=st.d,d=D[id],r=rec(id),n=st.n;
+  $('count').textContent=ids.length+' drinks';
+  $('groups').innerHTML=Object.entries(G).map(([k,v])=>`<button class="pill" data-k="${k}" aria-pressed="${st.group===k}">${v}</button>`).join('');
+  $('groups').querySelectorAll('button').forEach(b=>b.onclick=()=>{st.group=b.dataset.k;const f=ids.find(i=>D[i].g===st.group);load(f)});
+  $('drinks').innerHTML=ids.filter(i=>D[i].g===st.group).map(i=>`<button class="pill" data-k="${i}" aria-pressed="${st.d===i}">${D[i].n}</button>`).join('');
+  $('drinks').querySelectorAll('button').forEach(b=>b.onclick=()=>load(b.dataset.k));
+  const pl=(el,opts,k)=>{$(el).innerHTML=opts.map(([v,t])=>`<button class="pill" data-v="${v}" aria-pressed="${st[k]===v}">${t}</button>`).join('');$(el).querySelectorAll('button').forEach(b=>b.onclick=()=>{st[k]=+b.dataset.v;refresh()})};
+  pl('str',[[.9,'Light'],[1,'Medium'],[1.1,'Strong']],'strength');
+  $('sweetBox').hidden=!d.sweet;pl('swt',[[.7,'Less sweet'],[1,'Medium'],[1.3,'Sweet']],'sweet');
+  $('N').value=n;$('oN').textContent=n+(n==1?' cup':' cups');
+  $('needLbl').textContent=`Needed for ${n} cup${n==1?'':'s'}`;
+  const S=[['Coffee',`${vn0(r.c*n)} g`],['Water',d.w?`${fm(d.w*n)} ml`:'–']];
+  if(d.milk)S.push(['Fresh milk',`${fm(d.milk*n)} ml`]);if(r.cond)S.push(['Condensed milk',`${vn0(r.cond*n)} ml`]);if(d.cream)S.push(['Salted cream',`${fm(d.cream*n)} ml`]);if(r.choc)S.push(['Chocolate sauce',`${vn0(r.choc*n)} ml`]);if(d.ice)S.push(['Ice',`${fm(d.ice*n)} g`]);
+  $('stats').innerHTML=S.map(([a,b])=>`<div class="stat"><span>${a}</span><b>${b}</b></div>`).join('');
+  const pr=PR[d.p];
+  $('spec').innerHTML=[['Coffee used',pr.c],['Roast level',pr.l],['Grind size',d.grind],['Temperature',d.temp],['Time',d.time],['Ratio',d.ratio]].map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join('');
+  const lv=pr.c.startsWith('Arabica')&&d.p==='arab';
+  $('verdict').className=(st.strength>1?'warn':'good');
+  $('verdict').innerHTML=st.strength>1?`<b>! Stronger cup</b>Coffee ${vn0(r.c)} g. ${pr.c.includes('Robusta')?'Robusta has more caffeine than Arabica, so drink it in moderation.':'Drink in moderation.'}`:`<b>✓ ${st.strength<1?'light':'standard'} recipe</b>${vn0(r.c)} g of coffee per cup. One 250 g pack makes about ${Math.floor(250/r.c)} cups.`;
+  const nm=['Bold & bitter','Sweet & rich','Full body','Aroma','Farm character'];
+  $('bars').innerHTML=d.fl.map((v,i)=>{let x=v;if(i===0)x=clamp(v*st.strength,0,100);if(i===1&&d.sweet)x=clamp(v*st.sweet,0,100);return `<div class="bar"><span>${nm[i]}</span><span class="track"><i style="width:${x.toFixed(0)}%"></i></span><span>${x.toFixed(0)}</span></div>`}).join('');
+  renderSheet();
+}
+function renderSheet(){
+  const d=D[st.d],r=rec(st.d),n=st.n,pr=PR[d.p],s=steps(st.d);
+  const a=[`RECIPE: ${d.n.toUpperCase()} · ${n} cup${n==1?'':'s'}`,'MeDili Coffee Farm · Di Linh','',`Coffee: ${pr.c}, roast: ${pr.l}`,`Coffee: ${vn0(r.c*n)} g, ${d.grind.toLowerCase()} grind`];
+  if(d.w)a.push(`Water: ${fm(d.w*n)} ml, ${d.temp}`);if(d.milk)a.push(`Fresh milk: ${fm(d.milk*n)} ml`);if(r.cond)a.push(`Condensed milk: ${vn0(r.cond*n)} ml`);if(d.cream)a.push(`Salted cream: ${fm(d.cream*n)} ml`);if(r.choc)a.push(`Chocolate sauce: ${vn0(r.choc*n)} ml`);if(d.ice)a.push(`Ice: ${fm(d.ice*n)} g`);
+  a.push('',...s.map((x,i)=>`${i+1}. ${x[1]}`));
+  const t=a.join('\n');$('sheet').textContent=t;st.sheet=t;
+}
+function renderDose(){
+  $('dose').innerHTML=ids.map(i=>{const d=D[i],sw=[];if(d.milk)sw.push(d.milk+' ml fresh milk');if(d.cond)sw.push(d.cond+' ml condensed milk');if(d.cream)sw.push(d.cream+' ml cream');if(d.choc)sw.push(d.choc+' ml chocolate');return `<tr class="pick${i===st.d?' on':''}" data-k="${i}" tabindex="0"><td><b>${d.n}</b></td><td>${d.c} g</td><td>${d.w?d.w+' ml':'–'}</td><td>${sw.join(', ')||'–'}</td><td>${d.ice?d.ice+' g':'–'}</td><td>${d.time}</td><td>${Math.floor(250/d.c)} cups</td></tr>`}).join('');
+  $('dose').querySelectorAll('tr').forEach(r=>{const go=()=>{load(r.dataset.k);$('scene').scrollIntoView({behavior:still?'auto':'smooth',block:'center'})};r.onclick=go;r.onkeydown=e=>{if(e.key==='Enter')go()}});
+}
+function refresh(){renderPanel();renderDose();renderAll()}
+function load(id){run=null;$('run').textContent='Try a brew';st.d=id;st.group=D[id].g;st.fill=1;st.step=0;st.sel=D[id].rt[Math.min(1,D[id].rt.length-1)];const s=steps(id);st.step=s.findIndex(x=>x[0]===st.sel);refresh()}
+
+/* ====== CHỌN GU ====== */
+const ans={q1:'dam',q2:'ngot',q3:'sang',q4:'phin',q5:'quen'};
+function scored(){const keys=Object.values(ans);return ids.map(i=>{const t=D[i].tag;let s=0;keys.forEach(k=>{if(t.includes(k))s+=(k===ans.q4?2.5:k===ans.q2?2:1.5)});if(ans.q2==='tuoi'&&!D[i].milk)s-=3;if(ans.q2==='ngot'&&!D[i].cond&&!D[i].choc)s-=3;if(ans.q3==='toi'&&PR[D[i].p].c.includes('Robusta'))s-=2;if(ans.q2==='den'&&(D[i].milk||D[i].cond))s-=3;return {i,s,why:t.filter(k=>keys.includes(k)).slice(0,3).map(k=>WHY[k])}}).sort((a,b)=>b.s-a.s)}
+function renderQuiz(){
+  $('qs').innerHTML=QS.map(([k,q,o],n)=>`<fieldset class="q"><legend><b>${n+1}.</b> ${q}</legend><div class="row">${o.map(([v,t])=>`<button class="pill" type="button" data-q="${k}" data-v="${v}" aria-pressed="${ans[k]===v}">${t}</button>`).join('')}</div></fieldset>`).join('');
+  $('qs').querySelectorAll('button').forEach(b=>b.onclick=()=>{ans[b.dataset.q]=b.dataset.v;renderQuiz()});
+  const r=scored(),a=r[0],d=D[a.i],pr=PR[d.p],alt=r.slice(1,3);
+  const night=ans.q3==='toi';
+  $('result').innerHTML=`<div class="res"><span class="lbl">Your taste matches</span><h3>${d.n}</h3><p class="rp">${pr.n}<br><small>${pr.c} · roast: ${pr.l}</small></p><p>Why it suits you: ${a.why.join(', ')||'it\'s easy to drink'}.</p><div class="row"><button class="btn main" id="goD">See how to make it</button><button class="btn" id="copyG">Copy to message MeDili</button></div><small id="gmsg" role="status"></small>${alt.length?`<hr><span class="lbl">Also try</span><div class="row">${alt.map(x=>`<button class="pill" data-a="${x.i}">${D[x.i].n}</button>`).join('')}</div>`:''}<p class="tinyn">${night?'In the evening, choose a small cup. ':''}Robusta has nearly twice the caffeine of Arabica. Healthy adults should stay under 400 mg of caffeine a day, and pregnant women under 200 mg.</p></div>`;
+  const goto=id=>{load(id);$('scene').scrollIntoView({behavior:still?'auto':'smooth',block:'center'})};
+  $('goD').onclick=()=>goto(a.i);$('result').querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>goto(b.dataset.a));
+  $('copyG').onclick=()=>copyTo(`Hi MeDili, I just took the taste quiz. My suggestion is ${d.n}, using ${pr.n}. Could you advise me?`,'gmsg',null,'Copied. Paste it into MeDili\'s Zalo.');
+}
+function renderMap(){
+  const M=[['Bold and bitter','Instant wake-up, full body',['den','espresso','moka','french','americano']],['Sweet and rich','Familiar, easy to drink',['suada','sua','bacxiu','muoi','mocha']],['Light with fresh milk','Smooth, less bitter',['latte','cappuccino','flat']],['Clean and aromatic','Clear farm aromas',['pour','aero','dripb']],['Ice-cold','Rounded, less harsh',['cold','colddrip']]];
+  $('gumap').innerHTML=M.map(([t,s,l])=>`<div class="gm"><h3>${t}</h3><small>${s}</small><div class="row">${l.map(i=>`<button class="pill" data-g="${i}">${D[i].n}</button>`).join('')}</div></div>`).join('');
+  $('gumap').querySelectorAll('button').forEach(b=>b.onclick=()=>{load(b.dataset.g);$('scene').scrollIntoView({behavior:still?'auto':'smooth',block:'center'})});
+}
+
+/* ====== HOẠT ẢNH ====== */
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let prev=0,tA=0,run=null,ac=null;
+function ding(){if(!st.sound||!ac)return;const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=660;g.gain.setValueAtTime(.05,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+.2);o.connect(g);g.connect(ac.destination);o.start();o.stop(ac.currentTime+.2)}
+function frame(ts){
+  const dt=Math.min(50,ts-prev||16);prev=ts;tA+=dt;
+  if(!document.hidden){
+    const act=D[st.d].rt;
+    [['d2',2,26],['d3',3,44],['d4',4,36],['d6',6,30]].forEach(([id,i,dist])=>{const e=$(id);if(!e)return;const base=+e.dataset.y,on=act.includes(i);e.style.visibility=on?'visible':'hidden';if(on){const p=(tA*.0013+i*.3)%1;e.setAttribute('cy',base+p*dist)}});
+    $('beltd').style.strokeDashoffset=-tA*.02;
+    if(run)step(dt);
+  }
+  requestAnimationFrame(frame);
+}
+function startRun(){
+  if(run){run=null;$('run').textContent='Try a brew';st.fill=1;renderAll();return}
+  if(still){st.fill=1;st.step=0;renderAll();return}
+  run={i:0,t:0};st.fill=0;st.step=0;st.sel=steps(st.d)[0][0];$('run').textContent='Stop';renderAll();ding();
+}
+function step(dt){
+  const s=steps(st.d);run.t+=dt;
+  const n=s.length,p=(run.i+clamp(run.t/2200,0,1))/n,startFill=.35;
+  st.fill=clamp((p-startFill)/(1-startFill),0,1);
+  if(run.t>=2200){run.i++;run.t=0;ding();if(run.i>=n){run=null;st.fill=1;$('run').textContent='Brew again';renderAll();return}st.step=run.i;st.sel=s[run.i][0];renderAll();return}
+  drawGlass();
+}
+
+/* ====== KHỞI ĐỘNG ====== */
+const copyTo=async(t,msg,src,done)=>{try{await navigator.clipboard.writeText(t);$(msg).textContent=done}catch(e){if(src){const r=document.createRange();r.selectNodeContents($(src));const s=getSelection();s.removeAllRanges();s.addRange(r);$(msg).textContent='The numbers are selected, please copy them yourself.'}else $(msg).textContent=t}};
+$('rules').innerHTML=RULES.map((r,i)=>`<li><div class="n">${i+1}</div><div><h3>${r[0]}</h3><p>${r[1]}</p></div></li>`).join('');
+$('fix').innerHTML=FIX.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('');
+$('N').addEventListener('input',e=>{st.n=+e.target.value;refresh()});
+$('run').onclick=startRun;
+$('reset').onclick=()=>{st.strength=1;st.sweet=1;st.n=1;load(st.d)};
+$('copy').onclick=()=>copyTo(st.sheet,'copied','sheet','Recipe copied.');
+$('copyZalo').onclick=()=>copyTo('0966770788','zaloMsg','zaloNo','Zalo number copied.');
+$('snd').onclick=()=>{st.sound=!st.sound;if(st.sound&&!ac){try{ac=new (window.AudioContext||window.webkitAudioContext)()}catch(e){st.sound=false}}$('snd').textContent='Bar sounds: '+(st.sound?'on':'off');$('snd').setAttribute('aria-pressed',st.sound)};
+buildScene();renderQuiz();renderMap();load('suada');
+if(!still)requestAnimationFrame(frame);
+</script>
+<footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">There is always time for <em>a good cup of coffee.</em></p><a class="btn main" href="quan-medili.html">Meet at MeDili</a></div><div class="mf-grid"><div class="mf-brand"><b>In love with coffee, in love with Di Linh.</b><span>Preserving a heritage. Treasuring every flavor.</span><small>Di Linh · Lâm Đồng · Vietnam</small></div><nav class="mf-col" aria-label="Explore"><p class="mf-t">Explore</p><a href="cau-chuyen.html">The MeDili Story</a><a href="doi-ngu.html">The MeDili Team</a><a href="vung-trong.html">Di Linh Growing Area</a><a href="anh-vuon.html">MeDili Farm Photos</a><a href="xuong-rang.html">Roastery & Capacity</a><a href="rang.html">Roasting Room</a><a href="huong-dan-pha.html">Brewing Guide</a><a href="quay-pha.html">Brew Bar</a><a href="tim-gu.html">Find Your Coffee Taste</a><a href="cong-thuc-pha.html">Brew Recipe Machine</a><a href="chiet-xuat.html">Extraction Machine</a><a href="cold-brew.html">Cold Brew Machine</a><a href="journal.html">Coffee Knowledge</a></nav><nav class="mf-col" aria-label="MeDili and you"><p class="mf-t">MeDili &amp; You</p><a href="cua-hang.html">MeDili Store</a><a href="mua-hang.html">Buying Room</a><a href="horeca.html">HORECA Solutions</a><a href="dong-hanh-cung-quan.html">Partnering with Cafés</a><a href="nhan-xanh.html">Green Coffee for Wholesale</a><a href="gia-ca-phe.html">Coffee Prices Today</a><a href="quan-medili.html">MeDili Café</a><a href="lien-he.html">Contact & Map</a><a href="chinh-sach.html">MeDili Policies</a><a href="giao-hang.html">Delivery & Returns</a><a href="bao-mat.html">Privacy Policy</a></nav><div class="mf-col"><p class="mf-t">Distribution · DSunfood</p><p>DSunfood Co., Ltd.<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>Farm &amp; roastery<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">Directions to MeDili ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Message MeDili on Zalo ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>MeDili Coffee Farm · Cà Sẻ Di Linh</i></div></div></footer><nav class="fl-c" aria-label="Quick contact with MeDili"><a class="fl-b" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener" aria-label="Message MeDili on Zalo" data-tip="Message MeDili on Zalo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a><a class="fl-b" href="https://www.facebook.com/share/192oMLdBnq/" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a></nav>
+<script>
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'Copied'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='The number is selected, please copy it yourself'}
+setTimeout(()=>{b.textContent=o},2400)}))})();
+window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
+const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};
+const badge=()=>{const n=get().reduce((a,x)=>a+(+x.q||0),0);document.querySelectorAll('.mh-cn').forEach(e=>{e.textContent=n>99?'99+':n;e.hidden=!n})};
+const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badge()};
+const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
+badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
+</script>
+</body></html>

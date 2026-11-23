@@ -1,0 +1,617 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="The five layers around a coffee bean, the step at which each one is removed, and why Natural, Honey and Washed taste different."><meta property="og:title" content="Anatomy of the Cà Sẻ Cherry"><meta property="og:description" content="The five layers around a coffee bean, the step at which each one is removed, and why Natural, Honey and Washed taste different."><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>Anatomy of the Cà Sẻ Cherry</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.inl{color:var(--moss);font-weight:600}
+.quiz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.q{border:0;padding:0;margin:0 0 14px;min-width:0}.q legend{padding:0;font-weight:600}
+.res{background:var(--tint);border-radius:14px;padding:16px}.res h3{font:800 2rem/1.1 var(--display);margin:2px 0 4px;color:var(--accent)}
+.res p{margin:6px 0}.rp{font-weight:600}.rp small{font-weight:400;color:var(--muted)}
+.tinyn{font-size:.78rem;color:var(--muted)}
+.gumap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gm{border-top:3px solid var(--copper);padding-top:8px}.gm h3{margin:0;font:800 1.3rem var(--display)}.gm small{color:var(--muted)}
+ol.steps{margin:0 0 8px;padding-left:20px}ol.steps li{margin-bottom:4px;font-size:.9rem}ol.steps li.on{font-weight:700;color:var(--accent)}
+.sop.tight li{grid-template-columns:36px minmax(0,1fr)}.sop.tight .n{font-size:1.5rem}
+.st.off{opacity:.45}
+@media (max-width:820px){.quiz{grid-template-columns:minmax(0,1fr)}}
+
+:root{--ground:#8FA65E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#5D7340}}
+:root[data-theme="dark"]{--ground:#5D7340}
+.mths button{min-width:52px}
+.sgn3{font:italic 600 13.5px var(--sign)!important;fill:var(--accent)!important}
+.sgn{font-size:18px}
+.calc.three{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-bottom:12px}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px}
+.calc input{font-size:.95rem}
+
+:root{--floor:#C69A62;--wall:#EFE3CD}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--floor:#6B4F31;--wall:#3A2D22}}
+:root[data-theme="dark"]{--floor:#6B4F31;--wall:#3A2D22}
+.shophead{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}.shophead>div:last-child{flex:1 1 320px;min-width:0}
+.logoP{background:#F6F0E4;border-radius:12px;padding:8px 12px;display:inline-block}.logoP img{display:block;height:auto;max-width:100%}
+.flow{list-style:none;display:flex;flex-wrap:wrap;gap:6px 24px;padding:0;margin:0;counter-reset:f;font-weight:600;font-size:.9rem;color:var(--muted)}
+.flow li{counter-increment:f}.flow li::before{content:counter(f) ". ";color:var(--accent)}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:0}
+.whob{text-align:left;padding:12px 16px;border:2px solid var(--rule);border-radius:12px;background:var(--panel);color:var(--ink);cursor:pointer;font:inherit}
+.whob b{display:block;font-size:1.02rem}.whob small{color:var(--muted)}.whob.on{border-color:var(--accent)}
+.ah{font:800 1.45rem var(--display);margin:0 0 8px}
+.ctl{min-width:0}.ctl .card{padding:14px}
+.recbox{background:var(--tint);border-radius:12px;padding:10px;margin-top:12px;display:grid;gap:6px}
+.recb{text-align:left;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:7px 10px;color:var(--ink);cursor:pointer;font:inherit}.recb b{display:block;font-size:.9rem}.recb small{color:var(--muted)}.recb.on{border-color:var(--accent)}
+.line{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule)}.line small{display:block;color:var(--muted)}
+.qty{display:flex;align-items:center;gap:6px;white-space:nowrap}.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+a.btn{text-decoration:none;display:inline-block}
+.bagn{font:italic 600 6.5px var(--sign)!important;fill:#4A2A1A!important}.bagn2{font:700 4.6px var(--body)!important;fill:#A23B24!important}
+.bag.off{opacity:.25}.bag.on polygon{stroke:var(--accent)!important;stroke-width:2.4}
+.bench{align-items:start}
+.sgn3{font:italic 600 13px var(--sign)!important;fill:var(--accent)!important}
+.tag.big rect{fill:var(--accent)}
+
+.sent{margin-top:10px;background:var(--tint);border-radius:12px;padding:12px}.sent>b{display:block;margin-bottom:4px}
+.ordertxt{white-space:pre-wrap;overflow-wrap:anywhere;font:500 .78rem/1.5 var(--mono);margin:6px 0 0;user-select:all}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}.qrs svg{display:block;width:100%;height:auto;border-radius:6px}.qrs small{display:block;text-align:center;margin-top:4px;color:var(--muted)}
+:root{--skin:#EBC9A6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--skin:#8C6A4D}}:root[data-theme="dark"]{--skin:#8C6A4D}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.ctl .card{padding:16px}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style>
+<style>
+/* Trang Giải phẫu: hình mặt cắt và chú giải ở khung trái, sổ khối lượng ở khung phải, bài bảy phần và hai mục so sánh bên dưới. */
+:root{
+  --moss:#8D4E22;--good:#8D4E22;
+  --skin:#B33A24;--skin2:#7A2414;--pulp:#E2A55E;--pulp2:#C4873C;--muc:#F7EBD0;--parch:#E4C891;--silver:#F8F3E9;
+  --bean:#B49A63;--bean2:#CDB683;--cut:#6A4E30;--stem:#7A5233;--stem2:#5E3E25;--husk:#7E3A22;--chaff:#D9AA6E;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774}
+a{color:var(--accent)}
+.f1{display:grid;grid-template-columns:minmax(0,500px) minmax(0,1fr);gap:16px 30px;align-items:start;margin-top:10px}
+#fig1{display:block;width:100%;height:auto;margin-inline:auto;-webkit-tap-highlight-color:transparent}
+@media (max-width:900px){.f1{grid-template-columns:minmax(0,1fr)}#fig1{max-width:500px}}
+#fig1 .ly,#fig1 .bk{transition:opacity .28s}
+#fig1 .ly{cursor:pointer}
+#fig1.sel .ly:not(.on),#fig1.sel .bk:not(.on){opacity:.16}
+#fig1 .ly.on .rg{stroke:var(--accent);stroke-width:2.8}
+#fig1 .ld{stroke:var(--ink);stroke-width:1;opacity:.5;fill:none;transition:opacity .2s}
+#fig1 .dot{fill:var(--ink);opacity:.7}
+#fig1 .mk{cursor:pointer}
+#fig1 .mk circle{fill:var(--panel);stroke:var(--ink);stroke-width:1.3}
+#fig1 .mk .hit{fill:transparent;stroke:none}
+#fig1 .mk text{font:800 19px var(--display);fill:var(--ink);text-anchor:middle;dominant-baseline:central;pointer-events:none}
+#fig1 .mk.on circle:not(.hit){fill:var(--accent);stroke:var(--accent)}#fig1 .mk.on text{fill:var(--on-accent)}
+#fig1 .ld.on{stroke:var(--accent);stroke-width:2;opacity:1}#fig1 .dot.on{fill:var(--accent);opacity:1}
+#fig1.sel .ld:not(.on),#fig1.sel .dot:not(.on){opacity:.15}
+#fig1 .lgD{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #fig1 .lgL{display:none}:root:not([data-theme="light"]) #fig1 .lgD{display:inline}}
+:root[data-theme="dark"] #fig1 .lgL{display:none}:root[data-theme="dark"] #fig1 .lgD{display:inline}
+.parts{display:grid;gap:2px;align-content:start}
+.parts button{display:grid;grid-template-columns:14px 24px minmax(0,1fr);gap:10px;align-items:center;text-align:left;width:100%;font:600 .98rem/1.25 var(--body);color:var(--ink);background:transparent;border:1px solid transparent;border-bottom-color:var(--rule);border-radius:10px;padding:9px 10px;cursor:pointer}
+.parts button i,.swc,.mrow small em{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px var(--ol)}
+.parts button b{font:800 1.3rem/1 var(--display);color:var(--accent)}
+.parts button small{display:block;font:500 .78rem/1.3 var(--body);color:var(--muted)}
+.parts button[aria-pressed="true"]{background:var(--tint);border-color:var(--accent)}
+.parts button:hover{border-color:var(--rule)}
+@media (max-width:900px){.parts{grid-template-columns:repeat(auto-fill,minmax(146px,1fr));gap:6px}.parts button{border-color:var(--rule);grid-template-columns:12px 16px minmax(0,1fr);gap:8px;padding:8px;font-size:.92rem}.parts button b{font-size:1.15rem}}
+.f1r{display:grid;gap:12px;min-width:0}
+#detail{margin-top:0}
+#detail p{margin:8px 0 0}
+#detail .dn{flex-basis:44px}
+#detail dl.kv{margin-top:10px}
+.mtog{margin-top:6px}
+.msum{margin:10px 0 4px;font-size:.92rem;line-height:1.5}
+.msum b{color:var(--accent)}
+#mass .mrow{grid-template-columns:100px minmax(0,1fr) 78px;cursor:pointer;padding-inline:4px;border-radius:6px}
+#mass .mrow:hover,#mass .mrow.on{background:var(--tint)}
+#mass .mrow.fin{cursor:default;background:none}
+#mass .mrow:focus-visible{outline:3px solid var(--moss);outline-offset:1px}
+.mbar{position:relative;overflow:hidden}
+.mbar i{transition:width .5s cubic-bezier(.3,.7,.2,1)}
+.mbar u{position:absolute;top:0;bottom:0;background:var(--c);box-shadow:inset 0 0 0 1px rgba(42,27,22,.25);transition:left .5s cubic-bezier(.3,.7,.2,1),width .5s cubic-bezier(.3,.7,.2,1)}
+.mrow small em{width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+.see{font:600 .84rem var(--body);color:var(--accent);background:none;border:0;padding:6px 0 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-align:left}
+#bay-phan .sop li{grid-template-columns:44px minmax(0,1.7fr) minmax(0,1fr);cursor:default}
+#bay-phan .sop li.on{background:var(--tint);border-radius:10px}
+#bay-phan .sop h3{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font-size:1.06rem}
+#bay-phan .sop h3 small{font-weight:500;color:var(--muted);font-size:.8rem}
+#bay-phan .sop p{max-width:68ch}
+@media (max-width:820px){#bay-phan .sop li{grid-template-columns:36px minmax(0,1fr)}}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 26px;margin-top:8px}
+.trio figure{margin:0;display:grid;gap:10px;align-content:start;min-width:0}
+.trio svg{display:block;width:100%;max-width:240px;height:auto;margin-inline:auto}
+.trio figcaption{min-width:0}
+.trio figcaption b{font:800 1.5rem/1.1 var(--display);display:block}
+.trio figcaption span{display:block;font-weight:600;color:var(--accent);font-size:.92rem;margin-top:2px}
+.trio figcaption p{margin:6px 0 0;font-size:.92rem}
+@media (max-width:680px){.trio{grid-template-columns:minmax(0,1fr)}.trio figure{grid-template-columns:112px minmax(0,1fr);align-items:center;gap:14px}}
+.mnote{background:var(--tint);border-radius:12px;padding:12px 16px;margin:16px 0 0;max-width:none}
+.culi{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:18px 30px;align-items:center}
+.culi h2{font:800 2.05rem/1.15 var(--display);margin:0 0 6px}
+.culi p{margin:0 0 10px;max-width:62ch}
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.duo figure{margin:0;min-width:0}
+.duo svg{display:block;width:100%;height:auto}
+.duo figcaption{font-weight:600;font-size:.9rem;text-align:center;color:var(--muted)}
+.duo figcaption b{display:block;color:var(--ink);font-size:.98rem}
+@media (max-width:820px){.culi{grid-template-columns:minmax(0,1fr)}}
+.journey{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:12px}
+.journey a{background:var(--panel);border:1px solid var(--rule);border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none;display:flex;flex-direction:column}
+.journey img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.journey b{font:800 1.3rem var(--display);padding:10px 14px 0}
+.journey span{padding:2px 14px 14px;color:var(--muted);font-size:.9rem}
+@media (max-width:820px){.journey{grid-template-columns:minmax(0,1fr)}.journey a{display:grid;grid-template-columns:120px minmax(0,1fr);grid-template-rows:auto 1fr}.journey img{grid-row:1/3;height:100%;min-height:104px;aspect-ratio:auto}.journey b,.journey span{grid-column:2}.journey b{padding:12px 12px 0}.journey span{padding:2px 12px 12px}}
+@media (prefers-reduced-motion:reduce){#fig1 .ly,#fig1 .bk,#fig1 .ld,.mbar i,.mbar u{transition:none}}
+
+.c-skin{fill:var(--skin)}.c-skin2{fill:var(--skin2)}.c-pulp{fill:var(--pulp)}.c-muc{fill:var(--muc)}
+.c-parch{fill:var(--parch)}.c-silver{fill:var(--silver)}.c-bean{fill:var(--bean)}.c-bean2{fill:var(--bean2);opacity:.75}
+.c-stem{fill:var(--stem)}.c-stem2{fill:var(--stem2);stroke:var(--ol);stroke-width:1}
+.rg{stroke:var(--ol);stroke-width:1.15;stroke-linejoin:round}
+.fib{stroke:var(--pulp2);stroke-width:1;opacity:.5;fill:none;stroke-linecap:round;pointer-events:none}
+.gl{stroke:#F2A48D;stroke-width:2.4;opacity:.55;fill:none;stroke-linecap:round;pointer-events:none}
+.gl2{stroke:#FFFFFF;stroke-width:3.2;opacity:.75;fill:none;stroke-linecap:round;pointer-events:none}.gl2.t{stroke-width:2.4}
+.gl3{stroke:#C4513A;stroke-width:4;opacity:.6;fill:none;stroke-linecap:round;pointer-events:none}
+.cut{stroke:var(--cut);stroke-width:2;fill:none;stroke-linecap:round;pointer-events:none}
+.gh{fill:none;stroke:var(--muted);stroke-width:1.4;stroke-dasharray:6 6;opacity:.75}
+.arr{stroke:var(--muted);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.fcap{font:500 17px var(--body);fill:var(--muted)}
+</style><style>
+/* Khung chung sau khi gộp Manus: menu nhóm, chân trang, màu phong thủy Thổ (nâu, vàng đất, đỏ; không xanh lá, không đen). */
+:root{--moss:#8D4E22;--good:#8D4E22;
+  --i-red:#B33A24;--i-red2:#7A2414;--i-gold:#D9B77E;--i-gold2:#B8894A;--i-coffee:#6B4226;--i-brown:#8D5A32;--i-milk:#E9D3AE;
+  --seg1:#9E3B26;--seg2:#B8894A;--seg3:#6B4226;--seg4:#D9B77E;--seg-t1:#FFF6EC;--seg-t2:#2E1C12;--cmp2:#C9A46A;
+  --cx1:#BB8526;--cx2:#7A348E;--cx3:#83470D;--cx4:#CB4D54}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--panel)}
+.mnav{display:none!important}
+
+/* menu */
+.mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
+.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p a:hover{color:var(--accent)}
+.mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-m{margin:0;font-size:inherit}
+.mh-m>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font:600 .86rem var(--body);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;white-space:nowrap;user-select:none}
+.mh-m>summary::-webkit-details-marker{display:none}
+.mh-m>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mh-m[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-m>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-pan{position:absolute;left:0;right:0;top:100%;background:var(--panel);border-bottom:1px solid var(--rule);box-shadow:0 18px 30px rgba(46,28,18,.16);max-height:calc(100vh - 60px - env(safe-area-inset-top,0px));overflow:auto;overscroll-behavior:contain}
+.mh-grid{max-width:1560px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 26px;padding-block:18px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-g{margin:0 0 6px;font:600 .72rem/1.3 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mh-c ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-c a{display:block;color:var(--ink);text-decoration:none;font:500 .95rem/1.35 var(--body);padding:6px 0;border-bottom:1px solid transparent}
+.mh-c a:hover{color:var(--accent)}
+.mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
+.mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
+.mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.mh-i{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none}
+.mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
+@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+@media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
+
+/* chân trang */
+.mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
+.mf-in{max-width:1560px;margin:auto;padding-block:30px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:26px}
+.mf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border-bottom:1px solid var(--rule);padding-bottom:24px}
+.mf-k{flex-basis:100%;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mf-h{margin:0;font:italic 600 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sign);color:var(--ink);text-wrap:balance}
+.mf-h em{color:var(--accent)}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:22px 30px}
+.mf-brand b{display:block;font:italic 600 1.35rem/1.25 var(--sign);color:var(--accent)}
+.mf-brand span{display:block;margin-top:6px}.mf-brand small{display:block;margin-top:6px;color:var(--muted);letter-spacing:.06em}
+.mf-t{margin:0 0 6px;font:600 .72rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mf-col{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mf-col a{color:var(--ink);text-decoration:none;padding:2px 0}.mf-col a:hover{color:var(--accent);text-decoration:underline}
+.mf-col p{margin:0 0 6px}.mf-n{white-space:nowrap;user-select:all}
+.mf-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:.84rem}
+.mf-base i{font:italic 600 1rem var(--sign);color:var(--accent)}
+@media (max-width:980px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-brand{grid-column:1/-1}}
+@media (max-width:520px){.mf-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ảnh thật */
+.pf{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.pf img{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;border:1px solid var(--rule);background:var(--tint)}
+.pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.pfw img{aspect-ratio:3/1;object-fit:cover}
+.split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
+@media (max-width:700px){.pfw img{aspect-ratio:2/1}}
+.pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
+.pgal{display:grid;gap:10px}
+.pgal>h2{margin:0}
+.pgal>p{margin:0;color:var(--muted);max-width:72ch}
+
+/* chọn ngôn ngữ */
+.mh-l{position:relative;margin:0}
+.mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
+.mh-l>summary::-webkit-details-marker{display:none}
+.mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
+.mh-lp a:hover{background:var(--tint);color:var(--accent)}
+.mh-lp a[aria-current]{color:var(--accent)}
+@media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
+/* nút Zalo, Facebook nổi góc trái bên dưới */
+.fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
+.fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
+.fl-b svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fl-b:hover{transform:translateY(-2px) scale(1.05)}
+.fl-b:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.fl-b::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;background:var(--ink);color:var(--panel);font:600 .8rem var(--body);letter-spacing:0;padding:6px 11px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{opacity:1;transform:translate(0,-50%)}}
+@media (max-width:600px){.fl-c{gap:8px}.fl-b{width:46px;height:46px;font-size:.6rem}.fl-b svg{width:17px;height:17px}}
+@media (max-width:1020px){body:has(.nx-bar) .fl-c{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+/* chừa chỗ cho nút nổi ở cuối chân trang */
+@media (min-width:601px){.mf-base{padding-left:76px}}
+@media (max-width:600px){footer.mf{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}}
+@media print{.fl-c{display:none}}
+</style><link rel="alternate" hreflang="vi" href="https://www.medili.vn/trai-ca-phe.html"><link rel="alternate" hreflang="en" href="https://www.medili.vn/en/trai-ca-phe.html"><link rel="alternate" hreflang="ja" href="https://www.medili.vn/ja/trai-ca-phe.html"><link rel="alternate" hreflang="zh-Hans" href="https://www.medili.vn/zh/trai-ca-phe.html"><link rel="alternate" hreflang="x-default" href="https://www.medili.vn/trai-ca-phe.html"></head><body><div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a><nav class="mh-p" aria-label="Main sections"><a href="cau-chuyen.html">Story</a><a href="vung-trong.html">Growing Area</a><a href="anh-vuon.html">Farm Photos</a><a href="xuong-rang.html">Roastery</a><a href="horeca.html">HORECA</a><a href="quan-medili.html">MeDili Café</a><a href="journal.html">Knowledge</a><a href="gia-ca-phe.html">Coffee Prices</a></nav><details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></summary><nav class="mh-pan" aria-label="All pages"><div class="mh-grid"><div class="mh-c"><p class="mh-g">MeDili</p><ul><li><a href="./">Home</a></li><li><a href="cau-chuyen.html">The MeDili Story</a></li><li><a href="doi-ngu.html">Team</a></li><li><a href="quan-medili.html">MeDili Café</a></li><li><a href="lien-he.html">Contact</a></li></ul></div><div class="mh-c"><p class="mh-g">Growing & Production</p><ul><li><a href="vung-trong.html">Di Linh Growing Area</a></li><li><a href="anh-vuon.html">Farm Photos</a></li><li><a href="vuon.html">The Farm in 12 Months</a></li><li><a href="trai-ca-phe.html" aria-current="page">Cherry Anatomy</a></li><li><a href="len-men-men-bia.html">Fermentation with Brewer's Yeast</a></li><li><a href="len-men-trai-cay.html">Co-fermentation with Fruit</a></li></ul></div><div class="mh-c"><p class="mh-g">Roasting & Brewing</p><ul><li><a href="xuong-rang.html">Roastery & Capacity</a></li><li><a href="rang.html">Roasting Room</a></li><li><a href="huong-dan-pha.html">Brewing Guide</a></li><li><a href="quay-pha.html">Brew Bar</a></li><li><a href="cong-thuc-pha.html">Brew Recipe Machine</a></li><li><a href="cold-brew.html">Cold Brew Machine</a></li><li><a href="tim-gu.html">Find Your Coffee Taste</a></li></ul></div><div class="mh-c"><p class="mh-g">Buy & Partner</p><ul><li><a href="cua-hang.html">Coffee Store</a></li><li><a href="mua-hang.html">Buying Room</a></li><li><a href="horeca.html">HORECA Solutions</a></li><li><a href="dong-hanh-cung-quan.html">Partnering with Cafés</a></li><li><a href="nhan-xanh.html">Choose Green Coffee · Wholesale</a></li><li><a href="gia-ca-phe.html">Coffee Prices Today</a></li><li><a href="chinh-sach.html">MeDili Policies</a></li><li><a href="giao-hang.html">Delivery & Returns</a></li><li><a href="gio-hang.html">Cart</a></li><li><a href="tim-kiem.html">Search</a></li></ul></div><div class="mh-c"><p class="mh-g">Coffee Knowledge</p><ul><li><a href="journal.html">All articles</a></li><li><a href="chiet-xuat.html">Extraction Machine</a></li><li><a href="phan-biet-ca-phe.html">Coffee Identification Machine</a></li><li><a href="trai-chin.html">Ripe Cherry Machine</a></li><li><a href="vi-sinh.html">Microbe Machine</a></li><li><a href="tien-chat-huong.html">Aroma Precursor Machine</a></li><li><a href="banh-xe-huong.html">MeDili Flavor Wheel</a></li><li><a href="journal-phin.html">The Phin and the Falling Rhythm of Time</a></li><li><a href="journal-tu-qua.html">From Coffee Cherry to Flavor</a></li><li><a href="journal-di-linh.html">Di Linh in a Cup of Coffee</a></li><li><a href="tu-vuon-den-ly.html">From Farm to Cup</a></li><li><a href="suc-khoe.html">Coffee and the Body</a></li></ul></div></div></nav></details><details class="mh-l"><summary aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.3 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.3-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>EN</span></summary><div class="mh-lp"><a href="../trai-ca-phe.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="trai-ca-phe.html" hreflang="en" lang="en" aria-current="true">English</a><a href="../ja/trai-ca-phe.html" hreflang="ja" lang="ja">日本語</a><a href="../zh/trai-ca-phe.html" hreflang="zh-Hans" lang="zh-Hans">中文</a></div></details><a class="mh-i" href="tim-kiem.html" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a><a class="mh-i" href="gio-hang.html" aria-label="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="mh-cn" hidden></span></a><a class="mh-go" href="cua-hang.html">Shop</a></div></div>
+
+<div class="wrap">
+<header>
+  <span class="lgw"><img class="lgL" src="../assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div class="brandbar"><span>Devoted to the taste of Di Linh</span></div>
+  <h1>Anatomy of the <em>Cà Sẻ Cherry</em></h1>
+  <p>A ripe coffee cherry has five layers around the bean, plus the stem that joins it to the branch. Tap each part of the picture to see what it is and at which step it is removed. Change the processing method in Figure 2 to see what is left from 100 kg of ripe cherries.</p>
+</header>
+<div class="bench">
+  <div class="card" id="c1">
+    <div class="fighead"><div><b>Figure 1</b> <span>Longitudinal section of a ripe Robusta cherry</span></div><button class="btn small" type="button" id="run" aria-pressed="false">Step through</button></div>
+    <div class="f1">
+      <svg id="fig1" viewBox="0 0 560 604" role="img" aria-labelledby="fig1t"><title id="fig1t">Longitudinal section of a ripe Robusta cherry: stem, skin, pulp, mucilage, parchment, silverskin and two beans lying flat side to flat side</title><g id="lys"><g class="bk"><path class="c-skin2 rg" d="M118 326a176 196 0 1 0 352 0a176 196 0 1 0 -352 0Z"/><path class="gl3" d="M456.6 385A171 191 0 0 1 374.3 494.6"/></g><g class="ly" id="ly1" data-k="1"><path class="c-stem rg" d="M272 130C271 106 277 84 284 67L297 70C291 87 287 108 288 130Z"/><ellipse cx="291" cy="67" rx="9" ry="5" class="c-stem2" transform="rotate(12 291 67)"/></g><g class="ly" id="ly2" data-k="2"><path class="c-skin rg" fill-rule="evenodd" d="M104 318a176 196 0 1 0 352 0a176 196 0 1 0 -352 0ZM112 318a168 188 0 1 0 336 0a168 188 0 1 0 -336 0Z"/><path class="gl" d="M114.7 265.1A172 192 0 0 1 183.8 158.8"/></g><g class="ly" id="ly3" data-k="3"><path class="c-pulp rg" fill-rule="evenodd" d="M112 318a168 188 0 1 0 336 0a168 188 0 1 0 -336 0ZM164 318a116 133 0 1 0 232 0a116 133 0 1 0 -232 0Z"/><path class="fib" d="M404.7 327.9L438.6 330.5M400.2 357.1L432.8 367.3M390.4 384.7L420.4 402M375.8 409.3L401.8 433.1M357 429.9L377.9 459.1M334.8 445.6L349.7 478.9M310.2 455.8L318.5 491.7M284.4 459.9L285.5 496.9M258.3 457.8L252.4 494.3M233.2 449.7L220.4 484M210.1 435.7L191.1 466.4M190.1 416.6L165.6 442.3M174 393.2L145.2 412.9M162.5 366.6L130.6 379.2M156.2 337.8L122.5 342.9M155.3 308.1L121.4 305.5M159.8 278.9L127.2 268.7M169.6 251.3L139.6 234M184.2 226.7L158.2 202.9M203 206.1L182.1 176.9M225.2 190.4L210.3 157.1M249.8 180.2L241.5 144.3M275.6 176.1L274.5 139.1M301.7 178.2L307.6 141.7M326.8 186.3L339.6 152M349.9 200.3L368.9 169.6M369.9 219.4L394.4 193.7M386 242.8L414.8 223.1M397.5 269.4L429.4 256.8M403.8 298.2L437.5 293.1"/></g><g class="ly" id="ly4" data-k="4"><path class="c-muc rg" fill-rule="evenodd" d="M164 318a116 133 0 1 0 232 0a116 133 0 1 0 -232 0ZM280 200A102 118 0 0 0 280 436ZM280 200A102 118 0 0 1 280 436Z"/><path class="gl2" d="M177.6 274.9A109 126 0 0 1 219 213.5"/><path class="gl2 t" d="M232.2 204.8A109 126 0 0 1 253.6 195.7"/></g><g class="ly" id="ly5" data-k="5"><path class="c-parch rg" fill-rule="evenodd" d="M280 200A102 118 0 0 0 280 436ZM274 206A90 112 0 0 0 274 430ZM280 200A102 118 0 0 1 280 436ZM286 206A90 112 0 0 1 286 430Z"/></g><g class="ly" id="ly6" data-k="6"><path class="c-silver rg" fill-rule="evenodd" d="M274 206A90 112 0 0 0 274 430ZM270 210A82 108 0 0 0 270 426ZM286 206A90 112 0 0 1 286 430ZM290 210A82 108 0 0 1 290 426Z"/></g><g class="ly" id="ly7" data-k="7"><path class="c-bean rg" d="M270 210A82 108 0 0 0 270 426ZM290 210A82 108 0 0 1 290 426Z"/><ellipse class="c-bean2" cx="222" cy="282" rx="12" ry="34"/><ellipse class="c-bean2" cx="338" cy="282" rx="12" ry="34"/><path class="cut" d="M261 234C253 288 267 348 259 402M299 234C307 288 293 348 301 402"/></g></g><g id="mks"><path class="ld" data-k="1" d="M342.1 75.6L287 98"/><circle class="dot" data-k="1" cx="287" cy="98" r="2.6"/><path class="ld" data-k="2" d="M497.8 172.7L415.5 199.8"/><circle class="dot" data-k="2" cx="415.5" cy="199.8" r="2.6"/><path class="ld" data-k="3" d="M505 318L422 318"/><circle class="dot" data-k="3" cx="422" cy="318" r="2.6"/><path class="ld" data-k="4" d="M505.5 440.2L360.8 402"/><circle class="dot" data-k="4" cx="360.8" cy="402" r="2.6"/><path class="ld" data-k="5" d="M54.6 229.4L193.1 262"/><circle class="dot" data-k="5" cx="193.1" cy="262" r="2.6"/><path class="ld" data-k="6" d="M54.9 334L190.2 352"/><circle class="dot" data-k="6" cx="190.2" cy="352" r="2.6"/><path class="ld" data-k="7" d="M54.8 441.5L238 410"/><circle class="dot" data-k="7" cx="238" cy="410" r="2.6"/><g class="mk" data-k="1"><circle class="hit" cx="356" cy="70" r="26"/><circle cx="356" cy="70" r="15"/><text x="356" y="70">1</text></g><g class="mk" data-k="2"><circle class="hit" cx="512" cy="168" r="26"/><circle cx="512" cy="168" r="15"/><text x="512" y="168">2</text></g><g class="mk" data-k="3"><circle class="hit" cx="520" cy="318" r="26"/><circle cx="520" cy="318" r="15"/><text x="520" y="318">3</text></g><g class="mk" data-k="4"><circle class="hit" cx="520" cy="444" r="26"/><circle cx="520" cy="444" r="15"/><text x="520" y="444">4</text></g><g class="mk" data-k="5"><circle class="hit" cx="40" cy="226" r="26"/><circle cx="40" cy="226" r="15"/><text x="40" y="226">5</text></g><g class="mk" data-k="6"><circle class="hit" cx="40" cy="332" r="26"/><circle cx="40" cy="332" r="15"/><text x="40" y="332">6</text></g><g class="mk" data-k="7"><circle class="hit" cx="40" cy="444" r="26"/><circle cx="40" cy="444" r="15"/><text x="40" y="444">7</text></g></g><image class="lgL" href="../assets/logo-mau.png" x="398" y="552" width="146" height="46.6"/><image class="lgD" href="../assets/logo-kem.png" x="398" y="552" width="146" height="46.6"/></svg>
+      <div class="f1r">
+        <div class="parts" id="parts" role="group" aria-label="Choose a part of the cherry"><button type="button" data-k="1" aria-pressed="false"><i style="--c:var(--stem)"></i><b>1</b><span>Stem<small>pedicel</small></span></button><button type="button" data-k="2" aria-pressed="false"><i style="--c:var(--skin)"></i><b>2</b><span>Skin<small>exocarp</small></span></button><button type="button" data-k="3" aria-pressed="false"><i style="--c:var(--pulp)"></i><b>3</b><span>Pulp<small>mesocarp</small></span></button><button type="button" data-k="4" aria-pressed="false"><i style="--c:var(--muc)"></i><b>4</b><span>Mucilage<small>pectin layer</small></span></button><button type="button" data-k="5" aria-pressed="false"><i style="--c:var(--parch)"></i><b>5</b><span>Parchment<small>endocarp</small></span></button><button type="button" data-k="6" aria-pressed="false"><i style="--c:var(--silver)"></i><b>6</b><span>Silverskin<small>spermoderm</small></span></button><button type="button" data-k="7" aria-pressed="false"><i style="--c:var(--bean)"></i><b>7</b><span>Bean<small>endosperm</small></span></button></div>
+        <div id="detail" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <aside class="card ctl" id="c2">
+    <div class="fighead"><div><b>Figure 2</b> <span>What's left of 100 kg of ripe cherries</span></div></div>
+    <div class="row mtog" id="mtog" role="group" aria-label="Processing method"><button class="pill" type="button" data-m="washed" aria-pressed="true">Washed</button><button class="pill" type="button" data-m="honey" aria-pressed="false">Honey</button><button class="pill" type="button" data-m="natural" aria-pressed="false">Natural</button></div>
+    <p class="msum">100 kg of ripe cherries leaves about <b>18 kg of green coffee</b> and <b>14.4 kg of roasted coffee</b>, enough for about 57 packs of 250 g. All three methods give the same amount of green coffee; they differ in which layer is removed before drying.</p>
+    <div id="mass"><div class="mrow" data-i="0" role="button" tabindex="0"><span>Ripe cherries</span><span class="mbar"><i style="width:100.00%"></i><u style="left:100.00%;width:0.00%;--c:transparent"></u></span><b>100 kg</b><small>brought to the mill the same day</small></div><div class="mrow" data-i="1" role="button" tabindex="0"><span>Float sorting</span><span class="mbar"><i style="width:95.00%"></i><u style="left:95.00%;width:5.00%;--c:var(--skin2)"></u></span><b>95 kg</b><small><em style="--c:var(--skin2)"></em>remove 5 kg of floaters</small></div><div class="mrow" data-i="2" role="button" tabindex="0"><span>Fresh pulping</span><span class="mbar"><i style="width:57.00%"></i><u style="left:57.00%;width:38.00%;--c:var(--skin)"></u></span><b>57 kg</b><small><em style="--c:var(--skin)"></em>remove 38 kg of skin and pulp</small></div><div class="mrow" data-i="3" role="button" tabindex="0"><span>Fermentation</span><span class="mbar"><i style="width:53.00%"></i><u style="left:53.00%;width:4.00%;--c:var(--muc)"></u></span><b>53 kg</b><small><em style="--c:var(--muc)"></em>lose 4 kg of mucilage, water and CO₂</small></div><div class="mrow" data-i="4" role="button" tabindex="0"><span>Washing</span><span class="mbar"><i style="width:45.00%"></i><u style="left:45.00%;width:8.00%;--c:var(--muc)"></u></span><b>45 kg</b><small><em style="--c:var(--muc)"></em>remove 8 kg of mucilage and wash water</small></div><div class="mrow" data-i="5" role="button" tabindex="0"><span>Drying</span><span class="mbar"><i style="width:22.50%"></i><u style="left:22.50%;width:22.50%;--c:var(--water)"></u></span><b>22.5 kg</b><small><em style="--c:var(--water)"></em>22.5 kg of water evaporates, leaving dry parchment at 11% moisture</small></div><div class="mrow" data-i="6" role="button" tabindex="0"><span>Hulling</span><span class="mbar"><i style="width:18.00%"></i><u style="left:18.00%;width:4.50%;--c:var(--parch)"></u></span><b>18 kg</b><small><em style="--c:var(--parch)"></em>remove 4.5 kg of parchment</small></div><div class="mrow prod" data-i="7" role="button" tabindex="0"><span>Defect sorting</span><span class="mbar"><i style="width:17.10%"></i><u style="left:17.10%;width:0.90%;--c:var(--bean)"></u></span><b>17.1 kg</b><small><em style="--c:var(--bean)"></em>remove 0.9 kg of defective beans</small></div><div class="mrow prod" data-i="8" role="button" tabindex="0"><span>Roasting</span><span class="mbar"><i style="width:14.36%"></i><u style="left:14.36%;width:2.74%;--c:var(--chaff)"></u></span><b>14.4 kg</b><small><em style="--c:var(--chaff)"></em>2.7 kg of water and silverskin lost in roasting</small></div><div class="mrow prod fin"><span>Finished product</span><span></span><b>57 packs</b><small>250 g packs, about 800 cups at 18 g</small></div></div>
+    <p class="src">Estimated with the model on MeDili's <a href="len-men-men-bia.html">Fermentation with Brewer's Yeast</a> page. Real figures depend on ripeness, moisture and the individual lot. Tap a row to see the removed layer in Figure 1.</p>
+  </aside>
+</div>
+
+<section class="card" id="bay-phan">
+  <h2>Seven parts, from outside in</h2>
+  <p class="lead">Skin, pulp, mucilage, parchment and silverskin are the five layers around the bean. Together with the stem, they make up the seven numbered parts in Figure 1.</p>
+  <ol class="sop"><li data-k="1"><span class="n">1</span><div><h3><i class="swc" style="--c:var(--stem)"></i>Stem <small>pedicel</small></h3><p>Coffee cherries grow in clusters close to the branch nodes, each held by a very short stem. One cluster usually has ripe, half-ripe and green cherries, so good picking means taking ripe cherries one by one. Stripping the whole cluster mixes green cherries into the batch, and the cup turns astringent and pungent.</p><button type="button" class="see" data-k="1">See it in Figure 1</button></div><div class="x"><span class="lbl">At MeDili</span><p>The MeDili farm calendar splits the harvest into 3 rounds, from November to early January, with at most 5% green cherries per batch.</p></div></li><li data-k="2"><span class="n">2</span><div><h3><i class="swc" style="--c:var(--skin)"></i>Skin <small>exocarp</small></h3><p>The outermost layer is thin and tough, turning from green to yellow and then red as it ripens. The skin holds water in the pulp and keeps out insects and mold. When whole cherries are dried, the skin dries into a dark, brittle layer that seals in the bean.</p><button type="button" class="see" data-k="2">See it in Figure 1</button></div><div class="x"><span class="lbl">At MeDili</span><p>Skin color is the first gauge for choosing cherries. At the float-sorting station, floaters rise to the surface and are skimmed off.</p></div></li><li data-k="3"><span class="n">3</span><div><h3><i class="swc" style="--c:var(--pulp)"></i>Pulp <small>mesocarp</small></h3><p>Just under the skin is the sweet, juicy flesh. Skin and pulp make up about 40% of the fresh cherry's weight. In MeDili's model, 95 kg of sorted cherries becomes 57 kg after pulping. The pulper squeezes the cherries through a narrow gap; the skin and pulp burst off, and the beans, still coated in mucilage, slip through.</p><button type="button" class="see" data-k="3">See it in Figure 1</button></div><div class="x"><span class="lbl">At MeDili</span><p>After pulping, the skin and pulp go to the compost shed and become organic fertilizer for the farm.</p></div></li><li data-k="4"><span class="n">4</span><div><h3><i class="swc" style="--c:var(--muc)"></i>Mucilage <small>pectin layer</small></h3><p>Clinging to the parchment is a clear, slippery gel rich in pectin and sugar. Water can't wash this layer off. In the fermentation tank, yeasts and microbes eat the sugar and break down the pectin, producing acids and many aroma compounds. How much mucilage is kept is what separates Washed, Honey and Natural.</p><button type="button" class="see" data-k="4">See it in Figure 1</button></div><div class="x"><span class="lbl">At MeDili</span><p>The Premium line is fermented Honey or Washed style to bring out fruit aromas. The Classic line is Natural-processed Robusta.</p></div></li><li data-k="5"><span class="n">5</span><div><h3><i class="swc" style="--c:var(--parch)"></i>Parchment <small>endocarp</small></h3><p>Each bean sits in a hard, paper-thin, straw-colored shell. This layer keeps the bean intact during drying and storage. Beans still in this shell are called parchment coffee. During hulling, the parchment cracks and is blown away.</p><button type="button" class="see" data-k="5">See it in Figure 1</button></div><div class="x"><span class="lbl">At MeDili</span><p>The aspirator before the roaster sucks the last bits of parchment and dust into the cyclone dust separator.</p></div></li><li data-k="6"><span class="n">6</span><div><h3><i class="swc" style="--c:var(--silver)"></i>Silverskin <small>spermoderm</small></h3><p>Right against the bean is a very thin silvery film that even tucks into the center cut. A little comes off during hulling or polishing; most goes into the roaster with the bean. As the bean expands in the drum, the silverskin flakes off as light chaff.</p><button type="button" class="see" data-k="6">See it in Figure 1</button></div><div class="x"><span class="lbl">At MeDili</span><p>The roaster's fan pulls smoke and chaff into the cyclone dust separator, keeping the batch clean.</p></div></li><li data-k="7"><span class="n">7</span><div><h3><i class="swc" style="--c:var(--bean)"></i>Bean <small>endosperm</small></h3><p>The core is the seed, hard and gray-yellow when raw. Usually each cherry holds two beans lying flat side to flat side, each flat side with a groove down the middle. Green coffee contains sugars, acids, proteins and caffeine. The heat of roasting turns them into hundreds of compounds that make up the flavor in the cup.</p><button type="button" class="see" data-k="7">See it in Figure 1</button></div><div class="x"><span class="lbl">At MeDili</span><p>Roasted at the Di Linh roastery, in 8 levels from Cinnamon to Italian.</p></div></li></ol>
+</section>
+
+<section class="card" id="so-che">
+  <h2>Which layers make Natural, Honey and Washed different</h2>
+  <p class="lead">All three start from the same ripe cherry. They differ in which layers still cling to the bean when it goes out to dry. Dashed lines show what has been removed.</p>
+  <div class="trio"><figure><svg viewBox="86 44 400 494" aria-hidden="true"><g class="bk"><path class="c-skin2 rg" d="M118 326a176 196 0 1 0 352 0a176 196 0 1 0 -352 0Z"/><path class="gl3" d="M456.6 385A171 191 0 0 1 374.3 494.6"/></g><g class="ly"><path class="c-stem rg" d="M272 130C271 106 277 84 284 67L297 70C291 87 287 108 288 130Z"/><ellipse cx="291" cy="67" rx="9" ry="5" class="c-stem2" transform="rotate(12 291 67)"/></g><g class="ly"><path class="c-skin rg" fill-rule="evenodd" d="M104 318a176 196 0 1 0 352 0a176 196 0 1 0 -352 0ZM112 318a168 188 0 1 0 336 0a168 188 0 1 0 -336 0Z"/><path class="gl" d="M114.7 265.1A172 192 0 0 1 183.8 158.8"/></g><g class="ly"><path class="c-pulp rg" fill-rule="evenodd" d="M112 318a168 188 0 1 0 336 0a168 188 0 1 0 -336 0ZM164 318a116 133 0 1 0 232 0a116 133 0 1 0 -232 0Z"/><path class="fib" d="M404.7 327.9L438.6 330.5M400.2 357.1L432.8 367.3M390.4 384.7L420.4 402M375.8 409.3L401.8 433.1M357 429.9L377.9 459.1M334.8 445.6L349.7 478.9M310.2 455.8L318.5 491.7M284.4 459.9L285.5 496.9M258.3 457.8L252.4 494.3M233.2 449.7L220.4 484M210.1 435.7L191.1 466.4M190.1 416.6L165.6 442.3M174 393.2L145.2 412.9M162.5 366.6L130.6 379.2M156.2 337.8L122.5 342.9M155.3 308.1L121.4 305.5M159.8 278.9L127.2 268.7M169.6 251.3L139.6 234M184.2 226.7L158.2 202.9M203 206.1L182.1 176.9M225.2 190.4L210.3 157.1M249.8 180.2L241.5 144.3M275.6 176.1L274.5 139.1M301.7 178.2L307.6 141.7M326.8 186.3L339.6 152M349.9 200.3L368.9 169.6M369.9 219.4L394.4 193.7M386 242.8L414.8 223.1M397.5 269.4L429.4 256.8M403.8 298.2L437.5 293.1"/></g><g class="ly"><path class="c-muc rg" fill-rule="evenodd" d="M164 318a116 133 0 1 0 232 0a116 133 0 1 0 -232 0ZM280 200A102 118 0 0 0 280 436ZM280 200A102 118 0 0 1 280 436Z"/><path class="gl2" d="M177.6 274.9A109 126 0 0 1 219 213.5"/><path class="gl2 t" d="M232.2 204.8A109 126 0 0 1 253.6 195.7"/></g><g class="ly"><path class="c-parch rg" fill-rule="evenodd" d="M280 200A102 118 0 0 0 280 436ZM274 206A90 112 0 0 0 274 430ZM280 200A102 118 0 0 1 280 436ZM286 206A90 112 0 0 1 286 430Z"/></g><g class="ly"><path class="c-silver rg" fill-rule="evenodd" d="M274 206A90 112 0 0 0 274 430ZM270 210A82 108 0 0 0 270 426ZM286 206A90 112 0 0 1 286 430ZM290 210A82 108 0 0 1 290 426Z"/></g><g class="ly"><path class="c-bean rg" d="M270 210A82 108 0 0 0 270 426ZM290 210A82 108 0 0 1 290 426Z"/><ellipse class="c-bean2" cx="222" cy="282" rx="12" ry="34"/><ellipse class="c-bean2" cx="338" cy="282" rx="12" ry="34"/><path class="cut" d="M261 234C253 288 267 348 259 402M299 234C307 288 293 348 301 402"/></g></svg><figcaption><b>Natural</b><span>Dried as whole cherries</span><p>Skin, pulp and mucilage dry around the bean and are only removed at hulling. The cup is usually full-bodied and sweet, with ripe-fruit aromas.</p><button type="button" class="see" data-m="natural">See 100 kg of cherries processed this way</button></figcaption></figure><figure><svg viewBox="86 44 400 494" aria-hidden="true"><path class="gh" d="M272 130C271 106 277 84 284 67L297 70C291 87 287 108 288 130Z"/><path class="gh" d="M104 318a176 196 0 1 0 352 0a176 196 0 1 0 -352 0Z"/><g class="ly"><path class="c-muc rg" fill-rule="evenodd" d="M164 318a116 133 0 1 0 232 0a116 133 0 1 0 -232 0ZM280 200A102 118 0 0 0 280 436ZM280 200A102 118 0 0 1 280 436Z"/><path class="gl2" d="M177.6 274.9A109 126 0 0 1 219 213.5"/><path class="gl2 t" d="M232.2 204.8A109 126 0 0 1 253.6 195.7"/></g><g class="ly"><path class="c-parch rg" fill-rule="evenodd" d="M280 200A102 118 0 0 0 280 436ZM274 206A90 112 0 0 0 274 430ZM280 200A102 118 0 0 1 280 436ZM286 206A90 112 0 0 1 286 430Z"/></g><g class="ly"><path class="c-silver rg" fill-rule="evenodd" d="M274 206A90 112 0 0 0 274 430ZM270 210A82 108 0 0 0 270 426ZM286 206A90 112 0 0 1 286 430ZM290 210A82 108 0 0 1 290 426Z"/></g><g class="ly"><path class="c-bean rg" d="M270 210A82 108 0 0 0 270 426ZM290 210A82 108 0 0 1 290 426Z"/><ellipse class="c-bean2" cx="222" cy="282" rx="12" ry="34"/><ellipse class="c-bean2" cx="338" cy="282" rx="12" ry="34"/><path class="cut" d="M261 234C253 288 267 348 259 402M299 234C307 288 293 348 301 402"/></g></svg><figcaption><b>Honey</b><span>Skin and pulp removed, mucilage kept</span><p>The mucilage dries into a sticky, honey-like film around the parchment. The cup is usually sweet and rounded.</p><button type="button" class="see" data-m="honey">See 100 kg of cherries processed this way</button></figcaption></figure><figure><svg viewBox="86 44 400 494" aria-hidden="true"><path class="gh" d="M272 130C271 106 277 84 284 67L297 70C291 87 287 108 288 130Z"/><path class="gh" d="M104 318a176 196 0 1 0 352 0a176 196 0 1 0 -352 0Z"/><path class="gh" d="M164 318a116 133 0 1 0 232 0a116 133 0 1 0 -232 0Z"/><g class="ly"><path class="c-parch rg" fill-rule="evenodd" d="M280 200A102 118 0 0 0 280 436ZM274 206A90 112 0 0 0 274 430ZM280 200A102 118 0 0 1 280 436ZM286 206A90 112 0 0 1 286 430Z"/></g><g class="ly"><path class="c-silver rg" fill-rule="evenodd" d="M274 206A90 112 0 0 0 274 430ZM270 210A82 108 0 0 0 270 426ZM286 206A90 112 0 0 1 286 430ZM290 210A82 108 0 0 1 290 426Z"/></g><g class="ly"><path class="c-bean rg" d="M270 210A82 108 0 0 0 270 426ZM290 210A82 108 0 0 1 290 426Z"/><ellipse class="c-bean2" cx="222" cy="282" rx="12" ry="34"/><ellipse class="c-bean2" cx="338" cy="282" rx="12" ry="34"/><path class="cut" d="M261 234C253 288 267 348 259 402M299 234C307 288 293 348 301 402"/></g></svg><figcaption><b>Washed</b><span>Fermented, mucilage washed off</span><p>Only the parchment covers the bean when it dries. The cup is usually clean, with clear, bright acidity.</p><button type="button" class="see" data-m="washed">See 100 kg of cherries processed this way</button></figcaption></figure></div>
+  <p class="mnote">At MeDili, the Classic line is Natural-processed Robusta. The Premium line is fermented Honey or Washed style to bring out fruit aromas. See each station in <a href="len-men-men-bia.html">Fermentation with Brewer's Yeast</a> and <a href="len-men-trai-cay.html">Co-fermentation with Fruit</a>.</p>
+</section>
+
+<section class="card culi" id="culi">
+  <div class="duo">
+    <figure><svg viewBox="70 80 530 420" aria-hidden="true"><g transform="translate(26 54) scale(.78)"><g class="bk"><path class="c-skin2 rg" d="M118 326a176 196 0 1 0 352 0a176 196 0 1 0 -352 0Z"/><path class="gl3" d="M456.6 385A171 191 0 0 1 374.3 494.6"/></g><g class="ly"><path class="c-stem rg" d="M272 130C271 106 277 84 284 67L297 70C291 87 287 108 288 130Z"/><ellipse cx="291" cy="67" rx="9" ry="5" class="c-stem2" transform="rotate(12 291 67)"/></g><g class="ly"><path class="c-skin rg" fill-rule="evenodd" d="M104 318a176 196 0 1 0 352 0a176 196 0 1 0 -352 0ZM112 318a168 188 0 1 0 336 0a168 188 0 1 0 -336 0Z"/><path class="gl" d="M114.7 265.1A172 192 0 0 1 183.8 158.8"/></g><g class="ly"><path class="c-pulp rg" fill-rule="evenodd" d="M112 318a168 188 0 1 0 336 0a168 188 0 1 0 -336 0ZM164 318a116 133 0 1 0 232 0a116 133 0 1 0 -232 0Z"/><path class="fib" d="M404.7 327.9L438.6 330.5M400.2 357.1L432.8 367.3M390.4 384.7L420.4 402M375.8 409.3L401.8 433.1M357 429.9L377.9 459.1M334.8 445.6L349.7 478.9M310.2 455.8L318.5 491.7M284.4 459.9L285.5 496.9M258.3 457.8L252.4 494.3M233.2 449.7L220.4 484M210.1 435.7L191.1 466.4M190.1 416.6L165.6 442.3M174 393.2L145.2 412.9M162.5 366.6L130.6 379.2M156.2 337.8L122.5 342.9M155.3 308.1L121.4 305.5M159.8 278.9L127.2 268.7M169.6 251.3L139.6 234M184.2 226.7L158.2 202.9M203 206.1L182.1 176.9M225.2 190.4L210.3 157.1M249.8 180.2L241.5 144.3M275.6 176.1L274.5 139.1M301.7 178.2L307.6 141.7M326.8 186.3L339.6 152M349.9 200.3L368.9 169.6M369.9 219.4L394.4 193.7M386 242.8L414.8 223.1M397.5 269.4L429.4 256.8M403.8 298.2L437.5 293.1"/></g><g class="ly"><path class="c-muc rg" fill-rule="evenodd" d="M164 318a116 133 0 1 0 232 0a116 133 0 1 0 -232 0ZM280 200A102 118 0 0 0 280 436ZM280 200A102 118 0 0 1 280 436Z"/><path class="gl2" d="M177.6 274.9A109 126 0 0 1 219 213.5"/><path class="gl2 t" d="M232.2 204.8A109 126 0 0 1 253.6 195.7"/></g><g class="ly"><path class="c-parch rg" fill-rule="evenodd" d="M280 200A102 118 0 0 0 280 436ZM274 206A90 112 0 0 0 274 430ZM280 200A102 118 0 0 1 280 436ZM286 206A90 112 0 0 1 286 430Z"/></g><g class="ly"><path class="c-silver rg" fill-rule="evenodd" d="M274 206A90 112 0 0 0 274 430ZM270 210A82 108 0 0 0 270 426ZM286 206A90 112 0 0 1 286 430ZM290 210A82 108 0 0 1 290 426Z"/></g><g class="ly"><path class="c-bean rg" d="M270 210A82 108 0 0 0 270 426ZM290 210A82 108 0 0 1 290 426Z"/><ellipse class="c-bean2" cx="222" cy="282" rx="12" ry="34"/><ellipse class="c-bean2" cx="338" cy="282" rx="12" ry="34"/><path class="cut" d="M261 234C253 288 267 348 259 402M299 234C307 288 293 348 301 402"/></g></g><path class="arr" d="M404 252h30m-9-8 9 8-9 8"/><g transform="rotate(-8 478 236)"><ellipse class="c-bean rg" cx="478" cy="236" rx="32" ry="46"/><ellipse class="c-bean2" cx="464.6" cy="224.5" rx="6.4" ry="20.7"/><path class="cut" d="M478 197C495.6 219.9 460.4 252.1 478 275"/></g><g transform="rotate(10 550 272)"><ellipse class="c-bean rg" cx="550" cy="272" rx="32" ry="46"/><ellipse class="c-bean2" cx="536.6" cy="260.5" rx="6.4" ry="20.7"/><path class="cut" d="M550 233C567.6 255.9 532.4 288.1 550 311"/></g></svg><figcaption><b>Two-bean cherry</b>two flat beans, each flat side with a center groove</figcaption></figure>
+    <figure><svg viewBox="70 80 530 420" aria-hidden="true"><g transform="translate(26 54) scale(.78)"><path class="c-skin2 rg" d="M118 326a176 196 0 1 0 352 0a176 196 0 1 0 -352 0Z"/><path class="gl3" d="M456.6 385A171 191 0 0 1 374.3 494.6"/><path class="c-stem rg" d="M272 130C271 106 277 84 284 67L297 70C291 87 287 108 288 130Z"/><ellipse cx="291" cy="67" rx="9" ry="5" class="c-stem2" transform="rotate(12 291 67)"/><path class="c-skin rg" fill-rule="evenodd" d="M104 318a176 196 0 1 0 352 0a176 196 0 1 0 -352 0ZM112 318a168 188 0 1 0 336 0a168 188 0 1 0 -336 0Z"/><path class="gl" d="M114.7 265.1A172 192 0 0 1 183.8 158.8"/><path class="c-pulp rg" fill-rule="evenodd" d="M112 318a168 188 0 1 0 336 0a168 188 0 1 0 -336 0ZM164 318a116 133 0 1 0 232 0a116 133 0 1 0 -232 0Z"/><path class="fib" d="M404.7 327.9L438.6 330.5M400.2 357.1L432.8 367.3M390.4 384.7L420.4 402M375.8 409.3L401.8 433.1M357 429.9L377.9 459.1M334.8 445.6L349.7 478.9M310.2 455.8L318.5 491.7M284.4 459.9L285.5 496.9M258.3 457.8L252.4 494.3M233.2 449.7L220.4 484M210.1 435.7L191.1 466.4M190.1 416.6L165.6 442.3M174 393.2L145.2 412.9M162.5 366.6L130.6 379.2M156.2 337.8L122.5 342.9M155.3 308.1L121.4 305.5M159.8 278.9L127.2 268.7M169.6 251.3L139.6 234M184.2 226.7L158.2 202.9M203 206.1L182.1 176.9M225.2 190.4L210.3 157.1M249.8 180.2L241.5 144.3M275.6 176.1L274.5 139.1M301.7 178.2L307.6 141.7M326.8 186.3L339.6 152M349.9 200.3L368.9 169.6M369.9 219.4L394.4 193.7M386 242.8L414.8 223.1M397.5 269.4L429.4 256.8M403.8 298.2L437.5 293.1"/><path class="c-muc rg" fill-rule="evenodd" d="M164 318a116 133 0 1 0 232 0a116 133 0 1 0 -232 0ZM188 318a92 118 0 1 0 184 0a92 118 0 1 0 -184 0Z"/><path class="gl2" d="M177.6 274.9A109 126 0 0 1 219 213.5"/><path class="c-parch rg" fill-rule="evenodd" d="M188 318a92 118 0 1 0 184 0a92 118 0 1 0 -184 0ZM196 318a84 110 0 1 0 168 0a84 110 0 1 0 -168 0Z"/><path class="c-silver rg" fill-rule="evenodd" d="M196 318a84 110 0 1 0 168 0a84 110 0 1 0 -168 0ZM200 318a80 106 0 1 0 160 0a80 106 0 1 0 -160 0Z"/><path class="c-bean rg" d="M200 318a80 106 0 1 0 160 0a80 106 0 1 0 -160 0Z"/><ellipse class="c-bean2" cx="246" cy="278" rx="14" ry="36"/><path class="cut" d="M284 238C292 292 274 344 282 398"/></g><path class="arr" d="M404 252h30m-9-8 9 8-9 8"/><g transform="rotate(6 516 252)"><ellipse class="c-bean rg" cx="516" cy="252" rx="40" ry="46"/><ellipse class="c-bean2" cx="499.2" cy="240.5" rx="8" ry="20.7"/><path class="cut" d="M523.2 216C528.8 242.8 528.8 261.2 523.2 288"/></g></svg><figcaption><b>One-bean cherry</b>a single round bean, called culi</figcaption></figure>
+  </div>
+  <div>
+    <h2>Two beans or one</h2>
+    <p>Usually each cherry nurtures two beans lying flat side to flat side, which is why a coffee bean has one flat side with a groove down the middle. About 5–10% of cherries nurture only one bean. That bean grows to fill the whole cavity, evenly round, and is called culi coffee.</p>
+    <p>Round beans tumble in the roasting drum differently from flat ones, so culi is usually screened out and roasted as a separate batch. MeDili selects culi separately, lot by lot.</p>
+    <a class="btn main" href="mua-hang.html">See Culi coffee</a>
+  </div>
+</section>
+
+<section id="doc-tiep">
+  <h2>Follow a bean's journey</h2>
+  <div class="journey">
+    <a href="vuon.html"><img src="../assets/vuon.jpg" alt="" loading="lazy" width="900" height="606"><b>The Farm in 12 Months</b><span>Caring for Robusta Cà Sẻ naturally, from fertilizing to harvest.</span></a> <a href="len-men-men-bia.html"><img src="../assets/men-bia.jpg" alt="" loading="lazy" width="900" height="606"><b>Fermentation with Brewer's Yeast</b><span>A 7-station machine with Washed, Honey and Natural.</span></a> <a href="rang.html"><img src="../assets/rang.jpg" alt="" loading="lazy" width="900" height="606"><b>Sorting and roasting</b><span>8 roast levels, heat curves and the roast sheet.</span></a>
+  </div>
+</section>
+
+<section class="card src"><p style="margin:0;font-size:.88rem;color:var(--muted);max-width:110ch"><b style="color:var(--ink)">Compiled from multiple sources.</b></p></section>
+
+<section class="contact" id="lien-he">
+  <div>
+    <img class="lgK" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83">
+    <div class="tagline">Devoted to the taste of Di Linh</div>
+    <p>Di Linh-origin coffee from MeDili Coffee Farm. Contact us on Zalo to learn about the farm and the coffee.</p>
+  </div>
+  <div class="zalo">
+    <span>Zalo MeDili</span> <strong id="zaloNo">0966 770 788</strong>
+    <div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Message on Zalo</a><button type="button" id="copyZalo">Copy number</button></div>
+    <small id="zaloMsg" role="status"></small>
+  </div>
+</section>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const P=[{"k": 1, "n": "Stem", "en": "stem", "c": "var(--stem)", "role": "The short stem that holds the cherry on the branch node. Fully ripe cherries come off the stem more easily than green ones.", "out": "At picking, then cherry sorting"}, {"k": 2, "n": "Skin", "en": "exocarp", "c": "var(--skin)", "role": "The thin outermost skin, turning from green to red as it ripens, holding in water and shielding the flesh inside.", "out": "Fresh pulping for Washed and Honey. Dry hulling for Natural."}, {"k": 3, "n": "Pulp", "en": "mesocarp, pulp", "c": "var(--pulp)", "role": "The sweet, juicy flesh just under the skin, full of sugar and water.", "out": "Fresh pulping for Washed and Honey. Dry hulling for Natural."}, {"k": 4, "n": "Mucilage", "en": "mucilage", "c": "var(--muc)", "role": "A clear, slippery gel rich in pectin and sugar, clinging tightly to the parchment.", "out": "Fermented and then washed for Washed. Honey and Natural let the mucilage dry on the bean."}, {"k": 5, "n": "Parchment", "en": "parchment", "c": "var(--parch)", "role": "A hard, paper-thin shell wrapping each bean separately.", "out": "Hulling, before selling green coffee or roasting"}, {"k": 6, "n": "Silverskin", "en": "silverskin", "c": "var(--silver)", "role": "A very thin silvery film hugging the bean surface, even tucked into the center cut.", "out": "A little at hulling, most during roasting"}, {"k": 7, "n": "Bean", "en": "green bean", "c": "var(--bean)", "role": "The core that gets roasted, ground and brewed. Usually each cherry holds two beans lying flat side to flat side.", "out": "Roasting, grinding, brewing"}];
+const MS={washed:[1,.95,.57,.53,.45,.225,.18],honey:[1,.95,.57,.55,.55,.25,.18],natural:[1,.95,.95,.93,.93,.33,.18]};
+const DRY={washed:'dry parchment',honey:'dry parchment with its honey layer',natural:'dried cherries'};
+const MN={washed:'Washed',honey:'Honey',natural:'Natural'};
+const STEPS=['Ripe cherry','Float sorting','Fresh pulping','Fermentation','Washing','Drying','Hulling','Defect sorting','Roast'];
+const fm=n=>{const r=Math.round(n*10)/10;return Number.isInteger(r)?String(r):r.toFixed(1)};
+function note(m,i,d){const D=fm(d)+' kg';
+ switch(i){
+  case 0:return ['brought to the mill the same day','',[]];
+  case 1:return [`remove ${D} of floaters`,'var(--skin2)',[]];
+  case 2:return m==='natural'?['not pulped, kept as whole cherries','',[]]:[`remove ${D} of skin and pulp`,'var(--skin)',[2,3]];
+  case 3:return [m==='washed'?`lose ${D} of mucilage, water and CO₂`:`lose ${D} of water and CO₂`,'var(--muc)',m==='natural'?[3,4]:[4]];
+  case 4:return m==='washed'?[`remove ${D} of mucilage and wash water`,'var(--muc)',[4]]:[m==='honey'?'not washed, mucilage kept':'not washed','',[]];
+  case 5:return [`${D} of water evaporates, leaving ${DRY[m]} at 11% moisture`,'var(--water)',[]];
+  case 6:return [{washed:`remove ${D} of parchment`,honey:`remove ${D} of parchment and dried honey layer`,natural:`remove ${D} of dried husk: skin, pulp, mucilage and parchment`}[m],m==='natural'?'var(--husk)':'var(--parch)',{washed:[5],honey:[4,5],natural:[2,3,4,5]}[m]];
+  case 7:return [`remove ${D} of defective beans`,'var(--bean)',[7]];
+  default:return [`${D} of water and silverskin lost in roasting`,'var(--chaff)',[6]];
+ }}
+function rows(m){const v=MS[m].map(x=>x*100),g=v[6];v.push(g*.95,g*.95*.84);
+ return STEPS.map((n,i)=>{const p=i?v[i-1]:v[0],[o,c,ly]=note(m,i,p-v[i]);return {i,n,v:v[i],p,o,c,ly}})}
+let method='washed',sel=new Set(),src=null,step=null,timer=null;
+const fig=$('fig1'),lys=$('lys');
+function paint(){
+ fig.classList.toggle('sel',sel.size>0);
+ if(!sel.size)[1,2,3,4,5,6,7].forEach(k=>lys.appendChild($('ly'+k)));
+ fig.querySelectorAll('.ly').forEach(g=>{const k=+g.dataset.k,on=sel.has(k);g.classList.toggle('on',on);if(on&&k>1)lys.appendChild(g)});
+ fig.querySelector('.bk').classList.toggle('on',sel.has(2));
+ fig.querySelectorAll('.mk,.ld,.dot').forEach(e=>e.classList.toggle('on',sel.has(+e.dataset.k)));
+ document.querySelectorAll('#parts button').forEach(b=>b.setAttribute('aria-pressed',String(sel.has(+b.dataset.k))));
+ document.querySelectorAll('#bay-phan li').forEach(l=>l.classList.toggle('on',src==='part'&&sel.has(+l.dataset.k)));
+ document.querySelectorAll('#mass .mrow').forEach(r=>r.classList.toggle('on',src==='step'&&+r.dataset.i===step));
+ detail();
+}
+function detail(){
+ const d=$('detail');
+ if(src==='part'&&sel.size===1){const p=P[[...sel][0]-1];
+  d.innerHTML=`<div class="dh"><span class="dn">${p.k}</span><div><h2>${p.n}</h2><small>${p.en}</small></div></div><p>${p.role}</p><dl class="kv"><dt>Removed at</dt><dd>${p.out}</dd></dl>`;return}
+ if(src==='step'){const r=rows(method)[step],names=r.ly.map(k=>P[k-1].n.toLowerCase()).join(', ');
+  d.innerHTML=`<div class="dh"><span class="dn">${step}</span><div><h2>${r.n}</h2><small>${MN[method]} processing, Figure 2</small></div></div><p>From ${fm(r.p)} kg to ${fm(r.v)} kg: ${r.o}.</p>${names?`<dl class="kv"><dt>Layer removed</dt><dd>${names}</dd></dl>`:''}`;return}
+ d.innerHTML=`<div class="dh"><span class="dn">7</span><div><h2>The seven parts of a cherry</h2><small>From outside in</small></div></div><p>Tap a number in the picture or the name of each part to see what it is and at which step it is removed. All five layers from skin to silverskin come off the bean before or during roasting.</p>`;
+}
+function pick(k){stop();if(src==='part'&&sel.size===1&&sel.has(k)){sel=new Set();src=null}else{sel=new Set([k]);src='part'}paint()}
+function stop(){if(timer){clearInterval(timer);timer=null;$('run').textContent='Step through';$('run').setAttribute('aria-pressed','false')}}
+$('run').onclick=()=>{if(timer){stop();return}let k=1;sel=new Set([1]);src='part';paint();$('run').textContent='Stop';$('run').setAttribute('aria-pressed','true');
+ timer=setInterval(()=>{k++;if(k>7){stop();sel=new Set();src=null;paint();return}sel=new Set([k]);src='part';paint()},still?2600:1800)};
+fig.addEventListener('click',e=>{const g=e.target.closest('.ly,.mk');if(g)pick(+g.dataset.k)});
+$('parts').addEventListener('click',e=>{const b=e.target.closest('button');if(b)pick(+b.dataset.k)});
+document.querySelectorAll('#bay-phan .see').forEach(b=>b.onclick=()=>{stop();sel=new Set([+b.dataset.k]);src='part';paint();const r=fig.getBoundingClientRect();if(r.bottom<80||r.top>innerHeight-120)fig.scrollIntoView({behavior:still?'auto':'smooth',block:'center'})});
+function renderMass(){
+ const R=rows(method),box=$('mass');
+ R.forEach(r=>{const row=box.querySelector(`.mrow[data-i="${r.i}"]`);row.querySelector('i').style.width=r.v.toFixed(2)+'%';const u=row.querySelector('u');u.style.left=r.v.toFixed(2)+'%';u.style.width=(r.p-r.v).toFixed(2)+'%';u.style.setProperty('--c',r.c||'transparent');
+  row.querySelector('b').textContent=fm(r.v)+' kg';row.querySelector('small').innerHTML=(r.c?`<em style="--c:${r.c}"></em>`:'')+r.o});
+ document.querySelectorAll('#mtog .pill').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.m===method)));
+ if(src==='step'){sel=new Set(R[step].ly);paint()}
+}
+$('mtog').addEventListener('click',e=>{const b=e.target.closest('.pill');if(!b)return;method=b.dataset.m;renderMass()});
+function pickStep(i){stop();if(src==='step'&&step===i){src=null;step=null;sel=new Set()}else{src='step';step=i;sel=new Set(rows(method)[i].ly)}paint()}
+$('mass').addEventListener('click',e=>{const r=e.target.closest('.mrow[data-i]');if(r)pickStep(+r.dataset.i)});
+$('mass').addEventListener('keydown',e=>{const r=e.target.closest('.mrow[data-i]');if(r&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pickStep(+r.dataset.i)}});
+document.querySelectorAll('.trio .see').forEach(b=>b.onclick=()=>{method=b.dataset.m;renderMass();$('c2').scrollIntoView({behavior:still?'auto':'smooth',block:'start'})});
+const copyTo=async(t,msg,srcEl,done)=>{try{await navigator.clipboard.writeText(t);$(msg).textContent=done}catch(e){const r=document.createRange();r.selectNodeContents($(srcEl));const s=getSelection();s.removeAllRanges();s.addRange(r);$(msg).textContent='The numbers are selected, please copy them yourself.'}};
+$('copyZalo').onclick=()=>copyTo('0966770788','zaloMsg','zaloNo','Zalo number copied.');
+paint();
+</script>
+<footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">There is always time for <em>a good cup of coffee.</em></p><a class="btn main" href="quan-medili.html">Meet at MeDili</a></div><div class="mf-grid"><div class="mf-brand"><b>In love with coffee, in love with Di Linh.</b><span>Preserving a heritage. Treasuring every flavor.</span><small>Di Linh · Lâm Đồng · Vietnam</small></div><nav class="mf-col" aria-label="Explore"><p class="mf-t">Explore</p><a href="cau-chuyen.html">The MeDili Story</a><a href="doi-ngu.html">The MeDili Team</a><a href="vung-trong.html">Di Linh Growing Area</a><a href="anh-vuon.html">MeDili Farm Photos</a><a href="xuong-rang.html">Roastery & Capacity</a><a href="rang.html">Roasting Room</a><a href="huong-dan-pha.html">Brewing Guide</a><a href="quay-pha.html">Brew Bar</a><a href="tim-gu.html">Find Your Coffee Taste</a><a href="cong-thuc-pha.html">Brew Recipe Machine</a><a href="chiet-xuat.html">Extraction Machine</a><a href="cold-brew.html">Cold Brew Machine</a><a href="journal.html">Coffee Knowledge</a></nav><nav class="mf-col" aria-label="MeDili and you"><p class="mf-t">MeDili &amp; You</p><a href="cua-hang.html">MeDili Store</a><a href="mua-hang.html">Buying Room</a><a href="horeca.html">HORECA Solutions</a><a href="dong-hanh-cung-quan.html">Partnering with Cafés</a><a href="nhan-xanh.html">Green Coffee for Wholesale</a><a href="gia-ca-phe.html">Coffee Prices Today</a><a href="quan-medili.html">MeDili Café</a><a href="lien-he.html">Contact & Map</a><a href="chinh-sach.html">MeDili Policies</a><a href="giao-hang.html">Delivery & Returns</a><a href="bao-mat.html">Privacy Policy</a></nav><div class="mf-col"><p class="mf-t">Distribution · DSunfood</p><p>DSunfood Co., Ltd.<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>Farm &amp; roastery<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">Directions to MeDili ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Message MeDili on Zalo ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>MeDili Coffee Farm · Cà Sẻ Di Linh</i></div></div></footer><nav class="fl-c" aria-label="Quick contact with MeDili"><a class="fl-b" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener" aria-label="Message MeDili on Zalo" data-tip="Message MeDili on Zalo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a><a class="fl-b" href="https://www.facebook.com/share/192oMLdBnq/" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a></nav>
+<script>
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'Copied'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='The number is selected, please copy it yourself'}
+setTimeout(()=>{b.textContent=o},2400)}))})();
+window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
+const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};
+const badge=()=>{const n=get().reduce((a,x)=>a+(+x.q||0),0);document.querySelectorAll('.mh-cn').forEach(e=>{e.textContent=n>99?'99+':n;e.hidden=!n})};
+const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badge()};
+const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
+badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
+</script>
+</body></html>

@@ -474,7 +474,7 @@ function renderCart(){
   <div class="calc three" style="margin-top:8px"><label for="nm">Tên, tên quán<input id="nm" type="text" value="${st.nm||''}"></label><label for="ph">Số điện thoại<input id="ph" type="tel" value="${st.ph||''}"></label></div>
   <div class="row"><a class="btn main" id="gf" role="link" tabindex="0" target="_blank" rel="noopener">Gửi đơn cho MeDili</a></div><small id="cpm" role="status" class="src"></small><p class="src">Nhập tên, số điện thoại rồi bấm nút. Phiếu mở ra đã điền sẵn đơn, bạn bấm Gửi ở cuối phiếu.</p>`:''}`;
   $('cart').querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{const i=b.dataset.q;st.cart[i]=Math.max(0,(st.cart[i]||0)+ +b.dataset.d);render()});
-  if(ids.length){const syncOrder=()=>{const g=$('gf'),name=(st.nm||'').trim(),phone=(st.ph||'').replace(/[\s.]/g,''),ok=name&&/^0\d{9,10}$/.test(phone);
+  if(ids.length){const syncOrder=()=>{const g=$('gf'),name=(st.nm||'').trim(),phone=(st.ph||'').replace(/[\s.()-]/g,''),ok=name&&/^(0\d{9,10}|\+\d{8,15})$/.test(phone);
     if(!ok){g.removeAttribute('href');g.style.opacity='.55';return}
     const txt=`ĐƠN MEDILI ${st.code.v}\nKhách: ${name} | ${phone}\nLoại khách: ${st.who==='le'?'Mua lẻ':'Quán, HORECA'}\n${ids.map(i=>`- ${byId(i).full}: ${kgT(st.cart[i])} x ${fm(up(byId(i),t))}.000 đ`).join('\n')}\nTổng ${kgT(tot)}, ${TN[t]}\nTạm tính ${fm(sub)} đ, VAT 8% ${fm(vat)} đ\nTổng dự kiến ${fm(sub+vat)} đ, chưa gồm phí giao`;
     g.href=formUrl({name,phone,txt});g.style.opacity='1'};

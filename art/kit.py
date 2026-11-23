@@ -67,6 +67,7 @@ def _cur(href, current):
 
 
 def header(current):
+    from i18n import lang_menu   # nút chọn ngôn ngữ: Tiếng Việt, English, 日本語, 中文 (24/11/2026)
     prim = ''.join(f'<a href="{h}"{_cur(h, current)}>{t}</a>' for h, t in PRIMARY)
     cols = ''.join('<div class="mh-c"><p class="mh-g">' + g + '</p><ul>' +
                    ''.join(f'<li><a href="{h}"{_cur(h, current)}>{t}</a></li>' for h, t in items) + '</ul></div>' for g, items in GROUPS)
@@ -74,6 +75,7 @@ def header(current):
             f'<nav class="mh-p" aria-label="Mục chính">{prim}</nav>'
             f'<details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></summary>'
             f'<nav class="mh-pan" aria-label="Tất cả trang"><div class="mh-grid">{cols}</div></nav></details>'
+            + lang_menu(current if current.endswith('.html') else 'index.html', 'vi') +
             f'<a class="mh-i" href="tim-kiem.html" aria-label="Tìm kiếm"{_cur("tim-kiem.html", current)}>'
             '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a>'
             f'<a class="mh-i" href="gio-hang.html" aria-label="Giỏ hàng"{_cur("gio-hang.html", current)}>'
@@ -295,6 +297,18 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .pgal>h2{margin:0}
 .pgal>p{margin:0;color:var(--muted);max-width:72ch}
 
+/* chọn ngôn ngữ */
+.mh-l{position:relative;margin:0}
+.mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
+.mh-l>summary::-webkit-details-marker{display:none}
+.mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
+.mh-lp a:hover{background:var(--tint);color:var(--accent)}
+.mh-lp a[aria-current]{color:var(--accent)}
+@media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
 /* nút Zalo, Facebook nổi góc trái bên dưới */
 .fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
 .fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
@@ -470,8 +484,8 @@ svg.pi .fi{fill:var(--accent);stroke:none}
 '''
 
 COMMON_JS = r'''
-(()=>{const m=document.getElementById('mhm');
-if(m){document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
 document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
 document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
 try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'Đã sao chép'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='Đã chọn sẵn số, bạn hãy tự sao chép'}

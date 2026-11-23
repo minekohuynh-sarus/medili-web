@@ -1,0 +1,172 @@
+# rang.html (1)
+24d801555 ||| Roast sheet copied. ||| 焙煎記録票をコピーしました。 ||| 已复制烘焙记录表。
+09f528a02 ||| MeDili Roasting Machine ||| MeDili焙煎マシン ||| MeDili烘焙机
+a8c4edce6 ||| The <1>MeDili Roasting</1> Machine ||| <1>MeDili焙煎</1>マシン ||| <1>MeDili烘焙</1>机
+6136b4992 ||| From green coffee to the finished pack: screen sizing, bean sorting, roasting to each level, degassing and packing. Tap each station to look inside, and choose a roast level to see the heat curve change. ||| 生豆から完成品の袋まで：スクリーンでのサイズ分け、豆の選別、焙煎度ごとの焙煎、ガス抜き、包装。各ステーションを押して中をのぞき、焙煎度を選ぶと熱の曲線が変わります。 ||| 从生豆到成品包装：按筛目分级、选豆、按各烘焙度烘焙、排气和包装。点击各站点查看内部，选择烘焙度可看到温度曲线的变化。
+bac8dbe99 ||| <1>Figure 1</1> <2>An 8-station line, three-dimensional view, illustrative model</2> ||| <1>図1</1> <2>8ステーションのライン、立体図、説明用モデル</2> ||| <1>图1</1> <2>八站生产线，立体视图，示意模型</2>
+3080547ef ||| An 8-station line from screening green coffee to packing roasted coffee. Tap each station for details. ||| 生豆のふるい分けから焙煎豆の包装までの8ステーションのライン。各ステーションを押すと詳細が見られます。 ||| 从生豆过筛到烘焙咖啡包装的八站生产线。点击各站点查看详情。
+e885a7a0a ||| Type of coffee ||| コーヒーの種類 ||| 咖啡种类
+de60d26c6 ||| 4 types ||| 4種類 ||| 4种
+6ead842de ||| Roast level ||| 焙煎度 ||| 烘焙度
+0f6e0c6f6 ||| 8 levels ||| 8段階 ||| 8级
+c05f0ea3f ||| Green coffee input ||| 投入する生豆 ||| 投入生豆
+dd284d5a1 ||| Drum charge temperature ||| ドラムの投入温度 ||| 滚筒入豆温度
+bb11c7b5b ||| Too low makes the roast slow and sluggish. Too high easily scorches the bean surface. ||| 低すぎると焙煎が遅く鈍くなり、高すぎると豆の表面が焦げやすい。 ||| 太低会让烘焙缓慢迟滞；太高容易烧焦豆表。
+626d1c89b ||| Burner power ||| 火力 ||| 火力
+73fd72ce5 ||| Burner level at the start of the batch. The model lowers the flame automatically when the beans turn yellow and at first crack. ||| 焙煎開始時の火力。豆が黄色くなったときと1ハゼのとき、モデルが自動で火を弱めます。 ||| 批次开始时的火力。豆子转黄和一爆时，模型会自动降火。
+1bd4560c9 ||| Batch load ||| 投入量 ||| 装载量
+1c418b9ce ||| Roaster capacity ||| 焙煎機の容量 ||| 烘焙机容量
+4c47c594c ||| kg per batch ||| 1バッチあたりkg ||| 每批公斤
+bb53d0a94 ||| <1>Total time</1><2></2> ||| <1>総時間</1><2></2> ||| <1>总时间</1><2></2>
+1f771bbf2 ||| <1>First crack</1><2></2> ||| <1>1ハゼ</1><2></2> ||| <1>一爆</1><2></2>
+eab620d19 ||| <1>Development time ratio (DTR)</1><2></2> ||| <1>デベロップメントタイム比（DTR）</1><2></2> ||| <1>发展时间比（DTR）</1><2></2>
+cc593924a ||| <1>Drop temperature</1><2></2> ||| <1>釜出し温度</1><2></2> ||| <1>出锅温度</1><2></2>
+7ba14633b ||| Roast curve; drag on the chart to see each second ||| 焙煎の曲線。グラフをドラッグすると1秒ごとに見られます ||| 烘焙曲线，在图上拖动可查看每一秒
+4b8298975 ||| Bean temperature over time ||| 時間ごとの豆温 ||| 豆温随时间变化
+6096905b2 ||| Rate of rise over time ||| 時間ごとの昇温率 ||| 升温速率随时间变化
+164f211cb ||| Moment being viewed ||| 表示中の時点 ||| 当前查看的时间点
+cff368cc3 ||| View the table at 1-minute marks ||| 1分ごとの数値表を見る ||| 查看每1分钟的数据表
+b791bb4f7 ||| 8 roast levels: specs for each level ||| 8段階の焙煎度：各段階の数値 ||| 8个烘焙度：各级参数
+bb82fb662 ||| Tap a row to load that level into the machine. Agtron and temperature vary with the meter and probe, so also use your eyes, nose and tasting to calibrate your own machine. ||| 行を押すと、その焙煎度がマシンに読み込まれます。Agtronと温度は測定器やプローブによって変わるので、目、鼻、テイスティングも使って自分の焙煎機を調整してください。 ||| 点击一行即可把该烘焙度载入机器。Agtron值和温度会因测量仪和探头而异，所以还要用眼睛、鼻子和品尝来校准自己的烘焙机。
+59fbe6c5b ||| Color ||| 色 ||| 颜色
+bbb7c22a7 ||| Level ||| 段階 ||| 级别
+2867435a1 ||| Drop (°C) ||| 釜出し（°C） ||| 出锅（°C）
+8451577d8 ||| Agtron ||| Agtron ||| Agtron
+aa82a6652 ||| Main flavors ||| 主な味 ||| 主要风味
+1095882ad ||| Which product, which coffee, how to roast it ||| どの製品に、どのコーヒーを、どう焙煎するか ||| 哪种成品、哪种咖啡、怎么烘
+6b95960b4 ||| Tap “Load into machine” to bring the recipe up in Figure 1. This is a starting point for the MeDili product line; taste samples to finalize it. ||| 「マシンに読み込む」を押すと、レシピが図1に表示されます。これはMeDili製品ラインの出発点で、サンプルを味わって確定する必要があります。 ||| 点击“载入机器”即可把配方放到图1上。这是MeDili产品线的起点，需要品尝样品后才能确定。
+df307c80e ||| Grind / brew ||| 挽き方・淹れ方 ||| 研磨 / 冲煮
+14b3d3400 ||| Figure 2 is calculated from the weight, type of coffee, roast level and roaster capacity. The share of beans rejected along the line is an estimate and needs re-weighing after the first lot. ||| 図2は、重さ、コーヒーの種類、焙煎度、焙煎機の容量から計算しています。ラインで除かれる豆の割合は推定なので、最初のロットの後に量り直す必要があります。 ||| 图2按重量、咖啡种类、烘焙度和烘焙机容量计算。生产线上剔除豆子的比例是估算值，第一批后需重新称量。
+08b0d3803 ||| Machine run plan ||| 焙煎機の稼働計画 ||| 机器运行计划
+ccb0509df ||| Screening and sorting: screen sizes and defect standards ||| ふるい分けと選別：スクリーンサイズと欠点の基準 ||| 过筛与选豆：筛目和瑕疵标准
+1f025546d ||| Screen sizing helps the beans in a batch roast evenly. Sorting removes defective beans before the heat spreads their smell through the whole batch. ||| サイズ分けをすると、1バッチの豆が均一に焼けます。選別は、熱で欠点豆のにおいがバッチ全体に広がる前に、それを取り除きます。 ||| 按筛目分级让一批豆子烘得均匀。选豆是在火力让瑕疵豆的气味扩散到整批之前把它们剔除。
+7a3f09e56 ||| Screen sizes under TCVN 4193:2014 ||| TCVN 4193:2014によるスクリーンサイズ ||| 依据TCVN 4193:2014的筛目
+e7609a306 ||| Screen no. ||| スクリーン番号 ||| 筛号
+d38038200 ||| Hole size ||| 穴の大きさ ||| 孔径
+823852771 ||| Use at MeDili ||| MeDiliでの用途 ||| 在MeDili的用途
+49c1eb072 ||| No. 18 ||| No. 18 ||| 18号
+e7ff5ee3a ||| 7.10 mm ||| 7.10 mm ||| 7.10毫米
+6f91b8e70 ||| Large size, premium line ||| 大粒、上級ライン ||| 大粒，高端系列
+20af4b61a ||| No. 16 ||| No. 16 ||| 16号
+60abcd096 ||| 6.30 mm ||| 6.30 mm ||| 6.30毫米
+1afa9c023 ||| Main size, phin and espresso ||| 主力サイズ、フィンとエスプレッソ ||| 主力规格，滴滤和意式浓缩
+55b0c0338 ||| No. 14 ||| No. 14 ||| 14号
+3c37aed13 ||| 5.60 mm ||| 5.60 mm ||| 5.60毫米
+4da31497b ||| Medium size, blended into regular phin coffee ||| 中粒、通常のフィン用にブレンド ||| 中粒，混入普通滴滤咖啡
+0d9d7daec ||| No. 13 ||| No. 13 ||| 13号
+121428d8e ||| 5.00 mm ||| 5.00 mm ||| 5.00毫米
+f942e7816 ||| Small size, roasted separately ||| 小粒、別に焙煎 ||| 小粒，单独烘焙
+efad1114d ||| No. 12 ||| No. 12 ||| 12号
+21004bdb1 ||| 4.75 mm ||| 4.75 mm ||| 4.75毫米
+e1dd271ea ||| Passes through; not used in the main line ||| ふるいを通過、主力ラインには使わない ||| 漏筛，不进入主线
+f5c0b56ab ||| Check a sample before accepting a lot ||| ロットを受け入れる前にサンプルを確認 ||| 收货前检查样品
+bc9770dd9 ||| <1>Sample:</1> at least 350 g, taken from many points in the lot. ||| <1>サンプル：</1>350 g以上を、ロットの複数の場所から取る。 ||| <1>样品：</1>至少350克，从批次的多个位置抽取。
+afbb45015 ||| <1>Sorting table:</1> matte black surface, 4000 K light, 1,200 lux. ||| <1>選別台：</1>つや消しの黒い面、4000 Kの照明、1,200ルクス。 ||| <1>挑选台：</1>哑光黑色台面，4000 K灯光，1,200勒克斯。
+e36f1f930 ||| <1>Moisture:</1> 10–12% per SCA; TCVN allows at most 12.5%. ||| <1>水分：</1>SCAでは10〜12%。TCVNでは最大12.5%まで認められる。 ||| <1>含水量：</1>按SCA为10–12%；TCVN允许最高12.5%。
+7bec1dd2d ||| <1>Specialty:</1> no category 1 defects and at most 5 category 2 defects in 350 g. This standard is for Washed Arabica, so for Robusta use it only as a reference. ||| <1>スペシャルティ：</1>350 g中にカテゴリー1の欠点なし、カテゴリー2の欠点は最大5個。この基準はWashedのArabica向けなので、Robustaでは参考程度に使う。 ||| <1>精品：</1>350克中无一类瑕疵，二类瑕疵最多5个。此标准针对水洗Arabica，对Robusta仅作参考。
+5dad8414c ||| <1>Density:</1> pour freely into a 1 L tube, level it off and weigh. For example 690 g/L. Record it to track the lot. ||| <1>密度：</1>1 Lの筒に自然に流し入れ、すり切って量る。たとえば690 g/L。ロットを追跡するために記録する。 ||| <1>密度：</1>自然倒入1升量筒，刮平后称重。例如690 g/L。记录下来以追踪批次。
+9a58fd2a2 ||| Robusta defect limits, TCVN 4193:2014 ||| Robustaの欠点の限度、TCVN 4193:2014 ||| Robusta瑕疵限度，TCVN 4193:2014
+800060cb0 ||| Max. defects ||| 欠点の上限 ||| 瑕疵上限
+65670d2a4 ||| Foreign matter ||| 異物 ||| 杂质
+c759575fd ||| Branded roasted coffee should set internal standards stricter than these maximums. ||| ブランドの焙煎コーヒーは、この上限より厳しい社内基準を設けるべきです。 ||| 品牌烘焙咖啡应制定比这些上限更严格的内部标准。
+b6ff6d7af ||| The written procedure: a version for the roastery ||| 文書化した手順：焙煎所用 ||| 书面流程：烘焙厂版
+5fe3cdd53 ||| Record the settings and taste every batch. A roast profile only has value when it can be repeated. ||| 毎バッチ、設定を記録して味わう。焙煎プロファイルは再現できて初めて価値がある。 ||| 每批记录参数并品尝。烘焙曲线只有能重复才有价值。
+73ebdd75d ||| Roasting methods ||| 焙煎方法 ||| 烘焙方式
+4f7ecd747 ||| Method ||| 方法 ||| 方式
+a1381b9e2 ||| Mechanism ||| 仕組み ||| 原理
+750d74b09 ||| Roast sheet ||| 焙煎記録票 ||| 烘焙记录表
+26ea97b8d ||| Taken from the settings on the control panel. Copy it and send it to the roaster. ||| 操作パネルの設定から作成します。コピーして焙煎担当者に送ってください。 ||| 按控制面板上的设置生成。复制后发给烘焙师。
+a8540c5b2 ||| Pack size (g) ||| 包装サイズ（g） ||| 包装规格（克）
+0428dc8df ||| Copy roast sheet ||| 焙煎記録票をコピー ||| 复制烘焙记录表
+232604cd5 ||| <1>Always keep someone at the machine.</1> Over-roasted beans can catch fire in the drum. ||| <1>焙煎機のそばには必ず人がいること。</1>焼きすぎた豆はドラム内で発火することがあります。 ||| <1>机器旁必须始终有人。</1>烘过头的豆子可能在滚筒内起火。
+491c693bd ||| <1>Clean out chaff and the chimney</1> on schedule. Oily dust and chaff are common causes of fire. ||| <1>チャフと煙突の掃除は</1>予定どおりに。油を含んだほこりとチャフはよくある火災の原因です。 ||| <1>按计划清理银皮和烟囱。</1>油性粉尘和银皮是常见的起火原因。
+9f5024317 ||| <1>Gas and smoke:</1> the machine must vent smoke outside, the room must be ventilated, and there must be a fire extinguisher. ||| <1>ガスと煙：</1>焙煎機は煙を屋外に排出し、部屋を換気し、消火器を備えること。 ||| <1>燃气和烟：</1>机器必须向室外排烟，房间要通风，并配备灭火器。
+cedf211c4 ||| <1>Dark roasts:</1> drop and cool immediately, because the temperature climbs fast at the end of the batch. ||| <1>深煎り：</1>バッチの終盤は温度が急上昇するので、すぐに釜出しして冷却する。 ||| <1>深烘：</1>立即出锅冷却，因为批次末段温度上升很快。
+949f8634a ||| When a roast goes off course ||| 焙煎の様子がおかしいとき ||| 烘焙出现偏差时
+5d25db6d5 ||| <1>Compiled from multiple sources.</1> The machine's shape is a design concept. The roast curve is a simple heat model, not data from MeDili's actual roaster. Each source divides the levels a little differently, so the 8-level table is a compilation. ||| <1>複数の資料をもとに構成。</1>マシンの形はデザイン上のアイデアです。焙煎の曲線は簡単な熱のモデルで、MeDiliの実際の焙煎機のデータではありません。資料ごとに段階の分け方が少しずつ違うので、8段階の表はそれらをまとめたものです。 ||| <1>综合多方资料。</1>机器外形是设计构想。烘焙曲线是简单的热模型，并非MeDili实际烘焙机的数据。各资料的烘焙度划分略有不同，所以8级表是综合整理的结果。
+747957ca0 ||| The Di Linh-origin coffee brand of MeDili Coffee Farm. Contact us on Zalo to ask about roasted coffee, wholesale and retail. ||| MeDili Coffee FarmのDi Linh産コーヒーブランド。焙煎コーヒーや卸・小売についてはZaloでお問い合わせください。 ||| MeDili Coffee Farm旗下的Di Linh产地咖啡品牌。欢迎通过Zalo咨询烘焙咖啡及批发零售。
+82c3ca978 ||| Prone to underdevelopment. Roast more slowly and stop between medium and medium-dark. ||| 発達不足になりやすい。ゆっくり焙煎し、中煎りから中深煎りの間で止める。 ||| 容易发展不足。放慢烘焙，在中度到中深度之间停止。
+5df404241 ||| Fermented Robusta ||| 発酵Robusta ||| 发酵Robusta
+5e60cbda5 ||| Robusta fermented with brewer's yeast ||| ビール酵母で発酵させたRobusta ||| 啤酒酵母发酵的Robusta
+6c5b6ebbb ||| Fermented lots usually roast faster. Keep it at a medium roast to preserve the yeast aromas. ||| 発酵したロットは焼けるのが速いことが多い。酵母の香りを残すため中煎りにとどめる。 ||| 发酵批次通常熟得更快。保持中度烘焙以留住酵母香气。
+cf91d04e5 ||| Dense, high in acids. Roast light to medium to keep the original aromas. ||| 密度が高く、酸が多い。本来の香りを残すため浅煎り〜中煎りに。 ||| 密度高，酸多。浅度至中度烘焙，保留原本香气。
+38854acee ||| Blend ||| ブレンド ||| 拼配
+676be5f71 ||| Blend of 70% Arabica, 30% Robusta ||| Arabica 70%、Robusta 30%のブレンド ||| 70% Arabica、30% Robusta拼配
+716482538 ||| Best to roast each type separately and blend afterwards, because the two roast differently. ||| 2つは焼け方が違うので、種類ごとに別々に焙煎してから混ぜるのが最善。 ||| 两种豆熟度进程不同，最好分开烘焙再混合。
+c1f4c6420 ||| Just into first crack, dry and wrinkled surface ||| 1ハゼに入ったばかり、表面は乾いてしわがある ||| 刚进一爆，表面干、有皱纹
+535250370 ||| Sour, raw, grainy ||| 酸っぱく、生っぽく、穀物のにおい ||| 酸、生涩、谷物味
+b31df1ae4 ||| Mid first crack ||| 1ハゼの最中 ||| 一爆中段
+74a5ef85d ||| End of first crack, smooth surface ||| 1ハゼの終わり、表面はなめらか ||| 一爆结束，表面平滑
+ad59b2f0e ||| Fruity, bright acidity, light body ||| フルーティー、爽やかな酸味、軽いボディ ||| 果香，酸质明亮，醇厚度轻
+6cacacafb ||| Pause between the two cracks ||| 2つのハゼの間の休止 ||| 两爆之间的间歇
+ea4a6c332 ||| Caramel, roasted nuts, balanced ||| キャラメル、ローストナッツ、バランスがよい ||| 焦糖、烤坚果、平衡
+97bc358d7 ||| About to enter second crack ||| 2ハゼの直前 ||| 即将进入二爆
+6864b51bb ||| Chocolate, bittersweet, low acidity ||| チョコレート、ほろ苦い甘さ、酸味は少ない ||| 巧克力，苦甜，酸度低
+fc6ec7ae4 ||| Start of second crack, spots of oil ||| 2ハゼの始まり、油がぽつぽつ出る ||| 二爆开始，表面点状出油
+e835902e0 ||| Strongly bitter, full body ||| 苦みが強く、しっかりしたボディ ||| 苦味浓，醇厚
+f725eef90 ||| Strong second crack, oily sheen ||| 2ハゼが激しく、表面に油のつや ||| 二爆猛烈，表面油亮
+d5c56aea5 ||| Smoky, bitter, origin aromas nearly gone ||| スモーキーで苦く、本来の香りはほぼ消える ||| 烟熏、苦，原本香气几乎消失
+86fae807f ||| Very oily, lots of smoke ||| 非常に油っぽく、煙が多い ||| 非常油亮，烟很多
+9db1c37f6 ||| Charcoal, burnt, thin body ||| 炭、焦げ、薄いボディ ||| 炭味、焦味，醇厚度薄
+971db0e35 ||| Medium-coarse grind, phin ||| 中粗挽き、フィン ||| 中粗研磨，滴滤壶
+1f213e613 ||| Iced milk coffee, bạc xỉu ||| アイスミルクコーヒー、バクシウ ||| 冰奶咖、bạc xỉu
+eb7df20ec ||| 1–5 days ||| 1〜5日 ||| 1–5天
+b289e07a5 ||| Medium-coarse grind, strong phin ||| 中粗挽き、濃いフィン ||| 中粗研磨，浓郁滴滤
+d32c4ecba ||| Medium-coarse grind, less water ||| 中粗挽き、湯は少なめ ||| 中粗研磨，少水
+5b259567b ||| Robusta fermented with brewer's yeast, trial lot ||| ビール酵母で発酵させたRobusta、試験ロット ||| 啤酒酵母发酵的Robusta，试验批次
+5145718ce ||| Pour-over or small phin ||| ハンドドリップか小さいフィン ||| 手冲或小号滴滤壶
+76c05954c ||| Medium grind, drip bags ||| 中挽き、ドリップバッグ ||| 中等研磨，挂耳包
+db31c350b ||| Coarse grind, cold steep ||| 粗挽き、水出し ||| 粗研磨，冷泡
+eddc2e9bf ||| 7–14 days ||| 7〜14日 ||| 7–14天
+55027158f ||| Fine grind, espresso machine ||| 細挽き、エスプレッソマシン ||| 细研磨，意式咖啡机
+912a23cbf ||| 5–12 days ||| 5〜12日 ||| 5–12天
+eb927394d ||| Medium grind, V60 ||| 中挽き、V60 ||| 中等研磨，V60
+c081861c3 ||| Pack immediately, use after 5 days ||| すぐに包装し、5日後から使う ||| 立即包装，5天后使用
+29a04ce08 ||| One-way valve bags ||| ワンウェイバルブ付きの袋 ||| 单向阀袋
+3c2b199b0 ||| Cupping a Robusta sample ||| Robustaサンプルのカッピング ||| Robusta样品杯测（cupping）
+b874955e2 ||| 8–24 hours ||| 8〜24時間 ||| 8–24小时
+d84144e34 ||| Quality control sample ||| 品質検査用サンプル ||| 品质检验样品
+3b7955c7a ||| Cupping an Arabica sample ||| Arabicaサンプルのカッピング ||| Arabica样品杯测（cupping）
+76d676f4e ||| Drum ||| ドラム式 ||| 滚筒式
+040056ec3 ||| A rotating drum; heat through hot air and the drum surface ||| 回転ドラム。熱風とドラム面から熱が伝わる ||| 旋转滚筒，热量来自热风和滚筒壁
+75c944275 ||| Small and medium roasteries, Robusta, phin ||| 中小の焙煎所、Robusta、フィン ||| 中小型烘焙厂、Robusta、滴滤
+135acd46d ||| Easy to learn; airflow must be controlled to avoid scorching ||| 習得しやすい。表面が焦げないよう風量の管理が必要 ||| 易学；需控制风量以免烧焦豆表
+8233bdb2f ||| Hot air (fluid bed) ||| 熱風式（流動層） ||| 热风式（流化床）
+c3be05e22 ||| A stream of hot air keeps the beans floating ||| 熱風で豆を浮かせる ||| 热风使豆子悬浮
+c0e1333dd ||| Light to medium roasts, clean aromas ||| 浅煎り〜中煎り、すっきりした香り ||| 浅度至中度烘焙，香气清爽
+73e2773b4 ||| Fast batches, lighter body, needs strong airflow ||| バッチが速く、ボディは軽め、強い風が必要 ||| 批次快，醇厚度较轻，需要强风
+03f2ce7d8 ||| Drum combined with hot air ||| ドラムと熱風の併用 ||| 滚筒结合热风
+ed2804c73 ||| Roasteries wanting batch-to-batch consistency ||| バッチごとの安定性を求める焙煎所 ||| 追求批次稳定的烘焙厂
+50274d51a ||| Higher machine price ||| 機械の価格が高い ||| 机器价格更高
+b9ec9d27e ||| Pan or hand-cranked cage ||| 鍋や手回しのかご ||| 锅炒或手摇笼
+a383a4de2 ||| Stirred over a wood or gas stove ||| まきやガスのこんろの上で混ぜる ||| 在柴火或燃气灶上翻炒
+c5e9fe35b ||| Small batches, a traditional story ||| 小さなバッチ、伝統の物語 ||| 小批量，传统故事
+1d7a85540 ||| Hard to repeat, needs lots of experience ||| 再現が難しく、経験が必要 ||| 难以重复，需要丰富经验
+e21b93594 ||| Butter-and-sugar roast ||| バターと砂糖をまぶす焙煎 ||| 黄油加糖烘焙
+6979dbab2 ||| Butter, sugar, fish sauce and salt added at the end of the batch ||| バッチの最後にバター、砂糖、ヌックマム、塩を加える ||| 批次末加入黄油、糖、鱼露和盐
+615bd2d9f ||| Traditional phin taste ||| 伝統的なフィンの味 ||| 传统滴滤口味
+d10c74175 ||| Not a pure roast; ingredients must be clearly stated ||| 無添加焙煎ではないので、原材料を明記する必要がある ||| 不是纯烘焙，必须注明成分
+1657412e5 ||| Pure roast ||| 無添加焙煎 ||| 纯烘焙
+237a2c785 ||| Only coffee, no additives ||| コーヒーのみで、添加物なし ||| 只有咖啡，无添加剂
+967b69ed0 ||| MeDili brand positioning ||| MeDiliブランドの位置づけ ||| MeDili品牌定位
+d7bb637a6 ||| Defective beans can't be hidden; careful sorting is a must ||| 欠点豆を隠せないので、丁寧な選別が必須 ||| 瑕疵豆无法掩盖，必须仔细挑选
+de4c00689 ||| Grainy, hay-like, harsh ||| 穀物っぽい、干し草のよう、きつい ||| 谷物味、干草味、刺激
+4d7c70807 ||| Underdeveloped, common in Robusta ||| 発達不足、Robustaによくある ||| 发展不足，常见于Robusta
+31f6e6577 ||| Extend the time after first crack and bring the level up to medium (Medium) or Full City ||| 1ハゼ後の時間を延ばし、中煎り（Medium）かFull Cityまで上げる ||| 延长一爆后的时间，把烘焙度提高到中度（Medium）或Full City
+cb49326cc ||| Flat, dull, nothing stands out ||| 平板で、際立つものがない ||| 平淡，没有亮点
+68028e0db ||| Batch too long, RoR crashed (baked) ||| バッチが長すぎ、RoRが落ち込んだ（ベイクド） ||| 批次过长，RoR骤降（baked）
+fa8b9ce54 ||| More flame at the start; don't let the temperature stall after first crack ||| 開始時の火力を上げ、1ハゼ後に温度を停滞させない ||| 开始时加大火力，避免一爆后温度停滞
+d3e055c31 ||| Scorch marks on the bean surface ||| 豆の表面に焦げ跡 ||| 豆表有烧焦痕迹
+8d9b78c90 ||| Charge temperature too high or load too small ||| 投入温度が高すぎる、または投入量が少なすぎる ||| 入豆温度过高或装载量太少
+ef8bd6fda ||| Lower the charge temperature, increase the load ||| 投入温度を下げ、投入量を増やす ||| 降低入豆温度，增加装载量
+eede33850 ||| Dark outside, pale inside ||| 外側は濃く、中は薄い色 ||| 外深内浅
+7520cbc76 ||| Roasted too fast; the heat hasn't reached the core ||| 焙煎が速すぎ、熱が芯まで届いていない ||| 烘得太快，热量没进到豆芯
+467ad3741 ||| Lower the flame, lengthen the Maillard stage, break beans to check ||| 火を弱め、メイラード段階を延ばし、豆を割って確認する ||| 降火，延长美拉德阶段，掰开豆子检查
+859fb8955 ||| Too much smoke, burnt smell ||| 煙が多すぎ、焦げ臭い ||| 烟太多，有焦味
+59568d1b6 ||| Weak airflow, dirty chimney, roasted too dark ||| 風が弱い、煙突が汚れている、焙煎が深すぎる ||| 风力弱、烟囱脏、烘得太深
+8585f9f44 ||| Increase airflow, clean the chimney, drop earlier ||| 風を強め、煙突を掃除し、早めに釜出しする ||| 加大风力，清理烟囱，提早出锅
+2a729ecac ||| Loud crack, harsh sourness ||| ハゼが激しく、酸味がきつい ||| 爆裂声大，酸味刺激
+9b0b66c13 ||| RoR spikes at first crack ||| 1ハゼでRoRが急上昇 ||| 一爆时RoR飙升
+22bc37f1a ||| Lower the flame 30–60 seconds before the crack ||| ハゼの30〜60秒前に火を弱める ||| 爆裂前30–60秒降火
+ed537bab7 ||| Batch doesn't match the previous one ||| 前のバッチと違う ||| 批次与上一批不同
+4241091d6 ||| Machine not warmed up, different load weight ||| 焙煎機が温まっていない、投入量が違う ||| 机器未预热，装载量不同

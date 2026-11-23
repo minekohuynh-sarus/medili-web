@@ -1,0 +1,1238 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Robusta Cà Sẻ Di Linhを、多収量Robusta、Arabica、Catimor、Moka、Culi、Liberica、Excelsaと見分ける：農園を見て、豆を観察し、ふるい、100粒を量り、ラボで分析し、味わう。定性・定量・官能。出典付きのMeDiliインタラクティブモデル。"><meta property="og:title" content="MeDiliコーヒー判別マシン"><meta property="og:description" content="Robusta Cà Sẻ Di Linhを、多収量Robusta、Arabica、Catimor、Moka、Culi、Liberica、Excelsaと見分ける：農園を見て、豆を観察し、ふるい、100粒を量り、ラボで分析し、味わう。定性・定量・官能。出典付きのMeDiliインタラクティブモデル。"><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>MeDiliコーヒー判別マシン</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.inl{color:var(--moss);font-weight:600}
+.quiz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.q{border:0;padding:0;margin:0 0 14px;min-width:0}.q legend{padding:0;font-weight:600}
+.res{background:var(--tint);border-radius:14px;padding:16px}.res h3{font:800 2rem/1.1 var(--display);margin:2px 0 4px;color:var(--accent)}
+.res p{margin:6px 0}.rp{font-weight:600}.rp small{font-weight:400;color:var(--muted)}
+.tinyn{font-size:.78rem;color:var(--muted)}
+.gumap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gm{border-top:3px solid var(--copper);padding-top:8px}.gm h3{margin:0;font:800 1.3rem var(--display)}.gm small{color:var(--muted)}
+ol.steps{margin:0 0 8px;padding-left:20px}ol.steps li{margin-bottom:4px;font-size:.9rem}ol.steps li.on{font-weight:700;color:var(--accent)}
+.sop.tight li{grid-template-columns:36px minmax(0,1fr)}.sop.tight .n{font-size:1.5rem}
+.st.off{opacity:.45}
+@media (max-width:820px){.quiz{grid-template-columns:minmax(0,1fr)}}
+
+:root{--ground:#8FA65E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#5D7340}}
+:root[data-theme="dark"]{--ground:#5D7340}
+.mths button{min-width:52px}
+.sgn3{font:italic 600 13.5px var(--sign)!important;fill:var(--accent)!important}
+.sgn{font-size:18px}
+.calc.three{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-bottom:12px}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px}
+.calc input{font-size:.95rem}
+
+:root{--floor:#C69A62;--wall:#EFE3CD}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--floor:#6B4F31;--wall:#3A2D22}}
+:root[data-theme="dark"]{--floor:#6B4F31;--wall:#3A2D22}
+.shophead{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}.shophead>div:last-child{flex:1 1 320px;min-width:0}
+.logoP{background:#F6F0E4;border-radius:12px;padding:8px 12px;display:inline-block}.logoP img{display:block;height:auto;max-width:100%}
+.flow{list-style:none;display:flex;flex-wrap:wrap;gap:6px 24px;padding:0;margin:0;counter-reset:f;font-weight:600;font-size:.9rem;color:var(--muted)}
+.flow li{counter-increment:f}.flow li::before{content:counter(f) ". ";color:var(--accent)}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:0}
+.whob{text-align:left;padding:12px 16px;border:2px solid var(--rule);border-radius:12px;background:var(--panel);color:var(--ink);cursor:pointer;font:inherit}
+.whob b{display:block;font-size:1.02rem}.whob small{color:var(--muted)}.whob.on{border-color:var(--accent)}
+.ah{font:800 1.45rem var(--display);margin:0 0 8px}
+.ctl{min-width:0}.ctl .card{padding:14px}
+.recbox{background:var(--tint);border-radius:12px;padding:10px;margin-top:12px;display:grid;gap:6px}
+.recb{text-align:left;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:7px 10px;color:var(--ink);cursor:pointer;font:inherit}.recb b{display:block;font-size:.9rem}.recb small{color:var(--muted)}.recb.on{border-color:var(--accent)}
+.line{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule)}.line small{display:block;color:var(--muted)}
+.qty{display:flex;align-items:center;gap:6px;white-space:nowrap}.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+a.btn{text-decoration:none;display:inline-block}
+.bagn{font:italic 600 6.5px var(--sign)!important;fill:#4A2A1A!important}.bagn2{font:700 4.6px var(--body)!important;fill:#A23B24!important}
+.bag.off{opacity:.25}.bag.on polygon{stroke:var(--accent)!important;stroke-width:2.4}
+.bench{align-items:start}
+.sgn3{font:italic 600 13px var(--sign)!important;fill:var(--accent)!important}
+.tag.big rect{fill:var(--accent)}
+
+.sent{margin-top:10px;background:var(--tint);border-radius:12px;padding:12px}.sent>b{display:block;margin-bottom:4px}
+.ordertxt{white-space:pre-wrap;overflow-wrap:anywhere;font:500 .78rem/1.5 var(--mono);margin:6px 0 0;user-select:all}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}.qrs svg{display:block;width:100%;height:auto;border-radius:6px}.qrs small{display:block;text-align:center;margin-top:4px;color:var(--muted)}
+:root{--skin:#EBC9A6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--skin:#8C6A4D}}:root[data-theme="dark"]{--skin:#8C6A4D}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.ctl .card{padding:16px}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style>
+<style>
+/* Khung chung sau khi gộp Manus: menu nhóm, chân trang, màu phong thủy Thổ (nâu, vàng đất, đỏ; không xanh lá, không đen). */
+:root{--moss:#8D4E22;--good:#8D4E22;
+  --i-red:#B33A24;--i-red2:#7A2414;--i-gold:#D9B77E;--i-gold2:#B8894A;--i-coffee:#6B4226;--i-brown:#8D5A32;--i-milk:#E9D3AE;
+  --seg1:#9E3B26;--seg2:#B8894A;--seg3:#6B4226;--seg4:#D9B77E;--seg-t1:#FFF6EC;--seg-t2:#2E1C12;--cmp2:#C9A46A;
+  --cx1:#BB8526;--cx2:#7A348E;--cx3:#83470D;--cx4:#CB4D54}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--panel)}
+.mnav{display:none!important}
+
+/* menu */
+.mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
+.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p a:hover{color:var(--accent)}
+.mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-m{margin:0;font-size:inherit}
+.mh-m>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font:600 .86rem var(--body);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;white-space:nowrap;user-select:none}
+.mh-m>summary::-webkit-details-marker{display:none}
+.mh-m>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mh-m[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-m>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-pan{position:absolute;left:0;right:0;top:100%;background:var(--panel);border-bottom:1px solid var(--rule);box-shadow:0 18px 30px rgba(46,28,18,.16);max-height:calc(100vh - 60px - env(safe-area-inset-top,0px));overflow:auto;overscroll-behavior:contain}
+.mh-grid{max-width:1560px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 26px;padding-block:18px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-g{margin:0 0 6px;font:600 .72rem/1.3 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mh-c ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-c a{display:block;color:var(--ink);text-decoration:none;font:500 .95rem/1.35 var(--body);padding:6px 0;border-bottom:1px solid transparent}
+.mh-c a:hover{color:var(--accent)}
+.mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
+.mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
+.mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.mh-i{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none}
+.mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
+@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+@media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
+
+/* chân trang */
+.mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
+.mf-in{max-width:1560px;margin:auto;padding-block:30px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:26px}
+.mf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border-bottom:1px solid var(--rule);padding-bottom:24px}
+.mf-k{flex-basis:100%;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mf-h{margin:0;font:italic 600 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sign);color:var(--ink);text-wrap:balance}
+.mf-h em{color:var(--accent)}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:22px 30px}
+.mf-brand b{display:block;font:italic 600 1.35rem/1.25 var(--sign);color:var(--accent)}
+.mf-brand span{display:block;margin-top:6px}.mf-brand small{display:block;margin-top:6px;color:var(--muted);letter-spacing:.06em}
+.mf-t{margin:0 0 6px;font:600 .72rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mf-col{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mf-col a{color:var(--ink);text-decoration:none;padding:2px 0}.mf-col a:hover{color:var(--accent);text-decoration:underline}
+.mf-col p{margin:0 0 6px}.mf-n{white-space:nowrap;user-select:all}
+.mf-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:.84rem}
+.mf-base i{font:italic 600 1rem var(--sign);color:var(--accent)}
+@media (max-width:980px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-brand{grid-column:1/-1}}
+@media (max-width:520px){.mf-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ảnh thật */
+.pf{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.pf img{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;border:1px solid var(--rule);background:var(--tint)}
+.pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.pfw img{aspect-ratio:3/1;object-fit:cover}
+.split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
+@media (max-width:700px){.pfw img{aspect-ratio:2/1}}
+.pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
+.pgal{display:grid;gap:10px}
+.pgal>h2{margin:0}
+.pgal>p{margin:0;color:var(--muted);max-width:72ch}
+
+/* chọn ngôn ngữ */
+.mh-l{position:relative;margin:0}
+.mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
+.mh-l>summary::-webkit-details-marker{display:none}
+.mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
+.mh-lp a:hover{background:var(--tint);color:var(--accent)}
+.mh-lp a[aria-current]{color:var(--accent)}
+@media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
+/* nút Zalo, Facebook nổi góc trái bên dưới */
+.fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
+.fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
+.fl-b svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fl-b:hover{transform:translateY(-2px) scale(1.05)}
+.fl-b:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.fl-b::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;background:var(--ink);color:var(--panel);font:600 .8rem var(--body);letter-spacing:0;padding:6px 11px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{opacity:1;transform:translate(0,-50%)}}
+@media (max-width:600px){.fl-c{gap:8px}.fl-b{width:46px;height:46px;font-size:.6rem}.fl-b svg{width:17px;height:17px}}
+@media (max-width:1020px){body:has(.nx-bar) .fl-c{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+/* chừa chỗ cho nút nổi ở cuối chân trang */
+@media (min-width:601px){.mf-base{padding-left:76px}}
+@media (max-width:600px){footer.mf{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}}
+@media print{.fl-c{display:none}}
+
+/* thành phần dùng chung cho trang mới */
+.wrap.art{max-width:980px}
+.k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.eye{font:600 .8rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0}
+section>h2 em,.p-h2 em{font-style:normal;color:var(--accent)}
+.p-h2{font:800 2.05rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em;text-wrap:balance}
+.p-head{display:grid;gap:4px}
+.p-head h1{margin:6px 0 0}
+.p-head .lead{font-size:1.06rem;color:var(--muted);max-width:68ch;margin:10px 0 0}
+.p-sig{font:italic 600 1.25rem var(--sign);color:var(--accent);margin:10px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+a.btn{text-decoration:none;display:inline-block}
+.btn.ghost{border-color:var(--rule)}
+.p-sec{display:grid;gap:10px}
+.p-sec>.lead{margin:0;max-width:72ch;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.facts>div{border-top:2px solid var(--accent);padding-top:8px;min-width:0}
+.facts b{display:block;font:800 2.4rem/1.05 var(--display);color:var(--accent)}
+.facts span{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.g3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.g2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.g4{grid-template-columns:minmax(0,1fr)}}
+.box{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:18px 20px;min-width:0}
+.box h3{font:800 1.45rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em}
+.box p{margin:0 0 8px}.box p:last-child{margin-bottom:0}
+.box .k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.box .ft{margin-top:10px;padding-top:10px;border-top:1px solid var(--rule);font-size:.88rem;color:var(--muted)}
+.box .ft b{color:var(--ink)}
+.box>svg.pi{width:34px;height:34px;color:var(--accent)}
+svg.pi{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+svg.pi .fi{fill:var(--accent);stroke:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font:600 .76rem var(--body);border:1px solid var(--rule);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.lnk{color:var(--accent);font-weight:600;text-decoration:none}.lnk:hover{text-decoration:underline}
+.lnks{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px}
+.quote{margin:0;font:italic 600 clamp(1.4rem,3vw,2.1rem)/1.3 var(--sign);color:var(--accent);max-width:34ch;text-wrap:balance}
+.split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:20px 30px;align-items:center}
+.split img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--rule)}
+.illw{max-width:320px;width:100%;justify-self:center}
+@media (max-width:820px){.split{grid-template-columns:minmax(0,1fr)}.illw{max-width:210px}}
+.pst{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:st}
+.pst>li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:4px 16px;align-items:start;background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 16px;min-width:0}
+.pst>li .n{grid-row:1/3;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--tint);color:var(--accent)}
+.pst>li .n svg{width:24px;height:24px}
+.pst h3{margin:0;font:700 1.05rem/1.3 var(--body)}
+.pst h3 small{font:600 .74rem var(--body);letter-spacing:.06em;color:var(--muted);margin-right:6px}
+.pst p{margin:0;font-size:.93rem}
+.pst.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pst.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.pst.three{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.pst.two{grid-template-columns:minmax(0,1fr)}}
+.trip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.trip a{display:flex;flex-direction:column;height:100%;background:var(--panel);border:1px solid var(--rule);border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none}
+.trip img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;max-width:100%}
+.trip b{font:800 1.25rem/1.15 var(--display);padding:10px 14px 0}
+.trip b small{display:block;font:600 .72rem var(--body);letter-spacing:.08em;color:var(--accent);margin-bottom:2px}
+.trip span{padding:4px 14px 14px;color:var(--muted);font-size:.88rem}
+.trip a:hover b{color:var(--accent)}
+@media (max-width:1180px){.trip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,32%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.trip li{scroll-snap-align:start}}
+@media (max-width:640px){.trip{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:minmax(0,1fr);overflow:visible}}
+.seg{display:flex;gap:2px;height:28px;margin:6px 0 4px}
+.seg i{display:flex;align-items:center;padding:0 8px;border-radius:4px;font:700 .78rem var(--mono);font-style:normal;white-space:nowrap;overflow:hidden;min-width:0}
+.seg i.s1{background:var(--seg1);color:var(--seg-t1)}.seg i.s2{background:var(--seg2);color:var(--seg-t2)}
+.seg i.s3{background:var(--seg3);color:var(--seg-t1)}.seg i.s4{background:var(--seg4);color:var(--seg-t2)}
+.areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:8px}
+.areas>div{border-top:1px solid var(--rule);padding-top:10px;min-width:0}
+.areas .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.areas b{font:700 1rem var(--body)}.areas span{display:block;color:var(--muted);font-size:.86rem}
+.areas strong{display:block;font:800 1.9rem/1.1 var(--display);margin-top:4px}
+.areas strong small{font:600 .8rem var(--body);color:var(--muted);margin-left:6px}
+@media (max-width:900px){.areas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cmp{display:grid;gap:10px;margin-top:8px}
+.cmp>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center}
+.cmp span{font-size:.88rem}.cmp span b{display:block;font-size:.95rem}
+.cmp .tr{position:relative;height:24px;margin-right:64px}
+.cmp .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0;background:var(--accent)}
+.cmp .tr i.b{background:var(--cmp2)}
+.cmp .tr em{position:absolute;top:50%;transform:translateY(-50%);font:700 .9rem var(--mono);font-style:normal;color:var(--ink);white-space:nowrap}
+@media (max-width:520px){.cmp>div{grid-template-columns:minmax(0,1fr)}}
+.loc{display:grid;gap:4px}
+.loc .ttl{display:flex;gap:10px;align-items:center}
+.loc .ttl svg{color:var(--accent)}
+.sel{user-select:all}
+.cp{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.cp strong{font:700 1.25rem var(--mono);user-select:all;overflow-wrap:anywhere}
+.note{font-size:.86rem;color:var(--muted);margin:0}
+.p-form{display:grid;gap:12px}
+.p-form .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:620px){.p-form .row2{grid-template-columns:minmax(0,1fr)}}
+.p-form label{display:grid;gap:4px;font:600 .9rem var(--body)}
+.p-form label small{font-weight:400;color:var(--muted)}
+.p-form input,.p-form select,.p-form textarea{font:500 1rem var(--body);padding:9px 11px;border:1px solid var(--rule);border-radius:10px;background:var(--bg);color:var(--ink);width:100%;min-width:0}
+.p-form textarea{resize:vertical}
+.p-form fieldset{border:0;margin:0;padding:0;min-width:0}
+.p-form legend{font:600 .9rem var(--body);padding:0;margin-bottom:6px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{display:inline-flex;flex-direction:row;align-items:center;gap:6px;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font:600 .86rem var(--body);cursor:pointer;background:var(--panel)}
+.opts input{width:auto;margin:0;accent-color:var(--accent)}
+.opts label:has(input:checked){border-color:var(--accent);background:var(--tint)}
+.msg{white-space:pre-wrap;font:500 .84rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:0;overflow-wrap:anywhere;user-select:all}
+.fstat{font:500 .86rem var(--body);color:var(--muted);min-height:1.3em;margin:0}
+.p-art{max-width:70ch;font-size:1.04rem;line-height:1.78}
+.p-art h2{font:800 1.75rem/1.2 var(--display);margin:30px 0 8px;letter-spacing:.01em}
+.p-art p{margin:0 0 14px}
+.p-art ul,.p-art ol{margin:0 0 14px;padding-left:22px}.p-art li{margin-bottom:6px}
+.p-art .rbox{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 18px;margin:18px 0}
+.p-art .rbox h3{margin:0 0 6px;font:700 1rem var(--body)}
+.p-art .rbox ol{margin:0}
+.p-art .pf,.p-art .pfs{margin:20px 0}
+.p-art blockquote{margin:22px 0;padding:0 0 0 18px;border-left:3px solid var(--accent);font:italic 600 1.3rem/1.45 var(--sign);color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font:600 .8rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.meta b{color:var(--accent)}
+.art-fig{max-width:880px}
+.art-fig svg{display:block;width:100%;height:auto;max-height:340px;background:var(--tint);border-radius:16px}
+.jcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.jcards a{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--rule);border-radius:16px;overflow:hidden;color:var(--ink);text-decoration:none;min-width:0}
+.jcards .th{background:var(--tint);display:grid;place-items:center;aspect-ratio:3/2;max-width:100%}
+.jcards .th svg{display:block;width:100%;height:100%}
+.jcards .bd{padding:12px 16px 16px;display:grid;gap:4px}
+.jcards .meta{font-size:.72rem}
+.jcards h3{margin:2px 0 0;font:800 1.35rem/1.15 var(--display);text-wrap:balance}
+.jcards p{margin:0;color:var(--muted);font-size:.9rem}
+.jcards a:hover h3{color:var(--accent)}
+@media (max-width:1000px){.jcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.jcards{grid-template-columns:minmax(0,1fr)}}
+.jfeat{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);padding:0;overflow:hidden;text-decoration:none;color:var(--ink)}
+.jfeat .th{background:var(--tint);display:grid;place-items:center;padding:14px;min-width:0}
+.jfeat .th svg{display:block;width:100%;max-width:340px;height:auto}
+.jfeat .bd{padding:20px 24px;display:grid;gap:6px;align-content:center;min-width:0}
+.jfeat h3{font:800 2.1rem/1.1 var(--display);margin:0;letter-spacing:.01em}
+.jfeat p{margin:0}.jfeat .bd>p:not(.meta){color:var(--muted);max-width:60ch}
+.jfeat:hover h3{color:var(--accent)}
+@media (max-width:760px){.jfeat{grid-template-columns:minmax(0,1fr)}.jfeat .th svg{max-width:280px}}
+.mdl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin-top:4px}
+.mdl a{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center;border-top:1px solid var(--rule);padding-top:10px;color:var(--ink);text-decoration:none;min-width:0}
+.mdl a svg.pi{width:30px;height:30px;color:var(--accent)}
+.mdl b{display:block;font:700 1rem var(--body)}.mdl small{display:block;color:var(--muted);font-size:.86rem}
+.mdl a:hover b{color:var(--accent)}
+.kser{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink)}
+.kser svg.pi{width:34px;height:34px;color:var(--accent);margin-bottom:4px}
+.kser p{color:var(--muted);font-size:.92rem}
+.kser .lnk{margin-top:auto;padding-top:6px}
+.kser:hover h3{color:var(--accent)}
+.g5k{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:1280px){.g5k{grid-template-columns:repeat(2,minmax(0,1fr))}.g5k>:first-child{grid-column:1/-1}}
+@media (max-width:560px){.g5k{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:1100px){.mdl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mdl{grid-template-columns:minmax(0,1fr)}}
+.ill .o{stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.ill text{font:600 12px var(--body);fill:var(--muted)}
+@media (max-width:620px){.p-h2{font-size:1.75rem}.facts b{font-size:2rem}}
+
+.mnote{font-size:.84rem;color:var(--muted);margin:8px 0 0;line-height:1.45}
+#scene .gl{fill:var(--panel);fill-opacity:.18}
+#scene .glt{fill:var(--panel);fill-opacity:.12}
+#scene .lcdb{fill:#2E1C12;stroke:none}
+#scene .lcd{font:700 7.6px var(--mono);fill:#F3D9A4}
+#scene .wtx{font:700 8px var(--body);fill:#3A2416}
+#scene .flowT{font-size:12.5px}
+#scene .ped{fill:#E6DCC8}#scene .ped2{fill:#CFC2A8}#scene .ped3{fill:#B7A98C}
+#scene .lcd.sm{font-size:6.5px}
+#scene .nowr{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-dasharray:4 3}
+#scene .flowL{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-dasharray:3 6;opacity:.75}
+.running #scene .flowL,#scene.running .flowL{animation:flowA .8s linear infinite}
+@keyframes flowA{to{stroke-dashoffset:-18}}
+#tok{display:none;fill:var(--accent);stroke:var(--panel);stroke-width:2}
+.running #tok{display:block}
+.lg{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.82rem;margin:2px 0 0;color:var(--muted)}
+.lg span{display:inline-flex;align-items:center;gap:6px}
+.sw2{display:inline-block;width:16px;height:0;border-top:2.5px solid;flex:none}.sw2.d{border-top-style:dashed}
+.sw3{display:inline-block;width:11px;height:11px;border-radius:3px;flex:none}
+#tip{color:var(--muted)}
+.rd{display:flex;flex-direction:column;gap:4px}
+.rd>svg.pi{width:30px;height:30px;color:var(--accent);margin-bottom:2px}
+.rd h3{font:800 1.4rem/1.15 var(--display);margin:2px 0 4px}
+.rd .ft{margin-top:auto}
+.src>h2{color:var(--ink)}.src>.lead{color:var(--muted);font-size:.95rem}
+.src ul{line-height:1.5}.src li{margin-bottom:4px}
+.src .lnks{margin-top:12px}
+.cpst{font-size:.84rem;color:var(--muted)}
+.chw{position:relative;margin-top:6px}
+.c2{display:block;width:100%;height:auto}
+.c2 text{font:500 12px var(--mono);fill:var(--muted)}
+.c2 .ttl{font:600 12.5px var(--body);fill:var(--ink)}
+.c2 .lab{font:600 12.5px var(--body);fill:var(--ink)}
+.c2 .val{font:700 12px var(--mono);fill:var(--ink);paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round}
+.flowx{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:fx;margin-top:6px}
+.flowx>div{background:var(--tint);border-radius:14px;padding:12px 14px;min-width:0;position:relative}
+.flowx b{display:block;font:800 1.15rem/1.15 var(--display);margin-bottom:4px}
+.flowx p{margin:0;font-size:.88rem}
+.flowx .k{margin-bottom:4px;color:var(--accent)}
+@media (max-width:980px){.flowx{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.flowx{grid-template-columns:minmax(0,1fr)}}
+.medili{background:var(--tint);border-radius:14px;padding:14px 16px}
+.medili h3{margin:0 0 6px;font:800 1.3rem var(--display)}
+.medili ul{margin:0;padding-left:18px}.medili li{margin-bottom:4px}
+@media (prefers-reduced-motion:reduce){.running #tok{display:none}#scene .flowL{animation:none!important}}
+
+/* Cỗ máy Phân biệt cà phê */
+:root{--k1:var(--accent);--k2:#B8862A;--k3:#7A348E;--k4:#C74B7A;--k5:#5E3A24;--k6:#D9782E;--k7:#8D5A32;--k8:#A0699A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--k2:#D9AE55;--k3:#A06BCD;--k4:#E07AA0;--k5:#C9A27A;--k6:#EE9A5A;--k7:#B5865A;--k8:#CFA0C8}}
+:root[data-theme="dark"]{--k2:#D9AE55;--k3:#A06BCD;--k4:#E07AA0;--k5:#C9A27A;--k6:#EE9A5A;--k7:#B5865A;--k8:#CFA0C8}
+#scene .soil{fill:#7A5233}#scene .soilT{fill:#8D6A45}#scene .soil2{fill:#5E3E24}
+#scene .can1{fill:#A9743F}#scene .can2{fill:#8D5A32}#scene .can3{fill:#C08A4E}
+#scene .trk{fill:#6B4226}#scene .grf{fill:#D9B77E}
+#scene .pnl{fill:#E6DCC8}#scene .pnl2{fill:#CFC2A8}#scene .pnl3{fill:#B7A98C}
+#scene .pnlF{fill:#F6EEDC;stroke:#B7A98C;stroke-width:1}
+#scene .lbx{fill:#F6EBCF}#scene .lbx2{fill:#D8C9A6}#scene .lbx3{fill:#BFAE88}
+#scene .sv1{fill:#B7A98C}#scene .sv1t{fill:#CFC2A8}#scene .sv2{fill:#A99878}#scene .sv2t{fill:#C2B089}
+#scene .plt{fill:#D8CBAE}
+#scene .bnf{fill:#B8894A}#scene .bnft{fill:#CFA05E}
+#scene .ins{fill:#E6DCC8}#scene .ins2{fill:#CFC2A8}#scene .ins3{fill:#B7A98C}
+#scene .vial{fill:#F6F0E4;fill-opacity:.55}#scene .vialT{fill:#F6F0E4;fill-opacity:.4}
+#scene .lampOn{fill:#E3B341}#scene .lampOff{fill:#8D7A63}
+#scene .cup{fill:#FFF6EC}#scene .cupT{fill:#6B4226}
+#scene .cab{fill:#E6DCC8}#scene .cab2{fill:#CFC2A8}#scene .cab3{fill:#B7A98C}
+#scene .belt{fill:#8D7A63}#scene .belt2{fill:#6F5E4A}#scene .beltT{fill:#A8957A}
+#scene .qm{font:800 26px var(--display);fill:#6B4226}
+#scene .bt{font:700 6.4px var(--body);fill:#3A2416}
+#scene .bbg{fill:#D8CBAE}
+#scene .m .cbn{stroke:#8D6A45;stroke-width:1.1}
+#scene .m .cbc{stroke:#6B4226;stroke-width:1.5}
+#scene .m .cbh{stroke:none}
+#scene .stm{opacity:.55}
+#scene.running .stm{animation:stmA 1.8s ease-in-out infinite}
+@keyframes stmA{0%{transform:translateY(3px);opacity:0}40%{opacity:.8}100%{transform:translateY(-8px);opacity:0}}
+.cbn{fill:#D8C79C;stroke:#8D6A45;stroke-width:1.2}
+.cbc{fill:none;stroke:#6B4226;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.cbh{fill:#F3EAD0;opacity:.55;stroke:none}
+.fl{display:inline-block;font:700 .62rem/1.5 var(--body);letter-spacing:.04em;padding:0 5px;border-radius:5px;margin-left:4px;vertical-align:1px;white-space:nowrap}
+.fN{background:var(--accent);color:var(--on-accent)}
+.fL{background:var(--panel);color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.fT{background:var(--panel);color:var(--muted);box-shadow:inset 0 0 0 1px var(--rule)}
+.fU{background:var(--panel);color:var(--muted);border:1px dashed var(--muted);padding:0 4px;line-height:1.35}
+.flg{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.84rem;color:var(--muted);margin:4px 0 10px}
+.flg .fl{margin:0 4px 0 0}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:0;flex:none}
+.qtab td:first-child{font-weight:700;white-space:nowrap}
+.qtab td{min-width:120px}
+tr.hl td{background:var(--tint)}
+.vs2 th:first-child{width:120px}
+.vs2 td{min-width:200px}
+@media (max-width:560px){.vs2 td,.pt td,.ten td,.ten td:first-child{min-width:160px}}
+.vs2 td.a{background:var(--tint)}
+.qual td{min-width:170px}.qual tbody th{white-space:nowrap}
+.ten td{min-width:180px}.ten td:first-child{min-width:200px}
+.seh{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.seh p{max-width:72ch}
+@media (max-width:900px){.seh{grid-template-columns:minmax(0,1fr)}}
+.h3s{font:800 1.4rem/1.2 var(--display);margin:22px 0 8px;letter-spacing:.01em}
+.signs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.signs li:last-child{grid-column:span 2}
+@media (max-width:1100px){.signs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.signs{grid-template-columns:minmax(0,1fr)}.signs li:last-child{grid-column:auto}}
+.signs li{background:var(--tint);border-radius:14px;padding:12px 14px 12px 52px;position:relative;counter-increment:sg;min-width:0}
+.signs{counter-reset:sg}
+.signs li::before{content:counter(sg);position:absolute;left:12px;top:12px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--on-accent);font:800 1rem/28px var(--display);text-align:center}
+.signs b{display:block;font:700 .98rem/1.3 var(--body)}
+.signs span{display:block;font-size:.88rem;margin-top:3px}
+.signs em{display:block;font:600 .68rem/1.3 var(--body);font-style:normal;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+.prow{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 12px;align-items:center;margin:8px 0 4px}
+.prow>span{font-weight:600;font-size:.88rem;white-space:nowrap}
+.prow .pill{font-size:.82rem;padding:7px 11px}
+@media (max-width:620px){.prow{grid-template-columns:minmax(0,1fr)}}
+.qzw{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:18px;align-items:start;margin-top:10px}
+@media (max-width:1100px){.qzw{grid-template-columns:minmax(0,1fr)}}
+.qgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@media (max-width:1250px){.qgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.qgrid>.qb:last-child{grid-column:1/-1}}
+@media (max-width:620px){.qgrid{grid-template-columns:minmax(0,1fr)}}
+.qb{border:1px solid var(--rule);border-radius:12px;padding:10px 12px;min-width:0}
+.qb b{display:block;font:700 .95rem var(--body)}
+.qb small{display:block;color:var(--muted);font-size:.8rem;line-height:1.35}
+.qb .row{margin-top:6px}
+.qb .pill{font-size:.8rem;padding:6px 10px;text-align:left;line-height:1.25}
+.qres{background:var(--tint);border-radius:14px;padding:14px 16px;position:sticky;top:76px;min-width:0}
+@media (max-width:1100px){.qres{position:static}}
+.qh{display:block;font:800 1.3rem/1.2 var(--display);margin:2px 0 4px}
+.pbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 8px;align-items:center;margin-top:8px;font-size:.88rem}
+.pbar span{font-weight:600;min-width:0}
+.pbar b{font:700 .88rem var(--mono);text-align:right}
+.pbar i{grid-column:1/-1;display:block;height:8px;border-radius:4px;background:var(--rule);overflow:hidden}
+.pbar i em{display:block;height:100%;border-radius:4px}
+#verdict .pbar b{color:var(--ink);display:inline}
+.why{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.why span{font-size:.78rem;background:var(--panel);border:1px solid var(--rule);border-radius:999px;padding:3px 9px}
+.bgal{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;margin-top:6px}
+@media (max-width:1250px){.bgal{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:560px){.bgal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.bgal figure{margin:0;background:var(--tint);border-radius:12px;padding:8px 8px 10px;text-align:center;min-width:0}
+.bgal svg{display:block;width:100%;height:auto;max-width:150px;margin:0 auto}
+.bgal figcaption b{display:block;font:700 .92rem var(--body)}
+.bgal figcaption span{display:block;font-size:.78rem;color:var(--muted);line-height:1.35}
+.pX{background:var(--tint);border-radius:12px;padding:10px 14px;margin:10px 0;font-size:.92rem;max-width:110ch}
+.pX b{display:block;font:700 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:3px}
+.pt td{min-width:200px}.pt tbody th{white-space:nowrap;color:var(--muted);font-weight:600}
+.radg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:18px 32px;align-items:center;margin-top:6px}
+@media (max-width:900px){.radg{grid-template-columns:minmax(0,1fr)}}
+.radw{max-width:420px;margin:0 auto}
+#cRad{display:block;width:100%;height:auto}
+#cRad text{font:600 12px var(--body);fill:var(--ink)}
+#cRad .grid{fill:none;stroke:var(--rule);stroke-width:1}
+.dots{margin:0;padding-left:18px}.dots li{margin-bottom:6px}
+.tg{display:flex;gap:8px;align-items:center;font-weight:600;margin-top:12px;cursor:pointer}
+.tg input{width:18px;height:18px;accent-color:var(--accent);margin:0}
+.ctl .row .pill{font-size:.82rem;padding:7px 11px}
+details.more{margin-top:10px}
+details.more summary{cursor:pointer;font-weight:600;color:var(--accent)}
+details.more[open] summary{margin-bottom:6px}
+#sheet{min-height:300px}
+@media (prefers-reduced-motion:reduce){#scene .stm{animation:none!important}}
+</style><link rel="alternate" hreflang="vi" href="https://www.medili.vn/phan-biet-ca-phe.html"><link rel="alternate" hreflang="en" href="https://www.medili.vn/en/phan-biet-ca-phe.html"><link rel="alternate" hreflang="ja" href="https://www.medili.vn/ja/phan-biet-ca-phe.html"><link rel="alternate" hreflang="zh-Hans" href="https://www.medili.vn/zh/phan-biet-ca-phe.html"><link rel="alternate" hreflang="x-default" href="https://www.medili.vn/phan-biet-ca-phe.html"><script>const __tl=s=>{let n=0;for(const c of String(s))n+=/[⺀-鿿가-힯＀-￯]/.test(c)?1.85:1;return n};</script><style>:root{--body:"Be Vietnam Pro","Noto Sans JP",system-ui,sans-serif;--display:"Big Shoulders Display","Noto Sans JP","Be Vietnam Pro",system-ui,sans-serif}body{line-break:strict;word-break:normal;overflow-wrap:anywhere}h1,h2,h3,h4,.btn,.lede{word-break:auto-phrase}</style></head><body><div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a><nav class="mh-p" aria-label="メインメニュー"><a href="cau-chuyen.html">物語</a><a href="vung-trong.html">栽培地</a><a href="anh-vuon.html">農園の写真</a><a href="xuong-rang.html">焙煎所</a><a href="horeca.html">HORECA</a><a href="quan-medili.html">MeDili Café</a><a href="journal.html">知識</a><a href="gia-ca-phe.html">コーヒー価格</a></nav><details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>メニュー</span></summary><nav class="mh-pan" aria-label="すべてのページ"><div class="mh-grid"><div class="mh-c"><p class="mh-g">MeDili</p><ul><li><a href="./">ホーム</a></li><li><a href="cau-chuyen.html">MeDiliの物語</a></li><li><a href="doi-ngu.html">チーム</a></li><li><a href="quan-medili.html">MeDili Caféの店舗</a></li><li><a href="lien-he.html">お問い合わせ</a></li></ul></div><div class="mh-c"><p class="mh-g">栽培と生産</p><ul><li><a href="vung-trong.html">Di Linhの栽培地</a></li><li><a href="anh-vuon.html">農園の写真</a></li><li><a href="vuon.html">農園の12か月</a></li><li><a href="trai-ca-phe.html">チェリーの構造</a></li><li><a href="len-men-men-bia.html">ビール酵母による発酵</a></li><li><a href="len-men-trai-cay.html">フルーツとの共発酵</a></li></ul></div><div class="mh-c"><p class="mh-g">焙煎と抽出</p><ul><li><a href="xuong-rang.html">焙煎所と生産能力</a></li><li><a href="rang.html">焙煎ルーム</a></li><li><a href="huong-dan-pha.html">抽出ガイド</a></li><li><a href="quay-pha.html">ブリューバー</a></li><li><a href="cong-thuc-pha.html">抽出レシピマシン</a></li><li><a href="cold-brew.html">コールドブリューマシン</a></li><li><a href="tim-gu.html">好みのコーヒー診断</a></li></ul></div><div class="mh-c"><p class="mh-g">購入・お取引</p><ul><li><a href="cua-hang.html">コーヒーストア</a></li><li><a href="mua-hang.html">購入ルーム</a></li><li><a href="horeca.html">HORECA向けソリューション</a></li><li><a href="dong-hanh-cung-quan.html">カフェとともに</a></li><li><a href="nhan-xanh.html">生豆を選ぶ · 卸売</a></li><li><a href="gia-ca-phe.html">本日のコーヒー価格</a></li><li><a href="chinh-sach.html">MeDiliのポリシー</a></li><li><a href="giao-hang.html">配送と返品</a></li><li><a href="gio-hang.html">カート</a></li><li><a href="tim-kiem.html">検索</a></li></ul></div><div class="mh-c"><p class="mh-g">コーヒーの知識</p><ul><li><a href="journal.html">すべての記事</a></li><li><a href="chiet-xuat.html">抽出マシン</a></li><li><a href="phan-biet-ca-phe.html" aria-current="page">コーヒー判別マシン</a></li><li><a href="trai-chin.html">完熟チェリーマシン</a></li><li><a href="vi-sinh.html">微生物マシン</a></li><li><a href="tien-chat-huong.html">香りの前駆体マシン</a></li><li><a href="banh-xe-huong.html">MeDiliフレーバーホイール</a></li><li><a href="journal-phin.html">フィンと、時間が落ちるリズム</a></li><li><a href="journal-tu-qua.html">コーヒーチェリーから風味へ</a></li><li><a href="journal-di-linh.html">一杯のコーヒーに宿るDi Linh</a></li><li><a href="tu-vuon-den-ly.html">農園から一杯へ</a></li><li><a href="suc-khoe.html">コーヒーと体</a></li></ul></div></div></nav></details><details class="mh-l"><summary aria-label="言語 · Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.3 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.3-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>JA</span></summary><div class="mh-lp"><a href="../phan-biet-ca-phe.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../en/phan-biet-ca-phe.html" hreflang="en" lang="en">English</a><a href="phan-biet-ca-phe.html" hreflang="ja" lang="ja" aria-current="true">日本語</a><a href="../zh/phan-biet-ca-phe.html" hreflang="zh-Hans" lang="zh-Hans">中文</a></div></details><a class="mh-i" href="tim-kiem.html" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a><a class="mh-i" href="gio-hang.html" aria-label="カート"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="mh-cn" hidden></span></a><a class="mh-go" href="cua-hang.html">ストア</a></div></div>
+<div class="wrap">
+<header>
+  <span class="lgw"><img class="lgL" src="../assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div class="brandbar"><span>Di Linhの味に魅せられて</span><span>コーヒーの知識</span><span>Zalo <a href="#lien-he">0966 770 788</a></span></div>
+  <h1><em>コーヒー判別</em>マシン</h1>
+  <p>8つのコーヒーサンプルが8つのステーションを通ります：農園、完熟チェリー、豆の観察台、ふるい、はかり、ラボ、テイスティング台、判定装置。見ることと味わうことは定性、ふるう・量る・分析することは定量です。主役はRobusta Cà Sẻ Di Linh。どう見分けるのか、多収量Robustaとどこが違うのか。</p>
+</header>
+
+<div class="bench">
+  <div class="card">
+    <div class="fighead">
+      <div><b>図1</b> <span id="figsub"></span></div>
+      <button class="btn small" id="run2" type="button">マシンを動かす</button>
+    </div>
+    <div class="scroller"><svg id="scene" viewBox="0 0 1040 720" aria-label="8つのステーションの模型台：農園、完熟チェリー、豆の観察台、ふるい、100粒はかり、ラボ、テイスティング台、判定装置。各ステーションを押すと詳細が見られます。"></svg></div>
+    <div class="strip" id="strip" role="group" aria-label="ステーションを選ぶ"></div>
+    <div id="detail" aria-live="polite"></div>
+  </div>
+
+  <aside class="card ctl">
+    <div class="head2"><h3>マシンに入れるサンプル</h3><small>8サンプル</small></div>
+    <div class="row" id="samps"></div>
+    <p class="mnote" id="sNote"></p>
+    <div class="row" style="margin-top:12px"><button class="btn main" id="run" type="button">マシンを動かす</button><button class="btn" id="myst" type="button">ミステリーサンプル</button><button class="btn" id="reveal" type="button" hidden>答えを見る</button><button class="btn" id="back" type="button" hidden>基準プロファイルに戻る</button></div>
+    <hr>
+    <div class="head2"><h3>測定値</h3><small id="modeL"></small></div>
+    <div class="sl" style="margin-top:6px"><label for="iW">100粒重 <output id="oW"></output></label><input id="iW" type="range" min="9" max="31" step="0.1"><p>完全粒、水分12.5%以下。</p></div>
+    <div class="sl"><label for="iS">スクリーン16以上の豆 <output id="oS"></output></label><input id="iS" type="range" min="10" max="100" step="1"><p>ふるい目6.30 mm、サンプル300 g。</p></div>
+    <div class="sl"><label for="iC">100粒中のピーベリー <output id="oC"></output></label><input id="iC" type="range" min="0" max="100" step="1"></div>
+    <span class="lbl" style="margin-top:12px">豆のセンターカット</span>
+    <div class="row" id="cuts"></div>
+    <label class="tg"><input type="checkbox" id="lab"> ラボの分析結果あり</label>
+    <div id="labBox">
+      <div class="sl"><label for="iCa">カフェイン <output id="oCa"></output></label><input id="iCa" type="range" min="0.4" max="3" step="0.05"></div>
+      <div class="sl"><label for="iL">脂質 <output id="oL"></output></label><input id="iL" type="range" min="6" max="19" step="0.5"></div>
+      <div class="sl"><label for="iSu">ショ糖 <output id="oSu"></output></label><input id="iSu" type="range" min="1.5" max="10" step="0.1"><p>生豆の乾物ベース。</p></div>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div id="verdict" aria-live="polite"></div>
+    <hr>
+    <span class="lbl">2指標マップ</span>
+    <div class="charts"><svg class="ch" id="cM" viewBox="0 0 340 200" role="img" aria-label="8サンプルのカフェインと100粒重"></svg></div>
+    <p class="mnote" id="mTip"></p>
+  </aside>
+</div>
+
+<section class="card sehero" id="ca-se">
+  <div class="seh">
+    <div>
+      <p class="eye">注目 · Robusta Cà Sẻ Di Linh</p>
+      <h2 class="p-h2" style="margin:0">Cà Sẻは品種であり、<em>豆の形や等級ではありません。</em></h2>
+      <p>「Sẻ」（スズメの意）は俗称で、正式な分類名ではありません。Cà Sẻ、Robusta Sẻ、Ro Sẻ、小粒Robustaはいずれも、20世紀初めにベトナムへ導入され、WASI研究所の選抜品種が登場する前に中部高原で広く栽培されていたRobustaを指します。種から増やすため集団は不均一で、木ごとに樹形も実も収量も異なります。名前は、小さな豆、小さな実、コンパクトな樹冠を表しています。</p>
+      <p>WASIの遺伝子バンクにある126サンプルの分析では、ベトナムのRobusta素材の大部分が、コンゴ川流域に由来する遺伝グループERに属することが示されました。1976年からWASIは大規模な育種を始め、TR4、TR9、TR11、続いてTR14、TR15の系統が、高収量と大粒を理由に少しずつCà Sẻに取って代わりました。Cà Sẻが新たに植えられることは少なくなりましたが、ベトナムRobustaの基盤となる素材であり、干ばつや病害虫に適応した遺伝子を多く残しています。</p>
+    </div>
+    <div class="medili">
+      <h3>MeDiliのCà Sẻ農園</h3>
+      <ul>
+        <li>Di Linh高原は標高約1,000 m。Robustaは約900〜1,000 mで栽培しています。</li>
+        <li>2010年から栽培。樹齢15年の木を、自然に寄り添って手入れしています。</li>
+        <li>涼しいので実はゆっくり熟します。11月から1月初めまで何度かに分けて摘み、未熟果は最大5%。</li>
+        <li>MeDiliの実感：樹齢の高いCà Sẻの木は、カフェイン豊富でおいしい一杯を生みます。</li>
+      </ul>
+    </div>
+  </div>
+  <h3 class="h3s">Cà Sẻを見分ける7つのサイン</h3>
+  <ol class="signs">
+    <li><b>根元に接ぎ木の跡がない</b><span>実生の木です。20本の列を歩くと、樹形、葉、実がそれぞれ違うのがわかります。</span><em>農園 · 定性</em></li>
+    <li><b>実は小さく、房が密</b><span>実は接ぎ木の系統より小さく、色と熟度は木によって異なります。</span><em>実 · 定性</em></li>
+    <li><b>豆は小さく硬く、背が厚い</b><span>短く丸い形で、センターカットはすべてのRobustaと同じくまっすぐ。</span><em>豆 · 定性</em></li>
+    <li><b>量ると軽い</b><span>100粒あたり推定13〜17 g。ラムドン省で栽培されるTR4、TR9、TR11の系統は21.6〜29.6 g。</span><em>計量 · 定量</em></li>
+    <li><b>大粒スクリーンの豆が少ない</b><span>大部分がスクリーン13〜16に収まります。ラムドン省の接ぎ木系統は87〜99%がスクリーン16以上。</span><em>ふるい · 定量</em></li>
+    <li><b>濃厚で苦みがはっきり、余韻が長い</b><span>ダークチョコレート、カカオ。しっかりしたボディで酸味は少なめ。多収量品種も苦いが、味は軽め。</span><em>テイスティング · 官能</em></li>
+    <li><b>農園の記録がある</b><span>農園コード、植え付け年、種子の出所。これが最も強い証拠です。確実を期すならDNA検査を。</span><em>トレーサビリティ</em></li>
+  </ol>
+  <h3 class="h3s">Cà Sẻと多収量Robustaを並べて</h3>
+  
+  <div class="tw"><table class="rich vs2"><thead><tr><th></th><th><i class="sw" style="background:var(--k1)"></i>Cà Sẻ Di Linh</th><th><i class="sw" style="background:var(--k2)"></i>多収量Robusta</th></tr></thead><tbody><tr><th>由来</th><td class="a">20世紀初めにベトナムへ導入され、WASI品種の登場前に中部高原で広く栽培されたRobusta</td><td>1976年以降に選抜されたWASIの系統：TR4、TR9、TR11、TR14、TR15。TRS1はTR4、TR9、TR11、TR12の交配</td></tr><tr><th>繁殖方法</th><td class="a">実生のため、木ごとに異なる</td><td>接ぎ木や挿し木で農園は均一。複数の系統を混植する必要がある</td></tr><tr><th>100粒重</th><td class="a">推定13〜17 g</td><td>系統と地域により15.3〜29.6 g、ラムドン省では19.2〜29.6 g</td></tr><tr><th>スクリーン16以上</th><td class="a">推定55〜70%</td><td>63〜99%、ラムドン省では86.9〜99.2%</td></tr><tr><th>収量</th><td class="a">推定2〜3トン（生豆）/ha</td><td>試験で3.7〜7.3トン（生豆）/ha</td></tr><tr><th>カフェイン</th><td class="a">業界資料では2.2〜2.7%</td><td>Robusta全般で約2.2%</td></tr><tr><th>カップの味</th><td class="a">濃厚で苦みがはっきり、余韻が長く、しっかりしたボディ。ダークチョコレート、カカオ</td><td>苦みがはっきり、木、焙煎穀物。味は軽め</td></tr><tr><th>長所</th><td class="a">干ばつや病害虫に適応した遺伝資源。地域の物語</td><td>高収量、大きくそろった豆、さび病への耐性</td></tr><tr><th>短所</th><td class="a">低収量、小粒、大粒スクリーンの豆が少ない</td><td>集約栽培が必要。TRS1は干ばつに弱い</td></tr></tbody></table></div>
+  <p class="mnote">同じRobusta種なので、両者のカフェイン、脂質、糖は重なり合い、化学分析では区別できません。違いは木、豆の大きさ、収量、そしてカップの味に表れます。Cà Sẻの「推定」値は、TRS1品種試験で対照区とした実生の一般的なRobustaから推算したもので（TRS1は対照区を収量で50.2%、100粒重で25.4%上回った）、Di Linhの農園で実測した値ではありません。</p>
+</section>
+
+<section class="card" id="robusta">
+  <h2>図2：地域別のRobusta系統の豆の大きさ</h2>
+  <p class="lead">各点は、品種試験のデータに基づく、ある地域でのRobusta系統1つです。同じTR4でも、100粒あたりザライ省では15.3 g、ラムドン省では21.6 g。そのため豆の大きさは、同じ地域・同じ収穫期の中でだけ比べます。破線で囲んだ範囲がCà Sẻの推定範囲です。</p>
+  <div class="lg" id="lgR"></div>
+  <div class="chw" id="wR"><svg id="cR" class="c2" role="img" aria-label="ダクラク省、ザライ省、ラムドン省のRobusta系統の100粒重とスクリーン16以上の豆の割合"></svg></div>
+  <details class="more"><summary>図2のデータを見る</summary><div class="tw"><table class="rich"><thead><tr><th>系統</th><th>地域</th><th>100粒重、g</th><th>スクリーン16以上</th></tr></thead><tbody><tr><td>TR4</td><td>ダクラク省</td><td>18.4</td><td>80.0%</td></tr><tr><td>TR9</td><td>ダクラク省</td><td>22.5</td><td>94.3%</td></tr><tr><td>TR11</td><td>ダクラク省</td><td>18.3</td><td>88.2%</td></tr><tr><td>TR14</td><td>ダクラク省</td><td>20.9</td><td>97.8%</td></tr><tr><td>TR15</td><td>ダクラク省</td><td>24.9</td><td>98.1%</td></tr><tr><td>TR16</td><td>ダクラク省</td><td>20.0</td><td>94.3%</td></tr><tr><td>TR6</td><td>ダクラク省</td><td>19.4</td><td>92.7%</td></tr><tr><td>TR4</td><td>ザライ省</td><td>15.3</td><td>63.2%</td></tr><tr><td>TR9</td><td>ザライ省</td><td>17.0</td><td>75.0%</td></tr><tr><td>TR11</td><td>ザライ省</td><td>15.7</td><td>65.0%</td></tr><tr><td>TR14</td><td>ザライ省</td><td>20.5</td><td>95.4%</td></tr><tr><td>TR15</td><td>ザライ省</td><td>22.0</td><td>97.9%</td></tr><tr><td>TR16</td><td>ザライ省</td><td>19.1</td><td>93.2%</td></tr><tr><td>TR6</td><td>ザライ省</td><td>18.4</td><td>91.5%</td></tr><tr><td>TR4</td><td>ラムドン省</td><td>21.6</td><td>86.9%</td></tr><tr><td>TR9</td><td>ラムドン省</td><td>29.6</td><td>99.2%</td></tr><tr><td>TR11</td><td>ラムドン省</td><td>22.8</td><td>95.8%</td></tr><tr><td>TR14</td><td>ラムドン省</td><td>22.4</td><td>95.7%</td></tr><tr><td>TR15</td><td>ラムドン省</td><td>23.5</td><td>96.3%</td></tr><tr><td>TR16</td><td>ラムドン省</td><td>20.2</td><td>91.2%</td></tr><tr><td>TR6</td><td>ラムドン省</td><td>19.2</td><td>90.0%</td></tr><tr><td>TRS1</td><td>TRS1、4地域の平均</td><td>19.1</td><td>85.3%</td></tr></tbody></table></div></details>
+</section>
+
+<section class="card" id="nhan-dien">
+  <h2>五感で判別するマシン</h2>
+  <p class="lead">見て、嗅いで、味わってわかることを選んでください。マシンが証拠を積み上げ、8つのサンプルを順位づけします。重みは資料の記述をもとにMeDiliが設定したもので、測定に基づくモデルではありません。目、鼻、舌のトレーニングにお使いください。もう一度押すと選択を解除できます。</p>
+  <div class="prow"><span>サンプルで試す</span><div class="row" id="qPre" style="margin-top:0"></div></div>
+  <div class="qzw">
+    <div class="qgrid" id="qz"></div>
+    <div class="qres" id="qzr" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="card" id="dinh-luong">
+  <h2>定量：8サンプル、8指標</h2>
+  <p class="lead">研究資料と業界資料をもとにまとめたデータです。「推定」とあるセルはMeDiliがモデル用に推定した値です。横線のセルは信頼できる数値がまだないもので、MeDiliが独自に埋めることはしていません。</p>
+  
+  <div class="tw"><table class="rich qtab"><thead><tr><th>サンプル</th><th>カフェイン、乾物%</th><th>脂質、%</th><th>ショ糖、%</th><th>100粒重、g</th><th>スクリーン16以上</th><th>ピーベリー（culi）</th><th>生豆収量</th><th>16-OMC</th></tr></thead><tbody><tr class="hl"><td><i class="sw" style="background:var(--k1)"></i>Cà Sẻ Di Linh</td><td>2.2–2.7</td><td>≈ 10</td><td>≈ 4</td><td>推定13〜17</td><td>推定55〜70%</td><td>4–5%</td><td>推定2〜3トン/ha</td><td>高い</td></tr><tr><td><i class="sw" style="background:var(--k2)"></i>多収量Robusta</td><td>≈ 2.2</td><td>≈ 10</td><td>≈ 4</td><td>15.3〜29.6、ラムドン省19.2〜29.6</td><td>63〜99%、ラムドン省87〜99%</td><td>4–5%</td><td>3.7〜7.3トン/ha</td><td>高い</td></tr><tr><td><i class="sw" style="background:var(--k3)"></i>Arabica（Typica、Bourbon）</td><td>≈ 1.2</td><td>≈ 16</td><td>≈ 8</td><td>推定18</td><td>推定80%</td><td>4–5%</td><td>低い</td><td>痕跡量</td></tr><tr><td><i class="sw" style="background:var(--k4)"></i>Catimor</td><td>≈ 1.2</td><td>≈ 16</td><td>≈ 8</td><td>推定16〜18</td><td>推定70〜85%</td><td>4–5%</td><td>1.67トン/ha</td><td>痕跡量</td></tr><tr><td><i class="sw" style="background:var(--k5)"></i>Moka Cầu Đất</td><td>Mokkaであれば：Arabicaの約½</td><td>≈ 16</td><td>≈ 8</td><td>推定10〜13</td><td>推定20〜40%</td><td>—</td><td>1〜2 kg/本/年</td><td>痕跡量</td></tr><tr><td><i class="sw" style="background:var(--k6)"></i>Culi（ピーベリー）</td><td>母樹に準じる</td><td>母樹に準じる</td><td>母樹に準じる</td><td>母樹に準じる</td><td>別にふるい分け</td><td>1収穫期あたり4〜5%、culiロットは90%以上</td><td>—</td><td>種による</td></tr><tr><td><i class="sw" style="background:var(--k7)"></i>Liberica（ジャックフルーツコーヒー）</td><td>Arabicaに近い</td><td>—</td><td>—</td><td>≈ 21（1粒0.212 g）</td><td>輸出品は90%以上</td><td>—</td><td>—</td><td>まだわからない</td></tr><tr><td><i class="sw" style="background:var(--k8)"></i>Excelsa（Chari）</td><td>Arabicaに近い</td><td>—</td><td>—</td><td>Libericaより小さい</td><td>—</td><td>—</td><td>Libericaより高い</td><td>まだわからない</td></tr></tbody></table></div>
+  <p class="mnote">カフェイン、脂質、ショ糖は生豆の乾物ベースです。16-OMC（16-O-メチルカフェストール）はRobustaの化学的な指標で、Arabicaに混ぜられたRobustaの検出に使われます。</p>
+  <details class="more"><summary>マシンが使うパラメータ（平均 ± 偏差）</summary><div class="tw"><table class="rich" id="pTab"></table></div>
+  <p class="mnote">中心値は上の表から選んでいます。Libericaの脂質のようにまだ数値がない項目は、マシンがあまり頼らないよう、MeDiliが幅を広く設定しています。</p></details>
+</section>
+
+<section class="card" id="dinh-tinh">
+  <h2>定性：豆の形と間違えやすいペア</h2>
+  <p class="lead">図3は、8サンプルの生豆を同じ縮尺で、平らな面を上にして描いています。長さは100粒重と豆の形から推定し、Libericaのみ実測値の11.46 mmを使用。概念図です。</p>
+  <div class="bgal" id="bgal"></div>
+  <h3 class="h3s">ペアごとに比較</h3>
+  <div class="prow"><span>サンプルA</span><div class="row" id="pA" style="margin-top:0"></div><span>サンプルB</span><div class="row" id="pB" style="margin-top:0"></div></div>
+  <div class="pX" id="pX"></div>
+  <div class="tw"><table class="rich pt" id="pT"></table></div>
+  <details class="more"><summary>8サンプルすべての定性表を見る</summary><div class="tw"><table class="rich qual"><thead><tr><th></th><th><i class="sw" style="background:var(--k1)"></i>Cà Sẻ</th><th><i class="sw" style="background:var(--k2)"></i>多収量品種</th><th><i class="sw" style="background:var(--k3)"></i>Arabica</th><th><i class="sw" style="background:var(--k4)"></i>Catimor</th><th><i class="sw" style="background:var(--k5)"></i>Moka</th><th><i class="sw" style="background:var(--k6)"></i>Culi</th><th><i class="sw" style="background:var(--k7)"></i>Liberica</th><th><i class="sw" style="background:var(--k8)"></i>Excelsa</th></tr></thead><tbody><tr><th>種、グループ</th><td>Robusta、在来品種</td><td>Robusta、選抜系統</td><td>Arabica、古い品種</td><td>Arabica、交配品種</td><td>Arabica、Bourbon系</td><td>豆の形状のひとつで、どの品種にも現れる</td><td>Coffea liberica</td><td>Coffea dewevrei</td></tr><tr><th>繁殖方法</th><td>実生：何世代も種から育てられ、集団は不均一</td><td>接ぎ木、挿し木：TR4、TR9、TR11、TR14、TR15。TRS1のみ交配種子から栽培</td><td>種から栽培。Arabicaは自家受粉なので、品種はかなり安定している</td><td>Timor HybridとCaturraの交配で、1959年にポルトガルで作出</td><td>種から栽培。Bourbonの矮性型とされることが多い</td><td>品種ではない：実の中で豆が2粒ではなく1粒だけ育つ</td><td>別の種。本格的な高木で、直根が深い</td><td>かつてはLibericaの変種とされていたが、2025年の遺伝子研究で独立した種とされた</td></tr><tr><th>木</th><td>木ごとに樹形が違い、葉も実も異なる。樹冠はたいていコンパクト。根元に接ぎ木の跡がない。</td><td>農園は型で抜いたように均一で、根元に接ぎ木の跡がある。Robustaは他家受粉が必要なため、複数の系統を混植しなければならない。TR9は低くコンパクトで、新葉は濃い銅色。</td><td>Typicaは背が高く、枝は水平に伸び、新葉は銅色。葉はRobustaより小さく、つやがある。</td><td>低木で節間が短く、樹冠はコンパクト。Timor HybridのRobusta遺伝子のおかげで、さび病に強い。</td><td>木は小さく葉が少なく、やせて見える。原型のMokkaは生け垣のように茂る。</td><td>母樹に準じる。どの農園にもある。</td><td>大きな高木で、葉は大きく厚く、直根が深い。</td><td>樹高は約15 mにもなり、葉は厚く丈夫で、根が深い。干ばつに強く、病害虫が少ない。</td></tr><tr><th>実</th><td>実は小さく房が密。色と熟度は木によって異なる。</td><td>実は大きく、同じ系統内でそろっている。</td><td>実は赤く中くらい。節ごとの実はRobustaより少ない。</td><td>実は赤く中くらいで、実付きがよい。</td><td>実は小さく丸い。</td><td>外見は普通の実と同じ。</td><td>実は大きく、皮が厚く、果肉が多い。果肉と豆の比は約60 : 40。</td><td>実も豆もLibericaより小さく、パーチメントが薄い。</td></tr><tr><th>生豆</th><td>小さく硬く、背が厚く、短く丸い形。</td><td>大きくそろい、やや長めの丸い形。</td><td>平たく細長く、平らな面が広い。</td><td>平たく細長く、中粒〜大粒。</td><td>とても小さく、えんどう豆のように丸い。</td><td>均一に丸く、平らな面がない。</td><td>種の中で最も大きい：長さ約11.5 mm、形はいびつで、とがった先が鉤状。</td><td>中くらいで、やや傾いたしずく形。</td></tr><tr><th>センターカット</th><td>まっすぐ</td><td>まっすぐ</td><td>S字に曲がる</td><td>S字に曲がる</td><td>曲がっていて短い</td><td>丸い豆に沿った1本の線</td><td>しわがあり、ずれている</td><td>ややしわがあり、ずれている</td></tr><tr><th>地域、標高</th><td>約900〜1,000 m、Di Linh高原</td><td>地域による：ダクラク省、ザライ省、ラムドン省。TR9は約500〜800 mに適する</td><td>高地。Cầu Đấtは約1,500 m以上</td><td>ソンラ省、ラムドン省、クアンチ省…</td><td>約1,500〜1,600 m、Cầu Đất</td><td>農園による</td><td>コントゥム省、クアンチ省、ラムドン省。約800 m</td><td>ベトナム、インド、インドネシアで栽培</td></tr><tr><th>収穫期</th><td>11月から1月初め、何度かに分けて摘む</td><td>系統による。TR9、TR14、TR15は晩生</td><td>地域による</td><td>地域による</td><td>収穫期による</td><td>農園による</td><td>地域に準じる</td><td>地域に準じる</td></tr><tr><th>風味</th><td>濃厚で苦みがはっきり、余韻が長く、しっかりしたボディ。ダークチョコレート、カカオ</td><td>苦みがはっきり、木、焙煎穀物。Cà Sẻより味は軽い</td><td>花、柑橘、フルーツ。爽やかな酸味、甘い</td><td>ナッツ、ハーブ、チェリー、ベリー。ほどよい酸味</td><td>みかんの皮、アーモンド、イチゴ、バニラ。チョコレート、ドライフルーツ、スパイスと記す資料もある</td><td>母樹に準じる。丸い豆は均一に焼けやすく、味がまろやかになることもあるが、保証はない</td><td>精製がよければ熟したジャックフルーツ、マンゴー、ライチ、パッションフルーツ。精製が悪いと木、なめし革</td><td>フルーツのような酸味、ダークフルーツ、チョコレート、スパイス、ヘーゼルナッツ。苦みは少ない</td></tr><tr><th>評価基準</th><td>Fine Robusta</td><td>Fine Robusta</td><td>SCA</td><td>SCA</td><td>SCA</td><td>母樹の種に準じる</td><td>広く使われる専用の基準はまだない</td><td>広く使われる専用の基準はまだない</td></tr><tr><th>収量</th><td>推定2〜3トン（生豆）/ha</td><td>試験で3.7〜7.3トン（生豆）/ha</td><td>低い。Cầu ĐấtのTypicaは地域全体で年間約2.5〜3トンのみ</td><td>1.67トン（生豆）/ha、品種試験の対照区</td><td>1本あたり年間約1〜2 kg</td><td>1収穫期の生産量の約4〜5%</td><td>ベトナムでは信頼できる数値がまだない</td><td>条件がよければLibericaより高い</td></tr><tr><th>間違えやすい相手</th><td>厳しい地域で育った多収量Robusta（豆も小さくなる）、または小さい豆だけをふるい分けたロット。</td><td>Cà Sẻ。多収量品種も厳しい地域では豆が小さくなるため：ザライ省のTR4は100粒あたりわずか15.3 g。</td><td>Catimor：同じ種で、豆の形はほぼ同じ。</td><td>古い品種のArabica：豆の形はほぼ同じ。</td><td>売りやすくするため、まとめて「Moka」と呼ばれることが多いArabica。</td><td>Cà Sẻ：Sẻは品種、Culiは豆の形。Culi Sẻ、多収量品種のCuli、ArabicaのCuliがある。</td><td>Excelsa：どちらもまとめて「ジャックフルーツコーヒー」と呼ばれる。</td><td>Liberica：どちらもまとめて「ジャックフルーツコーヒー」と呼ばれる。</td></tr></tbody></table></div></details>
+</section>
+
+<section class="card" id="cam-quan">
+  <h2>図4：官能プロファイル、Cà Sẻを他のサンプルと並べて</h2>
+  <p class="lead">10段階の相対的な強さで、資料の官能的な記述をMeDiliが数値化したもの。カッピングの点数ではありません。</p>
+  <div class="prow"><span>比較対象</span><div class="row" id="rB" style="margin-top:0"></div></div>
+  <div class="radg">
+    <div><div class="radw"><svg id="cRad" viewBox="0 0 340 300" role="img" aria-label="6軸チャート：香り、酸味、甘み、苦み、ボディ、余韻"></svg></div><div class="lg" id="lgRad" style="justify-content:center"></div><p class="mnote" id="radT" style="text-align:center"></p></div>
+    <div>
+      <h3 class="h3s" style="margin-top:0">どの基準で採点するか</h3>
+      <ul class="dots">
+        <li><b>Robusta：</b>Fine Robustaの基準。フレグランス／アロマ、フレーバー、アフターテイスト、塩味と酸味の比、苦味と甘味の比、マウスフィール、バランス、均一性、クリーンさ、総合評価で構成されます。80点以上がFine Robustaです。</li>
+        <li><b>Arabica：</b>SCAの基準。Catimor、Typica、Mokaもすべてこの基準で採点します。</li>
+        <li><b>Liberica、Excelsa：</b>広く使われる専用の基準はまだなく、Arabicaの評価シートを借りることが多い。</li>
+        <li><b>品種を比べるなら：</b>浅煎り〜中煎りで同じ焙煎プロファイル、8〜24時間休ませ、1サンプル5カップ、ブラインドで味わう。深煎りは違いを覆い隠します。</li>
+      </ul>
+      <p class="mnote"><a class="lnk" href="banh-xe-huong.html">MeDiliフレーバーホイール</a>に沿って記録します。</p>
+    </div>
+  </div>
+</section>
+
+<section class="p-sec">
+  <p class="eye">よくある誤解</p>
+  <h2 class="p-h2" style="margin:0"><em>コーヒーを売るときに言い間違えやすい</em>6つのこと。</h2>
+  <div class="g3"><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 4h9l-1.2 3c3 2.2 4 6 3.2 10.2A3 3 0 0 1 15.6 20H8.4a3 3 0 0 1-2.9-2.8C4.7 13 5.7 9.2 8.7 7z"/><path d="M8.6 7h6.8"/><ellipse class="fi" cx="12" cy="13.6" rx="2" ry="3"/></svg><h3>Cà SẻはCuliではない</h3><p>Sẻは木の品種。Culiは豆の形で、実の中で丸い豆が1粒だけ育ったもの。どの品種にもあり、1収穫期の約4〜5%。Culi Sẻ、多収量品種のCuli、ArabicaのCuliがあります。</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 20h12M5 7h14"/><path d="M5 7l-3 6h6zM19 7l-3 6h6z"/></svg><h3>小粒だからSẻとは限らない</h3><p>ザライ省で栽培されたTR4は100粒あたりわずか15.3 gで、Cà Sẻと同程度。干ばつ、栄養不足、未熟な実の収穫、小さい豆だけをふるい分けることは、いずれも豆を小さくします。</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="16.5" r="2.6"/><circle cx="12" cy="6.5" r="2.6"/><circle class="fi" cx="18" cy="16.5" r="2.6"/><path d="M7.4 14.2l3.2-5.4M13.4 8.8l3.2 5.4M8.6 16.5h6.8"/></svg><h3>カフェインでは品種を証明できない</h3><p>RobustaのカフェインはArabicaのほぼ2倍ですが、同じ種の中ではカフェインは地域、熟度、年によって変わります。Sẻと多収量品種を分けるカフェインの境界値はありません。</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11c0-4 3-6.5 7-8M15.5 9.5c.3-2.2-.2-4.2-1-6"/><circle cx="9" cy="15.5" r="4.2" class="fi"/><circle cx="16.5" cy="13.5" r="4"/></svg><h3>「Moka」はおいしいArabicaの総称ではない</h3><p>Moka Cầu Đấtは特定のArabica品種で、Bourbonの矮性型とされることが多い。豆はとても小さく丸く、1本あたり年間約1〜2 kgしかとれません。</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.2"/><path d="M15 15l5.5 5.5"/><ellipse class="fi" cx="10.5" cy="10.5" rx="2" ry="3"/></svg><h3>生豆の色で品種はわからない</h3><p>色は精製方法、水分、保管期間で変わります。色ではなく、豆の形とセンターカットを読みましょう。</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l7.5 3V12c0 4.6-3.1 7.7-7.5 9.2C7.6 19.7 4.5 16.6 4.5 12V5.8z"/><path d="M8.8 12.2l2.3 2.3 4.3-4.6"/></svg><h3>Culiは「2倍強い」わけではない</h3><p>Culiの成分は母樹と同じです。丸い豆は均一に転がるので焼きムラが少なく、味がまろやかになることもありますが、保証はありません。</p></div></div>
+</section>
+
+<section class="card" id="ten-goi">
+  <h2>市場での呼び名</h2>
+  <p class="lead">販売名の多くは品種名ですが、豆の形、地域、等級、精製方法を指す名前も多くあります。正しく質問すれば、買い間違いが減ります。</p>
+  <div class="tw"><table class="rich ten"><thead><tr><th>呼び名</th><th>実際は何か</th><th>確かめ方</th></tr></thead><tbody><tr><td><b>Cà Sẻ、Robusta Sẻ、Ro Sẻ、小粒Robusta</b></td><td>種から育てる古いRobusta品種で、豆は小さい。俗称で、分類名ではない。</td><td>農園の記録、接ぎ木跡のない木。100粒を量る。ふるう。</td></tr><tr><td><b>多収量Robusta、Ro ghép（接ぎ木のRobusta）、TR4、TR9、TR11、TR14、TRS1</b></td><td>WASI研究所が選抜した高収量の系統で、大部分は接ぎ木で増やす。</td><td>豆は大きくそろう。ラムドン省では100粒あたり20 gを超えることが多い。</td></tr><tr><td><b>Culi</b></td><td>豆の形：実の中に丸い豆が1粒だけ。RobustaにもArabicaにもあり、1収穫期の約4〜5%。</td><td>100粒中の丸い豆を数える。選別済みのculiロットは90%以上。</td></tr><tr><td><b>Moka</b></td><td>Bourbonの矮性型とされることが多いArabica品種。豆はとても小さく丸い。Cầu Đấtには純粋な木が約500本しか残っていないとする資料もある。</td><td>農園と標高を尋ねる。100粒を量る。希少なので高価。</td></tr><tr><td><b>Arabica Cầu Đất</b></td><td>地域名で、品種名ではない。そこにはTypica、Bourbon、Moka、Catimorがある。</td><td>ロットの具体的な品種を尋ねる。</td></tr><tr><td><b>Catimor</b></td><td>Timor HybridとCaturraを交配したArabicaで、ベトナムで広く栽培されている。</td><td>木は低く、節間が短い。農園に尋ねる。</td></tr><tr><td><b>Cà phê mít（ジャックフルーツコーヒー）、Cherry、Chari</b></td><td>LibericaとExcelsaをまとめた市場での呼び名。現在は別々の2つの種。</td><td>大きくいびつで鉤があるのがLiberica、しずく形がExcelsa。</td></tr><tr><td><b>Fine Robusta</b></td><td>品質の等級：Fine Robustaの基準で80点以上。品種ではない。</td><td>ロットの評価シートを求める。</td></tr><tr><td><b>Honey、Natural、Washed</b></td><td>精製方法で、品種ではない。</td><td>工程を尋ね、豆を見て、味わう。</td></tr><tr><td><b>バター焙煎、香料入り</b></td><td>焙煎時にまぶしたり漬け込んだりする方法。品種については何も語らない。</td><td>パッケージの原材料表示を読む。</td></tr></tbody></table></div>
+</section>
+
+<section class="card" id="quy-trinh">
+  <h2>生豆購入時のサンプル検査手順</h2>
+  <p class="lead">サンプルを受け取ったときにMeDiliが使う10のステップ。ステップ1〜6は焙煎所で1回の作業で行い、7〜8にはサンプルロースターとテイスティング台が必要。9は証明が必要なときだけ行います。</p>
+  <div class="flowx"><div><span class="k">ステップ1</span><b>サンプリング</b><p>約300 gを複数の袋から混ぜて取る。ロット番号と売り込み時の呼び名を記録。</p></div><div><span class="k">ステップ2</span><b>水分測定</b><p>TCVN 4193では最大12.5%。水分が高いと、計量値はすべて狂います。</p></div><div><span class="k">ステップ3</span><b>100粒を観察</b><p>平らな面を上にして、まっすぐな溝、S字、しわ・ずれ、丸い豆を数える。</p></div><div><span class="k">ステップ4</span><b>ふるい分け</b><p>スクリーン18（7.10 mm）、16（6.30 mm）、13（5.00 mm）。各段を量る。</p></div><div><span class="k">ステップ5</span><b>100粒を量る</b><p>割れのない完全粒で。3回量って平均をとる。</p></div><div><span class="k">ステップ6</span><b>欠点を数える</b><p>黒豆、褐色豆、未熟豆、割れ豆、異物を、重量%で計算。</p></div><div><span class="k">ステップ7</span><b>サンプル焙煎</b><p>浅煎り〜中煎りで、すべてのサンプルを同じ焙煎プロファイルで。</p></div><div><span class="k">ステップ8</span><b>テイスティング</b><p>8〜24時間休ませ、1サンプル5カップ、ブラインドで。Fine RobustaまたはSCAの基準で。</p></div><div><span class="k">ステップ9</span><b>必要ならラボ分析</b><p>カフェインと16-OMCはHPLCまたはNMRで。系統の特定にはDNA。</p></div><div><span class="k">ステップ10</span><b>サンプル保管</b><p>一部を対照サンプルとしてロットがなくなるまで保管し、記録票に書く。</p></div></div>
+  <div class="cols" style="margin-top:16px">
+    <div>
+      <h3 class="h3s" style="margin-top:0">Robustaに関するTCVN 4193:2014</h3>
+      <div class="tw"><table class="rich"><thead><tr><th>等級</th><th>欠点豆の上限</th><th>異物の上限</th></tr></thead><tbody><tr><td>R1 18a</td><td>10%</td><td>0.1%</td></tr><tr><td>R1 18b</td><td>15%</td><td>0.5%</td></tr><tr><td>R1 16a</td><td>14%</td><td>0.5%</td></tr><tr><td>R1 16b</td><td>16%</td><td>0.5%</td></tr><tr><td>R1 16c</td><td>18%</td><td>0.5%</td></tr><tr><td>R2 13a</td><td>17%</td><td>0.5%</td></tr><tr><td>R2 13b</td><td>20%</td><td>0.5%</td></tr><tr><td>R2 13c</td><td>24%</td><td>1.0%</td></tr><tr><td>R3</td><td>70%</td><td>5.0%</td></tr></tbody></table></div>
+      <p class="mnote">重量%で計算、サンプル約300 g。水分は最大12.5%。1等級のRobustaに混入できるのはジャックフルーツコーヒー最大0.5%、Arabica最大3%。2・3等級はそれぞれ最大1%と5%。1等級のArabicaにはRobustaもジャックフルーツコーヒーも混入できない。ふるい目：18番は7.10 mm、16番は6.30 mm、14番は5.60 mm、13番は5.00 mm。</p>
+    </div>
+    <div>
+      <h3 class="h3s" style="margin-top:0">サンプル検査票</h3>
+      <pre class="msg" id="sheet"></pre>
+      <button class="btn small" id="cpSh" type="button">シートをコピー</button> <span class="cpst" id="cpShS" role="status"></span>
+    </div>
+  </div>
+</section>
+
+<section class="card src"><p style="margin:0;font-size:.88rem;color:var(--muted);max-width:110ch"><b style="color:var(--ink)">複数の資料をもとに構成。</b>このマシンは説明用のモデルです。各サンプルには6つの指標とセンターカットの型について典型的な値の範囲があり、マシンは単純ベイズ分類器のやり方で証拠を積み上げ、測定値がどのサンプルに最も合うかを計算します。「推定」とある数値はMeDiliがモデル用に推定したものです。Cà Sẻと多収量品種のように同じ種の2品種では、農園の記録とDNA検査だけが確かな答えを出せます。</p><div class="lnks"><a class="lnk" href="trai-chin.html">完熟チェリーマシン</a><a class="lnk" href="vi-sinh.html">微生物マシン</a><a class="lnk" href="tien-chat-huong.html">香りの前駆体マシン</a><a class="lnk" href="banh-xe-huong.html">MeDiliフレーバーホイール</a><a class="lnk" href="trai-ca-phe.html">Cà Sẻの実の解剖</a><a class="lnk" href="journal.html">コーヒーの知識をすべて見る</a></div></section>
+
+<section class="contact" id="lien-he"><div><img class="lgK" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83"><div class="tagline">Di Linhの味に魅せられて</div><p>販売元：DSunfood有限会社、143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM。<br>農園・焙煎所：Thôn 11, Xã Di Linh, Lâm Đồng。</p></div><div class="zalo"><span>MeDili Zalo</span><strong data-sel>0966 770 788</strong><div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Zaloでメッセージ</a><button type="button" data-copy="0966770788" data-done="番号をコピーしました">番号をコピー</button></div><small>メール：cafe@medili.vn</small></div></section>
+</div>
+<footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">いつだって<em>おいしいコーヒー一杯</em>のための時間はあります。</p><a class="btn main" href="quan-medili.html">MeDiliで会いましょう</a></div><div class="mf-grid"><div class="mf-brand"><b>コーヒーに夢中、Di Linhに夢中。</b><span>受け継いだものを守り、ひとつひとつの風味を大切に。</span><small>Di Linh · ラムドン省 · ベトナム</small></div><nav class="mf-col" aria-label="探索"><p class="mf-t">探索</p><a href="cau-chuyen.html">MeDiliの物語</a><a href="doi-ngu.html">MeDiliのチーム</a><a href="vung-trong.html">Di Linhの栽培地</a><a href="anh-vuon.html">MeDili農園の写真</a><a href="xuong-rang.html">焙煎所と生産能力</a><a href="rang.html">焙煎ルーム</a><a href="huong-dan-pha.html">抽出ガイド</a><a href="quay-pha.html">ブリューバー</a><a href="tim-gu.html">好みのコーヒー診断</a><a href="cong-thuc-pha.html">抽出レシピマシン</a><a href="chiet-xuat.html">抽出マシン</a><a href="cold-brew.html">コールドブリューマシン</a><a href="journal.html">コーヒーの知識</a></nav><nav class="mf-col" aria-label="MeDiliとあなた"><p class="mf-t">MeDiliとあなた</p><a href="cua-hang.html">MeDiliストア</a><a href="mua-hang.html">購入ルーム</a><a href="horeca.html">HORECA向けソリューション</a><a href="dong-hanh-cung-quan.html">カフェとともに</a><a href="nhan-xanh.html">卸売向け生豆</a><a href="gia-ca-phe.html">本日のコーヒー価格</a><a href="quan-medili.html">MeDili Caféの店舗</a><a href="lien-he.html">お問い合わせと地図</a><a href="chinh-sach.html">MeDiliのポリシー</a><a href="giao-hang.html">配送と返品</a><a href="bao-mat.html">プライバシーポリシー</a></nav><div class="mf-col"><p class="mf-t">販売元 · DSunfood</p><p>DSunfood有限会社<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>農園・焙煎所<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">MeDiliへの道順 ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">ZaloでMeDiliにメッセージ ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>MeDili Coffee Farm · Cà Sẻ Di Linh</i></div></div></footer><nav class="fl-c" aria-label="MeDiliへのクイック連絡"><a class="fl-b" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener" aria-label="ZaloでMeDiliにメッセージ" data-tip="ZaloでMeDiliにメッセージ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a><a class="fl-b" href="https://www.facebook.com/share/192oMLdBnq/" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a></nav>
+<script>
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'コピーしました'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='番号を選択しました。ご自身でコピーしてください'}
+setTimeout(()=>{b.textContent=o},2400)}))})();
+window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
+const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};
+const badge=()=>{const n=get().reduce((a,x)=>a+(+x.q||0),0);document.querySelectorAll('.mh-cn').forEach(e=>{e.textContent=n>99?'99+':n;e.hidden=!n})};
+const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badge()};
+const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
+badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
+
+const $=id=>document.getElementById(id);
+const vn=(n,d=1)=>(+n).toFixed(d);
+const fm=n=>Math.round(n).toLocaleString('ja-JP');
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const lerp=(a,b,t)=>a+(b-a)*t;
+const NB=' ';
+const g1=n=>Number.isInteger(+n)?String(n):vn(n,1);
+const f1=n=>(+n).toFixed(1);
+const P=(x,y,z=0)=>[OX+(x-y)*.866*U,OY+(x+y)*.5*U-z*U];
+const pts=a=>a.map(q=>q.map(f1).join(',')).join(' ');
+const pa=p=>!p?'':(p[0]==='#'||p.startsWith('rgb')||p.startsWith('var('))?` style="fill:${p}"`:` class="${p}"`;
+const poly=(a,p='')=>`<polygon points="${pts(a)}"${pa(p)}/>`;
+function box(x,y,z,w,d,h,c=['f1','f2','f3']){return poly([P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[1])+poly([P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)],c[2])+poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[0])}
+const RX=r=>r*U*1.2247,RY=r=>r*U*.7071;
+function cyl(cx,cy,z,r,h,c='f2',top='f1'){const [a,b]=P(cx,cy,z),[,t]=P(cx,cy,z+h),rx=RX(r),ry=RY(r);return `<path${pa(c)} d="M${f1(a-rx)} ${f1(t)}V${f1(b)}A${f1(rx)} ${f1(ry)} 0 0 0 ${f1(a+rx)} ${f1(b)}V${f1(t)}Z"/><ellipse${pa(top)} cx="${f1(a)}" cy="${f1(t)}" rx="${f1(rx)}" ry="${f1(ry)}"/>`}
+function frus(cx,cy,z0,r0,z1,r1,c,top){const [a,b0]=P(cx,cy,z0),[,b1]=P(cx,cy,z1),x0=RX(r0),y0=RY(r0),x1=RX(r1),y1=RY(r1);return `<path${pa(c)} d="M${f1(a-x1)} ${f1(b1)}L${f1(a-x0)} ${f1(b0)}A${f1(x0)} ${f1(y0)} 0 0 0 ${f1(a+x0)} ${f1(b0)}L${f1(a+x1)} ${f1(b1)}Z"/><ellipse${pa(top)} cx="${f1(a)}" cy="${f1(b1)}" rx="${f1(x1)}" ry="${f1(y1)}"/>`}
+const sph=(cx,cy,z,r,c,id)=>{const [a,b]=P(cx,cy,z);return `<circle${id?` id="${id}"`:''}${pa(c)} cx="${f1(a)}" cy="${f1(b-r*U)}" r="${f1(r*U)}"/>`};
+const disc=(cx,cy,z,r,c)=>{const [a,b]=P(cx,cy,z);return `<ellipse${pa(c)} cx="${f1(a)}" cy="${f1(b)}" rx="${f1(RX(r))}" ry="${f1(RY(r))}"/>`};
+const face=(x,y,z)=>{const q=P(x,y,z);return `matrix(.866 .5 0 1 ${f1(q[0])} ${f1(q[1])})`};
+const faceR=(x,y,z)=>{const q=P(x,y,z);return `matrix(.866 -.5 0 1 ${f1(q[0])} ${f1(q[1])})`};
+const lcd=(x,y,z,w,id,R)=>`<g transform="${(R?faceR:face)(x,y,z)}"><rect class="lcdb" x="0" y=".8" width="${w}" height="9" rx="1.4"/><text class="lcd" id="${id}" x="${w/2}" y="7.9" text-anchor="middle"></text></g>`;
+const stG=(i,inner)=>`<g class="st m" data-i="${i}" tabindex="0" role="button" aria-label="ステーション${i}：${ST[i-1].n}">${inner}</g>`;
+function bench(L,D,sign,sx){let h='<g class="m">';[[3,D-3],[L-3,D-3],[L-3,3]].forEach(([x,y])=>h+=cyl(x,y,-9,1.2,5,'cu2','cu2'));h+=box(0,0,-4,L,D,4,['wo','wo2','cu2'])+'</g>';
+ const pl=P(sx,D,-.6),w=__tl(sign)*8.3+16;
+ return h+`<g transform="matrix(.866 .5 0 1 ${f1(pl[0])} ${f1(pl[1])})"><rect width="${f1(w)}" height="24" rx="3" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:1.2"/><circle cx="8" cy="12" r="1.8" style="fill:#2A1B16"/><circle cx="${f1(w-8)}" cy="12" r="1.8" style="fill:#2A1B16"/><text class="sgn" x="${f1(w/2)}" y="17.5" text-anchor="middle">${sign}</text></g>`}
+let isOff=()=>false;
+function drawChips(){let h='';
+ for(let i=1;i<=ST.length;i++){const C=CHIP[i],l=chipLabel(i),w=40+__tl(l)*7,x=Math.min(C.x,VBW-w-8),q=P(...ANCH[i]),off=isOff(i);
+  h+=`<polyline class="lead-l${i===st.sel?' on':''}" points="${f1(q[0])},${f1(q[1])} ${f1(x+20)},${C.y+13}"/><g class="chip${i===st.sel?' on':''}${off?' off':''}" data-c="${i}"><rect x="${f1(x+6)}" y="${C.y}" rx="8" width="${f1(w)}" height="26"/><circle cx="${f1(x+6)}" cy="${C.y+13}" r="13"/><text class="num" x="${f1(x+6)}" y="${C.y+18.5}" text-anchor="middle">${i}</text><text class="lab" x="${f1(x+26)}" y="${C.y+18}">${l}</text></g>`}
+ const el=$('chips');el.innerHTML=h;el.querySelectorAll('.chip').forEach(g=>g.addEventListener('click',()=>select(+g.dataset.c)))}
+const vf=v=>typeof v==='function'?v():v;
+function renderStation(){const s=ST[st.sel-1],off=isOff(st.sel),kv=vf(s.kv)||[];
+ document.querySelectorAll('#scene .st').forEach(g=>{const i=+g.dataset.i;g.classList.toggle('on',i===st.sel);g.classList.toggle('off',isOff(i))});
+ document.querySelectorAll('#strip button').forEach((b,n)=>{b.classList.toggle('on',n+1===st.sel);b.classList.toggle('off',isOff(n+1));b.setAttribute('aria-pressed',n+1===st.sel)});
+ $('detail').innerHTML=`<div class="dh"><div class="dn">${st.sel}</div><h2>${s.n}<small>${vf(s.sub)}${off&&s.offNote?' · '+vf(s.offNote):''}</small></h2></div><div class="dgrid"><div><span class="lbl">${s.l1||'何が起きるか'}</span><p>${vf(s.mech)}</p>${s.check?`<span class="lbl">${s.l2||'測り方・見え方'}</span><p>${vf(s.check)}</p>`:''}</div><div><span class="lbl">現在の数値</span><dl class="kv">${kv.map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join('')}</dl>${s.fail?`<p style="margin-top:8px"></p><span class="lbl">${s.l3||'よくある誤解'}</span><p>${vf(s.fail)}</p>`:''}${s.tip?`<span class="lbl">${s.l4||'MeDiliでは'}</span><p>${vf(s.tip)}</p>`:''}</div></div>`}
+function select(i,noScroll){st.sel=i;renderStation();drawChips();if(noScroll)return;const sc=document.querySelector('.scroller'),q=P(...ANCH[i]);if(sc.scrollWidth>sc.clientWidth)sc.scrollLeft=q[0]/VBW*sc.scrollWidth-sc.clientWidth/2}
+function initStations(){$('strip').innerHTML=ST.map((s,i)=>`<button type="button" aria-pressed="false">${i+1} ${s.n}</button>`).join('');
+ $('strip').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>select(i+1));
+ document.querySelectorAll('#scene .st').forEach(g=>{g.addEventListener('click',()=>select(+g.dataset.i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(+g.dataset.i)}})})}
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;let timer=0;
+function stopRun(){clearTimeout(timer);timer=0;$('scene').classList.remove('running')}
+function tour(seq,ms,each){stopRun();if(still){each&&each(seq.length-1);select(seq[seq.length-1]);return}
+ $('scene').classList.add('running');let k=0;
+ const step=()=>{const i=seq[k],q=P(ANCH[i][0],ANCH[i][1],ANCH[i][2]-1),t=$('tok');t.setAttribute('cx',f1(q[0]));t.setAttribute('cy',f1(q[1]));each&&each(k);select(i);k++;
+  if(k<seq.length)timer=setTimeout(step,ms||650);else timer=setTimeout(()=>$('scene').classList.remove('running'),900)};step()}
+function pills(id,items,cur,cb){$(id).innerHTML=items.map(([k,n])=>`<button class="pill" type="button" data-k="${k}" aria-pressed="${String(cur)===String(k)}">${n}</button>`).join('');$(id).querySelectorAll('button').forEach(b=>b.onclick=()=>cb(b.dataset.k))}
+function interp(p,x){if(!p.length||x<p[0][0]||x>p[p.length-1][0])return null;for(let i=1;i<p.length;i++)if(x<=p[i][0]){const [x0,y0]=p[i-1],[x1,y1]=p[i];return y0+(y1-y0)*(x-x0)/((x1-x0)||1)}return p[p.length-1][1]}
+function lineSVG(o){const {W,H,l,r,t,b}=o,X=x=>l+(x-o.x0)/(o.x1-o.x0)*(W-l-r),Y=y=>t+(1-(y-o.y0)/(o.y1-o.y0))*(H-t-b);
+ let g=o.ttl?`<text class="ttl" x="${l}" y="12">${o.ttl}</text>`:'';
+ (o.bands||[]).forEach(([a,c,lab])=>g+=`<rect x="${f1(X(a))}" y="${t}" width="${f1(Math.max(0,X(c)-X(a)))}" height="${H-t-b}" style="fill:var(--good);fill-opacity:.13"/>`);
+ (o.hb||[]).forEach(([a,c])=>g+=`<rect x="${l}" y="${f1(Y(c))}" width="${W-l-r}" height="${f1(Math.max(0,Y(a)-Y(c)))}" style="fill:var(--good);fill-opacity:.13"/>`);
+ (o.yt||[]).forEach(v=>g+=`<line x1="${l}" x2="${W-r}" y1="${f1(Y(v))}" y2="${f1(Y(v))}" style="stroke:var(--rule);stroke-width:.8"/><text x="${l-5}" y="${f1(Y(v)+3.5)}" text-anchor="end">${o.yf?o.yf(v):v}</text>`);
+ (o.xt||[]).forEach(v=>g+=`<text x="${f1(X(v))}" y="${H-5}" text-anchor="middle">${o.xf?o.xf(v):v}</text>`);
+ (o.vl||[]).forEach(([x,lab])=>g+=`<line x1="${f1(X(x))}" x2="${f1(X(x))}" y1="${t}" y2="${H-b}" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3"/>${lab?`<text x="${f1(X(x)+3)}" y="${t+10}">${lab}</text>`:''}`);
+ (o.areas||[]).forEach(s=>g+=`<polygon points="${s.p.map(([x,y])=>f1(X(x))+','+f1(Y(y))).join(' ')}" style="fill:${s.c};fill-opacity:${s.o||.9}"/>`);
+ (o.ser||[]).forEach(s=>g+=`<polyline points="${s.p.map(([x,y])=>f1(X(x))+','+f1(Y(y))).join(' ')}" fill="none" style="stroke:${s.c};stroke-width:${s.w||2};stroke-linejoin:round${s.d?`;stroke-dasharray:${s.d}`:''}"/>`);
+ if(o.vx!=null){g+=`<line x1="${f1(X(o.vx))}" x2="${f1(X(o.vx))}" y1="${t}" y2="${H-b}" style="stroke:var(--ink);stroke-width:1.1"/>`;
+  (o.ser||[]).forEach(s=>{if(s.dot===false)return;const v=interp(s.p,o.vx);if(v!=null)g+=`<circle cx="${f1(X(o.vx))}" cy="${f1(Y(v))}" r="4" style="fill:${s.c};stroke:var(--panel);stroke-width:2"/>`})}
+ if(o.end){const L=(o.ser||[]).filter(s=>s.lab).map(s=>({y:Y(s.p[s.p.length-1][1]),s:s.lab})).sort((a,c)=>a.y-c.y);for(let i=1;i<L.length;i++)if(L[i].y-L[i-1].y<12)L[i].y=L[i-1].y+12;L.forEach(e=>g+=`<text x="${W-r+5}" y="${f1(e.y+3.5)}" style="fill:var(--ink)">${e.s}</text>`)}
+ (o.bands||[]).forEach(([a,c,lab])=>{if(lab)g+=`<text x="${f1((X(a)+X(c))/2)}" y="${H-b-6}" text-anchor="middle" style="paint-order:stroke;stroke:var(--panel);stroke-width:3px;stroke-linejoin:round;fill:var(--ink)">${lab}</text>`});
+ return g}
+const legend=(id,items)=>{$(id).innerHTML=items.map(s=>s.box?`<span><i class="sw3" style="background:${s.c}"></i>${s.n}</span>`:`<span><i class="sw2${s.d?' d':''}" style="border-color:${s.c}"></i>${s.n}</span>`).join('')};
+const cw=id=>{const e=$(id);return Math.max(300,Math.round((e&&e.clientWidth)||900))};
+const cp=async(txt,el)=>{try{await navigator.clipboard.writeText(txt);$(el).textContent='コピーしました。'}catch(e){$(el).textContent='コピーできませんでした。テキストを選択してご自身でコピーしてください。'}setTimeout(()=>$(el).textContent='',2600)};
+function rng(seed){let s=seed>>>0;return ()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296}}
+function gauss(r){let u=0,v=0;while(!u)u=r();while(!v)v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+const SM={"se": {"k": "se", "n": "Cà Sẻ Di Linh", "s": "Cà Sẻ", "sp": "Robusta、在来品種", "grp": "R", "c": "var(--k1)", "prop": "実生：何世代も種から育てられ、集団は不均一", "tree": "木ごとに樹形が違い、葉も実も異なる。樹冠はたいていコンパクト。根元に接ぎ木の跡がない。", "tc": "実生の木", "cher": "実は小さく房が密。色と熟度は木によって異なる。", "cc": "小粒・密な房", "bean": "小さく硬く、背が厚く、短く丸い形。", "cutT": "まっすぐ", "alt": "約900〜1,000 m、Di Linh高原", "har": "11月から1月初め、何度かに分けて摘む", "notes": "濃厚で苦みがはっきり、余韻が長く、しっかりしたボディ。ダークチョコレート、カカオ", "cupS": "苦みが強く、余韻が長い", "scale": "Fine Robusta", "prof": [6, 3, 5, 8, 8, 8], "dist": [8, 54, 33, 5], "q": {"caf": [2.4, 0.25], "lip": [10, 1], "suc": [4, 0.8], "w": [15, 1.6], "s16": [62, 9], "cu": [4, 2]}, "sh": {"a": 1.2, "asym": 0.04, "hook": 0, "pt": 0, "cut": "t"}, "Lmm": 8.6, "omc": "高い（どのRobustaも同様）", "omcS": "高い", "yld": "推定2〜3トン（生豆）/ha", "conf": "厳しい地域で育った多収量Robusta（豆も小さくなる）、または小さい豆だけをふるい分けたロット。", "lo": [-20, -20], "tv": {"t": 3, "h": 5.6, "cr": 4.6, "n": 14, "lr": 14, "ir": 1, "seed": 3}, "cv": {"n": 14, "r": 4.2, "cols": ["#B33A24", "#C8553D", "#D9782E", "#8E2418"], "cl": 3}}, "cs": {"k": "cs", "n": "多収量Robusta", "s": "多収量品種", "sp": "Robusta、選抜系統", "grp": "R", "c": "var(--k2)", "prop": "接ぎ木、挿し木：TR4、TR9、TR11、TR14、TR15。TRS1のみ交配種子から栽培", "tree": "農園は型で抜いたように均一で、根元に接ぎ木の跡がある。Robustaは他家受粉が必要なため、複数の系統を混植しなければならない。TR9は低くコンパクトで、新葉は濃い銅色。", "tc": "そろった接ぎ木", "cher": "実は大きく、同じ系統内でそろっている。", "cc": "大きく、そろっている", "bean": "大きくそろい、やや長めの丸い形。", "cutT": "まっすぐ", "alt": "地域による：ダクラク省、ザライ省、ラムドン省。TR9は約500〜800 mに適する", "har": "系統による。TR9、TR14、TR15は晩生", "notes": "苦みがはっきり、木、焙煎穀物。Cà Sẻより味は軽い", "cupS": "苦みがはっきり、ボディは中程度", "scale": "Fine Robusta", "prof": [5, 2.5, 4, 7.5, 6, 5], "dist": [45, 43, 11, 1], "q": {"caf": [2.1, 0.25], "lip": [10, 1], "suc": [4, 0.8], "w": [21, 3], "s16": [88, 6], "cu": [4, 2]}, "sh": {"a": 1.28, "asym": 0.04, "hook": 0, "pt": 0, "cut": "t"}, "Lmm": 10.1, "omc": "高い（どのRobustaも同様）", "omcS": "高い", "yld": "試験で3.7〜7.3トン（生豆）/ha", "conf": "Cà Sẻ。多収量品種も厳しい地域では豆が小さくなるため：ザライ省のTR4は100粒あたりわずか15.3 g。", "lo": [0, -20], "tv": {"t": 1, "h": 5, "cr": 4, "n": 10, "lr": 15, "ir": 0, "gr": 1, "seed": 7}, "cv": {"n": 11, "r": 5.6, "cols": ["#8E2418", "#9E2A1C"], "cl": 3}}, "ara": {"k": "ara", "n": "Arabica (Typica, Bourbon)", "s": "Arabica", "sp": "Arabica、古い品種", "grp": "A", "c": "var(--k3)", "prop": "種から栽培。Arabicaは自家受粉なので、品種はかなり安定している", "tree": "Typicaは背が高く、枝は水平に伸び、新葉は銅色。葉はRobustaより小さく、つやがある。", "tc": "背が高く、葉が小さい", "cher": "実は赤く中くらい。節ごとの実はRobustaより少ない。", "cc": "中くらいで、まばら", "bean": "平たく細長く、平らな面が広い。", "cutT": "S字に曲がる", "alt": "高地。Cầu Đấtは約1,500 m以上", "har": "地域による", "notes": "花、柑橘、フルーツ。爽やかな酸味、甘い", "cupS": "爽やかな酸味、香り高い", "scale": "SCA", "prof": [8, 7, 7, 3, 5, 6], "dist": [30, 50, 18, 2], "q": {"caf": [1.2, 0.15], "lip": [16, 1], "suc": [8, 1], "w": [18, 1.6], "s16": [80, 7], "cu": [4, 2]}, "sh": {"a": 1.45, "asym": 0.06, "hook": 0, "pt": 0, "cut": "s"}, "Lmm": 10.4, "omc": "痕跡量のみ", "omcS": "痕跡", "yld": "低い。Cầu ĐấtのTypicaは地域全体で年間約2.5〜3トンのみ", "conf": "Catimor：同じ種で、豆の形はほぼ同じ。", "lo": [14, -15], "tv": {"t": 1, "h": 7.4, "cr": 3.8, "n": 10, "lr": 14, "tier": 1, "br": 1, "seed": 11}, "cv": {"n": 7, "r": 5.8, "cols": ["#B33A24", "#C0432A"], "cl": 2}}, "cat": {"k": "cat", "n": "Catimor", "s": "Catimor", "sp": "Arabica、交配品種", "grp": "A", "c": "var(--k4)", "prop": "Timor HybridとCaturraの交配で、1959年にポルトガルで作出", "tree": "低木で節間が短く、樹冠はコンパクト。Timor HybridのRobusta遺伝子のおかげで、さび病に強い。", "tc": "低木、節間が短い", "cher": "実は赤く中くらいで、実付きがよい。", "cc": "中くらいで、実付きがよい", "bean": "平たく細長く、中粒〜大粒。", "cutT": "S字に曲がる", "alt": "ソンラ省、ラムドン省、クアンチ省…", "har": "地域による", "notes": "ナッツ、ハーブ、チェリー、ベリー。ほどよい酸味", "cupS": "ほどよい酸味、ハーブ", "scale": "SCA", "prof": [6, 6, 5, 4, 5, 5], "dist": [25, 53, 20, 2], "q": {"caf": [1.3, 0.15], "lip": [15, 1.2], "suc": [7, 1], "w": [17, 1.6], "s16": [78, 8], "cu": [4, 2]}, "sh": {"a": 1.42, "asym": 0.06, "hook": 0, "pt": 0, "cut": "s"}, "Lmm": 10.0, "omc": "痕跡量のみ", "omcS": "痕跡", "yld": "1.67トン（生豆）/ha、品種試験の対照区", "conf": "古い品種のArabica：豆の形はほぼ同じ。", "lo": [-34, -12], "tv": {"t": 1, "h": 3.6, "cr": 3.5, "n": 14, "lr": 11, "seed": 13}, "cv": {"n": 9, "r": 5.4, "cols": ["#B33A24", "#C0432A"], "cl": 3}}, "mok": {"k": "mok", "n": "Moka Cầu Đất", "s": "Moka", "sp": "Arabica、Bourbon系", "grp": "A", "c": "var(--k5)", "prop": "種から栽培。Bourbonの矮性型とされることが多い", "tree": "木は小さく葉が少なく、やせて見える。原型のMokkaは生け垣のように茂る。", "tc": "矮性の小さな木", "cher": "実は小さく丸い。", "cc": "小さく丸い", "bean": "とても小さく、えんどう豆のように丸い。", "cutT": "曲がっていて短い", "alt": "約1,500〜1,600 m、Cầu Đất", "har": "収穫期による", "notes": "みかんの皮、アーモンド、イチゴ、バニラ。チョコレート、ドライフルーツ、スパイスと記す資料もある", "cupS": "香りが強く、爽やかな酸味", "scale": "SCA", "prof": [9, 7, 8, 3, 6, 7], "dist": [3, 27, 55, 15], "q": {"caf": [0.9, 0.25], "lip": [16, 1], "suc": [8, 1], "w": [11.5, 1.5], "s16": [30, 10], "cu": [6, 3]}, "sh": {"a": 1.12, "asym": 0.03, "hook": 0, "pt": 0, "cut": "s"}, "Lmm": 7.5, "omc": "痕跡量のみ", "omcS": "痕跡", "yld": "1本あたり年間約1〜2 kg", "conf": "売りやすくするため、まとめて「Moka」と呼ばれることが多いArabica。", "lo": [0, -20], "tv": {"t": 1, "h": 3.2, "cr": 2.8, "n": 7, "lr": 9, "ir": 0.5, "seed": 17}, "cv": {"n": 7, "r": 4.4, "cols": ["#B33A24", "#9E2A1C"], "cl": 2}}, "culi": {"k": "culi", "n": "Culi（ピーベリー）", "s": "Culi", "sp": "豆の形状のひとつで、どの品種にも現れる", "grp": "R", "c": "var(--k6)", "prop": "品種ではない：実の中で豆が2粒ではなく1粒だけ育つ", "tree": "母樹に準じる。どの農園にもある。", "tc": "母樹に準じる", "cher": "外見は普通の実と同じ。", "cc": "普通の実と同じ", "bean": "均一に丸く、平らな面がない。", "cutT": "丸い豆に沿った1本の線", "alt": "農園による", "har": "農園による", "notes": "母樹に準じる。丸い豆は均一に焼けやすく、味がまろやかになることもあるが、保証はない", "cupS": "母樹に準じる", "scale": "母樹の種に準じる", "prof": [6, 3, 5, 7.5, 7.5, 7], "dist": [10, 35, 45, 10], "q": {"caf": [2.3, 0.3], "lip": [10, 1], "suc": [4, 0.8], "w": [15.5, 2], "s16": [45, 15], "cu": [92, 5]}, "sh": {"a": 1.32, "asym": 0, "hook": 0, "pt": 0, "cut": "p"}, "Lmm": 8.0, "omc": "母樹の種に準じる", "omcS": "母樹に準じる", "yld": "1収穫期の生産量の約4〜5%", "conf": "Cà Sẻ：Sẻは品種、Culiは豆の形。Culi Sẻ、多収量品種のCuli、ArabicaのCuliがある。", "lo": [26, 24], "tv": {"t": 2, "h": 5.2, "cr": 4.2, "n": 12, "lr": 13, "ir": 0.6, "seed": 19}, "cv": {"n": 11, "r": 4.6, "cols": ["#B33A24", "#C8553D"], "cl": 3}}, "lib": {"k": "lib", "n": "Liberica（ジャックフルーツコーヒー）", "s": "Liberica", "sp": "Coffea liberica", "grp": "L", "c": "var(--k7)", "prop": "別の種。本格的な高木で、直根が深い", "tree": "大きな高木で、葉は大きく厚く、直根が深い。", "tc": "高木で、葉が大きい", "cher": "実は大きく、皮が厚く、果肉が多い。果肉と豆の比は約60 : 40。", "cc": "大きく、皮が厚い", "bean": "種の中で最も大きい：長さ約11.5 mm、形はいびつで、とがった先が鉤状。", "cutT": "しわがあり、ずれている", "alt": "コントゥム省、クアンチ省、ラムドン省。約800 m", "har": "地域に準じる", "notes": "精製がよければ熟したジャックフルーツ、マンゴー、ライチ、パッションフルーツ。精製が悪いと木、なめし革", "cupS": "熟したジャックフルーツ、トロピカル", "scale": "広く使われる専用の基準はまだない", "prof": [7.5, 3, 6.5, 5, 7, 6], "dist": [60, 33, 6, 1], "q": {"caf": [1.2, 0.2], "lip": [12, 2.5], "suc": [5.5, 1.5], "w": [22, 2], "s16": [93, 4], "cu": [3, 2]}, "sh": {"a": 1.52, "asym": 0.32, "hook": 1, "pt": 0.5, "cut": "r"}, "Lmm": 11.5, "omc": "まだわからない", "omcS": "?", "yld": "ベトナムでは信頼できる数値がまだない", "conf": "Excelsa：どちらもまとめて「ジャックフルーツコーヒー」と呼ばれる。", "lo": [0, -16], "tv": {"t": 1, "h": 9.5, "cr": 5.2, "n": 10, "lr": 20, "tw": 0.6, "seed": 23}, "cv": {"n": 4, "r": 8.5, "cols": ["#C8553D", "#D9782E", "#B33A24"], "cl": 2}}, "exc": {"k": "exc", "n": "Excelsa (Chari)", "s": "Excelsa", "sp": "Coffea dewevrei", "grp": "L", "c": "var(--k8)", "prop": "かつてはLibericaの変種とされていたが、2025年の遺伝子研究で独立した種とされた", "tree": "樹高は約15 mにもなり、葉は厚く丈夫で、根が深い。干ばつに強く、病害虫が少ない。", "tc": "高木", "cher": "実も豆もLibericaより小さく、パーチメントが薄い。", "cc": "中くらいで、濃い赤", "bean": "中くらいで、やや傾いたしずく形。", "cutT": "ややしわがあり、ずれている", "alt": "ベトナム、インド、インドネシアで栽培", "har": "地域に準じる", "notes": "フルーツのような酸味、ダークフルーツ、チョコレート、スパイス、ヘーゼルナッツ。苦みは少ない", "cupS": "フルーツのような酸味、苦みは少ない", "scale": "広く使われる専用の基準はまだない", "prof": [7, 7, 6, 3, 5, 6], "dist": [25, 50, 22, 3], "q": {"caf": [1.2, 0.25], "lip": [12, 2.5], "suc": [5.5, 1.5], "w": [17.5, 2], "s16": [75, 10], "cu": [3, 2]}, "sh": {"a": 1.36, "asym": 0.22, "hook": 0, "pt": 0.45, "cut": "r"}, "Lmm": 9.9, "omc": "まだわからない", "omcS": "?", "yld": "条件がよければLibericaより高い", "conf": "Liberica：どちらもまとめて「ジャックフルーツコーヒー」と呼ばれる。", "lo": [22, 26], "tv": {"t": 1, "h": 8.6, "cr": 4.8, "n": 10, "lr": 18, "tw": 0.5, "seed": 29}, "cv": {"n": 6, "r": 6.6, "cols": ["#A8321F", "#B33A24"], "cl": 2}}};const QZ=[{"id": "hinh", "n": "生豆の形", "h": "平らな面を上にして、豆の形を見る。", "o": [{"id": "tron", "t": "均一に丸く、平らな面がない", "w": {"se": 0.05, "cs": 0.05, "ara": 0.03, "cat": 0.03, "mok": 0.25, "culi": 0.95, "lib": 0.02, "exc": 0.05}}, {"id": "gu", "t": "片面が平らで、短く丸く、背が厚い", "w": {"se": 0.9, "cs": 0.85, "ara": 0.1, "cat": 0.15, "mok": 0.2, "culi": 0.1, "lib": 0.05, "exc": 0.2}}, {"id": "thuon", "t": "平たく細長く、平らな面が広い", "w": {"se": 0.05, "cs": 0.15, "ara": 0.9, "cat": 0.85, "mok": 0.1, "culi": 0.05, "lib": 0.15, "exc": 0.3}}, {"id": "dau", "t": "とても小さく、えんどう豆のように丸い", "w": {"se": 0.15, "cs": 0.03, "ara": 0.03, "cat": 0.05, "mok": 0.9, "culi": 0.2, "lib": 0.01, "exc": 0.05}}, {"id": "moc", "t": "とても大きくいびつで、とがった先が鉤状", "w": {"se": 0.01, "cs": 0.03, "ara": 0.02, "cat": 0.02, "mok": 0.01, "culi": 0.02, "lib": 0.9, "exc": 0.25}}, {"id": "giot", "t": "中くらいで、やや傾いたしずく形", "w": {"se": 0.05, "cs": 0.05, "ara": 0.1, "cat": 0.1, "mok": 0.05, "culi": 0.05, "lib": 0.3, "exc": 0.8}}]}, {"id": "ranh", "n": "センターカット", "h": "豆の平らな面にある溝。", "o": [{"id": "t", "t": "まっすぐで整っている", "w": {"se": 0.9, "cs": 0.9, "ara": 0.1, "cat": 0.15, "mok": 0.25, "culi": 0.1, "lib": 0.1, "exc": 0.2}}, {"id": "s", "t": "S字に曲がる", "w": {"se": 0.1, "cs": 0.1, "ara": 0.9, "cat": 0.85, "mok": 0.7, "culi": 0.1, "lib": 0.15, "exc": 0.3}}, {"id": "r", "t": "しわがあり、ずれていて不規則", "w": {"se": 0.05, "cs": 0.05, "ara": 0.05, "cat": 0.05, "mok": 0.05, "culi": 0.05, "lib": 0.85, "exc": 0.7}}, {"id": "p", "t": "平らな面がない", "w": {"se": 0.02, "cs": 0.02, "ara": 0.02, "cat": 0.02, "mok": 0.1, "culi": 0.95, "lib": 0.02, "exc": 0.02}}]}, {"id": "co", "n": "豆の大きさ", "h": "スクリーン16の穴は6.30 mm、スクリーン13は5.00 mm。", "o": [{"id": "nho", "t": "小：スクリーン16を通り、スクリーン13に残る", "w": {"se": 0.55, "cs": 0.12, "ara": 0.15, "cat": 0.2, "mok": 0.85, "culi": 0.5, "lib": 0.02, "exc": 0.15}}, {"id": "vua", "t": "中：スクリーン16に残る", "w": {"se": 0.4, "cs": 0.45, "ara": 0.5, "cat": 0.55, "mok": 0.15, "culi": 0.4, "lib": 0.1, "exc": 0.45}}, {"id": "to", "t": "大：スクリーン18に残る", "w": {"se": 0.08, "cs": 0.45, "ara": 0.35, "cat": 0.25, "mok": 0.02, "culi": 0.15, "lib": 0.4, "exc": 0.35}}, {"id": "rto", "t": "特大：長さ11 mm以上", "w": {"se": 0.01, "cs": 0.03, "ara": 0.03, "cat": 0.02, "mok": 0.01, "culi": 0.02, "lib": 0.85, "exc": 0.15}}]}, {"id": "mui", "n": "挽きたての粉の香り", "h": "挽いた直後に、乾いた状態で嗅ぐ。", "o": [{"id": "soco", "t": "ダークチョコレート、カカオ、ローストナッツ", "w": {"se": 0.85, "cs": 0.55, "ara": 0.3, "cat": 0.35, "mok": 0.45, "culi": 0.7, "lib": 0.2, "exc": 0.3}}, {"id": "hoa", "t": "花、柑橘、フレッシュフルーツ", "w": {"se": 0.15, "cs": 0.08, "ara": 0.85, "cat": 0.55, "mok": 0.8, "culi": 0.15, "lib": 0.2, "exc": 0.3}}, {"id": "mit", "t": "熟したジャックフルーツ、トロピカルフルーツ、木", "w": {"se": 0.05, "cs": 0.05, "ara": 0.05, "cat": 0.05, "mok": 0.05, "culi": 0.05, "lib": 0.9, "exc": 0.3}}, {"id": "sam", "t": "ダークフルーツ、発酵した酸味、スパイス", "w": {"se": 0.1, "cs": 0.08, "ara": 0.25, "cat": 0.25, "mok": 0.35, "culi": 0.1, "lib": 0.3, "exc": 0.85}}, {"id": "coc", "t": "穀物、土、乾いた木", "w": {"se": 0.3, "cs": 0.7, "ara": 0.05, "cat": 0.2, "mok": 0.03, "culi": 0.45, "lib": 0.15, "exc": 0.1}}, {"id": "tm", "t": "ハーブ、葉、かすかな刺激臭", "w": {"se": 0.1, "cs": 0.25, "ara": 0.1, "cat": 0.6, "mok": 0.05, "culi": 0.15, "lib": 0.1, "exc": 0.15}}]}, {"id": "chua", "n": "酸味", "h": "カップが約60 °Cまで冷めたら味わう。", "o": [{"id": "khong", "t": "ほとんどない", "w": {"se": 0.3, "cs": 0.7, "ara": 0.03, "cat": 0.05, "mok": 0.05, "culi": 0.5, "lib": 0.5, "exc": 0.05}}, {"id": "thap", "t": "低め、かすかに爽やかな酸味", "w": {"se": 0.7, "cs": 0.3, "ara": 0.2, "cat": 0.35, "mok": 0.3, "culi": 0.5, "lib": 0.45, "exc": 0.25}}, {"id": "ro", "t": "はっきりして明るい", "w": {"se": 0.1, "cs": 0.05, "ara": 0.9, "cat": 0.7, "mok": 0.85, "culi": 0.1, "lib": 0.1, "exc": 0.45}}, {"id": "chat", "t": "ダークフルーツのような酸味と渋み", "w": {"se": 0.05, "cs": 0.05, "ara": 0.2, "cat": 0.35, "mok": 0.2, "culi": 0.05, "lib": 0.15, "exc": 0.85}}]}, {"id": "dang", "n": "苦み", "h": "", "o": [{"id": "rr", "t": "とてもはっきりして長く続く", "w": {"se": 0.75, "cs": 0.7, "ara": 0.03, "cat": 0.1, "mok": 0.03, "culi": 0.65, "lib": 0.2, "exc": 0.05}}, {"id": "ro", "t": "はっきり、ほどほど", "w": {"se": 0.3, "cs": 0.35, "ara": 0.3, "cat": 0.55, "mok": 0.3, "culi": 0.4, "lib": 0.65, "exc": 0.4}}, {"id": "nhe", "t": "軽め", "w": {"se": 0.03, "cs": 0.03, "ara": 0.85, "cat": 0.5, "mok": 0.85, "culi": 0.05, "lib": 0.3, "exc": 0.75}}]}, {"id": "than", "n": "ボディ", "h": "口の中での厚み、とろみ。", "o": [{"id": "day", "t": "厚く、とろりとしている", "w": {"se": 0.8, "cs": 0.4, "ara": 0.2, "cat": 0.2, "mok": 0.5, "culi": 0.65, "lib": 0.7, "exc": 0.2}}, {"id": "vua", "t": "ふつう", "w": {"se": 0.3, "cs": 0.6, "ara": 0.65, "cat": 0.65, "mok": 0.55, "culi": 0.45, "lib": 0.4, "exc": 0.55}}, {"id": "mong", "t": "軽く、薄い", "w": {"se": 0.05, "cs": 0.15, "ara": 0.45, "cat": 0.4, "mok": 0.2, "culi": 0.1, "lib": 0.1, "exc": 0.5}}]}, {"id": "hau", "n": "余韻", "h": "飲み込んだ後に残る味。", "o": [{"id": "dai", "t": "長く、濃い", "w": {"se": 0.8, "cs": 0.3, "ara": 0.55, "cat": 0.3, "mok": 0.7, "culi": 0.6, "lib": 0.55, "exc": 0.45}}, {"id": "vua", "t": "ふつう", "w": {"se": 0.3, "cs": 0.5, "ara": 0.55, "cat": 0.55, "mok": 0.4, "culi": 0.45, "lib": 0.5, "exc": 0.55}}, {"id": "ngan", "t": "短く、乾いて、渋い", "w": {"se": 0.1, "cs": 0.45, "ara": 0.1, "cat": 0.35, "mok": 0.05, "culi": 0.2, "lib": 0.2, "exc": 0.2}}]}, {"id": "cay", "n": "農園の木", "h": "農園や農園の写真を見られる場合。", "o": [{"id": "thuc", "t": "樹齢の高い実生の木で、木ごとに樹形が違う", "w": {"se": 0.9, "cs": 0.1, "ara": 0.15, "cat": 0.05, "mok": 0.1, "culi": 0.5, "lib": 0.1, "exc": 0.1}}, {"id": "ghep", "t": "そろった接ぎ木で、複数の系統を混植", "w": {"se": 0.08, "cs": 0.9, "ara": 0.03, "cat": 0.05, "mok": 0.02, "culi": 0.5, "lib": 0.02, "exc": 0.02}}, {"id": "thap", "t": "低い低木で、節間が短く、葉は小さくつやがある", "w": {"se": 0.03, "cs": 0.05, "ara": 0.3, "cat": 0.9, "mok": 0.3, "culi": 0.15, "lib": 0.02, "exc": 0.02}}, {"id": "dong", "t": "背が高く、枝は水平、新葉は銅色", "w": {"se": 0.03, "cs": 0.03, "ara": 0.8, "cat": 0.05, "mok": 0.1, "culi": 0.05, "lib": 0.05, "exc": 0.05}}, {"id": "lun", "t": "小さく矮性の木で、豆はとても小さい", "w": {"se": 0.02, "cs": 0.02, "ara": 0.05, "cat": 0.1, "mok": 0.9, "culi": 0.05, "lib": 0.02, "exc": 0.02}}, {"id": "go", "t": "5 mを超える高木で、葉は大きく厚い", "w": {"se": 0.03, "cs": 0.02, "ara": 0.02, "cat": 0.01, "mok": 0.01, "culi": 0.05, "lib": 0.9, "exc": 0.9}}]}];const PRE={"se": {"hinh": "gu", "ranh": "t", "co": "nho", "mui": "soco", "chua": "thap", "dang": "rr", "than": "day", "hau": "dai", "cay": "thuc"}, "cs": {"hinh": "gu", "ranh": "t", "co": "to", "mui": "coc", "chua": "khong", "dang": "rr", "than": "vua", "hau": "ngan", "cay": "ghep"}, "ara": {"hinh": "thuon", "ranh": "s", "co": "vua", "mui": "hoa", "chua": "ro", "dang": "nhe", "than": "vua", "hau": "dai", "cay": "dong"}, "cat": {"hinh": "thuon", "ranh": "s", "co": "vua", "mui": "tm", "chua": "ro", "dang": "ro", "than": "vua", "hau": "vua", "cay": "thap"}, "mok": {"hinh": "dau", "ranh": "s", "co": "nho", "mui": "hoa", "chua": "ro", "dang": "nhe", "than": "vua", "hau": "dai", "cay": "lun"}, "culi": {"hinh": "tron", "ranh": "p", "co": "nho", "mui": "soco", "chua": "thap", "dang": "rr", "than": "day", "hau": "dai"}, "lib": {"hinh": "moc", "ranh": "r", "co": "rto", "mui": "mit", "chua": "thap", "dang": "ro", "than": "day", "hau": "vua", "cay": "go"}, "exc": {"hinh": "giot", "ranh": "r", "co": "vua", "mui": "sam", "chua": "chat", "dang": "nhe", "than": "vua", "hau": "vua", "cay": "go"}};const ROB=[["TR4", "dl", 18.4, 80.0], ["TR9", "dl", 22.5, 94.3], ["TR11", "dl", 18.3, 88.2], ["TR14", "dl", 20.9, 97.8], ["TR15", "dl", 24.9, 98.1], ["TR16", "dl", 20.0, 94.3], ["TR6", "dl", 19.4, 92.7], ["TR4", "gl", 15.3, 63.2], ["TR9", "gl", 17.0, 75.0], ["TR11", "gl", 15.7, 65.0], ["TR14", "gl", 20.5, 95.4], ["TR15", "gl", 22.0, 97.9], ["TR16", "gl", 19.1, 93.2], ["TR6", "gl", 18.4, 91.5], ["TR4", "ld", 21.6, 86.9], ["TR9", "ld", 29.6, 99.2], ["TR11", "ld", 22.8, 95.8], ["TR14", "ld", 22.4, 95.7], ["TR15", "ld", 23.5, 96.3], ["TR16", "ld", 20.2, 91.2], ["TR6", "ld", 19.2, 90.0], ["TRS1", "all", 19.1, 85.3]];const RG={"dl": ["ダクラク省", "var(--k2)"], "gl": ["ザライ省", "var(--k4)"], "ld": ["ラムドン省", "var(--k3)"], "all": ["TRS1、4地域の平均", "var(--k5)"]};
+
+const U=7,OX=196,OY=118,VBW=1040;
+const ORD=['se','cs','ara','cat','mok','culi','lib','exc'];
+const FE=['w','s16','cu','caf','lip','suc'];
+const FN={w:['100粒重','g',1],s16:['スクリーン16以上','%',0],cu:['ピーベリー','%',0],caf:['カフェイン','%',2],lip:['脂質','%',1],suc:['ショ糖','%',1]};
+const CUTN={t:'まっすぐな溝',s:'S字の溝',r:'しわがあり、ずれた溝',p:'丸く、平らな面がない'},CUTS={t:'まっすぐな溝',s:'S字の溝',r:'しわのある溝',p:'丸い、culi'};
+const CUTL={};QZ.find(q=>q.id==='ranh').o.forEach(o=>CUTL[o.id]=o.w);
+const pc=v=>clamp(Math.round(v*100),0,99);
+const st={k:'se',mode:'ref',hid:null,mm:null,am:11.8,rev:false,myN:0,own:null,cut:null,lab:true,step:8,sel:1,qa:{...PRE.se},pa:'se',pb:'cs',rb:'cs'};
+let R={};
+function means(k){const m={};FE.forEach(f=>m[f]=SM[k].q[f][0]);return m}
+function post(m,lab,cut){const lp={};
+ ORD.forEach(k=>{const q=SM[k].q;let l=0;
+  ['w','s16','cu'].concat(lab?['caf','lip','suc']:[]).forEach(f=>{const mu=q[f][0],sd=q[f][1],z=(m[f]-mu)/sd;l+=-.5*z*z-Math.log(sd)});
+  if(cut&&CUTL[cut])l+=Math.log(CUTL[cut][k]);lp[k]=l});
+ const mx=Math.max(...ORD.map(k=>lp[k]));let t=0;const e={};ORD.forEach(k=>{e[k]=Math.exp(lp[k]-mx);t+=e[k]});
+ return ORD.map(k=>({k,p:e[k]/t})).sort((a,b)=>b.p-a.p)}
+function calc(){let V;
+ if(st.mode==='ref')V={vis:st.k,m:means(st.k),cut:SM[st.k].sh.cut,lab:true,am:11.8,name:SM[st.k].n};
+ else if(st.mode==='myst')V={vis:st.hid,m:st.mm,cut:SM[st.hid].sh.cut,lab:true,am:st.am,name:st.rev?SM[st.hid].n:'ミステリーサンプル No. '+st.myN};
+ else V={vis:null,m:st.own,cut:st.cut,lab:st.lab,am:12,name:'あなたのロット'};
+ const P=post(V.m,V.lab,V.cut);R={V,P,t:P[0]};return R}
+const S_=()=>R.V.vis?SM[R.V.vis]:null;
+isOff=i=>st.mode==='own'&&(i===1||i===2||i===7||(i===6&&!st.lab)||(i===3&&!st.cut));
+function bins(){const V=R.V,m=V.m,b=V.vis?SM[V.vis].dist:null;
+ if(st.mode==='ref')return b.slice();
+ const r18=b?b[0]/(b[0]+b[1]):clamp((m.w-12)/16,.04,.75),r13=b?b[2]/((b[2]+b[3])||1):.85,s=clamp(m.s16,0,100);
+ return [s*r18,s*(1-r18),(100-s)*r13,(100-s)*(1-r13)]}
+
+/* ====== HÌNH NHÂN ====== */
+function beanG(sh,cx,cy,L){const a=sh.a,Wd=L/a,n=64,pt=sh.pt||0,p=[];
+ for(let i=0;i<n;i++){const t=i/n*Math.PI*2,c=Math.cos(t),s=Math.sin(t),pw=1+pt*Math.max(0,-s);
+  let x=Wd/2*Math.sign(c)*Math.pow(Math.abs(c),pw)*(1+.07*s)*(1+(sh.asym||0)*(c>0?1:-.6)*Math.max(0,-s));const y=L/2*s;
+  if(sh.hook)x+=Wd*.3*Math.pow(Math.max(0,-s),5)
+  p.push([cx+x,cy+y])}
+ let g=`<polygon class="cbn" points="${p.map(q=>q.map(f1).join(',')).join(' ')}"/>`;
+ const T=L*.37;
+ if(sh.cut==='p')g+=`<ellipse class="cbh" cx="${f1(cx-Wd*.12)}" cy="${f1(cy-L*.1)}" rx="${f1(Wd*.26)}" ry="${f1(L*.3)}"/><path class="cbc" d="M${f1(cx-Wd*.06)} ${f1(cy-L*.42)}C${f1(cx+Wd*.34)} ${f1(cy-L*.15)} ${f1(cx+Wd*.34)} ${f1(cy+L*.15)} ${f1(cx-Wd*.06)} ${f1(cy+L*.42)}"/>`;
+ else{g+=`<ellipse class="cbh" cx="${f1(cx-Wd*.22)}" cy="${f1(cy-L*.1)}" rx="${f1(Wd*.11)}" ry="${f1(L*.22)}"/>`;
+  if(sh.cut==='t')g+=`<path class="cbc" d="M${f1(cx+.4)} ${f1(cy-T)}Q${f1(cx+1.4)} ${f1(cy)} ${f1(cx+.4)} ${f1(cy+T)}"/>`;
+  else if(sh.cut==='s')g+=`<path class="cbc" d="M${f1(cx)} ${f1(cy-T)}C${f1(cx+Wd*.3)} ${f1(cy-T*.35)} ${f1(cx-Wd*.3)} ${f1(cy+T*.35)} ${f1(cx)} ${f1(cy+T)}"/>`;
+  else{const J=[.05,-.03,.045,-.05,.02,-.04,.05,-.02,.035,-.03,0];let d=`M${f1(cx+(sh.hook?Wd*.08:0))} ${f1(cy-T)}`;for(let k=1;k<=10;k++){const yy=cy-T+2*T*k/10,xx=cx+(sh.hook?Wd*.08*(1-k/10):0)+J[k]*Wd+(sh.asym||0)*Wd*.18*Math.sin(k/10*Math.PI);d+=`L${f1(xx)} ${f1(yy)}`}g+=`<path class="cbc" d="${d}"/>`}}
+ return g}
+
+/* ====== 8 TRẠM ====== */
+const ST=[
+ {n:'農園と木',sub:()=>S_()?S_().tc:'農園は未確認',offNote:'観察データなし',
+  mech:'最初の証拠は農園にあります。種から育った木（実生）は木ごとに樹形、葉、実が異なり、接ぎ木の木は同じ系統なので型で抜いたように同じです。Arabicaは葉が小さくつやのある低木、LibericaとExcelsaは葉が大きく厚い高木です。',
+  check:'根元を見る：接ぎ木の跡は、地面近くの幹にある盛り上がりやずれです。20本の列を歩き、樹形、葉、実の違いが大きければ実生の木のしるし。',
+  kv:()=>{const S=S_();return S?[['繁殖方法',S.prop],['木',S.tree],['地域',S.alt]]:[['観察','まだありません。「五感で判別するマシン」で入力してください。']]},
+  fail:'農園を見ずに「Sẻの木」という言葉を信じること。豆が農園を離れたら、化学分析でもCà Sẻと多収量品種を区別するのは難しい。',
+  tip:'MeDiliの農園は2010年から栽培。樹齢15年の木を自然に寄り添って手入れし、ロットごとに農園コードを記録しています。'},
+ {n:'完熟チェリー',sub:()=>S_()?'実 · '+S_().cc:'実は未確認',offNote:'観察データなし',
+  mech:'実はさらに手がかりをくれます。Robustaは実が小さく、枝に沿って密な房になります。Arabicaは節ごとの実が少なく、Libericaは実が大きく、皮が厚く、果肉が多い。多収量の接ぎ木系統は実が大きくそろい、実生の木では木ごとに実が異なります。',
+  check:'完熟した実を無作為に100個取り、色、大きさ、1房あたりの実の数を記録します。未熟果が多く混じると豆が小さく軽くなり、品種を見誤りやすくなります。',
+  kv:()=>{const S=S_();return S?[['実',S.cher],['収穫期',S.har]]:[['観察','まだありません。']]},
+  fail:'実の色で品種を推測すること：同じ品種でも、熟した色は熟度と日当たりで変わる。',
+  tip:'MeDiliは11月から1月初めまで何度かに分けて摘み、未熟果は最大5%。完熟チェリーマシンもご覧ください。'},
+ {n:'豆の観察台',sub:()=>R.V.cut?CUTN[R.V.cut]:'未観察',offNote:'右のパネルで溝の型を選ぶ',
+  mech:'豆の平らな面が最も読み取りやすい部分です。Robusta：短く丸い豆で、センターカットはまっすぐ。Arabica：平たく細長い豆で、溝はS字に曲がる。Liberica：大きくいびつで、とがった先が鉤状、溝にしわ。Culi：均一に丸く、平らな面がない。',
+  check:'明るい背景に100粒を広げ、平らな面を上にして、4つのグループに分けて数えます：まっすぐ、S字、しわ・ずれ、丸。',
+  kv:()=>{const S=S_();return [['豆の形',S?S.bean:'—'],['センターカット',R.V.cut?CUTN[R.V.cut]:'未観察'],['長さ（推定）',S?vn(S.Lmm,1)+NB+'mm':'—']]},
+  fail:'生豆の色に頼ること：色は品種ではなく、精製、水分、保管期間で変わる。',
+  tip:'異種の豆も一緒に数えます。TCVN 4193では、1等級のRobustaに混入できるのはArabica最大3%、ジャックフルーツコーヒー最大0.5%です。'},
+ {n:'サイズ選別ふるい',sub:()=>`スクリーン16以上：${vn(R.V.m.s16,0)}%`,
+  mech:'丸穴のふるいは豆を幅で分けます：スクリーン18は穴7.10 mm、16は6.30 mm、13は5.00 mm。ラムドン省のTR系統は87〜99%がスクリーン16以上。Cà Sẻは豆が小さいので、大部分がスクリーン13〜16に収まります。',
+  check:'サンプル300 gで、重ねたふるいを2〜3分振り、各段を量って合計で割ります。',
+  kv:()=>{const d=bins();return [['スクリーン18以上',vn(d[0],0)+'%'],['スクリーン16〜18',vn(d[1],0)+'%'],['スクリーン13〜16',vn(d[2],0)+'%'],['スクリーン13を通過',vn(d[3],0)+'%']]},
+  fail:'小さい豆だけをふるい分けたロットで比べること：多収量品種の小粒ロットも小さい豆ばかり。',
+  tip:'収穫期ごとに豆の大きさの分布を記録し、農園独自のCà Sẻの基準値をつくります。'},
+ {n:'100粒はかり',sub:()=>`100粒あたり${vn(R.V.m.w,1)}${NB}g`,
+  mech:'100粒重は大きさと詰まり具合の両方を表します。品種試験では、ラムドン省のTR系統は19.2〜29.6 g、同じTR4、TR9、TR11でもザライ省ではわずか15.3〜17 g。Cà Sẻは推定13〜17 g、Mokaは約10〜13 g、Libericaは約21 g。',
+  check:'割れのない完全粒を100粒数え、3回量って平均をとります。比べるには水分12.5%以下まで乾いている必要があります。',
+  kv:()=>{const w=R.V.m.w,ref=SM.se.q.w[0],d=(w/ref-1)*100;return [['100粒重',vn(w,1)+NB+'g'],['Cà Sẻとの比較',(d>=0?'+':'−')+vn(Math.abs(d),0)+'%'],['水分',vn(R.V.am,1)+'%（最大12.5）']]},
+  fail:'湿った豆と乾いた豆を比べること：湿った豆のほうが重い。',
+  tip:'比べるのは同じ地域・同じ収穫期の多収量品種だけに。地域が違えば豆の大きさは大きく変わります。'},
+ {n:'ラボ',sub:()=>R.V.lab?`カフェイン ${vn(R.V.m.caf,1)}%`:'サンプル未送付',offNote:'結果なし',
+  mech:'ラボは種の判別が得意です：RobustaのカフェインはArabicaのほぼ2倍で、油分と糖分は少なめ。16-O-メチルカフェストール（16-OMC）はRobustaに多く約600〜1,800 mg/kg含まれる一方、Arabicaには痕跡程度しかないため、Arabicaに混ぜられたRobustaの検出に使われます。Cà Sẻと多収量品種のように同じ種の中では、これらの指標は重なります。',
+  check:'HPLCでカフェインと16-OMCを測定。NMRなら、Arabicaに約1〜3%以上混ぜられたRobustaを検出できます。系統を特定するならDNA検査を。',
+  kv:()=>{const m=R.V.m,S=S_();return R.V.lab?[['カフェイン',vn(m.caf,2)+'%'],['脂質',vn(m.lip,1)+'%'],['ショ糖',vn(m.suc,1)+'%'],['16-OMC',S?S.omc:(m.caf>1.7?'おそらく高い':'おそらく痕跡程度')]]:[['結果','まだありません。「ラボの分析結果あり」をオンにしてください。']]},
+  fail:'カフェインで「本物のSẻ」を証明しようとすること。Robustaのカフェインは地域、熟度、年で変わり、同じ種の中で品種を分ける境界値はない。',
+  tip:'MeDiliは普段、はかり、ふるい、テイスティングを使い、お客様が証明を必要とするときにラボへ送ります。'},
+ {n:'テイスティング台',sub:()=>{const S=S_();return S?(/^(Fine|SCA)/.test(S.scale)?'評価基準 '+S.scale:S.scale):'未テイスティング'},offNote:'観察データなし',
+  mech:'テイスティングで品質と味の個性がわかり、種の手がかりにもなります：Robustaは苦く、しっかりしたボディで酸味は少ない。Arabicaは爽やかな酸味と香り。Libericaは熟したジャックフルーツやトロピカルフルーツの香り。RobustaはFine Robustaの基準で採点し、80点以上がFine。ArabicaはSCAの基準で採点します。',
+  check:'浅煎り〜中煎りで、すべてのサンプルを同じ焙煎プロファイルで焼き、8〜24時間休ませ、1サンプル5カップ、ブラインドで味わいます。',
+  kv:()=>{const S=S_();if(!S)return [['観察','まだありません。「五感で判別するマシン」で入力してください。']];const p=S.prof;return [['風味',S.notes],['評価基準',S.scale],['強さ',`苦み${g1(p[3])}、酸味${g1(p[1])}、ボディ${g1(p[4])}（10段階）`]]},
+  fail:'深煎りのサンプルを味わうこと：深煎りは品種間の違いを覆い隠す。',
+  tip:'MeDiliフレーバーホイールに沿って記録します。'},
+ {n:'判定装置',sub:()=>`${SM[R.t.k].s} · ${pc(R.t.p)}%`,
+  mech:'マシンはすべての測定値を組み合わせます。各サンプルには指標ごとに典型的な値の範囲があり、最も多くの指標に合うサンプルの確率が最も高くなります。これは説明用のモデルで、実際の測定値には誤差や重なり合う範囲があります。',
+  check:'80%以上：ほぼ確実。50〜80%：その可能性が高い。50%未満：さらに証拠が必要。マシンは最大99%に丸めます。',
+  kv:()=>R.P.slice(0,3).map(o=>[SM[o.k].s,pc(o.p)+'%']),
+  fail:'マシンの結果を証明書とみなすこと。同じ種の2品種では、農園の記録とDNAだけが確実。',
+  tip:'結果はページ下部の「サンプル検査票」に記入します。'}];
+ST.forEach(s=>{s.l1='このステーションが読み取るもの';s.l2='手作業でのやり方'});
+
+/* ====== DỰNG CẢNH ====== */
+const ANCH=[null,[7.5,14,11],[21,13,5],[36,8,10.4],[52.5,12,6.5],[64.5,13,3],[77.5,11,6.3],[93,13,4.6],[110,12,7.8]];
+const CHIP=[null,{x:150,y:12},{x:236,y:56},{x:330,y:100},{x:420,y:150},{x:500,y:196},{x:590,y:240},{x:676,y:290},{x:770,y:340}];
+function buildScene(){
+ let h=box(1,2.2,0,120,2.6,.6,['beltT','belt','belt2'])+`<polyline class="flowL" points="${pts([P(2,3.5,.62),P(120,3.5,.62)])}"/>`;
+ h=bench(124,24,'判別マシン · Di Linh農園',44)+h;
+ /* 1 vườn */
+ let s=box(3,9.5,0,9,9,2,['soilT','soil','soil2'])+'<g id="tree"></g>';h+=stG(1,s);
+ /* 2 trái */
+ s=box(17,9,0,8,8,2.6,['ped','ped2','ped3'])+'<g id="cher"></g>'+lcd(17.4,17,2.4,54,'kTr');h+=stG(2,s);
+ /* 3 bàn soi */
+ s=box(30.5,7.2,0,11,1,10.6,['pnl','pnl2','pnl3'])+`<g transform="${face(31.1,8.2,10.1)}"><rect class="pnlF" x="0" y="0" width="64" height="52" rx="3"/><g id="bean"></g></g>`;
+ s+=box(29.5,9.4,0,14,8.6,2.2,['lbx','lbx2','lbx3'])+'<g id="beans"></g>'+lcd(30.2,18,1.95,66,'kSo');h+=stG(3,s);
+ /* 4 sàng */
+ s='';[0,1.1,2.2].forEach((z,i)=>s+=cyl(52.5,9.3,z,3.2,1.1,i%2?'sv2':'sv1',i%2?'sv2t':'sv1t'));
+ [47.8,51.2,54.6,58].forEach((x,i)=>{const q=P(x,14.8,6.3);s+=cyl(x,14.8,0,1,6,'gl','glt')+`<g id="bf${i}"></g>`+`<text class="wtx" x="${f1(q[0])}" y="${f1(q[1]-5)}" text-anchor="middle" style="font-size:8px">${['18','16','13','<13'][i]}</text>`});
+ s+=box(46.4,16.4,0,13.2,1.8,1.7,['ped','ped2','ped3'])+lcd(47.2,18.2,1.55,70,'kSa');h+=stG(4,s);
+ /* 5 cân */
+ s=box(61,10,0,7.5,6,1.6,['ped','ped2','ped3'])+cyl(64.75,13,1.6,2.3,.35,'cu2','plt')+'<g id="pile"></g>'+lcd(61.4,16,1.5,48,'kW');
+ s+=box(66.8,17,0,3.6,2.4,2.4,['ped','ped2','ped3'])+cyl(68.6,18.2,2.4,.2,2.4,'cu2','cu2')+lcd(66.95,19.4,2.2,24,'kAm');h+=stG(5,s);
+ /* 6 lab */
+ s=box(72,8,0,11,6,5.6,['ins','ins2','ins3'])+lcd(72.5,14,5.15,72,'kLab')+lcd(72.5,14,3.55,72,'kOMC')+'<g id="lampG"></g>';
+ s+=box(73.5,15.4,0,8,2.4,.9,['ped','ped2','ped3']);[0,1,2,3].forEach(i=>s+=cyl(74.8+i*1.9,16.6,.9,.42,2.3,'vial','vialT')+`<g id="vl${i}"></g>`);h+=stG(6,s);
+ /* 7 bàn nếm */
+ s=box(86.5,9,0,13,8,3,['wo','wo2','cu2']);[0,1,2,3,4].forEach(i=>{const x=88.4+i*2.35;s+=cyl(x,12.6,3,.85,1.15,'cup','cupT');const q=P(x,12.6,4.4);s+=`<path class="stm" d="M${f1(q[0]-2)} ${f1(q[1]-2)}c-3 -4 3 -6 0 -10s3 -6 0 -9" style="fill:none;stroke:#B9A274;stroke-width:1.3;animation-delay:${i*.3}s"/>`});
+ s+=lcd(87,17,2.8,62,'kCup');h+=stG(7,s);
+ /* 8 quyết định */
+ s=box(103.5,8,0,13,8,7.6,['cab','cab2','cab3'])+`<g transform="${face(104.2,16,7.1)}"><rect x="0" y="0" width="84" height="34" rx="3" style="fill:#2E1C12"/><g id="bars"></g></g>`+lcd(104.2,16,2.15,84,'kOut')+'<g id="lamp8"></g>';h+=stG(8,s);
+ h+='<g id="flow"></g><g id="chips"></g><circle id="tok" r="7"/>';
+ $('scene').innerHTML=h;['kTr','kSo','kSa','kW','kAm','kLab','kOMC','kCup','kOut'].forEach(i=>$(i).classList.add('sm'));initStations()}
+function treeSVG(k){const T=SM[k].tv,cx=7.5,cy=14,z0=2,g=rng(T.seed);let s='';
+ const offs=T.t===3?[[-1,.6],[.9,-.5],[.2,1.2]]:T.t===2?[[-.6,.3],[.6,-.3]]:[[0,0]];
+ offs.forEach(([dx,dy],i)=>s+=cyl(cx+dx,cy+dy,z0,T.tw||.3,T.h*(T.t>1?(.82+.12*i):1),'trk','trk'));
+ if(T.gr)s+=cyl(cx,cy,z0+.55,(T.tw||.3)+.18,.35,'grf','grf');
+ const top=P(cx,cy,z0+T.h),Rx=T.cr*U*1.05,bl=[];
+ if(T.tier){for(let j=0;j<3;j++){const yy=top[1]-6+j*13,w=Rx*(.5+j*.32);for(let i=-2;i<=2;i++)bl.push([top[0]+i*w/2.4,yy+Math.abs(i)*3.2,T.lr*(1-j*.06),T.lr*.5])}}
+ else if(T.hedge){for(let j=0;j<2;j++)for(let i=-3;i<=3;i++)bl.push([top[0]+i*Rx/3.3+(j?Rx/6.6:0),top[1]-2+j*8,T.lr,T.lr*.82])}
+ else{for(let i=0;i<T.n;i++){const a=i/T.n*Math.PI*2+g()*.6,rr=(T.ir?(.38+g()*.62):.6)*Rx;bl.push([top[0]+Math.cos(a)*rr,top[1]+Math.sin(a)*rr*.55-(T.ir?g()*T.lr*.6:0),T.lr*(.8+g()*.45),T.lr*(.8+g()*.45)*.8])}
+  bl.push([top[0],top[1]-5,T.lr*1.15,T.lr*.95])}
+ bl.sort((a,b)=>a[1]-b[1]).forEach(([x,y,rx,ry],i)=>s+=`<ellipse class="${['can1','can2','can3'][i%3]}" cx="${f1(x)}" cy="${f1(y)}" rx="${f1(rx)}" ry="${f1(ry)}"/>`);
+ if(T.br)bl.slice(0,5).forEach(([x,y,rx])=>s+=`<circle cx="${f1(x+rx*.6)}" cy="${f1(y-2)}" r="2.6" style="fill:#C9783A"/>`);
+ return s}
+function cherSVG(k){const C=SM[k].cv,q=P(21,13,2.6),g=rng(C.n*7+3);
+ let s=`<path d="M${f1(q[0]-26)} ${f1(q[1]-20)}Q${f1(q[0])} ${f1(q[1]-34)} ${f1(q[0]+26)} ${f1(q[1]-18)}" style="fill:none;stroke:#6B4226;stroke-width:3.2;stroke-linecap:round"/>`;
+ const nodes=C.cl===3?[.18,.5,.82]:[.3,.72];
+ nodes.forEach((t,j)=>{const nx=q[0]-26+52*t,ny=q[1]-20-11*Math.sin(t*Math.PI)+(t-.5)*4,cnt=Math.floor(C.n/nodes.length)+(j<C.n%nodes.length?1:0);
+  for(let c=0;c<cnt;c++){const a=c/cnt*Math.PI*2+g()*.5,rr=cnt>1?C.r*1.05:0,x=nx+Math.cos(a)*rr,y=ny+Math.sin(a)*rr*.75+C.r*.7;
+   s+=`<circle cx="${f1(x)}" cy="${f1(y)}" r="${C.r}" style="fill:${C.cols[Math.floor(g()*C.cols.length)]}"/><circle cx="${f1(x-C.r*.35)}" cy="${f1(y-C.r*.35)}" r="${f1(C.r*.28)}" style="fill:#FFF6EC;opacity:.55;stroke:none"/>`}});
+ return s}
+function renderScene(){const V=R.V,m=V.m,S=S_();
+ const qm=(x,y,z)=>{const q=P(x,y,z);return `<text class="qm" x="${f1(q[0])}" y="${f1(q[1])}" text-anchor="middle">?</text>`};
+ $('tree').innerHTML=S?treeSVG(V.vis):qm(7.5,14,5);
+ $('cher').innerHTML=S?cherSVG(V.vis):qm(21,13,5.4);
+ const sh=S?{...S.sh}:{a:1.3,asym:.04,hook:0,pt:0,cut:V.cut},Lmm=S?S.Lmm:clamp(11.46*Math.cbrt(m.w*1.69)/3.703,6,13);
+ if(V.cut)sh.cut=V.cut;
+ $('bean').innerHTML=(S||V.cut)&&st.step>=3?beanG(sh,32,26,Lmm*3.6):`<text x="32" y="36" text-anchor="middle" class="qm">?</text>`;
+ let bb='';if(S||V.cut){const g=rng(5),l=Lmm*.95,rx=l*.55,ry=l*.55/sh.a;for(let i=0;i<7;i++){const q=P(31.5+g()*10,10.6+g()*6,2.2);bb+=`<g transform="translate(${f1(q[0])} ${f1(q[1])}) rotate(${f1(-30+g()*60)}) scale(1 .62)"><ellipse rx="${f1(rx)}" ry="${f1(ry)}" style="fill:#D8C79C;stroke:#8D6A45;stroke-width:.9"/>${sh.cut==='p'?'':`<line x1="${f1(-rx*.7)}" x2="${f1(rx*.7)}" y1="0" y2="0" style="stroke:#6B4226;stroke-width:1"/>`}</g>`}}
+ $('beans').innerHTML=bb;
+ const d=bins();d.forEach((v,i)=>{const hgt=clamp(v/100*6*1.35,.05,6);$('bf'+i).innerHTML=st.step>=4?cyl(47.8+i*3.4,14.8,0,.86,hgt,'bnf','bnft'):''});
+ let pl='';const gp=rng(9);for(let i=0;i<9;i++){const q=P(64.75+(gp()-.5)*2.4,13+(gp()-.5)*2.4,1.95);pl+=`<ellipse cx="${f1(q[0])}" cy="${f1(q[1]-2)}" rx="3.2" ry="2.2" style="fill:#D8C79C"/>`}$('pile').innerHTML=pl;
+ const Lc=(id,t,i)=>{$(id).textContent=st.step>=i?t:'···'};
+ Lc('kTr',S?S.cc:'未確認',2);Lc('kSo',V.cut?CUTS[V.cut]:'未観察',3);Lc('kSa','S16以上：'+vn(m.s16,0)+'%',4);
+ Lc('kW',vn(m.w,1)+' g',5);Lc('kAm',vn(V.am,1)+'%',5);
+ Lc('kLab',V.lab?`caf ${vn(m.caf,1)} · 脂質 ${vn(m.lip,0)}`:'未測定',6);
+ Lc('kOMC',V.lab?'16-OMC: '+(S?S.omcS:(m.caf>1.7?'高い':'痕跡')):'16-OMC: ?',6);
+ Lc('kCup',S?`苦み ${g1(S.prof[3])} · 酸味 ${g1(S.prof[1])}`:'未テイスティング',7);
+ Lc('kOut',`${SM[R.t.k].s} ${pc(R.t.p)}%`,8);
+ const hi=V.lab&&(S?S.grp==='R':m.caf>1.7);$('lampG').innerHTML=sph(81.6,11,5.6,.72,hi&&st.step>=6?'lampOn':'lampOff');
+ [0,1,2,3].forEach(i=>$('vl'+i).innerHTML=V.lab&&st.step>=6?cyl(74.8+i*1.9,16.6,.95,.34,1.1+i*.2,'#8D5A32','#A9743F'):'');
+ let b='';if(st.step>=8)R.P.slice(0,3).forEach((o,i)=>{const y=4+i*10;b+=`<text class="bt" x="4" y="${y+6}" style="fill:#F3D9A4">${SM[o.k].s}</text><rect x="34" y="${y}" width="44" height="6.5" rx="2" class="bbg" style="fill:#5A3E2A"/><rect x="34" y="${y}" width="${f1(Math.max(1.5,o.p*44))}" height="6.5" rx="2" style="fill:${SM[o.k].c}"/>`});
+ $('bars').innerHTML=b;$('lamp8').innerHTML=sph(114.6,10,7.6,.6,st.step>=8?'lampOn':'lampOff');
+ drawFlow();drawChips()}
+function chipLabel(i){const V=R.V,m=V.m,S=S_();
+ if(st.step<i)return ['','農園','実','観察台','スクリーン','はかり','ラボ','テイスティング台','結論'][i]+' · ···';
+ return ['','農園 · '+(S?S.tc:'未確認'),'実 · '+(S?S.cc:'未確認'),'豆 · '+(V.cut?CUTN[V.cut]:'未観察'),'スクリーン16+ · '+vn(m.s16,0)+'%','100粒 · '+vn(m.w,1)+NB+'g',
+  V.lab?'カフェイン · '+vn(m.caf,1)+'%':'ラボ · 未測定','テイスティング · '+(S?S.cupS:'未テイスティング'),'結論 · '+SM[R.t.k].s+' '+pc(R.t.p)+'%'][i]}
+function drawFlow(){const V=R.V,m=V.m;
+ const rows=[['モード',st.mode==='ref'?'基準プロファイル':st.mode==='myst'?'ミステリーサンプル':'あなたの測定値'],['サンプル',V.name],['100粒重',vn(m.w,1)+NB+'g'],['スクリーン16以上',vn(m.s16,0)+'%'],['ピーベリー',vn(m.cu,0)+'%'],['カフェイン',V.lab?vn(m.caf,2)+'%':'未測定'],['マシンの結論',`${SM[R.t.k].s} · ${pc(R.t.p)}%`]];
+ const X=16,rh=27,h=50+rows.length*rh+20,y=712-h,w=330;
+ let g=`<rect x="${X}" y="${y}" width="${w}" height="${h}" rx="10" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="${X+16}" y="${y+26}" class="lab12" style="letter-spacing:.08em">マシン内のサンプル</text>`;
+ rows.forEach(([a,b],i)=>{const yy=y+48+i*rh;g+=`<text class="flowT" x="${X+16}" y="${yy+4}">${a}</text><text x="${X+w-16}" y="${yy+4}" text-anchor="end" class="mono flowT">${b}</text>`});
+ g+=`<text x="${X+16}" y="${y+h-10}" class="tiny mutedt">概念図 · 説明用モデル</text>`;$('flow').innerHTML=g}
+
+/* ====== ĐIỀU KHIỂN ====== */
+function halt(){stopRun();st.step=8}
+function toOwn(){if(st.mode!=='own'){st.own={...R.V.m};st.cut=R.V.cut;st.lab=R.V.lab;st.mode='own';st.rev=false}}
+function mystery(){const r=Math.random,k=ORD[Math.floor(r()*ORD.length)],q=SM[k].q,m={};
+ const lim={w:[9,31],s16:[10,100],cu:[0,100],caf:[.4,3],lip:[6,19],suc:[1.5,10]};
+ FE.forEach(f=>m[f]=clamp(q[f][0]+q[f][1]*gauss(r)*.9,lim[f][0],lim[f][1]));
+ st.hid=k;st.mm=m;st.am=10.8+r()*1.6;st.mode='myst';st.rev=false;st.myN++}
+function sliders(){const m=R.V.m;
+ [['iW','oW','w',1],['iS','oS','s16',0],['iC','oC','cu',0],['iCa','oCa','caf',2],['iL','oL','lip',1],['iSu','oSu','suc',1]].forEach(([i,o,f,d])=>{$(i).value=m[f];$(o).textContent=vn(m[f],d)+'%'.replace('%',f==='w'?'g':'%')});
+ $('lab').checked=R.V.lab;$('labBox').hidden=!R.V.lab;
+ $('modeL').textContent=st.mode==='ref'?'基準プロファイル：'+SM[st.k].s:st.mode==='myst'?'ミステリーサンプルを測定中':'入力中'}
+function stats(){const m=R.V.m,t=(a,b)=>`<div class="stat"><span>${a}</span><b>${b}</b></div>`;
+ $('stats').innerHTML=t('100粒重',vn(m.w,1)+NB+'g')+t('スクリーン16以上',vn(m.s16,0)+'%')+t('カフェイン',R.V.lab?vn(m.caf,1)+'%':'未測定')+t('マシンの結論',SM[R.t.k].s)}
+function verdict(){const P=R.P,t=P[0],t2=P[1],S1=SM[t.k];let cls=t.p>=.8?'good':t.p>=.5?'warn':'bad',hd;
+ if(st.mode==='myst'&&st.rev){const ok=t.k===st.hid;cls=ok?'good':'bad';hd=(ok?'✓ マシンの推測は正解：':'✕ マシンの推測は不正解：')+'答えは '+SM[st.hid].n}
+ else hd=`${t.p>=.8?'✓':'!'} ${st.mode==='myst'?'マシンの推測':'最も近い'}: ${S1.n} · ${pc(t.p)}%`;
+ const bars=P.slice(0,3).map(o=>`<div class="pbar"><span>${SM[o.k].n}</span><b>${pc(o.p)}%</b><i><em style="width:${f1(Math.max(1,o.p*100))}%;background:${SM[o.k].c}"></em></i></div>`).join('');
+ let msg='';if(t.p<.5)msg='まだ証拠が足りません。 ';
+ if(!R.V.lab&&S1.grp!==SM[t2.k].grp&&t2.p>.15)msg+='種を分けるには、ラボの結果を加えるか、センターカットを観察してください。 ';
+ if(S1.grp===SM[t2.k].grp&&t2.p>.15)msg+=`${S1.s}と${SM[t2.k].s}は同じ種です：農園の記録、テイスティング、またはDNAが必要。 `;
+ if(st.mode==='myst'&&st.rev&&t.k!==st.hid)msg+='このサンプルの測定値は重なり合う範囲に入っています。現実でも同じことが起こります。';
+ $('verdict').className=cls;$('verdict').innerHTML=`<b>${hd}</b>${bars}${msg?`<p style="margin:8px 0 0">${msg}</p>`:''}`}
+function drawM(){const W=340,H=200,l=30,r=10,t=20,b=22,x0=9,x1=27,y0=.4,y1=3,X=x=>l+(x-x0)/(x1-x0)*(W-l-r),Y=y=>t+(1-(y-y0)/(y1-y0))*(H-t-b);
+ let g=`<text class="ttl" x="${l}" y="12">カフェイン% · 横軸：100粒重（g）</text>`;
+ [1,2,3].forEach(v=>g+=`<line x1="${l}" x2="${W-r}" y1="${f1(Y(v))}" y2="${f1(Y(v))}" style="stroke:var(--rule);stroke-width:.8"/><text x="${l-5}" y="${f1(Y(v)+3.5)}" text-anchor="end">${v}</text>`);
+ [10,15,20,25].forEach(v=>g+=`<text x="${f1(X(v))}" y="${H-5}" text-anchor="middle">${v}</text>`);
+ ORD.forEach(k=>{const q=SM[k].q,c=SM[k].c;g+=`<ellipse cx="${f1(X(q.w[0]))}" cy="${f1(Y(q.caf[0]))}" rx="${f1(X(q.w[0]+q.w[1])-X(q.w[0]))}" ry="${f1(Y(q.caf[0])-Y(q.caf[0]+q.caf[1]))}" style="fill:${c};fill-opacity:.16;stroke:${c};stroke-width:1.2"/>`});
+ ORD.forEach(k=>{const q=SM[k].q,o=SM[k].lo;g+=`<text x="${f1(X(q.w[0])+o[0])}" y="${f1(Y(q.caf[0])+o[1])}" text-anchor="middle" style="fill:var(--ink);font:600 10px var(--body);paint-order:stroke;stroke:var(--panel);stroke-width:3px;stroke-linejoin:round">${SM[k].s}</text>`});
+ const m=R.V.m,x=X(clamp(m.w,x0,x1));
+ if(R.V.lab)g+=`<circle cx="${f1(x)}" cy="${f1(Y(clamp(m.caf,y0,y1)))}" r="5" style="fill:var(--ink);stroke:var(--panel);stroke-width:2"/>`;
+ else g+=`<line x1="${f1(x)}" x2="${f1(x)}" y1="${t}" y2="${H-b}" style="stroke:var(--ink);stroke-width:1.4;stroke-dasharray:4 3"/>`;
+ $('cM').innerHTML=g;
+ $('mTip').textContent=R.V.lab?'濃い点が測定中のサンプルです。縦軸は種を分け、Robustaが上。横軸は同じ種の中で豆の大きさを分け、Cà Sẻは左、多収量品種は右。':'カフェインの値がないので、マシンにわかるのは豆の大きさ（破線）だけです。種を分けるにはラボの結果をオンにしてください。'}
+function figsub(){$('figsub').textContent=`${R.V.name} · マシンの結論：${SM[R.t.k].s} ${pc(R.t.p)}%`}
+function sNote(){const S=SM[st.k];
+ $('sNote').innerHTML=st.mode==='ref'?`<b>${S.n}</b> · ${S.sp}. ${S.prop}.`:st.mode==='myst'?(st.rev?`答え：<b>${SM[st.hid].n}</b>。別のサンプルを試すには「ミステリーサンプル」を押してください。`:'マシンは名前のわからないサンプルを測定中です。各ステーションを見て予想してから、「答えを見る」を押してください。'):'測定値を調整中です。戻るにはサンプルか「基準プロファイルに戻る」を押してください。';
+ $('reveal').hidden=!(st.mode==='myst'&&!st.rev);$('back').hidden=st.mode==='ref'}
+function update(){calc();
+ pills('samps',ORD.map(k=>[k,SM[k].s]),st.mode==='ref'?st.k:'',k=>{halt();st.k=k;st.mode='ref';st.rev=false;update()});
+ pills('cuts',[['','未観察'],['t','まっすぐ'],['s','S字'],['r','しわがあり、ずれている'],['p','丸、culi']],R.V.cut||'',k=>{halt();toOwn();st.cut=k||null;update()});
+ sNote();sliders();stats();verdict();renderScene();drawM();renderStation();figsub();sheet()}
+function runMachine(){stopRun();st.step=0;calc();renderScene();
+ tour([1,2,3,4,5,6,7,8],600,k=>{st.step=k+1;renderScene();renderStation()})}
+const onS=(id,f)=>$(id).addEventListener('input',()=>{halt();toOwn();st.own[f]=+$(id).value;if(['caf','lip','suc'].includes(f))st.lab=true;update()});
+onS('iW','w');onS('iS','s16');onS('iC','cu');onS('iCa','caf');onS('iL','lip');onS('iSu','suc');
+$('lab').addEventListener('change',()=>{halt();toOwn();st.lab=$('lab').checked;update()});
+$('run').onclick=runMachine;$('run2').onclick=runMachine;
+$('myst').onclick=()=>{halt();mystery();update();runMachine()};
+$('reveal').onclick=()=>{halt();st.rev=true;update()};
+$('back').onclick=()=>{halt();st.mode='ref';st.rev=false;update()};
+
+/* ====== MÁY NHẬN DIỆN BẰNG GIÁC QUAN ====== */
+function qz(){$('qz').innerHTML=QZ.map(q=>`<div class="qb"><b>${q.n}</b>${q.h?`<small>${q.h}</small>`:''}<div class="row">${q.o.map(o=>`<button class="pill" type="button" data-q="${q.id}" data-o="${o.id}" aria-pressed="${st.qa[q.id]===o.id}">${o.t}</button>`).join('')}</div></div>`).join('');
+ $('qz').querySelectorAll('button').forEach(b=>b.onclick=()=>{const q=b.dataset.q,o=b.dataset.o;if(st.qa[q]===o)delete st.qa[q];else st.qa[q]=o;qz()});
+ qres();sheet()}
+function qres(){const ans=Object.entries(st.qa),lp={};ORD.forEach(k=>lp[k]=0);
+ ans.forEach(([q,o])=>{const w=QZ.find(x=>x.id===q).o.find(x=>x.id===o).w;ORD.forEach(k=>lp[k]+=Math.log(w[k]))});
+ const mx=Math.max(...ORD.map(k=>lp[k]));let t=0;const e={};ORD.forEach(k=>{e[k]=Math.exp(lp[k]-mx);t+=e[k]});
+ const P=ORD.map(k=>({k,p:e[k]/t})).sort((a,b)=>b.p-a.p);st.qP=P;
+ if(!ans.length){$('qzr').innerHTML='<span class="lbl">0/'+QZ.length+' 問</span><b class="qh">観察データなし</b><p class="mnote">2問以上を選ぶか、「サンプルで試す」の行でサンプルを押してください。</p>';return}
+ const t1=P[0],t2=P[1];
+ const why=ans.map(([q,o])=>{const O=QZ.find(x=>x.id===q).o.find(x=>x.id===o),w=O.w,oth=ORD.filter(k=>k!==t1.k).reduce((s,k)=>s+w[k],0)/7;return {t:O.t,r:w[t1.k]/oth}}).filter(x=>x.r>1.4).sort((a,b)=>b.r-a.r).slice(0,4);
+ let nx='';if(t1.p-t2.p<.3){let best=null,bv=0;QZ.forEach(Q=>{if(st.qa[Q.id])return;const v=Math.max(...Q.o.map(O=>Math.abs(Math.log(O.w[t1.k]/O.w[t2.k]))));if(v>bv){bv=v;best=Q}});
+  nx=best?`${SM[t1.k].s}と${SM[t2.k].s}を分けるには、<b>${best.n.toLowerCase()}</b>も確認してください。`:`${SM[t1.k].s}と${SM[t2.k].s}はまだ接近しています：計量、ふるい分け、または農園の記録が必要です。`}
+ const robNote=(t1.k==='se'||t1.k==='cs')?'<p class="mnote">Cà Sẻと多収量品種の間では、五感は手がかりにすぎません。上のマシンで100粒を量ってふるい、農園の記録を求めてください。</p>':'';
+ $('qzr').innerHTML=`<span class="lbl">${ans.length}/${QZ.length}問を選択済み</span><b class="qh">${t1.p>=.8?'ほぼ確実':t1.p>=.5?'可能性が高い':'不明、最も近い'}：${SM[t1.k].n}</b>${P.slice(0,4).map(o=>`<div class="pbar"><span>${SM[o.k].n}</span><b>${pc(o.p)}%</b><i><em style="width:${f1(Math.max(1,o.p*100))}%;background:${SM[o.k].c}"></em></i></div>`).join('')}${why.length?`<span class="lbl" style="margin-top:12px">${SM[t1.k].s}に合うサイン</span><div class="why">${why.map(x=>`<span>${x.t}</span>`).join('')}</div>`:''}${nx?`<p class="mnote">${nx}</p>`:''}${robNote}`}
+pills('qPre',ORD.map(k=>[k,SM[k].s]).concat([['x','すべて消去']]),'',k=>{st.qa=k==='x'?{}:{...PRE[k]};qz()});
+
+/* ====== HÌNH 2 ====== */
+function drawR(){const W=cw('wR'),mob=W<640,H=mob?300:360,l=mob?36:48,r=mob?12:22,t=26,b=34,x0=13,x1=31,y0=54,y1=101,X=x=>l+(x-x0)/(x1-x0)*(W-l-r),Y=y=>t+(1-(y-y0)/(y1-y0))*(H-t-b);
+ $('cR').setAttribute('viewBox',`0 0 ${W} ${H}`);
+ let g=`<text class="ttl" x="${l}" y="14">${mob?'スクリーン16以上の% · 横：g/100粒':'スクリーン16以上の豆の割合 · 横軸：100粒重（g）'}</text>`;
+ [60,70,80,90,100].forEach(v=>g+=`<line x1="${l}" x2="${W-r}" y1="${f1(Y(v))}" y2="${f1(Y(v))}" style="stroke:var(--rule);stroke-width:.8"/><text x="${l-6}" y="${f1(Y(v)+4)}" text-anchor="end">${v}</text>`);
+ (mob?[14,18,22,26,30]:[14,16,18,20,22,24,26,28,30]).forEach(v=>g+=`<text x="${f1(X(v))}" y="${H-b+18}" text-anchor="middle">${v}</text>`);
+ g+=`<ellipse cx="${f1(X(15))}" cy="${f1(Y(62))}" rx="${f1(X(16.6)-X(15))}" ry="${f1(Y(62)-Y(71))}" style="fill:var(--k1);fill-opacity:.13;stroke:var(--k1);stroke-width:1.8;stroke-dasharray:6 4"/>`;
+ ROB.forEach(([cl,rg,w,s])=>{g+=`<circle cx="${f1(X(w))}" cy="${f1(Y(s))}" r="${rg==='all'?7:5.5}" style="fill:${RG[rg][1]};stroke:var(--panel);stroke-width:1.6"><title>${cl} · ${RG[rg][0]}：${vn(w,1)} g, ${vn(s,1)}%</title></circle>`});
+ const lab=(x,y,txt,anc,c)=>`<text class="val" x="${f1(x)}" y="${f1(y)}" text-anchor="${anc}"${c?` style="fill:${c}"`:''}>${txt}</text>`;
+ g+=mob?lab(X(16.8)+2,Y(57.5),'Cà Sẻ（推定）','start','var(--k1)'):lab(X(15)+4,Y(71)-10,'Cà Sẻ（推定）','middle','var(--k1)');
+ g+=lab(X(15.7)+10,Y(65)+18,'TR4、TR11 · ザライ省','start');
+ g+=mob?lab(X(29.6)+4,Y(91),'TR9 · ラムドン省','end'):lab(X(29.6)-9,Y(99.2)+18,'TR9 · ラムドン省','end');
+ g+=lab(X(19.1)+10,Y(85.3)+4,'TRS1','start');
+ $('cR').innerHTML=g;
+ legend('lgR',[{n:'ダクラク省',c:'var(--k2)',box:1},{n:'ザライ省',c:'var(--k4)',box:1},{n:'ラムドン省',c:'var(--k3)',box:1},{n:'TRS1、4地域の平均',c:'var(--k5)',box:1},{n:'Cà Sẻ、MeDiliの推定',c:'var(--k1)',d:1}])}
+
+/* ====== HÌNH 3, ĐỐI CHIẾU CẶP, THAM SỐ ====== */
+function gallery(){$('bgal').innerHTML=ORD.map(k=>{const S=SM[k],L=S.Lmm*7;return `<figure><svg viewBox="0 0 120 112" role="img" aria-label="${S.n}の生豆">${beanG(S.sh,60,50,L)}<line x1="12" x2="47" y1="104" y2="104" style="stroke:var(--muted);stroke-width:1.6"/><text x="12" y="99" style="font:600 9px var(--body);fill:var(--muted)">5 mm</text></svg><figcaption><b>${S.s}</b><span>${CUTN[S.sh.cut]} · 長さ≈${NB}${vn(S.Lmm,1)}${NB}mm</span></figcaption></figure>`}).join('')}
+const PROWS=[['種、グループ','sp'],['繁殖方法','prop'],['木','tree'],['実','cher'],['生豆','bean'],['センターカット','cutT'],['地域、標高','alt'],['風味','notes'],['評価基準','scale'],['収量','yld'],['間違えやすい相手','conf']];
+const PAIRS={'se|cs':'まず農園を見る：実生の木か接ぎ木か。次に100粒を量ってふるい、同じ地域の多収量品種と比べる。テイスティング：Cà Sẻのほうが濃く、ボディが厚く、余韻が長い。同じ種なのでカフェインでは分けられない。確実を期すならDNA検査を。',
+ 'se|culi':'100粒中の丸い豆を数える。Cà Sẻのロットに丸い豆は数%しかないが、選別済みのculiロットは90%以上。Sẻの農園から取れたCuliは、やはりCuli Sẻ。',
+ 'cs|culi':'100粒中の丸い豆を数える。平豆のロットに丸い豆は数%しかないが、選別済みのculiロットは90%以上。',
+ 'ara|cat':'豆の形はほぼ同じ。農園の品種を尋ねる：Typicaは背が高く、枝は水平、新葉は銅色。Catimorは低く、節間が短い。テイスティング：Catimorはハーブのような味が出やすい。確実を期すならDNA。',
+ 'ara|mok':'100粒を量る：Mokaはとても軽く約10〜13 gで、豆はえんどう豆のように丸い。生産量が少ないので高価。普通のArabicaに「Moka」の名が付けられていないか注意。',
+ 'cat|mok':'100粒を量る：Mokaはとても軽く約10〜13 gで、豆はえんどう豆のように丸い。Catimorの豆は細長く、ずっと大きい。Catimorの木は低いが実付きがよく、Mokaの木は小さく実が少ない。',
+ 'lib|exc':'Libericaの豆は大きく長く、とがった先が鉤状。Excelsaはより小さく、しずく形で、パーチメントが薄い。テイスティング：Libericaはトロピカルフルーツと熟したジャックフルーツ、Excelsaはダークフルーツのような酸味。'};
+function pairText(a,b){const key=[a,b].sort((x,y)=>ORD.indexOf(x)-ORD.indexOf(y)).join('|');if(PAIRS[key])return PAIRS[key];
+ const A=SM[a],B=SM[b];
+ if(a==='culi'||b==='culi')return 'Culiは豆の形で、品種ではない：RobustaのCuliもArabicaのCuliもある。まず丸い豆を数え、次に平豆と同じように種を分ける：溝、カフェイン、風味。';
+ if(a==='lib'||b==='lib')return 'Libericaの豆は大きくいびつで、とがった先が鉤状、溝にしわ。熟したジャックフルーツの独特な香り。カフェインはRobustaより少ない。TCVN 4193では、1等級のRobustaに混入できるジャックフルーツコーヒーは最大0.5%。';
+ if(a==='exc'||b==='exc')return 'Excelsaはやや傾いたしずく形で、溝にややしわがある。フルーツのような酸味で苦みは少なく、Robustaとは正反対。';
+ if(a==='mok'||b==='mok')return 'Mokaの豆はとても小さく丸く、溝は曲がっている。100粒でわずか約10〜13 g。香りが強く、爽やかな酸味で、苦みは少ない。';
+ if(A.grp!==B.grp)return '種が違うので分けやすい。Robustaは短く丸く溝がまっすぐ、Arabicaは平たく細長く溝がS字。ラボ：Robustaはカフェインがほぼ2倍、油分と糖分が少なく、16-OMCが多い。テイスティング：Robustaは苦くボディがしっかり、Arabicaは爽やかな酸味と香り。';
+ return '同じグループ：豆の大きさを比べ、味わい、農園の記録を尋ねる。'}
+function pair(){pills('pA',ORD.map(k=>[k,SM[k].s]),st.pa,k=>{st.pa=k;if(st.pb===k)st.pb=ORD.find(x=>x!==k);pair()});
+ pills('pB',ORD.filter(k=>k!==st.pa).map(k=>[k,SM[k].s]),st.pb,k=>{st.pb=k;pair()});
+ const A=SM[st.pa],B=SM[st.pb],PD={w:1,s16:0,caf:1,lip:0},qr=['w','s16','caf','lip'].map(f=>[FN[f][0]+'（モデル）',vn(A.q[f][0],PD[f])+NB+FN[f][1],vn(B.q[f][0],PD[f])+NB+FN[f][1]]);
+ $('pT').innerHTML=`<thead><tr><th></th><th><i class="sw" style="background:${A.c}"></i>${A.n}</th><th><i class="sw" style="background:${B.c}"></i>${B.n}</th></tr></thead><tbody>${PROWS.map(([n,f])=>`<tr><th>${n}</th><td>${A[f]}</td><td>${B[f]}</td></tr>`).join('')}${qr.map(([n,a,b])=>`<tr><th>${n}</th><td>${a}</td><td>${b}</td></tr>`).join('')}</tbody>`;
+ $('pX').innerHTML=`<b>最速の見分け方</b>${pairText(st.pa,st.pb)}`}
+const sdf=v=>String(+(+v).toFixed(2));
+function ptab(){$('pTab').innerHTML=`<thead><tr><th>サンプル</th>${FE.map(f=>`<th>${FN[f][0]}, ${FN[f][1]}</th>`).join('')}<th>センターカット</th></tr></thead><tbody>${ORD.map(k=>`<tr><td><i class="sw" style="background:${SM[k].c}"></i>${SM[k].s}</td>${FE.map(f=>`<td>${sdf(SM[k].q[f][0])} ± ${sdf(SM[k].q[f][1])}</td>`).join('')}<td>${CUTN[SM[k].sh.cut]}</td></tr>`).join('')}</tbody>`}
+
+/* ====== HÌNH 4 ====== */
+function drawRad(){pills('rB',ORD.filter(k=>k!=='se').map(k=>[k,SM[k].s]),st.rb,k=>{st.rb=k;drawRad()});
+ const AX=['香り','酸味','甘み','苦み','ボディ','余韻'],A=SM.se.prof,B=SM[st.rb].prof,cx=170,cy=150,Rr=100,n=6,pt=(i,r)=>{const a=(-90+i*360/n)*Math.PI/180;return [cx+r*Math.cos(a),cy+r*Math.sin(a)]};
+ let g='';[2,4,6,8,10].forEach(v=>g+=`<polygon class="grid" points="${AX.map((_,i)=>pt(i,Rr*v/10).map(f1).join(',')).join(' ')}"/>`);
+ AX.forEach((_,i)=>{const [x,y]=pt(i,Rr);g+=`<line x1="${cx}" y1="${cy}" x2="${f1(x)}" y2="${f1(y)}" style="stroke:var(--rule)"/>`});
+ [[B,SM[st.rb].c,'6 4'],[A,SM.se.c,'']].forEach(([v,c,d])=>g+=`<polygon points="${v.map((x,i)=>pt(i,Rr*x/10).map(f1).join(',')).join(' ')}" style="fill:${c};fill-opacity:.18;stroke:${c};stroke-width:2.2${d?';stroke-dasharray:'+d:''}"/>`);
+ AX.forEach((nm,i)=>{const [x,y]=pt(i,Rr+20);g+=`<text x="${f1(x)}" y="${f1(y+4)}" text-anchor="middle">${nm}</text>`});
+ $('cRad').innerHTML=g;legend('lgRad',[{n:'Cà Sẻ Di Linh',c:SM.se.c},{n:SM[st.rb].n,c:SM[st.rb].c,d:1}]);
+ const up=[],dn=[];AX.forEach((nm,i)=>{const d=A[i]-B[i];if(d>=1)up.push(nm.toLowerCase());else if(d<=-1)dn.push(nm.toLowerCase())});
+ $('radT').textContent=!up.length&&!dn.length?`Cà Sẻと${SM[st.rb].s}は6つの軸でほぼ同じです。`:`${SM[st.rb].s}と比べたCà Sẻ：${up.length?'強いのは '+up.join('、'):''}${up.length&&dn.length?'; ':''}${dn.length?'弱いのは '+dn.join('、'):''}。`}
+
+/* ====== PHIẾU ====== */
+function sheet(){if(!R.V)return;const m=R.V.m,P=R.P,qa=Object.entries(st.qa).map(([q,o])=>{const Q=QZ.find(x=>x.id===q);return `${Q.n}：${Q.o.find(x=>x.id===o).t}`});
+ const t=`生豆サンプル検査票 · MeDili\nロット：________　仕入先：________　日付：____年__月__日\n売り込み時の呼び名：________　地域、標高：________\n農園：実生 / 接ぎ木 / 不明 · 植え付け年：____\n\n1. 水分：____ %（最大12.5%）\n2. 100粒の観察：まっすぐな溝 ___ · S字 ___ · しわ・ずれ ___ · 丸 ___\n3. 300 gをふるう：18以上 ___ % · 16〜18 ___ % · 13〜16 ___ % · 13を通過 ___ %\n4. 100粒重：___ g · ___ g · ___ g → 平均 ___ g\n5. TCVN 4193による欠点：黒 ___ · 褐色 ___ · 未熟 ___ · 割れ ___ · 異物 ___\n6. テイスティング（Fine Robusta / SCA）：点数 ___ · メモ ____________\n7. ラボ（あれば）：カフェイン ___ % · 16-OMC ___ mg/kg · DNA ________\n\nマシンへの入力値：100粒 ${vn(m.w,1)} g · スクリーン16以上 ${vn(m.s16,0)}% · ピーベリー ${vn(m.cu,0)}%${R.V.lab?` · カフェイン ${vn(m.caf,2)}%`:''}\nMeDiliマシン（説明用モデル）：${P.slice(0,2).map(o=>SM[o.k].s+' '+pc(o.p)+'%').join(' · ')}\n${qa.length?'官能：'+qa.join('; ')+'\n':''}結論：________________　検査者：________`;
+ $('sheet').textContent=t;st.sheet=t}
+$('cpSh').onclick=()=>cp(st.sheet,'cpShS');
+
+buildScene();calc();gallery();ptab();pair();drawRad();drawR();qz();update();
+let rz=0;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(drawR,150)});
+</script>
+</body></html>

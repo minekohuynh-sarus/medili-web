@@ -1,0 +1,715 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="MeDili，来自Di Linh高原的烘焙商。纯正咖啡，以Cà Sẻ为本的纯烘焙。"><meta property="og:title" content="MeDili庄园的十二个月"><meta property="og:description" content="MeDili，来自Di Linh高原的烘焙商。纯正咖啡，以Cà Sẻ为本的纯烘焙。"><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>MeDili庄园的十二个月</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.inl{color:var(--moss);font-weight:600}
+.quiz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.q{border:0;padding:0;margin:0 0 14px;min-width:0}.q legend{padding:0;font-weight:600}
+.res{background:var(--tint);border-radius:14px;padding:16px}.res h3{font:800 2rem/1.1 var(--display);margin:2px 0 4px;color:var(--accent)}
+.res p{margin:6px 0}.rp{font-weight:600}.rp small{font-weight:400;color:var(--muted)}
+.tinyn{font-size:.78rem;color:var(--muted)}
+.gumap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gm{border-top:3px solid var(--copper);padding-top:8px}.gm h3{margin:0;font:800 1.3rem var(--display)}.gm small{color:var(--muted)}
+ol.steps{margin:0 0 8px;padding-left:20px}ol.steps li{margin-bottom:4px;font-size:.9rem}ol.steps li.on{font-weight:700;color:var(--accent)}
+.sop.tight li{grid-template-columns:36px minmax(0,1fr)}.sop.tight .n{font-size:1.5rem}
+.st.off{opacity:.45}
+@media (max-width:820px){.quiz{grid-template-columns:minmax(0,1fr)}}
+
+:root{--ground:#8FA65E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#5D7340}}
+:root[data-theme="dark"]{--ground:#5D7340}
+.mths button{min-width:52px}
+.sgn3{font:italic 600 13.5px var(--sign)!important;fill:var(--accent)!important}
+.sgn{font-size:18px}
+.calc.three{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-bottom:12px}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px}
+.calc input{font-size:.95rem}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style><style>
+/* Khung chung sau khi gộp Manus: menu nhóm, chân trang, màu phong thủy Thổ (nâu, vàng đất, đỏ; không xanh lá, không đen). */
+:root{--moss:#8D4E22;--good:#8D4E22;
+  --i-red:#B33A24;--i-red2:#7A2414;--i-gold:#D9B77E;--i-gold2:#B8894A;--i-coffee:#6B4226;--i-brown:#8D5A32;--i-milk:#E9D3AE;
+  --seg1:#9E3B26;--seg2:#B8894A;--seg3:#6B4226;--seg4:#D9B77E;--seg-t1:#FFF6EC;--seg-t2:#2E1C12;--cmp2:#C9A46A;
+  --cx1:#BB8526;--cx2:#7A348E;--cx3:#83470D;--cx4:#CB4D54}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--panel)}
+.mnav{display:none!important}
+
+/* menu */
+.mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
+.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p a:hover{color:var(--accent)}
+.mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-m{margin:0;font-size:inherit}
+.mh-m>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font:600 .86rem var(--body);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;white-space:nowrap;user-select:none}
+.mh-m>summary::-webkit-details-marker{display:none}
+.mh-m>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mh-m[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-m>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-pan{position:absolute;left:0;right:0;top:100%;background:var(--panel);border-bottom:1px solid var(--rule);box-shadow:0 18px 30px rgba(46,28,18,.16);max-height:calc(100vh - 60px - env(safe-area-inset-top,0px));overflow:auto;overscroll-behavior:contain}
+.mh-grid{max-width:1560px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 26px;padding-block:18px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-g{margin:0 0 6px;font:600 .72rem/1.3 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mh-c ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-c a{display:block;color:var(--ink);text-decoration:none;font:500 .95rem/1.35 var(--body);padding:6px 0;border-bottom:1px solid transparent}
+.mh-c a:hover{color:var(--accent)}
+.mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
+.mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
+.mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.mh-i{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none}
+.mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
+@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+@media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
+
+/* chân trang */
+.mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
+.mf-in{max-width:1560px;margin:auto;padding-block:30px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:26px}
+.mf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border-bottom:1px solid var(--rule);padding-bottom:24px}
+.mf-k{flex-basis:100%;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mf-h{margin:0;font:italic 600 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sign);color:var(--ink);text-wrap:balance}
+.mf-h em{color:var(--accent)}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:22px 30px}
+.mf-brand b{display:block;font:italic 600 1.35rem/1.25 var(--sign);color:var(--accent)}
+.mf-brand span{display:block;margin-top:6px}.mf-brand small{display:block;margin-top:6px;color:var(--muted);letter-spacing:.06em}
+.mf-t{margin:0 0 6px;font:600 .72rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mf-col{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mf-col a{color:var(--ink);text-decoration:none;padding:2px 0}.mf-col a:hover{color:var(--accent);text-decoration:underline}
+.mf-col p{margin:0 0 6px}.mf-n{white-space:nowrap;user-select:all}
+.mf-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:.84rem}
+.mf-base i{font:italic 600 1rem var(--sign);color:var(--accent)}
+@media (max-width:980px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-brand{grid-column:1/-1}}
+@media (max-width:520px){.mf-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ảnh thật */
+.pf{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.pf img{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;border:1px solid var(--rule);background:var(--tint)}
+.pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.pfw img{aspect-ratio:3/1;object-fit:cover}
+.split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
+@media (max-width:700px){.pfw img{aspect-ratio:2/1}}
+.pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
+.pgal{display:grid;gap:10px}
+.pgal>h2{margin:0}
+.pgal>p{margin:0;color:var(--muted);max-width:72ch}
+
+/* chọn ngôn ngữ */
+.mh-l{position:relative;margin:0}
+.mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
+.mh-l>summary::-webkit-details-marker{display:none}
+.mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
+.mh-lp a:hover{background:var(--tint);color:var(--accent)}
+.mh-lp a[aria-current]{color:var(--accent)}
+@media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
+/* nút Zalo, Facebook nổi góc trái bên dưới */
+.fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
+.fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
+.fl-b svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fl-b:hover{transform:translateY(-2px) scale(1.05)}
+.fl-b:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.fl-b::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;background:var(--ink);color:var(--panel);font:600 .8rem var(--body);letter-spacing:0;padding:6px 11px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{opacity:1;transform:translate(0,-50%)}}
+@media (max-width:600px){.fl-c{gap:8px}.fl-b{width:46px;height:46px;font-size:.6rem}.fl-b svg{width:17px;height:17px}}
+@media (max-width:1020px){body:has(.nx-bar) .fl-c{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+/* chừa chỗ cho nút nổi ở cuối chân trang */
+@media (min-width:601px){.mf-base{padding-left:76px}}
+@media (max-width:600px){footer.mf{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}}
+@media print{.fl-c{display:none}}
+</style><link rel="alternate" hreflang="vi" href="https://www.medili.vn/vuon.html"><link rel="alternate" hreflang="en" href="https://www.medili.vn/en/vuon.html"><link rel="alternate" hreflang="ja" href="https://www.medili.vn/ja/vuon.html"><link rel="alternate" hreflang="zh-Hans" href="https://www.medili.vn/zh/vuon.html"><link rel="alternate" hreflang="x-default" href="https://www.medili.vn/vuon.html"><script>const __tl=s=>{let n=0;for(const c of String(s))n+=/[⺀-鿿가-힯＀-￯]/.test(c)?1.85:1;return n};</script><style>:root{--body:"Be Vietnam Pro","Noto Sans SC",system-ui,sans-serif;--display:"Big Shoulders Display","Noto Sans SC","Be Vietnam Pro",system-ui,sans-serif}body{line-break:strict;word-break:normal;overflow-wrap:anywhere}</style></head><body><div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a><nav class="mh-p" aria-label="主要栏目"><a href="cau-chuyen.html">故事</a><a href="vung-trong.html">种植区</a><a href="anh-vuon.html">庄园照片</a><a href="xuong-rang.html">烘焙厂</a><a href="horeca.html">HORECA</a><a href="quan-medili.html">MeDili咖啡馆</a><a href="journal.html">知识</a><a href="gia-ca-phe.html">咖啡价格</a></nav><details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>菜单</span></summary><nav class="mh-pan" aria-label="全部页面"><div class="mh-grid"><div class="mh-c"><p class="mh-g">MeDili</p><ul><li><a href="./">首页</a></li><li><a href="cau-chuyen.html">MeDili的故事</a></li><li><a href="doi-ngu.html">团队</a></li><li><a href="quan-medili.html">MeDili Café门店</a></li><li><a href="lien-he.html">联系我们</a></li></ul></div><div class="mh-c"><p class="mh-g">种植与生产</p><ul><li><a href="vung-trong.html">Di Linh种植区</a></li><li><a href="anh-vuon.html">庄园照片</a></li><li><a href="vuon.html" aria-current="page">庄园的十二个月</a></li><li><a href="trai-ca-phe.html">咖啡果结构</a></li><li><a href="len-men-men-bia.html">啤酒酵母发酵</a></li><li><a href="len-men-trai-cay.html">与水果共同发酵</a></li></ul></div><div class="mh-c"><p class="mh-g">烘焙与冲煮</p><ul><li><a href="xuong-rang.html">烘焙厂与产能</a></li><li><a href="rang.html">烘焙室</a></li><li><a href="huong-dan-pha.html">冲煮指南</a></li><li><a href="quay-pha.html">冲煮吧台</a></li><li><a href="cong-thuc-pha.html">冲煮配方机</a></li><li><a href="cold-brew.html">冷萃机</a></li><li><a href="tim-gu.html">寻找您的咖啡口味</a></li></ul></div><div class="mh-c"><p class="mh-g">购买与合作</p><ul><li><a href="cua-hang.html">咖啡商店</a></li><li><a href="mua-hang.html">选购室</a></li><li><a href="horeca.html">HORECA解决方案</a></li><li><a href="dong-hanh-cung-quan.html">与咖啡馆同行</a></li><li><a href="nhan-xanh.html">选择生豆 · 批发</a></li><li><a href="gia-ca-phe.html">今日咖啡价格</a></li><li><a href="chinh-sach.html">MeDili政策</a></li><li><a href="giao-hang.html">配送与退换货</a></li><li><a href="gio-hang.html">购物车</a></li><li><a href="tim-kiem.html">搜索</a></li></ul></div><div class="mh-c"><p class="mh-g">咖啡知识</p><ul><li><a href="journal.html">全部文章</a></li><li><a href="chiet-xuat.html">萃取机</a></li><li><a href="phan-biet-ca-phe.html">咖啡辨别机</a></li><li><a href="trai-chin.html">成熟咖啡果机</a></li><li><a href="vi-sinh.html">微生物机</a></li><li><a href="tien-chat-huong.html">香气前体机</a></li><li><a href="banh-xe-huong.html">MeDili风味轮</a></li><li><a href="journal-phin.html">滴滤壶与时间滴落的节奏</a></li><li><a href="journal-tu-qua.html">从咖啡果到风味</a></li><li><a href="journal-di-linh.html">一杯咖啡里的Di Linh</a></li><li><a href="tu-vuon-den-ly.html">从庄园到杯中</a></li><li><a href="suc-khoe.html">咖啡与身体</a></li></ul></div></div></nav></details><details class="mh-l"><summary aria-label="语言 · Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.3 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.3-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>ZH</span></summary><div class="mh-lp"><a href="../vuon.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../en/vuon.html" hreflang="en" lang="en">English</a><a href="../ja/vuon.html" hreflang="ja" lang="ja">日本語</a><a href="vuon.html" hreflang="zh-Hans" lang="zh-Hans" aria-current="true">中文</a></div></details><a class="mh-i" href="tim-kiem.html" aria-label="搜索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a><a class="mh-i" href="gio-hang.html" aria-label="购物车"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="mh-cn" hidden></span></a><a class="mh-go" href="cua-hang.html">商店</a></div></div>
+
+<div class="wrap">
+<header>
+  <span class="lgw"><img class="lgL" src="../assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div class="brandbar"><span>迷恋Di Linh的味道</span><span>Zalo <a href="#lien-he">0966770788</a></span></div>
+  <h1><em>MeDili</em>庄园的十二个月</h1>
+  <p>以自然方式照料Di Linh一片15年树龄的Robusta Cà Sẻ庄园的一年：以有机质为基础，化肥适量补充。选择月份，即可查看庄园的变化、要做的工作、肥料、用水、用工和鲜果产量。</p>
+</header>
+<section class="pgal" aria-label="采收季的庄园"><h2>采收季的庄园</h2><p>Robusta红熟后采摘，再晾晒。</p><div class="pfs"><figure class="pf "><img src="../assets/p-sq-canh.jpg" alt="枝头红熟的Robusta" width="900" height="900" loading="lazy"><figcaption>枝头红熟的Robusta。</figcaption></figure><figure class="pf "><img src="../assets/p-sq-tay.jpg" alt="采摘者手中的一串成熟Robusta" width="900" height="900" loading="lazy"><figcaption>进入采收季的Robusta果串。</figcaption></figure><figure class="pf "><img src="../assets/p-sq-san-phoi.jpg" alt="在山间晒场上晾晒的咖啡" width="900" height="900" loading="lazy"><figcaption>在山丘间晾晒咖啡。</figcaption></figure></div><div class="lnks" style="margin-top:0"><a class="lnk" href="anh-vuon.html">查看全部庄园照片</a></div></section>
+
+<div class="bench">
+  <div class="card">
+    <div class="fighead">
+      <div><b>图1</b> <span id="figsub"></span></div>
+      <button class="btn small" id="snd" aria-pressed="false">庄园声音：关</button>
+    </div>
+    <div class="scroller"><svg id="scene" viewBox="0 0 1040 700" aria-label="MeDili咖啡庄园的立体模型，包括树行、堆肥棚、水井和水泵、遮荫树、地表覆盖和土壤剖面。庄园随月份变化。"></svg></div>
+    <div class="strip mths" id="strip" role="group" aria-label="选择月份"></div>
+    <div id="detail" aria-live="polite"></div>
+  </div>
+
+  <aside class="card ctl">
+    <div class="head2"><h3>庄园参数</h3><small>按实际庄园调整</small></div>
+    <div class="sl"><label for="A">面积 <output id="oA"></output></label><input id="A" type="range" min="1" max="20" step="0.5"></div>
+    <div class="sl"><label for="Dn">种植密度 <output id="oDn"></output></label><input id="Dn" type="range" min="900" max="1300" step="10"></div>
+    <div class="sl"><label for="Y">生豆产量 <output id="oY"></output></label><input id="Y" type="range" min="2" max="5" step="0.1"><p>在林同省，综合栽培试验的产量约达3.3–3.5吨/公顷。</p></div>
+    <div class="sl"><label for="R">鲜果/生豆比 <output id="oR"></output></label><input id="R" type="range" min="4.5" max="6" step="0.1"><p>每季应实际称量。果实越熟，比例越好。</p></div>
+    <div class="sl"><label for="C">化肥减量 <output id="oC"></output></label><input id="C" type="range" min="0" max="50" step="5"><p>相对于推荐用量。根据土壤检测结果逐步减少，不要一次减完。</p></div>
+    <div class="sl"><label for="P">采摘效率 <output id="oP"></output></label><input id="P" type="range" min="100" max="300" step="10"><p>选摘熟果比整枝捋摘慢。</p></div>
+    <div class="row" style="margin-top:14px"><button class="btn main" id="run">查看全部12个月</button><button class="btn" id="reset">关于建议节点</button></div>
+    <div class="stats" id="stats"></div>
+    <div id="verdict"></div>
+    <hr>
+    <span class="lbl">每月用工（工日/公顷），点击柱条选择月份</span>
+    <svg class="ch" id="cW" viewBox="0 0 340 120" role="img" aria-label="每月用工图"></svg>
+    <details><summary>查看每月用工表</summary><div class="tw"><table id="tblW"></table></div></details>
+  </aside>
+</div>
+
+<section class="card">
+  <h2 id="hHarvest"></h2>
+  <p class="lead">根据右侧参数估算。果实数按每公斤650颗假设，建议实际数一数：取1公斤熟果，数完后再调整。</p>
+  <div class="calc three"><label for="Tk">每公斤果数<input id="Tk" type="number" min="300" max="1500" step="10" value="650"></label><label for="Bg">每袋重量（公斤）<input id="Bg" type="number" min="20" max="80" step="1" value="50"></label><label for="Dd">整季采摘天数<input id="Dd" type="number" min="20" max="90" step="1" value="50"></label></div>
+  <div class="need four" id="hNeed"></div>
+  <div class="tw"><table class="rich"><thead><tr><th>采摘批次</th><th>时间</th><th>粉水比</th><th>鲜果 / 公顷</th><th id="thAll"></th><th>工日 / 公顷</th><th>要求</th></tr></thead><tbody id="hTbl"></tbody></table></div>
+  <p class="src" id="hNote"></p>
+</section>
+
+<section class="card">
+  <h2>每公顷12个月日历</h2>
+  <p class="lead">点击一行即可在庄园上查看该月。施肥量随所选的化肥减量而变化。实际日期取决于当年的天气。</p>
+  <div class="tw"><table class="rich"><thead><tr><th>月份</th><th>阶段</th><th>主要工作</th><th>有机、微生物</th><th>无机肥料（公斤/公顷）</th><th>用水（立方米/公顷）</th><th>用工</th></tr></thead><tbody id="yr"></tbody></table></div>
+</section>
+
+<div class="cols">
+  <section class="card">
+    <h2>施肥：以有机肥为基础，无机肥补充</h2>
+    <p class="lead">推荐用量是应权衡的上限。只有逐块检测土壤，才知道能减多少。</p>
+    <div class="tw"><table class="rich"><thead><tr><th>养分（公斤/公顷）</th><th>林同省常见施肥方式</th><th>推荐</th><th>MeDili</th><th>商品肥料</th></tr></thead><tbody id="ferT"></tbody></table></div>
+    <hr>
+    <ul class="plain" id="orgL"></ul>
+  </section>
+  <section class="card">
+    <h2>一年费用</h2>
+    <p class="lead">单价是用于比较的示例。请输入自己的实际采购价格。</p>
+    <div class="calc three" id="prices"></div>
+    <div id="cost"></div>
+    <p class="src">不含折旧、土地、初加工、运输、税费和管理用工。生豆示例价格89,000 VND/公斤取自林同省2026年10月27日，价格每天变动。</p>
+  </section>
+</div>
+
+<div class="cols">
+  <section class="card">
+    <h2>常见错误</h2>
+    <div class="tw"><table class="rich"><thead><tr><th>迹象</th><th>原因</th><th>处理方法</th></tr></thead><tbody id="fix"></tbody></table></div>
+  </section>
+  <section class="card">
+    <h2>本月庄园工作单</h2>
+    <p class="lead">按所选月份发给庄园组长。</p>
+    <div id="sheet"></div>
+    <button class="btn main" id="copy">复制月度工作单</button> <span id="copied" role="status" class="src"></span>
+    <hr>
+    <h3 style="margin:0 0 6px">需要守住的界限</h3>
+    <ul class="plain">
+      <li><b>先测土。</b>1月逐块取样，检测pH、有机质和氮磷钾。不同的庄园，施肥量也不同。</li>
+      <li><b>逐步减量。</b>第一年减约20–30%，观察产量后再继续减。</li>
+      <li><b>农药。</b>仅在超过防治阈值时使用，只用许可名录内的产品，并严格遵守采收前的安全间隔期。</li>
+      <li><b>还不能称为有机。</b>仍在使用无机肥的庄园只能说“以自然方式耕种”，在获得认证前不要标注“有机”（organic）。</li>
+    </ul>
+  </section>
+</div>
+
+<section class="card src"><p style="margin:0;font-size:.88rem;color:var(--muted);max-width:110ch"><b style="color:var(--ink)">综合多方资料。</b>庄园为示意模型。工作日历、用工数、各批采摘比例和单价都是为Di Linh做规划的估算，并非MeDili庄园的实测数据。建议请当地农技推广人员复核。</p></section>
+
+<section class="contact" id="lien-he">
+  <div>
+    <img class="lgK" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83">
+    <div class="tagline">迷恋Di Linh的味道</div>
+    <p>来自MeDili Coffee Farm的Di Linh产地咖啡。欢迎通过Zalo了解庄园与咖啡。</p>
+  </div>
+  <div class="zalo">
+    <span>Zalo MeDili</span> <strong id="zaloNo">0966 770 788</strong>
+    <div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Zalo留言</a><button type="button" id="copyZalo">复制号码</button></div>
+    <small id="zaloMsg" role="status"></small>
+  </div>
+</section>
+</div>
+
+<script>
+/* ====== DỮ LIỆU THÁNG ====== */
+const SP={n:{2:.15,5:.3,7:.3,9:.25},p:{5:1},k:{2:.1,5:.25,7:.3,9:.35}};
+const M=[
+ {n:1,ph:'采收结束',sea:'旱季',leaf:'#4E7A3E',stage:'bud',fr:0,job:['采完剩余15%的产量','采收后立即剪除枯枝、病虫枝和徒长枝','清理枝条，把果皮收集到堆肥棚','逐块采集土样','控水促进花芽分化'],org:'果皮＋厩肥＋木霉菌堆肥',w:0,lab:{cat:8,don:4,u:2},note:'在病树之间对剪刀和锯子消毒。露水重时避免修剪。'},
+ {n:2,ph:'花芽分化',sea:'旱季',leaf:'#4E7A3E',stage:'bud',fr:0,job:['花芽充分冒出时进行第一次灌溉','灌溉前后立即进行第一次施肥','抹除徒长枝','检查芽簇基部是否有粉蚧'],org:'如有，随灌溉水施用微生物液',w:468,lab:{tuoi:3,bon:2,choi:3},note:'整块均匀灌溉，让花一次开齐，下一季果实成熟更集中。'},
+ {n:3,ph:'开花',sea:'旱季',leaf:'#4E7A3E',stage:'flower',fr:0,job:['第二、第三次灌溉','保护蜜蜂和授粉昆虫','开花期间不喷药','抹除徒长枝'],org:'盛花期不追肥',w:935,lab:{tuoi:6,choi:3},note:'Robusta是异花授粉，需要风和昆虫。一次喷药时机不当就可能降低坐果率。'},
+ {n:4,ph:'幼果坐果',sea:'旱季',leaf:'#537F40',stage:'pin',fr:.25,job:['第四次灌溉','用剁碎的枝叶和干草覆盖树盘','监测粉蚧和蚧壳虫','清理沟渠，为雨季做准备'],org:'覆盖层厚5–10厘米，距树干10–15厘米',w:468,lab:{tuoi:3,tu:5},note:'遮荫和覆盖充足的庄园保湿更久，可以延长灌溉周期。'},
+ {n:5,ph:'雨季初',sea:'雨季',leaf:'#3F7A3C',stage:'pin',fr:.35,job:['沿树冠滴水线撒施有机肥，轻轻覆土','第二次施肥，磷肥全部施入','土壤偏酸时施石灰','行间播种覆盖用豆科作物','补种遮荫树'],org:'堆肥（compost）10吨/公顷（每株约9公斤），加木霉菌',w:0,lab:{huu:10,bon:2,gieo:2},note:'等土壤足够湿润再施肥。肥料不要紧贴树干。'},
+ {n:6,ph:'果实快速膨大',sea:'雨季',leaf:'#3B7A3A',stage:'green',fr:.55,job:['把草割低，保留地表覆盖，不用除草剂','抹除徒长枝','检查锈病和粉红病','沿等高线横向开沟防冲刷'],org:'割下的草留作覆盖物',w:0,lab:{co:4,choi:2},note:'让土壤始终有覆盖，减少肥料和表土流失。'},
+ {n:7,ph:'果实快速膨大',sea:'雨季',leaf:'#3B7A3A',stage:'green',fr:.75,job:['第三次施肥','把豆科覆盖作物压入沟中作绿肥','监测蛀枝小蠹，剪下并烧毁受害枝'],org:'庄园内压青',w:0,lab:{bon:2,ep:5},note:'只在土壤湿润时施肥，避开大雨天。'},
+ {n:8,ph:'籽粒充实',sea:'雨季',leaf:'#3B7A3A',stage:'green',fr:.9,job:['抹除徒长枝','剪除感染粉红病的枝条','潮湿处疏通树冠','排除积水'],org:'保留覆盖层，不翻动树盘',w:0,lab:{choi:3,co:2},note:'雨季湿度高，茂密的树冠里容易滋生真菌。'},
+ {n:9,ph:'籽粒充实',sea:'雨季',leaf:'#3F7A3C',stage:'green',fr:1,job:['第四次施肥，全年钾肥最多','清除树盘周围杂草','修整沟渠和道路'],org:'最后一次割覆盖植物',w:0,lab:{bon:2,co:2},note:'此后不再施氮肥，让果实成熟整齐。'},
+ {n:10,ph:'采收准备',sea:'雨季末',leaf:'#4A7A3C',stage:'turn',fr:1,job:['数样本果实预测产量','清理树冠下的地面','准备防水布、袋子、晒场和烘干房','约定采摘队，培训挑选熟果'],org:'堆肥棚做好接收果皮的准备',w:0,lab:{don:3,ch:2},note:'采收高峰期通常缺工，应尽早定好人手。'},
+ {n:11,ph:'第一批采摘',sea:'采收季',leaf:'#517A3E',stage:'ripe',fr:1,job:['先选摘成熟的果串，占产量25%','若果实掉落，在树下铺防水布','按区称重并记录批次编号','果实当天运回加工厂'],org:'鲜果皮立即送到堆肥棚',w:0,lab:{gom:3},pick:.25,note:'品质从这里开始：青果不超过5%。'},
+ {n:12,ph:'采收高峰',sea:'采收季',leaf:'#567A42',stage:'ripe',fr:.75,job:['高峰期采摘，占产量60%','每天称重、记录批次、检查成熟比例','保持果实清洁，不要在袋中过夜'],org:'果皮堆垛堆肥，定期翻堆',w:0,lab:{gom:3},pick:.6,note:'这是全年最需要人手的月份。'}
+];
+M[0].pick=.15;
+const STN=[
+ {n:'15年树龄的Robusta',sub:'结果的机制',t:()=>'果实结在前一年长出的枝条上。所以要剪枝、抹芽，让树把养分和光照留给来年的枝条。15年树龄的庄园仍处在结果良好的年龄。过老、枯枝多的树可以分区嫁接更新，而不是一次全部改造。'},
+ {n:'堆肥棚',sub:'把果皮变成肥料',t:()=>{const v=H();return `${fm1(st.A)}公顷的鲜果皮约${fm(v.husk)}吨，可堆制约${fm(v.compost)}吨堆肥。把果皮与厩肥混合，保持湿润，加入木霉菌，定期翻堆直到腐熟。这部分约满足${Math.round(v.selfPct)}%的堆肥需求，其余需购买或另行堆制。`}},
+ {n:'水井和灌溉泵',sub:'适时灌溉，不过量',t:()=>`旱季灌溉4次，${fm1(st.A)}公顷共${fm(1870*st.A)}立方米，每次每株约${fm(1870/st.D/4*1000)}升。综合作物管理（ICM）模式比对照节水约10–25%。在认定足够全庄园使用之前，需先核查水井和水塘的储水量。`},
+ {n:'遮荫树',sub:'降温保湿',t:()=>'遮荫树和间作作物能缓和高温、保持湿润，还能带来额外收入。落叶把有机质还给土壤。遮荫要适度，过密会减少开花，并在雨季增加真菌病害。'},
+ {n:'地表覆盖与绿肥',sub:'保土养土',t:()=>'行间的覆盖豆科作物和割低的草在大雨时覆盖土壤，减少冲刷。豆科作物压青后可补充氮。用割草机代替除草剂，保护细根和土壤微生物。'},
+ {n:'采摘队',sub:'从熟果到货批',t:()=>{const v=H();return `整季约需${fm(v.pickDays)}个采摘工日，相当于${v.days}天里每天${fm(v.people)}人。分区采摘，称重并记录批次编号，以便溯源。`}}
+];
+const FIX=[
+ ['花期零散，分多批开','灌溉不均，反季节降雨','逐块统一灌溉，第一次灌溉前充分控水'],
+ ['4–6月大量落果','缺水、缺养分','检查土壤湿度，覆盖树盘，核查第二次施肥量'],
+ ['叶片发黄、枝条干枯','大年后树势衰竭','补充有机质，检查根系和氮肥用量'],
+ ['果串上有粉蚧','干旱，蚂蚁搬运粉蚧','控制蚂蚁，优先使用生物制剂，剪除严重感染部分'],
+ ['锈病、粉红病','树冠茂密，湿度高','修剪通风，剪除病枝'],
+ ['减肥后产量下降','减得太快或土壤贫瘠','根据土样重新增加氮和钾，再用多年逐步减量']
+];
+const fm=n=>Math.round(n).toLocaleString('zh-CN');
+const vn=(n,d=1)=>n.toFixed(d);
+const fm1=n=>n%1?vn(n):String(n);
+const PGL=document.documentElement.lang||'vi';
+const MON=n=>PGL==='vi'?'T'+n:/^en/.test(PGL)?['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][n-1]:n+'月';
+const tr=n=>PGL!=='vi'?new Intl.NumberFormat(PGL,{notation:'compact',maximumFractionDigits:2}).format(n)+' VND':n>=1e9?vn(n/1e9,2)+' 十亿':n>=1e6?fm(n/1e6)+' tr':fm(n/1000)+' k';
+const seaName=x=>x==='采收季'?'采收季':x==='雨季'?'雨季':x==='雨季末'?'雨季末':x==='旱季'?'旱季':x;
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const $=id=>document.getElementById(id);
+const DEF={A:20,D:1100,Y:3.4,R:5.4,C:30,P:150};
+const PR={urea:15000,lan:4500,kali:12000,comp:1200000,cong:350000,vs:2000000,nuoc:1500,gia:89000};
+const st={...DEF,m:3,sel:1,sound:false};
+function need(){const Y=st.Y,b=Y<3?[192,88,261]:Y<=4?[248,116,317]:[248*Y/4,116*Y/4,317*Y/4],f=1-st.C/100;return {b,n:b[0]*f,p:b[1]*f,k:b[2]*f}}
+function fer(m){const a=need(),n=(SP.n[m]||0)*a.n,p=(SP.p[m]||0)*a.p,k=(SP.k[m]||0)*a.k;return {n,p,k,ur:n/.46,lan:p/.16,ka:k/.6}}
+function H(){
+  const fresh=st.Y*st.R,tree=fresh*1000/st.D,tk=+$('Tk').value||650,bag=+$('Bg').value||50,days=+$('Dd').value||50;
+  const pickDays=fresh*1000/st.P*st.A,husk=fresh*.4*st.A,compost=husk*.4,needC=10*st.A;
+  return {fresh,tree,tk,bag,days,fruits:tree*tk,fruitsHa:fresh*1000*tk,pickHa:fresh*1000/st.P,pickDays,people:pickDays/days,husk,compost,selfPct:clamp(compost/needC*100,0,100),bags:fresh*1000/bag}
+}
+function labM(i){const m=M[i],h=H();let b=Object.values(m.lab).reduce((a,c)=>a+c,0);return b+(m.pick?m.pick*h.pickHa:0)}
+function costs(){
+  const a=need(),h=H(),T=[456,207,527];
+  const fertC=(n,p,k)=>n/.46*PR.urea+p/.16*PR.lan+k/.6*PR.kali;
+  const med=fertC(a.n,a.p,a.k),trad=fertC(...T),comp=10*PR.comp+PR.vs,water=1870*PR.nuoc;
+  const lab=M.reduce((s,_,i)=>s+labM(i),0)*PR.cong;
+  const tot=med+comp+water+lab,rev=st.Y*1000*PR.gia;
+  return {med,trad,comp,water,lab,tot,rev,totTrad:trad+water+lab}
+}
+
+/* ====== HÌNH HỌC ====== */
+const U=7,OX=442,OY=128;
+const P=(x,y,z=0)=>[OX+(x-y)*.866*U,OY+(x+y)*.5*U-z*U];
+const pts=a=>a.map(q=>q.map(n=>n.toFixed(1)).join(',')).join(' ');
+const poly=(a,c='',s='')=>`<polygon points="${pts(a)}" class="${c}" style="${s}"/>`;
+const line=(a,w,col)=>`<polyline points="${pts(a)}" fill="none" style="${w?`stroke-width:${w};`:''}${col?`stroke:var(--${col})`:''}"/>`;
+function box(x,y,z,w,d,h,c=['f1','f2','f3']){return poly([P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[1])+poly([P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)],c[2])+poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[0])}
+const RX=r=>r*U*1.2247,RY=r=>r*U*.7071;
+function cyl(cx,cy,z,r,h,c='f2',top='f1'){const [a,b]=P(cx,cy,z),[,t]=P(cx,cy,z+h),rx=RX(r),ry=RY(r);return `<path class="${c}" d="M${a-rx} ${t}V${b}A${rx} ${ry} 0 0 0 ${a+rx} ${b}V${t}Z"/><ellipse class="${top}" cx="${a}" cy="${t}" rx="${rx}" ry="${ry}"/>`}
+const stG=(i,inner)=>`<g class="st m" data-i="${i}" tabindex="0" role="button" aria-label="${STN[i-1].n}">${inner}</g>`;
+const TREES=[];
+function tree(x,y,idx){
+  const q=P(x,y,0),t=P(x,y,2.8);let s=`<g class="tree"><line x1="${q[0]}" y1="${q[1]}" x2="${t[0]}" y2="${t[1]}" style="stroke-width:3.4;stroke:#5C3D22"/>`;
+  [[0,3.2,3.3],[0,5.4,2.9],[0,7.2,2.1]].forEach(([d,z,r])=>{const c=P(x,y,z);s+=`<ellipse class="cn" cx="${c[0]}" cy="${c[1]}" rx="${RX(r)}" ry="${RY(r)+3}" style="stroke-width:1"/>`});
+  let dots='';for(let i=0;i<26;i++){const a=i*2.4+idx,r=.6+(i*.53%2.5),zz=3+(i*.71%4.6),c=P(x+r*Math.cos(a),y+r*Math.sin(a)+1.4,zz);dots+=`<circle class="fr" data-t="${i/26}" cx="${c[0].toFixed(1)}" cy="${c[1].toFixed(1)}" r="1.9" style="stroke:none"/>`}
+  return s+dots+'</g>';
+}
+function buildScene(){
+  let h='';
+  /* đồng hồ năm */
+  h+='<g id="wheel"></g>';
+  /* đất */
+  h+='<g class="m">'+poly([P(0,56,0),P(80,56,0),P(80,56,-7),P(0,56,-7)],'','fill:#7A4A2B')+poly([P(80,0,0),P(80,56,0),P(80,56,-7),P(80,0,-7)],'','fill:#633A21')+poly([P(0,0,0),P(80,0,0),P(80,56,0),P(0,56,0)],'',"fill:var(--ground)")+'</g>';
+  /* mặt cắt */
+  h+=`<g id="soil"></g>`;
+  /* lối, hàng */
+  h+=`<g id="cover"></g>`;
+  /* bảng tên */
+  const s1=P(24,-1,15),p1=P(26,-1,0),p2=P(63,-1,0);
+  h+=`<line x1="${p1[0]}" y1="${p1[1]}" x2="${p1[0]}" y2="${p1[1]-105}" style="stroke:#5C3D22;stroke-width:6"/><line x1="${p2[0]}" y1="${p2[1]}" x2="${p2[0]}" y2="${p2[1]-105}" style="stroke:#5C3D22;stroke-width:6"/><g transform="matrix(.866 .5 0 1 ${s1[0]} ${s1[1]})"><rect width="340" height="44" rx="4" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:1.6"/><text class="sgn" x="170" y="28" text-anchor="middle" style="font-size:18px">MeDili Coffee Farm · Cà Sẻ Di Linh</text></g>`;
+  /* 2 nhà ủ */
+  const tpl=box(6,3,0,22,10,.6,['dk1','dk2','dk3']);
+  let compost='';
+  h+=stG(2,tpl+box(7,3.5,0,.8,.8,8,['wo','wo2','wo2'])+box(26,3.5,0,.8,.8,8,['wo','wo2','wo2'])+`<g id="pile"></g>`+box(7,11.8,0,.8,.8,6.5,['wo','wo2','wo2'])+box(26,11.8,0,.8,.8,6.5,['wo','wo2','wo2'])+poly([P(5,2,8.4),P(29,2,8.4),P(29,14,6.8),P(5,14,6.8)],'',"fill:#A9734A;fill-opacity:.82"));
+  /* 3 giếng */
+  h+=stG(3,cyl(40,7,0,3,1.8,'f3','wa')+box(45,4,0,5,5,3.4,['ac','f2','f3'])+cyl(54,7,0,3,7,'f2','f1')+line([P(50,6.5,1.5),P(52,6.5,1.5)],4,'copper2')+line([P(44,7,1),P(45,7,1)],4,'copper2'));
+  /* 4 che bóng */
+  const shade=(x,y)=>{const a=P(x,y,0),b=P(x,y,10);return `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" style="stroke-width:5;stroke:#5C3D22"/>`+[[12,6.5],[15,5.5],[18,4]].map(([z,r])=>{const c=P(x,y,z);return `<ellipse class="sh" cx="${c[0]}" cy="${c[1]}" rx="${RX(r)}" ry="${RY(r)+6}" style="stroke-width:1"/>`}).join('')};
+  h+=stG(4,shade(72,12));
+  /* cây */
+  const rows=[];let k=0;for(let y=20;y<=52;y+=8)for(let x=8;x<=72;x+=8){rows.push([x,y,k++])}
+  rows.sort((a,b)=>(a[0]+a[1])-(b[0]+b[1]));
+  const sel=[32,35];let tg='';rows.forEach(([x,y,i])=>{tg+=(x===32&&y===35)?stG(1,tree(x,y,i)):`<g class="m">${tree(x,y,i)}</g>`});
+  h+=tg;
+  /* người, ống */
+  h+='<g id="hoses"></g><g id="crew"></g>';
+  /* 5 + 6 vùng bấm */
+  const q5=P(58,31,0),q6=P(76,48,2);
+  h+=stG(5,`<ellipse cx="${q5[0]}" cy="${q5[1]}" rx="30" ry="14" fill="transparent" style="stroke:none"/>`);
+  h+=stG(6,box(70,52,0,8,3,1.4,['bu','wo2','wo2'])+box(72,52.4,1.4,4,2,1.6,['bu','wo2','wo2']));
+  /* mưa, nắng */
+  h+='<g id="sky"></g><g id="rain"></g><g id="stage"></g>';
+  h+=`<g><rect x="790" y="610" width="238" height="74" rx="8" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="804" y="656" class="sgn3">MeDili Coffee Farm · Cà Sẻ Di Linh</text><text x="804" y="674" class="tiny mutedt" id="tb"></text></g>`;
+  h+='<g id="tagB"></g><g id="chips"></g>';
+  $('scene').innerHTML=h;
+  buildRain();buildSoil();
+  document.querySelectorAll('.st').forEach(g=>{g.addEventListener('click',()=>selS(+g.dataset.i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selS(+g.dataset.i)}})});
+}
+const rainL=[];
+function buildRain(){let s='';for(let i=0;i<70;i++){const x=120+(i*53%820),y=70+(i*97%440);s+=`<line x1="${x}" y1="${y}" x2="${x-5}" y2="${y+18}" style="stroke:#6AA3AE;stroke-width:1.5"/>`}$('rain').innerHTML=s}
+function buildSoil(){
+  const b=(z1,z2,col)=>poly([P(0,56,z1),P(80,56,z1),P(80,56,z2),P(0,56,z2)],'',`fill:${col};stroke:none`);
+  let s=b(0,-1.2,'#3E2A18')+b(-1.2,-3.4,'#6B4226');
+  for(let i=0;i<9;i++){const x=8+i*8,a=P(x,56,-.4);s+=`<path d="M${a[0]} ${a[1]}q-6 14 -14 22M${a[0]} ${a[1]}q4 18 2 28M${a[0]} ${a[1]}q8 12 14 18" fill="none" style="stroke:#E9D7A3;stroke-width:1"/>`}
+  const t=P(4,56,-2.2);
+  s+=`<g transform="matrix(.866 .5 0 1 ${t[0]} ${t[1]})"><text id="soilL" x="6" y="-4" style="font:600 11px var(--body);fill:#FFF3D6!important"></text></g><polygon id="wet" points="" style="fill:#6AA3AE;fill-opacity:.35;stroke:none"/>`;
+  $('soil').innerHTML=s;
+}
+const STG={bud:['花芽','#7BA05B'],flower:['开花','#FFFFFF'],pin:['针头期幼果','#8FB26A'],green:['大青果','#6E9E4A'],turn:['转色果','#C9A23B'],ripe:['红熟果','#B02A30']};
+function drawMonth(i){
+  const m=M[i],s=STG[m.stage];
+  document.querySelectorAll('.cn').forEach(e=>e.style.fill=m.leaf);
+  document.querySelectorAll('.sh').forEach(e=>e.style.fill='#3F6B3A');
+  const dens=m.stage==='flower'?.9:m.stage==='bud'?.25:m.fr;
+  document.querySelectorAll('.fr').forEach(e=>{const t=+e.dataset.t;e.style.visibility=t<dens?'visible':'hidden';e.style.fill=m.stage==='ripe'&&t>.7?'#C9A23B':s[1]});
+  /* phủ */
+  let cv='';if(m.sea==='雨季'||m.n===10){for(let y=23;y<=55;y+=8)for(let x=4;x<=76;x+=4){const q=P(x+(y%3),y,0);cv+=`<ellipse cx="${q[0]}" cy="${q[1]}" rx="7" ry="3" style="fill:#7CA655;stroke:none"/>`}}
+  if(m.n===4||m.n===5){for(let y=19;y<=51;y+=8)for(let x=8;x<=72;x+=8){const q=P(x,y,0);cv+=`<ellipse cx="${q[0]}" cy="${q[1]}" rx="20" ry="11" style="fill:#7A5A36;stroke:none;opacity:.75"/>`}}
+  $('cover').innerHTML=cv;
+  /* đống ủ */
+  const hN=[3,3.4,3.6,3.6,1.2,1.4,1.6,1.8,2,2.2,2.8,3.4][i];const a=P(15,8,0),b=P(15,8,hN);
+  $('pile').innerHTML=`<path d="M${a[0]-74} ${a[1]+6}Q${b[0]} ${b[1]-34} ${a[0]+74} ${a[1]+6}Q${a[0]} ${a[1]+36} ${a[0]-74} ${a[1]+6}Z" style="fill:#4A2E1B;stroke:var(--ol)"/>`;
+  /* tưới */
+  let hs='';if(m.w>0){for(let y=19;y<=51;y+=16)hs+=`<polyline points="${pts([P(42,10,0),P(42,y-3,0),P(74,y-3,0)])}" fill="none" style="stroke:#1F5C6B;stroke-width:2.5"/>`;[[24,19],[40,27],[56,35],[24,43]].forEach(([x,y])=>{const q=P(x,y,0);hs+=`<ellipse cx="${q[0]}" cy="${q[1]}" rx="26" ry="14" fill="#6AA3AE" fill-opacity=".5" stroke="none"/>`})}
+  $('hoses').innerHTML=hs;
+  /* người */
+  const crew=m.pick?[[16,23],[32,31],[48,39],[64,23],[24,47],[56,47],[40,23],[64,39]]:m.w?[[42,14]]:m.lab.cat?[[24,27],[56,35],[40,43]]:m.lab.huu?[[16,31],[48,31],[32,47]]:(m.lab.co||m.lab.ep)?[[32,23],[56,47]]:[[40,31]];
+  const n=m.pick?Math.ceil(m.pick*8/.6):crew.length;let ct='';crew.slice(0,Math.min(n,8)).forEach(([x,y],k)=>{const q=P(x+4,y+4,0);ct+=`<g><rect x="${q[0]-4}" y="${q[1]-20}" width="8" height="16" rx="3" style="fill:${k%2?'#2C6A48':'#86102B'};stroke:#2A1B16;stroke-width:.8"/><circle cx="${q[0]}" cy="${q[1]-25}" r="4.5" style="fill:#E7C6A0;stroke:#2A1B16;stroke-width:.8"/><path d="M${q[0]-7} ${q[1]-27}h14l-7 -5z" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:.6"/><line x1="${q[0]}" y1="${q[1]-4}" x2="${q[0]}" y2="${q[1]}" style="stroke:#2A1B16;stroke-width:3"/></g>`});
+  $('crew').innerHTML=ct;
+  $('rain').style.visibility=m.sea==='雨季'?'visible':'hidden';
+  /* đất */
+  const wetZ=m.sea==='雨季'?-.2:m.w?-1.2:m.n===10?-1.6:-3.2;
+  $('wet').setAttribute('points',pts([P(0,56,wetZ),P(80,56,wetZ),P(80,56,-7),P(0,56,-7)]));
+  $('soilL').textContent=m.sea==='雨季'?'土壤湿度充足 · 有机层保水':m.w?`按株灌溉 · 水分渗到根部`:'土壤逐渐变干 · 覆盖层保湿';
+  drawStage(m,s);drawWheel(i);
+}
+function drawStage(m,s){
+  const x=40,y=480,w=318,h0=196,c=s[1];
+  let g=`<rect x="${x}" y="${y}" width="${w}" height="${h0}" rx="10" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="${x+14}" y="${y+22}" class="lab12 mutedt">枝条特写</text><text x="${x+14}" y="${y+42}" style="font:800 19px var(--display)">${m.n}月：${s[0]}</text>`;
+  g+=`<path d="M${x+22} ${y+150}Q${x+150} ${y+90} ${x+296} ${y+100}" fill="none" style="stroke:#5C3D22;stroke-width:6"/>`;
+  [[80,146,1],[130,62,-1],[190,142,1],[240,60,-1]].forEach(([ax,ay,d],k)=>{const px=x+ax,py=y+(ay>100?124:112);g+=`<ellipse cx="${px+18}" cy="${py+d*-28}" rx="27" ry="10" transform="rotate(${d*-28} ${px+18} ${py+d*-28})" style="fill:#4E7A3E;stroke:#2A1B16;stroke-width:1"/>`});
+  const n=m.stage==='bud'?5:m.stage==='pin'?9:m.stage==='flower'?8:12;
+  for(let k=0;k<3;k++){const cx=x+96+k*72,cy=y+132-k*15;for(let i=0;i<n;i++){const a=i/n*Math.PI*2,r=m.stage==='flower'?10:9+i%2*5,dx=Math.cos(a)*r,dy=Math.sin(a)*r*.6;if(m.stage==='flower'){for(let p=0;p<5;p++)g+=`<ellipse cx="${cx+dx+Math.cos(p*1.26)*4}" cy="${cy+dy+Math.sin(p*1.26)*4}" rx="3" ry="2" style="fill:#FFFFFF;stroke:#B9B5AC;stroke-width:.5"/>`}else{const rr=m.stage==='bud'?2:m.stage==='pin'?3:5.2;g+=`<circle cx="${cx+dx}" cy="${cy+dy}" r="${rr}" style="fill:${m.stage==='ripe'&&i%5===0?'#C9A23B':c};stroke:#2A1B16;stroke-width:.8"/>`}}}
+  $('stage').innerHTML=g;
+}
+function drawWheel(i){
+  const c={x:122,y:150,r:82},w=$('wheel');let s=`<circle cx="${c.x}" cy="${c.y}" r="${c.r+5}" class="pa" style="stroke:var(--ink);stroke-width:2.2"/>`;
+  const seg=(a0,a1,r0,r1,f,k)=>{const P2=(a,r)=>[c.x+r*Math.cos(a),c.y+r*Math.sin(a)],p=[P2(a0,r1),P2(a1,r1),P2(a1,r0),P2(a0,r0)];return `<path data-m="${k}" d="M${p[0]}A${r1} ${r1} 0 0 1 ${p[1]}L${p[2]}A${r0} ${r0} 0 0 0 ${p[3]}Z" style="fill:${f};stroke:var(--panel);stroke-width:2;cursor:pointer"/>`};
+  M.forEach((m,k)=>{const a0=-Math.PI/2+k/12*Math.PI*2,a1=a0+Math.PI*2/12,fill=m.sea==='雨季'?'#7FB2BC':m.sea==='采收季'?'#B02A30':m.sea==='旱季'?'#D6B26A':'#7CA655';s+=seg(a0,a1,50,c.r,fill,k);const am=(a0+a1)/2;s+=`<text x="${c.x+66*Math.cos(am)}" y="${c.y+66*Math.sin(am)+4}" text-anchor="middle" style="font:700 12px var(--mono);fill:#2A1B16!important;pointer-events:none">${m.n}</text>`});
+  const a=-Math.PI/2+(i+.5)/12*Math.PI*2;
+  s+=`<line x1="${c.x}" y1="${c.y}" x2="${c.x+50*Math.cos(a)}" y2="${c.y+50*Math.sin(a)}" style="stroke:var(--accent);stroke-width:3"/><circle cx="${c.x}" cy="${c.y}" r="26" class="pa" style="stroke:var(--ink)"/><text x="${c.x}" y="${c.y+6}" text-anchor="middle" style="font:800 19px var(--display)">${MON(M[i].n)}</text>`;
+  w.innerHTML=s;w.querySelectorAll('[data-m]').forEach(e=>e.addEventListener('click',()=>setM(+e.dataset.m)));
+}
+const CHIP=[null,{x:360,y:262,a:[32,35,9]},{x:178,y:262,a:[16,8,8]},{x:600,y:70,a:[47,7,4]},{x:826,y:176,a:[72,12,17]},{x:826,y:320,a:[58,31,1]},{x:840,y:420,a:[74,52,3]}];
+function chipLabel(i){const m=M[st.m],v=H(),f=fer(m.n);
+  return {1:STG[m.stage][0],2:m.lab.huu?`撒施堆肥${fm(10*st.A)}吨`:`堆制堆肥${fm(v.compost)}吨`,3:m.w?`灌溉${fm(m.w*st.A)}立方米`:'水井、水泵',4:'遮荫树',5:m.sea==='雨季'?'绿色地表覆盖':'保留覆盖层',6:m.pick?`采摘果实${fm(v.fresh*m.pick*st.A)}吨`:'采摘队'}[i]}
+function buildChips(){let h='';for(let i=1;i<=6;i++){const c=CHIP[i],q=P(...c.a),l=chipLabel(i),w=38+__tl(l)*7.3;h+=`<polyline class="lead-l${i===st.sel?' on':''}" points="${q[0].toFixed(1)},${q[1].toFixed(1)} ${c.x+20},${c.y+13}"/><g class="chip${i===st.sel?' on':''}" data-c="${i}"><rect x="${c.x+6}" y="${c.y}" rx="8" width="${w}" height="26"/><circle cx="${c.x+6}" cy="${c.y+13}" r="13"/><text class="num" x="${c.x+6}" y="${c.y+18.5}" text-anchor="middle">${i}</text><text class="lab" x="${c.x+26}" y="${c.y+18}">${l}</text></g>`}
+  $('chips').innerHTML=h;$('chips').querySelectorAll('.chip').forEach(g=>g.addEventListener('click',()=>selS(+g.dataset.c)))}
+function selS(i){st.sel=i;renderDetail();buildChips();document.querySelectorAll('.st').forEach(g=>g.classList.toggle('on',+g.dataset.i===i))}
+function setM(i){st.m=i;renderMonth()}
+
+/* ====== HIỂN THỊ ====== */
+function renderDetail(){
+  const m=M[st.m],f=fer(m.n),s=STN[st.sel-1],lab=labM(st.m);
+  const fr=[];if(f.ur)fr.push(`尿素 ${fm(f.ur)}`);if(f.lan)fr.push(`磷肥 ${fm(f.lan)}`);if(f.ka)fr.push(`钾肥 ${fm(f.ka)}`);
+  const kv=[['季节',m.sea],['有机、微生物',m.org],['无机肥料',fr.length?fr.join('、')+' kg/ha':'不施'],['灌溉用水',m.w?`${fm(m.w)} m³/ha`:'不灌溉'],['用工',`${fm(lab)}工日/公顷，全庄园${fm(lab*st.A)}工日`]];
+  $('detail').innerHTML=`<div class="dh"><div class="dn">${m.n}</div><h2>${m.ph}<small>${STG[m.stage][0]}</small></h2></div><div class="dgrid"><div><span class="lbl">处理方法</span><ol class="steps">${m.job.map(j=>`<li>${j}</li>`).join('')}</ol><span class="lbl">注意</span><p>${m.note}</p></div><div><span class="lbl">月度定额</span><dl class="kv">${kv.map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join('')}</dl><p style="margin-top:8px"></p><span class="lbl">${st.sel}. ${s.n}</span><p>${s.t()}</p></div></div>`;
+}
+function renderMonth(){
+  drawMonth(st.m);buildChips();renderDetail();renderSheet();
+  $('figsub').textContent=`${fm1(st.A)}公顷庄园，${M[st.m].n}月，${seaName(M[st.m].sea)}`;
+  document.querySelectorAll('#strip button').forEach((b,i)=>{b.classList.toggle('on',i===st.m);b.setAttribute('aria-pressed',i===st.m)});
+  document.querySelectorAll('#yr tr').forEach((r,i)=>r.classList.toggle('on',i===st.m));
+  chartW();
+}
+function chartW(){
+  const W=340,H_=120,l=26,r=6,t=10,b=18,vals=M.map((_,i)=>labM(i)),mx=Math.ceil(Math.max(...vals)/20)*20,bw=(W-l-r)/12,y=v=>t+(mx-v)/mx*(H_-t-b);
+  let g='';[0,mx/2,mx].forEach(v=>g+=`<line x1="${l}" x2="${W-r}" y1="${y(v)}" y2="${y(v)}" style="stroke:var(--rule);stroke-width:.7"/><text x="${l-4}" y="${y(v)+3.5}" text-anchor="end">${fm(v)}</text>`);
+  vals.forEach((v,i)=>{const x=l+i*bw+2,col=i===st.m?'var(--accent)':'var(--copper)';g+=`<rect data-i="${i}" x="${x}" y="${y(v)}" width="${bw-4}" height="${Math.max(1,y(0)-y(v))}" rx="2" style="fill:${col};cursor:pointer"/><text x="${x+(bw-4)/2}" y="${H_-5}" text-anchor="middle">${i+1}</text>`});
+  $('cW').innerHTML=g;$('cW').querySelectorAll('rect').forEach(e=>e.addEventListener('click',()=>setM(+e.dataset.i)));
+  $('tblW').innerHTML='<thead><tr><th>月份</th><th>工日/公顷</th><th>全庄园</th></tr></thead><tbody>'+vals.map((v,i)=>`<tr><td>${i+1}</td><td>${fm(v)}</td><td>${fm(v*st.A)}</td></tr>`).join('')+'</tbody>';
+}
+function renderAll(){
+  const h=H(),a=need(),c=costs(),tot=M.reduce((s,_,i)=>s+labM(i),0);
+  $('A').value=st.A;$('Dn').value=st.D;$('Y').value=st.Y;$('R').value=st.R;$('C').value=st.C;$('P').value=st.P;
+  $('oA').textContent=fm1(st.A)+' ha';$('oDn').textContent=fm(st.D)+' 株/公顷';$('oY').textContent=vn(st.Y)+' t/ha';$('oR').textContent=vn(st.R)+' : 1';$('oC').textContent=st.C+'%';$('oP').textContent=st.P+' 公斤/天';
+  $('stats').innerHTML=[['鲜果 / 公顷',vn(h.fresh)+' 吨'],['全庄园',fm(h.fresh*st.A)+' 吨'],['全庄园生豆',fm(st.Y*st.A)+' 吨'],['全年工日 / 公顷',fm(tot)+' 工日']].map(([x,y])=>`<div class="stat"><span>${x}</span><b>${y}</b></div>`).join('');
+  let k='good',t,m;
+  if(st.C>=40){k='warn';t='减肥幅度较大';m=`减${st.C}%只适用于已测土的良好地块。`}
+  else if(st.Y>=4.5){k='warn';t='高产目标';m='结果多的树来年容易衰竭。需实际称重核对。'}
+  else {t='计划处于试验范围内';m=`每株约需结果${vn(h.tree)}公斤，每天需要${fm(h.people)}名采摘工。`}
+  $('verdict').className=k;$('verdict').innerHTML=`<b>${k==='good'?'✓':'!'} ${t}</b>${m}`;
+  /* thu hoạch */
+  $('hHarvest').textContent=`1公顷能产多少果，${fm1(st.A)}公顷需要多少人`;
+  $('thAll').textContent=`鲜果 / ${fm1(st.A)}公顷`;
+  $('hNeed').innerHTML=[['株数 / 公顷',fm(st.D)+' 株'],['鲜果 / 株',vn(h.tree)+' kg'],['果数 / 株',fm(Math.round(h.fruits/100)*100)+' 颗'],['果数 / 公顷',/^(ja|zh)/.test(PGL)?new Intl.NumberFormat(PGL,{notation:'compact',maximumFractionDigits:1}).format(h.fruitsHa):vn(h.fruitsHa/1e6)+' 百万'],['鲜果 / 公顷',fm(h.fresh*1000)+' kg'],['袋数 / 公顷',fm(h.bags)+' bao'],['生豆 / 公顷',fm(st.Y*1000)+' kg'],['采摘工日 / 公顷',fm(h.pickHa)+' 工日']].map(([x,y])=>`<div class="stat"><span>${x}</span><b>${y}</b></div>`).join('');
+  $('hTbl').innerHTML=[['第1批','11月',.25,'先选摘成熟果串，熟果占90%以上'],['第2批','12月',.6,'采收高峰，分区采摘，记录批次编号，青果最多5%'],['第3批','1月初',.15,'把树上采干净，避免干果留在枝上滋生病虫害']].map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]*100}%</td><td>${fm(h.fresh*r[2]*1000)} kg</td><td>${fm(h.fresh*r[2]*st.A)}吨</td><td>${fm(h.pickHa*r[2])}</td><td>${r[3]}</td></tr>`).join('');
+  $('hNote').textContent=`全部${fm1(st.A)}公顷：果实${fm(h.fresh*st.A)}吨，采摘${fm(h.pickDays)}工日，${h.days}天里每天约${fm(h.people)}人。按发酵页面，每1吨果实约出180公斤生豆，即比例5.6 : 1。这里按${vn(st.R)} : 1计算。`;
+  /* lịch */
+  $('yr').innerHTML=M.map((x,i)=>{const f=fer(x.n),r=[];if(f.ur)r.push(`尿素 ${fm(f.ur)}`);if(f.lan)r.push(`磷肥 ${fm(f.lan)}`);if(f.ka)r.push(`钾肥 ${fm(f.ka)}`);return `<tr class="pick${i===st.m?' on':''}" tabindex="0"><td><b>${MON(x.n)}</b></td><td>${x.ph}</td><td>${x.job.slice(0,2).join('。')}</td><td>${x.org}</td><td>${r.join('、')||'–'}</td><td>${x.w?fm(x.w):'–'}</td><td>${fm(labM(i))}</td></tr>`}).join('');
+  $('yr').querySelectorAll('tr').forEach((r,i)=>{const go=()=>{setM(i);$('scene').scrollIntoView({behavior:still?'auto':'smooth',block:'center'})};r.onclick=go;r.onkeydown=e=>{if(e.key==='Enter')go()}});
+  /* phân */
+  const rows=[['氮 N','408–504',a.b[0],a.n,'尿素',a.n/.46],['磷 P₂O₅','190–224',a.b[1],a.p,'钙镁磷肥',a.p/.16],['钾 K₂O','496–558',a.b[2],a.k,'氯化钾',a.k/.6]];
+  $('ferT').innerHTML=rows.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${fm(r[2])}</td><td><b>${fm(r[3])}</b></td><td>${fm(r[5])} kg ${r[4]}</td></tr>`).join('');
+  $('orgL').innerHTML=[`<b>堆肥（compost）：</b>每年10吨/公顷，每株约${vn(10000/st.D)}公斤。多乐省的调查记录为8–20吨/公顷，通常隔年施用。`,`<b>肥料自给：</b>庄园的果皮可堆制约${fm(h.compost)}吨堆肥，满足${fm(10*st.A)}吨需求的${Math.round(h.selfPct)}%。`,`<b>作物带走量：</b>每公顷${vn(st.Y)}吨生豆约带走${fm(33*st.Y)}公斤N和${fm(30*st.Y)}公斤K₂O。这是需要归还的量，未计损失。`,'<b>微生物：</b>把木霉菌拌入堆肥堆，选择已登记的产品。效果需要在庄园实测。','<b>石灰：</b>只在测得pH偏低时施用，不要凭习惯施。'].map(x=>`<li>${x}</li>`).join('');
+  /* giá */
+  $('prices').innerHTML=[['urea','尿素 VND/公斤'],['lan','磷肥 VND/公斤'],['kali','钾肥 VND/公斤'],['comp','堆肥 VND/吨'],['cong','人工 VND/天'],['nuoc','水 VND/立方米'],['vs','微生物制剂 VND/公顷'],['gia','生豆价格 VND/公斤']].map(([k,l])=>`<label for="pr_${k}">${l}<input id="pr_${k}" data-k="${k}" type="number" min="0" step="100" value="${PR[k]}"></label>`).join('');
+  $('prices').querySelectorAll('input').forEach(e=>e.addEventListener('change',()=>{PR[e.dataset.k]=+e.value||0;renderAll();renderMonth()}));
+  const max=Math.max(c.tot,c.totTrad,c.rev),row=(n,v,cls='')=>`<div class="mrow ${cls}"><span>${n}</span><span class="mbar"><i style="width:${(v/max*100).toFixed(1)}%"></i></span><b>${tr(v)}</b></div>`;
+  $('cost').innerHTML=row('常规施肥',c.trad)+row('无机肥（MeDili方式）',c.med)+row('堆肥、微生物',c.comp)+row('灌溉用水',c.water)+row('人工',c.lab)+row('总成本 / 公顷',c.tot,'prod')+row('生豆收入 / 公顷',c.rev,'prod')+`<p class="src">全庄园${fm1(st.A)}公顷：成本约${tr(c.tot*st.A)}，按示例价格收入约${tr(c.rev*st.A)}。无机肥比常规方式少${tr(c.trad-c.med)}/公顷，但堆肥和撒施人工多${tr(c.comp)}/公顷。</p>`;
+  $('tb').textContent=`${fm1(st.A)}公顷 · 15年树龄 · 公式为试算基准`;
+  renderMonth();
+}
+function renderSheet(){
+  const m=M[st.m],f=fer(m.n),r=[];if(f.ur)r.push(`尿素 ${fm(f.ur*st.A)}公斤`);if(f.lan)r.push(`磷肥 ${fm(f.lan*st.A)}公斤`);if(f.ka)r.push(`钾肥 ${fm(f.ka*st.A)}公斤`);
+  const t=`${m.n}月庄园工作单\nMeDili Coffee Farm · Cà Sẻ Di Linh\n面积：${fm1(st.A)}公顷\n\n${m.ph.toUpperCase()}\n${m.job.map((j,i)=>`${i+1}. ${j}`).join('\n')}\n\n有机：${m.org}${m.lab.huu?`，共${fm(10*st.A)}吨`:''}\n无机肥料：${r.join('、')||'不施'}\n用水：${m.w?fm(m.w*st.A)+' m³':'不灌溉'}\n用工：${fm(labM(st.m)*st.A)}工日\n注意：${m.note}`;
+  $('sheet').textContent=t;st.sheet=t;
+}
+
+/* ====== HOẠT ẢNH ====== */
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let prev=0,tA=0,run=null,ac=null;
+function ding(){if(!st.sound||!ac)return;const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=520;g.gain.setValueAtTime(.04,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+.25);o.connect(g);g.connect(ac.destination);o.start();o.stop(ac.currentTime+.25)}
+function frame(ts){const dt=Math.min(50,ts-prev||16);prev=ts;tA+=dt;if(!document.hidden){$('rain').setAttribute('transform',`translate(${-(tA*.03)%5} ${(tA*.22)%60})`);if(run){run.t+=dt;if(run.t>1800){run.t=0;run.i++;if(run.i>=12){run=null;$('run').textContent='重新运行'}else{setM(run.i);ding()}}}}requestAnimationFrame(frame)}
+
+/* ====== KHỞI ĐỘNG ====== */
+const copyTo=async(t,msg,src,done)=>{try{await navigator.clipboard.writeText(t);$(msg).textContent=done}catch(e){const r=document.createRange();r.selectNodeContents($(src));const s=getSelection();s.removeAllRanges();s.addRange(r);$(msg).textContent='数字已选中，请自行复制。'}};
+$('strip').innerHTML=M.map(m=>`<button type="button">${MON(m.n)}</button>`).join('');
+$('strip').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>setM(i));
+$('fix').innerHTML=FIX.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('');
+[['A','A'],['Dn','D'],['Y','Y'],['R','R'],['C','C'],['P','P']].forEach(([i,k])=>$(i).addEventListener('input',e=>{st[k]=+e.target.value;renderAll()}));
+['Tk','Bg','Dd'].forEach(i=>$(i).addEventListener('input',renderAll));
+$('run').onclick=()=>{if(run){run=null;$('run').textContent='查看全部12个月';return}if(still){return}run={i:0,t:0};setM(0);$('run').textContent='停止'};
+$('reset').onclick=()=>{Object.assign(st,DEF);renderAll()};
+$('copy').onclick=()=>copyTo(st.sheet,'copied','sheet','已复制月度工作单。');
+$('copyZalo').onclick=()=>copyTo('0966770788','zaloMsg','zaloNo','已复制Zalo号码。');
+$('snd').onclick=()=>{st.sound=!st.sound;if(st.sound&&!ac){try{ac=new (window.AudioContext||window.webkitAudioContext)()}catch(e){st.sound=false}}$('snd').textContent='庄园声音：'+(st.sound?'开':'关');$('snd').setAttribute('aria-pressed',st.sound)};
+buildScene();renderAll();selS(1);
+if(!still)requestAnimationFrame(frame);
+</script>
+<footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">总有时间享用<em>一杯好咖啡。</em></p><a class="btn main" href="quan-medili.html">相约MeDili</a></div><div class="mf-grid"><div class="mf-brand"><b>迷恋咖啡，迷恋Di Linh。</b><span>守护传承，珍惜每一份风味。</span><small>Di Linh · 林同省 · 越南</small></div><nav class="mf-col" aria-label="探索"><p class="mf-t">探索</p><a href="cau-chuyen.html">MeDili的故事</a><a href="doi-ngu.html">MeDili团队</a><a href="vung-trong.html">Di Linh种植区</a><a href="anh-vuon.html">MeDili庄园照片</a><a href="xuong-rang.html">烘焙厂与产能</a><a href="rang.html">烘焙室</a><a href="huong-dan-pha.html">冲煮指南</a><a href="quay-pha.html">冲煮吧台</a><a href="tim-gu.html">寻找您的咖啡口味</a><a href="cong-thuc-pha.html">冲煮配方机</a><a href="chiet-xuat.html">萃取机</a><a href="cold-brew.html">冷萃机</a><a href="journal.html">咖啡知识</a></nav><nav class="mf-col" aria-label="MeDili与您"><p class="mf-t">MeDili与您</p><a href="cua-hang.html">MeDili商店</a><a href="mua-hang.html">选购室</a><a href="horeca.html">HORECA解决方案</a><a href="dong-hanh-cung-quan.html">与咖啡馆同行</a><a href="nhan-xanh.html">批发生豆</a><a href="gia-ca-phe.html">今日咖啡价格</a><a href="quan-medili.html">MeDili Café门店</a><a href="lien-he.html">联系方式与地图</a><a href="chinh-sach.html">MeDili政策</a><a href="giao-hang.html">配送与退换货</a><a href="bao-mat.html">隐私政策</a></nav><div class="mf-col"><p class="mf-t">经销 · DSunfood</p><p>DSunfood有限责任公司<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>庄园与烘焙厂<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">前往MeDili的路线 ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">通过Zalo联系MeDili ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>MeDili Coffee Farm · Cà Sẻ Di Linh</i></div></div></footer><nav class="fl-c" aria-label="快速联系MeDili"><a class="fl-b" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener" aria-label="通过Zalo联系MeDili" data-tip="通过Zalo联系MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a><a class="fl-b" href="https://www.facebook.com/share/192oMLdBnq/" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a></nav>
+<script>
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'已复制'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='号码已选中，请自行复制'}
+setTimeout(()=>{b.textContent=o},2400)}))})();
+window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
+const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};
+const badge=()=>{const n=get().reduce((a,x)=>a+(+x.q||0),0);document.querySelectorAll('.mh-cn').forEach(e=>{e.textContent=n>99?'99+':n;e.hidden=!n})};
+const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badge()};
+const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
+badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
+</script>
+</body></html>

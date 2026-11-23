@@ -1,0 +1,173 @@
+# rang.html (2) — trạm, quy trình, bảng lỗi, phiếu rang
+39ec95fb8 ||| Warm up the roaster for 30 minutes, weigh accurately, make the first batch of the day a test batch ||| 焙煎機を30分予熱し、正確に計量し、その日の最初のバッチは試し焼きにする ||| 烘焙机预热30分钟，准确称重，每天第一批作为试烘批
+4d38dfc13 ||| Receiving the lot ||| ロットの受け入れ ||| 收货验批
+041b94292 ||| Take a 350 g sample, measure moisture, count defects, weigh density, roast a sample. ||| 350 gのサンプルを取り、水分を測り、欠点を数え、密度を量り、サンプル焙煎する。 ||| 取350克样品，测含水量，数瑕疵，称密度，烘样。
+501252b1a ||| Moisture 10–12%. Has a lot code. ||| 水分10〜12%。ロット番号がある。 ||| 含水量10–12%。有批次编号。
+605404433 ||| High-moisture lots don't go into the roasting stock. ||| 水分の高いロットは焙煎用の在庫に入れない。 ||| 含水量高的批次不进入烘焙库存。
+388597d4e ||| Aspirator ||| 風選 ||| 风选
+d6def8d58 ||| Blow off dust, husks and light impurities. ||| ほこり、殻、軽い異物を吹き飛ばす。 ||| 吹走灰尘、外壳和轻杂质。
+0d74676b8 ||| Impurities after screening below 0.1–0.5%. ||| 選別後の異物は0.1〜0.5%未満。 ||| 过筛后杂质低于0.1–0.5%。
+a8336932c ||| Clean the cyclone dust separator at the end of each shift. ||| シフトの終わりにサイクロン集じん機を掃除する。 ||| 每班结束时清洁旋风除尘器。
+f0b8eec5f ||| Size grading ||| サイズ選別 ||| 分级筛
+8e34c6cf1 ||| Grade into No. 18, 16, 14 and 13. ||| No. 18、16、14、13に分ける。 ||| 按18号、16号、14号、13号分级。
+5f1d425ce ||| Roast each size separately. ||| サイズごとに別々に焙煎する。 ||| 每种规格分开烘焙。
+bf37421c4 ||| Check that the screen holes aren't clogged. ||| スクリーンの穴が詰まっていないか確認する。 ||| 检查筛孔是否堵塞。
+a6baa9d75 ||| Gravity table ||| 比重選別機 ||| 比重台
+4fe92bc75 ||| Separate light beans, hollow beans and stones. ||| 軽い豆、中空豆、石を分ける。 ||| 分离轻豆、空心豆和石子。
+06ba664a2 ||| Adjust airflow and tilt to the sample. ||| サンプルに合わせて風量と傾斜を調整する。 ||| 根据样品调整风量和倾斜度。
+909f5ef80 ||| Light beans go to a secondary line. ||| 軽い豆はサブラインに回す。 ||| 轻豆转入副线。
+a98a038a9 ||| Color sorting and hand picking ||| 色彩選別と手選別 ||| 色选与手选
+4f3735b2b ||| The machine removes black, brown and moldy beans. Workers recheck on the table. ||| 機械が黒豆、茶色の豆、カビ豆を除き、作業者が台の上で再確認する。 ||| 机器剔除黑豆、褐豆和霉豆。工人在台上复检。
+784d9b339 ||| No black beans left in the premium line. ||| 上級ラインに黒豆が残っていない。 ||| 高端系列中不再有黑豆。
+967be0c9a ||| Clean the camera glass every shift. ||| シフトごとにカメラのガラスを洗う。 ||| 每班清洗摄像头玻璃。
+6ef19eb09 ||| Warm up the roaster, charge the exact weight, follow the profile, record first crack and the drop. ||| 焙煎機を予熱し、正確な量を投入し、プロファイルに従い、1ハゼと釜出しを記録する。 ||| 预热烘焙机，按准确重量入豆，依曲线烘焙，记录一爆和出锅。
+338aef485 ||| DTR 20–25%. Robusta 9–14 minutes, Arabica 8–12 minutes. ||| DTR 20〜25%。Robustaは9〜14分、Arabicaは8〜12分。 ||| DTR 20–25%。Robusta 9–14分钟，Arabica 8–12分钟。
+6d739e64e ||| Pull the sampling trier every 30 seconds near the end of the batch. ||| バッチの終盤は30秒ごとにテストスプーンでサンプルを取る。 ||| 批次末段每30秒用取样勺取样。
+2bd930112 ||| Cooling ||| 冷却 ||| 冷却
+ad359b730 ||| Stir on a tray with a suction fan, then pass through the destoner. ||| 吸引ファン付きのトレイでかき混ぜ、石抜き機に通す。 ||| 在带抽风扇的托盘上翻搅，再过去石机。
+009575b5b ||| Close to room temperature within a few minutes. ||| 数分で室温近くまで下げる。 ||| 几分钟内降到接近室温。
+70b950a87 ||| Don't spray water if you want a true pure roast. ||| 本当の無添加焙煎にしたいなら水を噴霧しない。 ||| 若要真正的纯烘焙，不要喷水。
+97bfdaea6 ||| Degassing ||| ガス抜き ||| 排气
+947330f33 ||| Keep the beans in a sealed bin with a valve. ||| 豆をバルブ付きの密閉容器に入れておく。 ||| 把豆子放在带阀的密封桶里。
+262bf689b ||| Follow the number of days in the product table. ||| 製品表の日数に従う。 ||| 按成品表中的天数。
+07381c176 ||| Write down the roast date. ||| 焙煎日を記入する。 ||| 记录烘焙日期。
+f2a66278b ||| Grinding and packing ||| 粉砕・包装 ||| 研磨、包装
+e12a08669 ||| Weigh, grind if needed, fill one-way valve bags, print the roast date. ||| 計量し、必要なら挽き、ワンウェイバルブ付きの袋に詰め、焙煎日を印字する。 ||| 称重，需要时研磨，装入单向阀袋，打印烘焙日期。
+df7adea96 ||| Grind right before packing. ||| 包装の直前に挽く。 ||| 包装前才研磨。
+fedcd33ae ||| Keep a sample of each lot and do a comparison cupping. ||| ロットごとにサンプルを保管し、比較用のカッピングをする。 ||| 每批留样，做对照杯测（cupping）。
+93000db0f ||| Cooled · {1} kg roasted ||| 冷却済み · 焙煎豆 {1} kg ||| 已冷却 · 烘焙豆{1} kg
+758768a4c ||| {1} packs of {2} g ||| {2} g入り{1}袋 ||| {2} g装{1}包
+61719e51f ||| BEAN COLOR BY ROAST LEVEL ||| 焙煎度別の豆の色 ||| 各烘焙度的豆色
+a3edf09b5 ||| Blows off dust and light impurities ||| ほこりと軽い異物を吹き飛ばす ||| 吹走灰尘和轻杂质
+4abb067a9 ||| Green beans fall through a rising column of air. Heavy beans drop down, while dust, silverskin and bits of parchment are drawn into the cyclone dust separator and fall into the waste bin. This is the first cleaning step, so dust doesn't get into the roaster. ||| 生豆は上昇する空気の柱の中を落ちていきます。重い豆は下に落ち、ほこり、シルバースキン、パーチメントのかけらはサイクロン集じん機に吸い込まれ、ごみ箱に落ちます。ほこりを焙煎機に入れないための最初の清掃工程です。 ||| 生豆穿过上升的气流落下。重的豆子落下，灰尘、银皮和羊皮纸碎片被吸入旋风除尘器，再落进垃圾桶。这是第一道清洁工序，避免灰尘进入烘焙机。
+77b43b20b ||| Target impurities ||| 異物の目標 ||| 杂质目标
+da337c7d5 ||| below 0.1–0.5% ||| 0.1〜0.5%未満 ||| 低于0.1–0.5%
+1cd07e346 ||| Input ||| 投入 ||| 进料
+206ecf599 ||| {1} kg green coffee ||| 生豆 {1} kg ||| 生豆{1} kg
+d05be51da ||| Output ||| 排出 ||| 出料
+0a3b0f53b ||| Grab a sample and check for leftover dust, grit or parchment. ||| サンプルを手に取り、ほこり、砂粒、パーチメントが残っていないか見る。 ||| 抓一把样品，看是否还有灰尘、砂粒或羊皮纸。
+ec4902fea ||| Too much air sucks up small beans too. Too little air leaves the impurities in. ||| 風が強すぎると小さい豆まで吸い込み、弱いと異物が残ったままになる。 ||| 风太大会连小豆一起吸走。风太小则杂质仍留着。
+546b05c4e ||| An electric fan, a hand sieve, a traditional winnowing basket. ||| 送風機、手ふるい、伝統的な箕（み）。 ||| 风扇、手筛、传统簸箕。
+17b457025 ||| Three vibrating screen decks ||| 3段の振動スクリーン ||| 三层振动筛网
+10dc84a0f ||| The vibrating table moves the beans across the screens. Beans smaller than the holes drop to the deck below; larger ones travel the whole deck and leave through their own outlet. The top deck holds size 18, the middle deck size 16, the bottom deck size 13. Beans of the same size absorb heat alike, so the batch roasts evenly. ||| 振動台が豆をスクリーンの上で運びます。穴より小さい豆は下の段に落ち、大きい豆は段の端まで進んで専用の出口から出ます。上段はサイズ18、中段はサイズ16、下段はサイズ13を受け止めます。同じサイズなら熱の吸収が同じなので、バッチが均一に焼けます。 ||| 振动台带着豆子在筛网上移动。比孔小的豆子落到下一层，大的豆子走完整层后从专用出口出来。上层留18号，中层留16号，下层留13号。同样大小的豆子吸热相同，所以整批烘得均匀。
+e24556092 ||| Take 100 g, weigh each size and compare with the grade you bought. ||| 100 gを取り、サイズごとに量り、購入した等級と照合する。 ||| 取100克，逐级称重，与所购等级核对。
+8ab0166b0 ||| Screens clogged with beans mix up the sizes. Roasting large and small beans together makes an uneven batch. ||| スクリーンに豆が詰まるとサイズが混ざる。大小の豆を一緒に焙煎するとバッチにムラが出る。 ||| 筛网卡豆会导致大小混杂。大小豆一起烘会使批次不均。
+4f08f31bc ||| A set of hand sieves by hole size, 2–3 kg at a time. ||| 穴のサイズ別の手ふるいセット、1回2〜3 kg。 ||| 按孔径配套的手筛，每次2–3公斤。
+497b852a0 ||| Separates by bean weight ||| 豆の重さで分ける ||| 按豆重分选
+890cfc603 ||| The tilted deck vibrates while air blows up from below. Heavy beans touch the deck and are pushed toward the high side. Hollow, insect-damaged and immature beans float on the air cushion and drift to the low side. That makes this the step that removes beans that look normal in color but are spongy inside. ||| 傾いた台が振動し、下から風が吹き上げます。重い豆は台面に触れて高い側へ押し上げられます。中空豆、虫食い豆、未熟豆は空気のクッションに浮いて低い側へ流れます。そのため、色は普通でも中がスカスカの豆を除く工程になります。 ||| 倾斜的台面振动，风从下往上吹。重豆贴着台面被推向高处。空心豆、虫蛀豆和未熟豆浮在气垫上流向低处。因此这一步专门剔除颜色正常但内部疏松的豆子。
+5ce6fc355 ||| Removes ||| 除去 ||| 剔除
+e7f0144d0 ||| Hollow, insect-damaged, immature beans ||| 中空豆、虫食い豆、未熟豆 ||| 空心豆、虫蛀豆、未熟豆
+860554dc3 ||| Adjust ||| 調整 ||| 调整
+66104740a ||| Airflow, tilt, vibration speed ||| 風量、傾斜、振動速度 ||| 风量、倾斜度、振动速度
+15010654b ||| Weigh density before and after the machine. Density should go up. ||| 機械の前後で密度を量る。密度が上がっていればよい。 ||| 在机器前后称密度。密度应当提高。
+0497aa4a8 ||| Too much air loses good beans. ||| 風が強すぎると良い豆まで失う。 ||| 风太大会损失好豆。
+04760cb38 ||| Drop beans into salt water to test a small sample; don't use it for the whole lot. ||| 塩水に豆を入れて少量のサンプルを試す。ロット全体には使わない。 ||| 把生豆放进盐水测试少量样品，不要用于整批。
+d61113c31 ||| Color sorting ||| 色彩選別 ||| 色选
+a02996a50 ||| Cameras and air jets, plus a hand-picking table ||| カメラとエアジェット、手選別台と組み合わせ ||| 摄像头和气流喷射，配合人工挑选台
+ffcde60d8 ||| The beans run in a single stream and fall past LED lights and cameras. The machine spots black, brown and moldy beans, and air valves shoot them into the reject bin. Workers then inspect again on a dark surface to catch what the machine missed. ||| 豆は1列に流れ、LEDライトとカメラの前を落ちていきます。機械が黒豆、茶色の豆、カビ豆を見つけ、エアバルブが不良品の箱へ弾き飛ばします。その後、作業者が暗い台の上で見直し、機械の見逃しを拾います。 ||| 豆子排成一列，落过LED灯和摄像头。机器识别出黑豆、褐豆和霉豆，由气阀把它们打进剔除桶。之后工人在深色台面上复查，挑出机器漏掉的豆子。
+24b973c8d ||| Black, brown, moldy, broken beans ||| 黒豆、茶色の豆、カビ豆、割れ豆 ||| 黑豆、褐豆、霉豆、碎豆
+637ae25b2 ||| Hand-picking table ||| 手選別台 ||| 手选台
+8c7d3da1f ||| Black surface, 4000 K light, 1,200 lux ||| 黒い台面、4000 Kの照明、1,200ルクス ||| 黑色台面，4000 K灯光，1,200勒克斯
+227898e32 ||| Count defects in 350 g after the machine. ||| 機械を通した後の350 g中の欠点を数える。 ||| 数出机器后350克中的瑕疵。
+f7be271f4 ||| Dusty glass makes the machine shoot the wrong beans. A single black bean can spoil the taste of a whole phin batch. ||| ガラスが汚れていると機械が誤って弾きます。黒豆が1粒でも、フィン用バッチ全体の味を損なうことがあります。 ||| 玻璃有灰尘会让机器误打。一颗黑豆就可能毁掉整批滴滤咖啡的味道。
+f198f550c ||| A hand-picking table under bright white light, 2–3 people. ||| 明るい白色照明の手選別台、2〜3人。 ||| 明亮白光下的人工挑选台，2–3人。
+19f425fc4 ||| Roaster ||| 焙煎機 ||| 烘焙机
+3e51a155b ||| drying stage, where water in the beans evaporates and they turn yellow ||| 乾燥段階にあり、豆の水分が蒸発して黄色く変わっています ||| 干燥阶段，豆内水分蒸发，豆子转黄
+ed53c751e ||| development stage, where aromas and caramelized sugars form ||| デベロップメント段階にあり、香りとキャラメル化した糖ができています ||| 发展阶段，香气和焦糖化的糖正在形成
+4ad426ba7 ||| Maillard stage, where sugars and proteins create brown color and aroma ||| メイラード段階にあり、糖とたんぱく質が褐色と香りを生んでいます ||| 美拉德阶段，糖和蛋白质生成褐色和香气
+a2cfb91a8 ||| The drum turns the beans evenly; heat enters them through hot air and the drum surface. Minute {1}: {2} °C, the beans are in the {3}. The fan pulls out smoke and chaff, while the flame sets how fast the temperature rises. For {4}, drop the batch when the beans reach about {5} °C. ||| ドラムが回って豆を均一にかき混ぜ、熱風とドラム面から豆に熱が入ります。{1}分：{2} °C、豆は{3}。ファンが煙とチャフを引き出し、火力が昇温の速さを決めます。{4}では、豆が約{5} °Cに達したら釜出しします。 ||| 滚筒均匀翻转豆子，热量通过热风和滚筒壁进入豆子。第{1}分钟：{2} °C，豆子处于{3}。风扇抽走烟和银皮，火力决定升温速度。烘到{4}时，豆温约{5} °C即出锅。
+9007a37d6 ||| Charge temp ||| 投入温度 ||| 入豆温度
+9e4d9f36e ||| Batch load ||| 投入量 ||| 装载量
+f0ab476d2 ||| First crack ||| 1ハゼ ||| 一爆
+c25041a62 ||| not yet ||| まだ ||| 未到
+de714fc43 ||| Target DTR ||| 目標DTR ||| 目标DTR
+9c697bd52 ||| Drop ||| 釜出し ||| 出锅
+b035b17b6 ||| Use the sampling trier every 30 seconds near the end of the batch. Record the time of first crack and the drop. ||| バッチの終盤は30秒ごとにテストスプーンを使う。1ハゼと釜出しの時刻を記録する。 ||| 批次末段每30秒用一次取样勺。记录一爆和出锅的时间。
+9b3de7e27 ||| Underdevelopment, baked roasts, scorched bean surfaces. See the troubleshooting table at the bottom of the page. ||| 発達不足、ベイクド、豆表面の焦げ。ページ下部のトラブル表を参照。 ||| 发展不足、烘得发闷（baked）、豆表烧焦。见页面底部的问题表。
+e55eaf7e4 ||| A 1–3 kg drum roaster, a probe thermometer, a stopwatch. ||| 1〜3 kgのドラム焙煎機、プローブ温度計、ストップウォッチ。 ||| 1–3公斤滚筒烘焙机、探针温度计、秒表。
+3f911edd8 ||| Cooling tray ||| 冷却トレイ ||| 冷却盘
+f6602c817 ||| Stops the roast ||| 焙煎を止める ||| 终止烘焙
+45711025e ||| Beans leaving the drum keep roasting from their own heat. A fan pulls cool air through the bean layer and stirring arms turn them evenly to drop the temperature fast and hold the right level. The beans then pass through the destoner before going into the bin. ||| ドラムから出た豆は自らの熱で焼け続けます。ファンが冷気を豆の層に通し、攪拌アームが均一にかき混ぜて素早く温度を下げ、焙煎度を保ちます。その後、豆は石抜き機を通ってから容器に入ります。 ||| 出了滚筒的豆子仍靠自身热量继续熟化。风扇抽冷风穿过豆层，搅拌臂均匀翻动，快速降温并保持准确的烘焙度。之后豆子经过去石机再入桶。
+3ae2c479a ||| Target ||| 目標 ||| 目标
+d46fd97f2 ||| Near room temperature within a few minutes ||| 数分で室温近くに ||| 几分钟内接近室温
+4ce750ddf ||| Touch a sample: the beans are cool, no longer hot to the hand. ||| サンプルに触れ、豆が冷めて手に熱くないことを確かめる。 ||| 摸样品：豆子已凉，不再烫手。
+ead133e37 ||| Slow cooling makes the beans darker than intended and loses aroma. ||| 冷却が遅いと豆が狙いより濃くなり、香りも失われる。 ||| 冷却太慢会让豆色比预期深，并损失香气。
+74a5ef5a2 ||| A mesh tray with a suction fan, stirred by hand. ||| 吸引ファン付きの網トレイ、手でかき混ぜる。 ||| 带抽风扇的网盘，手工翻搅。
+2976f3224 ||| Degassing bin ||| ガス抜き容器 ||| 排气桶
+5ab2f7530 ||| CO₂ escapes, aroma settles ||| CO₂が抜け、香りが落ち着く ||| 排出CO₂，香气稳定
+a28bd1314 ||| Roasted beans hold a lot of CO₂ and release it gradually. Brewed too soon, the gas pushes water through unevenly. For this level, rest {1} days for filter brewing and {2} days for espresso. ||| 焙煎豆は多くのCO₂を含み、少しずつ放出します。早く淹れすぎると、ガスがお湯の流れを不均一にします。この焙煎度では、フィルター抽出なら{1}日、エスプレッソなら{2}日休ませるのがおすすめです。 ||| 烘焙豆含有大量CO₂并逐渐释放。冲煮太早，气体会使水流不均匀。此烘焙度建议过滤式冲煮养豆{1}天，意式浓缩养豆{2}天。
+2a9e20478 ||| Sealed bin with a valve ||| バルブ付きの密閉容器 ||| 带阀密封桶
+4b45385cc ||| Lot code, roast date, level ||| ロット番号、焙煎日、焙煎度 ||| 批次编号、烘焙日期、烘焙度
+718a6b758 ||| Avoid ||| 避ける ||| 避免
+5ef08a4c1 ||| Light, heat, air ||| 光、熱、空気 ||| 光、热、空气
+f73a5c608 ||| Taste samples at set days and record scores. ||| 決めた日ごとにサンプルを味わい、点数を記録する。 ||| 按日期节点品尝样品并记录分数。
+663b26ba8 ||| Leaving the bin open loses aroma fast. ||| 容器を開けたままにすると香りが早く抜ける。 ||| 桶不盖严，香气流失很快。
+b72579c9b ||| A food-grade bucket with a sealed lid and valve. ||| バルブ付きの密閉ふたの食品用バケツ。 ||| 带阀密封盖的食品级桶。
+b8faa2c3c ||| Packing ||| 包装 ||| 包装
+263af6511 ||| MeDili one-way valve bags ||| MeDiliのワンウェイバルブ袋 ||| MeDili单向阀袋
+445db5e3f ||| A one-way valve lets CO₂ out but keeps air from coming in, so bags can be sealed on the roast day. This lot makes about {1} packs of {2} g. Ground coffee must be packed right after grinding because it loses aroma faster than whole beans. ||| ワンウェイバルブはCO₂を出しますが空気は入れないので、焙煎当日から袋詰めできます。このロットで{2} g入りが約{1}袋。挽いたコーヒーは豆のままより香りが早く抜けるので、挽いたらすぐ包装します。 ||| 单向阀让CO₂排出但不让空气进入，所以烘焙当天即可封袋。这批约出{2} g装{1}包。研磨咖啡香气流失比整豆快，研磨后需立即包装。
+81631085c ||| Roast date, level, origin ||| 焙煎日、焙煎度、産地 ||| 烘焙日期、烘焙度、产地
+8b354b2ae ||| Product line ||| 製品ライン ||| 产品线
+5330e5323 ||| See the product table ||| 製品表を参照 ||| 见成品表
+e3e9a0c99 ||| Retained sample ||| 保存サンプル ||| 留样
+20c9233d4 ||| One bag per lot ||| ロットごとに1袋 ||| 每批一袋
+06f634e3f ||| Weigh each pack and check the seal. ||| 1袋ずつ量り、シールを確認する。 ||| 每包称重，检查封口。
+9777b86f0 ||| Sealing beans that still hold lots of gas in bags without a valve makes the bags puff up. ||| ガスがまだ多い豆をバルブなしの袋に密封すると、袋が膨らむ。 ||| 豆子仍含大量气体时装进无阀密封袋，会使袋子鼓胀。
+87d73c5d9 ||| A bag sealer and a digital scale. ||| 袋のシーラーと電子はかり。 ||| 封口机和电子秤。
+e2493a7a5 ||| Low-cost version ||| 低コスト版 ||| 低成本版
+9829dd361 ||| {1}. Agtron {2}–{3}, about {4}% weight loss. {5}. {6} ||| {1}。Agtron {2}〜{3}、ロス約{4}%。{5}。{6} ||| {1}。Agtron {2}–{3}，损耗约{4}%。{5}。{6}
+6088bc530 ||| {1} kg roaster, {2} kg of green coffee per batch. ||| {1} kgの焙煎機、1バッチに生豆{2} kgを投入。 ||| {1} kg烘焙机，每批投入{2} kg生豆。
+e9a5acac1 ||| over 20:00 ||| 20:00超 ||| 超过20:00
+2a94a63a7 ||| Batch doesn't reach temperature ||| バッチが温度に達しない ||| 批次未达到温度
+142f441bd ||| Raise the flame or reduce the load. ||| 火力を上げるか、投入量を減らす。 ||| 加大火力或减少装载量。
+b07d9c29b ||| Risk of scorching ||| 豆表面の焦げのおそれ ||| 豆表有烧焦风险
+110cb89aa ||| High charge temperature with a small batch. Lower the charge temperature or increase the load. ||| 小さいバッチに対して投入温度が高い。投入温度を下げるか、投入量を増やす。 ||| 小批量配高入豆温度。降低入豆温度或增加装载量。
+990cdcb9e ||| Batch too fast ||| バッチが速すぎる ||| 批次太快
+6c232a853 ||| {1} is shorter than the {2}–{3} minute benchmark. The core may be underroasted. Lower the flame. ||| {1}は目安の{2}〜{3}分より短い。芯まで火が通っていないかもしれません。火を弱めてください。 ||| {1}比{2}–{3}分钟的基准短。豆芯可能未熟。请降火。
+b28a02856 ||| Batch too long ||| バッチが長すぎる ||| 批次太长
+d1af597ac ||| {1} is longer than the {2}–{3} minute benchmark. Prone to a baked roast. Raise the flame or load less. ||| {1}は目安の{2}〜{3}分より長い。ベイクドになりやすい。火を強めるか投入量を減らしてください。 ||| {1}比{2}–{3}分钟的基准长。容易烘得发闷（baked）。请加大火力或减少装载量。
+6f50eef89 ||| Robusta is prone to underdevelopment ||| Robustaは発達不足になりやすい ||| Robusta容易发展不足
+c2daf7b44 ||| This level usually tastes grainy and harsh. Go up to City+ or Full City. ||| この焙煎度は穀物っぽく、きつい味になりがち。City+かFull Cityまで上げるとよい。 ||| 这个烘焙度通常有谷物味且刺激。建议提高到City+或Full City。
+6011002f5 ||| Development a bit short ||| デベロップメントがやや短い ||| 发展略短
+ef7a7c849 ||| DTR {1}%. Lower the flame earlier, before first crack. ||| DTR {1}%。1ハゼの前に、もっと早めに火を弱めてください。 ||| DTR {1}%。在一爆前更早降火。
+454d228a6 ||| Development a bit long ||| デベロップメントがやや長い ||| 发展略长
+26d2be1c4 ||| DTR {1}%. You can drop the batch earlier. ||| DTR {1}%。もう少し早く釜出ししてもよいでしょう。 ||| DTR {1}%。可以更早出锅。
+47518a456 ||| Very dark ||| 非常に深煎り ||| 烘得很深
+0ca4e0e39 ||| Origin aromas are nearly gone. Watch the batch closely and drop fast. ||| 本来の香りはほぼ消える。バッチをよく見て、素早く釜出しする。 ||| 原本香气几乎消失。紧盯批次，迅速出锅。
+677c120b7 ||| {1}, DTR {2}%. Taste a sample to confirm. ||| {1}、DTR {2}%。サンプルを味わって確定してください。 ||| {1}，DTR {2}%。品尝样品后确定。
+1af68fbb3 ||| Sweetness, caramel ||| 甘み・キャラメル ||| 甜感、焦糖
+025f9cd05 ||| Full body ||| しっかりしたボディ ||| 醇厚
+ea3801f77 ||| Roast bitterness ||| 焙煎の苦み ||| 烘焙苦味
+0ba1ea31b ||| Farm origin aroma ||| 農園由来の香り ||| 庄园原产香气
+34ca51a42 ||| Minute ||| 分 ||| 分钟
+ad57c8aee ||| Bean °C ||| 豆温 °C ||| 豆温 °C
+1e8993af8 ||| RoR °C/min ||| RoR °C/分 ||| RoR °C/分钟
+7ffd8d98a ||| After the aspirator ||| 風選の後 ||| 风选后
+bc67db017 ||| removes {1} kg of impurities ||| 異物{1} kgを除去 ||| 去除{1} kg杂质
+40db2e524 ||| After size grading ||| サイズ選別の後 ||| 分级筛后
+6289624d2 ||| removes {1} kg of undersize beans ||| ふるい落ち{1} kgを除去 ||| 去除{1} kg漏筛豆
+dbce7756a ||| After the gravity table ||| 比重選別の後 ||| 比重台后
+aa95c3285 ||| removes {1} kg of light beans ||| 軽い豆{1} kgを除去 ||| 去除{1} kg轻豆
+406b0d486 ||| After color sorting ||| 色彩選別の後 ||| 色选后
+7605418e6 ||| Figure 2: how many packs {1} kg of green coffee makes ||| 図2：生豆{1} kgで何袋できるか ||| 图2：{1} kg生豆能做多少包
+74f813491 ||| <1>Finished product</1><2></2><3>{1} packs</3><4>{2} g packs, about {3} cups at 18 g</4> ||| <1>完成品</1><2></2><3>{1}袋</3><4>{2} g入り、1杯18 gで約{3}杯分</4> ||| <1>成品</1><2></2><3>{1}包</3><4>每包{2} g，约{3}杯（每杯18 g）</4>
+9ca6d8126 ||| Number of batches ||| 焙煎バッチ数 ||| 烘焙批数
+720e39956 ||| batches ||| バッチ ||| 批
+817865f92 ||| Load per batch ||| 1バッチの投入量 ||| 每批装载量
+dfc8c0dbb ||| Machine hours, including breaks ||| 稼働時間（休止を含む） ||| 机器工时（含休息）
+16298e00f ||| Roasting throughput ||| 焙煎能力 ||| 烘焙产能
+18d4452f8 ||| kg/h ||| kg/時 ||| kg/小时
+a3a3db2bb ||| Yields {1} kg roasted · {2} packs of {3} g ||| 焙煎豆 {1} kg · {3} g入り{2}袋 ||| 产出烘焙豆{1} kg · {3} g装{2}包
+6b7250c94 ||| ROAST SHEET {1}⏎MeDili Coffee Farm · Di Linh⏎⏎Coffee: {2}⏎Level: {3} ({4}), Agtron {5}–{6}⏎Green coffee: {7} kg, {8} kg after sorting⏎Per batch: {9} kg, {10} batches⏎Charge temperature: {11} °C | Starting burner: {12}%⏎Simulation: first crack {13}, drop {14} at {15} °C, DTR {16}%⏎Loss: {17}%⏎Finished: {18} kg roasted, {19} packs of {20} g⏎Handwritten: first crack __:__ | drop __:__ | drop temp ____ °C | taste notes ______ ||| 焙煎記録票 {1}⏎MeDili Coffee Farm · Di Linh⏎⏎コーヒー：{2}⏎焙煎度：{3}（{4}）、Agtron {5}〜{6}⏎生豆：{7} kg、選別後 {8} kg⏎1バッチ：{9} kg、{10}バッチ⏎投入温度：{11} °C | 開始時の火力：{12}%⏎シミュレーション：1ハゼ {13}、釜出し {14}（{15} °C）、DTR {16}%⏎ロス：{17}%⏎完成品：焙煎豆 {18} kg、{20} g入り{19}袋⏎手書き：1ハゼ __:__ | 釜出し __:__ | 釜出し温度 ____ °C | 味のメモ ______ ||| 烘焙记录表 {1}⏎MeDili Coffee Farm · Di Linh⏎⏎咖啡：{2}⏎烘焙度：{3}（{4}），Agtron {5}–{6}⏎生豆：{7} kg，挑选后{8} kg⏎每批：{9} kg，共{10}批⏎入豆温度：{11} °C | 起始火力：{12}%⏎模拟：一爆 {13}，出锅 {14}，出锅温度{15} °C，DTR {16}%⏎损耗：{17}%⏎成品：烘焙豆{18} kg，{20} g装{19}包⏎手写：一爆 __:__ | 出锅 __:__ | 出锅温度 ____ °C | 风味备注 ______
+483a9034c ||| 1st crack ||| 1ハゼ ||| 一爆
+da54c9a0c ||| Bean temperature (°C) ||| 豆温（°C） ||| 豆温（°C）
+c57248cb5 ||| RoR (°C/min) ||| RoR（°C/分） ||| RoR（°C/分钟）
+43ed51b01 ||| {1}: {2} °C · RoR {3} °C/min ||| {1}：{2} °C · RoR {3} °C/分 ||| {1}：{2} °C · RoR {3} °C/分钟
+487b8f115 ||| Load into machine ||| マシンに読み込む ||| 载入机器
+# FORCE: nhóm cấp độ rang (Light…Very Dark)
+a36ef8aba ||| Light ||| 浅煎り ||| 浅烘
+4ecb4169c ||| Medium-Light ||| 中浅煎り ||| 中浅烘
+d404968ea ||| Medium ||| 中煎り ||| 中烘
+305244e33 ||| Medium-Dark ||| 中深煎り ||| 中深烘
+ae1ef0143 ||| Dark ||| 深煎り ||| 深烘
+7d5858101 ||| Very Dark ||| 極深煎り ||| 极深烘

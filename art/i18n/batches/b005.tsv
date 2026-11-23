@@ -1,0 +1,113 @@
+2971a3b11 ||| <1>Compiled from multiple sources.</1> The curves in Figures 1–3 are an illustrative model, built from a widely shared illustration and adjusted against compiled references. They are not MeDili measurements. Main assumptions: an extraction ceiling of 28% with hot water and 21% with cold water; each method's standard recipe gives an EY of 19–20%. ||| <1>複数の資料をもとに構成。</1>図1〜3の曲線は説明用のモデルで、広く知られた図をもとに、複数の資料に合わせて調整したものです。MeDiliの実測値ではありません。主な前提：抽出の上限は熱湯で28%、水で21%。各抽出方法の標準レシピでEYは19〜20%。 ||| <1>综合多方资料。</1>图1–3中的曲线是示意模型，依据一张广为流传的示意图绘制，并参照汇总资料做了调整，并非MeDili的实测数据。主要假设：热水萃取上限为28%，冷水为21%；各冲煮方式的标准配方EY为19–20%。
+2bee7e24b ||| Stays in the spent grounds ||| 粉かすに残る ||| 留在咖啡渣中
+2c27831e2 ||| Measure TDS, calculate EY ||| TDSを測り、EYを計算 ||| 测TDS，算EY
+2cd023083 ||| MeDili Extraction Machine ||| MeDili抽出マシン ||| MeDili萃取机
+2cdad50d7 ||| Sour, thin cup with a short finish ||| 酸っぱく薄く、余韻が短い ||| 酸、淡、余韵短
+2db43aac9 ||| Close to the balanced zone. Add a little time or grind one step finer. ||| バランスの範囲まであと少し。時間を少し延ばすか、挽き目を一段階細かくします。 ||| 接近平衡区。稍微延长时间或研磨调细一档。
+2dd1ad898 ||| Brewing ||| 抽出中 ||| 冲煮中
+2e0a43deb ||| Percentage of acids and CGA, caffeine, sugars and Maillard compounds, and bitter compounds that have left the bean, by extraction yield ||| 抽出収率ごとの、豆から出た酸とCGA、カフェイン、糖とメイラード化合物、苦味成分の割合 ||| 按萃取率显示，酸与CGA、咖啡因、糖与美拉德产物、苦味物质已离开豆子的百分比
+2ea48b4c3 ||| If it is not filtered well, the fine sediment keeps extracting and the cup turns cloudy and harsher over time. ||| こし方が不十分だと、細かい澱が抽出を続け、カップがにごって次第にきつい味になります。 ||| 若过滤不彻底，细小残渣会继续萃取，使咖啡变浑浊并逐渐变得尖涩。
+2ee48723a ||| <1>1 minute:</1> under-extracted. ||| <1>1分：</1>未抽出。 ||| <1>1分钟：</1>萃取不足。
+2ee855e2a ||| Your cup · ||| あなたのカップ · ||| 您的这杯 ·
+2f0a36685 ||| Extraction yield by brew time ||| 抽出時間ごとの抽出収率 ||| 不同冲煮时间的萃取率
+30416a17e ||| Water soaks through a lightly tamped bed of coffee and drips into the cup. Pour the first 20–30 ml of water to bloom, letting the coffee swell and release gas, then pour the rest. The drip rate depends on the grind size and how firmly it is pressed, so with a phin, adjusting the grind also adjusts the time. ||| 湯は軽く押さえた粉の層にしみ込み、カップにしずくとなって落ちます。最初に20〜30 mlの湯を注いで蒸らし、粉をふくらませてガスを抜いてから、続けて注ぎます。落ちる速さは挽き目と押さえる強さで決まるため、フィンでは挽き目の調整がそのまま時間の調整になります。 ||| 水渗过轻压的粉层，滴入杯中。先倒20–30毫升水闷蒸，让粉膨胀排气，再继续注水。滴落速度由研磨度和压实力度决定，所以用滴滤壶时，调研磨度也就是在调时间。
+315277509 ||| Stop at ||| 止めどき ||| 停在
+3382fa4e4 ||| TDS is within the 1.15–1.35 range ||| TDSは1.15〜1.35の範囲内 ||| TDS在1.15–1.35范围内
+33e45fe49 ||| ml water ||| ml の湯 ||| 毫升水
+342bd7415 ||| A TDS of {1}% is outside the 8–12% reference range for espresso. ||| TDS {1}%は、エスプレッソの目安8〜12%の範囲外です。 ||| TDS {1}% 超出意式浓缩8–12%的参考范围。
+346dd7fde ||| The <1>Extraction</1> Machine ||| <1>抽出</1>マシン ||| <1>萃取</1>机
+34a0e2370 ||| Roast level and bean type matter more for CGA than time ||| CGAを左右するのは時間よりも焙煎度と豆の種類 ||| 对CGA影响更大的是烘焙度和豆种，而不是时间
+37692f493 ||| Grind one step finer ||| 挽き目を一段階細かく ||| 研磨调细一档
+379617e22 ||| Order of dissolving ||| 溶け出す順番 ||| 溶出顺序
+38b47976a ||| Coffee : water ||| 粉 : 湯 ||| 粉 : 水
+3960b0878 ||| Water amount, ratio ||| 湯量、比率 ||| 水量、粉水比
+3a2121c48 ||| A thinner cup, slightly higher EY. ||| 薄めの味になり、EYは少し上がります。 ||| 咖啡更淡，EY略升。
+3aee984e7 ||| Light roast ||| 浅煎り ||| 浅度烘焙
+3c140944f ||| Scale & ratio ||| 計量と比率 ||| 称量与粉水比
+3c419a0a8 ||| Coarse grounds steep in cold water. Cold water dissolves slowly and pulls fewer bitter compounds. Caffeine and CGA in cold brew reach equilibrium after 6–7 hours, earlier than the 10–24 hours of common recipes. Steeping longer keeps pulling other compounds. ||| 粗挽きの粉を水に浸します。水は溶かすのが遅く、苦味成分をあまり引き出しません。コールドブリューのカフェインとCGAは6〜7時間で平衡に達し、一般的なレシピの10〜24時間より早いです。それ以上浸すと、ほかの成分を引き出し続けます。 ||| 粗粉浸泡在冷水中。冷水溶解得慢，带出的苦味物质较少。冷萃中的咖啡因和CGA在6–7小时后达到平衡，早于常见配方的10–24小时。泡得更久则会继续带出其他物质。
+3c8ed6233 ||| Shorten ||| 短くする ||| 缩短
+3f4d71e9b ||| extraction EY ||| 抽出 EY ||| 萃取率EY
+3f78695c3 ||| The SCA standard is 18–22%, not 14–20% ||| SCAの基準は18〜22%で、14〜20%ではない ||| SCA标准是18–22%，不是14–20%
+3f97632c1 ||| % for filter coffee. ||| %（フィルターコーヒーの場合）。 ||| %（滤杯咖啡）。
+40b545c01 ||| %: grind finer, raise the temperature or extend the time. ||| %：挽き目を細かくするか、温度を上げるか、時間を延ばします。 ||| %：磨细一些、提高水温或延长时间。
+418c3bee3 ||| Medium roast ||| 中煎り ||| 中度烘焙
+41a7f6672 ||| Water is poured continuously through the bed of coffee in a paper filter and drains into the carafe. Fresh water is always “hungry” for solubles, so it extracts quickly. The paper holds back oils and sediment, so the cup tastes clean. ||| 湯をペーパーフィルターの中の粉に連続して注ぎ、サーバーへ落とします。新しい湯はいつも成分に「飢えて」いるので、抽出が速く進みます。紙が油分と澱を受け止めるため、すっきりとした味になります。 ||| 水连续注过滤纸中的粉层，流入分享壶。新注入的水总是“渴求”可溶物，所以萃取快。滤纸挡住油脂和残渣，因此口感干净。
+44b8de521 ||| Full immersion. This is the reference brew: 15 g of coffee, 250 ml of water, stopped at 1, 4 or 8 minutes. ||| 完全浸漬式。これが基準となる淹れ方です：粉15 g、湯250 ml、1分・4分・8分で止めます。 ||| 全浸泡式。这是作为基准的冲煮方式：15克粉、250毫升水，在1、4或8分钟停止。
+45d42e2ca ||| Medium-fine ||| 中細挽き ||| 中细
+464a61522 ||| Finer grind ||| より細かい挽き目 ||| 研磨更细
+46823d2f1 ||| Even for a cup with condensed milk, taste a few drops black first to know whether it extracted correctly. ||| 練乳を入れる一杯でも、まずブラックで数滴味見をして、正しく抽出できたか確かめましょう。 ||| 即使是加炼乳的那一杯，也应先尝几滴黑咖啡，确认萃取是否到位。
+46c329e0f ||| <1></1>Your cup ||| <1></1>あなたのカップ ||| <1></1>您的这杯
+4709609ba ||| The three cups in Figure 3 ||| 図3の3杯の目安 ||| 图3中三杯的基准
+4961f1979 ||| Bloom for 30–45 seconds with twice as much water as coffee, then pour slowly in circles. Total time about 2:30–4:00. ||| 粉の2倍量の湯で30〜45秒蒸らし、その後ゆっくりと円を描くように注ぎます。合計時間は約2:30〜4:00。 ||| 用粉量两倍的水闷蒸30–45秒，然后慢慢画圈注水。总时间约2:30–4:00。
+4983b4891 ||| The TDS range of 1.15–1.35% applies only to filter coffee. For espresso, phin and cold brew, rely on EY and then taste. ||| TDS 1.15〜1.35%の目安はフィルターコーヒーだけのものです。エスプレッソ、フィン、コールドブリューでは、EYを目安にして味わって判断します。 ||| TDS 1.15–1.35%的范围只适用于滤杯咖啡。意式浓缩、滴滤壶和冷萃，请以EY为准，再通过品尝判断。
+4a53f4229 ||| Left the bean, percentage of each compound group ||| 豆から出た割合（成分グループ別） ||| 已离开豆子的比例（按物质类别）
+4a5ef9ccb ||| Tip ||| コツ ||| 小贴士
+4af51aa39 ||| Cup & refractometer ||| カップと屈折計 ||| 杯子与折光仪
+4b07e605e ||| Vertical axis: percentage of compounds that have left the coffee. Horizontal axis: extraction yield (EY) 0–25%. Four lines: CGA, sugars, bitter compounds and caffeine (dashed). ||| 縦軸：粉から出た成分の割合。横軸：抽出収率（EY）0〜25%。4本の線：CGA、糖、苦味成分、カフェイン（破線）。 ||| 纵轴：已离开咖啡粉的物质百分比。横轴：萃取率（EY）0–25%。四条线：CGA、糖、苦味物质和咖啡因（虚线）。
+4c23ef96a ||| What the figure says · Point 2: sugars come out in the middle ||| 図が示すこと · ポイント2：糖は中盤に出る ||| 图中所示 · 要点2：糖在中段出来
+4cfbfb8a1 ||| Acids and CGA are {1}% out, while bitter compounds are only {2}% out. ||| 酸とCGAは{1}%出ていますが、苦味成分はまだ{2}%です。 ||| 酸与CGA已出{1}%，苦味物质才出{2}%。
+4fcf9a871 ||| Above the 18–22 range ||| 18〜22の範囲より上 ||| 高于18–22区间
+500501343 ||| If you leave the coffee in the press after plunging, the grounds at the bottom keep extracting and the cup gets more bitter. ||| プレスした後もコーヒーを容器に残しておくと、底の粉が抽出を続け、だんだん苦くなります。 ||| 按压后若把咖啡留在壶里，底部的粉会继续萃取，咖啡会越来越苦。
+5118b9303 ||| Water temperature ||| 湯温 ||| 水温
+514de3759 ||| Six things <1>to get right.</1> ||| 正しく理解したい<1>6つのこと。</1> ||| 需要正确理解的<1>六件事。</1>
+51599f710 ||| Pouring hard into one spot creates a channel, so water shortcuts through the coffee. Part of the coffee over-extracts while another part under-extracts. ||| 一か所に強く注ぐと溝ができ、湯が粉を素通りします。粉の一部は過抽出に、別の部分は未抽出になります。 ||| 对着一处猛注会形成通道，水从粉层中抄近路流过。一部分粉萃取过度，另一部分萃取不足。
+5297df1bd ||| Try a brew ||| 試しに淹れる ||| 试冲一杯
+545b4d5b1 ||| <1>In the middle:</1> sugars, Maillard compounds. ||| <1>中盤に出る：</1>糖、メイラード化合物。 ||| <1>中段出来：</1>糖、美拉德产物。
+5954d1534 ||| Grinder ||| グラインダー ||| 磨豆机
+5d5751ef7 ||| The finer the grind, the more surface area the coffee has and the faster water reaches the inside of each particle, so solubles come out sooner. With phin, pour-over and espresso, a fine grind also slows the water down, which lengthens contact time. That is why grind size is the most powerful control. Currently selected: <1>{1}</1>, suited to {2}. ||| 細かく挽くほど粉の表面積が増え、湯が粒の中心まで早く届くので、成分が早く溶け出します。フィン、ハンドドリップ、エスプレッソでは、細かい粉は湯の流れも遅くし、接触時間を延ばします。だから挽き目は最も強力な調整つまみです。現在の選択：<1>{1}</1>、{2}に向いています。 ||| 磨得越细，粉的表面积越大，水越快进入颗粒内部，可溶物就出得越早。对滴滤壶、手冲和意式浓缩来说，细粉还会让水流变慢，也就是延长接触时间。所以研磨度是最有力的调节旋钮。当前选择：<1>{1}</1>，适合{2}。
+5e350b72c ||| Lower to 88–91 °C ||| 88〜91 °Cに下げる ||| 降至88–91 °C
+5f0834d17 ||| The six controls of extraction ||| 抽出の6つの調整つまみ ||| 萃取的六个调节旋钮
+611b22dec ||| What the figure says · The dashed caffeine line ||| 図が示すこと · 破線のカフェイン曲線 ||| 图中所示 · 咖啡因虚线
+616770ef2 ||| Increase it and ||| 上げると ||| 增加时
+6176b0444 ||| If you have a refractometer, enter your reading. EY = TDS × beverage weight ÷ coffee dose. ||| 屈折計があれば測定値を入力してください。EY = TDS × 抽出液の重さ ÷ 粉の量。 ||| 如有折光仪，请输入测量值。EY = TDS × 咖啡液重量 ÷ 粉量。
+6270040f1 ||| French press, cold brew ||| フレンチプレス、コールドブリュー ||| 法压壶、冷萃
+63a20047a ||| IN THE MIDDLE ||| 中盤 ||| 中段
+63d85f292 ||| Retained by grounds ||| 粉に残る量 ||| 渣中保留
+63de8efd4 ||| Hot water dissolves faster and can pull out even the hard-to-dissolve compounds. Lowering the temperature slows everything down, especially the late-arriving bitter group. That is why cold brew needs hours instead of minutes, and yields fewer bitter compounds. At {1}{2} °C, the model puts the extraction speed at ×{3} compared with 93{4} °C. ||| 熱い湯ほど速く溶かし、溶けにくい成分まで引き出します。温度を下げるとすべてが遅くなり、特に後から出る苦味のグループが遅れます。だからコールドブリューには数分ではなく何時間も必要で、苦味成分も少なくなります。{1}{2} °Cでは、モデル上の抽出速度は93{4} °Cの×{3}です。 ||| 热水溶解更快，连难溶的物质也能带出来。降低温度会让一切变慢，尤其是后出的苦味类。所以冷萃需要几个小时而不是几分钟，苦味物质也更少。在{1}{2} °C时，模型计算的萃取速度是93{4} °C时的×{3}。
+653ca0206 ||| Over-extracted ||| 過抽出 ||| 过度萃取
+658066aa5 ||| A strength of {1}% is stronger than the SCA's 1.15–1.35% range: use less coffee or more water. ||| 濃度{1}%はSCAの1.15〜1.35%より濃いです：粉を減らすか湯を増やしてください。 ||| 浓度{1}%高于SCA的1.15–1.35%：减少粉量或增加水量。
+664437aed ||| The main bitter compounds form during roasting ||| 主な苦味成分は焙煎中に生まれる ||| 主要的苦味物质在烘焙时生成
+6650a3f3d ||| A close translation of the “Chemistry Review” figure. Where it needs a different reading, MeDili notes it in the “Read again” section right after. ||| 「Chemistry Review（化学のおさらい）」の図の忠実な訳です。異なる読み方が必要な箇所は、直後の「読み直し」でMeDiliが補足しています。 ||| 对“Chemistry Review（化学小复习）”图的贴切翻译。需要另作理解之处，MeDili在紧随其后的“再读一遍”中注明。
+665b3fc2c ||| Chart: from one batch of coffee, which compounds come out first ||| グラフ：同じ粉から、どの成分が先に出るか ||| 图表：同一份咖啡粉中，哪些物质先出来
+66a314a70 ||| Brew a 1:8 concentrate, then dilute about 1:1 with water, milk or ice when serving. ||| 1:8で濃く抽出し、飲むときに水、牛乳、氷で約1:1に割ります。 ||| 以1:8冲出浓缩液，饮用时用水、牛奶或冰按约1:1稀释。
+6c45eceab ||| Robusta has about twice the caffeine of Arabica, with a thick body and strong bitterness. ||| RobustaのカフェインはArabicaの約2倍で、ボディが厚く苦みが強いです。 ||| Robusta的咖啡因约为Arabica的两倍，醇厚度高，苦味浓。
+6c652a50e ||| Under-extracted ||| 未抽出 ||| 萃取不足
+6c9f395a4 ||| Temperature changes the speed and order of dissolving ||| 温度は溶け出す速さと順番を変える ||| 温度改变溶出的速度和顺序
+6d93427aa ||| Dissolves faster, the bitter group comes out sooner. ||| 溶けるのが速くなり、苦味のグループが早く出ます。 ||| 溶解更快，苦味类更早出来。
+70a3d9649 ||| Bitter compounds become noticeable ||| 苦味成分がはっきりしてくる ||| 苦味物质开始明显
+743e50ca7 ||| EY (%) · horizontal axis: {1} ||| EY（%）· 横軸：{1} ||| EY（%）· 横轴：{1}
+7588e47c3 ||| The darker the roast, the more CGA breaks down: green coffee can contain twice as much 5-CQA as roasted coffee. In cold brew, a medium roast gives more 3-CGA than a dark roast, while grind size makes no significant difference. Robusta extracts had the highest CGA, caffeine and antioxidant activity among the samples compared. For more CGA, choose a light to medium roast first, and only then worry about stopping at the right time. ||| 焙煎が深いほどCGAは分解されます。生豆には焙煎豆の2倍の5-CQAが含まれることもあります。コールドブリューでは、中煎りのほうが深煎りより3-CGAが多く、挽き目による差はほとんどありません。比較したサンプルの中で、Robustaの抽出液はCGA、カフェイン、抗酸化活性が最も高い結果でした。CGAを多く摂りたいなら、まず浅煎りから中煎りを選び、そのうえで止めどきを考えましょう。 ||| 烘焙越深，CGA分解越多：生豆所含的5-CQA可达烘焙豆的两倍。在冷萃中，中度烘焙比深度烘焙含更多3-CGA，而研磨度没有明显影响。在所比较的样本中，Robusta萃取液的CGA、咖啡因和抗氧化活性最高。想要更多CGA，先选浅至中度烘焙，然后再考虑在恰当时机停止。
+76105c092 ||| <1>Extraction EY</1><2></2> ||| <1>抽出 EY</1><2></2> ||| <1>萃取率 EY</1><2></2>
+764b495e0 ||| Cut short ||| 早めに止める ||| 提前停止
+76ba40bb2 ||| A refractometer measures TDS, the percentage of dissolved solids in the cup. Knowing TDS, the beverage weight and the coffee dose, you can calculate EY = TDS × beverage weight ÷ coffee dose. The SCA considers filter coffee to meet the Golden Cup standard at an EY of 18–22% and TDS of 1.15–1.35%. This cup: {1}% × {2}{3}g ÷ {4}{5}g = {6}%. ||| 屈折計はTDS、つまりカップ中の溶解成分の割合を測ります。TDS、抽出液の重さ、粉の量がわかれば、EY = TDS × 抽出液の重さ ÷ 粉の量で計算できます。SCAでは、フィルターコーヒーはEY 18〜22%、TDS 1.15〜1.35%でゴールデンカップ基準を満たすとしています。このカップ：{1}% × {2}{3}g ÷ {4}{5}g = {6}%。 ||| 折光仪测量TDS，即杯中可溶物的百分比。知道TDS、咖啡液重量和粉量，就能算出EY = TDS × 咖啡液重量 ÷ 粉量。SCA认为，滤杯咖啡在EY 18–22%、TDS 1.15–1.35%时达到金杯标准。这一杯：{1}% × {2}{3}g ÷ {4}{5}g = {6}%。
+78d722484 ||| Extraction time ||| 抽出時間 ||| 萃取时间
+7aba50340 ||| Hot water at about 9 bar is forced through a fine, tightly tamped bed for 25–30 seconds. The cup is many times stronger than filter coffee. ||| 約9気圧の熱湯を、細かく固くタンピングした粉に25〜30秒通します。フィルターコーヒーの何倍も濃い一杯になります。 ||| 约9巴的热水在25–30秒内压过细而压实的粉层。出液比滤杯咖啡浓好几倍。
+7c04b5677 ||| Write down the recipe you are using. Change only one factor at a time, then taste again. ||| 使っているレシピを記録しておきましょう。一度に変えるのは一つだけにして、もう一度味わいます。 ||| 记下正在使用的配方。每次只改变一个因素，然后再品尝。
+7d15d86c7 ||| Coffee dose (g) ||| 粉の量（g） ||| 粉量（克）
+7d30da2cf ||| Medium ||| 中挽き ||| 中等
+7d8c757e4 ||| Light roasts keep more acids and CGA; the beans are dense, so they dissolve less easily. ||| 浅煎りは酸とCGAを多く残し、豆が硬いため溶けにくいです。 ||| 浅烘焙保留较多酸和CGA，豆子紧实，较难溶出。
+7d972f38f ||| Brewing method ||| 抽出方法 ||| 冲煮方式
+7ddcc877d ||| sugars · Maillard ||| 糖 · メイラード ||| 糖 · 美拉德
+80005c315 ||| A seven-station extraction bench: grinder, water and heat, scale, brewer, four tubes of solubles, cup and refractometer, spent grounds. Tap each station to see the details. ||| 7つのステーションからなる抽出台：グラインダー、湯と温度、スケール、抽出器具、溶け出す成分の4本の管、カップと屈折計、粉かす。各ステーションをタップすると詳細が見られます。 ||| 由七个站点组成的萃取台：磨豆机、水与温度、秤、冲煮器、四管可溶物、杯子与折光仪、咖啡渣。点按每个站点查看详情。
+81eeb4b7b ||| The spent bed of a phin or pour-over should be flat and even. Pits or channels in it mean the water flowed unevenly. ||| フィンやハンドドリップの粉かすは平らで均一なのが理想です。くぼみや溝があれば、湯が偏って流れた証拠です。 ||| 滴滤壶和手冲的咖啡渣应平整均匀。渣面有坑或沟，说明水流不均。
+82439e71e ||| Cold brew is made as a concentrate and is usually diluted with water, milk or ice when served. ||| コールドブリューは濃いめに作り、飲むときにはふつう水、牛乳、氷で割ります。 ||| 冷萃做成浓缩液，饮用时通常用水、牛奶或冰稀释。
+82832b4a4 ||| Copy the sheet to record this brew and your next adjustment. ||| シートをコピーして、今回の抽出と次回の調整を記録しましょう。 ||| 复制记录表，记下这次冲煮和下次的调整。
+82877cfde9 ||| Coffee ||| コーヒー ||| 咖啡
+83cf09445 ||| Time ||| 時間 ||| 时间
+83e1ab397 ||| Coffee in ||| 投入する粉 ||| 投入粉量
+84d9ed147 ||| Sugars and Maillard compounds come out <1>in the middle</1> (14–20%). The figure calls this the SCA's “ideal” range. ||| 糖とメイラード化合物は<1>中盤</1>（14〜20%）に出ます。図ではこれをSCAの「理想的な」範囲と呼んでいます。 ||| 糖和美拉德产物在<1>中段</1>（14–20%）出来。图中称之为SCA的“理想”区间。
+85936da6c ||| Load ||| 読み込む ||| 载入
+869997032 ||| Suggested for ||| おすすめ ||| 推荐用于
+884edf4f3 ||| Caffeine dissolves very readily. In cold brew, caffeine and CGA both reach equilibrium after 6–7 hours. With the coffee used in one study, most methods gave about 10 mg of caffeine per gram of coffee, with the French press lower, about 7 mg. For less caffeine, use less coffee or choose Arabica: Robusta has about twice the caffeine. ||| カフェインはとてもよく溶けます。コールドブリューでは、カフェインとCGAはどちらも6〜7時間で平衡に達します。ある研究で使われたコーヒーでは、ほとんどの抽出方法で粉1 gあたり約10 mgのカフェインが出て、フレンチプレスはそれより低く約7 mgでした。カフェインを減らしたいなら、粉を減らすかArabicaを選びましょう。Robustaのカフェインは約2倍です。 ||| 咖啡因极易溶解。在冷萃中，咖啡因和CGA都在6–7小时后达到平衡。以一项研究所用的咖啡为例，大多数冲煮方式每克粉约得10毫克咖啡因，法压壶较低，约7毫克。想减少咖啡因，就少用些粉或选择Arabica：Robusta的咖啡因约为其两倍。
+8851d0713 ||| Balanced zone, EY 18–22 ||| バランスの範囲、EY 18〜22 ||| 平衡区，EY 18–22
+886a87312 ||| extraction yield EY ||| 抽出収率 EY ||| 萃取率 EY
+88ad38337 ||| A cup with enough acidity but not enough sweetness was stopped too early. A bitter, dry cup that lingers in the aftertaste was brewed too long, with water too hot or a grind too fine. ||| 酸味は十分なのに甘みが足りないなら、止めるのが早すぎます。苦く乾いた感じが余韻に残るなら、時間が長すぎるか、湯が熱すぎるか、粉が細かすぎます。 ||| 酸度够但甜度不足，是停得太早。苦涩干燥并残留在余韵中，是萃取太久、水太烫或粉太细。
+8919233e9 ||| Stop at {1}: EY {2}%, TDS {3}% ||| {1}で止める：EY {2}%、TDS {3}% ||| 在{1}停止：EY {2}%，TDS {3}%
+8a29cc4dc ||| The grounds retain about {1}{2}ml of water, which does not reach the cup. ||| 粉が約{1}{2}mlの湯を抱え込み、その分はカップに入りません。 ||| 咖啡渣会保留约{1}{2}毫升水，这部分不会进入杯中。
+8aa3b416d ||| 4 minutes is the reference for full immersion with 15 g of coffee, 250 ml of water, a coarse grind and water at about 93 °C. With a finer grind or hotter water, the curve shifts left and 4 minutes becomes over-extraction. A phin usually takes 5–8 minutes including the bloom, pour-over 2:30–4:00, espresso 25–30 seconds, cold brew 12–24 hours. ||| 4分は、粉15 g、湯250 ml、粗挽き、湯温約93 °Cでの完全浸漬の基準です。挽き目を細かくするか湯を熱くすると曲線は左へ移り、4分でも過抽出になります。フィンは蒸らしを含めて通常5〜8分、ハンドドリップは2:30〜4:00、エスプレッソは25〜30秒、コールドブリューは12〜24時間です。 ||| 4分钟是全浸泡式的基准：15克粉、250毫升水、粗研磨、水温约93 °C。磨得更细或水更热，曲线就会左移，4分钟便成了过度萃取。滴滤壶连闷蒸通常5–8分钟，手冲2:30–4:00，意式浓缩25–30秒，冷萃12–24小时。
+8ad7f762a ||| How it works ||| 仕組み ||| 原理
+8b97f1ad0 ||| French press ||| フレンチプレス ||| 法压壶
+8d20e5436 ||| Sugars, organic acids and caffeine dissolve very quickly from the start, more than 90%. The part that needs more time is usually explained as larger compounds formed during roasting, which contribute to color, body and roundness. That is why a cup stopped early usually tastes more sour than sweet. ||| 糖、有機酸、カフェインは最初から非常に速く溶け、90%以上が出ます。時間がかかるのは、焙煎中に生まれた大きめの成分だと説明されることが多く、色、ボディ、まろやかさに関わります。そのため早く止めたカップは、甘みより酸味が勝ちやすくなります。 ||| 糖、有机酸和咖啡因从一开始就溶得很快，超过90%。需要更多时间的部分通常被解释为烘焙时生成的较大分子，它们影响颜色、醇厚度和圆润感。所以停得早的咖啡往往酸多于甜。
+8dbc16682 ||| Suggested stop {1}: EY {2}%, bitter compounds only {3}% out. The three cups in Figure 3: {4}. ||| 推奨の止めどき{1}：EY {2}%、苦味成分はまだ{3}%。図3の3杯：{4}。 ||| 建议停止点{1}：EY {2}%，苦味物质才出{3}%。图3中的三杯：{4}。
+8df5c23a4 ||| Below the 18–22 range ||| 18〜22の範囲より下 ||| 低于18–22区间
+8e7a4cf5e ||| Predicted flavor direction, model index 0–100 ||| 予測される味の傾向、モデル指数0〜100 ||| 预测风味走向，模型指数0–100

@@ -181,6 +181,7 @@ CSS = r'''
 .gb .bar i{background:var(--cx3)}
 .tl2{position:relative;display:flex;height:34px;margin-top:14px;border-radius:8px;overflow:hidden;font:600 .72rem var(--body)}
 .tl2>div{display:flex;align-items:center;justify-content:center;text-align:center;padding:0 3px;line-height:1.1;color:#3A2416;border-right:1px solid var(--panel);min-width:0;overflow:hidden}
+@media (max-width:480px){.tl2{font-size:.66rem}.tl2>div{padding:0 1px}}
 .tl2 .mk{position:absolute;top:-4px;bottom:-4px;width:3px;background:var(--accent);border-radius:2px;box-shadow:0 0 0 2px var(--panel)}
 .tlx{display:flex;justify-content:space-between;font:500 .74rem var(--mono);color:var(--muted);margin-top:4px}
 #mix .mrow2{display:grid;grid-template-columns:150px minmax(0,1fr) 64px;gap:10px;align-items:center;padding:5px 0;font-size:.88rem;border-bottom:1px solid var(--rule)}

@@ -246,9 +246,9 @@ const val=n=>{const c=f.querySelectorAll('[name="'+n+'"]:checked');return [...c]
 function build(){const lines=['YÊU CẦU HORECA'];const m=$('hq-m').value;lines.push('Mô hình: '+m);
 const need=val('need');lines.push('Cần: '+(need.length?need.join(', '):'chưa chọn'));lines.push('Lượng dự kiến: '+$('hq-v').value);
 const a=$('hq-a').value.trim();if(a)lines.push('Khu vực giao: '+a);const nt=$('hq-n').value.trim();if(nt)lines.push('Ghi chú: '+nt);
-const nm=$('hq-name').value.trim(),ph=$('hq-ph').value.replace(/[\s.]/g,'');if(nm)lines.push('Liên hệ: '+nm+(ph?' | '+ph:''));
+const nm=$('hq-name').value.trim(),ph=$('hq-ph').value.replace(/[\s.()-]/g,'');if(nm)lines.push('Liên hệ: '+nm+(ph?' | '+ph:''));
 return {txt:lines.join('\n'),nm,ph}}
-function sync(){const r=build();$('hq-msg').textContent=r.txt;const ok=r.nm&&/^(0|\+84)\d{9,10}$/.test(r.ph),g=$('hq-gf');
+function sync(){const r=build();$('hq-msg').textContent=r.txt;const ok=r.nm&&/^(0\d{9,10}|\+\d{8,15})$/.test(r.ph),g=$('hq-gf');
 if(ok){const q=encodeURIComponent;g.href=FORM+'&'+FN.name+'='+q(r.nm)+'&'+FN.phone+'='+q(r.ph)+'&'+FN.txt+'='+q(r.txt);g.removeAttribute('aria-disabled');g.classList.remove('off')}
 else{g.removeAttribute('href');g.setAttribute('aria-disabled','true');g.classList.add('off')}}
 f.addEventListener('input',sync);f.addEventListener('change',sync);f.addEventListener('submit',e=>e.preventDefault());

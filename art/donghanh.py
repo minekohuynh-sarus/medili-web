@@ -113,9 +113,9 @@ function build(){const L=['ĐỒNG HÀNH CÙNG QUÁN'];const g=id=>$(id).value.t
  L.push('Loại hình: '+$('dh-m').value);L.push('Ưu tiên: '+$('dh-p').value);
  const b=val('pha');L.push('Cách pha: '+(b.length?b.join(', '):'chưa chọn'));L.push('Lượng dự kiến: '+$('dh-v').value);
  if($('dh-s').checked)L.push('Muốn nhận mẫu thử 50 g: có');const m=g('dh-n');if(m)L.push('Lời nhắn: '+m);
- const nm=g('dh-name'),ph=$('dh-ph').value.replace(/[\s.]/g,'');if(nm)L.push('Liên hệ: '+nm+(ph?' | '+ph:''));
+ const nm=g('dh-name'),ph=$('dh-ph').value.replace(/[\s.()-]/g,'');if(nm)L.push('Liên hệ: '+nm+(ph?' | '+ph:''));
  return {txt:L.join('\n'),nm,ph}}
-function sync(){const r=build();$('dh-msg').textContent=r.txt;const ok=r.nm&&/^(0|\+84)\d{9,10}$/.test(r.ph),a=$('dh-gf');
+function sync(){const r=build();$('dh-msg').textContent=r.txt;const ok=r.nm&&/^(0\d{9,10}|\+\d{8,15})$/.test(r.ph),a=$('dh-gf');
  if(ok){const q=encodeURIComponent;a.href=FORM+'&'+FN.name+'='+q(r.nm)+'&'+FN.phone+'='+q(r.ph)+'&'+FN.txt+'='+q(r.txt);a.removeAttribute('aria-disabled');a.classList.remove('off');$('dh-st').textContent=''}
  else{a.removeAttribute('href');a.setAttribute('aria-disabled','true');a.classList.add('off')}}
 f.addEventListener('input',sync);f.addEventListener('change',()=>pick());f.addEventListener('submit',e=>e.preventDefault());

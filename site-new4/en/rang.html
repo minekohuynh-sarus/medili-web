@@ -1,0 +1,817 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="MeDili, a roaster from the Di Linh highlands. Pure coffee, pure-roasted from Cà Sẻ roots."><meta property="og:title" content="MeDili Roasting Machine"><meta property="og:description" content="MeDili, a roaster from the Di Linh highlands. Pure coffee, pure-roasted from Cà Sẻ roots."><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>MeDili Roasting Machine</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style><style>
+/* Khung chung sau khi gộp Manus: menu nhóm, chân trang, màu phong thủy Thổ (nâu, vàng đất, đỏ; không xanh lá, không đen). */
+:root{--moss:#8D4E22;--good:#8D4E22;
+  --i-red:#B33A24;--i-red2:#7A2414;--i-gold:#D9B77E;--i-gold2:#B8894A;--i-coffee:#6B4226;--i-brown:#8D5A32;--i-milk:#E9D3AE;
+  --seg1:#9E3B26;--seg2:#B8894A;--seg3:#6B4226;--seg4:#D9B77E;--seg-t1:#FFF6EC;--seg-t2:#2E1C12;--cmp2:#C9A46A;
+  --cx1:#BB8526;--cx2:#7A348E;--cx3:#83470D;--cx4:#CB4D54}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--panel)}
+.mnav{display:none!important}
+
+/* menu */
+.mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
+.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p a:hover{color:var(--accent)}
+.mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-m{margin:0;font-size:inherit}
+.mh-m>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font:600 .86rem var(--body);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;white-space:nowrap;user-select:none}
+.mh-m>summary::-webkit-details-marker{display:none}
+.mh-m>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mh-m[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-m>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-pan{position:absolute;left:0;right:0;top:100%;background:var(--panel);border-bottom:1px solid var(--rule);box-shadow:0 18px 30px rgba(46,28,18,.16);max-height:calc(100vh - 60px - env(safe-area-inset-top,0px));overflow:auto;overscroll-behavior:contain}
+.mh-grid{max-width:1560px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 26px;padding-block:18px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-g{margin:0 0 6px;font:600 .72rem/1.3 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mh-c ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-c a{display:block;color:var(--ink);text-decoration:none;font:500 .95rem/1.35 var(--body);padding:6px 0;border-bottom:1px solid transparent}
+.mh-c a:hover{color:var(--accent)}
+.mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
+.mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
+.mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.mh-i{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none}
+.mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
+@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+@media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
+
+/* chân trang */
+.mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
+.mf-in{max-width:1560px;margin:auto;padding-block:30px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:26px}
+.mf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border-bottom:1px solid var(--rule);padding-bottom:24px}
+.mf-k{flex-basis:100%;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mf-h{margin:0;font:italic 600 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sign);color:var(--ink);text-wrap:balance}
+.mf-h em{color:var(--accent)}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:22px 30px}
+.mf-brand b{display:block;font:italic 600 1.35rem/1.25 var(--sign);color:var(--accent)}
+.mf-brand span{display:block;margin-top:6px}.mf-brand small{display:block;margin-top:6px;color:var(--muted);letter-spacing:.06em}
+.mf-t{margin:0 0 6px;font:600 .72rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mf-col{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mf-col a{color:var(--ink);text-decoration:none;padding:2px 0}.mf-col a:hover{color:var(--accent);text-decoration:underline}
+.mf-col p{margin:0 0 6px}.mf-n{white-space:nowrap;user-select:all}
+.mf-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:.84rem}
+.mf-base i{font:italic 600 1rem var(--sign);color:var(--accent)}
+@media (max-width:980px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-brand{grid-column:1/-1}}
+@media (max-width:520px){.mf-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ảnh thật */
+.pf{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.pf img{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;border:1px solid var(--rule);background:var(--tint)}
+.pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.pfw img{aspect-ratio:3/1;object-fit:cover}
+.split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
+@media (max-width:700px){.pfw img{aspect-ratio:2/1}}
+.pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
+.pgal{display:grid;gap:10px}
+.pgal>h2{margin:0}
+.pgal>p{margin:0;color:var(--muted);max-width:72ch}
+
+/* chọn ngôn ngữ */
+.mh-l{position:relative;margin:0}
+.mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
+.mh-l>summary::-webkit-details-marker{display:none}
+.mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
+.mh-lp a:hover{background:var(--tint);color:var(--accent)}
+.mh-lp a[aria-current]{color:var(--accent)}
+@media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
+/* nút Zalo, Facebook nổi góc trái bên dưới */
+.fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
+.fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
+.fl-b svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fl-b:hover{transform:translateY(-2px) scale(1.05)}
+.fl-b:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.fl-b::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;background:var(--ink);color:var(--panel);font:600 .8rem var(--body);letter-spacing:0;padding:6px 11px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{opacity:1;transform:translate(0,-50%)}}
+@media (max-width:600px){.fl-c{gap:8px}.fl-b{width:46px;height:46px;font-size:.6rem}.fl-b svg{width:17px;height:17px}}
+@media (max-width:1020px){body:has(.nx-bar) .fl-c{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+/* chừa chỗ cho nút nổi ở cuối chân trang */
+@media (min-width:601px){.mf-base{padding-left:76px}}
+@media (max-width:600px){footer.mf{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}}
+@media print{.fl-c{display:none}}
+</style><link rel="alternate" hreflang="vi" href="https://www.medili.vn/rang.html"><link rel="alternate" hreflang="en" href="https://www.medili.vn/en/rang.html"><link rel="alternate" hreflang="ja" href="https://www.medili.vn/ja/rang.html"><link rel="alternate" hreflang="zh-Hans" href="https://www.medili.vn/zh/rang.html"><link rel="alternate" hreflang="x-default" href="https://www.medili.vn/rang.html"></head><body><div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a><nav class="mh-p" aria-label="Main sections"><a href="cau-chuyen.html">Story</a><a href="vung-trong.html">Growing Area</a><a href="anh-vuon.html">Farm Photos</a><a href="xuong-rang.html">Roastery</a><a href="horeca.html">HORECA</a><a href="quan-medili.html">MeDili Café</a><a href="journal.html">Knowledge</a><a href="gia-ca-phe.html">Coffee Prices</a></nav><details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></summary><nav class="mh-pan" aria-label="All pages"><div class="mh-grid"><div class="mh-c"><p class="mh-g">MeDili</p><ul><li><a href="./">Home</a></li><li><a href="cau-chuyen.html">The MeDili Story</a></li><li><a href="doi-ngu.html">Team</a></li><li><a href="quan-medili.html">MeDili Café</a></li><li><a href="lien-he.html">Contact</a></li></ul></div><div class="mh-c"><p class="mh-g">Growing & Production</p><ul><li><a href="vung-trong.html">Di Linh Growing Area</a></li><li><a href="anh-vuon.html">Farm Photos</a></li><li><a href="vuon.html">The Farm in 12 Months</a></li><li><a href="trai-ca-phe.html">Cherry Anatomy</a></li><li><a href="len-men-men-bia.html">Fermentation with Brewer's Yeast</a></li><li><a href="len-men-trai-cay.html">Co-fermentation with Fruit</a></li></ul></div><div class="mh-c"><p class="mh-g">Roasting & Brewing</p><ul><li><a href="xuong-rang.html">Roastery & Capacity</a></li><li><a href="rang.html" aria-current="page">Roasting Room</a></li><li><a href="huong-dan-pha.html">Brewing Guide</a></li><li><a href="quay-pha.html">Brew Bar</a></li><li><a href="cong-thuc-pha.html">Brew Recipe Machine</a></li><li><a href="cold-brew.html">Cold Brew Machine</a></li><li><a href="tim-gu.html">Find Your Coffee Taste</a></li></ul></div><div class="mh-c"><p class="mh-g">Buy & Partner</p><ul><li><a href="cua-hang.html">Coffee Store</a></li><li><a href="mua-hang.html">Buying Room</a></li><li><a href="horeca.html">HORECA Solutions</a></li><li><a href="dong-hanh-cung-quan.html">Partnering with Cafés</a></li><li><a href="nhan-xanh.html">Choose Green Coffee · Wholesale</a></li><li><a href="gia-ca-phe.html">Coffee Prices Today</a></li><li><a href="chinh-sach.html">MeDili Policies</a></li><li><a href="giao-hang.html">Delivery & Returns</a></li><li><a href="gio-hang.html">Cart</a></li><li><a href="tim-kiem.html">Search</a></li></ul></div><div class="mh-c"><p class="mh-g">Coffee Knowledge</p><ul><li><a href="journal.html">All articles</a></li><li><a href="chiet-xuat.html">Extraction Machine</a></li><li><a href="phan-biet-ca-phe.html">Coffee Identification Machine</a></li><li><a href="trai-chin.html">Ripe Cherry Machine</a></li><li><a href="vi-sinh.html">Microbe Machine</a></li><li><a href="tien-chat-huong.html">Aroma Precursor Machine</a></li><li><a href="banh-xe-huong.html">MeDili Flavor Wheel</a></li><li><a href="journal-phin.html">The Phin and the Falling Rhythm of Time</a></li><li><a href="journal-tu-qua.html">From Coffee Cherry to Flavor</a></li><li><a href="journal-di-linh.html">Di Linh in a Cup of Coffee</a></li><li><a href="tu-vuon-den-ly.html">From Farm to Cup</a></li><li><a href="suc-khoe.html">Coffee and the Body</a></li></ul></div></div></nav></details><details class="mh-l"><summary aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.3 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.3-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>EN</span></summary><div class="mh-lp"><a href="../rang.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="rang.html" hreflang="en" lang="en" aria-current="true">English</a><a href="../ja/rang.html" hreflang="ja" lang="ja">日本語</a><a href="../zh/rang.html" hreflang="zh-Hans" lang="zh-Hans">中文</a></div></details><a class="mh-i" href="tim-kiem.html" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a><a class="mh-i" href="gio-hang.html" aria-label="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="mh-cn" hidden></span></a><a class="mh-go" href="cua-hang.html">Shop</a></div></div>
+
+<div class="wrap">
+<header>
+  <span class="lgw"><img class="lgL" src="../assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div class="brandbar"><span>Devoted to the taste of Di Linh</span><span>Zalo <a href="#lien-he">0966770788</a></span></div>
+  <h1>The <em>MeDili Roasting</em> Machine</h1>
+  <p>From green coffee to the finished pack: screen sizing, bean sorting, roasting to each level, degassing and packing. Tap each station to look inside, and choose a roast level to see the heat curve change.</p>
+</header>
+
+<div class="bench">
+  <div class="card">
+    <div class="fighead">
+      <div><b>Figure 1</b> <span>An 8-station line, three-dimensional view, illustrative model</span></div>
+      <button class="btn small" id="snd" aria-pressed="false">Station sound: off</button>
+    </div>
+    <div class="scroller"><svg id="scene" viewBox="0 0 1040 700" aria-label="An 8-station line from screening green coffee to packing roasted coffee. Tap each station for details."></svg></div>
+    <div class="strip" id="strip" role="group" aria-label="Choose a station"></div>
+    <div id="detail" aria-live="polite"></div>
+  </div>
+
+  <aside class="card ctl">
+    <div class="head2"><h3>Type of coffee</h3><small>4 types</small></div>
+    <div class="row" id="coffees"></div>
+    <div class="head2" style="margin-top:12px"><h3>Roast level</h3><small>8 levels</small></div>
+    <div class="row" id="levels"></div>
+    <p id="levelNote" style="font-size:.84rem;color:var(--muted);margin:8px 0 0;line-height:1.45"></p>
+    <hr>
+    <div class="sl" style="margin-top:0"><label for="G">Green coffee input <output id="oG"></output></label><input id="G" type="range" min="10" max="1000" step="10"></div>
+    <div class="sl"><label for="C">Drum charge temperature <output id="oC"></output></label><input id="C" type="range" min="160" max="230" step="5"><p>Too low makes the roast slow and sluggish. Too high easily scorches the bean surface.</p></div>
+    <div class="sl"><label for="P">Burner power <output id="oP"></output></label><input id="P" type="range" min="40" max="100" step="5"><p>Burner level at the start of the batch. The model lowers the flame automatically when the beans turn yellow and at first crack.</p></div>
+    <div class="sl"><label for="F">Batch load <output id="oF"></output></label><input id="F" type="range" min="40" max="100" step="5"><p id="fNote"></p></div>
+    <div class="head2" style="margin-top:12px"><h3>Roaster capacity</h3><small>kg per batch</small></div>
+    <div class="row" id="caps"></div>
+    <div class="row" style="margin-top:14px">
+      <button class="btn main" id="run">Run the line</button>
+      <button class="btn" id="reset">About the suggested targets</button>
+    </div>
+    <div class="stats">
+      <div class="stat"><span>Total time</span><b id="sT"></b></div>
+      <div class="stat"><span>First crack</span><b id="sFc"></b></div>
+      <div class="stat"><span>Development time ratio (DTR)</span><b id="sD"></b></div>
+      <div class="stat"><span>Drop temperature</span><b id="sDrop"></b></div>
+    </div>
+    <div id="verdict"></div>
+    <hr>
+    <span class="lbl">Roast curve; drag on the chart to see each second</span>
+    <div class="charts"><svg class="ch" id="cBt" viewBox="0 0 340 124" role="img" aria-label="Bean temperature over time"></svg><svg class="ch" id="cRr" viewBox="0 0 340 94" role="img" aria-label="Rate of rise over time"></svg></div>
+    <input id="scrub" type="range" min="0" max="1200" step="5" aria-label="Moment being viewed">
+    <div id="tip"></div>
+    <details><summary>View the table at 1-minute marks</summary><div class="tw"><table id="tbl"></table></div></details>
+    <hr>
+    <span class="lbl">Predicted flavor direction, model index 0–100</span>
+    <div class="bars" id="bars"></div>
+  </aside>
+</div>
+
+<section class="card">
+  <h2>8 roast levels: specs for each level</h2>
+  <p class="lead">Tap a row to load that level into the machine. Agtron and temperature vary with the meter and probe, so also use your eyes, nose and tasting to calibrate your own machine.</p>
+  <div class="tw"><table class="rich"><thead><tr><th>Color</th><th>Level</th><th>Drop (°C)</th><th>Agtron</th><th>Loss</th><th>Sign</th><th>Main flavors</th></tr></thead><tbody id="lvlT"></tbody></table></div>
+</section>
+
+<section class="card">
+  <h2>Which product, which coffee, how to roast it</h2>
+  <p class="lead">Tap “Load into machine” to bring the recipe up in Figure 1. This is a starting point for the MeDili product line; taste samples to finalize it.</p>
+  <div class="tw"><table class="rich"><thead><tr><th>Finished product</th><th>Coffee</th><th>Level</th><th>Rest after roasting</th><th>Grind / brew</th><th></th></tr></thead><tbody id="prodT"></tbody></table></div>
+</section>
+
+<section class="card">
+  <h2 id="fig2h"></h2>
+  <p class="lead">Figure 2 is calculated from the weight, type of coffee, roast level and roaster capacity. The share of beans rejected along the line is an estimate and needs re-weighing after the first lot.</p>
+  <div class="flow2"><div id="massRows"></div><div><span class="lbl">Machine run plan</span><div class="need" id="need"></div></div></div>
+</section>
+
+<section class="card">
+  <h2>Screening and sorting: screen sizes and defect standards</h2>
+  <p class="lead">Screen sizing helps the beans in a batch roast evenly. Sorting removes defective beans before the heat spreads their smell through the whole batch.</p>
+  <div class="cols" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+    <div><span class="lbl">Screen sizes under TCVN 4193:2014</span><div class="tw"><table><thead><tr><th>Screen no.</th><th>Hole size</th><th>Use at MeDili</th></tr></thead><tbody>
+      <tr><td>No. 18</td><td>7.10 mm</td><td>Large size, premium line</td></tr>
+      <tr><td>No. 16</td><td>6.30 mm</td><td>Main size, phin and espresso</td></tr>
+      <tr><td>No. 14</td><td>5.60 mm</td><td>Medium size, blended into regular phin coffee</td></tr>
+      <tr><td>No. 13</td><td>5.00 mm</td><td>Small size, roasted separately</td></tr>
+      <tr><td>No. 12</td><td>4.75 mm</td><td>Passes through; not used in the main line</td></tr>
+    </tbody></table></div></div>
+    <div><span class="lbl">Check a sample before accepting a lot</span><ul class="plain">
+      <li><b>Sample:</b> at least 350 g, taken from many points in the lot.</li>
+      <li><b>Sorting table:</b> matte black surface, 4000 K light, 1,200 lux.</li>
+      <li><b>Moisture:</b> 10–12% per SCA; TCVN allows at most 12.5%.</li>
+      <li><b>Specialty:</b> no category 1 defects and at most 5 category 2 defects in 350 g. This standard is for Washed Arabica, so for Robusta use it only as a reference.</li>
+      <li><b>Density:</b> pour freely into a 1 L tube, level it off and weigh. For example 690 g/L. Record it to track the lot.</li>
+    </ul></div>
+    <div><span class="lbl">Robusta defect limits, TCVN 4193:2014</span><div class="tw"><table><thead><tr><th>Grade</th><th>Max. defects</th><th>Foreign matter</th></tr></thead><tbody>
+      <tr><td>R1 18a</td><td>10%</td><td>0.1%</td></tr><tr><td>R1 16a</td><td>14%</td><td>0.5%</td></tr><tr><td>R1 16c</td><td>18%</td><td>0.5%</td></tr><tr><td>R2 13a</td><td>17%</td><td>0.5%</td></tr><tr><td>R2 13c</td><td>24%</td><td>1.0%</td></tr>
+    </tbody></table></div><p class="src">Branded roasted coffee should set internal standards stricter than these maximums.</p></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>The written procedure: a version for the roastery</h2>
+  <p class="lead">Record the settings and taste every batch. A roast profile only has value when it can be repeated.</p>
+  <ol class="sop" id="sop"></ol>
+</section>
+
+<div class="cols">
+  <section class="card">
+    <h2>Roasting methods</h2>
+    <div class="tw"><table class="rich"><thead><tr><th>Method</th><th>Mechanism</th><th>Suits</th><th>Notes</th></tr></thead><tbody id="methT"></tbody></table></div>
+  </section>
+  <section class="card">
+    <h2>Roast sheet</h2>
+    <p class="lead">Taken from the settings on the control panel. Copy it and send it to the roaster.</p>
+    <div class="calc"><label for="lot">Batch code<input id="lot" type="text" value="MD-RANG-01"></label><label for="pack">Pack size (g)<input id="pack" type="number" min="50" max="5000" step="10" value="250"></label></div>
+    <div id="sheet"></div>
+    <button class="btn main" id="copy">Copy roast sheet</button> <span id="copied" role="status" class="src"></span>
+    <hr>
+    <h3 style="margin:0 0 6px">Safety limits</h3>
+    <ul class="plain">
+      <li><b>Always keep someone at the machine.</b> Over-roasted beans can catch fire in the drum.</li>
+      <li><b>Clean out chaff and the chimney</b> on schedule. Oily dust and chaff are common causes of fire.</li>
+      <li><b>Gas and smoke:</b> the machine must vent smoke outside, the room must be ventilated, and there must be a fire extinguisher.</li>
+      <li><b>Dark roasts:</b> drop and cool immediately, because the temperature climbs fast at the end of the batch.</li>
+    </ul>
+  </section>
+</div>
+
+<section class="card">
+  <h2>When a roast goes off course</h2>
+  <div class="tw"><table class="rich"><thead><tr><th>Sign</th><th>Common cause</th><th>What to do</th></tr></thead><tbody id="fix"></tbody></table></div>
+</section>
+
+<section class="card src"><p style="margin:0;font-size:.88rem;color:var(--muted);max-width:110ch"><b style="color:var(--ink)">Compiled from multiple sources.</b> The machine's shape is a design concept. The roast curve is a simple heat model, not data from MeDili's actual roaster. Each source divides the levels a little differently, so the 8-level table is a compilation.</p></section>
+
+<section class="contact" id="lien-he">
+  <div>
+    <img class="lgK" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83">
+    <div class="tagline">Devoted to the taste of Di Linh</div>
+    <p>The Di Linh-origin coffee brand of MeDili Coffee Farm. Contact us on Zalo to ask about roasted coffee, wholesale and retail.</p>
+  </div>
+  <div class="zalo">
+    <span>Zalo MeDili</span> <strong id="zaloNo">0966 770 788</strong>
+    <div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Message on Zalo</a><button type="button" id="copyZalo">Copy number</button></div>
+    <small id="zaloMsg" role="status"></small>
+  </div>
+</section>
+</div>
+
+<script>
+/* ====== DỮ LIỆU ====== */
+const COF={
+ robusta:{name:'Robusta',full:'Robusta Di Linh',fc:198,add:5,tmin:9,tmax:14,rate:1,rec:[5,6],c:190,p:80,note:'Prone to underdevelopment. Roast more slowly and stop between medium and medium-dark.',src:{sour:.25,sweet:.65,body:1,bitter:1.2,origin:.65}},
+ fine:{name:'Fermented Robusta',full:'Robusta fermented with brewer\'s yeast',fc:197,add:3,tmin:9,tmax:13,rate:1.06,rec:[4,5],c:185,p:75,note:'Fermented lots usually roast faster. Keep it at a medium roast to preserve the yeast aromas.',src:{sour:.55,sweet:.85,body:.9,bitter:.9,origin:1}},
+ arabica:{name:'Arabica',full:'Arabica',fc:196,add:0,tmin:8,tmax:12,rate:1.02,rec:[3,4],c:195,p:75,note:'Dense, high in acids. Roast light to medium to keep the original aromas.',src:{sour:1,sweet:.9,body:.65,bitter:.7,origin:1}},
+ blend:{name:'Blend',full:'Blend of 70% Arabica, 30% Robusta',fc:197,add:2,tmin:9,tmax:13,rate:1,rec:[4,5],c:190,p:75,note:'Best to roast each type separately and blend afterwards, because the two roast differently.',src:{sour:.7,sweet:.85,body:.85,bitter:.9,origin:.8}}
+};
+const LV=[
+ {n:'Cinnamon',g:'Light',d:[196,200],a:[70,80],l:15,sign:'Just into first crack, dry and wrinkled surface',taste:'Sour, raw, grainy',col:'#B98B58'},
+ {n:'New England',g:'Light',d:[200,205],a:[65,70],l:15.5,sign:'Mid first crack',taste:'Floral, citrus, high acidity',col:'#A87545'},
+ {n:'City',g:'Medium-Light',d:[205,210],a:[60,65],l:16.5,sign:'End of first crack, smooth surface',taste:'Fruity, bright acidity, light body',col:'#936237'},
+ {n:'City+',g:'Medium',d:[210,220],a:[50,60],l:17.5,sign:'Pause between the two cracks',taste:'Caramel, roasted nuts, balanced',col:'#7A4D2A'},
+ {n:'Full City',g:'Medium-Dark',d:[220,225],a:[40,50],l:18.5,sign:'About to enter second crack',taste:'Chocolate, bittersweet, low acidity',col:'#5F3920'},
+ {n:'Vienna',g:'Dark',d:[225,228],a:[35,40],l:19.5,sign:'Start of second crack, spots of oil',taste:'Strongly bitter, full body',col:'#472A18'},
+ {n:'French',g:'Dark',d:[228,230],a:[30,35],l:21,sign:'Strong second crack, oily sheen',taste:'Smoky, bitter, origin aromas nearly gone',col:'#352012'},
+ {n:'Italian',g:'Very Dark',d:[230,235],a:[25,30],l:22.5,sign:'Very oily, lots of smoke',taste:'Charcoal, burnt, thin body',col:'#27170D'}
+];
+const PROD=[
+ ['Phin Robusta Classic','robusta',5,'3–10 days','Medium-coarse grind, phin'],
+ ['Iced milk coffee, bạc xỉu','robusta',5,'1–5 days','Medium-coarse grind, strong phin'],
+ ['Espresso Robusta Classic','robusta',5,'1–5 days','Medium-coarse grind, less water'],
+ ['Robusta fermented with brewer\'s yeast, trial lot','fine',3,'3–10 days','Pour-over or small phin'],
+ ['Espresso Robusta Premium','robusta',3,'3–10 days','Medium grind, drip bags'],
+ ['Cold brew Robusta Premium','robusta',3,'3–10 days','Coarse grind, cold steep'],
+ ['Espresso Blend 7:3','blend',4,'7–14 days','Fine grind, espresso machine'],
+ ['Espresso Arabica Premium','arabica',3,'5–12 days','Medium grind, V60'],
+ ['Phin Robusta Premium','robusta',3,'Pack immediately, use after 5 days','One-way valve bags'],
+ ['Cupping a Robusta sample','robusta',3,'8–24 hours','Quality control sample'],
+ ['Cupping an Arabica sample','arabica',2,'8–24 hours','Quality control sample']
+];
+const METH=[
+ ['Drum','A rotating drum; heat through hot air and the drum surface','Small and medium roasteries, Robusta, phin','Easy to learn; airflow must be controlled to avoid scorching'],
+ ['Hot air (fluid bed)','A stream of hot air keeps the beans floating','Light to medium roasts, clean aromas','Fast batches, lighter body, needs strong airflow'],
+ ['Hybrid','Drum combined with hot air','Roasteries wanting batch-to-batch consistency','Higher machine price'],
+ ['Pan or hand-cranked cage','Stirred over a wood or gas stove','Small batches, a traditional story','Hard to repeat, needs lots of experience'],
+ ['Butter-and-sugar roast','Butter, sugar, fish sauce and salt added at the end of the batch','Traditional phin taste','Not a pure roast; ingredients must be clearly stated'],
+ ['Pure roast','Only coffee, no additives','MeDili brand positioning','Defective beans can\'t be hidden; careful sorting is a must']
+];
+const FIX=[
+ ['Grainy, hay-like, harsh','Underdeveloped, common in Robusta','Extend the time after first crack and bring the level up to medium (Medium) or Full City'],
+ ['Flat, dull, nothing stands out','Batch too long, RoR crashed (baked)','More flame at the start; don\'t let the temperature stall after first crack'],
+ ['Scorch marks on the bean surface','Charge temperature too high or load too small','Lower the charge temperature, increase the load'],
+ ['Dark outside, pale inside','Roasted too fast; the heat hasn\'t reached the core','Lower the flame, lengthen the Maillard stage, break beans to check'],
+ ['Too much smoke, burnt smell','Weak airflow, dirty chimney, roasted too dark','Increase airflow, clean the chimney, drop earlier'],
+ ['Loud crack, harsh sourness','RoR spikes at first crack','Lower the flame 30–60 seconds before the crack'],
+ ['Batch doesn\'t match the previous one','Machine not warmed up, different load weight','Warm up the roaster for 30 minutes, weigh accurately, make the first batch of the day a test batch']
+];
+const SOP=[
+ ['Receiving the lot','Take a 350 g sample, measure moisture, count defects, weigh density, roast a sample.','Moisture 10–12%. Has a lot code.','High-moisture lots don\'t go into the roasting stock.',0],
+ ['Aspirator','Blow off dust, husks and light impurities.','Impurities after screening below 0.1–0.5%.','Clean the cyclone dust separator at the end of each shift.',1],
+ ['Size grading','Grade into No. 18, 16, 14 and 13.','Roast each size separately.','Check that the screen holes aren\'t clogged.',2],
+ ['Gravity table','Separate light beans, hollow beans and stones.','Adjust airflow and tilt to the sample.','Light beans go to a secondary line.',3],
+ ['Color sorting and hand picking','The machine removes black, brown and moldy beans. Workers recheck on the table.','No black beans left in the premium line.','Clean the camera glass every shift.',4],
+ ['Roast','Warm up the roaster, charge the exact weight, follow the profile, record first crack and the drop.','DTR 20–25%. Robusta 9–14 minutes, Arabica 8–12 minutes.','Pull the sampling trier every 30 seconds near the end of the batch.',5],
+ ['Cooling','Stir on a tray with a suction fan, then pass through the destoner.','Close to room temperature within a few minutes.','Don\'t spray water if you want a true pure roast.',6],
+ ['Degassing','Keep the beans in a sealed bin with a valve.','Follow the number of days in the product table.','Write down the roast date.',7],
+ ['Grinding and packing','Weigh, grind if needed, fill one-way valve bags, print the roast date.','Grind right before packing.','Keep a sample of each lot and do a comparison cupping.',8]
+];
+const fmt=s=>`${Math.floor(s/60)}:${String(Math.round(s%60)).padStart(2,'0')}`;
+const vn=(n,d=1)=>n.toFixed(d);
+const fm=n=>Math.round(n).toLocaleString('en-US');
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const $=id=>document.getElementById(id);
+const DEF={coffee:'robusta',lv:4,G:180,C:190,P:80,F:70,cap:12};
+const st={...DEF,view:0,sel:5,sound:false};
+let R={s:[],fc:null,drop:null};
+
+/* ====== MÔ HÌNH NHIỆT ====== */
+function dropT(){const c=COF[st.coffee],l=LV[st.lv];return (l.d[0]+l.d[1])/2+c.add}
+function sim(){
+  const c=COF[st.coffee],dT=dropT(),lf=.62+st.F/100*.62;
+  let bean=25,ET=st.C,fc=null,y=null,drop=null;const s=[];
+  for(let t=0;t<=1200;t++){
+    const probe=bean+(st.C-bean)*Math.exp(-t/34);
+    const gas=st.P*(probe<155?1:(fc===null?.92:.9));
+    const Et=178+gas*1.25;
+    ET+=(Et-ET)/70;
+    let d=.00285*c.rate/lf*(ET-bean);
+    if(bean<155)d-=.03*Math.exp(-(((bean-110)/45)**2));
+    if(fc!==null&&t-fc<70)d+=.015;
+    bean+=d;
+    if(y===null&&probe>=160&&t>60)y=t;
+    if(fc===null&&probe>=c.fc&&t>60)fc=t;
+    s.push({t,bt:probe,et:ET,g:gas});
+    if(drop===null&&probe>=dT&&t>60){drop=t;break}
+  }
+  s.forEach((p,i)=>{const a=s[Math.max(0,i-30)];p.ror=i<30?0:(p.bt-a.bt)*2});
+  R={s,fc,y,drop,end:s.length-1};
+  return R;
+}
+function beanColor(t){
+  const S=[[25,[159,176,138]],[120,[201,192,138]],[160,[217,179,106]],[196,[155,106,56]],[215,[107,66,38]],[230,[58,36,22]],[245,[36,22,16]]];
+  for(let i=1;i<S.length;i++)if(t<=S[i][0]){const [a,A]=S[i-1],[b,B]=S[i],k=clamp((t-a)/(b-a),0,1);return `rgb(${A.map((v,j)=>Math.round(v+(B[j]-v)*k)).join(',')})`}
+  return 'rgb(36,22,16)';
+}
+
+/* ====== HÌNH HỌC ====== */
+const U=7.8,OX=220,OY=96;
+const P=(x,y,z=0)=>[OX+(x-y)*.866*U,OY+(x+y)*.5*U-z*U];
+const pts=a=>a.map(q=>q.map(n=>n.toFixed(1)).join(',')).join(' ');
+const poly=(a,c='')=>`<polygon points="${pts(a)}" class="${c}"/>`;
+const line=(a,w,col)=>`<polyline points="${pts(a)}" fill="none" style="${w?`stroke-width:${w};`:''}${col?`stroke:var(--${col})`:''}"/>`;
+function box(x,y,z,w,d,h,c=['f1','f2','f3']){return poly([P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[1])+poly([P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)],c[2])+poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[0])}
+const RX=r=>r*U*1.2247,RY=r=>r*U*.7071;
+function cyl(cx,cy,z,r,h,c='f2',top='f1'){const [a,b]=P(cx,cy,z),[,t]=P(cx,cy,z+h),rx=RX(r),ry=RY(r);return `<path class="${c}" d="M${a-rx} ${t}V${b}A${rx} ${ry} 0 0 0 ${a+rx} ${b}V${t}Z"/><ellipse class="${top}" cx="${a}" cy="${t}" rx="${rx}" ry="${ry}"/>`}
+const band=(cx,cy,z,r)=>{const [a,b]=P(cx,cy,z),rx=RX(r),ry=RY(r);return `<path class="no" fill="none" d="M${a-rx} ${b}A${rx} ${ry} 0 0 0 ${a+rx} ${b}"/>`};
+const face=(q,r)=>`matrix(${.866*U*r} ${.5*U*r} 0 ${-U*r} ${q[0]} ${q[1]})`;
+const stG=(i,inner)=>`<g class="st m" data-i="${i}" tabindex="0" role="button" aria-label="Station ${i}: ${ST[i-1].name}">${inner}</g>`;
+function buildScene(){
+  let h='<g class="m">';
+  [[3,23],[109,23],[109,3]].forEach(([x,y])=>h+=cyl(x,y,-7,1.3,3,'dk3','dk2'));
+  h+=box(0,0,-4,112,27,4,['dk1','dk2','dk3'])+'</g>';
+  /* 1 sàng gió */
+  h+=stG(1,cyl(9,9,0,3.8,3,'f3','f2')+cyl(9,9,3,3.2,9,'f2','f1')+band(9,9,6,3.2)+band(9,9,9,3.2)
+    +poly([P(6,8,12),P(12,8,12),P(11,10,15.5),P(7,10,15.5)],'f1')+line([P(9,9,14),P(15,9,16),P(15,9,10)],4,'copper2')
+    +cyl(15,9,5,1.8,5,'f1','f2')+box(13.6,13,0,3,3,2.4,['bu','wo2','wo2']));
+  /* 2 sàng cỡ */
+  let sv='<g id="shaker">';
+  [[2.6,'wo'],[5,'f1'],[7.4,'cu']].forEach(([z,c],i)=>{sv+=box(20,5,z,12,11,1.5,[c,c==='wo'?'wo2':c==='cu'?'cu2':'f2',c==='wo'?'wo2':c==='cu'?'cu2':'f3']);let d='';for(let a=0;a<24;a++){const q=P(20.8+(a%6)*1.9,6+(Math.floor(a/6))*2.3,z+1.5);d+=`<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="1.5" class="dk3" style="stroke:none"/>`}sv+=d});
+  sv+='</g>';
+  h+=stG(2,box(21,6,0,1,1,3)+box(30,6,0,1,1,3)+box(21,14,0,1,1,3)+box(30,14,0,1,1,3)+sv+box(32.4,6.5,0,1.8,2.2,3,['bu','wo2','wo2'])+box(32.4,9.8,0,1.8,2.2,3,['f1','f2','f3'])+box(32.4,13,0,1.8,2.2,3,['cu','cu2','cu2']));
+  /* 3 bàn tỷ trọng */
+  const dk=[P(38,5,6),P(50,5,8.2),P(50,15,8.2),P(38,15,6)];
+  h+=stG(3,box(39,6,0,10,8,4.6)+poly(dk,'wo')+`<g id="grav"></g>`+line([P(50,5,8.2),P(50,15,8.2)],3,'copper2')+box(41,14,0,2.8,2,2));
+  /* 4 tách màu */
+  const w=P(61,16,0);
+  h+=stG(4,box(54,6,0,8,10,16)+poly([P(55,7,16),P(61,7,16),P(60,11,19.6),P(56,11,19.6)],'f1')
+   +poly([P(55,16,3),P(61,16,3),P(61,16,14),P(55,16,14)],'dk3')+`<g id="fall"></g>`
+   +`<circle cx="${P(56.2,16,10)[0]}" cy="${P(56.2,16,10)[1]}" r="4" class="ac"/>`+box(56.5,16,.0,4,2,2,['ac','ac','ac']));
+  /* 5 máy rang */
+  let dr='';const dy0=5,dn=10;
+  for(let i=0;i<=dn;i++){const q=P(76,dy0+i*1.05,11.5);dr+=`<g transform="${face(q,8.2)}"><circle r="1" class="${i%2?'f3':'dk2'}" vector-effect="non-scaling-stroke"/></g>`}
+  const qf=P(76,15.6,11.5);
+  let vanes='';for(let a=0;a<3;a++)vanes+=`<line x1="-.7" y1="0" x2=".7" y2="0" transform="rotate(${a*60})" vector-effect="non-scaling-stroke" style="stroke:#F0E4CB;stroke-width:2"/>`;
+  dr+=`<g transform="${face(qf,8.2)}"><circle r="1" class="f1" vector-effect="non-scaling-stroke"/><circle r=".78" style="fill:#1E1411" vector-effect="non-scaling-stroke"/><g id="bbin"></g><g id="vane">${vanes}</g><circle r=".78" fill="none" vector-effect="non-scaling-stroke" style="stroke-width:2.4"/></g>`;
+  let flames='';for(let i=0;i<7;i++){const a=P(70+i*2,16,2.8);flames+=`<polygon class="flame" points="${a[0]-3},${a[1]} ${a[0]+3},${a[1]} ${a[0]},${a[1]-10}" style="fill:#E98A2C;stroke:none"/>`}
+  h+=stG(5,box(66,4,0,20,13,3.6,['f2','f2','f3'])+flames+box(67,5,3.6,18,1,1)+dr
+   +poly([P(70.5,6,25.5),P(81.5,6,25.5),P(81.5,12,25.5),P(70.5,12,25.5)],'cu')+poly([P(70.5,12,25.5),P(81.5,12,25.5),P(78.5,10,19),P(73.5,10,19)],'cu2')
+   +line([P(86,10,16),P(90,10,16),P(90,10,30)],7,'s3')+`<g id="smoke"></g>`);
+  /* 6 khay nguội */
+  let tray='';for(let a=0;a<28;a++){const r=1+(a*.37%5.4),an=a*2.2,q=P(95+r*Math.cos(an),10+r*Math.sin(an),6.1);tray+=`<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="2.4" class="cbean" style="stroke-width:.4"/>`}
+  h+=stG(6,cyl(95,10,0,5,1.5,'f3','f2')+box(93,8,1.5,4,4,2.4)+cyl(95,10,3.9,6.4,2.2,'f2','dk3')+tray+`<g id="arm"></g>`);
+  /* 7 thùng ủ */
+  h+=stG(7,cyl(106,6,0,3,12,'f2','f1')+band(106,6,4,3)+band(106,6,8,3)+cyl(106,6,12,.8,1.4,'cu','cu2'));
+  /* băng */
+  h+='<g class="m">'+box(2,20.2,0,108,4.6,1,['dk3','dk3','dk3'])+'</g>';
+  h+=`<polyline id="beltd" class="belt-d" points="${pts([P(3,22.5,1),P(109,22.5,1)])}"/><g class="m" id="beans"></g>`;
+  /* 8 đóng gói */
+  h+=stG(8,box(101,14.2,0,8,5.4,2)+bag(103,16,2)+bag(106.5,16,2));
+  /* biển tên */
+  const pl=P(66,27,-.6);
+  h+=`<g transform="matrix(.866 .5 0 1 ${pl[0]} ${pl[1]})"><rect width="245" height="24" rx="3" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:1.2"/><circle cx="8" cy="12" r="1.8" style="fill:#2A1B16"/><circle cx="237" cy="12" r="1.8" style="fill:#2A1B16"/><text class="sgn" x="122" y="17.5" text-anchor="middle">MeDili Coffee Farm · Di Linh</text></g>`;
+  /* đồng hồ */
+  const G={x:124,y:372,r:66},pb=P(76,15.6,4.5);
+  h+=`<path class="wire" d="M${P(68,15.8,8)[0]} ${P(68,15.8,8)[1]} L${P(62,27,0)[0]} ${P(62,27,0)[1]+6} L${G.x+66} ${G.y+6}"/><circle cx="${P(68,15.8,8)[0]}" cy="${P(68,15.8,8)[1]}" r="5" class="ac"/>`;
+  h+='<g class="m" id="gauge"></g><g id="ramp"></g>';
+  h+=`<g><rect x="790" y="610" width="238" height="74" rx="8" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="804" y="658" class="sgn2">MeDili Coffee Farm · Di Linh</text><text x="804" y="674" class="tiny mutedt">Concept drawing · trial settings</text></g>`;
+  h+='<g id="massTags"></g><g id="chips"></g>';
+  $('scene').innerHTML=h;
+  buildGauge(G);buildAnim();
+  document.querySelectorAll('.st').forEach(g=>{g.addEventListener('click',()=>select(+g.dataset.i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(+g.dataset.i)}})});
+}
+function bag(x,y,z){const a=box(x,y,z,2.6,1.6,5.4,['wo','bu','wo2']);const q=P(x+.2,y+1.6,z+4.6);return a+`<g transform="matrix(.866 .5 0 1 ${q[0]} ${q[1]})"><text class="bagt" x="0" y="0">MeDili</text></g>`}
+const CHIP=[null,{x:26,y:8,a:[9,9,13]},{x:224,y:8,a:[26,10,9]},{x:414,y:40,a:[44,10,8]},{x:452,y:92,a:[58,10,18]},{x:620,y:34,a:[76,8,26]},{x:800,y:150,a:[95,10,7]},{x:830,y:236,a:[106,6,14]},{x:846,y:330,a:[105,16,8]}];
+function massOf(){
+  const g=st.G,l=LV[st.lv],out={};out.s1=g*.995;out.s2=out.s1*.985;out.s3=out.s2*.985;out.s4=out.s3*.985;out.roast=out.s4*(1-l.l/100);out.bags=out.roast*1000/pack();out.batch=st.cap*st.F/100;out.n=Math.ceil(out.s4/out.batch);return out}
+const pack=()=>clamp(+$('pack').value||250,50,5000);
+function chipLabel(i){const m=massOf(),s=ST[i-1];
+  if(i===5)return `Roast ${LV[st.lv].n} · ${fmt(R.drop??1200)}`;
+  if(i===6)return `Cooled · ${fm(m.roast)} kg roasted`;
+  if(i===7)return 'Degassing';
+  if(i===8)return `${fm(m.bags)} packs of ${pack()} g`;
+  return `${s.name} · ${fm(m['s'+i])} kg`}
+function buildChips(){let h='';for(let i=1;i<=8;i++){const c=CHIP[i],q=P(...c.a),l=chipLabel(i),w=38+l.length*7.3;h+=`<polyline class="lead-l" data-l="${i}" points="${q[0].toFixed(1)},${q[1].toFixed(1)} ${c.x+20},${c.y+13}"/><g class="chip" data-c="${i}"><rect x="${c.x+6}" y="${c.y}" rx="8" width="${w}" height="26"/><circle cx="${c.x+6}" cy="${c.y+13}" r="13"/><text class="num" x="${c.x+6}" y="${c.y+18.5}" text-anchor="middle">${i}</text><text class="lab" x="${c.x+26}" y="${c.y+18}">${l}</text></g>`}
+  const el=$('chips');el.innerHTML=h;el.querySelectorAll('.chip').forEach(g=>g.addEventListener('click',()=>select(+g.dataset.c)))}
+function buildGauge(G){
+  let h=`<line x1="${G.x}" y1="${G.y+G.r}" x2="${G.x}" y2="${G.y+G.r+14}"/><circle cx="${G.x}" cy="${G.y}" r="${G.r}" class="pa" style="stroke-width:2.4"/>`;
+  const mn=80,mx=240,ang=v=>(-210+(v-mn)/(mx-mn)*240)*Math.PI/180,arc=(a,b,r)=>{const A=ang(a),B=ang(b);return `M${G.x+r*Math.cos(A)} ${G.y+r*Math.sin(A)}A${r} ${r} 0 0 1 ${G.x+r*Math.cos(B)} ${G.y+r*Math.sin(B)}`};
+  h+=`<path d="${arc(196,225,52)}" fill="none" style="stroke:var(--good);stroke-width:8"/><path d="${arc(228,240,52)}" fill="none" style="stroke:var(--bad);stroke-width:8"/>`;
+  for(let v=80;v<=240;v+=40){const A=ang(v),i=G.r-22,o=G.r-6;h+=`<line x1="${G.x+i*Math.cos(A)}" y1="${G.y+i*Math.sin(A)}" x2="${G.x+o*Math.cos(A)}" y2="${G.y+o*Math.sin(A)}" style="stroke-width:1"/><text x="${G.x+(G.r-32)*Math.cos(A)}" y="${G.y+(G.r-32)*Math.sin(A)+3.5}" text-anchor="middle" class="mono" style="font-size:10px">${v}</text>`}
+  h+=`<line id="needle" x1="${G.x}" y1="${G.y}" x2="${G.x}" y2="${G.y-44}" style="stroke:var(--accent);stroke-width:3"/><circle cx="${G.x}" cy="${G.y}" r="5" class="ac"/><text id="gv" x="${G.x}" y="${G.y+50}" text-anchor="middle" class="mono" font-size="15"></text>`;
+  $('gauge').innerHTML=h;st.g=G;st.gang=ang;
+  /* dải màu hạt */
+  let r=`<g class="inset"><rect class="b" x="40" y="486" width="318" height="182" rx="10"/><text x="54" y="508" class="lab12 mutedt">BEAN COLOR BY ROAST LEVEL</text>`;
+  LV.forEach((l,i)=>{const col=i%4,row=i<4?0:1,x=54+col*73,y=518+row*72;r+=`<g class="c lv" data-lv="${i}" style="cursor:pointer"><rect x="${x}" y="${y}" width="68" height="66" rx="8"/><ellipse cx="${x+34}" cy="${y+24}" rx="17" ry="11" style="fill:${l.col};stroke:#2A1B16;stroke-width:1.2"/><path d="M${x+20} ${y+24}Q${x+34} ${y+19} ${x+48} ${y+24}" fill="none" style="stroke:#2A1B16;stroke-width:1"/><text x="${x+34}" y="${y+55}" text-anchor="middle" class="tiny">${l.n}</text></g>`});
+  $('ramp').innerHTML=r+'</g>';
+  document.querySelectorAll('.lv').forEach(g=>g.addEventListener('click',()=>{st.lv=+g.dataset.lv;update()}));
+}
+const A={grav:[],fall:[],bb:[],smoke:[],beans:[],flames:[]};
+function buildAnim(){
+  let t='';for(let i=0;i<14;i++)t+='<circle r="2.4" style="stroke-width:.5"/>';$('grav').innerHTML=t;A.grav=[...$('grav').children].map((e,i)=>({e,p:i*.071,y:6+(i*3.3%8.4),heavy:i%4!==0}));
+  t='';for(let i=0;i<8;i++)t+='<circle r="2.2" style="fill:#BFC48F;stroke:none"/>';$('fall').innerHTML=t;A.fall=[...$('fall').children].map((e,i)=>({e,p:i/8}));
+  t='';for(let i=0;i<26;i++)t+='<circle r=".085" vector-effect="non-scaling-stroke" style="stroke:none"/>';$('bbin').innerHTML=t;A.bb=[...$('bbin').children].map((e,i)=>({e,r:.25+(i*.137%.48),a:i*.9}));
+  t='';for(let i=0;i<7;i++)t+='<circle r="6" style="fill:var(--s2);stroke:none"/>';$('smoke').innerHTML=t;A.smoke=[...$('smoke').children].map((e,i)=>({e,p:i/7}));
+  t='';for(let i=0;i<9;i++)t+='<circle r="3.6" style="stroke-width:.7"/>';$('beans').innerHTML=t;A.beans=[...$('beans').children];
+  A.flames=[...document.querySelectorAll('.flame')];
+}
+
+/* ====== NỘI DUNG TRẠM ====== */
+const ST=[
+{name:'Aspirator',sub:'Blows off dust and light impurities',mech:()=>'Green beans fall through a rising column of air. Heavy beans drop down, while dust, silverskin and bits of parchment are drawn into the cyclone dust separator and fall into the waste bin. This is the first cleaning step, so dust doesn\'t get into the roaster.',kv:()=>[['Target impurities','below 0.1–0.5%'],['Input',`${fm(st.G)} kg green coffee`],['Output',`${fm(massOf().s1)} kg`]],check:'Grab a sample and check for leftover dust, grit or parchment.',fail:'Too much air sucks up small beans too. Too little air leaves the impurities in.',cheap:'An electric fan, a hand sieve, a traditional winnowing basket.'},
+{name:'Size grading',sub:'Three vibrating screen decks',mech:()=>'The vibrating table moves the beans across the screens. Beans smaller than the holes drop to the deck below; larger ones travel the whole deck and leave through their own outlet. The top deck holds size 18, the middle deck size 16, the bottom deck size 13. Beans of the same size absorb heat alike, so the batch roasts evenly.',kv:()=>[['N° 18','7.10 mm'],['N° 16','6.30 mm'],['N° 13','5.00 mm'],['Output',`${fm(massOf().s2)} kg`]],check:'Take 100 g, weigh each size and compare with the grade you bought.',fail:'Screens clogged with beans mix up the sizes. Roasting large and small beans together makes an uneven batch.',cheap:'A set of hand sieves by hole size, 2–3 kg at a time.'},
+{name:'Gravity table',sub:'Separates by bean weight',mech:()=>'The tilted deck vibrates while air blows up from below. Heavy beans touch the deck and are pushed toward the high side. Hollow, insect-damaged and immature beans float on the air cushion and drift to the low side. That makes this the step that removes beans that look normal in color but are spongy inside.',kv:()=>[['Removes','Hollow, insect-damaged, immature beans'],['Adjust','Airflow, tilt, vibration speed'],['Output',`${fm(massOf().s3)} kg`]],check:'Weigh density before and after the machine. Density should go up.',fail:'Too much air loses good beans.',cheap:'Drop beans into salt water to test a small sample; don\'t use it for the whole lot.'},
+{name:'Color sorting',sub:'Cameras and air jets, plus a hand-picking table',mech:()=>'The beans run in a single stream and fall past LED lights and cameras. The machine spots black, brown and moldy beans, and air valves shoot them into the reject bin. Workers then inspect again on a dark surface to catch what the machine missed.',kv:()=>[['Removes','Black, brown, moldy, broken beans'],['Hand-picking table','Black surface, 4000 K light, 1,200 lux'],['Output',`${fm(massOf().s4)} kg`]],check:'Count defects in 350 g after the machine.',fail:'Dusty glass makes the machine shoot the wrong beans. A single black bean can spoil the taste of a whole phin batch.',cheap:'A hand-picking table under bright white light, 2–3 people.'},
+{name:'Roaster',sub:'The heart of the line',mech:()=>{const p=R.s[st.view]||R.s[0],l=LV[st.lv];let ph=p.bt<160?'drying stage, where water in the beans evaporates and they turn yellow':(R.fc&&st.view>=R.fc)?'development stage, where aromas and caramelized sugars form':'Maillard stage, where sugars and proteins create brown color and aroma';return `The drum turns the beans evenly; heat enters them through hot air and the drum surface. Minute ${fmt(st.view)}: ${vn(p.bt,0)} °C, the beans are in the ${ph}. The fan pulls out smoke and chaff, while the flame sets how fast the temperature rises. For ${l.n}, drop the batch when the beans reach about ${vn(dropT(),0)} °C.`},kv:()=>[['Charge temp',`${st.C} °C`],['Batch load',`${vn(massOf().batch,1)} kg (${st.F}%)`],['First crack',R.fc?fmt(R.fc):'not yet'],['Target DTR','20–25%'],['Drop',`${vn(dropT(),0)} °C`]],check:'Use the sampling trier every 30 seconds near the end of the batch. Record the time of first crack and the drop.',fail:'Underdevelopment, baked roasts, scorched bean surfaces. See the troubleshooting table at the bottom of the page.',cheap:'A 1–3 kg drum roaster, a probe thermometer, a stopwatch.'},
+{name:'Cooling tray',sub:'Stops the roast',mech:()=>'Beans leaving the drum keep roasting from their own heat. A fan pulls cool air through the bean layer and stirring arms turn them evenly to drop the temperature fast and hold the right level. The beans then pass through the destoner before going into the bin.',kv:()=>[['Target','Near room temperature within a few minutes'],['Loss',`${vn(LV[st.lv].l)}%`],['Output',`${fm(massOf().roast)} kg roasted`]],check:'Touch a sample: the beans are cool, no longer hot to the hand.',fail:'Slow cooling makes the beans darker than intended and loses aroma.',cheap:'A mesh tray with a suction fan, stirred by hand.'},
+{name:'Degassing bin',sub:'CO₂ escapes, aroma settles',mech:()=>{const l=st.lv;const b=l<3?['5–12','10–21']:l<5?['3–10','7–14']:['1–5','3–10'];return `Roasted beans hold a lot of CO₂ and release it gradually. Brewed too soon, the gas pushes water through unevenly. For this level, rest ${b[0]} days for filter brewing and ${b[1]} days for espresso.`},kv:()=>[['Packaging','Sealed bin with a valve'],['Label','Lot code, roast date, level'],['Avoid','Light, heat, air']],check:'Taste samples at set days and record scores.',fail:'Leaving the bin open loses aroma fast.',cheap:'A food-grade bucket with a sealed lid and valve.'},
+{name:'Packing',sub:'MeDili one-way valve bags',mech:()=>`A one-way valve lets CO₂ out but keeps air from coming in, so bags can be sealed on the roast day. This lot makes about ${fm(massOf().bags)} packs of ${pack()} g. Ground coffee must be packed right after grinding because it loses aroma faster than whole beans.`,kv:()=>[['Label','Roast date, level, origin'],['Product line','See the product table'],['Retained sample','One bag per lot']],check:'Weigh each pack and check the seal.',fail:'Sealing beans that still hold lots of gas in bags without a valve makes the bags puff up.',cheap:'A bag sealer and a digital scale.'}
+];
+
+/* ====== GIAO DIỆN ====== */
+const kgCenter=()=>{const sc=document.querySelector('.scroller'),q=P(...CHIP[st.sel].a);if(sc.scrollWidth>sc.clientWidth)sc.scrollLeft=q[0]/1040*sc.scrollWidth-sc.clientWidth/2};
+function select(i){st.sel=i;renderStation();kgCenter()}
+function renderStation(){
+  const s=ST[st.sel-1];
+  document.querySelectorAll('.st').forEach(g=>g.classList.toggle('on',+g.dataset.i===st.sel));
+  document.querySelectorAll('.chip').forEach(g=>g.classList.toggle('on',+g.dataset.c===st.sel));
+  document.querySelectorAll('.lead-l').forEach(g=>g.classList.toggle('on',+g.dataset.l===st.sel));
+  document.querySelectorAll('#strip button').forEach((b,n)=>{b.classList.toggle('on',n+1===st.sel);b.setAttribute('aria-pressed',n+1===st.sel)});
+  $('detail').innerHTML=`<div class="dh"><div class="dn">${st.sel}</div><h2>${s.name}<small>${s.sub}</small></h2></div><div class="dgrid"><div><span class="lbl">How it works</span><p>${s.mech()}</p><span class="lbl">How to check</span><p>${s.check}</p></div><div><span class="lbl">Settings</span><dl class="kv">${s.kv().map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join('')}</dl><p style="margin-top:8px"></p><span class="lbl">Common mistakes</span><p>${s.fail}</p><span class="lbl">Low-cost version</span><p>${s.cheap}</p></div></div>`;
+}
+function pills(id,items,cur,cb){$(id).innerHTML=items.map(([k,n])=>`<button class="pill" data-k="${k}" aria-pressed="${String(cur)===String(k)}">${n}</button>`).join('');$(id).querySelectorAll('button').forEach(b=>b.onclick=()=>cb(b.dataset.k))}
+function update(keep){
+  sim();const c=COF[st.coffee],l=LV[st.lv];
+  if(!keep)st.view=R.end;
+  pills('coffees',Object.entries(COF).map(([k,v])=>[k,v.name]),st.coffee,k=>{st.coffee=k;st.C=COF[k].c;st.P=COF[k].p;update()});
+  pills('levels',LV.map((v,i)=>[i,v.n]),st.lv,k=>{st.lv=+k;update()});
+  pills('caps',[3,6,12,30].map(v=>[v,v+' kg']),st.cap,k=>{st.cap=+k;update()});
+  $('levelNote').textContent=`${l.g}. Agtron ${l.a[0]}–${l.a[1]}, about ${vn(l.l)}% weight loss. ${l.sign}. ${c.note}`;
+  [['G','G'],['C','C'],['P','P'],['F','F']].forEach(([i,k])=>$(i).value=st[k]);
+  $('oG').textContent=fm(st.G)+' kg';$('oC').textContent=st.C+' °C';$('oP').textContent=st.P+'%';$('oF').textContent=st.F+'%';
+  $('fNote').textContent=`${st.cap} kg roaster, ${vn(st.cap*st.F/100,1)} kg of green coffee per batch.`;
+  const T=R.drop,D=(T&&R.fc)?(T-R.fc)/T*100:null;
+  $('sT').textContent=T?fmt(T):'over 20:00';$('sFc').textContent=R.fc?fmt(R.fc):'not yet';$('sD').textContent=D===null?'–':vn(D,0)+'%';$('sDrop').textContent=vn(dropT(),0)+' °C';
+  /* phán đoán */
+  let k='good',t,m;const min=T?T/60:99,rorFc=R.fc?R.s[Math.min(R.fc,R.end)].ror:0;
+  if(!T){k='bad';t='Batch doesn\'t reach temperature';m='Raise the flame or reduce the load.'}
+  else if(st.C>=220&&st.F<60){k='bad';t='Risk of scorching';m='High charge temperature with a small batch. Lower the charge temperature or increase the load.'}
+  else if(min<c.tmin){k='warn';t='Batch too fast';m=`${fmt(T)} is shorter than the ${c.tmin}–${c.tmax} minute benchmark. The core may be underroasted. Lower the flame.`}
+  else if(min>c.tmax){k='warn';t='Batch too long';m=`${fmt(T)} is longer than the ${c.tmin}–${c.tmax} minute benchmark. Prone to a baked roast. Raise the flame or load less.`}
+  else if(st.coffee==='robusta'&&st.lv<3){k='warn';t='Robusta is prone to underdevelopment';m='This level usually tastes grainy and harsh. Go up to City+ or Full City.'}
+  else if(D<18&&st.lv>=2){k='warn';t='Development a bit short';m=`DTR ${vn(D,0)}%. Lower the flame earlier, before first crack.`}
+  else if(D>30&&st.lv<5){k='warn';t='Development a bit long';m=`DTR ${vn(D,0)}%. You can drop the batch earlier.`}
+  else if(st.lv>=6){k='warn';t='Very dark';m='Origin aromas are nearly gone. Watch the batch closely and drop fast.'}
+  else {t='Batch is within the trial range';m=`${fmt(T)}, DTR ${vn(D,0)}%. Taste a sample to confirm.`}
+  $('verdict').className=k;$('verdict').innerHTML=`<b>${k==='good'?'✓':k==='warn'?'!':'✕'} ${t}</b>${m}`;
+  /* vị */
+  const x=st.lv/7,s=c.src,f=[['Bright acidity',100*(1-x)**1.3*s.sour],['Sweetness, caramel',100*Math.sin(Math.PI*clamp((st.lv+1)/8,0,1))*s.sweet],['Full body',100*(.25+.75*Math.sin(Math.PI/2*clamp((st.lv+.5)/6,0,1)))*s.body],['Roast bitterness',100*x**1.5*s.bitter],['Farm origin aroma',100*(1-x)**.8*s.origin]];
+  $('bars').innerHTML=f.map(([n,v])=>`<div class="bar"><span>${n}</span><span class="track"><i style="width:${clamp(v,0,100).toFixed(0)}%"></i></span><span>${clamp(v,0,100).toFixed(0)}</span></div>`).join('');
+  $('scrub').max=R.end;
+  $('tbl').innerHTML='<thead><tr><th>Minute</th><th>Bean °C</th><th>RoR °C/min</th></tr></thead><tbody>'+R.s.filter(p=>p.t%60===0).map(p=>`<tr><td>${p.t/60}</td><td>${vn(p.bt,0)}</td><td>${vn(p.ror,1)}</td></tr>`).join('')+'</tbody>';
+  renderLvl();renderMass();renderSheet();buildChips();draw();renderStation();
+}
+function renderLvl(){
+  const b=$('lvlT');b.innerHTML=LV.map((l,i)=>`<tr data-l="${i}" class="pick${i===st.lv?' on':''}" tabindex="0"><td><i class="sw" style="background:${l.col}"></i></td><td><b>${l.n}</b><br><small>${l.g}</small></td><td>${l.d[0]}–${l.d[1]}</td><td>${l.a[1]}–${l.a[0]}</td><td>${vn(l.l)}%</td><td>${l.sign}</td><td>${l.taste}</td></tr>`).join('');
+  b.querySelectorAll('tr').forEach(r=>{const go=()=>{st.lv=+r.dataset.l;update()};r.onclick=go;r.onkeydown=e=>{if(e.key==='Enter')go()}});
+}
+function renderMass(){
+  const g=st.G,m=massOf(),l=LV[st.lv],rows=[['Green coffee input',g,''],['After the aspirator',m.s1,`removes ${fm(g-m.s1)} kg of impurities`],['After size grading',m.s2,`removes ${fm(m.s1-m.s2)} kg of undersize beans`],['After the gravity table',m.s3,`removes ${fm(m.s2-m.s3)} kg of light beans`],['After color sorting',m.s4,`removes ${fm(m.s3-m.s4)} kg of defective beans`],['Roasted coffee',m.roast,`loss ${fm(m.s4-m.roast)} kg, ${vn(l.l)}%`,1]];
+  $('fig2h').textContent=`Figure 2: how many packs ${fm(g)} kg of green coffee makes`;
+  $('massRows').innerHTML=rows.map(([n,v,o,p])=>`<div class="mrow${p?' prod':''}"><span>${n}</span><span class="mbar"><i style="width:${(v/g*100).toFixed(1)}%"></i></span><b>${fm(v)} kg</b>${o?`<small>${o}</small>`:''}</div>`).join('')+`<div class="mrow prod"><span>Finished product</span><span></span><b>${fm(m.bags)} packs</b><small>${pack()} g packs, about ${fm(Math.round(m.roast/.018/100)*100)} cups at 18 g</small></div>`;
+  const T=R.drop||1200,hrs=m.n*(T+180)/3600;
+  $('need').innerHTML=[['Number of batches',m.n+' batches'],['Load per batch',vn(m.batch,1)+' kg'],['Machine hours, including breaks',vn(hrs,1)+' hours'],['Roasting throughput',vn(m.batch*(1-l.l/100)/((T+180)/3600),0)+' kg/h']].map(([a,b])=>`<div class="stat"><span>${a}</span><b>${b}</b></div>`).join('');
+  const q=P(105,16,8);$('massTags').innerHTML=`<polyline class="lead-l on" points="${q[0]-14},${q[1]+56} 640,646"/><g class="tag big"><rect x="372" y="634" width="270" height="24" rx="6"/><text x="507" y="650" text-anchor="middle">${fm(m.roast)} kg roasted · ${fm(m.bags)} × ${pack()} g packs</text></g>`;
+}
+function renderSheet(){
+  const c=COF[st.coffee],l=LV[st.lv],m=massOf(),D=(R.drop&&R.fc)?(R.drop-R.fc)/R.drop*100:0;
+  const t=`ROAST SHEET ${$('lot').value}\nMeDili Coffee Farm · Di Linh\n\nCoffee: ${c.full}\nLevel: ${l.n} (${l.g}), Agtron ${l.a[1]}–${l.a[0]}\nGreen coffee: ${fm(st.G)} kg, ${fm(m.s4)} kg after sorting\nPer batch: ${vn(m.batch,1)} kg, ${m.n} batches\nCharge temperature: ${st.C} °C | Starting burner: ${st.P}%\nSimulation: first crack ${R.fc?fmt(R.fc):'–'}, drop ${R.drop?fmt(R.drop):'–'} at ${vn(dropT(),0)} °C, DTR ${vn(D,0)}%\nLoss: ${vn(l.l)}%\nFinished: ${fm(m.roast)} kg roasted, ${fm(m.bags)} packs of ${pack()} g\nHandwritten: first crack __:__ | drop __:__ | drop temp ____ °C | taste notes ______`;
+  $('sheet').textContent=t;st.sheet=t;
+}
+function chart(id,H,key,dom,title,fmtY,ticks,band){
+  const W=340,l=30,r=8,t=16,b=16,Tm=Math.max(R.end,600),x=s=>l+s/Tm*(W-l-r),y=v=>t+(dom[1]-clamp(v,dom[0],dom[1]))/(dom[1]-dom[0])*(H-t-b);
+  let g=`<text class="ttl" x="${l}" y="11">${title}</text>`;
+  if(band)g+=`<rect x="${l}" y="${y(band[1])}" width="${W-l-r}" height="${Math.max(1,y(band[0])-y(band[1]))}" style="fill:var(--moss);fill-opacity:.16"/>`;
+  ticks.forEach(v=>g+=`<line x1="${l}" x2="${W-r}" y1="${y(v)}" y2="${y(v)}" style="stroke:var(--rule);stroke-width:.7"/><text x="${l-5}" y="${y(v)+3.5}" text-anchor="end">${fmtY(v)}</text>`);
+  for(let m=0;m*60<=Tm;m+=2)g+=`<text x="${x(m*60)}" y="${H-3}" text-anchor="middle">${m}</text>`;
+  if(R.fc&&key==='bt')g+=`<line x1="${x(R.fc)}" x2="${x(R.fc)}" y1="${t}" y2="${H-b}" style="stroke:var(--copper);stroke-width:1;stroke-dasharray:3 3"/><text x="${x(R.fc)-3}" y="${H-b-4}" text-anchor="end">1st crack</text>`;
+  const p=R.s.filter((_,i)=>i%5===0&&(key!=='ror'||i>=75)).map(a=>x(a.t).toFixed(1)+','+y(a[key]).toFixed(1)).join(' ');
+  g+=`<polyline points="${p}" fill="none" style="stroke:var(--accent);stroke-width:2"/>`;
+  const v=R.s[st.view];g+=`<line x1="${x(st.view)}" x2="${x(st.view)}" y1="${t}" y2="${H-b}" style="stroke:var(--ink);stroke-width:1"/><circle cx="${x(st.view)}" cy="${y(v[key])}" r="4.5" style="fill:var(--accent);stroke:var(--panel);stroke-width:2"/>`;
+  $(id).innerHTML=g;st.tm=Tm;
+}
+function draw(){
+  chart('cBt',124,'bt',[50,250],'Bean temperature (°C)',v=>v,[100,150,200,250]);
+  chart('cRr',94,'ror',[0,30],'RoR (°C/min)',v=>v,[0,15,30]);
+  const p=R.s[st.view];$('scrub').value=st.view;
+  $('tip').textContent=`${fmt(st.view)}: ${vn(p.bt,0)} °C · RoR ${vn(p.ror,1)} °C/min`;
+  const G=st.g;$('needle').setAttribute('transform',`rotate(${st.gang(clamp(p.bt,80,240))*180/Math.PI+90} ${G.x} ${G.y})`);$('gv').textContent=vn(p.bt,0)+' °C';
+  const col=beanColor(p.bt);A.bb.forEach(b=>b.e.style.fill=col);
+  document.querySelectorAll('.cbean').forEach(e=>e.style.fill=beanColor(dropT()));
+  st.heat=p.g/100;document.querySelectorAll('.lv').forEach(g=>g.classList.toggle('on',+g.dataset.lv===st.lv));
+}
+
+/* ====== HOẠT ẢNH ====== */
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let prev=0,tA=0,run=null,ac=null,tick=0;
+const BELT={1:9,2:26,3:44,4:58,5:76,6:95,7:104,8:105};
+function place(x,col){A.beans.forEach((e,i)=>{const q=P(x-4+(i%3)*4+(i%2),21.3+(i%3)*1.3,1.7);e.setAttribute('cx',q[0]);e.setAttribute('cy',q[1]);e.style.fill=col})}
+function pop(){if(!st.sound||!ac)return;const o=ac.createOscillator(),g=ac.createGain();o.type='square';o.frequency.value=900+Math.random()*700;g.gain.setValueAtTime(.03,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+.04);o.connect(g);g.connect(ac.destination);o.start();o.stop(ac.currentTime+.05)}
+function frame(ts){
+  const dt=Math.min(50,ts-prev||16);prev=ts;tA+=dt;
+  if(!document.hidden){
+    $('vane').setAttribute('transform',`rotate(${(tA*.09)%360})`);
+    A.bb.forEach((b,i)=>{const a=b.a+tA*.0018;b.e.setAttribute('cx',b.r*Math.cos(a));b.e.setAttribute('cy',.28+Math.abs(Math.sin(a))*.3-(b.r*.25))});
+    $('shaker').setAttribute('transform',`translate(${Math.sin(tA*.03)*1.1} ${Math.cos(tA*.03)*.6})`);
+    $('beltd').style.strokeDashoffset=-tA*.024;
+    A.grav.forEach(g=>{g.p=(g.p+dt*.00028)%1;const x=38.8+g.p*10.4,side=g.heavy?g.p:-g.p,q=P(g.heavy?x:49-g.p*10,g.y,6.4+((g.heavy?x:49-g.p*10)-38)/12*2.2);g.e.setAttribute('cx',q[0]);g.e.setAttribute('cy',q[1]);g.e.style.fill=g.heavy?'#BFC48F':'#7E5D35'});
+    const a=P(58,16,14),b=P(58,16,3);A.fall.forEach((f,i)=>{f.p=(f.p+dt*.0007)%1;const off=i===3&&f.p>.55?(f.p-.55)*-40:0;f.e.setAttribute('cx',a[0]+off);f.e.setAttribute('cy',a[1]+(b[1]-a[1])*f.p);f.e.style.fill=i===3?'#3A2416':'#BFC48F'});
+    const h=st.heat||.6;A.flames.forEach((e,i)=>{e.setAttribute('transform',`translate(0 ${(1-h)*7})`);e.style.opacity=.55+.45*Math.abs(Math.sin(tA*.012+i))});
+    const s=P(90,10,31),pb=R.s[st.view],dark=pb?clamp((pb.bt-180)/50,0,1):.3;A.smoke.forEach((m,i)=>{m.p=(m.p+dt*.00045)%1;m.e.setAttribute('cx',s[0]+Math.sin(tA*.002+i)*5+m.p*18);m.e.setAttribute('cy',s[1]-m.p*44);m.e.setAttribute('r',4+m.p*10);m.e.style.opacity=(.1+.5*dark)*(1-m.p)});
+    if(run)step(dt);
+  }
+  requestAnimationFrame(frame);
+}
+function start(){
+  if(run){run=null;$('run').textContent='Run the line';update();return}
+  run={i:0,t:0};$('run').textContent='Stop';st.sel=1;st.view=0;place(BELT[1],beanColor(25));renderStation();draw();
+  if(still){run=null;st.sel=5;$('run').textContent='Run the line';update()}
+}
+function step(dt){
+  const cur=run.i+1,dur=cur===5?7000:1300;run.t+=dt;
+  if(cur===5){const v=Math.min(R.end,Math.round(run.t/dur*R.end));if(v!==st.view){st.view=v;draw();if(v%30===0)renderStation()}if(R.fc&&v>=R.fc&&v<R.fc+90&&(tick++%6===0))pop()}
+  const nx=cur<8?cur+1:null,fr=clamp((run.t-dur*.55)/(dur*.45),0,1);
+  place(nx?BELT[cur]+(BELT[nx]-BELT[cur])*fr:BELT[cur],cur>=5?beanColor(R.s[Math.min(st.view,R.end)].bt):'#BFC48F');
+  if(run.t>=dur){run.i++;run.t=0;if(run.i>=8){run=null;$('run').textContent='Run again';st.view=R.end;draw();renderStation();return}st.sel=run.i+1;if(st.sel<5)st.view=0;else if(st.sel>5)st.view=R.end;draw();renderStation()}
+}
+
+/* ====== KHỞI ĐỘNG ====== */
+$('strip').innerHTML=ST.map((s,i)=>`<button type="button">${i+1} · ${s.name}</button>`).join('');
+$('strip').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>select(i+1));
+$('sop').innerHTML=SOP.map(s=>`<li><div class="n">${s[4]}</div><div><h3>${s[0]}</h3><p>${s[1]}</p></div><p>${s[2]}</p><p>${s[3]}</p></li>`).join('');
+$('fix').innerHTML=FIX.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('');
+$('methT').innerHTML=METH.map(r=>`<tr>${r.map((c,i)=>`<td>${i?c:`<b>${c}</b>`}</td>`).join('')}</tr>`).join('');
+$('prodT').innerHTML=PROD.map((r,i)=>`<tr><td><b>${r[0]}</b></td><td>${COF[r[1]].full}</td><td>${LV[r[2]].n}</td><td>${r[3]}</td><td>${r[4]}</td><td><button class="btn small" data-p="${i}">Load into machine</button></td></tr>`).join('');
+$('prodT').querySelectorAll('button').forEach(b=>b.onclick=()=>{const r=PROD[+b.dataset.p];st.coffee=r[1];st.lv=r[2];st.C=COF[r[1]].c;st.P=COF[r[1]].p;st.sel=5;update();kgCenter();$('scene').scrollIntoView({behavior:still?'auto':'smooth',block:'center'})});
+[['G','G'],['C','C'],['P','P'],['F','F']].forEach(([i,k])=>$(i).addEventListener('input',e=>{st[k]=+e.target.value;update()}));
+$('reset').onclick=()=>{Object.assign(st,DEF);run=null;$('run').textContent='Run the line';st.sel=5;update()};
+$('run').onclick=start;
+$('scrub').addEventListener('input',e=>{st.view=+e.target.value;draw();if(st.sel===5)renderStation()});
+['cBt','cRr'].forEach(id=>{const el=$(id),mv=e=>{if(e.pointerType!=='mouse'&&e.type==='pointermove'&&!e.buttons)return;const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*340;st.view=clamp(Math.round((x-30)/302*st.tm),0,R.end);draw();if(st.sel===5)renderStation()};el.addEventListener('pointermove',mv);el.addEventListener('pointerdown',mv)});
+$('pack').addEventListener('input',()=>update(true));$('lot').addEventListener('input',renderSheet);
+const copyTo=async(t,msg,src,done)=>{try{await navigator.clipboard.writeText(t);$(msg).textContent=done}catch(e){const r=document.createRange();r.selectNodeContents($(src));const s=getSelection();s.removeAllRanges();s.addRange(r);$(msg).textContent='The numbers are selected, please copy them yourself.'}};
+$('copy').onclick=()=>copyTo(st.sheet,'copied','sheet','Roast sheet copied.');
+$('copyZalo').onclick=()=>copyTo('0966770788','zaloMsg','zaloNo','Zalo number copied.');
+$('snd').onclick=()=>{st.sound=!st.sound;if(st.sound&&!ac){try{ac=new (window.AudioContext||window.webkitAudioContext)()}catch(e){st.sound=false}}$('snd').textContent='Station sound: '+(st.sound?'on':'off');$('snd').setAttribute('aria-pressed',st.sound)};
+buildScene();update();place(BELT[1],beanColor(25));kgCenter();
+if(!still)requestAnimationFrame(frame);
+</script>
+<footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">There is always time for <em>a good cup of coffee.</em></p><a class="btn main" href="quan-medili.html">Meet at MeDili</a></div><div class="mf-grid"><div class="mf-brand"><b>In love with coffee, in love with Di Linh.</b><span>Preserving a heritage. Treasuring every flavor.</span><small>Di Linh · Lâm Đồng · Vietnam</small></div><nav class="mf-col" aria-label="Explore"><p class="mf-t">Explore</p><a href="cau-chuyen.html">The MeDili Story</a><a href="doi-ngu.html">The MeDili Team</a><a href="vung-trong.html">Di Linh Growing Area</a><a href="anh-vuon.html">MeDili Farm Photos</a><a href="xuong-rang.html">Roastery & Capacity</a><a href="rang.html">Roasting Room</a><a href="huong-dan-pha.html">Brewing Guide</a><a href="quay-pha.html">Brew Bar</a><a href="tim-gu.html">Find Your Coffee Taste</a><a href="cong-thuc-pha.html">Brew Recipe Machine</a><a href="chiet-xuat.html">Extraction Machine</a><a href="cold-brew.html">Cold Brew Machine</a><a href="journal.html">Coffee Knowledge</a></nav><nav class="mf-col" aria-label="MeDili and you"><p class="mf-t">MeDili &amp; You</p><a href="cua-hang.html">MeDili Store</a><a href="mua-hang.html">Buying Room</a><a href="horeca.html">HORECA Solutions</a><a href="dong-hanh-cung-quan.html">Partnering with Cafés</a><a href="nhan-xanh.html">Green Coffee for Wholesale</a><a href="gia-ca-phe.html">Coffee Prices Today</a><a href="quan-medili.html">MeDili Café</a><a href="lien-he.html">Contact & Map</a><a href="chinh-sach.html">MeDili Policies</a><a href="giao-hang.html">Delivery & Returns</a><a href="bao-mat.html">Privacy Policy</a></nav><div class="mf-col"><p class="mf-t">Distribution · DSunfood</p><p>DSunfood Co., Ltd.<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>Farm &amp; roastery<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">Directions to MeDili ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Message MeDili on Zalo ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>MeDili Coffee Farm · Cà Sẻ Di Linh</i></div></div></footer><nav class="fl-c" aria-label="Quick contact with MeDili"><a class="fl-b" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener" aria-label="Message MeDili on Zalo" data-tip="Message MeDili on Zalo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a><a class="fl-b" href="https://www.facebook.com/share/192oMLdBnq/" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a></nav>
+<script>
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'Copied'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='The number is selected, please copy it yourself'}
+setTimeout(()=>{b.textContent=o},2400)}))})();
+window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
+const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};
+const badge=()=>{const n=get().reduce((a,x)=>a+(+x.q||0),0);document.querySelectorAll('.mh-cn').forEach(e=>{e.textContent=n>99?'99+':n;e.hidden=!n})};
+const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badge()};
+const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
+badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
+</script>
+</body></html>

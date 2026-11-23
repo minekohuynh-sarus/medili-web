@@ -292,7 +292,7 @@ function drawP(){const p=SIM.map(o=>[o.t,o.pH]);
  $('tip').textContent=R.nat?`Giờ ${st.h}: pH dịch quả khoảng ${vn(R.x.pH,2)}. Natural dừng theo độ khô, không theo pH.`:`Giờ ${st.h}: pH ${vn(R.x.pH,2)}. Vùng tô là pH 4,1–4,5, quanh mốc dừng 4,3 của MeDili.`}
 function big(id,wid,ser,y0,y1,yt,yf,ttl,ttlm){const W=cw(wid),mob=W<640,H=mob?250:320;
  $(id).setAttribute('viewBox',`0 0 ${W} ${H}`);
- $(id).innerHTML=lineSVG({W,H,l:mob?40:52,r:mob?26:120,t:22,b:24,x0:0,x1:96,y0,y1,xt:mob?[0,48,96]:[0,12,24,36,48,60,72,84,96],xf:v=>v+' giờ',yt,yf,ttl:mob?ttlm:ttl,ser:ser.map(s=>({...s,lab:mob?'':s.n,w:2.4})),vx:st.h,end:!mob})}
+ $(id).innerHTML=lineSVG({W,H,l:mob?40:52,r:mob?26:150,t:22,b:24,x0:0,x1:96,y0,y1,xt:mob?[0,48,96]:[0,12,24,36,48,60,72,84,96],xf:v=>v+' giờ',yt,yf,ttl:mob?ttlm:ttl,ser:ser.map(s=>({...s,lab:mob?'':s.n,w:2.4})),vx:st.h,end:!mob})}
 function draw2(){big('c2','w2',GR.map(g=>({c:g.c,d:g.d,n:g.n,p:SIM.map(o=>[o.t,o[g.k]])})),2,10,[3,5,7,9],v=>'10'+sup(v),'Tế bào trên mỗi gam (thang log) · trục ngang: giờ','Tế bào/g, thang log');legend('lg2',GR)}
 function draw3(){const S=[{k:'S',n:'Đường còn lại',c:'var(--cx3)'},{k:'E',n:'Cồn',c:'var(--cx1)'},{k:'La',n:'Acid lactic',c:'var(--cx2)'},{k:'Ac',n:'Acid acetic',c:'var(--cx4)'}];
  big('c3','w3',S.map(s=>({c:s.c,n:s.n,p:SIM.map(o=>[o.t,o[s.k]])})),0,1,[0,.5,1],v=>vn(v,1),'Chỉ số tương đối, 1 là lượng đường lúc đầu · trục ngang: giờ','Chỉ số tương đối');legend('lg3',S)}
@@ -302,7 +302,7 @@ function verdict(){const x=R.x;let k='good',t,m;
  if(x.B>.04){k='bad';t='Nguy cơ mùi hành, mùi ôi';m='Vi sinh tạp sinh acid butyric, propionic khi bồn bẩn và để lâu. Rửa bồn, thay nước sạch, rút ngắn thời gian.'}
  else if(x.Ac>.2){k='bad';t='Mùi giấm rõ';m='Vi khuẩn acetic đã biến nhiều cồn thành acid acetic. Giảm oxy, dừng sớm hơn.'}
  else if(R.nat){if(x.Ac>.08){k='warn';t='Acid acetic đang tăng';m='Natural nhiều oxy: phơi mỏng, đảo đều, tránh đống dày và ẩm.'}else{t='Natural đang ổn';m='Giữ lớp phơi mỏng, đảo nhiều lần mỗi ngày, che mưa ban đêm.'}}
- else if(x.pH>4.6){k='warn';t='Chưa xong';m=`pH ${vn(x.pH,2)}: lớp nhớt có thể chưa bong, dừng lúc này dễ ngái. ${R.stop==null?'Bồn chưa chạm pH 4,3 trong 96 giờ, kiểm tra nhiệt độ.':'Dự kiến chạm pH 4,3 ở giờ '+R.stop+'.'}`}
+ else if(x.pH>4.6){k='warn';t='Chưa xong';m=`pH ${vn(x.pH,2)}: lớp nhớt có thể chưa bong, dừng lúc này dễ ngái. ${R.stop==null?'Bồn chưa chạm pH 4,3 trong 96 giờ, kiểm tra nhiệt độ.':`Dự kiến chạm pH 4,3 ở giờ ${R.stop}.`}`}
  else if(x.Ac>.08||x.pH<3.95){k='warn';t='Đã quá mốc dừng';m=`pH ${vn(x.pH,2)}, acid acetic ${lvl(x.Ac,.08,.2)}. Nên rửa ngay.`}
  else{t='Vùng dừng tốt';m=`pH ${vn(x.pH,2)}, acid acetic còn thấp. Kiểm tra lớp nhớt đã bong rồi rửa, đưa lên giàn.`}
  $('verdict').className=k;$('verdict').innerHTML=`<b>${k==='good'?'✓':k==='warn'?'!':'✕'} ${t}</b>${m}`}
@@ -323,9 +323,9 @@ Giờ | pH  | Brix | °C  | Mùi (trái cây, rượu, chua, giấm, hành) | Gh
  36 | ___ | ____ | ___ | ______________________________________ | ______
 
 Dừng lúc: ____ giờ, pH ____ · Rửa xong: ____ · Lên giàn: ____
-Mô hình dự kiến cho ${st.T} °C: chạm pH 4,3 ở ${R.nat?'(Natural, không áp dụng)':(R.stop==null?'quá 96 giờ':'giờ '+R.stop)}`;
+Mô hình dự kiến cho ${st.T} °C: chạm pH 4,3 ở ${R.nat?'(Natural, không áp dụng)':(R.stop==null?'quá 96 giờ':`giờ ${R.stop}`)}`;
  $('sheet').textContent=t;st.sheet=t}
-function sliders(){$('iT').value=st.T;$('oT').textContent=st.T+NB+'°C';$('iB').value=st.bx;$('oB').textContent=st.bx+NB+'°Brix';$('iH').value=st.h;$('oH').textContent='giờ '+st.h;
+function sliders(){$('iT').value=st.T;$('oT').textContent=st.T+NB+'°C';$('iB').value=st.bx;$('oB').textContent=st.bx+NB+'°Brix';$('iH').value=st.h;$('oH').textContent=`giờ ${st.h}`;
  $('tNote').textContent=st.T<=20?'Mát: bồn lên men chậm, hương sạch, cần nhiều giờ hơn.':st.T<=26?'Khoảng nhiệt thường gặp ở xưởng vùng cao.':'Nóng: bồn lên men nhanh gấp đôi, dễ quá mốc nếu không đo.';
  $('hNote').textContent=R.nat?'Natural: theo dõi 4 ngày đầu trên giàn.':(R.stop==null?'Bồn chưa chạm pH 4,3 trong 96 giờ.':`Mô hình chạm pH 4,3 ở giờ ${R.stop}.`)}
 function update(){calc();

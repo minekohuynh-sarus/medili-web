@@ -37,8 +37,8 @@ def _method(x):
 
 CSS = r'''
 .rx-quick{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
-.rx-quick label{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font:600 .92rem var(--body)}
-.rx-quick select{font:500 .95rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:10px;padding:8px 10px;max-width:100%}
+.rx-quick label{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font:600 .92rem var(--body);min-width:0;max-width:100%}
+.rx-quick select{font:500 .95rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:10px;padding:8px 10px;max-width:100%;min-width:0}
 .rx-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .rx-step{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:minmax(0,1fr);gap:10px;align-content:start;min-width:0}
 .rx-hd{display:flex;align-items:baseline;gap:12px}

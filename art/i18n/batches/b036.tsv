@@ -1,0 +1,150 @@
+# quay-pha.html (2) — tìm gu, quy tắc, chỉnh vị, trạm, công thức
+216d7765e ||| How do you like your coffee? ||| どんなコーヒーが好きですか？ ||| 你喜欢什么样的咖啡？
+4c09082c5 ||| Balanced, easy to drink ||| バランスがよく飲みやすい ||| 平衡，易入口
+a5f43122d ||| Clean, lightly aromatic ||| すっきりして香りは軽やか ||| 清爽，香气淡雅
+f9eca8c71 ||| What do you drink it with? ||| 何を入れて飲みますか？ ||| 你搭配什么喝？
+4d0c0faff ||| Black ||| ブラック ||| 黑咖啡
+0ac45a057 ||| Condensed milk, sweet and rich ||| 練乳、甘くてコクがある ||| 炼乳，香甜浓郁
+363322f91 ||| Fresh milk, gentle ||| 牛乳、やさしい味 ||| 鲜奶，口感柔和
+53eab413b ||| When do you usually drink it? ||| いつもいつ飲みますか？ ||| 你通常什么时候喝？
+15ab537d1 ||| Morning, need to wake up ||| 朝、目を覚ましたい ||| 早上，需要提神
+bef66dcec ||| Afternoon, to relax ||| 午後、くつろぎたい ||| 下午，放松一下
+63489e621 ||| Hot weather, want something cool ||| 暑い日、ひんやりしたい ||| 天热，想清凉一下
+9db8a3638 ||| Evening, worried about staying up late ||| 夕方以降、夜ふかしが心配 ||| 傍晚，怕睡不着
+ecf2b122d ||| What equipment do you have? ||| どんな器具がありますか？ ||| 你有什么器具？
+f78736a2f ||| Dripper, press ||| ドリッパー、プレス ||| 滤杯、压壶
+b778de014 ||| None yet, I drink at cafés ||| まだない、カフェで飲む ||| 还没有，在咖啡馆喝
+1bf123ffc ||| Do you prefer familiar or new? ||| なじみの味と新しい味、どちらが好きですか？ ||| 你喜欢熟悉的还是新奇的？
+9181a54fb ||| Familiar taste ||| なじみの味 ||| 熟悉的味道
+89d806642 ||| Try something new ||| 新しい味を試す ||| 尝试新口味
+598f662e5 ||| you like a bold taste ||| 濃い味が好き ||| 你喜欢浓郁的口味
+2b32d768d ||| you like a balanced taste ||| バランスのよい味が好き ||| 你喜欢平衡的口味
+a660a1cd1 ||| you like a light, clean taste ||| すっきりした味が好き ||| 你喜欢清爽的口味
+c2917925a ||| you drink it black ||| ブラックで飲む ||| 你喝黑咖啡
+d97193082 ||| it goes with condensed milk ||| 練乳に合う ||| 适合加炼乳
+f80913dda ||| it goes with fresh milk ||| 牛乳に合う ||| 适合加鲜奶
+a760029f1 ||| it suits the morning ||| 朝に合う ||| 适合早上
+bb2df0b52 ||| it suits the afternoon ||| 午後に合う ||| 适合下午
+e51cad987 ||| it's cooling in hot weather ||| 暑い日にひんやり ||| 天热时清凉
+1b88f1ee7 ||| it's gentle, best in a small cup ||| 刺激が少なく、小さめのカップがおすすめ ||| 不刺激，宜选小杯
+1c6e0ac33 ||| it can be made with a phin ||| フィンで淹れられる ||| 可以用滴滤壶冲
+9640c79b0 ||| it's made with a machine ||| マシンで淹れる ||| 用咖啡机冲
+c1b9ea994 ||| it's made with a filter dripper ||| フィルター器具で淹れる ||| 用滤杯器具冲
+41dd0ebb7 ||| it's easy to order at a café ||| カフェで頼みやすい ||| 在咖啡馆容易点到
+efbc30945 ||| it's a familiar taste ||| なじみのある味 ||| 熟悉的味道
+7069c02d3 ||| it's a change from the usual ||| いつもと違う味 ||| 比平常新奇
+6f4a899e7 ||| Use a 0.1 g scale for coffee and water. ||| コーヒーと水には0.1 g単位のはかりを使う。 ||| 咖啡和水都用精度0.1克的秤。
+105b7043a ||| Clean, odorless filtered water. Hot water at 90–96 °C. ||| においのないきれいな浄水を使う。湯は90〜96 °C。 ||| 使用干净无异味的过滤水。热水90–96 °C。
+b8067fbca ||| Grind right before brewing. Each method has its own grind size. ||| 淹れる直前に挽く。抽出方法ごとに挽き目が違う。 ||| 冲煮前才研磨。每种冲法有各自的研磨度。
+bb570c74d ||| Preheat ||| 温める ||| 预热
+6631f9170 ||| Rinse cups, phins and drippers with hot water before brewing. ||| 淹れる前にカップ、フィン、ドリッパーを湯ですすぐ。 ||| 冲煮前用热水冲烫杯子、滴滤壶和滤杯。
+33bf40685 ||| Cleaning ||| 清掃 ||| 清洁
+dd5998c4f ||| Flush the machine before and after every cup and wipe the steam wand right away. ||| 1杯ごとに前後でマシンの湯を流し、スチームノズルはすぐに拭く。 ||| 每杯前后都冲洗冲煮头，蒸汽棒用完立即擦拭。
+e7a2048c7 ||| Storing coffee ||| コーヒーの保存 ||| 咖啡保存
+6ed69f9ae ||| Sealed bag with a valve, kept cool. Use within a few weeks of opening. ||| バルブ付きの密閉袋で涼しい場所に。開封後は数週間以内に使う。 ||| 带阀密封袋，阴凉存放。开封后几周内用完。
+b765fe0e1 ||| Cold drinks ||| コールドドリンク ||| 冷饮
+f3adc305c ||| Keep cold brew in the refrigerator, labeled with the brew date. ||| コールドブリューは冷蔵庫で保存し、ラベルに抽出日を書く。 ||| 冷萃放冰箱保存，标签写明冲泡日期。
+6dd1da9b6 ||| Sour, weak ||| 酸っぱく薄い ||| 酸、淡
+c19386250 ||| Underextraction: grind too coarse, water too cool, brewed too fast ||| 抽出不足：挽き目が粗い、湯がぬるい、抽出が速い ||| 萃取不足：研磨太粗、水温太低、冲得太快
+68a7994a6 ||| Grind finer, use hotter water, extend the time ||| 細かく挽き、湯を熱くし、時間を延ばす ||| 磨细些，提高水温，延长时间
+eb9e09bc9 ||| Bitter, astringent ||| 苦く渋い ||| 苦、涩
+434065996 ||| Overextraction: grind too fine, steeped too long ||| 過抽出：挽き目が細かい、浸しすぎ ||| 过度萃取：研磨太细、浸泡太久
+10fb3e3ac ||| Grind coarser, shorten the time ||| 粗く挽き、時間を短くする ||| 磨粗些，缩短时间
+ffab6c1ee ||| Phin won't drip ||| フィンから落ちない ||| 滴滤壶不滴
+9177bd359 ||| Ground too fine or pressed too tight ||| 挽き目が細かすぎるか、押さえすぎ ||| 磨得太细或压得太紧
+1491cd1f5 ||| Grind coarser, set the press lid lightly ||| 粗く挽き、中ぶたを軽くのせる ||| 磨粗些，压盖轻放
+6f00f8f39 ||| Phin drips fast, weak ||| フィンの落ちが速く薄い ||| 滴滤太快、太淡
+2d00ab6f9 ||| Ground coarse, too little coffee ||| 挽き目が粗い、コーヒーが少ない ||| 研磨粗、咖啡少
+8bbb34aba ||| More coffee, moderate pressing ||| 量を増やし、適度に押さえる ||| 增加粉量，适度压实
+7b5b353c3 ||| Espresso without crema ||| クレマのないエスプレッソ ||| 意式浓缩没有油脂
+878ac5764 ||| Beans too old, not enough pressure ||| 豆が古すぎる、圧力不足 ||| 豆子太陈，压力不足
+59e850868 ||| Use fresh beans, check the machine ||| 新しい豆を使い、マシンを点検する ||| 使用新鲜豆子，检查机器
+d7969b039 ||| Big bubbles, off smell ||| 泡が粗く、臭みがある ||| 奶泡粗大，有腥味
+cdbc5714b ||| Milk too hot, wand in the wrong position ||| 牛乳が熱すぎる、ノズルの位置が悪い ||| 牛奶过热，蒸汽棒位置不对
+0e26999be ||| Stop at 60–65 °C, keep the wand just below the surface ||| 60〜65 °Cで止め、ノズルを牛乳の表面近くに保つ ||| 在60–65 °C停止，蒸汽棒贴近奶面
+361fe11df ||| {1} s ||| {1}秒 ||| {1}秒
+5ace79c77 ||| Grinder and scale ||| グラインダーとはかり ||| 磨豆机和秤
+4c8d58f8a ||| Espresso machine ||| エスプレッソマシン ||| 意式咖啡机
+51e267d96 ||| Dripper ||| ドリッパー ||| 滤杯
+98af178ad ||| Press, moka pot ||| プレス、モカポット ||| 压壶、摩卡壶
+6b3013ef9 ||| Milk, ice, cream ||| 牛乳・氷・クリーム ||| 牛奶、冰、奶油
+0d2834053 ||| Serving tray ||| サービングトレイ ||| 出品托盘
+914b3533c ||| Brew bar model · recipes are starting points ||| ブリューバーのモデル · レシピは試作の目安 ||| 吧台模型 · 配方为试做基准
+ad69a7d02 ||| Weigh {1} g · {2} ||| {1} gを計量 · {2} ||| 称{1} g · {2}
+79b432dd3 ||| Machine · {1} g espresso ||| マシン · エスプレッソ{1} g ||| 咖啡机 · 意式浓缩{1} g
+23b2c87b9 ||| Phin · {1} ml water ||| フィン · 湯{1} ml ||| 滴滤壶 · 水{1} ml
+f8dd2d914 ||| Filter · {1} ml ||| フィルター · {1} ml ||| 滤杯 · {1} ml
+63453705d ||| Press · {1} ml ||| プレス · {1} ml ||| 压壶 · {1} ml
+f1e402f69 ||| {1} ml milk ||| 牛乳{1} ml ||| 牛奶{1} ml
+c95ec67d3 ||| {1} ml condensed milk ||| 練乳{1} ml ||| 炼乳{1} ml
+8bd8b2b60 ||| {1} g ice ||| 氷{1} g ||| 冰{1} g
+543783b1f ||| CUP STRUCTURE ||| カップの構造 ||| 杯中结构
+013fd3f4b ||| Step {1} ||| ステップ{1} ||| 第{1}步
+d2149093a ||| This drink doesn't use this station. ||| このドリンクではこのステーションを使いません。 ||| 这款饮品不用这个站点。
+2fcfb1db9 ||| Step-by-step method ||| 手順ごとの淹れ方 ||| 分步冲法
+16c3f8c29 ||| Why it's done this way ||| なぜそうするのか ||| 为什么这样做
+3f257ea5d ||| of ||| / ||| /
+3bfa15178 ||| A 250 g pack makes {1} cups ||| 250 g袋で{1}杯 ||| 250克一包可冲{1}杯
+4e42a799a ||| 8-station bar, now making {1} ||| 8ステーションのバー、{1}を抽出中 ||| 8站吧台，正在冲{1}
+43ea7bdbc ||| 9 bar of pressure pushes water through the tamped coffee in about 30 seconds. Oils and gases form the crema, so the cup is small but very strong. Too fast tastes sour; too slow tastes bitter. ||| 9気圧の圧力で、押し固めたコーヒーに約30秒かけて湯を通します。油分とガスがクレマになり、小さくてもとても濃い1杯になります。速すぎると酸っぱく、遅すぎると苦くなります。 ||| 9巴的压力在约30秒内把水压过压实的咖啡粉。油脂和气体形成crema，所以杯量小却非常浓。流得太快会酸，太慢会苦。
+78dc0ab28 ||| Gravity pulls the water through the coffee very slowly. The bloom lets the coffee swell and release gas so the water that follows soaks in evenly. Because the coffee ratio is high, a phin cup is stronger and fuller than filter coffee. ||| 重力でゆっくりと湯がコーヒーを通ります。蒸らしでコーヒーが膨らんでガスが抜け、その後の湯が均一に染み込みます。コーヒーの比率が高いので、フィンの1杯はフィルターコーヒーより濃く、厚みがあります。 ||| 重力让水非常缓慢地穿过咖啡粉。闷蒸让咖啡粉膨胀排气，使之后的水均匀渗透。由于咖啡比例高，滴滤壶咖啡比手冲更浓更醇厚。
+1becbe10b ||| Cold water dissolves slowly, so it takes many hours. Fewer sour and bitter compounds are extracted, so the cup is cool, rounded and easy to drink. ||| 冷たい水は溶かすのが遅いので、何時間もかかります。酸味や苦みの成分が抽出されにくいため、ひんやりとまろやかで飲みやすい1杯になります。 ||| 冷水溶解得慢，所以需要很多小时。酸和苦的物质萃取得更少，因此口感清凉、圆润、易入口。
+1a85a0377 ||| A high water ratio makes the cup light with clear aromas. Paper filters hold back the oils, so the taste is clean, while a press keeps the oils, so the body is fuller. ||| 水の比率が高いと、軽くて香りのはっきりした1杯になります。ペーパーフィルターは油分を通さないので味がクリアに、プレスは油分を残すのでボディが厚くなります。 ||| 水比例高，杯中口感轻、香气清晰。滤纸会挡住油脂，所以味道干净；压壶保留油脂，所以更醇厚。
+3fed8c2b7 ||| Grind right before brewing to keep the aroma. Weigh the exact grams before each cup. ||| 香りを保つため淹れる直前に挽く。1杯ごとに正確にグラムを量る。 ||| 冲煮前才研磨以保留香气。每杯前准确称克数。
+9edbfcb46 ||| The portafilter needs a level tamp. At about 9 bar, the coffee flows in a thin stream like a mouse's tail. ||| ポルタフィルターは平らにタンピングする。約9気圧で、コーヒーはネズミのしっぽのような細い流れで落ちる。 ||| 手柄里的粉要压平。压力约9巴时，咖啡呈老鼠尾巴般的细流。
+a19e02a96 ||| A clean phin, with the press lid set just firm enough. Pour the water in two stages so the coffee blooms evenly. ||| フィンは清潔に、中ぶたはほどよい力で。湯は2回に分けて注ぎ、コーヒーを均一に膨らませる。 ||| 滴滤壶要干净，压盖松紧适中。分两次注水，让咖啡均匀膨胀。
+0019e71aa ||| Rinse the paper filter with hot water first. Pour slowly in circles and don't pour directly onto the paper wall. ||| ペーパーフィルターは先に湯ですすぐ。円を描くようにゆっくり注ぎ、紙の壁に直接かけない。 ||| 先用热水冲洗滤纸。慢慢绕圈注水，不要直接冲到滤纸壁上。
+d4703c4cb ||| Each tool has its own grind size and time; see the steps on the left. ||| 器具ごとに挽き目と時間が違うので、左の手順を見てください。 ||| 每种器具有各自的研磨度和时间，请看左侧步骤。
+6e0c37cbf ||| Keep it cold throughout. Jars and tools must be clean, with the brew date on the label. ||| 全工程で冷たさを保つ。容器と器具は清潔にし、ラベルに抽出日を書く。 ||| 全程保持低温。瓶子和器具必须干净，标签写明冲泡日期。
+0ee3a04cb ||| Condensed milk brings sweet richness, fresh milk lightness, and ice cools the drink and gradually dilutes it. ||| 練乳は甘いコク、牛乳は軽さを加え、氷は冷やしながら少しずつ薄めます。 ||| 炼乳带来香甜浓郁，鲜奶带来轻盈，冰块降温并逐渐稀释。
+445229d7b ||| Serve right away to keep the aroma. Warm hot-drink cups before pouring. ||| 香りを保つためすぐに提供する。ホット用のカップは注ぐ前に温める。 ||| 立即出品以保留香气。热饮杯在倒入前先烫杯。
+9900d8257 ||| drinks ||| 品 ||| 款
+d3c4c3f32 ||| Less sweet ||| 甘さ控えめ ||| 少甜
+d9e3881ac ||| Needed for {1} cups ||| {1}杯分に必要な量 ||| {1}杯所需
+6c35f67d9 ||| Chocolate sauce ||| チョコレートソース ||| 巧克力酱
+c5f2d5147 ||| Coffee used ||| 使うコーヒー ||| 所用咖啡
+4497ff6a6 ||| Robusta has more caffeine than Arabica, so drink it in moderation. ||| RobustaはArabicaよりカフェインが多いので、ほどほどに。 ||| Robusta的咖啡因比Arabica高，请适量饮用。
+a790972d8 ||| Drink in moderation. ||| ほどほどに。 ||| 请适量饮用。
+1896abc02 ||| <1>! Stronger cup</1>Coffee {1} g. {2} ||| <1>! 濃いめの1杯</1>コーヒー{1} g。{2} ||| <1>! 更浓的一杯</1>咖啡{1} g。{2}
+235f536aa ||| light ||| 軽め ||| 轻
+quay-pha.html::235f536aa ||| light ||| 軽め ||| 清淡
+922d581c9 ||| standard ||| 標準 ||| 标准
+372377ba7 ||| <1>✓ {1} recipe</1>{2} g of coffee per cup. One 250 g pack makes about {3} cups. ||| <1>✓ {1}のレシピ</1>1杯あたりコーヒー{2} g。250 gの袋1つで約{3}杯。 ||| <1>✓ {1}配方</1>每杯咖啡{2} g。一包250克约可冲{3}杯。
+0f544ce9b ||| Bold & bitter ||| 濃さ・苦み ||| 浓苦
+6456f618c ||| Sweet & rich ||| 甘み・コク ||| 甜润
+57025962b ||| Full body ||| 厚いボディ ||| 醇厚
+42e3a62ac ||| Aroma ||| 香り ||| 香气
+9ad55a56c ||| Farm character ||| 産地らしさ ||| 产地风味
+4d782e525 ||| RECIPE: {1} · {2} cups ||| レシピ：{1} · {2}杯 ||| 配方：{1} · {2}杯
+ecad655f3 ||| Coffee: {1}, roast: {2} ||| コーヒー：{1}、焙煎：{2} ||| 咖啡：{1}，烘焙：{2}
+0efdcd89d ||| Coffee: {1} g, {2} grind ||| コーヒー：{1} g、{2} ||| 咖啡：{1} g，{2}研磨
+a0d7b630f ||| Water: {1} ml, {2} ||| 水：{1} ml、{2} ||| 水：{1} ml，{2}
+c6c572b9b ||| Fresh milk: {1} ml ||| 牛乳：{1} ml ||| 鲜奶：{1} ml
+aa34ca405 ||| Condensed milk: {1} ml ||| 練乳：{1} ml ||| 炼乳：{1} ml
+b9999fb73 ||| Salted cream: {1} ml ||| 塩クリーム：{1} ml ||| 咸奶盖：{1} ml
+f7a1bb65b ||| Chocolate sauce: {1} ml ||| チョコレートソース：{1} ml ||| 巧克力酱：{1} ml
+cfe21e1db ||| Ice: {1} g ||| 氷：{1} g ||| 冰：{1} g
+ea71613be ||| ml fresh milk ||| ml 牛乳 ||| 毫升鲜奶
+306a0bd7b ||| ml condensed milk ||| ml 練乳 ||| 毫升炼乳
+b84095bbe ||| it's easy to drink ||| 飲みやすい ||| 容易入口
+5dee02d57 ||| Also try ||| こちらもおすすめ ||| 也可以试试
+06b8db444 ||| In the evening, choose a small cup. ||| 夜は小さめのカップを。 ||| 晚上宜选小杯。
+83e432124 ||| Your taste matches ||| あなたの好みに合うのは ||| 适合你口味的是
+5dad16214 ||| Why it suits you: {1}. ||| おすすめの理由：{1}。 ||| 推荐理由：{1}。
+6cba22027 ||| See how to make it ||| 淹れ方を見る ||| 查看冲法
+111b7e7f3 ||| Copy to message MeDili ||| コピーしてMeDiliに送る ||| 复制后发给MeDili
+c00b0ff80 ||| {1}Robusta has nearly twice the caffeine of Arabica. Healthy adults should stay under 400 mg of caffeine a day, and pregnant women under 200 mg. ||| {1}RobustaのカフェインはArabicaのほぼ2倍です。健康な成人は1日400 mg未満、妊娠中の方は200 mg未満が目安です。 ||| {1}Robusta的咖啡因几乎是Arabica的两倍。健康成年人每天咖啡因摄入应低于400毫克，孕妇低于200毫克。
+d047251a3 ||| Hi MeDili, I just took the taste quiz. My suggestion is {1}, using {2}. Could you advise me? ||| MeDiliさん、こんにちは。好み診断をしました。おすすめは{1}で、{2}を使います。相談に乗っていただけますか。 ||| MeDili你好，我刚做了口味测试。推荐给我的是{1}，用{2}。请帮我参谋一下。
+e7f48a0ed ||| Copied. Paste it into MeDili's Zalo. ||| コピーしました。MeDiliのZaloに貼り付けてください。 ||| 已复制，请粘贴到MeDili的Zalo。
+db09b6e69 ||| Bold and bitter ||| 濃くて苦い ||| 浓而苦
+fce3cf258 ||| Instant wake-up, full body ||| すぐに目が覚める、厚いボディ ||| 立刻提神，醇厚
+89d8d0976 ||| Sweet and rich ||| 甘くてコクがある ||| 香甜浓郁
+e53eb09de ||| Familiar, easy to drink ||| なじみがあり飲みやすい ||| 熟悉，易入口
+0a2b59a11 ||| Light with fresh milk ||| 牛乳で軽やか ||| 鲜奶清爽
+14a623d09 ||| Smooth, less bitter ||| まろやかで苦みが少ない ||| 柔和，少苦
+01b8cc200 ||| Clean and aromatic ||| すっきりして香り高い ||| 清爽芬芳
+83e1dbfb2 ||| Clear farm aromas ||| 産地の香りがはっきり ||| 产地香气鲜明
+96cf30bc0 ||| Ice-cold ||| ひんやり ||| 冰凉
+5a7a8635c ||| Rounded, less harsh ||| まろやかで刺激が少ない ||| 圆润，不刺激
+9364e4f64 ||| Brew again ||| もう一度淹れる ||| 重新冲煮
+849799dea ||| Bar sounds: ||| バーの音： ||| 吧台声音：

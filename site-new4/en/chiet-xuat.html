@@ -1,0 +1,1184 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Brew time decides which compounds reach the cup: acids and CGA come out first, sugars and Maillard compounds in the middle, bitter compounds last. An extraction model for phin, French press, pour-over, espresso and cold brew, with a translation and explanations."><meta property="og:title" content="MeDili Extraction Machine"><meta property="og:description" content="Brew time decides which compounds reach the cup: acids and CGA come out first, sugars and Maillard compounds in the middle, bitter compounds last. An extraction model for phin, French press, pour-over, espresso and cold brew, with a translation and explanations."><style>*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style><title>MeDili Extraction Machine</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap">
+<style>
+/* Layout: bản vẽ isometric bên trái, bàn điều khiển bên phải, bảng công thức bên dưới. */
+:root{
+  --bg:#EFE4D2;--panel:#FDFAF2;--tint:#F5E7CF;--ink:#4A2C1A;--muted:#6B5C50;--rule:#CFC4AE;
+  --accent:#9E3B26;--on-accent:#FFF6EC;--moss:#2C6A48;--copper:#B8894A;--copper2:#8D4E22;
+  --s1:#D9D5CB;--s2:#B7B2A7;--s3:#8E897E;--deck:#8C8378;--deck2:#6F675D;--deck3:#5A534A;
+  --water:#9CCBD3;--jacket:#7FB2BC;--burlap:#CDB184;--wood:#C69A62;--wood2:#A67B47;
+  --ol:#2A1B16;--good:#2C6A48;--warn:#9A6200;--bad:#A3202F;
+  --display:"Big Shoulders Display","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --sign:"Playfair Display",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17110E;--panel:#221A15;--tint:#34271C;--ink:#F3E9DA;--muted:#B9AA99;--rule:#4B3D31;
+  --accent:#EC6E84;--on-accent:#2A0A12;--moss:#83CBA3;--copper:#CF8850;--copper2:#A0602F;
+  --s1:#8D8981;--s2:#6F6B64;--s3:#55514B;--deck:#57504A;--deck2:#46403A;--deck3:#37322D;
+  --water:#6AA3AE;--jacket:#4F8894;--burlap:#A58A62;--wood:#A07B4D;--wood2:#7E5D35;
+  --ol:#120C09;--good:#83CBA3;--warn:#E7B55B;--bad:#F08A92;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--body)}
+.wrap{max-width:1560px;margin:auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header h1{font:800 clamp(2.5rem,6vw,4.2rem)/1.08 var(--display);margin:0;letter-spacing:.005em;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--accent)}
+header p{margin:8px 0 0;max-width:74ch;color:var(--muted)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px;min-width:0}
+.fighead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.fighead b{font:800 1.3rem/1.2 var(--display);color:var(--accent);letter-spacing:.02em}
+.fighead span{color:var(--muted);font-size:.86rem}
+.scroller{overflow-x:auto;margin-top:6px;-webkit-overflow-scrolling:touch}
+#scene{display:block;width:100%;min-width:780px;height:auto}
+.btn,.pill{font:600 .9rem/1.2 var(--body);border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 14px;cursor:pointer}
+.pill{padding:8px 13px;border-color:var(--rule)}
+.pill[aria-pressed="true"],.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.small{padding:6px 12px;font-size:.8rem}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 4px}
+.strip button{flex:0 0 auto;font:600 .82rem/1.2 var(--body);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer}
+.strip button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.strip button.off{opacity:.5;text-decoration:line-through}
+#detail{margin-top:10px;border:2px solid var(--accent);border-radius:14px;padding:14px 16px}
+.dh{display:flex;gap:12px;align-items:center}
+.dn{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:800 1.5rem var(--display)}
+.dh h2{font:800 1.75rem/1.15 var(--display);margin:0;letter-spacing:.01em}
+.dh small{display:block;color:var(--muted);font:500 .8rem var(--body)}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 24px;margin-top:10px}
+.dgrid p{margin:0 0 8px}
+.lbl{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+dl.kv{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:.9rem}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.ctl h3{font:600 1rem var(--body);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.head2 small{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--rule);margin:14px 0}
+#route{font-weight:700;color:var(--moss);margin:4px 0 0;line-height:1.45}
+#routeNote{font-size:.84rem;color:var(--muted);margin:4px 0 0}
+.sl{margin-top:12px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.sl output{font:700 1.02rem var(--mono);color:var(--accent);white-space:nowrap}
+.sl input,#scrub{width:100%;accent-color:var(--accent);margin:6px 0 0;display:block}
+.sl p{margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.stat{background:var(--tint);border-radius:10px;padding:8px 10px;min-width:0}
+.stat span{display:block;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.stat b{font:700 1.18rem var(--mono);font-variant-numeric:tabular-nums}
+#verdict{margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.88rem;line-height:1.5}
+#verdict b{display:block}
+#verdict.good b{color:var(--good)}#verdict.warn b{color:var(--warn)}#verdict.bad b{color:var(--bad)}
+.charts{display:grid;gap:4px;margin-top:8px}
+.ch{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+.ch text{font:500 10px var(--mono);fill:var(--muted);stroke:none}
+.ch .ttl{font:600 11px var(--body);fill:var(--ink)}
+#tip{font:500 .82rem var(--mono);min-height:1.4em;margin-top:2px}
+.bars{display:grid;gap:5px;margin-top:6px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:.82rem}
+.bar i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--copper)}
+.bar.risk i{background:var(--bad)}
+.bar span:last-child{font:500 .78rem var(--mono);text-align:right}
+.track{background:var(--tint);border-radius:0 4px 4px 0}
+details{margin-top:8px;font-size:.86rem}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.84rem}
+th,td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+section>h2{font:800 2.05rem/1.15 var(--display);margin:0 0 4px;letter-spacing:.01em;text-wrap:balance}
+section>.lead{color:var(--muted);margin:0 0 12px;max-width:74ch}
+.sop{list-style:none;margin:0;padding:0;display:grid}
+.sop li{display:grid;grid-template-columns:44px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px 18px;padding:12px 0;border-top:1px solid var(--rule)}
+.sop .n{font:800 1.9rem/1 var(--display);color:var(--accent)}
+.sop h3{margin:0 0 2px;font-size:1rem}
+.sop p{margin:0;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+.calc input{font:700 1.1rem var(--mono);padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#sheet{white-space:pre-wrap;font:500 .82rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:12px 0 10px;overflow-wrap:anywhere}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:6px}
+.flow2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 28px}
+.mrow{display:grid;grid-template-columns:150px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:5px 0;font-size:.9rem;border-bottom:1px solid var(--rule)}
+.mrow b{font:700 .95rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.mrow small{grid-column:2/4;color:var(--muted);font-size:.78rem;margin-top:-4px}
+.mbar{height:12px;background:var(--tint);border-radius:0 4px 4px 0}.mbar i{display:block;height:100%;min-width:2px;background:var(--copper);border-radius:0 4px 4px 0}
+.mrow.prod .mbar i{background:var(--accent)}.mrow.prod{font-weight:600}
+.need{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tag rect{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}.tag text{font:700 12px var(--mono)!important}.tag.big rect{fill:var(--accent)}.tag.big text{fill:var(--on-accent)!important;font-size:13px!important}
+.src{font-size:.85rem;color:var(--muted)}.src a{color:var(--moss)}
+.src ul{margin:6px 0 0;padding-left:18px}
+footer{font:italic 600 1.15rem var(--sign);text-align:center;color:var(--accent);padding-top:6px}
+.brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px;font-size:.9rem;color:var(--muted)}
+.brandbar b{font:italic 600 1.15rem var(--sign);color:var(--accent)}
+.brandbar a{color:var(--moss);font-weight:600}
+.contact{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px 32px;align-items:center;background:var(--accent);color:var(--on-accent);border-radius:16px;padding:24px}
+.contact h2{font:italic 600 clamp(1.8rem,4vw,2.5rem)/1.2 var(--sign);margin:0}
+.contact .tagline{font:600 1.05rem var(--body);margin:2px 0 8px}
+.contact p{margin:0;max-width:60ch}
+.zalo{display:grid;gap:8px;min-width:0}
+.zalo span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.zalo strong{font:700 clamp(1.5rem,4vw,2rem) var(--mono);user-select:all;overflow-wrap:anywhere}
+.zalo div{display:flex;flex-wrap:wrap;gap:8px}
+.zalo a,.zalo button{font:600 .9rem/1.2 var(--body);border-radius:999px;padding:10px 16px;border:1px solid var(--on-accent);cursor:pointer;text-decoration:none}
+.zalo a{background:var(--on-accent);color:var(--accent)}
+.zalo button{background:transparent;color:var(--on-accent)}
+.zalo a:focus-visible,.zalo button:focus-visible{outline-color:var(--on-accent)}
+@media (max-width:820px){.contact{grid-template-columns:minmax(0,1fr)}}
+/* scene */
+#scene .m polygon,#scene .m path,#scene .m ellipse,#scene .m circle,#scene .m line,#scene .m polyline{stroke:var(--ol);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+#scene text{font-family:var(--body);fill:var(--ink);stroke:none}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.dk1{fill:var(--deck)}.dk2{fill:var(--deck2)}.dk3{fill:var(--deck3)}
+.cu{fill:var(--copper)}.cu2{fill:var(--copper2)}.wa{fill:var(--water)}.ja{fill:var(--jacket)}.bu{fill:var(--burlap)}.wo{fill:var(--wood)}.wo2{fill:var(--wood2)}.pa{fill:var(--panel)}.no{fill:none}.ac{fill:var(--accent)}
+.st{cursor:pointer;transition:opacity .25s}
+.st:focus{outline:none}.st:focus-visible .focusring{stroke:var(--moss);stroke-width:3;fill:none;visibility:visible}
+.focusring{visibility:hidden}
+.st:hover polygon,.st:hover path{stroke-width:1.8}
+.st.on polygon,.st.on path,.st.on ellipse{stroke:var(--accent)!important;stroke-width:2.2}
+.st.off{opacity:.3}
+.chip{cursor:pointer}
+.chip rect{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.chip text{font-size:13px;font-weight:600}
+.chip circle{fill:var(--accent);stroke:none}
+.chip .num{fill:var(--on-accent)!important;font:800 15px var(--display)!important}
+.chip.on rect{fill:var(--accent);stroke:var(--accent)}.chip.on .lab{fill:var(--on-accent)!important}
+.chip.on circle{fill:var(--on-accent)}.chip.on .num{fill:var(--accent)!important}
+.chip.off{opacity:.42}
+.lead-l{stroke:var(--ink);stroke-width:1;fill:none;opacity:.55}
+.lead-l.on{stroke:var(--accent);stroke-width:2;opacity:1}
+.wire{stroke:var(--accent);stroke-width:3;fill:none;stroke-linejoin:round}
+.belt-d{stroke:var(--panel);stroke-width:2;stroke-dasharray:10 16;fill:none;opacity:.7}
+.flow{stroke:var(--panel);stroke-width:2;stroke-dasharray:6 8;fill:none}
+.inset rect.b{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.inset .c rect{fill:transparent;stroke:none}
+.inset .c.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.inset .c.off{opacity:.35}
+.tiny{font-size:11px!important}.lab12{font-size:12px!important;font-weight:600}.mutedt{fill:var(--muted)!important}
+.sgn{font:italic 600 15px var(--sign)!important;fill:#2A1B16!important}
+.sgn2{font:italic 600 16.5px var(--sign)!important;fill:var(--accent)!important}
+.mono{font-family:var(--mono)!important;font-weight:700}
+@media (max-width:1180px){.bench{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.flow2{grid-template-columns:minmax(0,1fr)}.mrow{grid-template-columns:104px minmax(0,1fr) 84px}.dgrid,.cols{grid-template-columns:minmax(0,1fr)}.sop li{grid-template-columns:36px minmax(0,1fr)}.sop li>p,.sop li>div.x{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.st{transition:none}}
+
+.rich td{white-space:normal;min-width:110px;vertical-align:top}.rich th{white-space:nowrap}
+.rich td small{color:var(--muted)}
+tr.pick{cursor:pointer}tr.pick:hover td{background:var(--tint)}tr.pick.on td{background:var(--tint);box-shadow:inset 0 -2px 0 var(--accent)}
+.sw{display:inline-block;width:30px;height:18px;border-radius:50%;border:1px solid var(--ink)}
+.rich td:first-child:has(.sw){min-width:44px}
+.bagt{font:italic 600 7px var(--sign)!important;fill:#3A2416!important}
+.lv.on rect{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}
+.ch{touch-action:pan-y}
+
+.inl{color:var(--moss);font-weight:600}
+.quiz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 28px;align-items:start}
+.q{border:0;padding:0;margin:0 0 14px;min-width:0}.q legend{padding:0;font-weight:600}
+.res{background:var(--tint);border-radius:14px;padding:16px}.res h3{font:800 2rem/1.1 var(--display);margin:2px 0 4px;color:var(--accent)}
+.res p{margin:6px 0}.rp{font-weight:600}.rp small{font-weight:400;color:var(--muted)}
+.tinyn{font-size:.78rem;color:var(--muted)}
+.gumap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gm{border-top:3px solid var(--copper);padding-top:8px}.gm h3{margin:0;font:800 1.3rem var(--display)}.gm small{color:var(--muted)}
+ol.steps{margin:0 0 8px;padding-left:20px}ol.steps li{margin-bottom:4px;font-size:.9rem}ol.steps li.on{font-weight:700;color:var(--accent)}
+.sop.tight li{grid-template-columns:36px minmax(0,1fr)}.sop.tight .n{font-size:1.5rem}
+.st.off{opacity:.45}
+@media (max-width:820px){.quiz{grid-template-columns:minmax(0,1fr)}}
+
+:root{--ground:#8FA65E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#5D7340}}
+:root[data-theme="dark"]{--ground:#5D7340}
+.mths button{min-width:52px}
+.sgn3{font:italic 600 13.5px var(--sign)!important;fill:var(--accent)!important}
+.sgn{font-size:18px}
+.calc.three{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-bottom:12px}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px}
+.calc input{font-size:.95rem}
+
+:root{--floor:#C69A62;--wall:#EFE3CD}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--floor:#6B4F31;--wall:#3A2D22}}
+:root[data-theme="dark"]{--floor:#6B4F31;--wall:#3A2D22}
+.shophead{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}.shophead>div:last-child{flex:1 1 320px;min-width:0}
+.logoP{background:#F6F0E4;border-radius:12px;padding:8px 12px;display:inline-block}.logoP img{display:block;height:auto;max-width:100%}
+.flow{list-style:none;display:flex;flex-wrap:wrap;gap:6px 24px;padding:0;margin:0;counter-reset:f;font-weight:600;font-size:.9rem;color:var(--muted)}
+.flow li{counter-increment:f}.flow li::before{content:counter(f) ". ";color:var(--accent)}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:0}
+.whob{text-align:left;padding:12px 16px;border:2px solid var(--rule);border-radius:12px;background:var(--panel);color:var(--ink);cursor:pointer;font:inherit}
+.whob b{display:block;font-size:1.02rem}.whob small{color:var(--muted)}.whob.on{border-color:var(--accent)}
+.ah{font:800 1.45rem var(--display);margin:0 0 8px}
+.ctl{min-width:0}.ctl .card{padding:14px}
+.recbox{background:var(--tint);border-radius:12px;padding:10px;margin-top:12px;display:grid;gap:6px}
+.recb{text-align:left;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:7px 10px;color:var(--ink);cursor:pointer;font:inherit}.recb b{display:block;font-size:.9rem}.recb small{color:var(--muted)}.recb.on{border-color:var(--accent)}
+.line{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule)}.line small{display:block;color:var(--muted)}
+.qty{display:flex;align-items:center;gap:6px;white-space:nowrap}.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+a.btn{text-decoration:none;display:inline-block}
+.bagn{font:italic 600 6.5px var(--sign)!important;fill:#4A2A1A!important}.bagn2{font:700 4.6px var(--body)!important;fill:#A23B24!important}
+.bag.off{opacity:.25}.bag.on polygon{stroke:var(--accent)!important;stroke-width:2.4}
+.bench{align-items:start}
+.sgn3{font:italic 600 13px var(--sign)!important;fill:var(--accent)!important}
+.tag.big rect{fill:var(--accent)}
+
+.sent{margin-top:10px;background:var(--tint);border-radius:12px;padding:12px}.sent>b{display:block;margin-bottom:4px}
+.ordertxt{white-space:pre-wrap;overflow-wrap:anywhere;font:500 .78rem/1.5 var(--mono);margin:6px 0 0;user-select:all}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}.qrs svg{display:block;width:100%;height:auto;border-radius:6px}.qrs small{display:block;text-align:center;margin-top:4px;color:var(--muted)}
+:root{--skin:#EBC9A6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--skin:#8C6A4D}}:root[data-theme="dark"]{--skin:#8C6A4D}
+.need.four{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.ctl .card{padding:16px}
+
+.lgw{display:block;margin:30px 34px 26px 0;max-width:calc(100% - 34px)}.lgw img{display:block;height:auto;max-width:100%}.lgw .lgD{display:none}
+.lgK{display:block;height:auto;max-width:100%;margin:6px 0 26px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw .lgL{display:none}:root:not([data-theme="light"]) .lgw .lgD{display:block}}
+:root[data-theme="dark"] .lgw .lgL{display:none}:root[data-theme="dark"] .lgw .lgD{display:block}
+.contact{background:#4A2C1A!important;color:#EFE4D2!important;--accent:#9E3B26;--on-accent:#EFE4D2}
+.logoP{background:none;padding:0}
+
+.mnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mnav>div{max-width:1560px;margin:auto;display:flex;align-items:center;gap:16px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mnav .b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap}
+.mnav nav{display:flex;gap:4px 14px;overflow-x:auto;flex:1;min-width:0;font-size:.88rem;font-weight:600}
+.mnav nav a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:4px 2px;border-bottom:2px solid transparent}.mnav nav a.on{color:var(--accent);border-color:var(--accent)}
+.mnav .go{background:var(--accent);color:var(--on-accent);padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap}
+</style>
+<style>
+/* Khung chung sau khi gộp Manus: menu nhóm, chân trang, màu phong thủy Thổ (nâu, vàng đất, đỏ; không xanh lá, không đen). */
+:root{--moss:#8D4E22;--good:#8D4E22;
+  --i-red:#B33A24;--i-red2:#7A2414;--i-gold:#D9B77E;--i-gold2:#B8894A;--i-coffee:#6B4226;--i-brown:#8D5A32;--i-milk:#E9D3AE;
+  --seg1:#9E3B26;--seg2:#B8894A;--seg3:#6B4226;--seg4:#D9B77E;--seg-t1:#FFF6EC;--seg-t2:#2E1C12;--cmp2:#C9A46A;
+  --cx1:#BB8526;--cx2:#7A348E;--cx3:#83470D;--cx4:#CB4D54}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}}
+:root[data-theme="dark"]{--moss:#E2A774;--good:#E2A774;--accent:#E27A5E;--on-accent:#2B120C;
+  --bg:#231812;--panel:#2D2018;--tint:#3B2A1F;--rule:#574434;
+  --i-red:#C8553D;--i-red2:#8E3020;--i-gold:#CDA769;--i-gold2:#C0904F;--i-coffee:#A06C45;--i-brown:#A36B3E;--i-milk:#D9C19A;
+  --seg1:#C0553A;--seg2:#CF9A55;--seg3:#8E5D38;--seg4:#E2C48E;--cmp2:#B08A55;
+  --cx1:#B88B23;--cx2:#A06BCD;--cx3:#904E0A;--cx4:#D54E5B}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--panel)}
+.mnav{display:none!important}
+
+/* menu */
+.mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
+.mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
+.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p a:hover{color:var(--accent)}
+.mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-m{margin:0;font-size:inherit}
+.mh-m>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;font:600 .86rem var(--body);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;white-space:nowrap;user-select:none}
+.mh-m>summary::-webkit-details-marker{display:none}
+.mh-m>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.mh-m[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-m>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-pan{position:absolute;left:0;right:0;top:100%;background:var(--panel);border-bottom:1px solid var(--rule);box-shadow:0 18px 30px rgba(46,28,18,.16);max-height:calc(100vh - 60px - env(safe-area-inset-top,0px));overflow:auto;overscroll-behavior:contain}
+.mh-grid{max-width:1560px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 26px;padding-block:18px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mh-g{margin:0 0 6px;font:600 .72rem/1.3 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mh-c ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-c a{display:block;color:var(--ink);text-decoration:none;font:500 .95rem/1.35 var(--body);padding:6px 0;border-bottom:1px solid transparent}
+.mh-c a:hover{color:var(--accent)}
+.mh-c a[aria-current="page"]{color:var(--accent);font-weight:700}
+.mh-go{background:var(--accent);color:var(--on-accent);padding:7px 14px;border-radius:999px;text-decoration:none;font:600 .86rem var(--body);white-space:nowrap}
+.mh-go[aria-current="page"]{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.mh-i{position:relative;flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none}
+.mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
+.mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
+@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
+@media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
+
+/* chân trang */
+.mf{font:400 .9rem/1.6 var(--body);text-align:left;color:var(--ink);background:var(--tint);margin-top:28px;padding:0}
+.mf-in{max-width:1560px;margin:auto;padding-block:30px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:26px}
+.mf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border-bottom:1px solid var(--rule);padding-bottom:24px}
+.mf-k{flex-basis:100%;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mf-h{margin:0;font:italic 600 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--sign);color:var(--ink);text-wrap:balance}
+.mf-h em{color:var(--accent)}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:22px 30px}
+.mf-brand b{display:block;font:italic 600 1.35rem/1.25 var(--sign);color:var(--accent)}
+.mf-brand span{display:block;margin-top:6px}.mf-brand small{display:block;margin-top:6px;color:var(--muted);letter-spacing:.06em}
+.mf-t{margin:0 0 6px;font:600 .72rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mf-col{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mf-col a{color:var(--ink);text-decoration:none;padding:2px 0}.mf-col a:hover{color:var(--accent);text-decoration:underline}
+.mf-col p{margin:0 0 6px}.mf-n{white-space:nowrap;user-select:all}
+.mf-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:.84rem}
+.mf-base i{font:italic 600 1rem var(--sign);color:var(--accent)}
+@media (max-width:980px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-brand{grid-column:1/-1}}
+@media (max-width:520px){.mf-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ảnh thật */
+.pf{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.pf img{display:block;width:100%;height:auto;max-width:100%;border-radius:14px;border:1px solid var(--rule);background:var(--tint)}
+.pf figcaption{font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.pfw img{aspect-ratio:3/1;object-fit:cover}
+.split .pf img{max-height:560px;object-fit:cover}
+.split .pf.pv{width:100%;max-width:448px;justify-self:center}.split .pf.pv img{max-height:none}   /* ảnh dọc 4:5 hiện trọn khung, không cắt mất logo chìm */
+@media (max-width:700px){.pfw img{aspect-ratio:2/1}}
+.pfs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.pfs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.pfs>.pf{scroll-snap-align:start}}
+.pgal{display:grid;gap:10px}
+.pgal>h2{margin:0}
+.pgal>p{margin:0;color:var(--muted);max-width:72ch}
+
+/* chọn ngôn ngữ */
+.mh-l{position:relative;margin:0}
+.mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
+.mh-l>summary::-webkit-details-marker{display:none}
+.mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
+.mh-lp a:hover{background:var(--tint);color:var(--accent)}
+.mh-lp a[aria-current]{color:var(--accent)}
+@media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
+/* nút Zalo, Facebook nổi góc trái bên dưới */
+.fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
+.fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
+.fl-b svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fl-b:hover{transform:translateY(-2px) scale(1.05)}
+.fl-b:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.fl-b::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;background:var(--ink);color:var(--panel);font:600 .8rem var(--body);letter-spacing:0;padding:6px 11px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{opacity:1;transform:translate(0,-50%)}}
+@media (max-width:600px){.fl-c{gap:8px}.fl-b{width:46px;height:46px;font-size:.6rem}.fl-b svg{width:17px;height:17px}}
+@media (max-width:1020px){body:has(.nx-bar) .fl-c{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+/* chừa chỗ cho nút nổi ở cuối chân trang */
+@media (min-width:601px){.mf-base{padding-left:76px}}
+@media (max-width:600px){footer.mf{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}}
+@media print{.fl-c{display:none}}
+
+/* thành phần dùng chung cho trang mới */
+.wrap.art{max-width:980px}
+.k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.eye{font:600 .8rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0}
+section>h2 em,.p-h2 em{font-style:normal;color:var(--accent)}
+.p-h2{font:800 2.05rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em;text-wrap:balance}
+.p-head{display:grid;gap:4px}
+.p-head h1{margin:6px 0 0}
+.p-head .lead{font-size:1.06rem;color:var(--muted);max-width:68ch;margin:10px 0 0}
+.p-sig{font:italic 600 1.25rem var(--sign);color:var(--accent);margin:10px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+a.btn{text-decoration:none;display:inline-block}
+.btn.ghost{border-color:var(--rule)}
+.p-sec{display:grid;gap:10px}
+.p-sec>.lead{margin:0;max-width:72ch;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.facts>div{border-top:2px solid var(--accent);padding-top:8px;min-width:0}
+.facts b{display:block;font:800 2.4rem/1.05 var(--display);color:var(--accent)}
+.facts span{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.g3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.g2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.g4{grid-template-columns:minmax(0,1fr)}}
+.box{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:18px 20px;min-width:0}
+.box h3{font:800 1.45rem/1.15 var(--display);margin:4px 0 6px;letter-spacing:.01em}
+.box p{margin:0 0 8px}.box p:last-child{margin-bottom:0}
+.box .k{font:600 .72rem/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.box .ft{margin-top:10px;padding-top:10px;border-top:1px solid var(--rule);font-size:.88rem;color:var(--muted)}
+.box .ft b{color:var(--ink)}
+.box>svg.pi{width:34px;height:34px;color:var(--accent)}
+svg.pi{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+svg.pi .fi{fill:var(--accent);stroke:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font:600 .76rem var(--body);border:1px solid var(--rule);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.lnk{color:var(--accent);font-weight:600;text-decoration:none}.lnk:hover{text-decoration:underline}
+.lnks{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px}
+.quote{margin:0;font:italic 600 clamp(1.4rem,3vw,2.1rem)/1.3 var(--sign);color:var(--accent);max-width:34ch;text-wrap:balance}
+.split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:20px 30px;align-items:center}
+.split img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--rule)}
+.illw{max-width:320px;width:100%;justify-self:center}
+@media (max-width:820px){.split{grid-template-columns:minmax(0,1fr)}.illw{max-width:210px}}
+.pst{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:st}
+.pst>li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:4px 16px;align-items:start;background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 16px;min-width:0}
+.pst>li .n{grid-row:1/3;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--tint);color:var(--accent)}
+.pst>li .n svg{width:24px;height:24px}
+.pst h3{margin:0;font:700 1.05rem/1.3 var(--body)}
+.pst h3 small{font:600 .74rem var(--body);letter-spacing:.06em;color:var(--muted);margin-right:6px}
+.pst p{margin:0;font-size:.93rem}
+.pst.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pst.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.pst.three{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.pst.two{grid-template-columns:minmax(0,1fr)}}
+.trip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.trip a{display:flex;flex-direction:column;height:100%;background:var(--panel);border:1px solid var(--rule);border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none}
+.trip img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;max-width:100%}
+.trip b{font:800 1.25rem/1.15 var(--display);padding:10px 14px 0}
+.trip b small{display:block;font:600 .72rem var(--body);letter-spacing:.08em;color:var(--accent);margin-bottom:2px}
+.trip span{padding:4px 14px 14px;color:var(--muted);font-size:.88rem}
+.trip a:hover b{color:var(--accent)}
+@media (max-width:1180px){.trip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,32%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.trip li{scroll-snap-align:start}}
+@media (max-width:640px){.trip{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:minmax(0,1fr);overflow:visible}}
+.seg{display:flex;gap:2px;height:28px;margin:6px 0 4px}
+.seg i{display:flex;align-items:center;padding:0 8px;border-radius:4px;font:700 .78rem var(--mono);font-style:normal;white-space:nowrap;overflow:hidden;min-width:0}
+.seg i.s1{background:var(--seg1);color:var(--seg-t1)}.seg i.s2{background:var(--seg2);color:var(--seg-t2)}
+.seg i.s3{background:var(--seg3);color:var(--seg-t1)}.seg i.s4{background:var(--seg4);color:var(--seg-t2)}
+.areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:8px}
+.areas>div{border-top:1px solid var(--rule);padding-top:10px;min-width:0}
+.areas .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.areas b{font:700 1rem var(--body)}.areas span{display:block;color:var(--muted);font-size:.86rem}
+.areas strong{display:block;font:800 1.9rem/1.1 var(--display);margin-top:4px}
+.areas strong small{font:600 .8rem var(--body);color:var(--muted);margin-left:6px}
+@media (max-width:900px){.areas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cmp{display:grid;gap:10px;margin-top:8px}
+.cmp>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center}
+.cmp span{font-size:.88rem}.cmp span b{display:block;font-size:.95rem}
+.cmp .tr{position:relative;height:24px;margin-right:64px}
+.cmp .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0;background:var(--accent)}
+.cmp .tr i.b{background:var(--cmp2)}
+.cmp .tr em{position:absolute;top:50%;transform:translateY(-50%);font:700 .9rem var(--mono);font-style:normal;color:var(--ink);white-space:nowrap}
+@media (max-width:520px){.cmp>div{grid-template-columns:minmax(0,1fr)}}
+.loc{display:grid;gap:4px}
+.loc .ttl{display:flex;gap:10px;align-items:center}
+.loc .ttl svg{color:var(--accent)}
+.sel{user-select:all}
+.cp{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.cp strong{font:700 1.25rem var(--mono);user-select:all;overflow-wrap:anywhere}
+.note{font-size:.86rem;color:var(--muted);margin:0}
+.p-form{display:grid;gap:12px}
+.p-form .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:620px){.p-form .row2{grid-template-columns:minmax(0,1fr)}}
+.p-form label{display:grid;gap:4px;font:600 .9rem var(--body)}
+.p-form label small{font-weight:400;color:var(--muted)}
+.p-form input,.p-form select,.p-form textarea{font:500 1rem var(--body);padding:9px 11px;border:1px solid var(--rule);border-radius:10px;background:var(--bg);color:var(--ink);width:100%;min-width:0}
+.p-form textarea{resize:vertical}
+.p-form fieldset{border:0;margin:0;padding:0;min-width:0}
+.p-form legend{font:600 .9rem var(--body);padding:0;margin-bottom:6px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{display:inline-flex;flex-direction:row;align-items:center;gap:6px;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font:600 .86rem var(--body);cursor:pointer;background:var(--panel)}
+.opts input{width:auto;margin:0;accent-color:var(--accent)}
+.opts label:has(input:checked){border-color:var(--accent);background:var(--tint)}
+.msg{white-space:pre-wrap;font:500 .84rem/1.6 var(--mono);background:var(--tint);border-radius:10px;padding:12px;margin:0;overflow-wrap:anywhere;user-select:all}
+.fstat{font:500 .86rem var(--body);color:var(--muted);min-height:1.3em;margin:0}
+.p-art{max-width:70ch;font-size:1.04rem;line-height:1.78}
+.p-art h2{font:800 1.75rem/1.2 var(--display);margin:30px 0 8px;letter-spacing:.01em}
+.p-art p{margin:0 0 14px}
+.p-art ul,.p-art ol{margin:0 0 14px;padding-left:22px}.p-art li{margin-bottom:6px}
+.p-art .rbox{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:14px 18px;margin:18px 0}
+.p-art .rbox h3{margin:0 0 6px;font:700 1rem var(--body)}
+.p-art .rbox ol{margin:0}
+.p-art .pf,.p-art .pfs{margin:20px 0}
+.p-art blockquote{margin:22px 0;padding:0 0 0 18px;border-left:3px solid var(--accent);font:italic 600 1.3rem/1.45 var(--sign);color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font:600 .8rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.meta b{color:var(--accent)}
+.art-fig{max-width:880px}
+.art-fig svg{display:block;width:100%;height:auto;max-height:340px;background:var(--tint);border-radius:16px}
+.jcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.jcards a{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--rule);border-radius:16px;overflow:hidden;color:var(--ink);text-decoration:none;min-width:0}
+.jcards .th{background:var(--tint);display:grid;place-items:center;aspect-ratio:3/2;max-width:100%}
+.jcards .th svg{display:block;width:100%;height:100%}
+.jcards .bd{padding:12px 16px 16px;display:grid;gap:4px}
+.jcards .meta{font-size:.72rem}
+.jcards h3{margin:2px 0 0;font:800 1.35rem/1.15 var(--display);text-wrap:balance}
+.jcards p{margin:0;color:var(--muted);font-size:.9rem}
+.jcards a:hover h3{color:var(--accent)}
+@media (max-width:1000px){.jcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.jcards{grid-template-columns:minmax(0,1fr)}}
+.jfeat{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);padding:0;overflow:hidden;text-decoration:none;color:var(--ink)}
+.jfeat .th{background:var(--tint);display:grid;place-items:center;padding:14px;min-width:0}
+.jfeat .th svg{display:block;width:100%;max-width:340px;height:auto}
+.jfeat .bd{padding:20px 24px;display:grid;gap:6px;align-content:center;min-width:0}
+.jfeat h3{font:800 2.1rem/1.1 var(--display);margin:0;letter-spacing:.01em}
+.jfeat p{margin:0}.jfeat .bd>p:not(.meta){color:var(--muted);max-width:60ch}
+.jfeat:hover h3{color:var(--accent)}
+@media (max-width:760px){.jfeat{grid-template-columns:minmax(0,1fr)}.jfeat .th svg{max-width:280px}}
+.mdl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin-top:4px}
+.mdl a{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center;border-top:1px solid var(--rule);padding-top:10px;color:var(--ink);text-decoration:none;min-width:0}
+.mdl a svg.pi{width:30px;height:30px;color:var(--accent)}
+.mdl b{display:block;font:700 1rem var(--body)}.mdl small{display:block;color:var(--muted);font-size:.86rem}
+.mdl a:hover b{color:var(--accent)}
+.kser{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink)}
+.kser svg.pi{width:34px;height:34px;color:var(--accent);margin-bottom:4px}
+.kser p{color:var(--muted);font-size:.92rem}
+.kser .lnk{margin-top:auto;padding-top:6px}
+.kser:hover h3{color:var(--accent)}
+.g5k{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:1280px){.g5k{grid-template-columns:repeat(2,minmax(0,1fr))}.g5k>:first-child{grid-column:1/-1}}
+@media (max-width:560px){.g5k{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:1100px){.mdl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mdl{grid-template-columns:minmax(0,1fr)}}
+.ill .o{stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.ill text{font:600 12px var(--body);fill:var(--muted)}
+@media (max-width:620px){.p-h2{font-size:1.75rem}.facts b{font-size:2rem}}
+
+/* Cỗ máy Chiết xuất */
+.mnote{font-size:.84rem;color:var(--muted);margin:8px 0 0;line-height:1.45}
+#scene .gl{fill:var(--panel);fill-opacity:.18}
+#scene .glt{fill:var(--panel);fill-opacity:.14}
+#scene .liq,#scene .liqt{fill:#7A4D2A}
+#scene .grd{fill:#5A3520}#scene .grdT{fill:#6B4226}
+#scene .mug,#scene .drp{fill:var(--i-milk)}
+#scene .bean{fill:#6B4226}#scene .bean2{fill:#4A2C1A}
+#scene .lcdb{fill:#2E1C12;stroke:none}
+#scene .lcd{font:700 7.8px var(--mono);fill:#F3D9A4}
+#scene .wtx{font:700 8.4px var(--body);fill:#3A2416}
+#scene .zl{font:600 12px var(--body)}
+.pour{fill:none;stroke:var(--muted);stroke-width:2.2;stroke-dasharray:4 6;opacity:0;transition:opacity .3s}
+.running .pour{opacity:.9;animation:pourA .7s linear infinite}
+@keyframes pourA{to{stroke-dashoffset:-20}}
+.drip{opacity:0}
+.running .drip{animation:dripA .9s linear infinite}
+.running .drip.d2{animation-delay:.45s}
+@keyframes dripA{0%{opacity:0;transform:translateY(-5px)}25%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+#stream{opacity:0;transition:opacity .2s}.running #stream{opacity:1}
+.steam{fill:none;stroke:var(--muted);stroke-width:1.6;stroke-linecap:round;opacity:.55}
+.bars.cx .bar{grid-template-columns:128px minmax(0,1fr) 34px}
+#tip{color:var(--muted)}
+.chw{position:relative;margin-top:6px}
+.c2{display:block;width:100%;height:auto;touch-action:pan-y;cursor:crosshair;user-select:none;-webkit-user-select:none}
+.c2 text{font:500 12px var(--mono);fill:var(--muted)}
+.c2 .zh{font:700 11.5px var(--mono);letter-spacing:.08em;fill:var(--ink)}
+.c2 .zs{font:500 12px var(--body);fill:var(--muted)}
+.c2 .lab{font:600 13px var(--body);fill:var(--ink)}
+.c2 .val{font:700 12px var(--mono);fill:var(--ink);paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round}
+.c2 .gr{stroke:var(--rule);stroke-width:1}
+.c2 .cur{stroke:var(--ink);stroke-width:1.6}
+.c2 .hov{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3}
+.c2 .sca{fill:var(--good)}
+.tipbox{position:absolute;z-index:2;pointer-events:none;background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:8px 10px;font:500 .8rem/1.55 var(--body);box-shadow:0 8px 20px rgba(46,28,18,.14);min-width:196px;color:var(--ink)}
+.tipbox p{margin:0;display:flex;align-items:center;gap:6px}.tipbox p b{margin-left:auto;font:700 .8rem var(--mono);padding-left:12px}
+.tipbox .h{font:700 .78rem var(--mono);color:var(--muted);margin-bottom:2px}
+.sw2{display:inline-block;width:16px;height:0;border-top:2.5px solid;flex:none}.sw2.d{border-top-style:dashed}
+.lg{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.88rem;margin:2px 0 0}
+.lg span{display:inline-flex;align-items:center;gap:8px}
+.cups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:6px}
+@media (max-width:900px){.cups{grid-template-columns:minmax(0,1fr)}}
+.cupc{background:var(--tint);border-radius:14px;padding:14px 16px;display:grid;gap:8px;min-width:0;align-content:start}
+.cupc .top{display:flex;align-items:center;gap:14px}
+.cupc svg{width:92px;height:auto;flex:none}
+.cupc .ct{display:block;font:800 2.2rem/1 var(--display)}
+.cupc .sub{display:block;font-size:.8rem;color:var(--muted);margin-top:2px}
+.vt{display:inline-block;font:700 .72rem var(--body);letter-spacing:.06em;text-transform:uppercase;border:1.5px solid currentColor;border-radius:6px;padding:3px 8px;margin-top:6px}
+.vt.good{color:var(--good)}.vt.warn{color:var(--warn)}.vt.bad{color:var(--bad)}
+.cupc .bars{margin-top:0}.cupc .bar{grid-template-columns:118px minmax(0,1fr) 34px}
+.cm{margin:0;font:500 .82rem var(--mono);color:var(--muted)}
+.bline{margin:14px 0 0;background:var(--ink);color:var(--bg);border-radius:12px;padding:14px 18px;font-weight:600;line-height:1.5;text-align:center;text-wrap:balance}
+.bline b{color:inherit}
+.tl{display:grid;gap:12px;background:var(--bg);border:1px solid var(--rule);border-radius:14px;padding:18px 20px}
+.tl h3{font:800 clamp(1.5rem,3vw,2.15rem)/1.15 var(--display);margin:0;letter-spacing:.01em;text-wrap:balance}
+.tl h3 em{font-style:normal;color:var(--accent)}
+.tls{margin:0;color:var(--muted);max-width:74ch}
+.tl3{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 18px}
+.tl3 li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:10px;align-items:start}
+.tl3 .n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:800 1.05rem var(--display);color:#FFF6EC}
+.tl3 p{margin:0}
+.tlg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;border-top:1px solid var(--rule);padding-top:12px}
+.tlg .k{margin-bottom:6px}
+.bl2{margin:0;background:var(--tint);border-radius:10px;padding:12px 14px;font-weight:600}
+@media (max-width:900px){.tl3,.tlg{grid-template-columns:minmax(0,1fr)}}
+.rd{display:flex;flex-direction:column;gap:4px}
+.rd>svg.pi{width:30px;height:30px;color:var(--accent);margin-bottom:2px}
+.rd h3{font:800 1.4rem/1.15 var(--display);margin:2px 0 4px}
+.rd .ft{margin-top:auto}
+#mt td:last-child{text-align:right}
+#mt .btn{white-space:nowrap}
+#qR{margin-top:12px;border-radius:10px;padding:10px 12px;background:var(--tint);font-size:.9rem;line-height:1.5}
+#qR b{display:block;font:700 1.15rem var(--mono)}
+#qR.good b{color:var(--good)}#qR.warn b{color:var(--warn)}#qR.bad b{color:var(--bad)}
+#copied{font-size:.86rem;color:var(--muted)}
+.src>h2{color:var(--ink)}.src>.lead{color:var(--muted);font-size:.95rem}
+.src ul{line-height:1.5}.src li{margin-bottom:4px}
+.src .lnks{margin-top:12px}
+@media (prefers-reduced-motion:reduce){.running .pour,.running .drip{animation:none}.pour{transition:none}}
+</style><link rel="alternate" hreflang="vi" href="https://www.medili.vn/chiet-xuat.html"><link rel="alternate" hreflang="en" href="https://www.medili.vn/en/chiet-xuat.html"><link rel="alternate" hreflang="ja" href="https://www.medili.vn/ja/chiet-xuat.html"><link rel="alternate" hreflang="zh-Hans" href="https://www.medili.vn/zh/chiet-xuat.html"><link rel="alternate" hreflang="x-default" href="https://www.medili.vn/chiet-xuat.html"></head><body><div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a><nav class="mh-p" aria-label="Main sections"><a href="cau-chuyen.html">Story</a><a href="vung-trong.html">Growing Area</a><a href="anh-vuon.html">Farm Photos</a><a href="xuong-rang.html">Roastery</a><a href="horeca.html">HORECA</a><a href="quan-medili.html">MeDili Café</a><a href="journal.html">Knowledge</a><a href="gia-ca-phe.html">Coffee Prices</a></nav><details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></summary><nav class="mh-pan" aria-label="All pages"><div class="mh-grid"><div class="mh-c"><p class="mh-g">MeDili</p><ul><li><a href="./">Home</a></li><li><a href="cau-chuyen.html">The MeDili Story</a></li><li><a href="doi-ngu.html">Team</a></li><li><a href="quan-medili.html">MeDili Café</a></li><li><a href="lien-he.html">Contact</a></li></ul></div><div class="mh-c"><p class="mh-g">Growing & Production</p><ul><li><a href="vung-trong.html">Di Linh Growing Area</a></li><li><a href="anh-vuon.html">Farm Photos</a></li><li><a href="vuon.html">The Farm in 12 Months</a></li><li><a href="trai-ca-phe.html">Cherry Anatomy</a></li><li><a href="len-men-men-bia.html">Fermentation with Brewer's Yeast</a></li><li><a href="len-men-trai-cay.html">Co-fermentation with Fruit</a></li></ul></div><div class="mh-c"><p class="mh-g">Roasting & Brewing</p><ul><li><a href="xuong-rang.html">Roastery & Capacity</a></li><li><a href="rang.html">Roasting Room</a></li><li><a href="huong-dan-pha.html">Brewing Guide</a></li><li><a href="quay-pha.html">Brew Bar</a></li><li><a href="cong-thuc-pha.html">Brew Recipe Machine</a></li><li><a href="cold-brew.html">Cold Brew Machine</a></li><li><a href="tim-gu.html">Find Your Coffee Taste</a></li></ul></div><div class="mh-c"><p class="mh-g">Buy & Partner</p><ul><li><a href="cua-hang.html">Coffee Store</a></li><li><a href="mua-hang.html">Buying Room</a></li><li><a href="horeca.html">HORECA Solutions</a></li><li><a href="dong-hanh-cung-quan.html">Partnering with Cafés</a></li><li><a href="nhan-xanh.html">Choose Green Coffee · Wholesale</a></li><li><a href="gia-ca-phe.html">Coffee Prices Today</a></li><li><a href="chinh-sach.html">MeDili Policies</a></li><li><a href="giao-hang.html">Delivery & Returns</a></li><li><a href="gio-hang.html">Cart</a></li><li><a href="tim-kiem.html">Search</a></li></ul></div><div class="mh-c"><p class="mh-g">Coffee Knowledge</p><ul><li><a href="journal.html">All articles</a></li><li><a href="chiet-xuat.html" aria-current="page">Extraction Machine</a></li><li><a href="phan-biet-ca-phe.html">Coffee Identification Machine</a></li><li><a href="trai-chin.html">Ripe Cherry Machine</a></li><li><a href="vi-sinh.html">Microbe Machine</a></li><li><a href="tien-chat-huong.html">Aroma Precursor Machine</a></li><li><a href="banh-xe-huong.html">MeDili Flavor Wheel</a></li><li><a href="journal-phin.html">The Phin and the Falling Rhythm of Time</a></li><li><a href="journal-tu-qua.html">From Coffee Cherry to Flavor</a></li><li><a href="journal-di-linh.html">Di Linh in a Cup of Coffee</a></li><li><a href="tu-vuon-den-ly.html">From Farm to Cup</a></li><li><a href="suc-khoe.html">Coffee and the Body</a></li></ul></div></div></nav></details><details class="mh-l"><summary aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.3 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.3-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>EN</span></summary><div class="mh-lp"><a href="../chiet-xuat.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="chiet-xuat.html" hreflang="en" lang="en" aria-current="true">English</a><a href="../ja/chiet-xuat.html" hreflang="ja" lang="ja">日本語</a><a href="../zh/chiet-xuat.html" hreflang="zh-Hans" lang="zh-Hans">中文</a></div></details><a class="mh-i" href="tim-kiem.html" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a><a class="mh-i" href="gio-hang.html" aria-label="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="mh-cn" hidden></span></a><a class="mh-go" href="cua-hang.html">Shop</a></div></div>
+<div class="wrap">
+
+<header>
+  <span class="lgw"><img class="lgL" src="../assets/logo-mau.png" alt="MeDili Café Di Linh" width="240" height="77"><img class="lgD" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="240" height="77"></span><div class="brandbar"><span>Devoted to the taste of Di Linh</span><span>Coffee Knowledge</span><span>Zalo <a href="#lien-he">0966 770 788</a></span></div>
+  <h1>The <em>Extraction</em> Machine</h1>
+  <p>Brew time does not just decide whether a cup is strong or weak. It decides which compounds reach the cup: acids and CGA come out first, sugars and Maillard compounds in the middle, bitter compounds last. Choose a brewing method and adjust the grind, temperature and time to see each compound group leave the bean.</p>
+</header>
+
+<div class="bench">
+  <div class="card">
+    <div class="fighead">
+      <div><b>Figure 1</b> <span id="figsub"></span></div>
+      <button class="btn small" id="run2" type="button">Try a brew</button>
+    </div>
+    <div class="scroller"><svg id="scene" viewBox="0 0 1040 690" aria-label="A seven-station extraction bench: grinder, water and heat, scale, brewer, four tubes of solubles, cup and refractometer, spent grounds. Tap each station to see the details."></svg></div>
+    <div class="strip" id="strip" role="group" aria-label="Choose a station"></div>
+    <div id="detail" aria-live="polite"></div>
+  </div>
+
+  <aside class="card ctl">
+    <div class="head2"><h3>Brewing method</h3><small>5 methods</small></div>
+    <div class="row" id="meths"></div>
+    <p class="mnote" id="methNote"></p>
+    <div class="head2" style="margin-top:12px"><h3>Coffee and roast level</h3></div>
+    <div class="row" id="beans"></div>
+    <div class="row" id="roasts"></div>
+    <p class="mnote" id="beanNote"></p>
+    <hr>
+    <div class="sl" style="margin-top:0"><label for="iT">Extraction time <output id="oT"></output></label><input id="iT" type="range"><p id="tNote"></p></div>
+    <div class="sl"><label for="iG">Grind size <output id="oG"></output></label><input id="iG" type="range" min="0" max="4" step="1"><p id="gNote"></p></div>
+    <div class="sl"><label for="iC">Water temperature <output id="oC"></output></label><input id="iC" type="range" step="1"></div>
+    <div class="sl"><label for="iD">Coffee <output id="oD"></output></label><input id="iD" type="range"></div>
+    <div class="sl"><label for="iW"><span id="wLbl">Water</span> <output id="oW"></output></label><input id="iW" type="range"></div>
+    <div class="row" style="margin-top:14px"><button class="btn main" id="run" type="button">Try a brew</button><button class="btn" id="reset" type="button">About the standard recipes</button></div>
+    <div class="stats">
+      <div class="stat"><span>Extraction EY</span><b id="sE"></b></div>
+      <div class="stat"><span>Strength (TDS)</span><b id="sS"></b></div>
+      <div class="stat"><span>Beverage</span><b id="sB"></b></div>
+      <div class="stat"><span>Coffee : water ratio</span><b id="sR"></b></div>
+    </div>
+    <div id="verdict"></div>
+    <hr>
+    <span class="lbl">EY over time. Drag on the chart to change when to stop</span>
+    <div class="charts"><svg class="ch" id="cE" viewBox="0 0 340 156" role="img" aria-label="Extraction yield by brew time"></svg></div>
+    <div id="tip"></div>
+    <hr>
+    <span class="lbl">Left the bean, percentage of each compound group</span>
+    <div class="bars cx" id="cbars"></div>
+    <hr>
+    <span class="lbl">Predicted flavor direction, model index 0–100</span>
+    <div class="bars" id="bars"></div>
+  </aside>
+</div>
+
+<section class="card" id="hinh2">
+  <h2>Figure 2: from one batch of coffee, which compounds come out first</h2>
+  <p class="lead">The horizontal axis is extraction yield (EY): the percentage of the coffee's weight dissolved into the cup. The vertical axis is the percentage of each compound group that has left the bean. The bold line is the cup you are brewing. Hover over or tap the chart to read the numbers.</p>
+  <div class="lg" id="lg2"></div>
+  <div class="chw" id="w2"><svg id="c2" class="c2" viewBox="0 0 920 400" role="img" aria-label="Percentage of acids and CGA, caffeine, sugars and Maillard compounds, and bitter compounds that have left the bean, by extraction yield"></svg><div class="tipbox" id="tip2" hidden></div></div>
+  <details><summary>See the table of numbers at each EY point</summary><div class="tw"><table id="t2"></table></div></details>
+</section>
+
+<section class="card" id="hinh3">
+  <h2 id="h3t">Figure 3: same dose, same water, different times</h2>
+  <p class="lead" id="h3l"></p>
+  <div class="cups" id="cups"></div>
+  <p class="bline" id="bline"></p>
+</section>
+
+<section class="card" id="ban-dich">
+  <h2>Reading the figure</h2>
+  <p class="lead">A close translation of the “Chemistry Review” figure. Where it needs a different reading, MeDili notes it in the “Read again” section right after.</p>
+  <div class="tl">
+    <p class="k">A chemistry refresher</p>
+    <h3>Brew time does not just decide strength. It decides <em>which compounds</em> come out.</h3>
+    <p class="tls">Polyphenols come out first. Bitter compounds come out last. The same coffee gives different cups depending on when you stop.</p>
+    <ol class="tl3">
+      <li><span class="n" style="background:var(--cx1)">1</span><p>Chlorogenic acids (CGA) and the acids that create bright acidity come out <b>first</b>. Most are out by the time extraction yield reaches <b>14%</b>.</p></li>
+      <li><span class="n" style="background:var(--cx3)">2</span><p>Sugars and Maillard compounds come out <b>in the middle</b> (14–20%). The figure calls this the SCA's “ideal” range.</p></li>
+      <li><span class="n" style="background:var(--cx4)">3</span><p>Bitter phenolics come out <b>last</b> (after 22%). Over-extraction only adds bitterness, not polyphenols.</p></li>
+    </ol>
+    <div class="tlg">
+      <div><p class="k">Chart: from one batch of coffee, which compounds come out first</p><ul class="plain">
+        <li><b>First out:</b> acids, CGA, polyphenols.</li>
+        <li><b>In the middle:</b> sugars, Maillard compounds.</li>
+        <li><b>Last out:</b> bitter phenolics.</li>
+        <li>Vertical axis: percentage of compounds that have left the coffee. Horizontal axis: extraction yield (EY) 0–25%. Four lines: CGA, sugars, bitter compounds and caffeine (dashed).</li></ul></div>
+      <div><p class="k">Three cups: same dose, same water, different times</p><ul class="plain">
+        <li>15 g of coffee, 250 ml of water. What changes is which compounds come out.</li>
+        <li><b>1 minute:</b> under-extracted.</li>
+        <li><b>4 minutes:</b> ideal per the SCA, balanced.</li>
+        <li><b>8 minutes:</b> over-extracted.</li>
+        <li>Each cup has three bars: CGA, caffeine, bitter compounds.</li></ul></div>
+    </div>
+    <p class="bl2">Want polyphenols without bitterness? Stop at about <b>4 minutes</b>. Extending only adds <b>bitter compounds</b>, not antioxidants.</p>
+  </div>
+</section>
+
+<section class="p-sec">
+  <p class="eye">MeDili reads it again</p>
+  <h2 class="p-h2" style="margin:0">Six things <em>to get right.</em></h2>
+  <p class="lead" style="margin:0 0 4px;color:var(--muted);max-width:72ch">The figure gets the main idea right: solubles come out in order, and extending the brew mainly adds bitterness. A few details need correcting according to research.</p>
+  <div class="g3"><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l7.5 3V12c0 4.6-3.1 7.7-7.5 9.2C7.6 19.7 4.5 16.6 4.5 12V5.8z"/><path d="M8.8 12.2l2.3 2.3 4.3-4.6"/></svg><p class="k">What the figure says · Point 2 and the 4-minute cup</p><h3>The SCA standard is 18–22%, not 14–20%</h3><p>The Golden Cup standard for filter coffee is an extraction yield of 18–22% and a strength of 1.15–1.35%, that is 11.5–13.5 g of dissolved solids per liter. At 14–18%, the cup is still under-extracted. The 14–20% zone in the figure should only be read as the stretch where sugars and Maillard compounds come out the most.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2.5-6 5 12 2.5-6h4"/></svg><p class="k">What the figure says · The dashed caffeine line</p><h3>Caffeine comes out early, so a short brew does not reduce it much</h3><p>Caffeine dissolves very readily. In cold brew, caffeine and CGA both reach equilibrium after 6–7 hours. With the coffee used in one study, most methods gave about 10 mg of caffeine per gram of coffee, with the French press lower, about 7 mg. For less caffeine, use less coffee or choose Arabica: Robusta has about twice the caffeine.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2M8 3v3M11 3v3"/></svg><p class="k">What the figure says · Point 2: sugars come out in the middle</p><h3>Simple sugars dissolve fast; what needs time is a round sweetness</h3><p>Sugars, organic acids and caffeine dissolve very quickly from the start, more than 90%. The part that needs more time is usually explained as larger compounds formed during roasting, which contribute to color, body and roundness. That is why a cup stopped early usually tastes more sour than sweet.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="12" r="6"/><path d="M11 6V3M17 12h4M5 21h12M9 9.5c1.5 1 2 3.5 4 5"/></svg><p class="k">What the figure says · Point 3: bitter phenolics</p><h3>The main bitter compounds form during roasting</h3><p>Researchers estimate that only about 15% of bitterness comes from caffeine. Most comes from chlorogenic acid lactones, which dominate in light to medium roasts, and phenylindanes, their breakdown products, which are more abundant in dark roasts and espresso. Green coffee contains neither group. The roast level sets how many bitter compounds are available; the brew time decides how much of them you take out.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12M7.5 4l1.2 6.5h6.6L16.5 4"/><path d="M4.5 10.5h15"/><path d="M8 13h8v4.5a3.5 3.5 0 0 1-3.5 3.5h-1A3.5 3.5 0 0 1 8 17.5z"/><path class="fi" d="M11.2 12.2h1.6v1.6h-1.6z"/></svg><p class="k">What the figure says · The last line of the figure</p><h3>The 4-minute mark only holds for one brewing style</h3><p>4 minutes is the reference for full immersion with 15 g of coffee, 250 ml of water, a coarse grind and water at about 93 °C. With a finer grind or hotter water, the curve shifts left and 4 minutes becomes over-extraction. A phin usually takes 5–8 minutes including the bloom, pour-over 2:30–4:00, espresso 25–30 seconds, cold brew 12–24 hours.</p></div><div class="box rd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-6"/><circle cx="12" cy="9" r="6"/><circle cx="10" cy="8" r="1.1" class="fi"/><circle cx="14" cy="10.5" r="1.1" class="fi"/><circle cx="11" cy="12" r="1.1" class="fi"/></svg><p class="k">What the figure says · Polyphenols and antioxidants</p><h3>Roast level and bean type matter more for CGA than time</h3><p>The darker the roast, the more CGA breaks down: green coffee can contain twice as much 5-CQA as roasted coffee. In cold brew, a medium roast gives more 3-CGA than a dark roast, while grind size makes no significant difference. Robusta extracts had the highest CGA, caffeine and antioxidant activity among the samples compared. For more CGA, choose a light to medium roast first, and only then worry about stopping at the right time.</p></div></div>
+</section>
+
+<section class="card">
+  <h2>The six controls of extraction</h2>
+  <p class="lead">Turn only one control at a time, then taste again. Grind size is usually the most powerful one.</p>
+  <div class="tw"><table class="rich"><thead><tr><th>Controls</th><th>Increase it and</th><th>Sour, thin cup with a short finish</th><th>Bitter, dry, harsh cup</th></tr></thead><tbody><tr><td><b>Finer grind</b></td><td>More surface area, solubles come out faster. Phin, pour-over and espresso also flow more slowly.</td><td>Grind one step finer</td><td>Grind one step coarser</td></tr><tr><td><b>Water temperature</b></td><td>Dissolves faster, the bitter group comes out sooner.</td><td>Raise to 94–96 °C</td><td>Lower to 88–91 °C</td></tr><tr><td><b>Contact time</b></td><td>EY rises. Past the balance point, what is added is mostly bitter compounds.</td><td>Extend</td><td>Shorten</td></tr><tr><td><b>Water amount, ratio</b></td><td>A thinner cup, slightly higher EY.</td><td>Keep the ratio, adjust the grind first</td><td>Keep the ratio, adjust the grind first</td></tr><tr><td><b>Stir, swirl, pour hard</b></td><td>Water reaches the coffee more evenly and faster.</td><td>Stir gently during the bloom</td><td>Stir less, pour gently</td></tr><tr><td><b>Darker roast</b></td><td>Porous beans dissolve easily, with more bitter compounds formed during roasting.</td><td>Choose a darker roast or hotter water</td><td>Choose a lighter roast or cooler water</td></tr></tbody></table></div>
+</section>
+
+<section class="card">
+  <h2>Standard recipes by brewing method</h2>
+  <p class="lead">Tap a row to load the recipe into Figure 1. EY and TDS are model numbers: use them as a starting point, then taste to settle.</p>
+  <div class="tw"><table class="rich"><thead><tr><th>Brewing method</th><th>Coffee</th><th>Coffee : water</th><th>Grind size</th><th>Water</th><th>Time</th><th>Model</th><th></th></tr></thead><tbody id="mt"></tbody></table></div>
+</section>
+
+<div class="cols">
+  <section class="card">
+    <h2>Measure your actual extraction</h2>
+    <p class="lead">If you have a refractometer, enter your reading. EY = TDS × beverage weight ÷ coffee dose.</p>
+    <div class="calc three">
+      <label for="qT">Measured TDS (%)<input id="qT" type="text" inputmode="decimal" autocomplete="off" value="1.30"></label>
+      <label for="qB">Beverage weight (g)<input id="qB" type="text" inputmode="decimal" autocomplete="off" value="220"></label>
+      <label for="qD">Coffee dose (g)<input id="qD" type="text" inputmode="decimal" autocomplete="off" value="15"></label>
+    </div>
+    <div id="qR" aria-live="polite"></div>
+    <p class="mnote">The TDS range of 1.15–1.35% applies only to filter coffee. For espresso, phin and cold brew, rely on EY and then taste.</p>
+  </section>
+  <section class="card">
+    <h2>Brew sheet</h2>
+    <p class="lead">Copy the sheet to record this brew and your next adjustment.</p>
+    <div id="sheet"></div>
+    <button class="btn main" id="copy" type="button">Copy brew sheet</button> <span id="copied" role="status"></span>
+  </section>
+</div>
+
+<section class="card src"><p style="margin:0;font-size:.88rem;color:var(--muted);max-width:110ch"><b style="color:var(--ink)">Compiled from multiple sources.</b> The curves in Figures 1–3 are an illustrative model, built from a widely shared illustration and adjusted against compiled references. They are not MeDili measurements. Main assumptions: an extraction ceiling of 28% with hot water and 21% with cold water; each method's standard recipe gives an EY of 19–20%.</p><div class="lnks"><a class="lnk" href="quay-pha.html">Brew Bar: recipes for each drink</a><a class="lnk" href="rang.html">Roasting Room: eight roast levels</a><a class="lnk" href="cold-brew.html">MeDili Cold Brew Machine</a><a class="lnk" href="tien-chat-huong.html">Aroma Precursor Machine</a><a class="lnk" href="suc-khoe.html">Coffee and the Body: caffeine calculator</a><a class="lnk" href="journal.html">All coffee knowledge</a></div></section>
+
+<section class="contact" id="lien-he"><div><img class="lgK" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83"><div class="tagline">Devoted to the taste of Di Linh</div><p>Distributor: DSunfood Co., Ltd., 143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM.<br>Farm and roastery: Thôn 11, Xã Di Linh, Lâm Đồng.</p></div><div class="zalo"><span>MeDili Zalo</span><strong data-sel>0966 770 788</strong><div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Message on Zalo</a><button type="button" data-copy="0966770788" data-done="Number copied">Copy number</button></div><small>Email: cafe@medili.vn</small></div></section>
+</div>
+<footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">There is always time for <em>a good cup of coffee.</em></p><a class="btn main" href="quan-medili.html">Meet at MeDili</a></div><div class="mf-grid"><div class="mf-brand"><b>In love with coffee, in love with Di Linh.</b><span>Preserving a heritage. Treasuring every flavor.</span><small>Di Linh · Lâm Đồng · Vietnam</small></div><nav class="mf-col" aria-label="Explore"><p class="mf-t">Explore</p><a href="cau-chuyen.html">The MeDili Story</a><a href="doi-ngu.html">The MeDili Team</a><a href="vung-trong.html">Di Linh Growing Area</a><a href="anh-vuon.html">MeDili Farm Photos</a><a href="xuong-rang.html">Roastery & Capacity</a><a href="rang.html">Roasting Room</a><a href="huong-dan-pha.html">Brewing Guide</a><a href="quay-pha.html">Brew Bar</a><a href="tim-gu.html">Find Your Coffee Taste</a><a href="cong-thuc-pha.html">Brew Recipe Machine</a><a href="chiet-xuat.html">Extraction Machine</a><a href="cold-brew.html">Cold Brew Machine</a><a href="journal.html">Coffee Knowledge</a></nav><nav class="mf-col" aria-label="MeDili and you"><p class="mf-t">MeDili &amp; You</p><a href="cua-hang.html">MeDili Store</a><a href="mua-hang.html">Buying Room</a><a href="horeca.html">HORECA Solutions</a><a href="dong-hanh-cung-quan.html">Partnering with Cafés</a><a href="nhan-xanh.html">Green Coffee for Wholesale</a><a href="gia-ca-phe.html">Coffee Prices Today</a><a href="quan-medili.html">MeDili Café</a><a href="lien-he.html">Contact & Map</a><a href="chinh-sach.html">MeDili Policies</a><a href="giao-hang.html">Delivery & Returns</a><a href="bao-mat.html">Privacy Policy</a></nav><div class="mf-col"><p class="mf-t">Distribution · DSunfood</p><p>DSunfood Co., Ltd.<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>Farm &amp; roastery<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">Directions to MeDili ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Message MeDili on Zalo ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>MeDili Coffee Farm · Cà Sẻ Di Linh</i></div></div></footer><nav class="fl-c" aria-label="Quick contact with MeDili"><a class="fl-b" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener" aria-label="Message MeDili on Zalo" data-tip="Message MeDili on Zalo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a><a class="fl-b" href="https://www.facebook.com/share/192oMLdBnq/" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a></nav>
+<script>
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
+document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
+try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'Copied'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='The number is selected, please copy it yourself'}
+setTimeout(()=>{b.textContent=o},2400)}))})();
+window.MDC=(()=>{const K='medili-cart-1';let mem=[];   // giỏ cà phê lưu trên trình duyệt: [{id,w (gam),g (độ xay),q}]
+const get=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'null');if(Array.isArray(v))return v}catch(e){}return mem};
+const badge=()=>{const n=get().reduce((a,x)=>a+(+x.q||0),0);document.querySelectorAll('.mh-cn').forEach(e=>{e.textContent=n>99?'99+':n;e.hidden=!n})};
+const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badge()};
+const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
+badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
+
+/* ====== DỮ LIỆU ====== */
+const $=id=>document.getElementById(id);
+const vn=(n,d=1)=>n.toFixed(d);
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const pc=v=>Math.round(clamp(v,0,1)*100);
+const NB=' ';
+const K0=.442,BETA=.716;
+const GR=[
+ {n:'Fine',u:'Espresso',f:1.8,r:1.15},
+ {n:'Medium-fine',u:'Pour-over, moka pot',f:1.3,r:1.7},
+ {n:'Medium',u:'Drip machine, AeroPress',f:1,r:2.4},
+ {n:'Medium-coarse',u:'Phin',f:.78,r:3.1},
+ {n:'Coarse',u:'French press, cold brew',f:.6,r:4}];
+const ROAST=[
+ {n:'Light roast',k:.88,acid:1.15,sweet:.85,bit:.65,sh:.8,note:'Light roasts keep more acids and CGA; the beans are dense, so they dissolve less easily.'},
+ {n:'Medium roast',k:1,acid:.9,sweet:1,bit:1,sh:0,note:'A medium roast balances acidity, sweetness and bitterness.'},
+ {n:'Dark roast',k:1.12,acid:.6,sweet:.85,bit:1.35,sh:-1,note:'Dark roasts are porous and dissolve easily, with many bitter compounds formed during roasting.'}];
+const BEAN={
+ rob:{n:'Robusta',full:'Robusta Di Linh',caf:2.4,acid:.8,bit:1.15,note:'Robusta has about twice the caffeine of Arabica, with a thick body and strong bitterness.'},
+ ara:{n:'Arabica',full:'Arabica Cầu Đất',caf:1.35,acid:1.1,bit:.85,note:'Arabica has more aromatic acids and less caffeine.'}};
+const SER=[{k:'cga',n:'Acids & CGA',ab:'Acid',c:'var(--cx1)'},{k:'caf',n:'Caffeine',ab:'Caf',c:'var(--cx2)',d:'6 4'},{k:'sug',n:'Sugars & Maillard',ab:'Sweet',c:'var(--cx3)'},{k:'bit',n:'Bitter compounds',ab:'Bitter',c:'var(--cx4)'}];
+const ME={
+ phin:{n:'Phin',nl:'phin',kind:'Drips through a tamped bed of coffee',p:{bean:'rob',roast:2,g:3,T:94,dose:25,water:80,t:6},target:19.5,al:.35,ret:1.4,t3:[2,6,12],sl:[1,14,.25],uf:1,tk:2,Tr:[80,100],dr:[12,35,1],wr:[40,200,5],top:9.6,
+  note:'Drips through a lightly tamped bed of coffee. The drip rate depends on the grind size and how firmly it is pressed. The cup is very concentrated and is usually mixed with condensed milk or ice.'},
+ fp:{n:'French press',nl:'French press',kind:'Full immersion',p:{bean:'ara',roast:1,g:4,T:93,dose:15,water:250,t:4},target:19.5,al:.12,ret:2,t3:[1,4,8],sl:[.5,12,.25],uf:1,tk:2,Tr:[80,100],dr:[8,60,1],wr:[120,1000,10],top:13.1,
+  note:'Full immersion. This is the reference brew: 15 g of coffee, 250 ml of water, stopped at 1, 4 or 8 minutes.'},
+ po:{n:'Pour-over',nl:'pour-over',kind:'Continuous pour through a paper filter',p:{bean:'ara',roast:1,g:1,T:93,dose:15,water:240,t:3},target:20,al:.35,ret:2,t3:[1.5,3,6],sl:[1,8,.25],uf:1,tk:1,Tr:[80,100],dr:[8,40,1],wr:[120,700,10],top:9.8,
+  note:'Water is poured continuously through a paper filter. Fresh water is always “hungry” for solubles, so it extracts quickly, and the paper holds back oils and sediment, so the cup tastes clean.'},
+ esp:{n:'Espresso',nl:'espresso',kind:'Hot water forced through at about 9 bar',p:{bean:'rob',roast:1,g:0,T:93,dose:18,water:36,t:28/60},target:20,al:.5,ret:0,t3:[12/60,28/60,55/60],sl:[10,60,1],uf:1/60,tk:10,Tr:[85,98],dr:[14,22,.5],wr:[18,72,1],top:11.4,
+  note:'Hot water at about 9 bar is forced through a fine, tightly tamped bed for 25–30 seconds. The cup is many times stronger than filter coffee.'},
+ cb:{n:'Cold brew',nl:'cold brew',kind:'Steeped in cold water for hours',p:{bean:'rob',roast:1,g:4,T:20,dose:100,water:800,t:840},target:19,al:.12,ret:2,t3:[240,840,1440],sl:[2,24,.5],uf:60,tk:4,Tr:[2,30],dr:[40,200,5],wr:[300,2000,50],top:10.4,
+  note:'Coarse grounds steep in cold water for 12–24 hours. Cold water dissolves slowly and pulls few bitter compounds. Brew a concentrate, then dilute when serving.'}};
+const ORDER=['phin','fp','po','esp','cb'];
+
+/* ====== MÔ HÌNH ====== */
+const FT=T=>Math.exp(.035*(T-93));
+const EYM=T=>28-7*clamp((93-T)/73,0,1);
+for(const k in ME){const m=ME[k],p=m.p,x=-Math.log(1-m.target/EYM(p.T));m.M=x/(Math.pow(p.t,BETA)*K0*GR[p.g].f*FT(p.T)*ROAST[p.roast].k);m.R0=p.water/p.dose}
+const kEff=s=>{const m=ME[s.m];return K0*m.M*GR[s.g].f*FT(s.T)*Math.pow(s.water/s.dose/m.R0,m.al)*ROAST[s.roast].k};
+const EY=(s,t)=>EYM(s.T)*(1-Math.exp(-kEff(s)*Math.pow(Math.max(t,0),BETA)));
+const bitC=s=>20.3+3*clamp((93-s.T)/73,-.15,1)+ROAST[s.roast].sh;
+const FR={cga:e=>1-Math.exp(-Math.pow(e/6.5,1.6)),caf:e=>1-Math.exp(-Math.pow(e/10,1.3)),sug:e=>1-Math.exp(-Math.pow(e/15,3)),bit:(e,s)=>1/(1+Math.exp(-(e-bitC(s))/1.5))};
+const fx=(s,e)=>({cga:FR.cga(e),caf:FR.caf(e),sug:FR.sug(e),bit:FR.bit(e,s)});
+const BEV=s=>{const m=ME[s.m];return m.ret?Math.max(5,s.water-m.ret*s.dose):s.water};
+const TDS=(s,e)=>e*s.dose/BEV(s);
+const goal=s=>s.m==='cb'?Math.min(19,.95*EYM(s.T)):Math.min(clamp(bitC(s)-1.65,18,20),.95*EYM(s.T));
+const tStop=s=>{const em=EYM(s.T),x=-Math.log(1-goal(s)/em);return Math.pow(x/kEff(s),1/BETA)};
+function taste(s,e){const b=BEAN[s.bean],r=ROAST[s.roast],f=fx(s,e),T=TDS(s,e);
+ return [['Bright acidity',100*f.cga*(1-.55*f.sug)*r.acid*b.acid],['Sweet, round',100*f.sug*(1-.6*f.bit)*r.sweet],['Bitter',100*(.12*f.caf+.88*f.bit*r.bit*b.bit)],['Strong, full-bodied',100*clamp(Math.log(T/.6)/Math.log(25),0,1)]].map(([n,v])=>[n,clamp(v,0,100)])}
+const filt=m=>m==='fp'||m==='po';
+const short=(e,sca)=>e<16?['bad','Under-extracted']:e<18?['warn','Slightly under']:e<=22?['good',sca?'Balanced · SCA':'Balanced']:e<=24?['warn','Slightly over']:['bad','Over-extracted'];
+const sym=k=>k==='good'?'✓':k==='warn'?'!':'✕';
+function verdict(s,e,T){const f=fx(s,e);let k,t,m;
+ if(e<16){k='bad';t='Under-extracted';m='The cup tends to be sharply sour, slightly salty, with a short finish. Most of the acids are out, but sugars and Maillard compounds have not had time to come out. Grind finer, raise the temperature or extend the time.'}
+ else if(e<18){k='warn';t='Slightly under';m='Close to the balanced zone. Add a little time or grind one step finer.'}
+ else if(e<=22){k='good';t=filt(s.m)?'Balanced zone, SCA standard 18–22'+'%':'Balanced zone, EY 18–22'+'%';m=`Acids and CGA are ${pc(f.cga)}% out, while bitter compounds are only ${pc(f.bit)}% out.`}
+ else if(e<=24){k='warn';t='Slightly over';m='Bitterness and dryness start to appear in the aftertaste. Shorten the time, grind coarser or lower the temperature.'}
+ else{k='bad';t='Over-extracted';m='What is added is mostly bitter compounds, while CGA barely increases. Shorten the time, grind coarser or lower the temperature.'}
+ if(s.m==='fp'||s.m==='po'){if(T<1.15)m+=` A strength of ${vn(T,2)}% is weaker than the SCA's 1.15–1.35% range: use more coffee or less water.`;else if(T>1.35)m+=` A strength of ${vn(T,2)}% is stronger than the SCA's 1.15–1.35% range: use less coffee or more water.`}
+ if(s.m==='esp'&&(T<8||T>12))m+=` A TDS of ${vn(T,1)}% is outside the 8–12% reference range for espresso.`;
+ if(s.m==='cb')m+=' Cold brew is made as a concentrate and is usually diluted with water, milk or ice when served.';
+ return {k,t,m}}
+
+/* ====== TRẠNG THÁI ====== */
+const st={m:'fp',...ME.fp.p,sel:5};
+const ftime=(t,m=st.m)=>{if(m==='esp')return Math.round(t*60)+NB+'seconds';if(m==='cb'){const h=t/60;return (Math.abs(h-Math.round(h))<.01?Math.round(h):vn(h,1))+NB+'hours'}const s=Math.round(t*60);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
+const g1=n=>Number.isInteger(n)?String(n):vn(n,1);
+const cur=()=>{const e=EY(st,st.t),T=TDS(st,e);return {e,T,f:fx(st,e),B:BEV(st)}};
+const mix=(a,b,t)=>a.map((v,i)=>Math.round(v+(b[i]-v)*t));
+const cofArr=(T,e)=>{const v=clamp(.5*Math.pow(clamp(Math.log(T/.5)/Math.log(28),0,1),.6)+.5*clamp(e/26,0,1),0,1);return v<.5?mix([228,198,152],[170,104,52],v/.5):mix([170,104,52],[60,33,18],(v-.5)/.5)};
+const rgb=a=>`rgb(${a.join(',')})`;
+const cofCol=(T,e)=>rgb(cofArr(T,e));
+
+/* ====== HÌNH HỌC ====== */
+const U=7.8,OX=220,OY=96;
+const P=(x,y,z=0)=>[OX+(x-y)*.866*U,OY+(x+y)*.5*U-z*U];
+const f1=n=>n.toFixed(1);
+const pts=a=>a.map(q=>q.map(f1).join(',')).join(' ');
+const poly=(a,c='')=>`<polygon points="${pts(a)}" class="${c}"/>`;
+const line=(a,w,col,cls='')=>`<polyline${cls?` class="${cls}"`:''} points="${pts(a)}" fill="none" style="${w?`stroke-width:${w};`:''}${col?`stroke:${col}`:''}"/>`;
+function box(x,y,z,w,d,h,c=['f1','f2','f3']){return poly([P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[1])+poly([P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)],c[2])+poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)],c[0])}
+const RX=r=>r*U*1.2247,RY=r=>r*U*.7071;
+function cyl(cx,cy,z,r,h,c='f2',top='f1'){const [a,b]=P(cx,cy,z),[,t]=P(cx,cy,z+h),rx=RX(r),ry=RY(r);return `<path class="${c}" d="M${f1(a-rx)} ${f1(t)}V${f1(b)}A${f1(rx)} ${f1(ry)} 0 0 0 ${f1(a+rx)} ${f1(b)}V${f1(t)}Z"/><ellipse class="${top}" cx="${f1(a)}" cy="${f1(t)}" rx="${f1(rx)}" ry="${f1(ry)}"/>`}
+function frus(cx,cy,z0,r0,z1,r1,c,top){const [a,b0]=P(cx,cy,z0),[,b1]=P(cx,cy,z1),x0=RX(r0),y0=RY(r0),x1=RX(r1),y1=RY(r1);return `<path class="${c}" d="M${f1(a-x1)} ${f1(b1)}L${f1(a-x0)} ${f1(b0)}A${f1(x0)} ${f1(y0)} 0 0 0 ${f1(a+x0)} ${f1(b0)}L${f1(a+x1)} ${f1(b1)}Z"/><ellipse class="${top}" cx="${f1(a)}" cy="${f1(b1)}" rx="${f1(x1)}" ry="${f1(y1)}"/>`}
+const ring=(cx,cy,z,r,col,w=2)=>{const [a,b]=P(cx,cy,z),rx=RX(r),ry=RY(r);return `<path fill="none" style="stroke:${col};stroke-width:${w}" d="M${f1(a-rx)} ${f1(b)}A${f1(rx)} ${f1(ry)} 0 0 0 ${f1(a+rx)} ${f1(b)}"/>`};
+const face=(x,y,z)=>{const q=P(x,y,z);return `matrix(.866 .5 0 1 ${f1(q[0])} ${f1(q[1])})`};
+const lcd=(x,y,z,w,id)=>`<g transform="${face(x,y,z)}"><rect class="lcdb" x="0" y=".8" width="${w}" height="8.6" rx="1.4"/><text class="lcd" id="${id}" x="${w/2}" y="7.6" text-anchor="middle"></text></g>`;
+const stG=(i,inner)=>`<g class="st m" data-i="${i}" tabindex="0" role="button" aria-label="Station ${i}: ${ST[i-1].name}">${inner}</g>`;
+
+/* ====== 7 TRẠM ====== */
+const MT={
+ phin:{mech:'Water soaks through a lightly tamped bed of coffee and drips into the cup. Pour the first 20–30 ml of water to bloom, letting the coffee swell and release gas, then pour the rest. The drip rate depends on the grind size and how firmly it is pressed, so with a phin, adjusting the grind also adjusts the time.',check:'Even drips, not a stream. If the water runs through too fast, the grind is coarse or the bed loosely pressed; too slow, the grind is fine or the bed pressed too hard.',fail:'Tamping too hard keeps the water sitting too long, making the cup harsh and bitter. Grounds that are too fine slip through the phin\'s holes and make the cup cloudy.',tip:'Even for a cup with condensed milk, taste a few drops black first to know whether it extracted correctly.'},
+ fp:{mech:'The coffee is fully immersed in water. Every particle is in contact with water for the whole brew, so time is the clearest control. This is the reference brew: 15 g of coffee, 250 ml of water, stopped at 1, 4 or 8 minutes.',check:'Gently stir the floating crust after the first 30–60 seconds, put the lid on, and when the time is up press and pour right away.',fail:'If you leave the coffee in the press after plunging, the grounds at the bottom keep extracting and the cup gets more bitter.',tip:'Pour it through an extra paper filter if you want a cup free of sediment.'},
+ po:{mech:'Water is poured continuously through the bed of coffee in a paper filter and drains into the carafe. Fresh water is always “hungry” for solubles, so it extracts quickly. The paper holds back oils and sediment, so the cup tastes clean.',check:'Bloom for 30–45 seconds with twice as much water as coffee, then pour slowly in circles. Total time about 2:30–4:00.',fail:'Pouring hard into one spot creates a channel, so water shortcuts through the coffee. Part of the coffee over-extracts while another part under-extracts.',tip:'Rinse the paper filter with hot water first to reduce the paper taste.'},
+ esp:{mech:'The machine forces hot water at about 9 bar through a fine, tightly tamped bed of coffee. Pressure and the fine grind allow a full extraction in 25–30 seconds and a very concentrated cup. According to studies on bitterness, high-pressure, high-temperature methods like espresso usually yield the most bitter compounds.',check:'18 g of coffee gives about 36 g of espresso in 25–30 seconds.',fail:'Under 20 seconds means the grind is coarse or the tamp uneven, giving a sour, thin cup. Over 35 seconds means the grind is too fine, giving a harsh, bitter cup.',tip:'Weigh the beverage in grams instead of reading the markings, because the crema distorts the volume.'},
+ cb:{mech:'Coarse grounds steep in cold water. Cold water dissolves slowly and pulls fewer bitter compounds. Caffeine and CGA in cold brew reach equilibrium after 6–7 hours, earlier than the 10–24 hours of common recipes. Steeping longer keeps pulling other compounds.',check:'Steep at room temperature for 12–16 hours or in the fridge for 18–24 hours, then filter thoroughly and keep chilled.',fail:'If it is not filtered well, the fine sediment keeps extracting and the cup turns cloudy and harsher over time.',tip:'Brew a 1:8 concentrate, then dilute about 1:1 with water, milk or ice when serving.'}};
+const ST=[
+ {name:'Grinder',sub:()=>'Grind size decides how fast things dissolve',
+  mech:()=>`The finer the grind, the more surface area the coffee has and the faster water reaches the inside of each particle, so solubles come out sooner. With phin, pour-over and espresso, a fine grind also slows the water down, which lengthens contact time. That is why grind size is the most powerful control. Currently selected: <b>${GR[st.g].n.toLowerCase()}</b>, suited to ${GR[st.g].u.toLowerCase()}.`,
+  kv:()=>[['Grind size',GR[st.g].n],['Suited to',GR[st.g].u],['Speed compared with a medium grind','×'+vn(GR[st.g].f,2)],['Suggested for '+ME[st.m].n,GR[ME[st.m].p.g].n]],
+  check:'Take a pinch of grounds: fine is like flour, medium like granulated sugar, coarse like rock salt. The grounds should be even, with little dust.',
+  fail:'Worn burrs make a lot of fine dust mixed with large chunks. The dust extracts too fast and turns bitter and dry; the chunks under-extract and taste sour. A cup that is both sour and bitter is usually due to uneven grounds.',
+  tip:'Grind right before brewing. Pre-ground coffee loses its aroma faster than whole beans.'},
+ {name:'Water & heat',sub:()=>'Temperature changes the speed and order of dissolving',
+  mech:()=>`Hot water dissolves faster and can pull out even the hard-to-dissolve compounds. Lowering the temperature slows everything down, especially the late-arriving bitter group. That is why cold brew needs hours instead of minutes, and yields fewer bitter compounds. At ${st.T}${NB} °C, the model puts the extraction speed at ×${vn(FT(st.T),2)} compared with 93${NB} °C.`,
+  kv:()=>[['Water temperature',st.T+NB+'°C'],['Speed compared with 93'+NB+'°C','×'+vn(FT(st.T),2)],['Extraction ceiling',vn(EYM(st.T),0)+'%'],['Bitter compounds become noticeable','from EY ~'+vn(bitC(st)-2,0)+'%']],
+  check:'Water just off the boil: let it rest a moment until it stops bubbling, then pour. With a thermometer, keep it at 90–96 °C for phin and filter.',
+  fail:'Water that is not hot enough makes the cup sour and thin. Water that smells of chlorine or of its storage tank goes straight into the cup. Water that is too pure, with no minerals, usually gives a flat cup.',
+  tip:'Rinse the phin, carafe and cup with hot water to hold the heat during extraction.'},
+ {name:'Scale & ratio',sub:()=>'The ratio decides whether the cup is strong or weak',
+  mech:()=>`The coffee-to-water ratio decides whether the cup is strong or weak (TDS) more than how much is extracted (EY). More water extracts a little more but makes the cup weaker. Phin and espresso use very little water, so the cup is strong. ${st.m==='esp'?'For espresso, the model calculates by beverage weight.':`The grounds retain about ${Math.round(ME[st.m].ret*st.dose)}${NB}ml of water, which does not reach the cup.`}`,
+  kv:()=>{const B=BEV(st);return [['Coffee',g1(st.dose)+NB+'g'],[st.m==='esp'?'Yield':'Water',st.water+NB+(st.m==='esp'?'g':'ml')],['Ratio','1:'+vn(st.water/st.dose,1)],['Yield',Math.round(B)+NB+(st.m==='esp'?'g':'ml')]]},
+  check:'Weigh coffee and water in grams. Measuring with a spoon can be off by several grams depending on grind size and roast level.',
+  fail:'Changing the ratio to fix sourness or bitterness usually misses the mark. If the cup is thin but not sour, add more coffee. If it is strong but sour, adjust the grind or the time.',
+  tip:'Write down the recipe you are using. Change only one factor at a time, then taste again.'},
+ {name:'Brewer',sub:()=>ME[st.m].n+' · '+ME[st.m].kind.toLowerCase(),
+  mech:()=>MT[st.m].mech,
+  kv:()=>[['Method',ME[st.m].kind],['Time',ftime(st.t)],['The three cups in Figure 3',ME[st.m].t3.map(t=>ftime(t)).join(', ')],['Suggested stop',`${ftime(tStop(st))}, EY ${vn(goal(st),1)}%`]],
+  check:'',fail:'',tip:''},
+ {name:'Order of dissolving',sub:()=>'The four compound groups in the figure',
+  mech:()=>'Each tube is one compound group from the figure; how full it is shows what percentage of that group has left the bean. Acids and CGA are small, easily dissolved molecules, so they come out first. Caffeine also comes out early. Sugars, caramel and Maillard compounds create sweetness and body and come out in the middle. The harsh bitter group comes out last.',
+  kv:()=>{const c=cur();return SER.map(s=>[s.n,pc(c.f[s.k])+'%'])},
+  check:'Taste in order: acidity at the tip of the tongue, sweetness and body in the middle, bitterness and dryness at the end and in the aftertaste.',
+  fail:'A cup with enough acidity but not enough sweetness was stopped too early. A bitter, dry cup that lingers in the aftertaste was brewed too long, with water too hot or a grind too fine.',
+  tip:'The curves are built from the figure and adjusted according to research. This is an illustrative model, not measurements.'},
+ {name:'Cup & refractometer',sub:()=>'Measure TDS, calculate EY',
+  mech:()=>{const c=cur();return `A refractometer measures TDS, the percentage of dissolved solids in the cup. Knowing TDS, the beverage weight and the coffee dose, you can calculate EY = TDS × beverage weight ÷ coffee dose. The SCA considers filter coffee to meet the Golden Cup standard at an EY of 18–22% and TDS of 1.15–1.35%. This cup: ${vn(c.T,2)}% × ${Math.round(c.B)}${NB}g ÷ ${g1(st.dose)}${NB}g = ${vn(c.e,1)}%.`},
+  kv:()=>{const c=cur();return [['TDS',vn(c.T,2)+'%'],['Yield',Math.round(c.B)+NB+'g'],['EY',vn(c.e,1)+'%'],['SCA standard for filter coffee','EY 18–22'+'%, TDS 1,15–1,35'+'%']]},
+  check:'Stir well, take a sample and let it cool to room temperature before measuring.',
+  fail:'Measuring while the sample is still hot gives wrong numbers. An espresso sample with a lot of sediment needs filtering if the meter requires it.',
+  tip:'Without a refractometer, taste: sour and salty means under, bitter and dry means over. The calculator at the bottom of the page converts your reading to EY.'},
+ {name:'Spent grounds',sub:()=>'The part that never dissolves',
+  mech:()=>{const c=cur();return `Experiments have measured a maximum extraction of about 28–32%. The rest of the coffee is a fibrous structure that does not dissolve. At an EY of ${vn(c.e,1)}%, about ${pc(1-c.e/100)}% of the coffee's weight remains in the grounds. Because what can dissolve is limited, over-extraction does not make a cup “bigger”, it only pulls more of the unwanted compounds.`},
+  kv:()=>{const c=cur();return [['Coffee in',g1(st.dose)+NB+'g'],['Solubles in the cup',vn(st.dose*c.e/100,1)+NB+'g'],['Stays in the spent grounds',vn(st.dose*(1-c.e/100),1)+NB+'g'],['Water held by grounds',ME[st.m].ret?Math.round(ME[st.m].ret*st.dose)+NB+'ml':'by the coffee bed']]},
+  check:'The spent bed of a phin or pour-over should be flat and even. Pits or channels in it mean the water flowed unevenly.',
+  fail:'Water flowing through channels makes part of the coffee over-extract and another part under-extract.',
+  tip:'Spent grounds can be composted as fertilizer, or dried to deodorize the fridge.'}];
+
+/* ====== DỰNG CẢNH ====== */
+const G={x:124,y:440,r:70},MG={x:312,y:534,r:36};
+const gAng=v=>(-210+clamp(v,0,28)/28*240)*Math.PI/180;
+function brewer(m){
+ if(m==='fp')return cyl(52,12.5,0,3.15,.6,'cu2','cu2')+'<g id="bl"></g>'+cyl(52,12.5,.6,2.95,8.8,'gl','glt')+ring(52,12.5,1.7,2.95,'var(--copper)',2.4)+ring(52,12.5,8.4,2.95,'var(--copper)',2.4)
+  +cyl(52,12.5,9.4,3.05,.55,'cu','cu')+line([P(52,12.5,9.95),P(52,12.5,12.5)],2.2,'var(--s3)')+cyl(52,12.5,12.3,.7,.8,'cu2','cu')
+  +line([P(54.9,12.5,8.6),P(56.7,12.5,8.4),P(57,12.5,3.4),P(54.9,12.5,2.8)],3.4,'var(--copper2)');
+ if(m==='phin')return '<g id="bl"></g>'+cyl(52,12.5,0,2.6,5.4,'gl','glt')+cyl(52,12.5,5.4,3.3,.35,'f2','f1')+cyl(52,12.5,5.75,2.15,2.9,'f2','f1')+ring(52,12.5,7.9,2.15,'var(--s3)',1.4)
+  +cyl(52,12.5,8.65,2.25,.4,'f3','f1')+cyl(52,12.5,9.05,.55,.55,'f3','f2')+drips(52,12.5,5.2);
+ if(m==='po')return '<g id="bl"></g>'+cyl(52,12.5,0,2.7,5.2,'gl','glt')+cyl(52,12.5,5.2,2.3,.3,'drp','drp')+frus(52,12.5,5.5,1.15,9.8,3.2,'drp','drp')
+  +(()=>{const [a,b]=P(52,12.5,9.6);return `<ellipse class="grdT" cx="${f1(a)}" cy="${f1(b)}" rx="${f1(RX(2.7))}" ry="${f1(RY(2.7))}"/>`})()+drips(52,12.5,5.1);
+ if(m==='esp'){const cup=P(49.5,15.9,2.8),gh=P(49.5,15.6,5.4);
+  return box(44.2,14.4,0,12.6,4.2,.9,['f1','f2','f3'])+box(44.2,6,0,12.6,8.4,11,['f1','f2','f3'])+box(44.2,6,11,12.6,8.4,.35,['f2','f3','f3'])
+  +`<g transform="${face(53.4,14.4,9.6)}"><circle cx="9" cy="9" r="8.5" class="pa" style="stroke:var(--ol);stroke-width:1.2"/><line x1="9" y1="9" x2="13.5" y2="4.5" style="stroke:var(--accent);stroke-width:1.6"/><text class="lcd" x="9" y="15.4" text-anchor="middle" style="fill:var(--ink)">9 bar</text></g>`
+  +cyl(49.5,15.6,6.3,1.55,1.4,'f3','f2')+cyl(49.5,15.6,5.4,1.65,.9,'f3','f3')
+  +line([P(49.5,17.2,5.95),P(49.5,21.6,5.6)],4.2,'#4A2C1A')
+  +`<line id="stream" x1="${f1(gh[0])}" y1="${f1(gh[1])}" x2="${f1(cup[0])}" y2="${f1(cup[1])}" style="stroke-width:2.6"/>`
+  +cyl(49.5,15.9,.9,1.45,1.9,'pa','liqt')}
+ return '<g id="bl"></g>'+cyl(52,12.5,0,3.6,9.4,'gl','glt')+cyl(52,12.5,9.4,3.7,.8,'cu','cu')+ring(52,12.5,1.2,3.6,'var(--copper)',2);
+}
+function drips(cx,cy,z){const a=P(cx,cy,z-.4),b=P(cx,cy,z-1.4);return `<ellipse class="drip liqt" cx="${f1(a[0])}" cy="${f1(a[1])}" rx="1.3" ry="2"/><ellipse class="drip d2 liqt" cx="${f1(b[0])}" cy="${f1(b[1])}" rx="1.2" ry="1.8"/>`}
+function buildScene(){
+ let h='<g class="m">';
+ [[3,23],[109,23],[109,3]].forEach(([x,y])=>h+=cyl(x,y,-9,1.2,5,'cu2','cu2'));
+ h+=box(0,0,-4,112,27,4,['wo','wo2','cu2'])+'</g>';
+ const pl=P(66,27,-.6);
+ h+=`<g transform="matrix(.866 .5 0 1 ${f1(pl[0])} ${f1(pl[1])})"><rect width="245" height="24" rx="3" style="fill:#D6B26A;stroke:#2A1B16;stroke-width:1.2"/><circle cx="8" cy="12" r="1.8" style="fill:#2A1B16"/><circle cx="237" cy="12" r="1.8" style="fill:#2A1B16"/><text class="sgn" x="122" y="17.5" text-anchor="middle">MeDili Coffee Farm · Di Linh</text></g>`;
+ /* 1 cối xay */
+ const bt=P(8.5,11.5,11.1);
+ h+=stG(1,box(5,8,0,7,7,6.5,['f1','f2','f3'])+box(7.3,15,2.4,2.4,1.3,1.1,['f2','f3','f3'])+cyl(8.5,11.5,6.5,1.5,1.3,'f3','f2')
+  +frus(8.5,11.5,7.8,1.25,11.1,2.75,'bean','bean')
+  +[[-9,-2],[0,-4],[9,-1],[-4,3],[6,4],[-12,2],[13,2],[1,1]].map(([dx,dy])=>`<ellipse class="bean2" cx="${f1(bt[0]+dx)}" cy="${f1(bt[1]+dy)}" rx="3" ry="2" transform="rotate(${dx*4} ${f1(bt[0]+dx)} ${f1(bt[1]+dy)})"/>`).join('')
+  +frus(8.5,11.5,7.8,1.4,12.4,3.1,'gl','glt')+cyl(8.5,17.6,0,1.7,2.3,'pa','grdT'));
+ /* 2 nước và nhiệt */
+ const tip=P(29.6,12.5,6.6);
+ h+=stG(2,box(18.6,9,0,7,7,1.1,['f1','f2','f3'])+lcd(19.6,16,1.05,34,'kT')
+  +line([P(19.4,12.5,5.2),P(18,12.5,5.4),P(17.4,12.5,4),P(17.9,12.5,2.2),P(19.4,12.5,2)],3,'var(--copper2)')
+  +cyl(22.1,12.5,1.1,2.8,4.4,'cu','cu')+ring(22.1,12.5,2.3,2.8,'var(--copper2)',1.6)
+  +cyl(22.1,12.5,5.5,1.4,.5,'cu2','cu')+cyl(22.1,12.5,6,.45,.6,'cu2','cu2')
+  +line([P(24.6,12.5,1.9),P(26.6,12.5,4.4),P(28.1,12.5,6.3),P(29.6,12.5,6.6)],3.2,'var(--copper2)')
+  +`<g id="steam"><path class="steam" d="M${f1(tip[0]+4)} ${f1(tip[1]-6)}c-5-6 5-9 0-16"/><path class="steam" d="M${f1(tip[0]+11)} ${f1(tip[1]-4)}c-5-6 5-9 0-15"/></g>`);
+ /* 3 cân */
+ h+=stG(3,box(32,8.6,0,10.4,8,1.2,['f1','f2','f3'])+lcd(32.8,16.6,1.1,64,'kD')+frus(36.2,12.3,1.2,1.6,2.9,2.4,'pa','grdT'));
+ /* 4 bình chiết */
+ h+=`<path class="pour" id="pour" d="M${f1(tip[0])} ${f1(tip[1])}Q410 150 ${f1(P(51.4,12.5,ME[st.m].top-1)[0])} ${f1(P(51.4,12.5,ME[st.m].top-1)[1])}"/>`;
+ h+=stG(4,brewer(st.m));
+ /* 5 bốn ống */
+ const tl=['Acid','Caf','Sweet','Bitter'];
+ h+=stG(5,box(62,9,0,15,2,13.2,['wo','wo2','cu2'])+`<g transform="${face(62.8,11,12.8)}"><text class="wtx" x="0" y="4">ORDER OF DISSOLVING</text></g>`
+  +box(62,11,0,15,4.4,1.4,['wo','wo2','cu2'])+'<g id="tubes"></g>'
+  +`<g transform="${face(62,15.4,1.3)}">${tl.map((t,i)=>`<text class="wtx" x="${f1((1.7+i*3.4)*7.8)}" y="7.6" text-anchor="middle">${t}</text>`).join('')}</g>`);
+ /* 6 ly và khúc xạ kế */
+ const c6=P(85,13,3.6);
+ h+=stG(6,cyl(85,13,0,2.9,4,'mug','mug')+`<ellipse class="liqt" id="cupTop" cx="${f1(c6[0])}" cy="${f1(c6[1])}" rx="${f1(RX(2.5))}" ry="${f1(RY(2.5))}"/>`
+  +line([P(87.7,13,3.5),P(89.2,13,3.3),P(89.3,13,1.3),P(87.7,13,1.1)],4.6,'var(--ol)')+line([P(87.7,13,3.5),P(89.2,13,3.3),P(89.3,13,1.3),P(87.7,13,1.1)],2.6,'var(--i-milk)')
+  +box(90.8,9.4,0,6.2,3.6,1.5,['f1','f2','f3'])+lcd(91.3,13,1.4,40,'kS')
+  +(()=>{const q=P(92.6,11,1.5);return `<ellipse cx="${f1(q[0])}" cy="${f1(q[1])}" rx="5" ry="2.8" class="lcdb"/>`})());
+ /* 7 bã */
+ h+=stG(7,box(100,10,0,7.4,6,3.4,['wo','wo2','cu2'])+cyl(103.7,13,3.4,2.1,.6,'grd','grdT')+`<g transform="${face(100.6,16,3)}"><text class="wtx" id="kB" x="0" y="11"></text></g>`);
+ /* đồng hồ EY, kính lúp, nhãn */
+ h+=buildGauge()+'<g id="mag"></g>';
+ h+=`<g><rect x="20" y="614" width="322" height="64" rx="8" class="pa" style="stroke:var(--ink);stroke-width:1.2"/><text x="34" y="643" class="sgn2">MeDili Coffee Farm · Di Linh</text><text x="34" y="663" class="tiny mutedt">Concept drawing · illustrative, not measured</text></g>`;
+ h+='<g id="chips"></g>';
+ $('scene').innerHTML=h;
+ document.querySelectorAll('#scene .st').forEach(g=>{g.addEventListener('click',()=>select(+g.dataset.i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(+g.dataset.i)}})});
+}
+function buildGauge(){
+ const arc=(a,b,r)=>{const A=gAng(a),B=gAng(b);return `M${f1(G.x+r*Math.cos(A))} ${f1(G.y+r*Math.sin(A))}A${r} ${r} 0 0 1 ${f1(G.x+r*Math.cos(B))} ${f1(G.y+r*Math.sin(B))}`};
+ let h=`<g class="m"><line x1="${G.x}" y1="${G.y+G.r}" x2="${G.x}" y2="${G.y+G.r+12}"/><circle cx="${G.x}" cy="${G.y}" r="${G.r}" class="pa" style="stroke-width:2.4"/></g>`;
+ h+=`<path d="${arc(0,18,G.r-13)}" fill="none" style="stroke:var(--rule);stroke-width:8"/><path d="${arc(18,22,G.r-13)}" fill="none" style="stroke:var(--good);stroke-width:8"/><path d="${arc(22,28,G.r-13)}" fill="none" style="stroke:var(--bad);stroke-width:8"/>`;
+ for(let v=0;v<=28;v+=7){const A=gAng(v);h+=`<text x="${f1(G.x+(G.r-31)*Math.cos(A))}" y="${f1(G.y+(G.r-31)*Math.sin(A)+3.5)}" text-anchor="middle" class="mono" style="font-size:10.5px">${v}</text>`}
+ h+=`<line id="needle" x1="${G.x}" y1="${G.y}" x2="${G.x}" y2="${G.y-42}" style="stroke:var(--accent);stroke-width:3;stroke-linecap:round"/><circle cx="${G.x}" cy="${G.y}" r="5" class="ac"/>`;
+ h+=`<text id="gv" x="${G.x}" y="${G.y+43}" text-anchor="middle" class="mono" style="font-size:16px"></text><text x="${G.x}" y="${G.y+57}" text-anchor="middle" class="tiny mutedt">extraction EY</text>`;
+ h+=`<text id="gt" x="${G.x}" y="${G.y-G.r-12}" text-anchor="middle" class="lab12"></text>`;
+ return h;
+}
+function drawMag(){
+ const R=GR[st.g].r,N=clamp(Math.round(620/(R*R*4)),9,90),cup=P(8.5,17.6,1);
+ let h=`<polyline class="lead-l" points="${f1(cup[0])},${f1(cup[1])} ${MG.x-22},${MG.y-28}"/><line x1="${MG.x+25}" y1="${MG.y+25}" x2="${MG.x+44}" y2="${MG.y+44}" style="stroke:var(--ink);stroke-width:6;stroke-linecap:round"/>`;
+ h+=`<circle cx="${MG.x}" cy="${MG.y}" r="${MG.r}" class="pa" style="stroke:var(--ink);stroke-width:2.4"/>`;
+ for(let i=0;i<N;i++){const rr=(MG.r-R-4)*Math.sqrt((i+.5)/N),th=i*2.39996,j=Math.abs(Math.sin(i*12.9898)*43758.5453)%1,s=R*(.75+.5*j);
+  h+=`<ellipse cx="${f1(MG.x+rr*Math.cos(th))}" cy="${f1(MG.y+rr*Math.sin(th))}" rx="${f1(s)}" ry="${f1(s*.8)}" transform="rotate(${Math.round(j*180)} ${f1(MG.x+rr*Math.cos(th))} ${f1(MG.y+rr*Math.sin(th))})" style="fill:${j>.5?'#6B4226':'#8D5A32'}"/>`}
+ h+=`<text x="${MG.x}" y="${MG.y+MG.r+18}" text-anchor="middle" class="lab12">Coffee ${GR[st.g].n.toLowerCase()}</text>`;
+ $('mag').innerHTML=h;
+}
+const CHIP=[null,{x:236,y:14},{x:318,y:66},{x:404,y:118},{x:520,y:170},{x:648,y:222},{x:764,y:306},{x:846,y:398}];
+const anch=i=>[null,[8.5,11.5,12.4],[22.1,12.5,6.6],[36.2,12.3,2.9],[52,12.5,ME[st.m].top],[69.5,13,13.2],[85,13,4],[103.7,13,4]][i];
+function chipLabel(i,c,tv){
+ if(i===1)return 'Grind '+GR[st.g].n.toLowerCase();
+ if(i===2)return (st.T<40?'Cold water ':'Water ')+st.T+NB+'°C';
+ if(i===3)return st.m==='esp'?`${g1(st.dose)}${NB}g → ${st.water}${NB}g`:`${g1(st.dose)}${NB}g · ${st.water}${NB}ml`;
+ if(i===4)return ME[st.m].n+' · '+ftime(tv);
+ if(i===5)return 'EY '+vn(c.e,1)+'%';
+ if(i===6)return 'TDS '+vn(c.T,c.T<3?2:1)+'%';
+ return 'Retained by grounds '+pc(1-c.e/100)+'%'}
+function drawChips(c,tv){let h='';
+ for(let i=1;i<=7;i++){const C=CHIP[i],l=chipLabel(i,c,tv),w=40+l.length*7.2,x=Math.min(C.x,1030-w-6),q=P(...anch(i));
+  h+=`<polyline class="lead-l${i===st.sel?' on':''}" data-l="${i}" points="${f1(q[0])},${f1(q[1])} ${f1(x+20)},${C.y+13}"/><g class="chip${i===st.sel?' on':''}" data-c="${i}"><rect x="${f1(x+6)}" y="${C.y}" rx="8" width="${f1(w)}" height="26"/><circle cx="${f1(x+6)}" cy="${C.y+13}" r="13"/><text class="num" x="${f1(x+6)}" y="${C.y+18.5}" text-anchor="middle">${i}</text><text class="lab" x="${f1(x+26)}" y="${C.y+18}">${l}</text></g>`}
+ const el=$('chips');el.innerHTML=h;el.querySelectorAll('.chip').forEach(g=>g.addEventListener('click',()=>select(+g.dataset.c)))}
+
+/* ====== VẼ PHẦN ĐỘNG ====== */
+function renderDyn(tv,k){
+ const e=EY(st,tv),T=TDS(st,e),f=fx(st,e),c={e,T,f},col=cofCol(T,e),m=st.m;
+ /* ống chất */
+ let h='';SER.forEach((s,i)=>{const x=63.7+i*3.4,y=13,lv=f[s.k];
+  if(lv>.004)h+=cyl(x,y,1.55,.98,9.4*lv,'',``).replace(/class=""/g,`style="fill:${s.c}"`);
+  h+=cyl(x,y,1.4,1.15,10,'gl','glt')});
+ $('tubes').innerHTML=h;
+ /* chất lỏng */
+ const bl=$('bl');if(bl){let g='';
+  if(m==='fp'){g=cyl(52,12.5,.6,2.75,7.4,'liq','liqt')+cyl(52,12.5,7.1,2.75,.9,'grd','grdT')}
+  else if(m==='phin'||m==='po'){const H=(m==='phin'?4.4:4.2)*clamp(k,0,1);if(H>.05)g=cyl(52,12.5,.1,2.42,H,'liq','liqt')}
+  else if(m==='cb'){g=cyl(52,12.5,.2,3.45,8.2,'liq','liqt')+cyl(52,12.5,.2,3.45,1.5,'grd','grdT')}
+  bl.innerHTML=g}
+ document.querySelectorAll('#scene .liq,#scene .liqt').forEach(x=>x.style.fill=col);
+ const sm=$('stream');if(sm)sm.style.stroke=col;
+ /* đồng hồ, chữ */
+ $('needle').setAttribute('transform',`rotate(${f1(gAng(e)*180/Math.PI+90)} ${G.x} ${G.y})`);
+ $('gv').textContent=vn(e,1)+'%';
+ $('gt').textContent=(k<1?'Brewing ':'Stop at ')+ftime(tv);
+ $('kT').textContent=st.T+NB+'°C';
+ $('kD').textContent=st.m==='esp'?`${g1(st.dose)} g → ${st.water} g`:`${g1(st.dose)} g · ${st.water} ml`;
+ $('kS').textContent=vn(T,T<3?2:1)+'%';
+ $('kB').textContent='remaining '+pc(1-e/100)+'%';
+ $('steam').style.display=st.T>=70?'':'none';
+ drawChips(c,tv);
+ drawE(tv);
+ $('cbars').innerHTML=SER.map(s=>`<div class="bar"><span>${s.n}</span><span class="track"><i style="width:${pc(f[s.k])}%;background:${s.c}"></i></span><span>${pc(f[s.k])}</span></div>`).join('');
+}
+
+/* ====== BIỂU ĐỒ EY THEO THỜI GIAN ====== */
+function drawE(tv){
+ const m=ME[st.m],W=340,H=156,l=30,r=10,t=18,b=22,tmax=m.sl[1]*m.uf,X=x=>l+x/tmax*(W-l-r),Y=v=>t+(1-v/28)*(H-t-b);
+ const un=st.m==='esp'?'seconds':st.m==='cb'?'hours':'minutes';
+ let g=`<text class="ttl" x="${l}" y="11">EY (%) · horizontal axis: ${un}</text>`;
+ g+=`<rect x="${l}" y="${f1(Y(22))}" width="${W-l-r}" height="${f1(Y(18)-Y(22))}" style="fill:var(--good);fill-opacity:.16"/><text x="${W-r-3}" y="${f1(Y(22)+9)}" text-anchor="end">SCA 18–22</text>`;
+ [0,10,20,28].forEach(v=>g+=`<line x1="${l}" x2="${W-r}" y1="${f1(Y(v))}" y2="${f1(Y(v))}" style="stroke:var(--rule);stroke-width:.7"/><text x="${l-5}" y="${f1(Y(v)+3.5)}" text-anchor="end">${v}</text>`);
+ for(let u=0;u*m.uf<=tmax+1e-9;u+=m.tk){const x=u*m.uf;g+=`<text x="${f1(X(x))}" y="${H-5}" text-anchor="middle">${u}</text>`}
+ const p=[];for(let i=0;i<=80;i++){const x=tmax*i/80;p.push(f1(X(x))+','+f1(Y(EY(st,x))))}
+ g+=`<polyline points="${p.join(' ')}" fill="none" style="stroke:var(--accent);stroke-width:2"/>`;
+ m.t3.forEach(x=>{if(x<=tmax)g+=`<circle cx="${f1(X(x))}" cy="${f1(Y(EY(st,x)))}" r="3" style="fill:var(--panel);stroke:var(--ink);stroke-width:1.2"/>`});
+ const ts=tStop(st);if(ts<=tmax)g+=`<line x1="${f1(X(ts))}" x2="${f1(X(ts))}" y1="${t}" y2="${H-b}" style="stroke:var(--good);stroke-width:1;stroke-dasharray:3 3"/>`;
+ g+=`<line x1="${f1(X(tv))}" x2="${f1(X(tv))}" y1="${t}" y2="${H-b}" style="stroke:var(--ink);stroke-width:1"/><circle cx="${f1(X(tv))}" cy="${f1(Y(EY(st,tv)))}" r="4.5" style="fill:var(--accent);stroke:var(--panel);stroke-width:2"/>`;
+ $('cE').innerHTML=g;
+}
+function scrubE(ev,set){
+ const m=ME[st.m],r=$('cE').getBoundingClientRect(),x=(ev.clientX-r.left)/r.width*340,tmax=m.sl[1]*m.uf;
+ let v=clamp((x-30)/300,0,1)*tmax/m.uf;v=clamp(Math.round(v/m.sl[2])*m.sl[2],m.sl[0],m.sl[1]);
+ const t=v*m.uf,e=EY(st,t);
+ $('tip').textContent=`Stop at ${ftime(t)}: EY ${vn(e,1)}%, TDS ${vn(TDS(st,e),2)}%`;
+ if(set&&Math.abs(t-st.t)>1e-9){st.t=t;update()}
+}
+
+/* ====== HÌNH 2 ====== */
+let D2={W:920,H:400,L:58,R:150,T:70,B:46,mob:false};
+function dims2(){const w=Math.round($('w2').clientWidth)||920,W=clamp(w,300,1400),mob=W<640;return {W,H:mob?340:400,L:mob?46:58,R:mob?14:150,T:mob?56:70,B:mob?42:46,mob}}
+const X2=e=>D2.L+e/28*(D2.W-D2.L-D2.R),Y2=v=>D2.T+(1-v)*(D2.H-D2.T-D2.B);
+function drawC2(hov){
+ D2=dims2();const {W,H,L,R,T,B,mob}=D2,c=cur();let g='';
+ $('c2').setAttribute('viewBox',`0 0 ${W} ${H}`);
+ [[0,14,'var(--cx1)','FIRST OUT','acids · CGA · polyphenols'],[14,20,'var(--cx3)','IN THE MIDDLE','sugars · Maillard'],[20,28,'var(--cx4)','LAST OUT','bitter compounds']].forEach(([a,b,col,hd,sb])=>{
+  const cx=f1((X2(a)+X2(b))/2);
+  g+=`<rect x="${f1(X2(a))}" y="${T}" width="${f1(X2(b)-X2(a))}" height="${H-T-B}" style="fill:${col};fill-opacity:.07"/>`;
+  g+=mob?`<text class="zh" x="${cx}" y="${T-28}" text-anchor="middle" style="font-size:10px;letter-spacing:.02em">${hd}</text>`:`<text class="zh" x="${cx}" y="${T-46}" text-anchor="middle">${hd}</text><text class="zs" x="${cx}" y="${T-30}" text-anchor="middle">${sb}</text>`;
+  if(a>0)g+=`<line x1="${f1(X2(a))}" x2="${f1(X2(a))}" y1="${T}" y2="${H-B}" class="gr" style="stroke-dasharray:3 4"/>`});
+ [0,.25,.5,.75,1].forEach(v=>g+=`<line x1="${L}" x2="${W-R}" y1="${f1(Y2(v))}" y2="${f1(Y2(v))}" class="gr"/><text x="${L-8}" y="${f1(Y2(v)+4)}" text-anchor="end">${v*100}%</text>`);
+ [0,5,10,15,20,25].forEach(e=>g+=`<text x="${f1(X2(e))}" y="${H-B+18}" text-anchor="middle">${e}%</text>`);
+ g+=`<text x="${f1((L+W-R)/2)}" y="${H-6}" text-anchor="middle">extraction yield EY</text>`;
+ if(!mob)g+=`<text transform="translate(13 ${f1((T+H-B)/2)}) rotate(-90)" text-anchor="middle">% of compounds that left the bean</text>`;
+ g+=`<rect class="sca" x="${f1(X2(18))}" y="${H-B-7}" width="${f1(X2(22)-X2(18))}" height="7" rx="2"/><text x="${f1(X2(20))}" y="${H-B-12}" text-anchor="middle" class="val" style="font-size:11px">SCA 18–22%</text>`;
+ const ends=[];
+ SER.forEach(s=>{const p=[];for(let e=0;e<=28.001;e+=.25)p.push(f1(X2(e))+','+f1(Y2(FR[s.k](e,st))));
+  g+=`<polyline points="${p.join(' ')}" fill="none" stroke-linejoin="round" style="stroke:${s.c};stroke-width:2${s.d?';stroke-dasharray:'+s.d:''}"/>`;
+  ends.push({s,y:Y2(FR[s.k](28,st))})});
+ if(!mob){ends.sort((a,b)=>a.y-b.y);for(let i=0;i<ends.length;i++){ends[i].ly=i?Math.max(ends[i].y,ends[i-1].ly+17):Math.max(ends[i].y,T+6)}
+  const ov=ends[ends.length-1].ly-(H-B-6);if(ov>0)ends.forEach(o=>o.ly-=ov);
+  ends.forEach(o=>{const x=X2(28);g+=`<polyline points="${f1(x)},${f1(o.y)} ${f1(x+10)},${f1(o.ly)} ${f1(x+16)},${f1(o.ly)}" fill="none" style="stroke:${o.s.c};stroke-width:1.5${o.s.d?';stroke-dasharray:3 2':''}"/><text class="lab" x="${f1(x+20)}" y="${f1(o.ly+4.5)}">${o.s.n}</text>`})}
+ const em=EYM(st.T);if(em<27.9){const mx=f1((X2(em)+X2(28))/2),my=(T+H-B)/2;g+=`<rect x="${f1(X2(em))}" y="${T}" width="${f1(X2(28)-X2(em))}" height="${H-T-B}" style="fill:var(--panel);fill-opacity:.72"/><text class="zs" x="${mx}" y="${f1(my+50)}" text-anchor="middle"${mob?' style="font-size:10.5px"':''}>water ${st.T}${NB} °C</text><text class="zs" x="${mx}" y="${f1(my+66)}" text-anchor="middle"${mob?' style="font-size:10.5px"':''}>not reached</text>`}
+ const ex=X2(c.e),right=ex>(L+W-R)/2;
+ g+=`<line class="cur" x1="${f1(ex)}" x2="${f1(ex)}" y1="${T-14}" y2="${H-B}"/><text class="val" x="${f1(ex+(right?-6:6))}" y="${T-5}" text-anchor="${right?'end':'start'}">${mob?'':'Your cup · '}EY ${vn(c.e,1)}%</text>`;
+ SER.forEach(s=>g+=`<circle cx="${f1(ex)}" cy="${f1(Y2(c.f[s.k]))}" r="5" style="fill:${s.c};stroke:var(--panel);stroke-width:2"/>`);
+ if(hov!=null){const hx=X2(hov);g+=`<line class="hov" x1="${f1(hx)}" x2="${f1(hx)}" y1="${T}" y2="${H-B}"/>`;SER.forEach(s=>g+=`<circle cx="${f1(hx)}" cy="${f1(Y2(FR[s.k](hov,st)))}" r="4.5" style="fill:var(--panel);stroke:${s.c};stroke-width:2"/>`)}
+ $('c2').innerHTML=g;
+}
+function hover2(ev){
+ const svg=$('c2'),r=svg.getBoundingClientRect(),x=(ev.clientX-r.left)/r.width*D2.W,e=(x-D2.L)/(D2.W-D2.L-D2.R)*28;
+ if(e<0||e>28){leave2();return}
+ drawC2(e);
+ const tb=$('tip2'),w=$('w2').getBoundingClientRect();
+ tb.innerHTML=`<p class="h">EY ${vn(e,1)}%</p>`+SER.map(s=>`<p><i class="sw2${s.d?' d':''}" style="border-color:${s.c}"></i>${s.n}<b>${pc(FR[s.k](e,st))}%</b></p>`).join('');
+ tb.hidden=false;const bw=tb.offsetWidth,px=ev.clientX-w.left,py=ev.clientY-w.top;
+ tb.style.left=f1(clamp(px+16+bw>w.width?px-16-bw:px+16,0,Math.max(0,w.width-bw)))+'px';tb.style.top=f1(clamp(py-40,0,Math.max(0,w.height-tb.offsetHeight)))+'px';
+}
+function leave2(){$('tip2').hidden=true;drawC2(null)}
+function table2(){const rows=[];for(let e=0;e<=28;e+=2)rows.push(`<tr><td>${e}%</td>${SER.map(s=>`<td>${pc(FR[s.k](e,st))}%</td>`).join('')}</tr>`);
+ $('t2').innerHTML=`<thead><tr><th>EY</th>${SER.map(s=>`<th>${s.n}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody>`}
+
+/* ====== HÌNH 3 ====== */
+function mugSvg(a){const body=rgb(a),rim=rgb(mix(a,[246,235,217],.3)),liq=rgb(mix(a,[42,23,16],.35));
+ return `<svg viewBox="0 0 120 96" aria-hidden="true"><ellipse cx="54" cy="90" rx="44" ry="5" style="fill:var(--rule)"/><path d="M97 34h7a14 14 0 0 1 0 28h-9" fill="none" style="stroke:var(--ink);stroke-width:8"/><path d="M97 34h7a14 14 0 0 1 0 28h-9" fill="none" style="stroke:${body};stroke-width:4"/><path d="M12 22h86v38a28 28 0 0 1-28 28H40a28 28 0 0 1-28-28z" style="fill:${body};stroke:var(--ink);stroke-width:2.4"/><path d="M20 32v24a20 20 0 0 0 9 16" fill="none" style="stroke:#FFF6EC;stroke-width:4;stroke-linecap:round;opacity:.28"/><ellipse cx="55" cy="22" rx="43" ry="9" style="fill:${rim};stroke:var(--ink);stroke-width:2.4"/><ellipse cx="55" cy="23" rx="37" ry="6.4" style="fill:${liq}"/></svg>`}
+function drawCups(){
+ const m=ME[st.m],lab=['Cut short','On target','Left too long'];
+ $('h3l').textContent=`Same ${g1(st.dose)}${NB}g of coffee, ${st.water}${NB}${st.m==='esp'?'g yield':'ml water'}, ${GR[st.g].n.toLowerCase()} grind, water at ${st.T}${NB} °C, ${BEAN[st.bean].n} ${ROAST[st.roast].n.toLowerCase()}, brewed as ${ME[st.m].nl}. What changes is which compounds reach the cup. Change the settings in Figure 1 and the three cups follow.`;
+ $('cups').innerHTML=m.t3.map((t,i)=>{const e=EY(st,t),T=TDS(st,e),f=fx(st,e),[k,vt]=short(e,filt(st.m));
+  return `<div class="cupc"><div class="top">${mugSvg(cofArr(T,e))}<div><b class="ct">${ftime(t)}</b><span class="sub">${lab[i]}</span><span class="vt ${k}">${sym(k)} ${vt}</span></div></div>\n  <div class="bars">${SER.map(s=>`<div class="bar"><span>${s.n}</span><span class="track"><i style="width:${pc(f[s.k])}%;background:${s.c}"></i></span><span>${pc(f[s.k])}</span></div>`).join('')}</div>\n  <p class="cm">EY ${vn(e,1)}% · TDS ${vn(T,T<3?2:1)}%</p></div>`}).join('');
+ const ts=tStop(st),e=EY(st,ts),f=fx(st,e);
+ $('bline').innerHTML=st.T<40?`Cold water pulls very few bitter compounds: at <b>${ftime(ts)}</b>, bitter compounds are only ${pc(f.bit)}% out while CGA is already ${pc(f.cga)}% out. Caffeine and CGA are near equilibrium after 6–7 hours; steeping longer is mainly for more body and flavor.`
+  :`Want CGA without bitterness? With ${ME[st.m].nl} and these settings, stop at about <b>${ftime(ts)}</b>: CGA is ${pc(f.cga)}% out, bitter compounds only ${pc(f.bit)}%. Extending further mostly adds bitter compounds.`;
+}
+
+/* ====== BẢNG CÔNG THỨC ====== */
+function drawMT(){
+ $('mt').innerHTML=ORDER.map(k=>{const m=ME[k],p=m.p,s={m:k,...p},e=EY(s,p.t),T=TDS(s,e);
+  return `<tr class="pick${k===st.m?' on':''}" data-k="${k}" tabindex="0"><td><b>${m.n}</b><br><small>${m.kind}</small></td><td>${BEAN[p.bean].n}<br><small>${ROAST[p.roast].n}</small></td><td>${p.dose}${NB}g : ${p.water}${NB}${k==='esp'?'g':'ml'}<br><small>1:${vn(p.water/p.dose,1)}</small></td><td>${GR[p.g].n}</td><td>${p.T}${NB} °C</td><td>${ftime(p.t,k)}<br><small>three cups: ${m.t3.map(t=>ftime(t,k)).join(', ')}</small></td><td>EY ${vn(e,1)}%<br><small>TDS ${vn(T,T<3?2:1)}%</small></td><td><button class="btn small" type="button" data-k="${k}">Load</button></td></tr>`}).join('');
+ $('mt').querySelectorAll('tr').forEach(r=>{const go=()=>{setMethod(r.dataset.k);$('scene').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'})};r.onclick=go;r.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();go()}}});
+}
+
+/* ====== ĐIỀU KHIỂN ====== */
+function pills(id,items,cur,cb){$(id).innerHTML=items.map(([k,n])=>`<button class="pill" type="button" data-k="${k}" aria-pressed="${String(cur)===String(k)}">${n}</button>`).join('');$(id).querySelectorAll('button').forEach(b=>b.onclick=()=>cb(b.dataset.k))}
+function setMethod(k){stopAnim();Object.assign(st,{m:k},ME[k].p);buildScene();update()}
+function sliders(){
+ const m=ME[st.m],set=(id,a,b,s,v)=>{const el=$(id);el.min=a;el.max=b;el.step=s;el.value=v};
+ set('iT',m.sl[0],m.sl[1],m.sl[2],st.t/m.uf);set('iG',0,4,1,st.g);set('iC',m.Tr[0],m.Tr[1],1,st.T);set('iD',m.dr[0],m.dr[1],m.dr[2],st.dose);set('iW',m.wr[0],m.wr[1],m.wr[2],st.water);
+ $('oT').textContent=ftime(st.t);$('oG').textContent=GR[st.g].n;$('oC').textContent=st.T+NB+'°C';$('oD').textContent=g1(st.dose)+NB+'g';
+ $('wLbl').textContent=st.m==='esp'?'Yield':'Water';$('oW').textContent=st.water+NB+(st.m==='esp'?'g':'ml');
+ {const g=goal(st);$('tNote').textContent=`Suggested stop ${ftime(tStop(st))}: EY ${vn(g,1)}%, bitter compounds only ${pc(FR.bit(g,st))}% out. The three cups in Figure 3: ${m.t3.map(t=>ftime(t)).join(', ')}.`}
+ $('gNote').textContent=`${GR[st.g].u}. The standard ${m.n.toLowerCase()} recipe uses a ${GR[m.p.g].n.toLowerCase()} grind.`;
+}
+function renderStation(){
+ const s=ST[st.sel-1],mt=st.sel===4?MT[st.m]:s;
+ document.querySelectorAll('#scene .st').forEach(g=>g.classList.toggle('on',+g.dataset.i===st.sel));
+ document.querySelectorAll('#strip button').forEach((b,n)=>{b.classList.toggle('on',n+1===st.sel);b.setAttribute('aria-pressed',n+1===st.sel)});
+ $('detail').innerHTML=`<div class="dh"><div class="dn">${st.sel}</div><h2>${s.name}<small>${s.sub()}</small></h2></div><div class="dgrid"><div><span class="lbl">How it works</span><p>${s.mech()}</p><span class="lbl">How to check</span><p>${mt.check}</p></div><div><span class="lbl">Current values</span><dl class="kv">${s.kv().map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join('')}</dl><p style="margin-top:8px"></p><span class="lbl">Common mistakes</span><p>${mt.fail}</p><span class="lbl">Tip</span><p>${mt.tip}</p></div></div>`;
+}
+function select(i){st.sel=i;renderStation();drawChips(cur(),st.t);const sc=document.querySelector('.scroller'),q=P(...anch(i));if(sc.scrollWidth>sc.clientWidth)sc.scrollLeft=q[0]/1040*sc.scrollWidth-sc.clientWidth/2}
+function sheet(){const c=cur(),m=ME[st.m],ts=tStop(st);
+ const t=`BREW SHEET · MeDili\nMethod: ${m.n} (${m.kind.toLowerCase()})\nCoffee: ${BEAN[st.bean].full}, ${ROAST[st.roast].n.toLowerCase()}, ${GR[st.g].n.toLowerCase()} grind\nCoffee ${g1(st.dose)} g · ${st.m==='esp'?'yield':'water'} ${st.water} ${st.m==='esp'?'g':'ml'} (1:${vn(st.water/st.dose,1)}) · ${st.T} °C · ${ftime(st.t)}\nModel: EY ${vn(c.e,1)}% · TDS ${vn(c.T,c.T<3?2:1)}% · beverage ${Math.round(c.B)} ${st.m==='esp'?'g':'ml'}\nLeft the bean: acids & CGA ${pc(c.f.cga)}%, caffeine ${pc(c.f.caf)}%, sugars & Maillard ${pc(c.f.sug)}%, bitter compounds ${pc(c.f.bit)}%\nSuggested stop: ${ftime(ts)} (EY ${vn(goal(st),1)}%)\nHandwritten: measured TDS ____ % · taste ____________ · adjust next time ____________`;
+ $('sheet').textContent=t.replace(/(\d) (g|ml|%|°C)/g,'$1 $2');st.sheet=t}
+function update(){
+ const c=cur(),B=c.B,v=verdict(st,c.e,c.T);
+ pills('meths',ORDER.map(k=>[k,ME[k].n]),st.m,k=>setMethod(k));
+ pills('beans',Object.entries(BEAN).map(([k,b])=>[k,b.n]),st.bean,k=>{st.bean=k;update()});
+ pills('roasts',ROAST.map((r,i)=>[i,r.n]),st.roast,k=>{st.roast=+k;update()});
+ $('methNote').textContent=ME[st.m].note;
+ $('beanNote').textContent=BEAN[st.bean].note+' '+ROAST[st.roast].note;
+ sliders();
+ $('figsub').textContent=`7-station extraction bench, now brewing ${ME[st.m].nl} · ${ftime(st.t)}`;
+ $('sE').textContent=vn(c.e,1)+'%';$('sS').textContent=vn(c.T,c.T<3?2:1)+'%';$('sB').textContent=Math.round(B)+NB+(st.m==='esp'?'g':'ml');$('sR').textContent='1:'+vn(st.water/st.dose,1);
+ $('verdict').className=v.k;$('verdict').innerHTML=`<b>${sym(v.k)} ${v.t}</b>${v.m}`;
+ $('bars').innerHTML=taste(st,c.e).map(([n,x])=>`<div class="bar"><span>${n}</span><span class="track"><i style="width:${x.toFixed(0)}%"></i></span><span>${x.toFixed(0)}</span></div>`).join('');
+ $('tip').textContent=`Stop at ${ftime(st.t)}: EY ${vn(c.e,1)}%, TDS ${vn(c.T,2)}%`;
+ drawMag();renderDyn(st.t,1);drawC2(null);table2();drawCups();drawMT();sheet();renderStation();
+}
+
+/* ====== HOẠT ẢNH ====== */
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let raf=0;
+function stopAnim(){cancelAnimationFrame(raf);raf=0;$('scene').classList.remove('running')}
+function run(){
+ stopAnim();if(still){update();return}
+ const T=st.t,t0=performance.now(),D=3600;$('scene').classList.add('running');
+ const step=now=>{const k=clamp((now-t0)/D,0,1);renderDyn(T*k,k);if(k<1)raf=requestAnimationFrame(step);else{stopAnim();renderDyn(T,1)}};
+ raf=requestAnimationFrame(step);
+}
+
+/* ====== Ô TÍNH ====== */
+const num=id=>parseFloat($(id).value.replace(/\s/g,'').replace(',','.'));
+function calc(){const T=num('qT'),Bm=num('qB'),D=num('qD'),out=$('qR');
+ if(!(T>0&&Bm>0&&D>0)){out.className='';out.innerHTML='<b>–</b>Enter all three numbers to calculate.';return}
+ const e=T*Bm/D,[k,t]=short(e,false);let m='';
+ if(e<18)m='Below the 18–22 range'+'%: grind finer, raise the temperature or extend the time.';else if(e<=22)m='Within the 18–22 range'+'% per the SCA.';else m='Above the 18–22 range'+'%: grind coarser, lower the temperature or shorten the time.';
+ if(T>=1.15&&T<=1.35)m+=' TDS is within the 1.15–1.35 range'+'% for filter coffee.';
+ out.className=k;out.innerHTML=`<b>${sym(k)} EY ${vn(e,1)}% · ${t}</b>${m}`}
+
+/* ====== KHỞI ĐỘNG ====== */
+$('strip').innerHTML=ST.map((s,i)=>`<button type="button" aria-pressed="false">${i+1} ${s.name}</button>`).join('');
+$('strip').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>select(i+1));
+$('lg2').innerHTML=SER.map(s=>`<span><i class="sw2${s.d?' d':''}" style="border-color:${s.c}"></i>${s.n}</span>`).join('')+`<span><i class="sw2" style="border-color:var(--ink)"></i>Your cup</span>`;
+const onIn=(id,f)=>$(id).addEventListener('input',()=>{stopAnim();f(+$(id).value);update()});
+onIn('iT',v=>st.t=v*ME[st.m].uf);onIn('iG',v=>st.g=v);onIn('iC',v=>st.T=v);onIn('iD',v=>st.dose=v);onIn('iW',v=>st.water=v);
+$('run').onclick=run;$('run2').onclick=run;$('reset').onclick=()=>setMethod(st.m);
+const cE=$('cE');let drag=false;
+cE.addEventListener('pointerdown',e=>{drag=true;stopAnim();try{cE.setPointerCapture(e.pointerId)}catch(_){}scrubE(e,true)});
+cE.addEventListener('pointermove',e=>scrubE(e,drag));
+['pointerup','pointercancel'].forEach(n=>cE.addEventListener(n,()=>{drag=false}));
+cE.addEventListener('pointerleave',()=>{if(!drag){const c=cur();$('tip').textContent=`Stop at ${ftime(st.t)}: EY ${vn(c.e,1)}%, TDS ${vn(c.T,2)}%`}});
+const c2=$('c2');c2.addEventListener('pointermove',hover2);c2.addEventListener('pointerdown',hover2);c2.addEventListener('pointerleave',leave2);
+['qT','qB','qD'].forEach(id=>$(id).addEventListener('input',calc));
+$('copy').onclick=async()=>{try{await navigator.clipboard.writeText(st.sheet);$('copied').textContent='Copied.'}catch(e){const r=document.createRange();r.selectNodeContents($('sheet'));const s=getSelection();s.removeAllRanges();s.addRange(r);$('copied').textContent='The numbers are selected, please copy them yourself.'}setTimeout(()=>$('copied').textContent='',2600)};
+let rz=0;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>drawC2(null),120)});
+buildScene();update();calc();
+{const sc=document.querySelector('.scroller');if(sc.scrollWidth>sc.clientWidth+4)sc.scrollLeft=P(60,13,6)[0]/1040*sc.scrollWidth-sc.clientWidth/2}
+</script>
+</body></html>

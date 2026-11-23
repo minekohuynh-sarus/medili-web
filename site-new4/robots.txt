@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /gio-hang.html
+Disallow: /en/gio-hang.html
+Disallow: /ja/gio-hang.html
+Disallow: /zh/gio-hang.html
 
 Sitemap: https://www.medili.vn/sitemap.xml
