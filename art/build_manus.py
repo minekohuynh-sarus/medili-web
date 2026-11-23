@@ -3,7 +3,7 @@
 import os, re, json, shutil, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kit import *
-import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh, cuahang, congthuc, anhvuon
+import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh, cuahang, congthuc, anhvuon, huongdan
 
 os.makedirs(OUT, exist_ok=True)
 rd = lambda f: open(os.path.join(BASE, f), encoding='utf8').read()
@@ -98,6 +98,7 @@ NEW = {
     'phan-biet-ca-phe.html': phanbiet.page(),
     'nhan-xanh.html': nhanxanh.page(),
     anhvuon.FILE: anhvuon.page(),   # Ảnh vườn MeDili (21/11/2026)
+    huongdan.FILE: huongdan.page(),   # Hướng dẫn pha, mô hình 3D (23/11/2026)
 }
 for f, a_ in pages_b.ART.items():
     NEW[f] = pages_b.article(f, a_, CARDS)
@@ -347,6 +348,10 @@ AM = os.path.join(HERE, '..', 'artifact-main')
 os.makedirs(AM, exist_ok=True)
 open(os.path.join(AM, 'index.html'), 'w', encoding='utf8').write(nguon_tong_hop(HOME))
 shutil.copy(os.path.join(HERE, '..', 'run-check', 'gia-ca-phe.json'), os.path.join(OUT, 'gia-ca-phe.json'))
+# Mô hình 3D trang Hướng dẫn pha: gộp art/hd3d.js với three.js (giấy phép MIT, giữ ở cuối file) thành một file assets/hd3d.js.
+# Ảnh dự phòng assets/hd-*.webp (khi máy không chạy được 3D) chụp lại bằng: node hdshot.js
+subprocess.run([os.path.join(HERE, 'node_modules', '.bin', 'esbuild'), os.path.join(HERE, 'hd3d.js'), '--bundle', '--format=esm', '--minify',
+                '--target=es2020', '--legal-comments=eof', '--log-level=warning', '--outfile=' + os.path.join(OUT, 'assets', 'hd3d.js')], check=True)
 # chỉ mục cho trang Tìm kiếm, sơ đồ trang và robots cho medili.vn
 open(os.path.join(OUT, 'tim-kiem.json'), 'w', encoding='utf8').write(cuahang.search_index(OUT))
 open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf8').write(cuahang.sitemap(OUT))

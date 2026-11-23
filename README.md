@@ -8,6 +8,7 @@ Kho này chứa toàn bộ web MeDili và bộ mã dựng web.
 | `art/` | Bộ mã dựng web (Python). Chạy `python3 art/build_manus.py` để dựng lại `site-new4/`. |
 | `art/cuahang.py`, `art/data/manus-catalog.json` | Cửa hàng (dựng theo cấu trúc web medilinh.com): trang `cua-hang.html`, 20 trang sản phẩm `sp-*.html`, giỏ hàng `gio-hang.html`, tìm kiếm `tim-kiem.html` (chỉ mục `tim-kiem.json`), `sitemap.xml`, `robots.txt`. Giỏ lưu trên trình duyệt, khách gửi đơn qua Google Form, Zalo hoặc email. |
 | `art/make_photos.py`, `art/make_gallery.py`, `art/anhvuon.py` | Ảnh thật: cắt, nén, bỏ EXIF/GPS và đóng logo chìm MeDili lên **mọi ảnh dùng trên web**. `anhvuon.py` giữ danh sách ảnh trang Ảnh vườn (`anh-vuon.html`, 4 nhóm Vườn · Hái · Thu hoạch · Phơi & xay) và ảnh nền toàn khung `bg-*.jpg` (bản máy tính và bản điện thoại `-m`, logo chìm ở góc dưới phải, web neo ảnh nền ở góc đó). |
+| `art/huongdan.py`, `art/hd3d.js`, `art/hdshot.js` | Trang **Hướng dẫn pha** (`huong-dan-pha.html`): bốn cách pha phin, pour-over, espresso, cold brew với mô hình 3D dựng bằng code (three.js r160, giấy phép MIT). Bộ dựng gộp `hd3d.js` với three.js thành `site-new4/assets/hd3d.js` (cần `npm install` để có esbuild). Máy không chạy được 3D thì hiện ảnh dự phòng `assets/hd-*.webp`; sửa mô hình xong thì chụp lại ảnh bằng `node hdshot.js`. |
 | `artifact-main/index.html` | Trang chủ dạng mảnh (không có phần đầu trang) để đăng bản xem trước trên Claude; khung của Claude tự thêm phần đầu. Bản đầy đủ cho medili.vn là `site-new4/index.html`. |
 | `site-new3/`, `site-live/`, `artifact-files/`, `run-check/` | Dữ liệu đầu vào cho bộ dựng. |
 | `hosting/sync.php` | Tác vụ chạy trên hosting: mỗi 30 phút đọc kho này, tải các file mới hoặc đã đổi trong `site-new4/` vào `public_html` của medili.vn. |
@@ -32,4 +33,5 @@ Kho này chứa toàn bộ web MeDili và bộ mã dựng web.
 cd art && npm install
 node t5.js        # toàn site: tràn khung, lỗi, link nội bộ
 node nxtest.js    # trang Chọn nhân xanh
+node hdshot.js    # chụp lại ảnh dự phòng của trang Hướng dẫn pha (sau khi dựng web)
 ```

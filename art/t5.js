@@ -4,7 +4,7 @@ const css = require('./fonts.js');
 const NEW = path.resolve(__dirname, '../site-new4'), LIVE = path.resolve(__dirname, '../site-live');
 const SK = p => `<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>${p}</body></html>`;
 // Như hosting medili.vn: HTML gửi đi không kèm charset, trang phải tự khai báo <meta charset="utf-8">.
-const T = {'.html': 'text/html', '.png': 'image/png', '.jpg': 'image/jpeg', '.json': 'application/json'};
+const T = {'.html': 'text/html', '.png': 'image/png', '.jpg': 'image/jpeg', '.json': 'application/json', '.js': 'text/javascript', '.webp': 'image/webp', '.css': 'text/css', '.svg': 'image/svg+xml'};
 const srv = http.createServer((q, s) => {
   let f = decodeURIComponent(q.url.split('?')[0].split('#')[0]);
   if (f === '/' || f === '/index.html') { const h = fs.readFileSync(NEW + '/index.html', 'utf8'); s.writeHead(200, {'content-type': T['.html']}); return s.end(/^\s*<!doctype/i.test(h) ? h : SK(h)); }
