@@ -312,13 +312,14 @@ def lien_he():
 def giao_hang():
     body = head('Chính sách MeDili', 'Giao hàng <em>và đổi trả.</em>',
                 'Cách đặt hàng, giao hàng và đổi trả cà phê MeDili. Mọi đơn hàng đều được MeDili xác nhận sản phẩm, quy cách, giá và phí giao trước khi giao.',
-                '<a class="btn main" href="mua-hang.html">Đặt ở Phòng chọn mua</a><a class="btn" href="' + ZALO + '" target="_blank" rel="noopener">Hỏi qua Zalo</a>')
+                '<a class="btn main" href="mua-hang.html">Đặt ở Phòng chọn mua</a><a class="btn" href="' + ZALO + '" target="_blank" rel="noopener">Hỏi qua Zalo</a><a class="btn" href="chinh-sach.html">Xem đủ chính sách</a>')
     items = [
         ('mua', 'Đặt hàng', 'Chọn cà phê ở Phòng chọn mua rồi mở phiếu đặt hàng, hoặc nhắn Zalo ' + PHONE + '. MeDili sẽ gọi lại để xác nhận đơn.'),
         ('so', 'Giá', 'Bảng giá đề xuất, có hiệu lực trong tháng, được xác nhận khi đặt hàng. Giá chưa gồm 8% VAT và phí vận chuyển.'),
         ('can', 'Giá sỉ', 'Giá bán lẻ áp dụng cho đơn dưới 5 kg. Mua từ 5 kg trong tháng được hưởng giá sỉ cấp 1. Khi đạt 20 kg trong tháng, phần chênh lệch được chiết khấu vào đơn kế tiếp.'),
         ('tui', 'Quy cách', 'Khách quán dùng túi 1 kg hoặc 5 kg. Khách lẻ có gói 250 g và 500 g; riêng Robusta Specialty và Culi, vui lòng liên hệ MeDili. Catimor, Culi và Blend MeDili chưa có giá sỉ, MeDili sẽ báo giá khi đặt hàng.'),
-        ('xe', 'Giao hàng', 'Giao toàn quốc. Phí và thời gian giao được báo trước khi xác nhận đơn.'),
+        ('xe', 'Giao hàng', 'Giao toàn quốc. Đơn từ 10 kg được miễn phí giao. Với đơn dưới 10 kg, phí và thời gian giao được báo trước khi xác nhận đơn.'),
+        ('so', 'Thanh toán và hóa đơn', 'Thanh toán linh hoạt bằng chuyển khoản hoặc tiền mặt. Hóa đơn VAT do Công ty TNHH DSunfood xuất.'),
         ('doi', 'Đổi trả trong 7 ngày', 'Áp dụng cho lỗi sản xuất, lỗi đóng gói, hư hỏng khi vận chuyển hoặc giao sai loại. Bạn gửi mã đơn kèm ảnh hoặc video lỗi, MeDili phản hồi trong 3 ngày làm việc.'),
         ('ly', 'Hỗ trợ', 'Tư vấn chọn cà phê, độ xay, tỷ lệ pha, công thức cơ bản, thực đơn, máy xay và thiết bị pha chế. Phạm vi hỗ trợ được thống nhất với từng đối tác.'),
         ('khien', 'Cam kết', 'Cà phê nguyên chất, đúng thành phần công bố, không pha tạp, không thêm hương liệu hay chất bảo quản vào các dòng rang mộc.'),
@@ -327,7 +328,7 @@ def giao_hang():
     body += f'<section class="p-sec"><ol class="pst two">{li}</ol></section>'
     body += f'<section class="box p-sec"><p class="eye">Cần hỏi thêm</p><p>Nhắn Zalo hoặc gọi <span class="sel">{PHONE}</span>, email <span class="sel">{EMAIL}</span>. Khi đổi trả, bạn gửi kèm mã đơn để MeDili tra nhanh hơn.</p></section>'
     return doc('giao-hang.html', 'Giao hàng và đổi trả MeDili',
-               'Chính sách đặt hàng, giá sỉ, quy cách đóng gói, giao hàng toàn quốc và đổi trả trong 7 ngày của MeDili.',
+               'Chính sách đặt hàng, giá sỉ, quy cách đóng gói, giao hàng toàn quốc (miễn phí từ 10 kg), thanh toán và đổi trả trong 7 ngày của MeDili.',
                body, wrap_cls='wrap pg')
 
 

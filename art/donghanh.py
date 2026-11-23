@@ -172,7 +172,7 @@ def page(P):
  <h2 class="p-h2" id="h-gp">Ba hướng ưu tiên, <em>ba dòng cà phê MeDili.</em></h2>
  <div class="dh-cards">{cards}
  </div>
- <p class="note">Đơn vị đ/kg cà phê rang. Giá sỉ cấp 1 áp dụng khi quán mua từ 5 kg trong tháng. Khi đạt 20 kg trong tháng, quán được giá sỉ cấp 2 và phần chênh lệch được chiết khấu vào đơn kế tiếp. Giá chưa gồm 8% VAT và phí vận chuyển, có hiệu lực trong tháng và được xác nhận khi đặt hàng. Giá lẻ và bảng giá đầy đủ ở <a class="lnk" href="mua-hang.html">Phòng chọn mua</a>.</p>
+ <p class="note">Đơn vị đ/kg cà phê rang. Giá sỉ cấp 1 áp dụng khi quán mua từ 5 kg trong tháng. Khi đạt 20 kg trong tháng, quán được giá sỉ cấp 2 và phần chênh lệch được chiết khấu vào đơn kế tiếp. Giá chưa gồm 8% VAT và phí vận chuyển (đơn từ 10 kg miễn phí giao), có hiệu lực trong tháng và được xác nhận khi đặt hàng. Giá lẻ và bảng giá đầy đủ ở <a class="lnk" href="mua-hang.html">Phòng chọn mua</a>.</p>
 </section>
 
 <section class="dh-ask" aria-labelledby="h-ask">
@@ -199,10 +199,10 @@ def page(P):
    <div class="lnks"><a class="lnk" href="huong-dan-pha.html">Hướng dẫn pha</a><a class="lnk" href="quay-pha.html">Quầy pha</a><a class="lnk" href="cong-thuc-pha.html">Cỗ máy Công thức pha</a></div></div>
   <div class="box"><p class="k">Cam kết và giao nhận</p>
    <ul><li>Các dòng rang mộc: cà phê nguyên chất, đúng thành phần công bố, không pha tạp, không thêm hương liệu hay chất bảo quản.</li>
-   <li>Giao hàng toàn quốc, phí và thời gian được báo trước khi xác nhận đơn.</li>
+   <li>Giao hàng toàn quốc, đơn từ 10 kg miễn phí giao. Đơn dưới 10 kg được báo phí và thời gian trước khi xác nhận đơn.</li>
    <li>Đổi trả 7 ngày khi có lỗi sản xuất, lỗi đóng gói, hư hỏng khi vận chuyển hoặc giao sai loại.</li>
    <li>Xưởng rang trung bình 20 tấn mỗi tháng, công suất tối đa 60 tấn.</li></ul>
-   <div class="lnks"><a class="lnk" href="giao-hang.html">Giao hàng &amp; đổi trả</a><a class="lnk" href="horeca.html#ho-so">Hồ sơ cho đối tác</a></div></div>
+   <div class="lnks"><a class="lnk" href="chinh-sach.html#khach-si">Chính sách khách sỉ</a><a class="lnk" href="giao-hang.html">Giao hàng &amp; đổi trả</a><a class="lnk" href="horeca.html#ho-so">Hồ sơ cho đối tác</a></div></div>
  </div>
 </section>
 
