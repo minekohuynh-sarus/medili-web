@@ -1,8 +1,8 @@
 # Trang Đồng hành cùng quán (23/11/2026): trang cho khách quán theo kiểu "chọn theo ưu tiên của quán".
 # Bố cục tham khảo trang đồng hành của một nhà cung cấp cà phê: ưu tiên của quán -> ba dòng cà phê -> các bước đồng hành -> phiếu liên hệ.
 # Câu chữ là của MeDili; giá, chính sách lấy đúng như Phòng chọn mua và trang HORECA.
-# Chị Ngân xác nhận 23/11/2026: mẫu thử 50 g, phản hồi qua Zalo trong 60 phút, có hướng dẫn công thức, chỉnh cối xay, bảo trì máy tại quán.
-# Chưa xác nhận: mẫu thử miễn phí hay không, giờ làm việc, khu vực bảo trì (để "thống nhất với từng đối tác").
+# Chị Ngân xác nhận 23/11/2026: mẫu thử 50 g miễn phí, phản hồi qua Zalo trong 60 phút (giờ làm việc 6:30–22:30),
+# có hướng dẫn công thức, chỉnh cối xay, bảo trì máy tại quán. Khu vực bảo trì: "thống nhất với từng đối tác".
 from kit import *
 from pages_a import loc_cards
 
@@ -177,7 +177,7 @@ def page(P):
 
 <section class="dh-ask" aria-labelledby="h-ask">
  <div><h2 id="h-ask">Chưa chắc dòng nào hợp với quán?</h2>
- <p>Gửi MeDili thực đơn, số ly mỗi ngày và máy pha đang dùng. MeDili tư vấn dòng cà phê, độ xay, tỷ lệ pha và gửi mẫu 50 g để quán thử. Phản hồi qua Zalo trong 60 phút trong giờ làm việc.</p></div>
+ <p>Gửi MeDili thực đơn, số ly mỗi ngày và máy pha đang dùng. MeDili tư vấn dòng cà phê, độ xay, tỷ lệ pha và gửi mẫu 50 g miễn phí để quán thử. Phản hồi qua Zalo trong 60 phút, từ 6:30 đến 22:30.</p></div>
  <div class="cta"><a class="btn main" href="#ket-noi" data-pick="Chưa rõ, cần tư vấn">Nhận tư vấn</a><a class="btn" href="mua-hang.html">Tự tính giá mỗi ly</a></div>
 </section>
 
@@ -188,7 +188,7 @@ def page(P):
  <div class="dh-ph">{photos}</div>
  <ol class="pst three">
   <li><span class="n">{icon('chat')}</span><h3><small>01</small>Hiểu mô hình quán</h3><p>MeDili hỏi thực đơn, số ly mỗi ngày, máy pha đang dùng và mức giá vốn quán mong muốn.</p></li>
-  <li><span class="n">{icon('ly')}</span><h3><small>02</small>Thử mẫu 50 g</h3><p>MeDili gửi mẫu 50 g để quán pha thử trên máy và theo công thức của mình. Hai bên chốt lại dòng cà phê sau khi thử.</p></li>
+  <li><span class="n">{icon('ly')}</span><h3><small>02</small>Thử mẫu miễn phí</h3><p>MeDili gửi miễn phí 50 g cà phê để quán pha thử trên máy và theo công thức của mình. Hai bên chốt lại dòng cà phê sau khi thử.</p></li>
   <li><span class="n">{icon('may')}</span><h3><small>03</small>Đưa vào vận hành</h3><p>Chốt quy cách túi 1 kg hoặc 5 kg và bậc giá theo khối lượng tháng. MeDili hướng dẫn công thức, chỉnh cối xay theo máy pha của quán và bảo trì máy.</p></li>
  </ol>
  <div class="dh-sup">
@@ -209,7 +209,7 @@ def page(P):
 <section class="box p-sec" id="ket-noi" aria-labelledby="h-kn">
  <p class="eye">Kết nối với MeDili</p>
  <h2 class="p-h2" id="h-kn" style="margin:0">Kể MeDili nghe <em>về quán của bạn.</em></h2>
- <p class="dh-promise">MeDili phản hồi qua Zalo trong <b>60 phút</b> trong giờ làm việc.</p>
+ <p class="dh-promise">MeDili phản hồi qua Zalo trong <b>60 phút</b>, từ 6:30 đến 22:30.</p>
  <p class="note">Trang không tự gửi tin. Bạn mở phiếu để gửi cho MeDili, hoặc sao chép tin nhắn rồi dán vào Zalo.</p>
  <form class="p-form" id="dh-f" novalidate>
   <div class="row2">
@@ -234,7 +234,7 @@ def page(P):
    </div></fieldset>
   </div>
   <label for="dh-n">Lời nhắn <small>không bắt buộc</small><textarea id="dh-n" maxlength="400" placeholder="Máy pha đang dùng, món bán chạy, mức giá mong muốn…"></textarea></label>
-  <label class="chk"><input type="checkbox" id="dh-s"> Quán muốn nhận mẫu thử 50 g</label>
+  <label class="chk"><input type="checkbox" id="dh-s"> Quán muốn nhận mẫu thử 50 g miễn phí</label>
   <div><span class="k">Tin nhắn sẽ gửi</span><pre class="msg" id="dh-msg"></pre></div>
   <div class="cta" style="margin-top:0"><a class="btn main off" id="dh-gf" target="_blank" rel="noopener" aria-disabled="true">Mở phiếu gửi MeDili</a><button class="btn" type="button" id="dh-cp">Sao chép tin nhắn</button><a class="btn" href="{ZALO}" target="_blank" rel="noopener">Mở Zalo MeDili</a></div>
   <p class="fstat" id="dh-st" role="status"></p>
@@ -248,5 +248,5 @@ def page(P):
 '''
     js = f"const FORM={FORM!r},FN={{name:{FORM_F['name']!r},phone:{FORM_F['phone']!r},txt:{FORM_F['txt']!r}}};" + JS
     desc = ('MeDili đồng hành cùng quán cà phê, nhà hàng, khách sạn: chọn dòng Classic, Premium hay Arabica & Specialty theo ưu tiên của quán, '
-            'giá sỉ theo khối lượng tháng, mẫu thử 50 g, hướng dẫn công thức, chỉnh cối xay, bảo trì máy, phản hồi qua Zalo trong 60 phút.')
+            'giá sỉ theo khối lượng tháng, mẫu thử 50 g miễn phí, hướng dẫn công thức, chỉnh cối xay, bảo trì máy, phản hồi qua Zalo trong 60 phút từ 6:30 đến 22:30.')
     return doc(FILE, 'Đồng hành cùng quán · MeDili', desc, body, css=CSS, js=js, wrap_cls='wrap pg dhq')

@@ -13,6 +13,7 @@ esc = lambda s: H.escape(s, quote=True)
 # ---------- liên hệ (theo site Claude, chị Ngân chọn) ----------
 PHONE, PHONE_RAW = '0966 770 788', '0966770788'
 ZALO = 'https://zalo.me/3942166996018015136'
+FACEBOOK = 'https://www.facebook.com/share/192oMLdBnq/'   # trang Facebook MeDili (chị Ngân gửi 23/11/2026)
 EMAIL = 'cafe@medili.vn'
 ADDR_HCM = '143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM'
 ADDR_FARM = 'Thôn 11, Xã Di Linh, Lâm Đồng'
@@ -105,7 +106,17 @@ def footer(sig='MeDili Coffee Farm · Cà Sẻ Di Linh'):
             f'<p>Công ty TNHH DSunfood<br>{ADDR_HCM}</p><p>Vườn &amp; xưởng rang<br>{ADDR_FARM}</p>'
             f'<p><span class="mf-n">{PHONE}</span> · <span class="mf-n">{EMAIL}</span></p>'
             f'<a href="{MAP_HCM}" target="_blank" rel="noopener">Chỉ đường đến MeDili ↗</a><a href="{ZALO}" target="_blank" rel="noopener">Nhắn Zalo MeDili ↗</a></div>'
-            f'</div><div class="mf-base"><span>© 2026 MeDili Café</span><i>{sig}</i></div></div></footer>')
+            f'</div><div class="mf-base"><span>© 2026 MeDili Café</span><i>{sig}</i></div></div></footer>' + float_links())
+
+
+def float_links():
+    # Nút Zalo, Facebook nổi ở góc trái bên dưới, hiện trên mọi trang (chị Ngân yêu cầu 23/11/2026).
+    # Màu theo bảng màu MeDili, chữ thay cho logo của hai hãng.
+    zl = (f'<a class="fl-b" href="{ZALO}" target="_blank" rel="noopener" aria-label="Nhắn Zalo MeDili" data-tip="Nhắn Zalo MeDili">'
+          '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a>')
+    fb = (f'<a class="fl-b" href="{FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili">'
+          '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a>') if FACEBOOK else ''
+    return f'<nav class="fl-c" aria-label="Kết nối nhanh với MeDili">{zl}{fb}</nav>'
 
 
 def contact_band():
@@ -284,6 +295,20 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .pgal>h2{margin:0}
 .pgal>p{margin:0;color:var(--muted);max-width:72ch}
 
+/* nút Zalo, Facebook nổi góc trái bên dưới */
+.fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
+.fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
+.fl-b svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fl-b:hover{transform:translateY(-2px) scale(1.05)}
+.fl-b:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.fl-b::after{content:attr(data-tip);position:absolute;left:calc(100% + 10px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;background:var(--ink);color:var(--panel);font:600 .8rem var(--body);letter-spacing:0;padding:6px 11px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{opacity:1;transform:translate(0,-50%)}}
+@media (max-width:600px){.fl-c{gap:8px}.fl-b{width:46px;height:46px;font-size:.6rem}.fl-b svg{width:17px;height:17px}}
+@media (max-width:1020px){body:has(.nx-bar) .fl-c{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+/* chừa chỗ cho nút nổi ở cuối chân trang */
+@media (min-width:601px){.mf-base{padding-left:76px}}
+@media (max-width:600px){footer.mf{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}}
+@media print{.fl-c{display:none}}
 '''
 
 NEW_CSS = r'''
