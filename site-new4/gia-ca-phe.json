@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-21T19:38:00+07:00",
+ "updated": "2026-11-24T13:38:00+07:00",
  "days": [
   {
    "date": "2026-10-31",
@@ -454,6 +454,38 @@
     {
      "name": "Báo Lâm Đồng",
      "url": "https://baolamdong.vn/gia-ca-phe/"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-23",
+   "vn": {
+    "lamdong": 71000
+   }
+  },
+  {
+   "date": "2026-11-24",
+   "vn": {
+    "lamdong": 70500,
+    "daklak": 71000,
+    "gialai": 71000,
+    "daknong": 71300
+   },
+   "time": "13:38",
+   "world": {
+    "robusta": 2854,
+    "robustaChg": null,
+    "robustaPct": -0.94,
+    "robustaTerm": null,
+    "arabica": 267.75,
+    "arabicaChg": null,
+    "arabicaPct": -0.28,
+    "arabicaTerm": null
+   },
+   "src": [
+    {
+     "name": "Báo Lâm Đồng",
+     "url": "https://baolamdong.vn/gia-ca-phe/tinh-lam-dong"
     }
    ]
   }
