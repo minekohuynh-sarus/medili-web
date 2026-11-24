@@ -23,8 +23,8 @@ FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSfFnK1eOB8u1UJg-5mIVS_k9h7ElULo
 FORM_F = {'name': 'entry.1445823936', 'phone': 'entry.907299194', 'txt': 'entry.730970220'}
 FORM_POST = FORM.replace('/viewform?usp=pp_url', '/formResponse')   # gửi đơn thẳng vào Google Form, không mở phiếu
 # Tài khoản nhận chuyển khoản ở trang Thanh toán (chị Ngân chốt 24/11/2026: tài khoản công ty DSunfood).
-# bin: mã ngân hàng theo Napas (6 số) để dựng mã VietQR. Chưa có số tài khoản thì trang Thanh toán ẩn mã QR, mời khách nhắn Zalo.
-BANK = dict(bin='970436', bank='Vietcombank', acc='1051082788', name='CONG TY TNHH THUC PHAM DSUNFOOD')   # chị Ngân gửi 24/11/2026
+# bin: mã ngân hàng theo Napas (6 số) để dựng mã VietQR; code: mã ngắn của ngân hàng cho link mở app (dl.vietqr.io). Chưa có số tài khoản thì trang Thanh toán ẩn mã QR, mời khách nhắn Zalo.
+BANK = dict(bin='970436', code='vcb', bank='Vietcombank', acc='1051082788', name='CONG TY TNHH THUC PHAM DSUNFOOD')   # chị Ngân gửi 24/11/2026
 
 # ---------- vùng trồng (web Manus) ----------
 AREAS = [('Tà Hine', 'Đức Trọng', 8.0), ('Tân Nghĩa', 'Di Linh', 4.0), ('Lộc Châu 3', 'Bảo Thuận, Di Linh', 3.0), ('Gia Bắc 2', 'Di Linh', 2.7)]
@@ -109,7 +109,7 @@ def footer(sig='MeDili Coffee Farm · Cà Sẻ Di Linh'):
             f'<nav class="mf-col" aria-label="Khám phá"><p class="mf-t">Khám phá</p>{a(FOOT_EXPLORE)}</nav>'
             f'<nav class="mf-col" aria-label="MeDili và bạn"><p class="mf-t">MeDili &amp; bạn</p>{a(FOOT_YOU)}</nav>'
             f'<div class="mf-col"><p class="mf-t">Phân phối · DSunfood</p>'
-            f'<p>Công ty TNHH DSunfood<br>{ADDR_HCM}</p><p>Vườn &amp; xưởng rang<br>{ADDR_FARM}</p>'
+            f'<p>Công ty TNHH Thực phẩm DSunfood<br>{ADDR_HCM}</p><p>Vườn &amp; xưởng rang<br>{ADDR_FARM}</p>'
             f'<p><span class="mf-n">{PHONE}</span> · <span class="mf-n">{EMAIL}</span></p>'
             f'<a href="{MAP_HCM}" target="_blank" rel="noopener">Chỉ đường đến MeDili ↗</a><a href="{ZALO}" target="_blank" rel="noopener">Nhắn Zalo MeDili ↗</a></div>'
             f'</div><div class="mf-base"><span>© 2026 MeDili Café</span><i>{sig}</i></div></div></footer>' + float_links())
@@ -128,7 +128,7 @@ def float_links():
 def contact_band():
     return (f'<section class="contact" id="lien-he"><div><img class="lgK" src="assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83">'
             f'<div class="tagline">Mê vị Di Linh</div>'
-            f'<p>Phân phối: Công ty TNHH DSunfood, {ADDR_HCM}.<br>Vườn và xưởng rang: {ADDR_FARM}.</p></div>'
+            f'<p>Phân phối: Công ty TNHH Thực phẩm DSunfood, {ADDR_HCM}.<br>Vườn và xưởng rang: {ADDR_FARM}.</p></div>'
             f'<div class="zalo"><span>Zalo MeDili</span><strong data-sel>{PHONE}</strong>'
             f'<div><a href="{ZALO}" target="_blank" rel="noopener">Nhắn Zalo</a><button type="button" data-copy="{PHONE_RAW}" data-done="Đã sao chép số">Sao chép số</button></div>'
             f'<small>Email: {EMAIL}</small></div></section>')

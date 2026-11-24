@@ -54,7 +54,7 @@ def loc_cards(extra_hcm=''):
             f'<div class="box loc"><div class="ttl">{icon("ghim")}<div><span class="k">Vườn &amp; xưởng rang</span><h3>Di Linh, Lâm Đồng</h3></div></div>'
             f'<p class="sel">{ADDR_FARM}</p><p class="note">Vùng trồng và xưởng rang. Vui lòng gọi trước khi ghé.</p>'
             f'<div class="lnks"><a class="lnk" href="{MAP_FARM}" target="_blank" rel="noopener">Chỉ đường đến xưởng rang ↗</a></div></div>'
-            f'<div class="box loc"><div class="ttl">{icon("ghim")}<div><span class="k">Phân phối · Công ty TNHH DSunfood</span><h3>MeDili ở TP.HCM</h3></div></div>'
+            f'<div class="box loc"><div class="ttl">{icon("ghim")}<div><span class="k">Phân phối · Công ty TNHH Thực phẩm DSunfood</span><h3>MeDili ở TP.HCM</h3></div></div>'
             f'<p class="sel">{ADDR_HCM}</p><p class="note">Điểm phân phối tại TP.HCM và MeDili Café.{extra_hcm}</p>'
             f'<div class="lnks"><a class="lnk" href="{MAP_HCM}" target="_blank" rel="noopener">Chỉ đường đến MeDili ↗</a><a class="lnk" href="quan-medili.html">Ghé MeDili Café</a></div></div></div>')
 
@@ -116,7 +116,7 @@ def cau_chuyen():
  <div class="p-sec">
   <p class="eye">04 · Từ Di Linh đến thành phố</p>
   <h2 class="p-h2" style="margin:0">Điểm hẹn <em>ở 143 Phạm Văn Hai.</em></h2>
-  <p>Công ty TNHH DSunfood tại 143 Phạm Văn Hai, Tân Bình, là nhà phân phối của MeDili ở TP.HCM, đồng thời là MeDili Café. Bạn có thể ghé uống một ly, hỏi thực đơn trong ngày hoặc trao đổi về việc cung cấp cà phê cho quán.</p>
+  <p>Công ty TNHH Thực phẩm DSunfood tại 143 Phạm Văn Hai, Tân Bình, là nhà phân phối của MeDili ở TP.HCM, đồng thời là MeDili Café. Bạn có thể ghé uống một ly, hỏi thực đơn trong ngày hoặc trao đổi về việc cung cấp cà phê cho quán.</p>
   <div class="cta"><a class="btn main" href="quan-medili.html">Ghé MeDili Café</a><a class="btn" href="lien-he.html">Liên hệ &amp; bản đồ</a></div>
  </div>
  <div class="illw">{ill.suada()}</div>
@@ -455,7 +455,7 @@ def quan_medili():
             ('Cappuccino', 'Espresso với sữa tươi đánh mịn, lớp bọt dày.'), ('Espresso', 'Shot đậm pha từ máy, cách rõ nhất để cảm nhận hồ sơ rang.')]
     items = ''.join(f'<li><b>{n}</b><span>{d}</span></li>' for n, d in menu)
     body = head('MeDili Café · 143 Phạm Văn Hai', 'Một tách cà phê. <em>Một cuộc hẹn.</em>',
-                'Công ty TNHH DSunfood tại 143 Phạm Văn Hai là nhà phân phối của MeDili ở TP.HCM, đồng thời là MeDili Café. Bạn có thể ghé uống một ly, hỏi thực đơn trong ngày hoặc trao đổi về việc cung cấp cà phê cho quán, nhà hàng, khách sạn.',
+                'Công ty TNHH Thực phẩm DSunfood tại 143 Phạm Văn Hai là nhà phân phối của MeDili ở TP.HCM, đồng thời là MeDili Café. Bạn có thể ghé uống một ly, hỏi thực đơn trong ngày hoặc trao đổi về việc cung cấp cà phê cho quán, nhà hàng, khách sạn.',
                 f'<a class="btn main" href="{MAP_HCM}" target="_blank" rel="noopener">Chỉ đường ↗</a><a class="btn" href="{ZALO}" target="_blank" rel="noopener">Nhắn Zalo đặt món</a>')
     body += f'''
 <section class="split">

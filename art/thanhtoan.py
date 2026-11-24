@@ -29,6 +29,11 @@ def page():
   </div>
   <div class="box tt-card" id="tt-ck">
    <div class="tt-top"><p class="eye" id="tt-eye">Chuyển khoản · quét mã QR</p><p class="tt-big" id="tt-big" hidden><span>Số tiền</span><b id="tt-amt"></b></p></div>
+   <div class="tt-apps" id="tt-apps" hidden>
+    <p class="tt-apt"><b>Chọn app ngân hàng để trả</b><small>App ghi “Điền sẵn” mở ra với số tiền và nội dung đã điền. App khác: mở app, chọn quét mã rồi chọn ảnh mã QR đã lưu.</small></p>
+    <div class="tt-apl" id="tt-apl"></div>
+    <details class="tt-more"><summary>Ngân hàng khác</summary><div class="tt-apl" id="tt-apl2"></div></details>
+   </div>
    <div class="tt-grid">
     <figure class="tt-qr"><div class="tt-qrbox" id="tt-qr" role="img" aria-label="Mã QR chuyển khoản cho MeDili"></div>
      <figcaption>App ngân hàng · MoMo · ZaloPay</figcaption></figure>
@@ -93,6 +98,13 @@ JS = r'''
  const crc=s=>{let c=0xFFFF;for(let i=0;i<s.length;i++){c^=s.charCodeAt(i)<<8;for(let j=0;j<8;j++)c=(c&0x8000)?((c<<1)^0x1021)&0xFFFF:(c<<1)&0xFFFF}return c.toString(16).toUpperCase().padStart(4,'0')};
  const payload=(amt,nd)=>{const m=TLV('00','A000000727')+TLV('01',TLV('00',B.bin)+TLV('01',B.acc))+TLV('02','QRIBFTTA');
   const s=TLV('00','01')+TLV('01',amt?'12':'11')+TLV('38',m)+TLV('53','704')+(amt?TLV('54',String(amt)):'')+TLV('58','VN')+(nd?TLV('62',TLV('08',nd)):'')+'6304';return s+crc(s)};
+ // Mở app ngân hàng qua dịch vụ deeplink của VietQR (dl.vietqr.io, Casso). Năm app đầu tự điền số tiền, nội dung (danh sách vietqr.io/deeplink/bank-apps, 11/2026).
+ const APPS=[['mb','MB Bank',1],['icb','VietinBank',1],['bidv','BIDV',1],['acb','ACB',1],['ocb','OCB',1],['vcb','Vietcombank'],['tcb','Techcombank'],['vpb','VPBank'],['vba','Agribank']];
+ const APPS2=[['tpb','TPBank'],['hdb','HDBank'],['vib-2','VIB'],['shb','SHB'],['lpb','LPBank'],['seab','SeABank'],['cake','Cake'],['timo','Timo'],['scb','SCB'],['eib','Eximbank'],['nab','Nam A Bank'],['abb','ABBank'],['shbvn','Shinhan Bank'],['wvn','Woori Bank'],['klb','KienlongBank'],['bvb','BAOVIET Bank'],['vab','Vietbank'],['ncb','NCB'],['pvcb','PVcomBank'],['coopbank','Co-opBank'],['mbv','MBV'],['pbvn','Public Bank'],['sgicb','Saigonbank'],['cimb','CIMB'],['acb-biz','ACB ONE Biz']];
+ const MOB=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+ function apps(amt,nd){if(!MOB||!amt||!nd||!B.code)return;const q=new URLSearchParams({ba:B.acc+'@'+B.code,am:String(amt),tn:nd,bn:B.name,url:location.href}).toString().replace('%40','@');
+  const btn=([id,n,f])=>'<a class="tt-ap'+(f?' fill':'')+'" href="https://dl.vietqr.io/pay?app='+id+'&'+q+'" rel="noopener"><b>'+n+'</b><small>'+(f?'Điền sẵn':'Mở app')+'</small></a>';
+  $('tt-apl').innerHTML=APPS.map(btn).join('');$('tt-apl2').innerHTML=APPS2.map(btn).join('');$('tt-apps').hidden=false}
  let Q=null;
  function draw(amt,nd){if(typeof qrcode!=='function'){$('tt-qr').textContent='';return}
   const q=qrcode(0,'M');q.addData(payload(amt,nd),'Byte');q.make();const n=q.getModuleCount(),z=4;let d='';
@@ -102,7 +114,7 @@ JS = r'''
  function showCK(amt,nd){$('tt-ck').hidden=false;$('tt-bank').textContent=B.bank;$('tt-acc').textContent=B.acc;$('tt-name').textContent=B.name;
   $('tt-big').hidden=!amt;$('tt-r-amt').hidden=!amt;$('tt-r-nd').hidden=!nd;
   if(amt){$('tt-amt').textContent=money(amt);$('tt-amt2').textContent=money(amt)}if(nd)$('tt-nd').textContent=nd;
-  $('tt-eye').textContent=amt?'Chuyển khoản · quét mã QR':'Tài khoản nhận tiền của MeDili';$('tt-zl').hidden=!nd;draw(amt,nd)}
+  $('tt-eye').textContent=amt?'Chuyển khoản · quét mã QR':'Tài khoản nhận tiền của MeDili';$('tt-zl').hidden=!nd;draw(amt,nd);apps(amt,nd)}
  const BANK=!!(B.bin&&B.acc),O=MA?MDO.get(MA):null;
  if(O&&O.t){$('tt-don').hidden=false;$('tt-msg').textContent=O.t}
  $('tt-ck').hidden=true;
@@ -151,6 +163,16 @@ CSS = r'''
 .tt-big span{font-size:.8rem;color:var(--muted)}
 .tt-big b{font:800 clamp(1.6rem,4vw,2.1rem)/1.1 var(--mono);color:var(--accent)}
 .tt-grid{display:grid;grid-template-columns:minmax(0,250px) minmax(0,1fr);gap:18px;align-items:start}
+.tt-apps{display:grid;gap:10px;padding-bottom:14px;border-bottom:1px dashed var(--rule)}
+.tt-apt{margin:0;display:grid;gap:3px}
+.tt-apt small{color:var(--muted);font-size:.82rem}
+.tt-apl{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:7px}
+.tt-ap{display:grid;gap:1px;padding:8px 7px 8px 9px;border:1px solid var(--rule);border-radius:12px;background:var(--bg);color:var(--ink);text-decoration:none;min-width:0}
+.tt-ap b{font-size:.78rem;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tt-ap small{font-size:.74rem;color:var(--muted)}
+.tt-ap.fill small{color:var(--accent);font-weight:700}
+.tt-ap:hover,.tt-ap:focus-visible{border-color:var(--accent)}
+.tt-more summary{cursor:pointer;font-weight:600;font-size:.9rem;margin:2px 0 8px}
 .tt-qr{margin:0;display:grid;gap:6px;justify-items:center}
 .tt-qrbox{width:100%;max-width:250px;aspect-ratio:1;background:#fff;border-radius:14px;border:1px solid var(--rule);padding:6px}
 .tt-qrbox svg{display:block;width:100%;height:100%}
@@ -178,5 +200,5 @@ CSS = r'''
 .tt-mkf label{display:grid;gap:4px;font-size:.86rem;font-weight:600}
 .tt-mkf input{font:600 1rem var(--mono);padding:9px 11px;border:1px solid var(--rule);border-radius:10px;background:var(--bg);color:var(--ink);min-width:0}
 @media (max-width:900px){.tt{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:560px){.tt-grid{grid-template-columns:minmax(0,1fr)}.tt-qrbox{max-width:280px}.tt-big{justify-items:start}.tt-mkf{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.tt-card{padding:16px 14px}.tt-grid{grid-template-columns:minmax(0,1fr)}.tt-qrbox{max-width:280px}.tt-big{justify-items:start}.tt-mkf{grid-template-columns:minmax(0,1fr)}}
 '''

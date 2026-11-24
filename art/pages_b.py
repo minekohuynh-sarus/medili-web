@@ -319,7 +319,7 @@ def giao_hang():
         ('can', 'Giá sỉ', 'Giá bán lẻ áp dụng cho đơn dưới 5 kg. Mua từ 5 kg trong tháng được hưởng giá sỉ cấp 1. Khi đạt 20 kg trong tháng, phần chênh lệch được chiết khấu vào đơn kế tiếp.'),
         ('tui', 'Quy cách', 'Khách quán dùng túi 1 kg hoặc 5 kg. Khách lẻ có gói 250 g và 500 g; riêng Robusta Specialty và Culi, vui lòng liên hệ MeDili. Catimor, Culi và Blend MeDili chưa có giá sỉ, MeDili sẽ báo giá khi đặt hàng.'),
         ('xe', 'Giao hàng', 'Giao toàn quốc. Đơn từ 10 kg được miễn phí giao. Với đơn dưới 10 kg, phí và thời gian giao được báo trước khi xác nhận đơn.'),
-        ('so', 'Thanh toán và hóa đơn', 'Chuyển khoản ngay bằng mã QR khi đặt hàng (app ngân hàng, MoMo, ZaloPay), hoặc trả tiền mặt khi nhận hàng. Hóa đơn VAT do Công ty TNHH DSunfood xuất.'),
+        ('so', 'Thanh toán và hóa đơn', 'Chuyển khoản ngay bằng mã QR khi đặt hàng (app ngân hàng, MoMo, ZaloPay), hoặc trả tiền mặt khi nhận hàng. Hóa đơn VAT do Công ty TNHH Thực phẩm DSunfood xuất.'),
         ('doi', 'Đổi trả trong 7 ngày', 'Áp dụng cho lỗi sản xuất, lỗi đóng gói, hư hỏng khi vận chuyển hoặc giao sai loại. Bạn gửi mã đơn kèm ảnh hoặc video lỗi, MeDili phản hồi trong 3 ngày làm việc.'),
         ('ly', 'Hỗ trợ', 'Tư vấn chọn cà phê, độ xay, tỷ lệ pha, công thức cơ bản, thực đơn, máy xay và thiết bị pha chế. Phạm vi hỗ trợ được thống nhất với từng đối tác.'),
         ('khien', 'Cam kết', 'Cà phê nguyên chất, đúng thành phần công bố, không pha tạp, không thêm hương liệu hay chất bảo quản vào các dòng rang mộc.'),
@@ -339,14 +339,14 @@ def bao_mat():
     secs = [
         ('Thông tin bạn nhập trên website', 'Các ô nhập ở Tìm gu cà phê, Chọn nhân xanh, HORECA và Đồng hành cùng quán chỉ dùng để soạn tin nhắn ngay trên máy của bạn. Website không tự gửi và không lưu những gì bạn nhập ở các trang này.'),
         ('Khi bạn đặt hàng', 'Khi bạn bấm Đặt hàng trong Giỏ hàng hoặc Phòng chọn mua, website gửi tên, số điện thoại và nội dung đơn (gồm địa chỉ giao) tới MeDili qua Google Forms. Google Forms do Google vận hành, theo chính sách riêng của Google. Giỏ hàng, thông tin người nhận và đơn vừa đặt được lưu trên trình duyệt của bạn để hiện lại ở trang Thanh toán.'),
-        ('Trang Thanh toán', 'Mã QR được tạo ngay trên máy của bạn. Website không nhận và không lưu thông tin tài khoản ngân hàng, ví hay thẻ của bạn; bạn tự chuyển khoản trong app ngân hàng hoặc ví của mình.'),
+        ('Trang Thanh toán', 'Mã QR được tạo ngay trên máy của bạn. Website không nhận và không lưu thông tin tài khoản ngân hàng, ví hay thẻ của bạn; bạn tự chuyển khoản trong app ngân hàng hoặc ví của mình. Khi bạn chọn một app ngân hàng, trang chuyển qua dịch vụ mở app của VietQR (dl.vietqr.io, do Casso vận hành) kèm số tài khoản MeDili, số tiền và mã đơn, không kèm thông tin cá nhân của bạn.'),
         ('Khi bạn nhắn Zalo, gọi điện hoặc gửi email', 'MeDili dùng tên, số điện thoại, địa chỉ và nội dung bạn gửi để tư vấn, báo giá, xác nhận đơn và giao hàng.'),
         ('Cookie và đo lường', 'Các trang do MeDili soạn không cài cookie quảng cáo hay công cụ đo lường. Phông chữ được tải từ Google Fonts, nên trình duyệt của bạn kết nối tới máy chủ của Google. Website được lưu trữ trên máy chủ của đơn vị cung cấp dịch vụ hosting.'),
         ('Trang Giá cà phê', 'Trang Giá cà phê đọc bảng giá lưu trên chính website. Trang không thu thập thông tin người xem.'),
         ('Hỏi, sửa hoặc xóa thông tin', f'Muốn hỏi, sửa hoặc xóa thông tin đã gửi cho MeDili, bạn nhắn Zalo hoặc gọi {PHONE}, hoặc gửi email tới {EMAIL}.'),
     ]
     body += '<section class="p-sec"><div class="g2">' + ''.join(f'<div class="box"><h3>{t}</h3><p>{d}</p></div>' for t, d in secs) + '</div>'
-    body += '<p class="note">Đây là thông báo bảo mật của website, chưa phải văn bản pháp lý đầy đủ. Đơn vị vận hành: Công ty TNHH DSunfood, ' + ADDR_HCM + '.</p></section>'
+    body += '<p class="note">Đây là thông báo bảo mật của website, chưa phải văn bản pháp lý đầy đủ. Đơn vị vận hành: Công ty TNHH Thực phẩm DSunfood, ' + ADDR_HCM + '.</p></section>'
     return doc('bao-mat.html', 'Chính sách bảo mật MeDili',
                'Website MeDili sử dụng thông tin nào: đơn đặt hàng gửi qua Google Forms, mã QR thanh toán tạo trên máy của bạn, không dùng cookie quảng cáo.',
                body, wrap_cls='wrap pg')

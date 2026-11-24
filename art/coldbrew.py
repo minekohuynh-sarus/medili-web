@@ -37,7 +37,7 @@ SAFE = [
 
 DOCS = [
     ('so', 'Đăng ký kinh doanh có ngành thực phẩm',
-     'Công ty TNHH DSunfood đứng tên tổ chức chịu trách nhiệm về sản phẩm. Kiểm tra ngành nghề sản xuất, kinh doanh thực phẩm trên giấy đăng ký.'),
+     'Công ty TNHH Thực phẩm DSunfood đứng tên tổ chức chịu trách nhiệm về sản phẩm. Kiểm tra ngành nghề sản xuất, kinh doanh thực phẩm trên giấy đăng ký.'),
     ('khien', 'Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm',
      'Bắt buộc với nơi sản xuất (Điều 11 Nghị định 15/2018), trừ các trường hợp ở Điều 12, ví dụ cơ sở đang có HACCP, ISO 22000 hoặc FSSC 22000 còn hiệu lực. '
      'Nếu thuê gia công, chọn xưởng đã có giấy này. Cơ sở chỉ kinh doanh thực phẩm bao gói sẵn không thuộc diện cấp.'),
@@ -586,7 +586,7 @@ function backLabel(r){
  const warn=bag?'Sản phẩm có caffeine. Cân nhắc khi dùng cho trẻ em, phụ nữ mang thai và người nhạy cảm với caffeine.':'Không dùng khi chai phồng, rỉ hoặc có mùi lạ. Không để ngoài tủ lạnh quá 2 giờ. Sản phẩm có caffeine.';
  const html=`<h4>${name}</h4><p><b>Thành phần:</b> ${ing}</p><p><b>${qty}</b></p><p><b>Hướng dẫn sử dụng:</b> ${how}</p><p><b>Bảo quản:</b> <span class="${bag?'':'red'}">${keep}</span></p><p><b>Cảnh báo:</b> ${warn}</p>
 <div class="dt"><div><span>NSX</span>${dmy(d)}</div><div><span>HSD</span>${dmy(e)}</div><div><span>Mã lô</span>${lot()}</div></div>
-<p><b>Số tự công bố:</b> ……/DSUNFOOD/${d.getFullYear()}</p><p><b>Tổ chức chịu trách nhiệm:</b> Công ty TNHH DSunfood, ${ADDR}. ĐT ${PHONE}.</p><p><b>Xuất xứ:</b> Việt Nam. Nguyên liệu từ vườn MeDili, ${ADDR_FARM}.</p>`;
+<p><b>Số tự công bố:</b> ……/DSUNFOOD/${d.getFullYear()}</p><p><b>Tổ chức chịu trách nhiệm:</b> Công ty TNHH Thực phẩm DSunfood, ${ADDR}. ĐT ${PHONE}.</p><p><b>Xuất xứ:</b> Việt Nam. Nguyên liệu từ vườn MeDili, ${ADDR_FARM}.</p>`;
  $('backlbl').innerHTML=html;
  st.label=$('backlbl').innerText.replace(/\n{2,}/g,'\n');
 }

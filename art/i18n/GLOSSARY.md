@@ -63,6 +63,7 @@ huyện/xã giữ chữ Latin (Di Linh, Cầu Đất, Bảo Lâm, Tân Nghĩa, G
 | tiền mặt khi nhận hàng (COD) | cash on delivery (COD) | 代金引換（現金） | 货到付款（现金） |
 | nội dung chuyển khoản / số tài khoản / tên tài khoản | reference / account number / account name | 振込内容 / 口座番号 / 口座名義 | 转账附言 / 账号 / 户名 |
 | mã đơn | order code | 注文番号 | 订单号 |
+| chọn app ngân hàng / điền sẵn / mở app | choose your banking app / Prefilled / Open app | 銀行アプリを選ぶ / 自動入力 / アプリを開く | 选择银行应用 / 自动填写 / 打开应用 |
 | Công ty TNHH Thực phẩm DSunfood (chủ tài khoản) | DSunfood Food Co., Ltd. | DSunfood食品有限会社 | DSunfood食品有限责任公司 |
 | Giỏ hàng | Cart | カート | 购物车 |
 | Cửa hàng | Shop | ショップ | 商店 |

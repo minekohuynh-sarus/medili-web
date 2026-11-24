@@ -260,7 +260,7 @@ HOME_BODY = f'''{header('index.html')}
  <div class="p-sec">
   <p class="eye">Chương 06 · MeDili Café</p>
   <h2 class="p-h2" style="margin:0">Một tách cà phê. <em>Một cuộc hẹn.</em></h2>
-  <p>Công ty TNHH DSunfood tại 143 Phạm Văn Hai là điểm phân phối của MeDili ở TP.HCM, đồng thời là MeDili Café. Bạn có thể ghé uống một ly, hỏi thực đơn trong ngày hoặc trao đổi về việc cung cấp cà phê cho quán.</p>
+  <p>Công ty TNHH Thực phẩm DSunfood tại 143 Phạm Văn Hai là điểm phân phối của MeDili ở TP.HCM, đồng thời là MeDili Café. Bạn có thể ghé uống một ly, hỏi thực đơn trong ngày hoặc trao đổi về việc cung cấp cà phê cho quán.</p>
   <p class="k">Hôm nay, bạn mê vị gì?</p>
   <div class="chips" style="margin-top:0"><span>Cà phê sữa đá Việt Nam</span><span>Cà phê phin</span><span>Cappuccino</span><span>Espresso</span></div>
   <p class="note">Thực đơn gợi ý. Vui lòng gọi trước để xác nhận món trong ngày.</p>
