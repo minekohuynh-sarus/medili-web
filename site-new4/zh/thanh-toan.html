@@ -658,7 +658,9 @@ const B={"bin": "970436", "code": "vcb", "bank": "Vietcombank", "acc": "10510827
  const APPS2=[['tpb','TPBank'],['hdb','HDBank'],['vib-2','VIB'],['shb','SHB'],['lpb','LPBank'],['seab','SeABank'],['cake','Cake'],['timo','Timo'],['scb','SCB'],['eib','Eximbank'],['nab','Nam A Bank'],['abb','ABBank'],['shbvn','Shinhan Bank'],['wvn','Woori Bank'],['klb','KienlongBank'],['bvb','BAOVIET Bank'],['vab','Vietbank'],['ncb','NCB'],['pvcb','PVcomBank'],['coopbank','Co-opBank'],['mbv','MBV'],['pbvn','Public Bank'],['sgicb','Saigonbank'],['cimb','CIMB'],['acb-biz','ACB ONE Biz']];
  const MOB=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
  function apps(amt,nd){if(!MOB||!amt||!nd||!B.code)return;const q=new URLSearchParams({ba:B.acc+'@'+B.code,am:String(amt),tn:nd,bn:B.name,url:location.href}).toString().replace('%40','@');
-  const btn=([id,n,f])=>'<a class="tt-ap'+(f?' fill':'')+'" href="https://dl.vietqr.io/pay?app='+id+'&'+q+'" rel="noopener"><b>'+n+'</b><small>'+(f?'自动填写':'打开应用')+'</small></a>';
+  // Trang nằm trong khung (bản xem trước): mở tab mới để app ngân hàng bật được. Trên medili.vn mở ngay tab này để quay lại đúng trang.
+  const TG=(()=>{try{return window.top!==window.self}catch(e){return true}})()?' target="_blank"':'';
+  const btn=([id,n,f])=>'<a class="tt-ap'+(f?' fill':'')+'" href="https://dl.vietqr.io/pay?app='+id+'&'+q+'" rel="noopener"'+TG+'><b>'+n+'</b><small>'+(f?'自动填写':'打开应用')+'</small></a>';
   $('tt-apl').innerHTML=APPS.map(btn).join('');$('tt-apl2').innerHTML=APPS2.map(btn).join('');$('tt-apps').hidden=false}
  let Q=null;
  function draw(amt,nd){if(typeof qrcode!=='function'){$('tt-qr').textContent='';return}
