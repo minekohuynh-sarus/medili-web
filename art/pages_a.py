@@ -82,7 +82,7 @@ def cau_chuyen():
  <div class="p-sec">
   <p class="eye">01 · Một di sản vùng miền</p>
   <h2 class="p-h2">Cà Sẻ, <em>gốc của niềm mê.</em></h2>
-  <p>Cà Sẻ là dòng Robusta đặc trưng của vùng Di Linh. Những cây Cà Sẻ lâu năm cho ly cà phê ngon, giàu caffeine. MeDili chọn Cà Sẻ làm nền tảng của thương hiệu.</p>
+  <p>Cà Sẻ là tên người Di Linh gọi giống Robusta cổ, đặc trưng của vùng. Những cây Cà Sẻ lâu năm cho ly cà phê ngon, giàu caffeine. MeDili chọn Cà Sẻ làm nền tảng của thương hiệu.</p>
   <p>Nhiều người kể rằng cây cà phê có mặt trên cao nguyên Di Linh từ thời Pháp. MeDili vẫn đang tìm thêm tư liệu về thời điểm, nguồn giống và con đường cây đến vùng đất này, nên trang này chưa ghi mốc năm cụ thể.</p>
   <p>Điều MeDili ghi nhận được là vườn của chính mình: canh tác từ năm 2010, cây 15 năm tuổi, chăm sóc theo hướng tự nhiên, kết hợp phân hữu cơ và giảm hóa chất.</p>
  </div>
@@ -214,7 +214,7 @@ def vung_trong():
   {photo('p-robusta-chum.jpg', 'Cành Robusta chín dày trái')}
   <p class="eye">Cà Sẻ Di Linh</p>
   <h3>Dòng Robusta MeDili chú trọng nhất</h3>
-  <p>Cà Sẻ là dòng Robusta đặc trưng của vùng Di Linh. Vườn được chăm sóc theo hướng tự nhiên, kết hợp phân hữu cơ, giảm hóa chất và tối ưu chi phí. Cây trong vườn đã 15 năm tuổi.</p>
+  <p>Cà Sẻ là tên người Di Linh gọi giống Robusta cổ có từ thời Pháp, đặc trưng của vùng. Vườn được chăm sóc theo hướng tự nhiên, kết hợp phân hữu cơ, giảm hóa chất và tối ưu chi phí. Cây trong vườn đã 15 năm tuổi.</p>
   <p>Catimor và Culi là hai dòng cà phê trải nghiệm, trồng ở Cầu Đất, Lâm Đồng.</p>
  </section>
  <section class="box p-sec">

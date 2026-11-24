@@ -396,7 +396,7 @@ def page():
     <div>
       <p class="eye">Trọng tâm · Robusta Cà Sẻ Di Linh</p>
       <h2 class="p-h2" style="margin:0">Cà Sẻ là một giống, <em>không phải hình hạt hay hạng hàng.</em></h2>
-      <p>“Sẻ” là tên dân gian, không phải tên phân loại chính thức. Cà Sẻ, Robusta Sẻ, Ro Sẻ hay Robusta hạt nhỏ đều chỉ nhóm Robusta được đưa vào Việt Nam từ đầu thế kỷ XX và trồng phổ biến ở Tây Nguyên trước khi có các giống chọn lọc của Viện WASI. Cây được nhân bằng hạt nên quần thể không đồng đều: mỗi cây một dáng, trái và năng suất khác nhau. Tên gọi phản ánh nhân nhỏ, trái nhỏ và tán gọn.</p>
+      <p>“Sẻ” là tên dân gian, không phải tên phân loại chính thức; tên chung vẫn là Robusta. Cà Sẻ, Robusta Sẻ, Ro Sẻ hay Robusta hạt nhỏ đều chỉ giống Robusta cổ do người Pháp đưa vào Việt Nam từ đầu thế kỷ XX, mang lên Di Linh và khắp Tây Nguyên trồng trước khi có các giống chọn lọc của Viện WASI. Cây được nhân bằng hạt nên quần thể không đồng đều: mỗi cây một dáng, trái và năng suất khác nhau. Tên gọi phản ánh nhân nhỏ, trái nhỏ và tán gọn.</p>
       <p>Phân tích 126 mẫu trong ngân hàng gen của WASI cho thấy phần lớn vật liệu Robusta Việt Nam thuộc nhóm di truyền ER, từ lưu vực sông Congo. Từ năm 1976, WASI bắt đầu chọn giống quy mô lớn; các dòng TR4, TR9, TR11, rồi TR14, TR15 dần thay Cà Sẻ vì năng suất cao và nhân to. Cà Sẻ ít được trồng mới, nhưng là vật liệu nền của Robusta Việt Nam và giữ nhiều gen thích nghi với hạn, sâu bệnh.</p>
     </div>
     <div class="medili">

@@ -8,7 +8,11 @@ Danh sách do JS ghép: JA/ZH dùng 、 và 。 (đổi `.join(', ')` lúc ráp 
 
 Giữ nguyên (cả 3 thứ tiếng): MeDili, MeDili Café, MeDili Coffee Farm, Robusta, Arabica, Culi, Catimor, Excelsa, Moka (giống), Fine Robusta,
 Classic, Premium, Specialty, Signature, Blend, tên dòng Ngũ Hành (Sương, Rừng, Suối, Nắng, Núi, Mây — tên riêng; Ngũ Hành = Five Elements / 五行 / 五行),
-Natural, Honey, Washed, Zalo, Facebook, Google Form, 3 khẩu hiệu tiếng Anh, Cà Sẻ (giống Robusta Di Linh), mã lô/mã mẫu.
+Natural, Honey, Washed, Zalo, Facebook, Google Form, 3 khẩu hiệu tiếng Anh, mã lô/mã mẫu.
+**Cà Sẻ** (chị Ngân chốt 24/11/2026): tên người Di Linh gọi giống Robusta cổ có từ thời Pháp; tên chung là Robusta. Cả 3 thứ tiếng dịch là **Origin Robusta**
+(Robusta Sẻ, Robusta Cà Sẻ → Origin Robusta; Cà Sẻ Di Linh, Robusta Sẻ Di Linh → Origin Robusta Di Linh, như Arabica Cầu Đất; Culi Sẻ → Origin Robusta Culi / Origin RobustaのCuli).
+Chỉ giữ chữ Cà Sẻ ở chỗ nói về tên gọi: bảng Tên gọi trên thị trường, đoạn “Sẻ là tên dân gian”, tiêu đề “Origin Robusta (Cà Sẻ) là một giống”,
+câu “Cà Sẻ là tên người Di Linh gọi…” (Câu chuyện, Vùng trồng). Không thêm chú thích “sparrow” / スズメ / 麻雀.
 Địa chỉ (143 Phạm Văn Hai…, Thôn 11, Xã Di Linh, Lâm Đồng) giữ nguyên tiếng Việt.
 Địa danh: EN giữ chữ Việt có dấu. JA: tỉnh/thành lớn viết katakana (ラムドン省, ホーチミン市, サイゴン, ハノイ, ダクラク省, ザライ省, ダクノン省, ダラット);
 huyện/xã giữ chữ Latin (Di Linh, Cầu Đất, Bảo Lâm, Tân Nghĩa, Gia Bắc, Lộc Châu, Tà Hine). ZH: 林同省, 胡志明市, 西贡, 河内, 多乐省, 嘉莱省, 得农省, 大叻; huyện/xã giữ Latin.
@@ -69,7 +73,7 @@ huyện/xã giữ chữ Latin (Di Linh, Cầu Đất, Bảo Lâm, Tân Nghĩa, G
 | Cửa hàng | Shop | ショップ | 商店 |
 | Cỗ máy Vi sinh / Tiền chất hương / Lên men cùng trái cây | Microbe / Aroma Precursor / Fruit Co-fermentation Machine | 微生物 / 香りの前駆体 / フルーツ共発酵マシン | 微生物 / 香气前体 / 水果共同发酵机 |
 | Vườn 12 tháng | The Farm in 12 Months | 農園の12か月 | 庄园的十二个月 |
-| Giải phẫu trái Cà Sẻ | Anatomy of the Cà Sẻ Cherry | Cà Sẻの実の解剖 | Cà Sẻ果实解剖 |
+| Giải phẫu trái Cà Sẻ | Anatomy of the Origin Robusta Cherry | Origin Robustaの実の解剖 | Origin Robusta果实解剖 |
 
 ## Rang (rang.html)
 
