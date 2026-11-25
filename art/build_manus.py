@@ -3,7 +3,7 @@
 import os, re, json, shutil, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kit import *
-import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh, cuahang, congthuc, anhvuon, huongdan, donghanh, chinhsach, thanhtoan, tintuc
+import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh, cuahang, congthuc, anhvuon, huongdan, donghanh, chinhsach, thanhtoan, tintuc, lenmentuthan
 
 os.makedirs(OUT, exist_ok=True)
 rd = lambda f: open(os.path.join(BASE, f), encoding='utf8').read()
@@ -110,6 +110,7 @@ NEW[donghanh.FILE] = donghanh.page(P)   # Đồng hành cùng quán (23/11/2026)
 NEW[chinhsach.FILE] = chinhsach.page()   # Chính sách MeDili: khách sỉ, đổi trả, kiểm hàng, hoàn tiền (23/11/2026)
 NEW.update(tintuc.pages())   # Tin tức hằng ngày, bài đã duyệt trong art/data/tin-tuc.json (24/11/2026)
 NEW[thanhtoan.FILE] = thanhtoan.page()   # Thanh toán: mã VietQR chuyển khoản, link thanh toán, COD (24/11/2026)
+NEW[lenmentuthan.FILE] = lenmentuthan.page()   # Lên men tự thân trái cà phê: clip 3D trong mục Vùng trồng & sản xuất (25/11/2026)
 N_SHELF = sum(x['st'] != 'sap' for x in CATALOG)   # dòng đang bán (kể cả Ngũ Hành)
 
 # ---------- trang cũ: menu, chân trang, màu ----------

@@ -50,7 +50,8 @@ GROUPS = [
     ('MeDili', [('./', 'Trang chủ'), ('cau-chuyen.html', 'Câu chuyện MeDili'), ('doi-ngu.html', 'Đội ngũ'),
                 ('quan-medili.html', 'Quán MeDili Café'), ('lien-he.html', 'Liên hệ')]),
     ('Vùng trồng & sản xuất', [('vung-trong.html', 'Vùng trồng Di Linh'), ('anh-vuon.html', 'Ảnh vườn'), ('vuon.html', 'Vườn 12 tháng'), ('trai-ca-phe.html', 'Cấu tạo trái'),
-                               ('len-men-men-bia.html', 'Lên men bằng men bia'), ('len-men-trai-cay.html', 'Lên men cùng trái cây')]),
+                               ('len-men-men-bia.html', 'Lên men bằng men bia'), ('len-men-trai-cay.html', 'Lên men cùng trái cây'),
+                               ('len-men-tu-than.html', 'Lên men tự thân')]),   # clip 3D, chị Ngân yêu cầu 25/11/2026
     ('Rang & pha', [('xuong-rang.html', 'Xưởng rang & năng lực'), ('rang.html', 'Phòng rang'), ('huong-dan-pha.html', 'Hướng dẫn pha'), ('quay-pha.html', 'Quầy pha'),
                     ('cong-thuc-pha.html', 'Cỗ máy Công thức pha'), ('cold-brew.html', 'Cỗ máy Cold Brew'), ('tim-gu.html', 'Tìm gu cà phê')]),
     ('Mua & hợp tác', [('cua-hang.html', 'Cửa hàng cà phê'), ('mua-hang.html', 'Phòng chọn mua'), ('horeca.html', 'Giải pháp HORECA'), ('dong-hanh-cung-quan.html', 'Đồng hành cùng quán'),

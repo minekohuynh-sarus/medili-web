@@ -43,6 +43,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -121,6 +122,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -199,6 +201,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -248,7 +251,7 @@
 "vuon.html",
 "xuong-rang.html"
 ],
-"c": "<a href=\"cau-chuyen.html\">Câu chuyện</a><a href=\"vung-trong.html\">Vùng trồng</a>"
+"c": "<a href=\"cau-chuyen.html\" data-p=\"7\">Câu chuyện</a><a href=\"vung-trong.html\" dat"
 },
 "57f5f5efb": {
 "s": "Menu",
@@ -277,6 +280,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -355,6 +359,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -433,6 +438,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -511,6 +517,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -589,6 +596,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -667,6 +675,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -745,6 +754,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -823,6 +833,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -901,6 +912,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -979,6 +991,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1057,6 +1070,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1135,6 +1149,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1213,6 +1228,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1291,6 +1307,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1369,6 +1386,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1420,6 +1438,85 @@
 ],
 "c": "Lên men cùng trái cây"
 },
+"de8fd22cb": {
+"s": "Lên men tự thân",
+"k": "h",
+"f": [
+"anh-vuon.html",
+"banh-xe-huong.html",
+"bao-mat.html",
+"cau-chuyen.html",
+"chiet-xuat.html",
+"chinh-sach.html",
+"cold-brew.html",
+"cong-thuc-pha.html",
+"cua-hang.html",
+"doi-ngu.html",
+"dong-hanh-cung-quan.html",
+"gia-ca-phe.html",
+"giao-hang.html",
+"gio-hang.html",
+"horeca.html",
+"huong-dan-pha.html",
+"index.html",
+"journal-di-linh.html",
+"journal-phin.html",
+"journal-tu-qua.html",
+"journal.html",
+"len-men-men-bia.html",
+"len-men-trai-cay.html",
+"len-men-tu-than.html",
+"lien-he.html",
+"mua-hang.html",
+"nhan-xanh.html",
+"phan-biet-ca-phe.html",
+"quan-medili.html",
+"quay-pha.html",
+"rang.html",
+"sp-arabica-cau-dat.html",
+"sp-arabica-natural-cau-dat.html",
+"sp-arabica-washed-cau-dat.html",
+"sp-blend-medili.html",
+"sp-catimor.html",
+"sp-culi.html",
+"sp-fine-robusta-di-linh.html",
+"sp-fine-robusta-honey-di-linh.html",
+"sp-may-arabica-premium.html",
+"sp-may-blend-premium-5-5.html",
+"sp-may-blend-premium-7-3.html",
+"sp-may-blend-premium-8-2.html",
+"sp-may-blend-premium-9-1.html",
+"sp-may-robusta-classic.html",
+"sp-may-robusta-premium.html",
+"sp-may-robusta-specialty.html",
+"sp-ngu-hanh-may.html",
+"sp-ngu-hanh-nang.html",
+"sp-ngu-hanh-nui.html",
+"sp-ngu-hanh-rung.html",
+"sp-ngu-hanh-suoi.html",
+"sp-ngu-hanh-suong.html",
+"sp-phin-arabica-premium.html",
+"sp-phin-robusta-classic.html",
+"sp-phin-robusta-premium.html",
+"sp-signature-coffee.html",
+"suc-khoe.html",
+"thanh-toan.html",
+"tien-chat-huong.html",
+"tim-gu.html",
+"tim-kiem.html",
+"tin-tuc-gia-ca-cao-hoi-phuc-el-nino-de-doa-mua-vu-tay-phi-2511.html",
+"tin-tuc-gia-ca-phe-nhan-giam-sau-giua-vu-nguoi-uong-can-biet-gi-2411.html",
+"tin-tuc.html",
+"trai-ca-phe.html",
+"trai-chin.html",
+"tu-vuon-den-ly.html",
+"vi-sinh.html",
+"vung-trong.html",
+"vuon.html",
+"xuong-rang.html"
+],
+"c": "Lên men tự thân"
+},
 "5fae88941": {
 "s": "Rang & pha",
 "k": "h",
@@ -1447,6 +1544,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1525,6 +1623,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1603,6 +1702,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1681,6 +1781,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1759,6 +1860,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1837,6 +1939,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1915,6 +2018,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -1993,6 +2097,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -2071,6 +2176,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -2149,6 +2255,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -2227,6 +2334,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -2305,6 +2413,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -2383,6 +2492,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -2461,6 +2571,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -2539,6 +2650,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -2617,6 +2729,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -2695,6 +2808,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -2773,6 +2887,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -2851,6 +2966,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -2929,6 +3045,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3007,6 +3124,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3085,6 +3203,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3163,6 +3282,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3241,6 +3361,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3319,6 +3440,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3397,6 +3519,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3475,6 +3598,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3553,6 +3677,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3631,6 +3756,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3709,6 +3835,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3787,6 +3914,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3865,6 +3993,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -3943,6 +4072,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -4021,6 +4151,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -4099,6 +4230,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -4177,6 +4309,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -4255,6 +4388,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -4333,6 +4467,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -5037,6 +5172,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -5114,6 +5250,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "nhan-xanh.html",
 "phan-biet-ca-phe.html",
 "quan-medili.html",
@@ -5184,6 +5321,7 @@
 "journal-phin.html",
 "journal-tu-qua.html",
 "journal.html",
+"len-men-tu-than.html",
 "nhan-xanh.html",
 "phan-biet-ca-phe.html",
 "quan-medili.html",
@@ -5248,6 +5386,7 @@
 "journal-phin.html",
 "journal-tu-qua.html",
 "journal.html",
+"len-men-tu-than.html",
 "nhan-xanh.html",
 "phan-biet-ca-phe.html",
 "quan-medili.html",
@@ -5315,6 +5454,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -5386,6 +5526,7 @@
 "journal-phin.html",
 "journal-tu-qua.html",
 "journal.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "nhan-xanh.html",
 "phan-biet-ca-phe.html",
@@ -5454,6 +5595,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -5525,6 +5667,7 @@
 "journal-phin.html",
 "journal-tu-qua.html",
 "journal.html",
+"len-men-tu-than.html",
 "nhan-xanh.html",
 "phan-biet-ca-phe.html",
 "quan-medili.html",
@@ -5593,6 +5736,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -5671,6 +5815,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -5749,6 +5894,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -5827,6 +5973,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -5905,6 +6052,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -5983,6 +6131,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6061,6 +6210,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6139,6 +6289,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6217,6 +6368,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6295,6 +6447,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6373,6 +6526,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6451,6 +6605,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6529,6 +6684,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6607,6 +6763,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6684,6 +6841,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6762,6 +6920,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6840,6 +6999,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6918,6 +7078,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -6996,6 +7157,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -7074,6 +7236,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -7152,6 +7315,7 @@
 "journal.html",
 "len-men-men-bia.html",
 "len-men-trai-cay.html",
+"len-men-tu-than.html",
 "lien-he.html",
 "mua-hang.html",
 "nhan-xanh.html",
@@ -29878,7 +30042,7 @@
 "f": [
 "index.html"
 ],
-"c": "<span class=\"k\">Giá cà phê <span id=\"tk-d\" translate=\"no\">24/11</span></span><sp"
+"c": "<span class=\"k\">Giá cà phê <span id=\"tk-d\" translate=\"no\">25/11</span></span><sp"
 },
 "7164c1bc7": {
 "s": "Chương 02 · Bộ sưu tập MeDili",
@@ -35337,6 +35501,302 @@
 "len-men-trai-cay.html"
 ],
 "c": "PHIẾU MẺ \u00001\u0000\nMeDili Coffee Farm · Di Linh\n\nTrái cà phê: \u00002\u0000 kg | Brix đầu: \u00003\u0000 °"
+},
+"6916ef65b": {
+"s": "Clip 3D quy trình lên men tự thân trái cà phê ở vườn MeDili Di Linh: không cấy men, không thêm trái cây, ủ kín có van, dừng theo pH, phơi Natural, Honey, Washed.",
+"k": "a",
+"f": [
+"len-men-tu-than.html"
+],
+"c": ""
+},
+"245f002fb": {
+"s": "Lên men tự thân trái cà phê · MeDili",
+"k": "a",
+"f": [
+"len-men-tu-than.html"
+],
+"c": ""
+},
+"47ed6e64d": {
+"s": "Vùng trồng & sản xuất · Clip 3D",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Vùng trồng & sản xuất · Clip 3D"
+},
+"78b233384": {
+"s": "Lên men tự thân <1>trái cà phê.</1>",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Lên men tự thân <em>trái cà phê.</em>"
+},
+"07e21a286": {
+"s": "Không cấy men, không thêm trái cây. Vi sinh có sẵn trên chính trái cà phê của vườn MeDili làm việc trong thùng kín, rồi hạt được phơi theo Natural, Honey hoặc Washed.",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Không cấy men, không thêm trái cây. Vi sinh có sẵn trên chính trái cà phê của vư"
+},
+"e1d46b18e": {
+"s": "<1>Xem clip</1><2>Cỗ máy Vi sinh</2>",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<a class=\"btn main\" href=\"#clip\">Xem clip</a><a class=\"btn\" href=\"vi-sinh.html\">"
+},
+"3ab961bca": {
+"s": "Lên men tự thân qua các con số",
+"k": "a",
+"f": [
+"len-men-tu-than.html"
+],
+"c": ""
+},
+"a2fb75f84": {
+"s": "<1>48–96 giờ</1><2>ủ kín, tùy mẻ</2>",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<b>48–96 giờ</b><span>ủ kín, tùy mẻ</span>"
+},
+"e86a1bd90": {
+"s": "<1>pH 4,0–4,4</1><2>vùng dừng ủ</2>",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<b>pH 4,0–4,4</b><span>vùng dừng ủ</span>"
+},
+"b05c970fb": {
+"s": "<1>10,5–11,5%</1><2>độ ẩm đích khi phơi</2>",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<b>10,5–11,5%</b><span>độ ẩm đích khi phơi</span>"
+},
+"37adb2e63": {
+"s": "<1>3 cách</1><2>Natural, Honey, Washed</2>",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<b>3 cách</b><span>Natural, Honey, Washed</span>"
+},
+"329cc24e9": {
+"s": "Clip quy trình lên men tự thân",
+"k": "a",
+"f": [
+"len-men-tu-than.html"
+],
+"c": ""
+},
+"2139f76af": {
+"s": "Clip 3D quy trình lên men tự thân trái cà phê MeDili",
+"k": "a",
+"f": [
+"len-men-tu-than.html"
+],
+"c": ""
+},
+"4af27bc0e": {
+"s": "Clip 3D 62 giây, 10 bước, không có tiếng. Đường pH trong phiếu theo dõi và số ngày phơi là mốc từ mô hình minh họa, cần đo thực tế từng mẻ.",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Clip 3D 62 giây, 10 bước, không có tiếng. Đường pH trong phiếu theo dõi và số ng"
+},
+"874ab6888": {
+"s": "Trong clip",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Trong clip"
+},
+"333e1cd14": {
+"s": "Mười bước <1>từ trái chín đến bao kín.</1>",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Mười bước <em>từ trái chín đến bao kín.</em>"
+},
+"662735047": {
+"s": "<1>Bước 01</1>Thu hái trong ngày",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<small>Bước 01</small>Thu hái trong ngày"
+},
+"cd94d5593": {
+"s": "Trái chín từ 90%, Brix 18–22. Trái hái về để trong bao qua đêm đã bắt đầu lên men, nên MeDili sơ chế ngay trong ngày.",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Trái chín từ 90%, Brix 18–22. Trái hái về để trong bao qua đêm đã bắt đầu lên me"
+},
+"8690cefc6": {
+"s": "<1>Bước 02</1>Tuyển nổi",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<small>Bước 02</small>Tuyển nổi"
+},
+"aa7b12754": {
+"s": "Thả trái vào bể nước: trái chín đặc chìm xuống, trái lép và sâu nhẹ nổi lên, được gạt bỏ trước khi mang mốc vào thùng.",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Thả trái vào bể nước: trái chín đặc chìm xuống, trái lép và sâu nhẹ nổi lên, đượ"
+},
+"329444ffc": {
+"s": "<1>Bước 03</1>Vi sinh tự thân",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<small>Bước 03</small>Vi sinh tự thân"
+},
+"63a438d96": {
+"s": "Không cấy men. Nấm men và vi khuẩn lactic sống sẵn trên vỏ, cuống trái tự làm việc. Mỗi vườn một hệ vi sinh riêng.",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Không cấy men. Nấm men và vi khuẩn lactic sống sẵn trên vỏ, cuống trái tự làm vi"
+},
+"a0fcaaf9b": {
+"s": "<1>Bước 04</1>Ba cách sơ chế",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<small>Bước 04</small>Ba cách sơ chế"
+},
+"979581988": {
+"s": "Natural giữ nguyên trái, vỏ còn nguyên nên đường khuếch tán chậm. Honey và Washed xát tươi, giữ lớp nhớt làm thức ăn cho vi sinh.",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Natural giữ nguyên trái, vỏ còn nguyên nên đường khuếch tán chậm. Honey và Washe"
+},
+"2804438e1": {
+"s": "<1>Bước 05</1>Ủ kín có van",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<small>Bước 05</small>Ủ kín có van"
+},
+"ba5b83c87": {
+"s": "Thùng nhựa thực phẩm, nắp gioăng, van một chiều, chừa 20% khoảng trống. Ủ 48–96 giờ tùy mẻ, thùng 22–24 °C, để nơi mát, che nắng.",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Thùng nhựa thực phẩm, nắp gioăng, van một chiều, chừa 20% khoảng trống. Ủ 48–96 "
+},
+"db81d6c32": {
+"s": "<1>Bước 06</1>Ba nhóm vi sinh",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<small>Bước 06</small>Ba nhóm vi sinh"
+},
+"8e3949c27": {
+"s": "Nấm men tạo cồn, CO₂ và hương trái cây. Vi khuẩn lactic hạ pH đều, chua dịu. Vi khuẩn acetic cần oxy nên bị thùng kín chặn.",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Nấm men tạo cồn, CO₂ và hương trái cây. Vi khuẩn lactic hạ pH đều, chua dịu. Vi "
+},
+"76dd904ad": {
+"s": "<1>Bước 07</1>Đo và dừng ủ",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<small>Bước 07</small>Đo và dừng ủ"
+},
+"63cf9eed0": {
+"s": "Mỗi 6 giờ đo pH, Brix, nhiệt độ và ngửi mùi. Dừng khi chạm pH 4,0–4,4, không để dưới 4,0. Mốc, mùi thối, mùi sơn: bỏ mẻ.",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Mỗi 6 giờ đo pH, Brix, nhiệt độ và ngửi mùi. Dừng khi chạm pH 4,0–4,4, không để "
+},
+"9a396f1f3": {
+"s": "<1>Bước 08</1>Rửa hay chỉ lọc",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<small>Bước 08</small>Rửa hay chỉ lọc"
+},
+"4f27bf759": {
+"s": "Washed rửa sạch lớp nhớt tới khi hạt nhám như sỏi. Honey và Natural không rửa, chỉ lọc xác trái, đưa lên giàn trong ngày.",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Washed rửa sạch lớp nhớt tới khi hạt nhám như sỏi. Honey và Natural không rửa, c"
+},
+"24f7ea9ff": {
+"s": "<1>Bước 09</1>Giàn sấy",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<small>Bước 09</small>Giàn sấy"
+},
+"36b973ae9": {
+"s": "Giàn cao có mái, rải mỏng, đảo bằng cào nhiều lần trong ngày, tới độ ẩm 10,5–11,5%. Phơi dày không đảo dễ mốc.",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Giàn cao có mái, rải mỏng, đảo bằng cào nhiều lần trong ngày, tới độ ẩm 10,5–11,"
+},
+"430d923a3": {
+"s": "<1>Bước 10</1>Ủ và thử nếm",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<small>Bước 10</small>Ủ và thử nếm"
+},
+"d024fab72": {
+"s": "Đóng bao kín khí, ghi mã mẻ, để nơi mát, tối, kê cao khỏi sàn. Thử nếm mù mỗi 2 tuần, mẻ nào hơn hẳn đối chứng mới làm lớn.",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "Đóng bao kín khí, ghi mã mẻ, để nơi mát, tối, kê cao khỏi sàn. Thử nếm mù mỗi 2 "
+},
+"ba3c72a9b": {
+"s": "<1>Cỗ máy Vi sinh</1><2>Lên men cùng trái cây</2><3>Lên men bằng men bia</3><4>Ảnh vườn MeDili</4>",
+"k": "h",
+"f": [
+"len-men-tu-than.html"
+],
+"c": "<a class=\"lnk\" href=\"vi-sinh.html\">Cỗ máy Vi sinh</a><a class=\"lnk\" href=\"len-me"
 },
 "d7254f726": {
 "s": "Liên hệ MeDili: Zalo và điện thoại 0966 770 788, email cafe@medili.vn, vườn và xưởng rang ở Thôn 11, Xã Di Linh, phân phối tại 143 Phạm Văn Hai, TP.HCM.",
