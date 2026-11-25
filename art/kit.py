@@ -74,9 +74,26 @@ def _cur(href, current):
     return ' aria-current="page"' if (href == current or (href == './' and current == 'index.html')) else ''
 
 
+# Tab có menu con trên thanh mục chính: bấm tab là xổ ra các trang trong nhóm của GROUPS.
+# Chị Ngân 25/11/2026: bấm tab Vùng trồng là ra luôn Lên men tự thân (trang con của Vùng trồng & sản xuất).
+PRIMARY_SUB = {'vung-trong.html': 'Vùng trồng & sản xuất'}
+CHEV = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>'
+
+
+def _prim(h, t, current):
+    g = PRIMARY_SUB.get(h)
+    if not g:
+        return f'<a href="{h}" data-p="{PRIMARY_KEEP.get(h, 0)}"{_cur(h, current)}>{t}</a>'
+    items = dict(GROUPS)[g]
+    on = ' on' if any(x == current for x, _ in items) else ''
+    lis = ''.join(f'<li><a href="{x}"{_cur(x, current)}>{y}</a></li>' for x, y in items)
+    return (f'<details class="mh-d{on}" data-p="{PRIMARY_KEEP.get(h, 0)}"><summary><span>{t}</span>{CHEV}</summary>'
+            f'<div class="mh-dd"><p class="mh-g">{g}</p><ul>{lis}</ul></div></details>')
+
+
 def header(current):
     from i18n import lang_menu   # nút chọn ngôn ngữ: Tiếng Việt, English, 日本語, 中文 (24/11/2026)
-    prim = ''.join(f'<a href="{h}" data-p="{PRIMARY_KEEP.get(h, 0)}"{_cur(h, current)}>{t}</a>' for h, t in PRIMARY)
+    prim = ''.join(_prim(h, t, current) for h, t in PRIMARY)
     cols = ''.join('<div class="mh-c"><p class="mh-g">' + g + '</p><ul>' +
                    ''.join(f'<li><a href="{h}"{_cur(h, current)}>{t}</a></li>' for h, t in items) + '</ul></div>' for g, items in GROUPS)
     return (f'<div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a>'
@@ -367,17 +384,37 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .pgal>p{margin:0;color:var(--muted);max-width:72ch}
 
 /* chọn ngôn ngữ */
-.mh-l{position:relative;margin:0}
+/* Danh sách thả xuống ở thanh đầu trang (.mh-lp ngôn ngữ, .mh-dd menu con) đặt theo cả thanh .mh, không theo hàng .mh-in:
+   Safari cắt luôn chiều dọc khi gặp overflow-x:clip của .mh-in, danh sách bị mất, không bấm chọn ngôn ngữ được (lỗi 25/11/2026).
+   COMMON_JS canh danh sách ngay dưới nút khi bấm. */
+.mh-l{position:static;margin:0}
 .mh-l>summary{list-style:none;display:flex;align-items:center;gap:5px;cursor:pointer;font:700 .8rem var(--body);letter-spacing:.04em;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 10px;white-space:nowrap;user-select:none}
 .mh-l>summary::-webkit-details-marker{display:none}
 .mh-l>summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
 .mh-l[open]>summary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
 .mh-l>summary:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
-.mh-lp{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
+.mh-lp{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:calc(100% - 4px);min-width:170px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:6px;display:grid;z-index:60}
 .mh-lp a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font:600 .93rem var(--body)}
 .mh-lp a:hover{background:var(--tint);color:var(--accent)}
 .mh-lp a[aria-current]{color:var(--accent)}
 @media (max-width:420px){.mh-l>summary span{display:none}.mh-l>summary{padding:6px 8px}}
+/* menu con trên thanh mục chính (chị Ngân 25/11/2026): bấm tab Vùng trồng là xổ ra các trang của nhóm Vùng trồng & sản xuất */
+.mh-d{margin:0}
+.mh-d>summary{list-style:none;display:flex;align-items:center;gap:4px;cursor:pointer;color:var(--ink);white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent;line-height:1.3;user-select:none}
+.mh-d>summary::-webkit-details-marker{display:none}
+.mh-d>summary svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.mh-d>summary:hover,.mh-d[open]>summary{color:var(--accent)}
+.mh-d[open]>summary svg{transform:rotate(180deg)}
+.mh-d.on>summary{color:var(--accent);border-color:var(--accent)}
+.mh-d>summary:focus-visible{outline:3px solid var(--moss);outline-offset:-1px}
+.mh-dd{position:absolute;top:calc(100% - 4px);left:16px;width:300px;max-width:calc(100vw - 16px);background:var(--panel);border:1px solid var(--rule);border-radius:14px;box-shadow:0 14px 28px rgba(46,28,18,.16);padding:12px 8px 8px;z-index:60}
+.mh-dd .mh-g{margin:0 0 4px;padding:0 10px}
+.mh-dd ul{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.mh-p .mh-dd a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 10px;border:0;border-radius:8px;color:var(--ink);font:600 .93rem/1.3 var(--body);white-space:normal}
+.mh-p .mh-dd a:hover{background:var(--tint);color:var(--accent)}
+.mh-p .mh-dd a[aria-current="page"]{color:var(--accent);background:var(--tint)}
+.mh-dd a[href^="len-men-tu-than"]::after{content:"";flex:none;width:18px;height:18px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3.4 2v6L8.2 5z' fill='%23FFF6EC'/%3E%3C/svg%3E") center/9px no-repeat}
+@media (prefers-reduced-motion:reduce){.mh-d>summary svg{transition:none}}
 /* nút Zalo, Facebook nổi góc trái bên dưới */
 .fl-c{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:grid;gap:10px}
 .fl-b{position:relative;display:grid;place-items:center;align-content:center;gap:1px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);text-decoration:none;font:800 .66rem/1 var(--body);letter-spacing:.02em;box-shadow:0 6px 18px rgba(74,44,26,.3),0 0 0 3px var(--bg);transition:transform .2s}
@@ -553,9 +590,15 @@ svg.pi .fi{fill:var(--accent);stroke:none}
 '''
 
 COMMON_JS = r'''
-(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l')){
+(()=>{for(const m of document.querySelectorAll('#mhm,.mh-l,.mh-d')){
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus()}});
 document.addEventListener('click',e=>{if(m.open&&!m.contains(e.target))m.open=false})}
+const h=document.querySelector('.mh');   // canh danh sách thả xuống ngay dưới nút (danh sách đặt theo cả thanh .mh, xem CSS .mh-l)
+if(h)for(const [sel,ps,end] of [['.mh-l','.mh-lp',1],['.mh-d','.mh-dd',0]])for(const d of h.querySelectorAll(sel)){
+const p=d.querySelector(ps),s=d.querySelector('summary');if(!p||!s)continue;
+const place=()=>{const a=s.getBoundingClientRect(),r=h.getBoundingClientRect();
+if(end)p.style.right=Math.max(8,r.right-a.right)+'px';else p.style.left=Math.max(8,Math.min(a.left-r.left-18,r.width-(p.offsetWidth||300)-8))+'px'};
+s.addEventListener('click',place);d.addEventListener('toggle',()=>{if(d.open)place()});addEventListener('resize',()=>{if(d.open)place()})}
 document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=b.dataset.copy,o=b.dataset.label||(b.dataset.label=b.textContent);
 try{await navigator.clipboard.writeText(t);b.textContent=b.dataset.done||'Đã sao chép'}catch(e){const s=b.closest('div,p,section').querySelector('[data-sel]');if(s){const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}b.textContent='Đã chọn sẵn số, bạn hãy tự sao chép'}
 setTimeout(()=>{b.textContent=o},2400)}))})();
