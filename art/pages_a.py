@@ -226,6 +226,17 @@ def vung_trong():
  </section>
 </div>
 
+<section class="box vsec" aria-label="Clip lên men tự thân">
+ {clip_thumb('a', f' href="{CLIP_HREF}" tabindex="-1" aria-hidden="true"')}
+ <div class="vhd"><p class="eye">Clip 3D · Sơ chế gần nơi trồng</p><h2 class="p-h2">Lên men tự thân. <em>Vi sinh của chính vườn.</em></h2></div>
+ <div class="vbd">
+  <p>Không cấy men, không thêm trái cây. Nấm men và vi khuẩn lactic có sẵn trên vỏ trái của vườn tự làm việc trong thùng kín, rồi hạt được phơi theo Natural, Honey hoặc Washed.</p>
+  <div class="chips"><span>Ủ kín 48–96 giờ</span><span>Dừng ở pH 4,0–4,4</span><span>10 bước · 62 giây</span></div>
+  <div class="cta"><a class="btn main" href="{CLIP_HREF}">Xem clip</a><a class="btn" href="vi-sinh.html">Cỗ máy Vi sinh</a></div>
+ </div>
+ {clip_strip('a', f' href="{CLIP_HREF}" tabindex="-1"')}
+</section>
+
 <section class="p-sec">
  <h2 class="p-h2">Đọc thêm <em>về vùng trồng.</em></h2>
  <div class="g2">
@@ -236,7 +247,7 @@ def vung_trong():
 '''
     return doc('vung-trong.html', 'Vùng trồng Di Linh',
                f'Bốn vùng trồng của MeDili ở Lâm Đồng: Tà Hine, Tân Nghĩa, Lộc Châu 3, Gia Bắc 2, tổng diện tích {ha(TOTAL)} ha, cùng {LINKED} ha liên kết tại Di Linh.',
-               body, wrap_cls='wrap pg')
+               body, css=CLIP_CSS, wrap_cls='wrap pg')
 
 
 # ---------- HORECA ----------
@@ -416,7 +427,7 @@ def xuong_rang():
  {strip(STRIP_LM)}
  <div class="g2">
   <div class="box">{icon('soche')}<h3>Sơ chế và lên men sau thu hoạch</h3><p>Washed, Natural, Honey và lên men có kiểm soát là những cách sơ chế khác nhau. Thông số lên men chỉ được công bố khi có hồ sơ lô đi kèm.</p>
-   <div class="lnks"><a class="lnk" href="len-men-men-bia.html">Lên men bằng men bia</a><a class="lnk" href="len-men-trai-cay.html">Lên men cùng trái cây</a><a class="lnk" href="trai-ca-phe.html">Cấu tạo trái</a></div></div>
+   <div class="lnks"><a class="lnk" href="len-men-men-bia.html">Lên men bằng men bia</a><a class="lnk" href="len-men-trai-cay.html">Lên men cùng trái cây</a><a class="lnk" href="len-men-tu-than.html">Lên men tự thân</a><a class="lnk" href="trai-ca-phe.html">Cấu tạo trái</a></div></div>
   <div class="box">{icon('quat')}<h3>Nghỉ hạt và thoát CO₂ sau rang</h3><p>Sau khi rang, hạt nhả CO₂ trong những ngày đầu. Quá trình này khác với lên men vi sinh trước rang, nên hai việc được ghi riêng trong hồ sơ lô.</p>
    <div class="lnks"><a class="lnk" href="{ZALO}" target="_blank" rel="noopener">Trao đổi về lô cà phê đặc biệt ↗</a></div></div>
  </div>

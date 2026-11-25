@@ -215,6 +215,65 @@ STRIP_VUON = [('p-sq-canh.jpg', 'Robusta chín đỏ trên cành', 'Robusta chí
               ('p-sq-san-phoi.jpg', 'Cà phê phơi trên sân giữa đồi', 'Phơi cà phê giữa đồi.')]
 
 
+# ---------- lối vào clip Lên men tự thân (chị Ngân 25/11/2026) ----------
+# Ảnh dọc 9:16 là khung sạch của clip (giây 16,2: trái cà phê có vi sinh trên vỏ, logo MeDili ở góc), 360×640.
+# .vtz: cả thẻ là một liên kết (Trang chủ, Chương 05). .vsec: khối riêng có nút (Vùng trồng Di Linh).
+# Máy tính: ảnh bên trái, chữ bên phải. Điện thoại: ảnh cạnh tiêu đề, đoạn văn xuống dưới hết bề ngang.
+CLIP_HREF = 'len-men-tu-than.html#clip'
+CLIP_CSS = r'''
+.vtz,.vsec{display:grid;grid-template-columns:var(--vw) minmax(0,1fr);grid-template-areas:"th hd" "th bd";column-gap:var(--vg);row-gap:8px}
+.vtz{--vw:120px;--vg:18px;text-decoration:none;color:var(--ink)}
+.vsec{--vw:200px;--vg:28px;row-gap:12px}
+.vth{grid-area:th;position:relative;display:block;align-self:center;aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:#231812;border:1px solid var(--rule)}
+.vth img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.vpl{position:absolute;left:8px;bottom:8px;display:flex;align-items:center;gap:5px;padding:5px 9px 5px 7px;border-radius:999px;background:rgba(42,24,14,.74);color:#FFF3E4;font:600 .72rem/1 var(--mono);transition:background .2s}
+.vpl svg{width:11px;height:11px;fill:currentColor}
+.vhd{grid-area:hd;align-self:end;display:grid;gap:4px;min-width:0}
+.vbd{grid-area:bd;align-self:start;display:grid;gap:10px;justify-items:start;min-width:0}
+.vhd h3,.vhd .p-h2,.vhd .eye,.vbd p,.vbd .chips,.vbd .cta{margin:0}
+.vhd,.vsc{word-break:auto-phrase}
+.vsec .p-h2 em{display:inline-block;text-wrap:balance}
+.vbd p{color:var(--muted);max-width:62ch;text-wrap:pretty}
+.vtz .vbd .lnk{color:var(--accent)}
+.vtz:hover h3{color:var(--accent)}
+.vtz:hover .vpl,.vsec .vth:hover .vpl{background:var(--accent)}
+.vtz:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (hover:hover){.vtz:hover .vth img,.vsec .vth:hover img{transform:scale(1.035)}}
+@media (prefers-reduced-motion:reduce){.vth img{transition:none}}
+.vsb{grid-area:sb;display:none;text-decoration:none;color:var(--ink)}
+.vsf{display:grid;gap:6px;min-width:0;align-content:start}
+.vsf img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:10px;border:1px solid var(--rule);background:#231812}
+.vsb .vsc{margin:0;font:600 .78rem/1.3 var(--body);color:var(--ink)}
+.vsb .vsc small{display:block;font:600 .64rem/1.4 var(--body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:1240px){
+ .vtz,.vsec{grid-template-columns:var(--vw) minmax(0,1fr) auto;grid-template-areas:"th hd sb" "th bd sb"}
+ .vsb{display:grid;grid-template-columns:repeat(4,var(--sw));gap:12px;align-self:center;justify-self:end}
+ .vtz{--sw:88px}
+ .vsec{--sw:104px}
+}
+@media (max-width:620px){
+ .vtz,.vsec{grid-template-areas:"th hd" "bd bd";row-gap:14px}
+ .vtz{--vw:96px;--vg:14px}
+ .vsec{--vw:112px;--vg:16px}
+ .vhd{align-self:center}
+ .vsec .p-h2{font-size:1.45rem}
+}
+'''
+# Dải khung trong clip (chỉ hiện trên màn hình rộng): cắt 3:4 từ khung sạch, bỏ logo. Chữ chú thích trùng tiêu đề bước trên trang clip.
+CLIP_SB = [('b05', 'Bước 05', 'Ủ kín có van'), ('b06', 'Bước 06', 'Ba nhóm vi sinh'), ('b09', 'Bước 09', 'Giàn sấy'), ('b10', 'Bước 10', 'Ủ và thử nếm')]
+
+
+def clip_thumb(tag='div', attrs=''):
+    return (f'<{tag} class="vth"{attrs}><img src="assets/len-men-tu-than-thumb.jpg" alt="" width="360" height="640" loading="lazy">'
+            '<span class="vpl" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M3 1.4v9.2L10.6 6z"/></svg>1:02</span></' + tag + '>')
+
+
+def clip_strip(tag='div', attrs=''):
+    tiles = ''.join(f'<div class="vsf"><img src="assets/len-men-tu-than-{k}.jpg" alt="" width="240" height="320" loading="lazy">'
+                    f'<p class="vsc"><small>{n}</small>{t}</p></div>' for k, n, t in CLIP_SB)
+    return f'<{tag} class="vsb" aria-hidden="true"{attrs}>{tiles}</{tag}>'
+
+
 def icon(k, cls='pi'):
     return f'<svg class="{cls}" viewBox="0 0 24 24" aria-hidden="true">{ICON[k]}</svg>'
 

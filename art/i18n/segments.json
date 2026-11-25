@@ -30553,6 +30553,78 @@
 ],
 "c": "Đồng lên men với chanh dây."
 },
+"baf3ebc0c": {
+"s": "Clip 3D · 10 bước",
+"k": "h",
+"f": [
+"index.html"
+],
+"c": "Clip 3D · 10 bước"
+},
+"a91237f88": {
+"s": "Lên men tự thân trái cà phê",
+"k": "h",
+"f": [
+"index.html"
+],
+"c": "Lên men tự thân trái cà phê"
+},
+"ceec4f330": {
+"s": "Không cấy men, không thêm trái cây: vi sinh có sẵn trên vỏ trái của vườn tự lên men trong thùng kín, rồi hạt được phơi theo Natural, Honey hoặc Washed.",
+"k": "h",
+"f": [
+"index.html"
+],
+"c": "Không cấy men, không thêm trái cây: vi sinh có sẵn trên vỏ trái của vườn tự lên "
+},
+"b3e3e2f31": {
+"s": "Xem clip",
+"k": "h",
+"f": [
+"index.html"
+],
+"c": "Xem clip"
+},
+"2804438e1": {
+"s": "<1>Bước 05</1>Ủ kín có van",
+"k": "h",
+"f": [
+"index.html",
+"len-men-tu-than.html",
+"vung-trong.html"
+],
+"c": "<small>Bước 05</small>Ủ kín có van"
+},
+"db81d6c32": {
+"s": "<1>Bước 06</1>Ba nhóm vi sinh",
+"k": "h",
+"f": [
+"index.html",
+"len-men-tu-than.html",
+"vung-trong.html"
+],
+"c": "<small>Bước 06</small>Ba nhóm vi sinh"
+},
+"24f7ea9ff": {
+"s": "<1>Bước 09</1>Giàn sấy",
+"k": "h",
+"f": [
+"index.html",
+"len-men-tu-than.html",
+"vung-trong.html"
+],
+"c": "<small>Bước 09</small>Giàn sấy"
+},
+"430d923a3": {
+"s": "<1>Bước 10</1>Ủ và thử nếm",
+"k": "h",
+"f": [
+"index.html",
+"len-men-tu-than.html",
+"vung-trong.html"
+],
+"c": "<small>Bước 10</small>Ủ và thử nếm"
+},
 "bbfa716e7": {
 "s": "<1>Xem cỗ máy lên men cùng trái cây</1><2>Xưởng rang &amp; năng lực</2>",
 "k": "h",
@@ -35546,7 +35618,8 @@
 "s": "<1>Xem clip</1><2>Cỗ máy Vi sinh</2>",
 "k": "h",
 "f": [
-"len-men-tu-than.html"
+"len-men-tu-than.html",
+"vung-trong.html"
 ],
 "c": "<a class=\"btn main\" href=\"#clip\">Xem clip</a><a class=\"btn\" href=\"vi-sinh.html\">"
 },
@@ -35694,14 +35767,6 @@
 ],
 "c": "Natural giữ nguyên trái, vỏ còn nguyên nên đường khuếch tán chậm. Honey và Washe"
 },
-"2804438e1": {
-"s": "<1>Bước 05</1>Ủ kín có van",
-"k": "h",
-"f": [
-"len-men-tu-than.html"
-],
-"c": "<small>Bước 05</small>Ủ kín có van"
-},
 "ba5b83c87": {
 "s": "Thùng nhựa thực phẩm, nắp gioăng, van một chiều, chừa 20% khoảng trống. Ủ 48–96 giờ tùy mẻ, thùng 22–24 °C, để nơi mát, che nắng.",
 "k": "h",
@@ -35709,14 +35774,6 @@
 "len-men-tu-than.html"
 ],
 "c": "Thùng nhựa thực phẩm, nắp gioăng, van một chiều, chừa 20% khoảng trống. Ủ 48–96 "
-},
-"db81d6c32": {
-"s": "<1>Bước 06</1>Ba nhóm vi sinh",
-"k": "h",
-"f": [
-"len-men-tu-than.html"
-],
-"c": "<small>Bước 06</small>Ba nhóm vi sinh"
 },
 "8e3949c27": {
 "s": "Nấm men tạo cồn, CO₂ và hương trái cây. Vi khuẩn lactic hạ pH đều, chua dịu. Vi khuẩn acetic cần oxy nên bị thùng kín chặn.",
@@ -35758,14 +35815,6 @@
 ],
 "c": "Washed rửa sạch lớp nhớt tới khi hạt nhám như sỏi. Honey và Natural không rửa, c"
 },
-"24f7ea9ff": {
-"s": "<1>Bước 09</1>Giàn sấy",
-"k": "h",
-"f": [
-"len-men-tu-than.html"
-],
-"c": "<small>Bước 09</small>Giàn sấy"
-},
 "36b973ae9": {
 "s": "Giàn cao có mái, rải mỏng, đảo bằng cào nhiều lần trong ngày, tới độ ẩm 10,5–11,5%. Phơi dày không đảo dễ mốc.",
 "k": "h",
@@ -35773,14 +35822,6 @@
 "len-men-tu-than.html"
 ],
 "c": "Giàn cao có mái, rải mỏng, đảo bằng cào nhiều lần trong ngày, tới độ ẩm 10,5–11,"
-},
-"430d923a3": {
-"s": "<1>Bước 10</1>Ủ và thử nếm",
-"k": "h",
-"f": [
-"len-men-tu-than.html"
-],
-"c": "<small>Bước 10</small>Ủ và thử nếm"
 },
 "d024fab72": {
 "s": "Đóng bao kín khí, ghi mã mẻ, để nơi mát, tối, kê cao khỏi sàn. Thử nếm mù mỗi 2 tuần, mẻ nào hơn hẳn đối chứng mới làm lớn.",
@@ -62743,6 +62784,46 @@
 ],
 "c": "<a class=\"lnk\" href=\"https://www.google.com/maps/search/?api=1&query=Th%C3%B4n%2"
 },
+"dc989a187": {
+"s": "Clip lên men tự thân",
+"k": "a",
+"f": [
+"vung-trong.html"
+],
+"c": ""
+},
+"6a81b443f": {
+"s": "Clip 3D · Sơ chế gần nơi trồng",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "Clip 3D · Sơ chế gần nơi trồng"
+},
+"e0ad5ae40": {
+"s": "Lên men tự thân. <1>Vi sinh của chính vườn.</1>",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "Lên men tự thân. <em>Vi sinh của chính vườn.</em>"
+},
+"6901ec56e": {
+"s": "Không cấy men, không thêm trái cây. Nấm men và vi khuẩn lactic có sẵn trên vỏ trái của vườn tự làm việc trong thùng kín, rồi hạt được phơi theo Natural, Honey hoặc Washed.",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "Không cấy men, không thêm trái cây. Nấm men và vi khuẩn lactic có sẵn trên vỏ tr"
+},
+"85da6553f": {
+"s": "<1>Ủ kín 48–96 giờ</1><2>Dừng ở pH 4,0–4,4</2><3>10 bước · 62 giây</3>",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "<span>Ủ kín 48–96 giờ</span><span>Dừng ở pH 4,0–4,4</span><span>10 bước · 62 giâ"
+},
 "a4ce06673": {
 "s": "Đọc thêm <1>về vùng trồng.</1>",
 "k": "h",
@@ -65287,8 +65368,8 @@
 ],
 "c": "Washed, Natural, Honey và lên men có kiểm soát là những cách sơ chế khác nhau. T"
 },
-"7d51eb6ce": {
-"s": "<1>Lên men bằng men bia</1><2>Lên men cùng trái cây</2><3>Cấu tạo trái</3>",
+"2198c603e": {
+"s": "<1>Lên men bằng men bia</1><2>Lên men cùng trái cây</2><3>Lên men tự thân</3><4>Cấu tạo trái</4>",
 "k": "h",
 "f": [
 "xuong-rang.html"

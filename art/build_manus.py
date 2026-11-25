@@ -249,7 +249,9 @@ HOME_BODY = f'''{header('index.html')}
  <h2 class="p-h2">Một hành trình <em>trong từng tách cà phê.</em></h2>
  <p class="lead">Năm công đoạn làm nên hương vị. Mỗi công đoạn có một mô hình để bạn tự bấm, chỉnh thông số và xem cách làm.</p>
  {pages_a.trip()}
- <div class="pgal"><p class="k">Những lô lên men đặc biệt</p>{strip(STRIP_LM)}<div class="lnks" style="margin-top:0"><a class="lnk" href="len-men-trai-cay.html">Xem cỗ máy lên men cùng trái cây</a><a class="lnk" href="xuong-rang.html">Xưởng rang &amp; năng lực</a></div></div>
+ <div class="pgal"><p class="k">Những lô lên men đặc biệt</p>{strip(STRIP_LM)}
+ <a class="box vtz" href="{CLIP_HREF}">{clip_thumb()}<div class="vhd"><span class="k">Clip 3D · 10 bước</span><h3>Lên men tự thân trái cà phê</h3></div><div class="vbd"><p>Không cấy men, không thêm trái cây: vi sinh có sẵn trên vỏ trái của vườn tự lên men trong thùng kín, rồi hạt được phơi theo Natural, Honey hoặc Washed.</p><span class="lnk">Xem clip</span></div>{clip_strip()}</a>
+ <div class="lnks" style="margin-top:0"><a class="lnk" href="len-men-trai-cay.html">Xem cỗ máy lên men cùng trái cây</a><a class="lnk" href="xuong-rang.html">Xưởng rang &amp; năng lực</a></div></div>
 </section>
 
 <section class="band">
@@ -332,7 +334,7 @@ LANG_GO = ('<script id="md-lang-go">(()=>{let s=null,i=false;try{s=localStorage.
            'try{i=!!document.referrer&&new URL(document.referrer).origin===location.origin}catch(e){}'
            'if(s==="vi"||i)return;const t=s==="ja"||s==="zh"?s:"en";window.MD_GO=1;'
            'location.replace(t+"/"+(/(^|[.])medili[.]vn$/.test(location.hostname)?"":"index.html")+location.search+location.hash)})();</script>')
-HOME_HEAD = LANG_GO + head_old + '<style>' + HOME_CSS_OLD + '</style>\n<style>' + CORE_CSS + NEW_CSS + anhvuon.PHOTO_CSS + HOME_CSS + '</style>' + STD_STYLE
+HOME_HEAD = LANG_GO + head_old + '<style>' + HOME_CSS_OLD + '</style>\n<style>' + CORE_CSS + NEW_CSS + anhvuon.PHOTO_CSS + HOME_CSS + CLIP_CSS + '</style>' + STD_STYLE
 HOME_TAIL = nb(HOME_BODY) + '<script>' + COMMON_JS + HOME_JS + '</script>\n'
 HOME = HOME_HEAD + HOME_TAIL
 assert '<div class="mnav">' not in HOME

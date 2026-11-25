@@ -574,6 +574,44 @@ svg.pi .fi{fill:var(--accent);stroke:none}
 .phero .tick{background:rgba(42,24,14,.46);border-color:rgba(255,243,228,.32);color:#FFF3E4;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .phero .tick .k,.phero .tick i{color:#F4CC97}.phero .tick:hover{border-color:#F4CC97}
 .btn.light2{background:transparent;color:var(--on-accent);border-color:var(--on-accent)}
+
+.vtz,.vsec{display:grid;grid-template-columns:var(--vw) minmax(0,1fr);grid-template-areas:"th hd" "th bd";column-gap:var(--vg);row-gap:8px}
+.vtz{--vw:120px;--vg:18px;text-decoration:none;color:var(--ink)}
+.vsec{--vw:200px;--vg:28px;row-gap:12px}
+.vth{grid-area:th;position:relative;display:block;align-self:center;aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:#231812;border:1px solid var(--rule)}
+.vth img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.vpl{position:absolute;left:8px;bottom:8px;display:flex;align-items:center;gap:5px;padding:5px 9px 5px 7px;border-radius:999px;background:rgba(42,24,14,.74);color:#FFF3E4;font:600 .72rem/1 var(--mono);transition:background .2s}
+.vpl svg{width:11px;height:11px;fill:currentColor}
+.vhd{grid-area:hd;align-self:end;display:grid;gap:4px;min-width:0}
+.vbd{grid-area:bd;align-self:start;display:grid;gap:10px;justify-items:start;min-width:0}
+.vhd h3,.vhd .p-h2,.vhd .eye,.vbd p,.vbd .chips,.vbd .cta{margin:0}
+.vhd,.vsc{word-break:auto-phrase}
+.vsec .p-h2 em{display:inline-block;text-wrap:balance}
+.vbd p{color:var(--muted);max-width:62ch;text-wrap:pretty}
+.vtz .vbd .lnk{color:var(--accent)}
+.vtz:hover h3{color:var(--accent)}
+.vtz:hover .vpl,.vsec .vth:hover .vpl{background:var(--accent)}
+.vtz:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (hover:hover){.vtz:hover .vth img,.vsec .vth:hover img{transform:scale(1.035)}}
+@media (prefers-reduced-motion:reduce){.vth img{transition:none}}
+.vsb{grid-area:sb;display:none;text-decoration:none;color:var(--ink)}
+.vsf{display:grid;gap:6px;min-width:0;align-content:start}
+.vsf img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:10px;border:1px solid var(--rule);background:#231812}
+.vsb .vsc{margin:0;font:600 .78rem/1.3 var(--body);color:var(--ink)}
+.vsb .vsc small{display:block;font:600 .64rem/1.4 var(--body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:1240px){
+ .vtz,.vsec{grid-template-columns:var(--vw) minmax(0,1fr) auto;grid-template-areas:"th hd sb" "th bd sb"}
+ .vsb{display:grid;grid-template-columns:repeat(4,var(--sw));gap:12px;align-self:center;justify-self:end}
+ .vtz{--sw:88px}
+ .vsec{--sw:104px}
+}
+@media (max-width:620px){
+ .vtz,.vsec{grid-template-areas:"th hd" "bd bd";row-gap:14px}
+ .vtz{--vw:96px;--vg:14px}
+ .vsec{--vw:112px;--vg:16px}
+ .vhd{align-self:center}
+ .vsec .p-h2{font-size:1.45rem}
+}
 </style><style id="md-std">
 :root{--warn-t:#8A5700;--band-t:#5E4F44}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--warn-t:var(--warn);--band-t:var(--muted)}}
@@ -668,7 +706,9 @@ section.card>p,.p-sec>p,.mnote,.note,.src,.tt-art>p,p.lead{max-width:68ch}
  <h2 class="p-h2">A journey <em>in every cup of coffee.</em></h2>
  <p class="lead">Five stages that make the flavor. Each one has an interactive model: click, adjust the settings and see how it is done.</p>
  <ol class="trip"><li><a href="vuon.html"><img src="../assets/vuon.jpg" alt="" loading="lazy" width="900" height="600"><b><small>01 · Cultivation</small>The Farm in 12 Months</b><span>Soil, trees and climate lay the groundwork for a crop. Origin Robusta is cared for in a natural way.</span></a></li><li><a href="trai-ca-phe.html"><img src="../assets/trai-ca-phe.jpg" alt="" loading="lazy" width="900" height="600"><b><small>02 · Harvest</small>Cherry Anatomy</b><span>Choosing ripe cherries starts the flavor journey.</span></a></li><li><a href="len-men-men-bia.html"><img src="../assets/men-bia.jpg" alt="" loading="lazy" width="900" height="600"><b><small>03 · Processing</small>Fermentation with Brewer's Yeast</b><span>Cleaning, processing and drying. Each special fermentation lot has its own conditions recorded.</span></a></li><li><a href="rang.html"><img src="../assets/rang.jpg" alt="" loading="lazy" width="900" height="600"><b><small>04 · Roasting</small>Roasting Room</b><span>Checking the green coffee, building a roast profile, cooling and resting the beans.</span></a></li><li><a href="quay-pha.html"><img src="../assets/pha.jpg" alt="" loading="lazy" width="900" height="600"><b><small>05 · Brewing</small>Brew Bar</b><span>Water, time and care awaken the flavor in every brewing method.</span></a></li></ol>
- <div class="pgal"><p class="k">Special fermentation lots</p><div class="pfs"><figure class="pf "><img src="../assets/p-lm-nhan.jpg" alt="Ripe coffee cherries poured in with longan flesh" width="900" height="900" loading="lazy"><figcaption>Co-fermented with longan.</figcaption></figure><figure class="pf "><img src="../assets/p-lm-dau-tam.jpg" alt="Crushed mulberries poured over ripe coffee cherries" width="900" height="900" loading="lazy"><figcaption>Co-fermented with mulberry.</figcaption></figure><figure class="pf "><img src="../assets/p-lm-chanh-day.jpg" alt="Passion fruit pulp poured over ripe coffee cherries" width="900" height="900" loading="lazy"><figcaption>Co-fermented with passion fruit.</figcaption></figure></div><div class="lnks" style="margin-top:0"><a class="lnk" href="len-men-trai-cay.html">See the Fruit Co-fermentation Machine</a><a class="lnk" href="xuong-rang.html">Roastery &amp; capacity</a></div></div>
+ <div class="pgal"><p class="k">Special fermentation lots</p><div class="pfs"><figure class="pf "><img src="../assets/p-lm-nhan.jpg" alt="Ripe coffee cherries poured in with longan flesh" width="900" height="900" loading="lazy"><figcaption>Co-fermented with longan.</figcaption></figure><figure class="pf "><img src="../assets/p-lm-dau-tam.jpg" alt="Crushed mulberries poured over ripe coffee cherries" width="900" height="900" loading="lazy"><figcaption>Co-fermented with mulberry.</figcaption></figure><figure class="pf "><img src="../assets/p-lm-chanh-day.jpg" alt="Passion fruit pulp poured over ripe coffee cherries" width="900" height="900" loading="lazy"><figcaption>Co-fermented with passion fruit.</figcaption></figure></div>
+ <a class="box vtz" href="len-men-tu-than.html#clip"><div class="vth"><img src="../assets/len-men-tu-than-thumb.jpg" alt="" width="360" height="640" loading="lazy"><span class="vpl" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M3 1.4v9.2L10.6 6z"/></svg>1:02</span></div><div class="vhd"><span class="k">3D video · 10 steps</span><h3>Native fermentation of coffee cherries</h3></div><div class="vbd"><p>No yeast inoculation, no added fruit: the microbes already living on the farm's cherry skins ferment the fruit in a sealed drum, and the beans are then dried as Natural, Honey or Washed.</p><span class="lnk">Watch the video</span></div><div class="vsb" aria-hidden="true"><div class="vsf"><img src="../assets/len-men-tu-than-b05.jpg" alt="" width="240" height="320" loading="lazy"><p class="vsc"><small>Step 05</small>Sealed with a valve</p></div><div class="vsf"><img src="../assets/len-men-tu-than-b06.jpg" alt="" width="240" height="320" loading="lazy"><p class="vsc"><small>Step 06</small>Three groups of microbes</p></div><div class="vsf"><img src="../assets/len-men-tu-than-b09.jpg" alt="" width="240" height="320" loading="lazy"><p class="vsc"><small>Step 09</small>Drying beds</p></div><div class="vsf"><img src="../assets/len-men-tu-than-b10.jpg" alt="" width="240" height="320" loading="lazy"><p class="vsc"><small>Step 10</small>Resting and cupping</p></div></div></a>
+ <div class="lnks" style="margin-top:0"><a class="lnk" href="len-men-trai-cay.html">See the Fruit Co-fermentation Machine</a><a class="lnk" href="xuong-rang.html">Roastery &amp; capacity</a></div></div>
 </section>
 
 <section class="band">
