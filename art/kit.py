@@ -56,14 +56,14 @@ GROUPS = [
     ('Mua & hợp tác', [('cua-hang.html', 'Cửa hàng cà phê'), ('mua-hang.html', 'Phòng chọn mua'), ('horeca.html', 'Giải pháp HORECA'), ('dong-hanh-cung-quan.html', 'Đồng hành cùng quán'),
                        ('nhan-xanh.html', 'Chọn nhân xanh · khách sỉ'), ('gia-ca-phe.html', 'Giá cà phê hôm nay'), ('chinh-sach.html', 'Chính sách MeDili'), ('giao-hang.html', 'Giao hàng & đổi trả'),
                        ('gio-hang.html', 'Giỏ hàng'), ('thanh-toan.html', 'Thanh toán'), ('tim-kiem.html', 'Tìm kiếm')]),
-    ('Kiến thức cà phê', [('journal.html', 'Tất cả bài viết'), ('chiet-xuat.html', 'Cỗ máy Chiết xuất'), ('phan-biet-ca-phe.html', 'Cỗ máy Phân biệt cà phê'), ('trai-chin.html', 'Cỗ máy Trái chín'),
+    ('Kiến thức cà phê', [('journal.html', 'Tất cả bài viết'), ('tin-tuc.html', 'Tin tức hằng ngày'), ('chiet-xuat.html', 'Cỗ máy Chiết xuất'), ('phan-biet-ca-phe.html', 'Cỗ máy Phân biệt cà phê'), ('trai-chin.html', 'Cỗ máy Trái chín'),
                         ('vi-sinh.html', 'Cỗ máy Vi sinh'), ('tien-chat-huong.html', 'Cỗ máy Tiền chất hương'), ('banh-xe-huong.html', 'Bánh xe hương MeDili'),
                         ('journal-phin.html', 'Phin và nhịp rơi của thời gian'),
                         ('journal-tu-qua.html', 'Từ trái cà phê đến hương vị'), ('journal-di-linh.html', 'Di Linh trong một tách cà phê'),
                         ('tu-vuon-den-ly.html', 'Từ vườn đến ly'), ('suc-khoe.html', 'Cà phê và cơ thể')]),
 ]
 PRIMARY = [('cau-chuyen.html', 'Câu chuyện'), ('vung-trong.html', 'Vùng trồng'), ('anh-vuon.html', 'Ảnh vườn'), ('xuong-rang.html', 'Xưởng rang'),
-           ('horeca.html', 'HORECA'), ('quan-medili.html', 'Quán MeDili'), ('journal.html', 'Kiến thức'), ('gia-ca-phe.html', 'Giá cà phê')]
+           ('horeca.html', 'HORECA'), ('quan-medili.html', 'Quán MeDili'), ('journal.html', 'Kiến thức'), ('tin-tuc.html', 'Tin tức'), ('gia-ca-phe.html', 'Giá cà phê')]
 
 
 def _cur(href, current):
@@ -91,7 +91,7 @@ def header(current):
 FOOT_EXPLORE = [('cau-chuyen.html', 'Câu chuyện MeDili'), ('doi-ngu.html', 'Đội ngũ MeDili'), ('vung-trong.html', 'Vùng trồng Di Linh'), ('anh-vuon.html', 'Ảnh vườn MeDili'),
                 ('xuong-rang.html', 'Xưởng rang & năng lực'), ('rang.html', 'Phòng rang'), ('huong-dan-pha.html', 'Hướng dẫn pha'), ('quay-pha.html', 'Quầy pha'),
                 ('tim-gu.html', 'Tìm gu cà phê'), ('cong-thuc-pha.html', 'Cỗ máy Công thức pha'), ('chiet-xuat.html', 'Cỗ máy Chiết xuất'),
-                ('cold-brew.html', 'Cỗ máy Cold Brew'), ('journal.html', 'Kiến thức cà phê')]
+                ('cold-brew.html', 'Cỗ máy Cold Brew'), ('journal.html', 'Kiến thức cà phê'), ('tin-tuc.html', 'Tin tức MeDili')]
 FOOT_YOU = [('cua-hang.html', 'Cửa hàng MeDili'), ('mua-hang.html', 'Phòng chọn mua'), ('horeca.html', 'Giải pháp HORECA'), ('dong-hanh-cung-quan.html', 'Đồng hành cùng quán'), ('nhan-xanh.html', 'Nhân xanh cho khách sỉ'),
             ('gia-ca-phe.html', 'Giá cà phê hôm nay'),
             ('quan-medili.html', 'Quán MeDili Café'), ('lien-he.html', 'Liên hệ & bản đồ'), ('chinh-sach.html', 'Chính sách MeDili'), ('giao-hang.html', 'Giao hàng & đổi trả'),
