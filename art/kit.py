@@ -507,7 +507,7 @@ badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,ad
 # Chuẩn hiển thị (chị Ngân 25/11/2026: điện thoại ra cỡ điện thoại, laptop ra cỡ laptop, dễ nhìn, theo chuẩn thế giới).
 # W3C WCAG 2.2 mức AA: tương phản chữ ≥ 4.5:1 (1.4.3), không cuộn ngang (1.4.10), vùng bấm ≥ 24px (2.5.8).
 # Google: chữ ≥ 12px, ô nhập 16px trên điện thoại (iPhone không tự phóng to). Apple: vùng chạm 44px trên màn hình cảm ứng.
-# Đọc dễ: chữ thân bài 16px, dòng chữ ≤ khoảng 80 ký tự. Nút Zalo/FB nổi chuyển sang góc phải (như khung chat thông dụng), không che nút chính ở đầu trang. Gắn vào cuối <head> mọi trang (build_manus) nên đè được CSS từng trang.
+# Đọc dễ: chữ thân bài 16px, đoạn văn rộng tối đa 68ch (khoảng 80 ký tự một dòng). Nút Zalo/FB nổi chuyển sang góc phải (như khung chat thông dụng), không che nút chính ở đầu trang. Gắn vào cuối <head> mọi trang (build_manus) nên đè được CSS từng trang.
 STD_CSS = """
 :root{--warn-t:#8A5700;--band-t:#5E4F44}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--warn-t:var(--warn);--band-t:var(--muted)}}
@@ -527,7 +527,9 @@ body{font-size:16px}
 :where(details)>summary{padding-block:3px}
 input[type=range]{min-height:28px}
 input[type=checkbox],input[type=radio]{width:18px;height:18px}
-section.card>p,.p-sec>p,.mnote,.note,.src,.tt-art>p,p.lead{max-width:78ch}
+section.card>p,.p-sec>p,.mnote,.note,.src,.tt-art>p,p.lead{max-width:68ch}
+.see{padding-block:5px}
+.lnks a{min-height:24px;display:flex;align-items:center}
 .mh-in{overflow-x:clip}
 @media (max-width:374px){.mh-in{gap:4px}.mh-go{padding:7px 9px}}
 @media (pointer:coarse),(max-width:820px){
@@ -539,7 +541,7 @@ section.card>p,.p-sec>p,.mnote,.note,.src,.tt-art>p,p.lead{max-width:78ch}
  input[type=range]{min-height:44px}
  input[type=checkbox],input[type=radio]{width:22px;height:22px}
  .tt-cp{min-height:32px;min-width:44px}
- .lnks a{min-height:44px;display:flex;align-items:center}
+ .lnks a,.mf-col>a{min-height:44px;display:flex;align-items:center}
  .pd-l select,.zalo a,.zalo button,[data-copy]{min-height:44px}
  .mh-i,.mh-m>summary,.mh-l>summary,.mh-go{position:relative}
  .mh-i::after,.mh-m>summary::after,.mh-l>summary::after,.mh-go::after{content:"";position:absolute;inset:-6px -4px;border-radius:999px}}
