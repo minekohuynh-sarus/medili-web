@@ -64,6 +64,9 @@ GROUPS = [
 ]
 PRIMARY = [('cau-chuyen.html', 'Câu chuyện'), ('vung-trong.html', 'Vùng trồng'), ('anh-vuon.html', 'Ảnh vườn'), ('xuong-rang.html', 'Xưởng rang'),
            ('horeca.html', 'HORECA'), ('quan-medili.html', 'Quán MeDili'), ('journal.html', 'Kiến thức'), ('tin-tuc.html', 'Tin tức'), ('gia-ca-phe.html', 'Giá cà phê')]
+# Màn hình không đủ chỗ cho cả thanh mục chính thì ẩn bớt mục có số nhỏ trước (mục ẩn vẫn có trong nút Menu). 25/11/2026.
+PRIMARY_KEEP = {'gia-ca-phe.html': 9, 'horeca.html': 8, 'cau-chuyen.html': 7, 'journal.html': 6, 'tin-tuc.html': 5,
+                'vung-trong.html': 4, 'quan-medili.html': 3, 'xuong-rang.html': 2, 'anh-vuon.html': 1}
 
 
 def _cur(href, current):
@@ -72,7 +75,7 @@ def _cur(href, current):
 
 def header(current):
     from i18n import lang_menu   # nút chọn ngôn ngữ: Tiếng Việt, English, 日本語, 中文 (24/11/2026)
-    prim = ''.join(f'<a href="{h}"{_cur(h, current)}>{t}</a>' for h, t in PRIMARY)
+    prim = ''.join(f'<a href="{h}" data-p="{PRIMARY_KEEP.get(h, 0)}"{_cur(h, current)}>{t}</a>' for h, t in PRIMARY)
     cols = ''.join('<div class="mh-c"><p class="mh-g">' + g + '</p><ul>' +
                    ''.join(f'<li><a href="{h}"{_cur(h, current)}>{t}</a></li>' for h, t in items) + '</ul></div>' for g, items in GROUPS)
     return (f'<div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a>'
@@ -240,8 +243,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .mh{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--rule)}
 .mh-in{max-width:1560px;margin:auto;display:flex;align-items:center;gap:8px 14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .mh-b{font:700 1rem var(--body);color:var(--accent);text-decoration:none;white-space:nowrap;margin-right:auto}
-.mh-p{display:flex;gap:4px 18px;font:600 .88rem var(--body)}
-.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent}
+.mh-p{display:flex;align-items:center;gap:4px 18px;font:600 .88rem/1.3 var(--body);min-width:0;flex:0 1 auto;overflow:hidden}
+.mh-p a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:5px 1px;border-bottom:2px solid transparent;line-height:1.3}
 .mh-p a:hover{color:var(--accent)}
 .mh-p a[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
 .mh-m{margin:0;font-size:inherit}
@@ -501,6 +504,10 @@ const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badg
 const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
 badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
 '''
+# Thanh mục chính (25/11/2026): không đủ chỗ thì ẩn bớt mục ít quan trọng (data-p nhỏ) thay vì đẩy nút Cửa hàng ra ngoài màn hình.
+COMMON_JS += ("(()=>{const n=document.querySelector('.mh-p');if(!n)return;const it=[...n.children].sort((a,b)=>(+a.dataset.p||0)-(+b.dataset.p||0));"
+              "const fit=()=>{it.forEach(a=>a.hidden=false);if(!n.offsetWidth)return;for(const a of it){if(n.scrollWidth<=n.clientWidth+1)break;a.hidden=true}};"
+              "fit();addEventListener('resize',fit);if(document.fonts)document.fonts.ready.then(fit)})();\n")
 # Ngôn ngữ (25/11/2026): mỗi trang ghi lại ngôn ngữ khách đang xem, để trang chủ tiếng Việt (LANG_GO trong build_manus)
 # mở đúng ngôn ngữ lần sau. Không ghi khi trang chủ đang chuyển khách sang tiếng Anh (window.MD_GO).
 COMMON_JS += ("(()=>{const a=document.querySelector('.mh-l a[aria-current]');"
