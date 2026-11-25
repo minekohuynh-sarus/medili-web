@@ -350,8 +350,8 @@ function drawCut(){const s=R.s,k=ip(SZ,s),cx=168,cy=165,ax=96*k+14,ay=128*k+14,e
  $('cut').innerHTML=g;
  const B=[['Kích thước trái',k,vn(k*100,0)+'%'],['Nội nhũ trong khoang hạt',en,vn(en*100,0)+'%'],['Chất khô trong nhân',dm,vn(dm*100,0)+'%'],['Brix thịt quả',(R.b||0)/26,R.b==null?'khô':vn(R.b,1)+' °Bx']];
  $('gbars').innerHTML=B.map(([n,v,t])=>`<div class="bar"><span>${n}</span><div class="track"><i style="width:${f1(clamp(v,0,1)*100)}%"></i></div><span>${t}</span></div>`).join('');
- const segs=[['Trái non',.37,'#EFE3C2'],['Nội nhũ',.2,'#E6D4A6'],['Làm đầy',.26,'#D9C08A'],['Đổi màu',.14,'#E2A15A'],['Chín',.09,'#C0563B'],['Quá',.1,'#8E3A2A']],tot=1.16;
- $('tline').innerHTML=`<div class="tl2">${segs.map(([n,f,c])=>`<div style="flex:${f};background:${c}">${n}</div>`).join('')}<i class="mk" style="left:calc(${f1(clamp(R.s/tot,0,1)*100)}% - 1px)"></i></div><div class="tlx"><span>hoa nở</span><span>tuần ${wk(.57)}</span><span>tuần ${wk(.97)}</span><span>tuần ${wk(1.16)}</span></div>`;
+ const segs=[['Trái non',.37,'#EFE3C2'],['Nội nhũ',.2,'#E6D4A6'],['Làm đầy',.26,'#D9C08A'],['Đổi màu',.14,'#E2A15A'],['Chín',.09,'#C0563B','#FFFFFF'],['Quá',.1,'#8E3A2A','#FFFFFF']],tot=1.16;
+ $('tline').innerHTML=`<div class="tl2">${segs.map(([n,f,c,t])=>`<div style="flex:${f};background:${c}${t?';color:'+t:''}">${n}</div>`).join('')}<i class="mk" style="left:calc(${f1(clamp(R.s/tot,0,1)*100)}% - 1px)"></i></div><div class="tlx"><span>hoa nở</span><span>tuần ${wk(.57)}</span><span>tuần ${wk(.97)}</span><span>tuần ${wk(1.16)}</span></div>`;
  $('cutNote').textContent=R.ph.n==='Khô trên cây'?'Trái đã khô trên cây: dễ mốc, nhiễm vi sinh, hương lỗi.':{'Trái non':'Perisperm chiếm gần hết hạt, nội nhũ chưa hình thành rõ.','Nội nhũ thay chỗ':'Nội nhũ lớn dần, đẩy perisperm thành lớp mỏng.','Làm đầy hạt':'Nhân tích sucrose, đạm và dầu: phần lớn tiền chất hương vào nhân ở giai đoạn này.','Đổi màu':'Vỏ đổi màu, thịt quả bắt đầu ngọt nhanh.','Chín tới':'Khoảng hái đẹp nhất: nhân đã đầy, thịt quả ngọt.','Chín quá':'Thịt quả bắt đầu lên men trong vỏ, nên hái gấp.'}[R.ph.n]}
 
 /* ====== ĐIỀU KHIỂN ====== */

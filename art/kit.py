@@ -266,7 +266,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .mh-i svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .mh-i:hover,.mh-i[aria-current="page"]{color:var(--accent);border-color:var(--accent)}
 .mh-cn{position:absolute;top:-6px;right:-7px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 .68rem/19px var(--body);text-align:center;box-shadow:0 0 0 2px var(--panel)}
-@media (max-width:1260px){.mh-p{display:none}}
+@media (max-width:1023px){.mh-p{display:none}}
 @media (max-width:980px){.mh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.mh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.mh-c a{padding:8px 0;font-size:1rem}.mh-b{font-size:.95rem}}
 @media (max-width:430px){.mh-in{gap:6px}.mh-m>summary{padding:8px 10px}.mh-m>summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.mh-go{padding:7px 11px}}
@@ -504,6 +504,54 @@ const set=c=>{mem=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}badg
 const add=it=>{const c=get(),f=c.find(x=>x.id===it.id&&x.w===it.w&&x.g===it.g);if(f)f.q=Math.min(99,f.q+it.q);else c.push(it);set(c)};
 badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,add,badge}})();
 '''
+# Chuẩn hiển thị (chị Ngân 25/11/2026: điện thoại ra cỡ điện thoại, laptop ra cỡ laptop, dễ nhìn, theo chuẩn thế giới).
+# W3C WCAG 2.2 mức AA: tương phản chữ ≥ 4.5:1 (1.4.3), không cuộn ngang (1.4.10), vùng bấm ≥ 24px (2.5.8).
+# Google: chữ ≥ 12px, ô nhập 16px trên điện thoại (iPhone không tự phóng to). Apple: vùng chạm 44px trên màn hình cảm ứng.
+# Đọc dễ: chữ thân bài 16px, dòng chữ ≤ khoảng 80 ký tự. Nút Zalo/FB nổi chuyển sang góc phải (như khung chat thông dụng), không che nút chính ở đầu trang. Gắn vào cuối <head> mọi trang (build_manus) nên đè được CSS từng trang.
+STD_CSS = """
+:root{--warn-t:#8A5700;--band-t:#5E4F44}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--warn-t:var(--warn);--band-t:var(--muted)}}
+:root[data-theme="dark"]{--warn-t:var(--warn);--band-t:var(--muted)}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-size:16px}
+.cs-c li,.pd-dl,.pd-sum,.dh-pri span{font-size:1rem}
+.mf-t,.mf-k,.mh-g,.fl-b span,.sh-k,.sh-bd,.lbl,.stat>span,.k,td>small,th>small,.hd-gl small,.hd-drag,.tt-cp,.fg>h4,.fhd>span,.stk>i,.nd em,#cLbl,#needLbl,#scl,#ssl,li.h>span{font-size:12px}
+.box .k,.tick .k,.pst h3 small,.jcards .meta,.vt,.rx-par span,.rx-pours th,.rx-cmp th,.hd-stats dt,.trip b small{font-size:12px}
+@media (max-width:820px){.sh-u{font-size:12px}}
+@media (min-width:821px){.meta span,.meta b{font-size:12px}}
+.warn b,#verdict.warn b{color:var(--warn-t)}
+.chain .nd span{color:var(--band-t)}
+.mh-b{padding-block:8px}
+.pd-bc a,.pd-bc span{display:inline-block;padding-block:4px}
+.sh-h a{display:inline-block;padding-block:3px}
+:where(details)>summary{padding-block:3px}
+input[type=range]{min-height:28px}
+input[type=checkbox],input[type=radio]{width:18px;height:18px}
+section.card>p,.p-sec>p,.mnote,.note,.src,.tt-art>p,p.lead{max-width:78ch}
+.mh-in{overflow-x:clip}
+@media (max-width:374px){.mh-in{gap:4px}.mh-go{padding:7px 9px}}
+@media (pointer:coarse),(max-width:820px){
+ input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=button]):not([type=submit]),select,textarea{font-size:16px!important}}
+@media (pointer:coarse){
+ .btn,.pill,.strip button,.sh-tabs button,.rx-opts button,.chs button,.sr-chips button,#tt-save,#snd,.see,.hd-use a,.hd-jump a,.ph-nav a{min-height:44px}
+ a.btn{display:inline-flex;align-items:center;justify-content:center}
+ .pd-st button{width:44px;height:44px}
+ input[type=range]{min-height:44px}
+ input[type=checkbox],input[type=radio]{width:22px;height:22px}
+ .tt-cp{min-height:32px;min-width:44px}
+ .lnks a{min-height:44px;display:flex;align-items:center}
+ .pd-l select,.zalo a,.zalo button,[data-copy]{min-height:44px}
+ .mh-i,.mh-m>summary,.mh-l>summary,.mh-go{position:relative}
+ .mh-i::after,.mh-m>summary::after,.mh-l>summary::after,.mh-go::after{content:"";position:absolute;inset:-6px -4px;border-radius:999px}}
+@media (max-width:640px){
+ nav.mf-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;row-gap:0}
+ nav.mf-col>.mf-t{grid-column:1/-1}
+ .mf-col>a{display:flex;align-items:center;min-height:44px;padding:0}}
+.fl-c{left:auto;right:max(14px,env(safe-area-inset-right,0px))}
+.fl-b::after{left:auto;right:calc(100% + 10px);transform:translate(4px,-50%)}
+@media (hover:hover){.fl-b:hover::after,.fl-b:focus-visible::after{transform:translate(0,-50%)}}
+@media (min-width:601px){.mf-base{padding-left:0;padding-right:76px}}
+"""
 # Thanh mục chính (25/11/2026): không đủ chỗ thì ẩn bớt mục ít quan trọng (data-p nhỏ) thay vì đẩy nút Cửa hàng ra ngoài màn hình.
 COMMON_JS += ("(()=>{const n=document.querySelector('.mh-p');if(!n)return;const it=[...n.children].sort((a,b)=>(+a.dataset.p||0)-(+b.dataset.p||0));"
               "const fit=()=>{it.forEach(a=>a.hidden=false);if(!n.offsetWidth)return;for(const a of it){if(n.scrollWidth<=n.clientWidth+1)break;a.hidden=true}};"
