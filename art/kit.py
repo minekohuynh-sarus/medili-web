@@ -232,6 +232,7 @@ CLIP_CSS = r'''
 .vbd{grid-area:bd;align-self:start;display:grid;gap:10px;justify-items:start;min-width:0}
 .vhd h3,.vhd .p-h2,.vhd .eye,.vbd p,.vbd .chips,.vbd .cta{margin:0}
 .vhd,.vsc{word-break:auto-phrase}
+.vhd h3{text-wrap:pretty}
 .vsec .p-h2 em{display:inline-block;text-wrap:balance}
 .vbd p{color:var(--muted);max-width:62ch;text-wrap:pretty}
 .vtz .vbd .lnk{color:var(--accent)}
@@ -254,6 +255,7 @@ CLIP_CSS = r'''
 @media (max-width:620px){
  .vtz,.vsec{grid-template-areas:"th hd" "bd bd";row-gap:14px}
  .vtz{--vw:96px;--vg:14px}
+ .vtz h3{font-size:1.3rem}
  .vsec{--vw:112px;--vg:16px}
  .vhd{align-self:center}
  .vsec .p-h2{font-size:1.45rem}
