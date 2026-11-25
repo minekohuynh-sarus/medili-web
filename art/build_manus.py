@@ -322,7 +322,14 @@ if(w)document.getElementById('tk-r').textContent=f(w.world.robusta)}).catch(()=>
 '''
 
 head_old = home_old[:home_old.index('<style>')]
-HOME_HEAD = head_old + '<style>' + HOME_CSS_OLD + '</style>\n<style>' + CORE_CSS + NEW_CSS + anhvuon.PHOTO_CSS + HOME_CSS + '</style>'
+# Ngôn ngữ mặc định (chị Ngân 25/11/2026): khách vào web lần đầu (gõ medili.vn, bấm link từ nơi khác) thấy trang chủ tiếng Anh.
+# Ở lại tiếng Việt khi khách đã xem/chọn tiếng Việt (kit.COMMON_JS ghi 'medili-lang'), hoặc đi từ trang khác trong web
+# (bấm nút ngôn ngữ, bấm về trang chủ). Đã xem tiếng Nhật/Trung thì mở trang chủ tiếng đó. Bản en/ja/zh bỏ đoạn này (i18n.localize).
+LANG_GO = ('<script id="md-lang-go">(()=>{let s=null,i=false;try{s=localStorage.getItem("medili-lang")}catch(e){}'
+           'try{i=!!document.referrer&&new URL(document.referrer).origin===location.origin}catch(e){}'
+           'if(s==="vi"||i)return;const t=s==="ja"||s==="zh"?s:"en";window.MD_GO=1;'
+           'location.replace(t+"/"+(/(^|[.])medili[.]vn$/.test(location.hostname)?"":"index.html")+location.search+location.hash)})();</script>')
+HOME_HEAD = LANG_GO + head_old + '<style>' + HOME_CSS_OLD + '</style>\n<style>' + CORE_CSS + NEW_CSS + anhvuon.PHOTO_CSS + HOME_CSS + '</style>'
 HOME_TAIL = nb(HOME_BODY) + '<script>' + COMMON_JS + HOME_JS + '</script>\n'
 HOME = HOME_HEAD + HOME_TAIL
 assert '<div class="mnav">' not in HOME

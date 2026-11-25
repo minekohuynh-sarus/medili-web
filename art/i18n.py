@@ -700,7 +700,7 @@ def alternates(page):
     tgt = '' if page == 'index.html' else page
     out = [f'<link rel="alternate" hreflang="vi" href="{SITE}{tgt}">']
     out += [f'<link rel="alternate" hreflang="{HTML_LANG[l]}" href="{SITE}{l}/{tgt}">' for l in LANGS]
-    out.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}{tgt}">')
+    out.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}en/{tgt}">')   # mặc định tiếng Anh (25/11/2026)
     return ''.join(out)
 
 
@@ -708,14 +708,14 @@ LANG_BLOCK = re.compile(r'<details class="mh-l">.*?</details>', re.S)
 
 
 def finish_vi(page, s):
-    """Trang tiếng Việt: thêm hreflang (nút chọn ngôn ngữ đã có sẵn trong kit.header)."""
-    if 'hreflang="x-default"' not in s:
-        s = s.replace('</head>', alternates(page) + '</head>', 1)
-    return s
+    """Trang tiếng Việt: thêm hreflang (nút chọn ngôn ngữ đã có sẵn trong kit.header). Ghi lại mỗi lần dựng."""
+    s = re.sub(r'<link rel="alternate" hreflang="[^"]+" href="[^"]*">', '', s)
+    return s.replace('</head>', alternates(page) + '</head>', 1)
 
 
 def localize(page, s, lang, tr):
     tr.file = page
+    s = re.sub(r'<script id="md-lang-go">.*?</script>', '', s, count=1, flags=re.S)   # chỉ trang chủ tiếng Việt chuyển hướng
     s = tr.html(s)
     # đường dẫn: trang con nằm trong /<lang>/
     s = re.sub(r'(\s(?:src|href|poster)=")assets/', r'\1../assets/', s)
