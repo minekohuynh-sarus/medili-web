@@ -686,6 +686,8 @@ def lang_menu(page, lang):
     links = []
     for l in ['vi'] + LANGS:
         href = (up + tgt if l == 'vi' else up + l + '/' + tgt) or './'
+        if l == 'vi' and lang != 'vi' and not tgt:
+            href = up + '?hl=vi'   # về trang chủ tiếng Việt: dấu này báo khách đã chọn tiếng Việt (web có thể không gửi referrer)
         if l == lang:
             href = tgt or './'
         cur = ' aria-current="true"' if l == lang else ''

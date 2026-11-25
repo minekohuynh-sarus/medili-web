@@ -330,7 +330,9 @@ STD_STYLE = '<style id="md-std">' + STD_CSS + '</style>'   # chuẩn hiển th�
 # Ngôn ngữ mặc định (chị Ngân 25/11/2026): khách vào web lần đầu (gõ medili.vn, bấm link từ nơi khác) thấy trang chủ tiếng Anh.
 # Ở lại tiếng Việt khi khách đã xem/chọn tiếng Việt (kit.COMMON_JS ghi 'medili-lang'), hoặc đi từ trang khác trong web
 # (bấm nút ngôn ngữ, bấm về trang chủ). Đã xem tiếng Nhật/Trung thì mở trang chủ tiếng đó. Bản en/ja/zh bỏ đoạn này (i18n.localize).
-LANG_GO = ('<script id="md-lang-go">(()=>{let s=null,i=false;try{s=localStorage.getItem("medili-lang")}catch(e){}'
+LANG_GO = ('<script id="md-lang-go">(()=>{const q=new URLSearchParams(location.search);if(q.get("hl")==="vi"){try{localStorage.setItem("medili-lang","vi")}catch(e){}'
+           'try{q.delete("hl");history.replaceState(null,"",location.pathname+(q.toString()?"?"+q:"")+location.hash)}catch(e){}return}'
+           'let s=null,i=false;try{s=localStorage.getItem("medili-lang")}catch(e){}'
            'try{i=!!document.referrer&&new URL(document.referrer).origin===location.origin}catch(e){}'
            'if(s==="vi"||i)return;const t=s==="ja"||s==="zh"?s:"en";window.MD_GO=1;'
            'location.replace(t+"/"+(/(^|[.])medili[.]vn$/.test(location.hostname)?"":"index.html")+location.search+location.hash)})();</script>')

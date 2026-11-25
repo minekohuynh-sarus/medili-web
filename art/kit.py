@@ -665,8 +665,8 @@ COMMON_JS += ("(()=>{const n=document.querySelector('.mh-p');if(!n)return;const 
               "fit();addEventListener('resize',fit);if(document.fonts)document.fonts.ready.then(fit)})();\n")
 # Ngôn ngữ (25/11/2026): mỗi trang ghi lại ngôn ngữ khách đang xem, để trang chủ tiếng Việt (LANG_GO trong build_manus)
 # mở đúng ngôn ngữ lần sau. Không ghi khi trang chủ đang chuyển khách sang tiếng Anh (window.MD_GO).
-COMMON_JS += ("(()=>{const a=document.querySelector('.mh-l a[aria-current]');"
-              "if(a&&!window.MD_GO)try{localStorage.setItem('medili-lang',({'zh-Hans':'zh'})[a.hreflang]||a.hreflang)}catch(e){}})();\n")
+COMMON_JS += ("(()=>{const m={'zh-Hans':'zh'},set=v=>{try{localStorage.setItem('medili-lang',m[v]||v)}catch(e){}};const a=document.querySelector('.mh-l a[aria-current]');"
+              "if(a&&!window.MD_GO)set(a.hreflang);document.addEventListener('click',e=>{const x=e.target.closest&&e.target.closest('.mh-l a[hreflang]');if(x)set(x.hreflang)},true)})();\n")
 # Đơn hàng (24/11/2026): mã đơn MDddmmxxxx, gửi đơn thẳng vào Google Form (chỉ trên medili.vn; bản xem trước không gửi thật),
 # lưu 12 đơn gần nhất trên trình duyệt để trang Thanh toán hiện lại nội dung đơn.
 COMMON_JS += ("window.MDO=(()=>{const K='medili-don',U=" + json.dumps(FORM_POST) + ",F=" + json.dumps(FORM_F) + ";"
