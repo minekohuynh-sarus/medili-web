@@ -1,6 +1,6 @@
 {
-"faa74ac3f": {
-"s": "Ảnh mùa vụ cà phê của MeDili: vườn vào mùa, hái bằng tay, máy cày chở bao rời vườn, phơi và xay xát.",
+"e0329c09b": {
+"s": "Ảnh mùa vụ cà phê của MeDili: vườn vào mùa, hái bằng tay, máy cày chở bao rời vườn, phơi và xay xát, pha cà phê giữa đồi.",
 "k": "a",
 "f": [
 "anh-vuon.html"
@@ -4930,13 +4930,13 @@
 ],
 "c": ""
 },
-"671d874bc": {
-"s": "Ảnh vườn MeDili · 23 ảnh",
+"4bf2ebcb4": {
+"s": "Ảnh vườn MeDili · 39 ảnh",
 "k": "h",
 "f": [
 "anh-vuon.html"
 ],
-"c": "Ảnh vườn MeDili · 23 ảnh"
+"c": "Ảnh vườn MeDili · 39 ảnh"
 },
 "fd4422a7d": {
 "s": "Từ cành chín <1>đến sân phơi.</1>",
@@ -4946,8 +4946,8 @@
 ],
 "c": "Từ cành chín <em>đến sân phơi.</em>"
 },
-"f5253e286": {
-"s": "Mùa vụ cà phê qua từng tấm ảnh: trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, rồi phơi và xay xát. Bấm vào ảnh để xem lớn.",
+"f40bdc26b": {
+"s": "Mùa vụ cà phê qua từng tấm ảnh: trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, phơi và xay xát, rồi pha cà phê giữa đồi. Bấm vào ảnh để xem lớn.",
 "k": "h",
 "f": [
 "anh-vuon.html"
@@ -4962,13 +4962,13 @@
 ],
 "c": ""
 },
-"b38bbf473": {
-"s": "<1>Vườn <2>6</2></1><3>Hái <4>6</4></3><5>Thu hoạch <6>4</6></5><7>Phơi & xay <8>7</8></7>",
+"6d0e11ec7": {
+"s": "<1>Vườn <2>13</2></1><3>Hái <4>10</4></3><5>Thu hoạch <6>4</6></5><7>Phơi & xay <8>7</8></7><9>Giữa đồi <10>5</10></9>",
 "k": "h",
 "f": [
 "anh-vuon.html"
 ],
-"c": "<a href=\"#vuon\">Vườn <small>6</small></a><a href=\"#hai\">Hái <small>6</small></a>"
+"c": "<a href=\"#vuon\">Vườn <small>13</small></a><a href=\"#hai\">Hái <small>10</small></"
 },
 "af50ab9d2": {
 "s": "01 · Vườn",
@@ -5006,7 +5006,8 @@
 "s": "Một chùm, nhiều độ chín.",
 "k": "a",
 "f": [
-"anh-vuon.html"
+"anh-vuon.html",
+"vung-trong.html"
 ],
 "c": ""
 },
@@ -5014,7 +5015,8 @@
 "s": "Chùm cà phê có trái xanh, trái vàng và trái đỏ trên cùng một cành",
 "k": "a",
 "f": [
-"anh-vuon.html"
+"anh-vuon.html",
+"vung-trong.html"
 ],
 "c": ""
 },
@@ -5098,6 +5100,128 @@
 "k": "a",
 "f": [
 "anh-vuon.html"
+],
+"c": ""
+},
+"f3694032d": {
+"s": "Chùm chín đỏ, xen trái xanh.",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"737492820": {
+"s": "Nhiều chùm Robusta chín đỏ xen vài trái xanh trên cành",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"44bca72a3": {
+"s": "Cận cảnh chùm Robusta chín.",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"179e3b974": {
+"s": "Cận cảnh chùm Robusta chín đỏ dưới tán lá",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"f4887ac8d": {
+"s": "Trên một cành, trái chín không đều.",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"4a7cb8f2d": {
+"s": "Bàn tay đỡ những cành cà phê có trái xanh, trái ương và trái chín đỏ",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"b198f6aa1": {
+"s": "Xanh, cam, đỏ trên cùng một cành.",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"95890e3ff": {
+"s": "Hai bàn tay nâng cành cà phê có trái xanh, trái cam và trái đỏ",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"b4faa6def": {
+"s": "Chùm trái chín dần dọc cành.",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"b4759d7c3": {
+"s": "Những chùm cà phê chín dần dọc theo cành",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"55a1d1d70": {
+"s": "Trái trĩu cành dưới trời xanh.",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"88c9f110b": {
+"s": "Cành cà phê trĩu trái xanh và trái đỏ dưới bầu trời xanh",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"7e82f88bf": {
+"s": "Chùm chín đỏ sẫm buông dài.",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"15e9c26cb": {
+"s": "Những chùm cà phê chín đỏ sẫm buông dài trên cành",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
 ],
 "c": ""
 },
@@ -5224,6 +5348,76 @@
 ],
 "c": ""
 },
+"9ff4987f2": {
+"s": "Nâng chùm Robusta chín đỏ.",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"f653add12": {
+"s": "Bàn tay nâng chùm Robusta chín đỏ trên cành",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"d70837300": {
+"s": "Chùm chín đỏ xen trái vàng trên tay.",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"a044e07da": {
+"s": "Bàn tay đỡ chùm cà phê có trái chín đỏ xen trái vàng và trái xanh",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"85dd87410": {
+"s": "Giỏ trái chín vừa hái.",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"2592c39f5": {
+"s": "Bàn tay xách giỏ đựng trái cà phê chín đỏ dưới gốc cây",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"07062a0f3": {
+"s": "Người vườn MeDili bên cây trĩu trái.",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"4d0a36b1a": {
+"s": "Người mặc áo MeDili đứng bên cây cà phê trĩu trái dưới trời xanh",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
 "eb11cd5b7": {
 "s": "03 · Thu hoạch",
 "k": "h",
@@ -5268,7 +5462,8 @@
 "s": "Chằng bao cà phê lên máy cày.",
 "k": "a",
 "f": [
-"anh-vuon.html"
+"anh-vuon.html",
+"vung-trong.html"
 ],
 "c": ""
 },
@@ -5276,7 +5471,8 @@
 "s": "Hai người mặc áo MeDili chằng bao cà phê trên máy cày",
 "k": "a",
 "f": [
-"anh-vuon.html"
+"anh-vuon.html",
+"vung-trong.html"
 ],
 "c": ""
 },
@@ -5284,7 +5480,8 @@
 "s": "Máy cày nối đuôi rời vườn.",
 "k": "a",
 "f": [
-"anh-vuon.html"
+"anh-vuon.html",
+"vung-trong.html"
 ],
 "c": ""
 },
@@ -5292,7 +5489,8 @@
 "s": "Máy cày chở bao cà phê nối đuôi trên đường lô",
 "k": "a",
 "f": [
-"anh-vuon.html"
+"anh-vuon.html",
+"vung-trong.html"
 ],
 "c": ""
 },
@@ -5474,6 +5672,120 @@
 ],
 "c": ""
 },
+"b508e2a63": {
+"s": "05 · Giữa đồi",
+"k": "h",
+"f": [
+"anh-vuon.html"
+],
+"c": "05 · Giữa đồi"
+},
+"e718b2539": {
+"s": "Từ vườn đến ly, <1>giữa đồi.</1>",
+"k": "h",
+"f": [
+"anh-vuon.html"
+],
+"c": "Từ vườn đến ly, <em>giữa đồi.</em>"
+},
+"4ded4c3a5": {
+"s": "Trái cà phê chín, hạt rang MeDili và bàn pha nhìn ra đồi và hồ: một buổi pha cà phê ngoài trời.",
+"k": "h",
+"f": [
+"anh-vuon.html"
+],
+"c": "Trái cà phê chín, hạt rang MeDili và bàn pha nhìn ra đồi và hồ: một buổi pha cà "
+},
+"fc2cf2659": {
+"s": "<1>Công thức pha</1><2>Chọn cà phê</2>",
+"k": "h",
+"f": [
+"anh-vuon.html"
+],
+"c": "<a class=\"lnk\" href=\"cong-thuc-pha.html\">Công thức pha</a><a class=\"lnk\" href=\"c"
+},
+"5bf798ea3": {
+"s": "Cành chín đỏ trước bàn pha.",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"3779ef331": {
+"s": "Cành cà phê chín đỏ phía trước bàn pha nhìn ra đồi",
+"k": "a",
+"f": [
+"anh-vuon.html",
+"vung-trong.html"
+],
+"c": ""
+},
+"71d312079": {
+"s": "Bàn pha nhìn ra đồi và hồ.",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"620d690f0": {
+"s": "Bàn pha cà phê với hũ hạt MeDili, phía xa là đồi và hồ",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"e98afbaa6": {
+"s": "Trái chín trên tay, đồi xa phía sau.",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"bd3116386": {
+"s": "Bàn tay cầm trái cà phê chín trước bàn pha và đồi xa",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"63c23acf7": {
+"s": "Espresso bên khay trái chín.",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"1b695978c": {
+"s": "Ly espresso vừa chiết cạnh khay trái cà phê chín",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"33913c24e": {
+"s": "Ly cà phê bên chùm trái chín.",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
+"1c42de966": {
+"s": "Ly cà phê nhiều lớp trên bàn gỗ, cạnh hũ hạt MeDili và chùm trái chín",
+"k": "a",
+"f": [
+"anh-vuon.html"
+],
+"c": ""
+},
 "e7aca7252": {
 "s": "Muốn ghé vườn <1>hoặc xưởng rang?</1>",
 "k": "h",
@@ -5510,7 +5822,8 @@
 "s": "Xem ảnh lớn",
 "k": "a",
 "f": [
-"anh-vuon.html"
+"anh-vuon.html",
+"vung-trong.html"
 ],
 "c": ""
 },
@@ -5519,7 +5832,8 @@
 "k": "a",
 "f": [
 "anh-vuon.html",
-"cua-hang.html"
+"cua-hang.html",
+"vung-trong.html"
 ],
 "c": ""
 },
@@ -5527,7 +5841,8 @@
 "s": "Ảnh trước",
 "k": "a",
 "f": [
-"anh-vuon.html"
+"anh-vuon.html",
+"vung-trong.html"
 ],
 "c": ""
 },
@@ -5535,7 +5850,8 @@
 "s": "Ảnh sau",
 "k": "a",
 "f": [
-"anh-vuon.html"
+"anh-vuon.html",
+"vung-trong.html"
 ],
 "c": ""
 },
@@ -30723,8 +31039,8 @@
 ],
 "c": "Mỗi mùa chín <em>là một câu chuyện.</em>"
 },
-"08ce0ba01": {
-"s": "Trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, rồi phơi và xay xát. Trọn mùa vụ trong 23 tấm ảnh.",
+"9ddac2a28": {
+"s": "Trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, rồi phơi và xay xát. Trọn mùa vụ trong 39 tấm ảnh.",
 "k": "h",
 "f": [
 "index.html"
@@ -30875,8 +31191,7 @@
 "s": "Chùm cà phê có trái chín đỏ, trái vàng và trái xanh trên cùng một cành",
 "k": "a",
 "f": [
-"index.html",
-"vung-trong.html"
+"index.html"
 ],
 "c": ""
 },
@@ -30884,8 +31199,7 @@
 "s": "Trái chín dần trên cành.",
 "k": "h",
 "f": [
-"index.html",
-"vung-trong.html"
+"index.html"
 ],
 "c": "Trái chín dần trên cành."
 },
@@ -30893,8 +31207,7 @@
 "s": "Bao cà phê chất cao trên máy cày, hai người mặc áo MeDili đứng cạnh",
 "k": "a",
 "f": [
-"index.html",
-"vung-trong.html"
+"index.html"
 ],
 "c": ""
 },
@@ -30902,8 +31215,7 @@
 "s": "Bao cà phê lên máy cày rời vườn.",
 "k": "h",
 "f": [
-"index.html",
-"vung-trong.html"
+"index.html"
 ],
 "c": "Bao cà phê lên máy cày rời vườn."
 },
@@ -30911,8 +31223,7 @@
 "s": "Những chiếc máy cày chở bao cà phê nối đuôi trên đường lô",
 "k": "a",
 "f": [
-"index.html",
-"vung-trong.html"
+"index.html"
 ],
 "c": ""
 },
@@ -30920,8 +31231,7 @@
 "s": "Máy cày nối đuôi trên đường lô.",
 "k": "h",
 "f": [
-"index.html",
-"vung-trong.html"
+"index.html"
 ],
 "c": "Máy cày nối đuôi trên đường lô."
 },
@@ -63884,13 +64194,117 @@
 ],
 "c": "<b>15 năm</b><span>tuổi cây trong vườn</span>"
 },
-"f130bb887": {
-"s": "Vào mùa",
+"9594c7b2f": {
+"s": "Clip quay tại vườn MeDili",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "Clip quay tại vườn MeDili"
+},
+"8d80a2b82": {
+"s": "Một mùa <1>ở vườn Di Linh.</1>",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "Một mùa <em>ở vườn Di Linh.</em>"
+},
+"1fb89ae21": {
+"s": "Hoa nở trắng cành, chùm trái chín không đều, người vườn nhặt cành lá trên bạt và đồi cà phê trong sương. Một clip 40 giây ghép từ sáu cảnh quay tại vườn, không có tiếng. Bấm vào một cảnh để xem lại cảnh đó.",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "Hoa nở trắng cành, chùm trái chín không đều, người vườn nhặt cành lá trên bạt và"
+},
+"99a4d6773": {
+"s": "Clip ghép một mùa ở vườn MeDili: hoa cà phê nở, nắng qua tán, những chùm Robusta chín, người vườn nhặt cành lá trên bạt và đồi cà phê trong sương",
 "k": "a",
 "f": [
 "vung-trong.html"
 ],
 "c": ""
+},
+"5757a1061": {
+"s": "Phát clip",
+"k": "a",
+"f": [
+"vung-trong.html"
+],
+"c": ""
+},
+"df2066064": {
+"s": "Dừng clip",
+"k": "a",
+"f": [
+"vung-trong.html"
+],
+"c": ""
+},
+"c6d038308": {
+"s": "Xem toàn màn hình",
+"k": "a",
+"f": [
+"vung-trong.html"
+],
+"c": ""
+},
+"7614b6b3a": {
+"s": "Các cảnh trong clip",
+"k": "a",
+"f": [
+"vung-trong.html"
+],
+"c": ""
+},
+"381747b6f": {
+"s": "<1>01</1><2>Hoa cà phê nở trắng trên cành.</2>",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "<b>01</b><span>Hoa cà phê nở trắng trên cành.</span>"
+},
+"f2d16125c": {
+"s": "<1>02</1><2>Nắng xuyên qua tán cà phê.</2>",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "<b>02</b><span>Nắng xuyên qua tán cà phê.</span>"
+},
+"279bda2dc": {
+"s": "<1>03</1><2>Những chùm Robusta chín đỏ.</2>",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "<b>03</b><span>Những chùm Robusta chín đỏ.</span>"
+},
+"d62bc7f9d": {
+"s": "<1>04</1><2>Một chùm, nhiều độ chín.</2>",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "<b>04</b><span>Một chùm, nhiều độ chín.</span>"
+},
+"df60851e2": {
+"s": "<1>05</1><2>Nhặt cành lá lẫn trong trái trên bạt.</2>",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "<b>05</b><span>Nhặt cành lá lẫn trong trái trên bạt.</span>"
+},
+"2d5cebefc": {
+"s": "<1>06</1><2>Đồi cà phê, sương trên núi xa.</2>",
+"k": "h",
+"f": [
+"vung-trong.html"
+],
+"c": "<b>06</b><span>Đồi cà phê, sương trên núi xa.</span>"
 },
 "57d508851": {
 "s": "Vào mùa <1>ở vườn MeDili.</1>",
@@ -63900,13 +64314,13 @@
 ],
 "c": "Vào mùa <em>ở vườn MeDili.</em>"
 },
-"89f0ef56b": {
-"s": "Ảnh mùa thu hoạch 2026: trái chín trên cành, bao cà phê lên máy cày rời vườn.",
+"9b87279df": {
+"s": "Ảnh mùa thu hoạch 2026: trái chín trên cành, bàn tay hái, bao cà phê lên máy cày rời vườn. Bấm vào ảnh để xem lớn.",
 "k": "h",
 "f": [
 "vung-trong.html"
 ],
-"c": "Ảnh mùa thu hoạch 2026: trái chín trên cành, bao cà phê lên máy cày rời vườn."
+"c": "Ảnh mùa thu hoạch 2026: trái chín trên cành, bàn tay hái, bao cà phê lên máy cày"
 },
 "f21f6de6f": {
 "s": "Bốn vùng trồng, một câu chuyện rõ ràng",

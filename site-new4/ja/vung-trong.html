@@ -573,6 +573,71 @@ svg.pi .fi{fill:var(--accent);stroke:none}
  .vhd{align-self:center}
  .vsec .p-h2{font-size:1.45rem}
 }
+
+.wrap.av{gap:40px;padding-top:34px}
+.gv-grp{display:grid;gap:14px;scroll-margin-top:80px}
+.gv-hd{display:grid;gap:4px}
+.gv-hd .lead{margin:4px 0 0;max-width:64ch;color:var(--muted)}
+.gv-hd .lnks{margin-top:4px}
+.gv{columns:4;column-gap:12px}
+.gv-i{position:relative;display:block;break-inside:avoid;margin:0 0 12px;border-radius:12px;overflow:hidden;background:var(--tint);border:1px solid var(--rule);transform:translateZ(0)}
+.gv-i img{display:block;width:100%;height:auto;aspect-ratio:var(--r);object-fit:cover}
+.gv-i:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){.gv-i img{transition:transform .5s ease}.gv-i:hover img{transform:scale(1.03)}}
+@media (max-width:1100px){.gv{columns:3}}
+@media (max-width:700px){.gv{columns:2;column-gap:8px}.gv-i{margin-bottom:8px;border-radius:10px}}
+.av-note{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px 16px;align-items:start}
+.av-note svg.pi{width:34px;height:34px;color:var(--accent)}
+.av-note p{margin:0}
+/* xem ảnh lớn */
+dialog.lb{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;color:#FFF3E4;overflow:hidden}
+dialog.lb::backdrop{background:rgba(26,15,9,.94)}
+.lb-f{margin:0;position:absolute;inset:0;display:grid;grid-template-rows:auto auto;align-content:center;justify-items:center;gap:12px;
+  padding:max(56px,env(safe-area-inset-top,0px)) 16px max(18px,env(safe-area-inset-bottom,0px))}
+.lb-f img{display:block;max-width:min(100%,1600px);max-height:calc(100vh - 190px);max-height:calc(100dvh - 190px);width:auto;height:auto;object-fit:contain;border-radius:8px}
+.lb-f figcaption{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:center;font:500 .95rem/1.4 var(--body);text-align:center;max-width:70ch}
+.lb-f figcaption b{font:700 .8rem var(--mono);color:#F4CC97}
+.lb button{position:absolute;display:grid;place-items:center;width:46px;height:46px;border-radius:999px;border:1px solid rgba(255,243,228,.6);background:rgba(42,24,14,.55);color:#FFF3E4;cursor:pointer;padding:0}
+.lb button svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lb button:hover{background:rgba(255,243,228,.16);border-color:#FFF3E4}
+.lb button:focus-visible{outline:3px solid #F4CC97;outline-offset:2px}
+.lb .lb-x{top:max(10px,env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px))}
+.lb .lb-p,.lb .lb-n{top:50%;transform:translateY(-50%)}
+.lb .lb-p{left:max(12px,env(safe-area-inset-left,0px))}.lb .lb-n{right:max(12px,env(safe-area-inset-right,0px))}
+@media (max-width:620px){.lb .lb-p,.lb .lb-n{top:auto;bottom:max(14px,env(safe-area-inset-bottom,0px));transform:none}.lb-f{padding-bottom:max(76px,env(safe-area-inset-bottom,0px))}}
+
+/* Clip ghép từ vườn: khung 16:9 + danh sách cảnh. Nút tròn góc dưới trái (logo chìm nằm góc dưới phải). */
+.vcg-sec{display:grid;gap:14px;scroll-margin-top:80px}
+.vm{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;align-items:start}
+.vm-f{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#231812;border:1px solid var(--rule)}
+.vm-f video{display:block;width:100%;height:100%;object-fit:cover;cursor:pointer}
+.vm-bar{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,243,228,.22);pointer-events:none}
+.vm-bar i{display:block;height:100%;background:#F4B47C;transform-origin:0 50%;transform:scaleX(0);transition:transform .25s linear}
+.vc-b{position:absolute;bottom:14px;display:grid;place-items:center;width:44px;height:44px;padding:0;border-radius:999px;
+  border:1px solid rgba(255,243,228,.62);background:rgba(42,24,14,.58);color:#FFF3E4;cursor:pointer;transition:background .2s}
+.vc-p{left:14px}.vc-x{left:66px}
+.vc-b svg{width:19px;height:19px}
+.vc-p .i-pa,.vc-p.on .i-pl{display:none}.vc-p.on .i-pa{display:block}
+.vc-b .fi{fill:currentColor;stroke:none}.vc-b .st{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vc-b:hover{background:#B9442A;border-color:#B9442A}
+.vc-b:focus-visible{outline:3px solid #F4CC97;outline-offset:2px}
+.vm-ch{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.vm-c{position:relative;display:grid;grid-template-columns:112px minmax(0,1fr);gap:12px;align-items:center;padding:6px;border:1px solid var(--rule);
+  border-radius:12px;background:var(--panel);transition:border-color .2s,background .2s}
+.vm-c img{display:block;width:112px;height:63px;object-fit:cover;border-radius:8px;background:var(--tint)}
+.vm-c button{display:flex;gap:8px;align-items:baseline;min-height:44px;margin:0;padding:4px 2px;border:0;background:none;color:var(--ink);text-align:left;
+  font:500 .93rem/1.35 var(--body);cursor:pointer}
+.vm-c button::after{content:"";position:absolute;inset:0;border-radius:12px}
+.vm-c button b{font:700 .78rem var(--mono);color:var(--accent);flex:none}
+.vm-c:hover,.vm-c.on{border-color:var(--accent)}
+.vm-c.on{background:var(--tint)}
+.vm-c.on button{font-weight:700}
+.vm-c button:focus-visible{outline:none}.vm-c button:focus-visible::after{outline:3px solid var(--accent);outline-offset:2px}
+@media (max-width:1100px){.vm{grid-template-columns:minmax(0,1fr)}.vm-ch{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .vm-c{grid-template-columns:minmax(0,1fr);align-items:start;gap:6px}.vm-c img{width:100%;height:auto;aspect-ratio:16/9}}
+@media (max-width:700px){.vc-b{bottom:12px}.vc-p{left:12px}.vc-x{left:62px}
+  .vm-ch{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:46%;overflow-x:auto;scroll-snap-type:x mandatory;
+  overscroll-behavior-x:contain;padding-bottom:6px}.vm-c{scroll-snap-align:start}}
 </style><style id="md-std">
 :root{--warn-t:#8A5700;--band-t:#5E4F44}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--warn-t:var(--warn);--band-t:var(--muted)}}
@@ -628,10 +693,12 @@ section.card>p,.p-sec>p,.mnote,.note,.src,.tt-art>p,p.lead{max-width:68ch}
  <div><b>15年</b><span>農園の木の樹齢</span></div>
 </section>
 
-<section class="pgal" aria-label="収穫期">
- <h2 class="p-h2" style="margin:0"><em>MeDiliの農園の</em>収穫期。</h2>
- <p>2026年の収穫期の写真：枝で熟した実、トラクターに積まれて農園を出るコーヒー袋。</p>
- <div class="pfs"><figure class="pf "><img src="../assets/p-sq-chum-chin.jpg" alt="同じ枝に赤、黄、緑の実がついたコーヒーの房" width="900" height="900" loading="lazy"><figcaption>枝の上で少しずつ熟していく実。</figcaption></figure><figure class="pf "><img src="../assets/p-sq-may-cay.jpg" alt="トラクターに高く積まれたコーヒー袋と、そばに立つMeDiliのシャツを着た2人" width="900" height="900" loading="lazy"><figcaption>コーヒー袋をトラクターに積んで農園を出る。</figcaption></figure><figure class="pf "><img src="../assets/p-sq-duong-lo.jpg" alt="コーヒー袋を積んだトラクターが農道に列をなす" width="900" height="900" loading="lazy"><figcaption>農道に連なるトラクター。</figcaption></figure></div>
+<section class="vcg-sec" id="clip-vuon" aria-labelledby="h-clip-vuon"><div class="gv-hd"><p class="eye">MeDili農園で撮影した動画</p><h2 class="p-h2" id="h-clip-vuon" style="margin:0"><em>Di Linhの農園の</em>ひと季節。</h2><p class="lead">枝いっぱいの白い花、熟し方がまちまちの房、シートの上で枝や葉を取り除く農園スタッフ、霧の中のコーヒーの丘。農園で撮影した6つの場面をつないだ40秒の動画（音声なし）。場面をタップすると、その場面から再生します。</p></div><div class="vm"><div class="vm-f"><video muted loop playsinline preload="none" poster="../assets/v-mua-vuon.jpg" width="1280" height="720" aria-label="MeDili農園のひと季節をつないだ動画：咲き誇るコーヒーの花、木々の間から差し込む日差し、熟したRobustaの房、シートの上で枝や葉を取り除く農園スタッフ、霧の中のコーヒーの丘" data-hd="../assets/v-mua-vuon-720.mp4" data-sd="../assets/v-mua-vuon-480.mp4"><source src="../assets/v-mua-vuon-480.mp4" type="video/mp4"></video><span class="vm-bar" aria-hidden="true"><i></i></span><button class="vc-b vc-p" type="button" aria-label="動画を再生" data-pl="動画を再生" data-pa="動画を一時停止"><svg class="i-pl" viewBox="0 0 24 24" aria-hidden="true"><path class="fi" d="M8 5.5v13l10.5-6.5z"/></svg><svg class="i-pa" viewBox="0 0 24 24" aria-hidden="true"><path class="fi" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button><button class="vc-b vc-x" type="button" aria-label="全画面で見る"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="st" d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></button></div><ol class="vm-ch" aria-label="動画の場面"><li class="vm-c" data-t="0.0" data-s="0.0"><img src="../assets/v-mua-vuon-c1.jpg" alt="" width="384" height="216" loading="lazy" decoding="async"><button type="button"><b>01</b><span>枝に白く咲くコーヒーの花。</span></button></li><li class="vm-c" data-t="7.3" data-s="6.95"><img src="../assets/v-mua-vuon-c2.jpg" alt="" width="384" height="216" loading="lazy" decoding="async"><button type="button"><b>02</b><span>コーヒーの木々の間から差し込む日差し。</span></button></li><li class="vm-c" data-t="11.1" data-s="10.75"><img src="../assets/v-mua-vuon-c3.jpg" alt="" width="384" height="216" loading="lazy" decoding="async"><button type="button"><b>03</b><span>赤く熟したRobustaの房。</span></button></li><li class="vm-c" data-t="18.2" data-s="17.85"><img src="../assets/v-mua-vuon-c4.jpg" alt="" width="384" height="216" loading="lazy" decoding="async"><button type="button"><b>04</b><span>ひとつの房に、さまざまな熟度。</span></button></li><li class="vm-c" data-t="23.0" data-s="22.65"><img src="../assets/v-mua-vuon-c5.jpg" alt="" width="384" height="216" loading="lazy" decoding="async"><button type="button"><b>05</b><span>シートの上で、実にまじった枝や葉を取り除く。</span></button></li><li class="vm-c" data-t="28.3" data-s="27.95"><img src="../assets/v-mua-vuon-c6.jpg" alt="" width="384" height="216" loading="lazy" decoding="async"><button type="button"><b>06</b><span>コーヒーの丘と、遠い山にかかる霧。</span></button></li></ol></div></section>
+
+<section class="pgal" aria-labelledby="h-vao-mua">
+ <h2 class="p-h2" id="h-vao-mua" style="margin:0"><em>MeDiliの農園の</em>収穫期。</h2>
+ <p>2026年の収穫期の写真：枝で熟した実、摘み取る手、トラクターに積まれて農園を出るコーヒー袋。写真をタップすると拡大します。</p>
+ <div class="gv"><a class="gv-i" href="../assets/g-hai-nang-chum.jpg" data-cap="赤く熟したRobustaの房を手に。" style="--r:1.499"><img src="../assets/g-hai-nang-chum-s.jpg" alt="枝についた赤く熟したRobustaの房を持ち上げる手" width="760" height="507" loading="lazy" decoding="async"></a><a class="gv-i" href="../assets/g-vuon-chin-khong-deu.jpg" data-cap="一本の枝でも、実の熟し方はまちまち。" style="--r:0.75"><img src="../assets/g-vuon-chin-khong-deu-s.jpg" alt="青い実、色づきかけの実、赤く熟した実がついたコーヒーの枝を支える手" width="570" height="760" loading="lazy" decoding="async"></a><a class="gv-i" href="../assets/g-thu-chat-bao.jpg" data-cap="コーヒー袋をトラクターに縛り付ける。" style="--r:0.75"><img src="../assets/g-thu-chat-bao-s.jpg" alt="MeDiliのシャツを着た2人がトラクターにコーヒー袋を縛り付ける" width="570" height="760" loading="lazy" decoding="async"></a><a class="gv-i" href="../assets/g-hai-ao-medili.jpg" data-cap="実をたわわにつけた木のそばに立つMeDiliの農園スタッフ。" style="--r:1.7757"><img src="../assets/g-hai-ao-medili-s.jpg" alt="青空の下、実をたわわにつけたコーヒーの木のそばに立つ、MeDiliのシャツを着た人" width="760" height="428" loading="lazy" decoding="async"></a><a class="gv-i" href="../assets/g-vuon-ba-mau.jpg" data-cap="同じ枝に、青、オレンジ、赤。" style="--r:1.3333"><img src="../assets/g-vuon-ba-mau-s.jpg" alt="青、オレンジ、赤の実がついたコーヒーの枝を持ち上げる両手" width="760" height="570" loading="lazy" decoding="async"></a><a class="gv-i" href="../assets/g-hai-gio-trai.jpg" data-cap="摘みたての熟したチェリーのかご。" style="--r:0.75"><img src="../assets/g-hai-gio-trai-s.jpg" alt="木の下で、赤く熟したコーヒーチェリーの入ったかごを持つ手" width="570" height="760" loading="lazy" decoding="async"></a><a class="gv-i" href="../assets/g-vuon-chum-do-xen.jpg" data-cap="赤く熟した房に、青い実がまじる。" style="--r:1.499"><img src="../assets/g-vuon-chum-do-xen-s.jpg" alt="枝に連なる赤く熟したRobustaの房と、ところどころの青い実" width="760" height="507" loading="lazy" decoding="async"></a><a class="gv-i" href="../assets/g-vuon-troi-xanh.jpg" data-cap="青空の下、実の重みでしなる枝。" style="--r:0.75"><img src="../assets/g-vuon-troi-xanh-s.jpg" alt="青空の下、青い実と赤い実をたわわにつけたコーヒーの枝" width="570" height="760" loading="lazy" decoding="async"></a><a class="gv-i" href="../assets/g-thu-noi-duoi.jpg" data-cap="列をなして農園を出るトラクター。" style="--r:0.75"><img src="../assets/g-thu-noi-duoi-s.jpg" alt="コーヒー袋を積んで農道に列をなすトラクター" width="570" height="760" loading="lazy" decoding="async"></a><a class="gv-i" href="../assets/g-doi-canh-trai.jpg" data-cap="抽出台の前に、赤く熟した枝。" style="--r:1.3333"><img src="../assets/g-doi-canh-trai-s.jpg" alt="丘を望む抽出台の手前に、赤く熟したコーヒーの枝" width="760" height="570" loading="lazy" decoding="async"></a><a class="gv-i" href="../assets/g-vuon-chum-chin.jpg" data-cap="ひとつの房に、さまざまな熟度。" style="--r:0.6658"><img src="../assets/g-vuon-chum-chin-s.jpg" alt="同じ枝に青、黄、赤の実がついたコーヒーの房" width="506" height="760" loading="lazy" decoding="async"></a><a class="gv-i" href="../assets/g-vuon-chin-sam.jpg" data-cap="深紅に熟し、長く垂れる房。" style="--r:0.75"><img src="../assets/g-vuon-chin-sam-s.jpg" alt="枝から長く垂れ下がる、深紅に熟したコーヒーチェリーの房" width="570" height="760" loading="lazy" decoding="async"></a></div>
  <div class="lnks" style="margin-top:0"><a class="lnk" href="anh-vuon.html">農園の写真をすべて見る</a></div>
 </section>
 
@@ -688,7 +755,7 @@ section.card>p,.p-sec>p,.mnote,.note,.src,.tt-art>p,p.lead{max-width:68ch}
 </svg></div><span class="k">コーヒーの知識 · 大地</span><h3>一杯のコーヒーに宿るDi Linh</h3><p>謙虚な気持ちで土地を読む：気候、標高、そして味の記憶。</p></a>
  </div>
 </section>
-
+<dialog class="lb" id="lb" aria-label="写真を拡大"><figure class="lb-f"><img alt=""><figcaption><span class="lb-c"></span><b class="lb-k"></b></figcaption></figure><button class="lb-x" type="button" aria-label="閉じる"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button><button class="lb-p" type="button" aria-label="前の写真"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="lb-n" type="button" aria-label="次の写真"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></dialog>
 <section class="contact" id="lien-he"><div><img class="lgK" src="../assets/logo-kem.png" alt="MeDili Café Di Linh" width="260" height="83"><div class="tagline">Di Linhの味に魅せられて</div><p>販売元：DSunfood食品有限会社、143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM。<br>農園・焙煎所：Thôn 11, Xã Di Linh, Lâm Đồng。</p></div><div class="zalo"><span>MeDili Zalo</span><strong data-sel>0966 770 788</strong><div><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">Zaloでメッセージ</a><button type="button" data-copy="0966770788" data-done="番号をコピーしました">番号をコピー</button></div><small>メール：cafe@medili.vn</small></div></section>
 </div>
 <footer class="mf"><div class="mf-in"><div class="mf-cta"><span class="mf-k">A little coffee, a lot of connection</span><p class="mf-h">いつだって<em>おいしいコーヒー一杯</em>のための時間はあります。</p><a class="btn main" href="quan-medili.html">MeDiliで会いましょう</a></div><div class="mf-grid"><div class="mf-brand"><b>コーヒーに夢中、Di Linhに夢中。</b><span>受け継いだものを守り、ひとつひとつの風味を大切に。</span><small>Di Linh · ラムドン省 · ベトナム</small></div><nav class="mf-col" aria-label="探索"><p class="mf-t">探索</p><a href="cau-chuyen.html">MeDiliの物語</a><a href="doi-ngu.html">MeDiliのチーム</a><a href="vung-trong.html">Di Linhの栽培地</a><a href="anh-vuon.html">MeDili農園の写真</a><a href="xuong-rang.html">焙煎所と生産能力</a><a href="rang.html">焙煎ルーム</a><a href="huong-dan-pha.html">抽出ガイド</a><a href="quay-pha.html">ブリューバー</a><a href="tim-gu.html">好みのコーヒー診断</a><a href="cong-thuc-pha.html">抽出レシピマシン</a><a href="chiet-xuat.html">抽出マシン</a><a href="cold-brew.html">コールドブリューマシン</a><a href="journal.html">コーヒーの知識</a><a href="tin-tuc.html">MeDiliニュース</a></nav><nav class="mf-col" aria-label="MeDiliとあなた"><p class="mf-t">MeDiliとあなた</p><a href="cua-hang.html">MeDiliストア</a><a href="mua-hang.html">購入ルーム</a><a href="horeca.html">HORECA向けソリューション</a><a href="dong-hanh-cung-quan.html">カフェとともに</a><a href="nhan-xanh.html">卸売向け生豆</a><a href="gia-ca-phe.html">本日のコーヒー価格</a><a href="quan-medili.html">MeDili Caféの店舗</a><a href="lien-he.html">お問い合わせと地図</a><a href="chinh-sach.html">MeDiliのポリシー</a><a href="giao-hang.html">配送と返品</a><a href="thanh-toan.html">お支払い</a><a href="bao-mat.html">プライバシーポリシー</a></nav><div class="mf-col"><p class="mf-t">販売元 · DSunfood</p><p>DSunfood食品有限会社<br>143 Phạm Văn Hai, Phường Tân Sơn Nhất, Quận Tân Bình, TP.HCM</p><p>農園・焙煎所<br>Thôn 11, Xã Di Linh, Lâm Đồng</p><p><span class="mf-n">0966 770 788</span> · <span class="mf-n">cafe@medili.vn</span></p><a href="https://www.google.com/maps/search/?api=1&query=143%20Ph%E1%BA%A1m%20V%C4%83n%20Hai%2C%20T%C3%A2n%20S%C6%A1n%20Nh%E1%BA%A5t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">MeDiliへの道順 ↗</a><a href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener">ZaloでMeDiliにメッセージ ↗</a></div></div><div class="mf-base"><span>© 2026 MeDili Café</span><i>MeDili Coffee Farm · Origin Robusta Di Linh</i></div></div></footer><nav class="fl-c" aria-label="MeDiliへのクイック連絡"><a class="fl-b" href="https://zalo.me/3942166996018015136" target="_blank" rel="noopener" aria-label="ZaloでMeDiliにメッセージ" data-tip="ZaloでMeDiliにメッセージ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4z"/></svg><span>Zalo</span></a><a class="fl-b" href="https://www.facebook.com/share/192oMLdBnq/" target="_blank" rel="noopener" aria-label="Facebook MeDili" data-tip="Facebook MeDili"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9H4v-9zM7 19.5h9.2a2 2 0 0 0 2-1.6l1.2-5.6a2 2 0 0 0-2-2.4H13l.8-3.7a1.6 1.6 0 0 0-3-1L7 10.5"/></svg><span>FB</span></a></nav>
@@ -714,5 +781,45 @@ badge();addEventListener('storage',e=>{if(e.key===K)badge()});return {get,set,ad
 (()=>{const n=document.querySelector('.mh-p');if(!n)return;const it=[...n.children].sort((a,b)=>(+a.dataset.p||0)-(+b.dataset.p||0));const fit=()=>{it.forEach(a=>a.hidden=false);if(!n.offsetWidth)return;for(const a of it){if(n.scrollWidth<=n.clientWidth+1)break;a.hidden=true}};fit();addEventListener('resize',fit);if(document.fonts)document.fonts.ready.then(fit)})();
 (()=>{const m={'zh-Hans':'zh'},set=v=>{try{localStorage.setItem('medili-lang',m[v]||v)}catch(e){}};const a=document.querySelector('.mh-l a[aria-current]');if(a&&!window.MD_GO)set(a.hreflang);document.addEventListener('click',e=>{const x=e.target.closest&&e.target.closest('.mh-l a[hreflang]');if(x)set(x.hreflang)},true)})();
 window.MDO=(()=>{const K='medili-don',U="https://docs.google.com/forms/d/e/1FAIpQLSfFnK1eOB8u1UJg-5mIVS_k9h7ElULoxnmVDvCEYVjeSLWS_w/formResponse",F={"name": "entry.1445823936", "phone": "entry.907299194", "txt": "entry.730970220"};const all=()=>{try{const v=JSON.parse(localStorage.getItem(K)||'{}');if(v&&typeof v==='object')return v}catch(e){}return {}};const live=()=>/(^|[.])medili[.]vn$/.test(location.hostname);const code=()=>{const d=new Date(),p=n=>String(n).padStart(2,'0');return 'MD'+p(d.getDate())+p(d.getMonth()+1)+(1000+Math.floor(Math.random()*9000))};const send=a=>{if(!live())return Promise.resolve('demo');const b=new URLSearchParams();b.append(F.name,a.name);b.append(F.phone,a.phone);b.append(F.txt,a.txt);const c=new AbortController(),t=setTimeout(()=>c.abort(),15000);return fetch(U,{method:'POST',mode:'no-cors',body:b,signal:c.signal}).then(()=>'ok').finally(()=>clearTimeout(t))};const keep=(k,o)=>{const v=all();v[k]=Object.assign({ts:Date.now()},o);Object.keys(v).sort((x,y)=>v[y].ts-v[x].ts).slice(12).forEach(x=>delete v[x]);try{localStorage.setItem(K,JSON.stringify(v))}catch(e){}};return {code,live,send,keep,get:k=>all()[k]||null}})();
+
+(()=>{const L=document.getElementById('lb');if(!L||typeof L.showModal!=='function')return;
+const items=[...document.querySelectorAll('.gv-i')],im=L.querySelector('img'),cap=L.querySelector('.lb-c'),num=L.querySelector('.lb-k');let i=0,x0=null;
+function show(k){i=(k+items.length)%items.length;const a=items[i],t=a.querySelector('img');im.src=a.getAttribute('href');im.alt=t.alt;cap.textContent=a.dataset.cap||t.alt;num.textContent=(i+1)+' / '+items.length;
+ [i+1,i-1].forEach(j=>{const b=items[(j+items.length)%items.length];if(b){const p=new Image();p.src=b.getAttribute('href')}})}
+items.forEach((a,k)=>a.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.button)return;e.preventDefault();show(k);L.showModal()}));
+L.querySelector('.lb-x').addEventListener('click',()=>L.close());
+L.querySelector('.lb-p').addEventListener('click',()=>show(i-1));
+L.querySelector('.lb-n').addEventListener('click',()=>show(i+1));
+L.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();show(i-1)}else if(e.key==='ArrowRight'){e.preventDefault();show(i+1)}});
+L.addEventListener('click',e=>{if(e.target===L||e.target.classList.contains('lb-f'))L.close()});
+L.addEventListener('pointerdown',e=>{x0=e.clientX});
+L.addEventListener('pointerup',e=>{if(x0===null)return;const d=e.clientX-x0;x0=null;if(Math.abs(d)>48)show(i+(d<0?1:-1))});
+L.addEventListener('close',()=>{im.removeAttribute('src');const a=items[i];if(a)a.focus({preventScroll:true})});
+})();
+
+(()=>{const v=document.querySelector('.vm video');if(!v)return;v.muted=true;
+const f=v.closest('.vm-f'),b=f.querySelector('.vc-p'),x=f.querySelector('.vc-x'),bar=f.querySelector('.vm-bar i');
+const C=[...document.querySelectorAll('.vm-c')].map(li=>({li,btn:li.querySelector('button'),t:+li.dataset.t,s:+li.dataset.s}));
+const rm=matchMedia('(prefers-reduced-motion: reduce)'),sd=!!(navigator.connection&&navigator.connection.saveData);
+const auto=()=>!rm.matches&&!sd;let src=false;
+const pick=()=>{if(src)return;src=true;const hd=matchMedia('(min-width: 900px)').matches&&!sd;v.src=hd?v.dataset.hd:v.dataset.sd};
+const go=()=>{pick();return v.play().catch(()=>{})};
+const sync=()=>{const on=!v.paused;b.classList.toggle('on',on);b.setAttribute('aria-label',on?b.dataset.pa:b.dataset.pl)};
+v.addEventListener('play',sync);v.addEventListener('pause',sync);
+const mark=()=>{const t=v.currentTime;let k=0;C.forEach((c,i)=>{if(t>=c.s)k=i});C.forEach((c,i)=>{const on=i===k;c.li.classList.toggle('on',on);
+ if(on)c.btn.setAttribute('aria-current','true');else c.btn.removeAttribute('aria-current')});
+ if(v.duration)bar.style.transform='scaleX('+(t/v.duration).toFixed(4)+')'};
+v.addEventListener('timeupdate',mark);v.addEventListener('seeked',mark);
+b.addEventListener('click',()=>{if(v.paused){v.dataset.u='';go()}else{v.dataset.u='1';v.pause()}});
+v.addEventListener('click',()=>b.click());
+x.addEventListener('click',()=>{pick();if(v.requestFullscreen)v.requestFullscreen().then(go).catch(()=>{});else if(v.webkitEnterFullscreen){go();v.webkitEnterFullscreen()}});
+v.addEventListener('fullscreenchange',()=>{v.controls=document.fullscreenElement===v});
+C.forEach(c=>c.btn.addEventListener('click',()=>{v.dataset.u='';pick();
+ const seek=()=>{v.currentTime=c.t;mark()};if(v.readyState>=1)seek();else v.addEventListener('loadedmetadata',seek,{once:true});go()}));
+mark();
+if('IntersectionObserver' in window){new IntersectionObserver(es=>es.forEach(e=>{
+ if(e.isIntersecting&&e.intersectionRatio>=.5){if(auto()&&!v.dataset.u&&v.paused)go()}
+ else if(!v.paused&&document.fullscreenElement!==v)v.pause()}),{threshold:[0,.5]}).observe(v)}
+})();
 </script>
 </body></html>

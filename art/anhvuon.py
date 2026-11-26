@@ -19,6 +19,9 @@ GROUPS = [
     ('phoi', 'Phơi & xay', 'Phơi <em>và xay xát.</em>',
      'Trái chín được phơi nguyên trái (Natural), phơi khi hạt còn lớp nhớt (Honey) hoặc xát tươi rồi mới phơi. Cà phê khô mới đem xay xát, tách vỏ để lấy nhân xanh.',
      [('len-men-men-bia.html', 'Ba cách sơ chế'), ('nhan-xanh.html', 'Chọn nhân xanh')]),
+    ('doi', 'Giữa đồi', 'Từ vườn đến ly, <em>giữa đồi.</em>',
+     'Trái cà phê chín, hạt rang MeDili và bàn pha nhìn ra đồi và hồ: một buổi pha cà phê ngoài trời.',
+     [('cong-thuc-pha.html', 'Công thức pha'), ('cua-hang.html', 'Chọn cà phê')]),
 ]
 
 # (nhóm, tên ảnh, nguồn, tỷ lệ cắt hoặc None = giữ khung gốc, tâm x, tâm y, alt, chú thích)
@@ -46,6 +49,24 @@ GAL = [
     ('phoi', 'xay-xat-tuoi', A('47fb57b2'), None, .5, .5, 'Máy xát tươi tách vỏ cà phê', 'Xát tươi: máy tách vỏ khỏi hạt.'),
     ('phoi', 'xay-sang-nhan', A('4653ff83'), None, .5, .5, 'Nhân cà phê chảy qua máng gỗ xuống rổ', 'Nhân chảy qua máng sàng.'),
     ('phoi', 'xay-nhan-xanh', A('2c197a7a'), None, .5, .5, 'Nhân xanh trong đĩa, đặt trên tấm thảm bánh xe hương vị', 'Nhân xanh sau xay xát.'),
+    # Đợt 3 (26/11/2026): thư mục Drive "LỌC 10 ẢNH CHỊ NGÂN" và "ĐIỆN THOẠI" chị Ngân gửi để bổ sung mục Vùng trồng Di Linh.
+    # Không dùng ảnh có người chụp rõ mặt (IMG_0214, IMG_0220, IMG_0253) và ảnh người nữ đội mũ MeDili.
+    ('vuon', 'vuon-chum-do-xen', D('dot3/IMG_0582.jpg'), None, .5, .5, 'Nhiều chùm Robusta chín đỏ xen vài trái xanh trên cành', 'Chùm chín đỏ, xen trái xanh.'),
+    ('vuon', 'vuon-chum-can', D('dot3/IMG_0585.jpg'), None, .5, .5, 'Cận cảnh chùm Robusta chín đỏ dưới tán lá', 'Cận cảnh chùm Robusta chín.'),
+    ('vuon', 'vuon-chin-khong-deu', D('dot3/IMG_0239.jpg'), None, .5, .5, 'Bàn tay đỡ những cành cà phê có trái xanh, trái ương và trái chín đỏ', 'Trên một cành, trái chín không đều.'),
+    ('vuon', 'vuon-ba-mau', D('dot3/IMG_0243.jpg'), None, .5, .5, 'Hai bàn tay nâng cành cà phê có trái xanh, trái cam và trái đỏ', 'Xanh, cam, đỏ trên cùng một cành.'),
+    ('vuon', 'vuon-doc-canh', D('dot3/IMG_0240.jpg'), None, .5, .5, 'Những chùm cà phê chín dần dọc theo cành', 'Chùm trái chín dần dọc cành.'),
+    ('vuon', 'vuon-troi-xanh', D('dot3/IMG_0251.jpg'), None, .5, .5, 'Cành cà phê trĩu trái xanh và trái đỏ dưới bầu trời xanh', 'Trái trĩu cành dưới trời xanh.'),
+    ('vuon', 'vuon-chin-sam', D('dot3/IMG_0256.jpg'), None, .5, .5, 'Những chùm cà phê chín đỏ sẫm buông dài trên cành', 'Chùm chín đỏ sẫm buông dài.'),
+    ('hai', 'hai-nang-chum', D('dot3/IMG_0614.jpg'), None, .5, .5, 'Bàn tay nâng chùm Robusta chín đỏ trên cành', 'Nâng chùm Robusta chín đỏ.'),
+    ('hai', 'hai-chum-xen', D('dot3/IMG_0612.jpg'), None, .5, .5, 'Bàn tay đỡ chùm cà phê có trái chín đỏ xen trái vàng và trái xanh', 'Chùm chín đỏ xen trái vàng trên tay.'),
+    ('hai', 'hai-gio-trai', D('dot3/IMG_0280.jpg'), None, .5, .5, 'Bàn tay xách giỏ đựng trái cà phê chín đỏ dưới gốc cây', 'Giỏ trái chín vừa hái.'),
+    ('hai', 'hai-ao-medili', D('dot3/20261114_110252.jpg'), None, .5, .5, 'Người mặc áo MeDili đứng bên cây cà phê trĩu trái dưới trời xanh', 'Người vườn MeDili bên cây trĩu trái.'),
+    ('doi', 'doi-canh-trai', D('dot3/IMG_0479.jpg'), None, .5, .5, 'Cành cà phê chín đỏ phía trước bàn pha nhìn ra đồi', 'Cành chín đỏ trước bàn pha.'),
+    ('doi', 'doi-ban-pha', D('dot3/IMG_0490.jpg'), None, .5, .5, 'Bàn pha cà phê với hũ hạt MeDili, phía xa là đồi và hồ', 'Bàn pha nhìn ra đồi và hồ.'),
+    ('doi', 'doi-trai-tren-tay', D('dot3/IMG_0493.jpg'), None, .5, .5, 'Bàn tay cầm trái cà phê chín trước bàn pha và đồi xa', 'Trái chín trên tay, đồi xa phía sau.'),
+    ('doi', 'doi-espresso', D('dot3/IMG_0488.jpg'), None, .5, .5, 'Ly espresso vừa chiết cạnh khay trái cà phê chín', 'Espresso bên khay trái chín.'),
+    ('doi', 'doi-ly-nhieu-lop', D('dot3/IMG_0638.jpg'), 1, .5, .64, 'Ly cà phê nhiều lớp trên bàn gỗ, cạnh hũ hạt MeDili và chùm trái chín', 'Ly cà phê bên chùm trái chín.'),
 ]
 
 # ảnh nền: tên -> (nguồn, máy tính (tỷ lệ, tâm x, tâm y, rộng ra), điện thoại (...))
@@ -83,7 +104,7 @@ PHOTO_CSS = r'''
 .pband .ph-in{min-height:clamp(400px,42vw,620px)}
 .ph-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .ph-nav a{display:inline-flex;align-items:baseline;gap:6px;border:1px solid rgba(255,243,228,.6);border-radius:999px;padding:7px 14px;color:#FFF3E4;text-decoration:none;font:600 .9rem var(--body);background:rgba(42,24,14,.3)}
-.ph-nav a small{font:700 .74rem var(--mono);color:#F4CC97}
+.ph-nav a small{font:700 12px var(--mono);color:#F4CC97}
 .ph-nav a:hover{background:rgba(255,243,228,.16);border-color:#FFF3E4}
 @media (max-width:820px){
   .phero::before,.pband::before{background:linear-gradient(180deg,rgba(36,20,11,.08) 0%,rgba(36,20,11,.5) 20%,rgba(36,20,11,.82) 40%,rgba(36,20,11,.84) 78%,rgba(36,20,11,.4) 100%)}
@@ -119,7 +140,7 @@ GAL_CSS = r'''
 .wrap.av{gap:40px;padding-top:34px}
 .gv-grp{display:grid;gap:14px;scroll-margin-top:80px}
 .gv-hd{display:grid;gap:4px}
-.gv-hd .lead{margin:4px 0 0;max-width:72ch;color:var(--muted)}
+.gv-hd .lead{margin:4px 0 0;max-width:64ch;color:var(--muted)}
 .gv-hd .lnks{margin-top:4px}
 .gv{columns:4;column-gap:12px}
 .gv-i{position:relative;display:block;break-inside:avoid;margin:0 0 12px;border-radius:12px;overflow:hidden;background:var(--tint);border:1px solid var(--rule);transform:translateZ(0)}
@@ -179,6 +200,19 @@ def _tile(name, alt, cap):
             f'<img src="assets/g-{name}-s.jpg" alt="{esc(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async"></a>')
 
 
+def tiles(names):
+    """Ô ảnh lấy theo tên trong GAL, đúng thứ tự truyền vào (dùng lại ở trang Vùng trồng Di Linh)."""
+    by = {x[1]: x for x in GAL}
+    return ''.join(_tile(n, by[n][6], by[n][7]) for n in names)
+
+
+def lb_dialog():
+    """Khung xem ảnh lớn dùng chung cho mọi trang có lưới ảnh .gv-i (GAL_JS)."""
+    return (f'<dialog class="lb" id="lb" aria-label="Xem ảnh lớn"><figure class="lb-f"><img alt=""><figcaption><span class="lb-c"></span><b class="lb-k"></b></figcaption></figure>'
+            f'<button class="lb-x" type="button" aria-label="Đóng">{SVG_X}</button><button class="lb-p" type="button" aria-label="Ảnh trước">{SVG_P}</button>'
+            f'<button class="lb-n" type="button" aria-label="Ảnh sau">{SVG_N}</button></dialog>')
+
+
 def counts():
     return {g: sum(1 for x in GAL if x[0] == g) for g, *_ in GROUPS}
 
@@ -188,7 +222,7 @@ def page():
     nav = ''.join(f'<a href="#{g}">{t} <small>{n[g]}</small></a>' for g, t, *_ in GROUPS)
     top = hero('bg-anh-vuon', 'Trái cà phê chín gom trong lòng bàn tay người hái',
                f'<p class="eye">Ảnh vườn MeDili · {len(GAL)} ảnh</p><h1>Từ cành chín <em>đến sân phơi.</em></h1>'
-               '<p class="sub">Mùa vụ cà phê qua từng tấm ảnh: trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, rồi phơi và xay xát. Bấm vào ảnh để xem lớn.</p>'
+               '<p class="sub">Mùa vụ cà phê qua từng tấm ảnh: trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, phơi và xay xát, rồi pha cà phê giữa đồi. Bấm vào ảnh để xem lớn.</p>'
                f'<nav class="ph-nav" aria-label="Nhóm ảnh">{nav}</nav>', cls='phero ph-s')
     body = ''
     for k, (g, t, h2, lead, links) in enumerate(GROUPS, 1):
@@ -201,9 +235,7 @@ def page():
              f'<p>Vườn và xưởng rang ở {ADDR_FARM}. Gọi trước để MeDili hẹn lịch: <span class="sel">{PHONE}</span>.</p>'
              '<p class="note">Ảnh trên trang có logo MeDili. Nếu cần dùng ảnh cho bài viết hay sự kiện, bạn vui lòng liên hệ MeDili.</p>'
              f'<div class="cta"><a class="btn main" href="{ZALO}" target="_blank" rel="noopener">Nhắn Zalo MeDili</a><a class="btn" href="vung-trong.html">Vùng trồng Di Linh</a><a class="btn" href="cua-hang.html">Chọn cà phê</a></div></div></section>')
-    dlg = (f'<dialog class="lb" id="lb" aria-label="Xem ảnh lớn"><figure class="lb-f"><img alt=""><figcaption><span class="lb-c"></span><b class="lb-k"></b></figcaption></figure>'
-           f'<button class="lb-x" type="button" aria-label="Đóng">{SVG_X}</button><button class="lb-p" type="button" aria-label="Ảnh trước">{SVG_P}</button>'
-           f'<button class="lb-n" type="button" aria-label="Ảnh sau">{SVG_N}</button></dialog>')
+    dlg = lb_dialog()
     return doc(FILE, 'Ảnh vườn MeDili',
-               'Ảnh mùa vụ cà phê của MeDili: vườn vào mùa, hái bằng tay, máy cày chở bao rời vườn, phơi và xay xát.',
+               'Ảnh mùa vụ cà phê của MeDili: vườn vào mùa, hái bằng tay, máy cày chở bao rời vườn, phơi và xay xát, pha cà phê giữa đồi.',
                body + dlg, css=PHOTO_CSS + GAL_CSS, js=GAL_JS, wrap_cls='wrap av', hero=top)

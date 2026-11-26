@@ -1,6 +1,8 @@
 # Trang mới từ web Manus, phần 1: Câu chuyện, Đội ngũ, Vùng trồng, HORECA, Xưởng rang, MeDili Café
 from kit import *
 import ill
+import anhvuon
+import clipvuon
 
 # ---------- khối dùng lại ----------
 TRIP = [
@@ -175,6 +177,12 @@ def doi_ngu():
 
 
 # ---------- Vùng trồng ----------
+# 26/11/2026: chị Ngân bổ sung ảnh và video cho mục Vùng trồng Di Linh. Dải 3 ảnh "Vào mùa" thành lưới 12 ảnh xem lớn được
+# (gồm cả ba cảnh cũ: chùm chín, chằng bao lên máy cày, máy cày nối đuôi) và thêm khối 6 clip quay tại vườn (art/clipvuon.py).
+VT_MOSAIC = ['hai-nang-chum', 'vuon-chin-khong-deu', 'thu-chat-bao', 'hai-ao-medili', 'vuon-ba-mau', 'hai-gio-trai',
+             'vuon-chum-do-xen', 'vuon-troi-xanh', 'thu-noi-duoi', 'doi-canh-trai', 'vuon-chum-chin', 'vuon-chin-sam']
+
+
 def vung_trong():
     body = head('Vùng đất Di Linh', 'Di Linh. <em>Nơi câu chuyện bắt đầu.</em>',
                 f'Nguyên liệu của MeDili đến từ bốn vùng trồng ở Lâm Đồng với tổng diện tích {ha(TOTAL)} ha, cùng {LINKED} ha liên kết tại Di Linh. Hai con số được tính riêng: {LINKED} ha liên kết không gộp vào {ha(TOTAL)} ha.',
@@ -188,10 +196,12 @@ def vung_trong():
  <div><b>15 năm</b><span>tuổi cây trong vườn</span></div>
 </section>
 
-<section class="pgal" aria-label="Vào mùa">
- <h2 class="p-h2" style="margin:0">Vào mùa <em>ở vườn MeDili.</em></h2>
- <p>Ảnh mùa thu hoạch 2026: trái chín trên cành, bao cà phê lên máy cày rời vườn.</p>
- {strip(STRIP_MUAVU)}
+{clipvuon.section()}
+
+<section class="pgal" aria-labelledby="h-vao-mua">
+ <h2 class="p-h2" id="h-vao-mua" style="margin:0">Vào mùa <em>ở vườn MeDili.</em></h2>
+ <p>Ảnh mùa thu hoạch 2026: trái chín trên cành, bàn tay hái, bao cà phê lên máy cày rời vườn. Bấm vào ảnh để xem lớn.</p>
+ <div class="gv">{anhvuon.tiles(VT_MOSAIC)}</div>
  <div class="lnks" style="margin-top:0"><a class="lnk" href="anh-vuon.html">Xem toàn bộ ảnh vườn</a></div>
 </section>
 
@@ -245,9 +255,10 @@ def vung_trong():
  </div>
 </section>
 '''
+    body += anhvuon.lb_dialog()
     return doc('vung-trong.html', 'Vùng trồng Di Linh',
                f'Bốn vùng trồng của MeDili ở Lâm Đồng: Tà Hine, Tân Nghĩa, Lộc Châu 3, Gia Bắc 2, tổng diện tích {ha(TOTAL)} ha, cùng {LINKED} ha liên kết tại Di Linh.',
-               body, css=CLIP_CSS, wrap_cls='wrap pg')
+               body, css=CLIP_CSS + anhvuon.GAL_CSS + clipvuon.CSS, js=anhvuon.GAL_JS + clipvuon.JS, wrap_cls='wrap pg')
 
 
 # ---------- HORECA ----------
