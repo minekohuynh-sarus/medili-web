@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-25T13:42:00+07:00",
+ "updated": "2026-11-26T13:38:00+07:00",
  "days": [
   {
    "date": "2026-10-31",
@@ -516,6 +516,36 @@
     {
      "name": "Doanh nghiệp Kinh tế Xanh",
      "url": "https://doanhnghiepkinhtexanh.vn/gia-ca-phe-hom-nay-25112026-robusta-giam-phien-thu-12-sat-moc-2800-usd-a56448.html"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-26",
+   "time": "13:38",
+   "vn": {
+    "lamdong": 69200,
+    "daklak": 69700,
+    "gialai": 69700,
+    "daknong": 70000
+   },
+   "world": {
+    "robusta": 2798,
+    "robustaChg": -15,
+    "robustaPct": -0.53,
+    "robustaTerm": "01/2027",
+    "arabica": 270.0,
+    "arabicaChg": 7.4,
+    "arabicaPct": 2.82,
+    "arabicaTerm": "03/2027"
+   },
+   "src": [
+    {
+     "name": "Báo Lâm Đồng",
+     "url": "https://baolamdong.vn/gia-ca-phe/the-gioi"
+    },
+    {
+     "name": "Báo Lâm Đồng",
+     "url": "https://baolamdong.vn/gia-ca-phe/tinh-lam-dong"
     }
    ]
   }
