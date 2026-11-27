@@ -413,56 +413,6 @@
    "y": 0.5,
    "alt": "Người mặc áo MeDili đứng bên cây cà phê trĩu trái dưới trời xanh",
    "cap": "Người vườn MeDili bên cây trĩu trái."
-  },
-  {
-   "nhom": "doi",
-   "ten": "doi-canh-trai",
-   "nguon": "dot3/IMG_0479.jpg",
-   "ty_le": null,
-   "x": 0.5,
-   "y": 0.5,
-   "alt": "Cành cà phê chín đỏ phía trước bàn pha nhìn ra đồi",
-   "cap": "Cành chín đỏ trước bàn pha."
-  },
-  {
-   "nhom": "doi",
-   "ten": "doi-ban-pha",
-   "nguon": "dot3/IMG_0490.jpg",
-   "ty_le": null,
-   "x": 0.5,
-   "y": 0.5,
-   "alt": "Bàn pha cà phê với hũ hạt MeDili, phía xa là đồi và hồ",
-   "cap": "Bàn pha nhìn ra đồi và hồ."
-  },
-  {
-   "nhom": "doi",
-   "ten": "doi-trai-tren-tay",
-   "nguon": "dot3/IMG_0493.jpg",
-   "ty_le": null,
-   "x": 0.5,
-   "y": 0.5,
-   "alt": "Bàn tay cầm trái cà phê chín trước bàn pha và đồi xa",
-   "cap": "Trái chín trên tay, đồi xa phía sau."
-  },
-  {
-   "nhom": "doi",
-   "ten": "doi-espresso",
-   "nguon": "dot3/IMG_0488.jpg",
-   "ty_le": null,
-   "x": 0.5,
-   "y": 0.5,
-   "alt": "Ly espresso vừa chiết cạnh khay trái cà phê chín",
-   "cap": "Espresso bên khay trái chín."
-  },
-  {
-   "nhom": "doi",
-   "ten": "doi-ly-nhieu-lop",
-   "nguon": "dot3/IMG_0638.jpg",
-   "ty_le": 1,
-   "x": 0.5,
-   "y": 0.64,
-   "alt": "Ly cà phê nhiều lớp trên bàn gỗ, cạnh hũ hạt MeDili và chùm trái chín",
-   "cap": "Ly cà phê bên chùm trái chín."
   }
  ],
  "vung_trong": [
@@ -475,7 +425,6 @@
   "vuon-chum-do-xen",
   "vuon-troi-xanh",
   "thu-noi-duoi",
-  "doi-canh-trai",
   "vuon-chum-chin",
   "vuon-chin-sam"
  ]
