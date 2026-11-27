@@ -35,7 +35,8 @@ VUNG_TRONG = [n for n in _J.get('vung_trong', []) if n in {x[1] for x in GAL}][:
 
 # ảnh nền: tên -> (nguồn, máy tính (tỷ lệ, tâm x, tâm y, rộng ra), điện thoại (...))
 BG = {
-    'bg-trang-chu': (D('src/IMG_0603.jpg'), (16 / 9, .5, .6, 1920), (3 / 5, .5, .5, 900)),
+    # đầu trang chủ: chùm Robusta chín đỏ, không có bàn tay (chị Ngân 27/11/2026: ảnh bàn tay hái trước đây bị xấu); tên tệp mới để khách không thấy ảnh cũ còn lưu
+    'bg-trang-chu-2': (D('dot3/IMG_0582.jpg'), (16 / 9, .5, .42, 1920), (3 / 5, .62, .5, 900)),
     'bg-mua-vu': (A('e7526603'), (12 / 5, .5, .5, 1920), (3 / 4, .55, .5, 900)),
     'bg-trong-kho': (A('b75910ab'), (12 / 5, .5, .62, 1920), (3 / 4, .42, .55, 900)),
     'bg-anh-vuon': (A('b922b23f'), (12 / 5, .5, .6, 1920), (4 / 5, .64, .5, 900)),
@@ -186,7 +187,8 @@ def page():
     nav = ''.join(f'<a href="#{g}">{t} <small>{n[g]}</small></a>' for g, t, *_ in GROUPS if n[g])
     top = hero('bg-anh-vuon', 'Trái cà phê chín gom trong lòng bàn tay người hái',
                f'<p class="eye">Ảnh vườn MeDili · {len(GAL)} ảnh</p><h1>Từ cành chín <em>đến sân phơi.</em></h1>'
-               '<p class="sub">Mùa vụ cà phê qua từng tấm ảnh: trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, phơi và xay xát, rồi pha cà phê giữa đồi. Bấm vào ảnh để xem lớn.</p>'
+               + ('<p class="sub">Mùa vụ cà phê qua từng tấm ảnh: trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, phơi và xay xát, rồi pha cà phê giữa đồi. Bấm vào ảnh để xem lớn.</p>'
+                  if n.get('doi') else '<p class="sub">Mùa vụ cà phê qua từng tấm ảnh: trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, rồi phơi và xay xát. Bấm vào ảnh để xem lớn.</p>') +
                f'<nav class="ph-nav" aria-label="Nhóm ảnh">{nav}</nav>', cls='phero ph-s')
     body = ''
     for k, (g, t, h2, lead, links) in enumerate([x for x in GROUPS if n[x[0]]], 1):
@@ -201,5 +203,5 @@ def page():
              f'<div class="cta"><a class="btn main" href="{ZALO}" target="_blank" rel="noopener">Nhắn Zalo MeDili</a><a class="btn" href="vung-trong.html">Vùng trồng Di Linh</a><a class="btn" href="cua-hang.html">Chọn cà phê</a></div></div></section>')
     dlg = lb_dialog()
     return doc(FILE, 'Ảnh vườn MeDili',
-               'Ảnh mùa vụ cà phê của MeDili: vườn vào mùa, hái bằng tay, máy cày chở bao rời vườn, phơi và xay xát, pha cà phê giữa đồi.',
+               'Ảnh mùa vụ cà phê của MeDili: vườn vào mùa, hái bằng tay, máy cày chở bao rời vườn, phơi và xay xát' + (', pha cà phê giữa đồi.' if n.get('doi') else '.'),
                body + dlg, css=PHOTO_CSS + GAL_CSS, js=GAL_JS, wrap_cls='wrap av', hero=top)

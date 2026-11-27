@@ -212,7 +212,7 @@ BAND_KHO = anhvuon.band('bg-trong-kho', 'Xe xúc làm việc trong kho cà phê 
                         '<a class="btn main" href="quan-medili.html">Ghé MeDili Café</a><a class="btn" href="lien-he.html">Liên hệ &amp; bản đồ</a>')
 
 HOME_BODY = f'''{header('index.html')}
-{anhvuon.hero('bg-trang-chu', 'Bàn tay hái giữa những chùm cà phê chín', f"""{anhvuon.logo_kem()}<p class="eye">Chương 01 · Nhà rang cà phê chuyên nghiệp</p>
+{anhvuon.hero('bg-trang-chu-2', 'Nhiều chùm Robusta chín đỏ xen vài trái xanh trên cành', f"""{anhvuon.logo_kem()}<p class="eye">Chương 01 · Nhà rang cà phê chuyên nghiệp</p>
   <h1>Từ gốc Cà Sẻ.<br><em>Đến nghệ thuật rang.</em></h1>
   <p class="sub">MeDili là nhà rang cà phê trên cao nguyên Di Linh, chọn Cà Sẻ Di Linh làm nguyên liệu gốc. Vùng trồng canh tác từ năm 2010, xưởng rang đặt tại Thôn 11, xã Di Linh. MeDili rang cà phê cho gia đình, quán cà phê, nhà hàng và khách sạn.</p>
   <div class="cta"><a class="btn main" href="cua-hang.html">Chọn cà phê</a><a class="btn" href="tim-gu.html">Tìm gu của bạn</a><a class="btn" href="horeca.html">Giải pháp HORECA</a></div>

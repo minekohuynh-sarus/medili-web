@@ -1,6 +1,6 @@
 {
-"e0329c09b": {
-"s": "Ảnh mùa vụ cà phê của MeDili: vườn vào mùa, hái bằng tay, máy cày chở bao rời vườn, phơi và xay xát, pha cà phê giữa đồi.",
+"faa74ac3f": {
+"s": "Ảnh mùa vụ cà phê của MeDili: vườn vào mùa, hái bằng tay, máy cày chở bao rời vườn, phơi và xay xát.",
 "k": "a",
 "f": [
 "anh-vuon.html"
@@ -5107,13 +5107,13 @@
 ],
 "c": ""
 },
-"4bf2ebcb4": {
-"s": "Ảnh vườn MeDili · 39 ảnh",
+"e4184faf2": {
+"s": "Ảnh vườn MeDili · 34 ảnh",
 "k": "h",
 "f": [
 "anh-vuon.html"
 ],
-"c": "Ảnh vườn MeDili · 39 ảnh"
+"c": "Ảnh vườn MeDili · 34 ảnh"
 },
 "fd4422a7d": {
 "s": "Từ cành chín <1>đến sân phơi.</1>",
@@ -5123,8 +5123,8 @@
 ],
 "c": "Từ cành chín <em>đến sân phơi.</em>"
 },
-"f40bdc26b": {
-"s": "Mùa vụ cà phê qua từng tấm ảnh: trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, phơi và xay xát, rồi pha cà phê giữa đồi. Bấm vào ảnh để xem lớn.",
+"f5253e286": {
+"s": "Mùa vụ cà phê qua từng tấm ảnh: trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, rồi phơi và xay xát. Bấm vào ảnh để xem lớn.",
 "k": "h",
 "f": [
 "anh-vuon.html"
@@ -5139,8 +5139,8 @@
 ],
 "c": ""
 },
-"6d0e11ec7": {
-"s": "<1>Vườn <2>13</2></1><3>Hái <4>10</4></3><5>Thu hoạch <6>4</6></5><7>Phơi & xay <8>7</8></7><9>Giữa đồi <10>5</10></9>",
+"095da2bb3": {
+"s": "<1>Vườn <2>13</2></1><3>Hái <4>10</4></3><5>Thu hoạch <6>4</6></5><7>Phơi & xay <8>7</8></7>",
 "k": "h",
 "f": [
 "anh-vuon.html"
@@ -5294,6 +5294,7 @@
 "k": "a",
 "f": [
 "anh-vuon.html",
+"index.html",
 "vung-trong.html"
 ],
 "c": ""
@@ -5446,8 +5447,7 @@
 "s": "Bàn tay hái giữa những chùm cà phê chín",
 "k": "a",
 "f": [
-"anh-vuon.html",
-"index.html"
+"anh-vuon.html"
 ],
 "c": ""
 },
@@ -5843,120 +5843,6 @@
 },
 "f6eb15be2": {
 "s": "Nhân xanh trong đĩa, đặt trên tấm thảm bánh xe hương vị",
-"k": "a",
-"f": [
-"anh-vuon.html"
-],
-"c": ""
-},
-"b508e2a63": {
-"s": "05 · Giữa đồi",
-"k": "h",
-"f": [
-"anh-vuon.html"
-],
-"c": "05 · Giữa đồi"
-},
-"e718b2539": {
-"s": "Từ vườn đến ly, <1>giữa đồi.</1>",
-"k": "h",
-"f": [
-"anh-vuon.html"
-],
-"c": "Từ vườn đến ly, <em>giữa đồi.</em>"
-},
-"4ded4c3a5": {
-"s": "Trái cà phê chín, hạt rang MeDili và bàn pha nhìn ra đồi và hồ: một buổi pha cà phê ngoài trời.",
-"k": "h",
-"f": [
-"anh-vuon.html"
-],
-"c": "Trái cà phê chín, hạt rang MeDili và bàn pha nhìn ra đồi và hồ: một buổi pha cà "
-},
-"fc2cf2659": {
-"s": "<1>Công thức pha</1><2>Chọn cà phê</2>",
-"k": "h",
-"f": [
-"anh-vuon.html"
-],
-"c": "<a class=\"lnk\" href=\"cong-thuc-pha.html\">Công thức pha</a><a class=\"lnk\" href=\"c"
-},
-"5bf798ea3": {
-"s": "Cành chín đỏ trước bàn pha.",
-"k": "a",
-"f": [
-"anh-vuon.html",
-"vung-trong.html"
-],
-"c": ""
-},
-"3779ef331": {
-"s": "Cành cà phê chín đỏ phía trước bàn pha nhìn ra đồi",
-"k": "a",
-"f": [
-"anh-vuon.html",
-"vung-trong.html"
-],
-"c": ""
-},
-"71d312079": {
-"s": "Bàn pha nhìn ra đồi và hồ.",
-"k": "a",
-"f": [
-"anh-vuon.html"
-],
-"c": ""
-},
-"620d690f0": {
-"s": "Bàn pha cà phê với hũ hạt MeDili, phía xa là đồi và hồ",
-"k": "a",
-"f": [
-"anh-vuon.html"
-],
-"c": ""
-},
-"e98afbaa6": {
-"s": "Trái chín trên tay, đồi xa phía sau.",
-"k": "a",
-"f": [
-"anh-vuon.html"
-],
-"c": ""
-},
-"bd3116386": {
-"s": "Bàn tay cầm trái cà phê chín trước bàn pha và đồi xa",
-"k": "a",
-"f": [
-"anh-vuon.html"
-],
-"c": ""
-},
-"63c23acf7": {
-"s": "Espresso bên khay trái chín.",
-"k": "a",
-"f": [
-"anh-vuon.html"
-],
-"c": ""
-},
-"1b695978c": {
-"s": "Ly espresso vừa chiết cạnh khay trái cà phê chín",
-"k": "a",
-"f": [
-"anh-vuon.html"
-],
-"c": ""
-},
-"33913c24e": {
-"s": "Ly cà phê bên chùm trái chín.",
-"k": "a",
-"f": [
-"anh-vuon.html"
-],
-"c": ""
-},
-"1c42de966": {
-"s": "Ly cà phê nhiều lớp trên bàn gỗ, cạnh hũ hạt MeDili và chùm trái chín",
 "k": "a",
 "f": [
 "anh-vuon.html"
@@ -31210,7 +31096,7 @@
 "f": [
 "index.html"
 ],
-"c": "<span class=\"k\">Giá cà phê <span id=\"tk-d\" translate=\"no\">26/11</span></span><sp"
+"c": "<span class=\"k\">Giá cà phê <span id=\"tk-d\" translate=\"no\">27/11</span></span><sp"
 },
 "7164c1bc7": {
 "s": "Chương 02 · Bộ sưu tập MeDili",
@@ -31381,8 +31267,8 @@
 ],
 "c": "Mỗi mùa chín <em>là một câu chuyện.</em>"
 },
-"9ddac2a28": {
-"s": "Trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, rồi phơi và xay xát. Trọn mùa vụ trong 39 tấm ảnh.",
+"69fa9ca2e": {
+"s": "Trái chín trên cành, bàn tay hái, máy cày chở bao rời vườn, rồi phơi và xay xát. Trọn mùa vụ trong 34 tấm ảnh.",
 "k": "h",
 "f": [
 "index.html"
