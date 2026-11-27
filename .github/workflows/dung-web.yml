@@ -1,0 +1,66 @@
+# Dựng lại web MeDili mỗi khi nhánh main có thay đổi (27/11/2026).
+# Trang quản trị medili.vn/quan-tri lưu dữ liệu vào art/data/*.json; bước này chạy art/build_manus.py rồi đẩy các trang đã dựng
+# (site-new4/, artifact-main/) lên main. Hosting medili.vn lấy site-new4/ về mỗi 30 phút (hosting/sync.php), hoặc ngay khi bấm
+# "Cập nhật web ngay" ở trang quản trị. Lần đẩy của bước này dùng GITHUB_TOKEN nên không tự kích hoạt lại chính nó.
+# MEDILI_BO_DONG_GOI=1: giữ nguyên hd3d.js và qrcode.js đã có trong kho (không cần cài esbuild).
+name: Dựng web MeDili
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dung-web
+  cancel-in-progress: false
+
+jobs:
+  dung:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Cài Pillow
+        run: python -m pip install --quiet pillow==12.3.0
+
+      - name: Dựng web và đẩy lên main
+        env:
+          MEDILI_BO_DONG_GOI: '1'
+          TZ: Asia/Ho_Chi_Minh
+        run: |
+          git config user.name "MeDili tự dựng web"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for lan in 1 2 3 4 5; do
+            git fetch --quiet --depth 1 origin main
+            git reset --quiet --hard origin/main
+            if ! (cd art && python build_manus.py > /tmp/dung.log 2>&1); then
+              tail -60 /tmp/dung.log
+              echo "::error::Dựng web lỗi, web medili.vn giữ bản trước."
+              exit 1
+            fi
+            grep '^!!\|thông tin liên hệ mới' /tmp/dung.log || true
+            git add -A site-new4 artifact-main
+            if git diff --cached --quiet; then
+              echo "Web đã đúng với dữ liệu mới nhất, không có gì cần đẩy."
+              exit 0
+            fi
+            git commit --quiet -m "Tự dựng web theo dữ liệu mới ($(git rev-parse --short HEAD))"
+            if git push --quiet origin HEAD:main; then
+              echo "Đã đẩy $(git rev-parse --short HEAD) lên main."
+              exit 0
+            fi
+            echo "main vừa có thay đổi mới, dựng lại (lần $lan)."
+            sleep $((lan * 4))
+          done
+          echo "::error::Không đẩy được lên main sau 5 lần."
+          exit 1

@@ -5,7 +5,9 @@ import os, sys
 from PIL import Image, ImageOps, ImageFilter
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from make_photos import OUT, LOGO, SRC, SRC2, crop, watermark
-from anhvuon import GAL, BG
+from anhvuon import GAL_ALL, BG
+# ảnh có ảnh gốc trong máy (ảnh tải lên ở trang quản trị đã được trình duyệt thu nhỏ, đóng logo sẵn: nguon = null)
+GAL = [(x['nhom'], x['ten'], x['nguon'], x.get('ty_le'), x.get('x', .5), x.get('y', .5), x['alt'], x['cap']) for x in GAL_ALL if x.get('nguon')]
 
 LONG, SMALL = 1600, 760   # cạnh dài ảnh xem lớn; khung ảnh nhỏ trong lưới
 

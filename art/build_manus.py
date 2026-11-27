@@ -4,6 +4,7 @@ import os, re, json, shutil, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kit import *
 import ill, pages_a, pages_b, chiet, coldbrew, traichin, visinh, huong, banhxe, phanbiet, nhanxanh, cuahang, congthuc, anhvuon, huongdan, donghanh, chinhsach, thanhtoan, tintuc, lenmentuthan
+import sanpham, caidat   # dữ liệu sửa ở trang quản trị medili.vn/quan-tri: art/data/san-pham.json, cai-dat.json (27/11/2026)
 
 os.makedirs(OUT, exist_ok=True)
 rd = lambda f: open(os.path.join(BASE, f), encoding='utf8').read()
@@ -23,10 +24,19 @@ def price_fix(s):
     return s
 
 # ---------- danh mục 14 dòng từ Phòng chọn mua ----------
+def parse_lines(src):
+    a, b = src.index('const CL='), src.index('const byId=')
+    node = subprocess.run(['node', '-e', src[a:b] + ';process.stdout.write(JSON.stringify(S))'], capture_output=True, text=True, check=True)
+    return {x['id']: x for x in json.loads(node.stdout)}
+
+
 shop = price_fix(rd('mua-hang.html'))
-a, b = shop.index('const CL='), shop.index('const byId=')
-node = subprocess.run(['node', '-e', shop[a:b] + ';process.stdout.write(JSON.stringify(S))'], capture_output=True, text=True, check=True)
-P = {x['id']: x for x in json.loads(node.stdout)}
+P = parse_lines(shop)
+# giá, lời mô tả sửa ở trang quản trị: ghi vào dữ liệu Phòng chọn mua, mọi trang dùng P đều theo (Cửa hàng, HORECA, trang chủ…)
+LINE_OV = sanpham.line_overrides(P)
+if LINE_OV:
+    shop = sanpham.inject(shop, LINE_OV)
+    P = parse_lines(shop)
 assert len(P) == 14, len(P)
 
 # ---------- hình trái cà phê và cây trên trang chủ cũ ----------
@@ -46,6 +56,7 @@ seg = lambda start, end: tg[tg.index(start):tg.index(end)]
 TG_DATA = (seg('const PRODUCTS = [', '/* a = tỷ lệ Arabica phù hợp') + seg('const QUESTIONS = [', 'function scoreAnswers') +
            seg('function scoreAnswers', 'const state = {'))
 assert 'RECIPES' in TG_DATA and 'function profile' in TG_DATA
+TG_DATA = sanpham.patch_tg(TG_DATA, P)   # giá trong bài Tìm gu theo giá đang bán
 # đối chiếu giá với Phòng chọn mua
 tgp = json.loads(subprocess.run(['node', '-e', TG_DATA.split('const QUESTIONS')[0] + ';process.stdout.write(JSON.stringify(PRODUCTS))'],
                                 capture_output=True, text=True, check=True).stdout)
@@ -133,7 +144,7 @@ for f in OLD:
         more = '<div class="lnks" style="margin-top:0"><a class="lnk" href="anh-vuon.html">Xem toàn bộ ảnh vườn</a></div>' if f == 'vuon.html' else ''
         s = s.replace('</header>', f'</header>\n<section class="pgal" aria-label="{t}"><h2>{t}</h2><p>{nb(d)}</p>{strip(items)}{more}</section>', 1)
     if f == 'mua-hang.html':
-        s = price_fix(s)
+        s = sanpham.inject(price_fix(s), LINE_OV)
         assert s.count("col:'#2F6B4A'") == 2 and s.count("col:'#3F7F5A'") == 1
         s = s.replace("col:'#2F6B4A'", "col:'#B5832F'").replace("col:'#3F7F5A'", "col:'#C9A15B'")
         assert s.count('</header>') == 1
@@ -370,14 +381,16 @@ open(os.path.join(AM, 'index.html'), 'w', encoding='utf8').write(re.sub(r'href="
 shutil.copy(os.path.join(HERE, '..', 'run-check', 'gia-ca-phe.json'), os.path.join(OUT, 'gia-ca-phe.json'))
 # Mô hình 3D trang Hướng dẫn pha: gộp art/hd3d.js với three.js (giấy phép MIT, giữ ở cuối file) thành một file assets/hd3d.js.
 # Ảnh dự phòng assets/hd-*.webp (khi máy không chạy được 3D) chụp lại bằng: node hdshot.js
-subprocess.run([os.path.join(HERE, 'node_modules', '.bin', 'esbuild'), os.path.join(HERE, 'hd3d.js'), '--bundle', '--format=esm', '--minify',
+# Bước tự dựng trên GitHub (trang quản trị, 27/11/2026) đặt MEDILI_BO_DONG_GOI=1: giữ nguyên hd3d.js và qrcode.js đã có trong kho.
+DONG_GOI = not os.environ.get('MEDILI_BO_DONG_GOI')
+if DONG_GOI: subprocess.run([os.path.join(HERE, 'node_modules', '.bin', 'esbuild'), os.path.join(HERE, 'hd3d.js'), '--bundle', '--format=esm', '--minify',
                 '--target=es2020', '--legal-comments=eof', '--log-level=warning', '--outfile=' + os.path.join(OUT, 'assets', 'hd3d.js')], check=True)
 # Thư viện dựng mã QR cho trang Thanh toán: qrcode-generator (Kazuhiko Arase, giấy phép MIT), nén lại, giữ dòng giấy phép ở đầu file.
-subprocess.run([os.path.join(HERE, 'node_modules', '.bin', 'esbuild'), os.path.join(HERE, 'node_modules', 'qrcode-generator', 'dist', 'qrcode.js'), '--minify',
+if DONG_GOI: subprocess.run([os.path.join(HERE, 'node_modules', '.bin', 'esbuild'), os.path.join(HERE, 'node_modules', 'qrcode-generator', 'dist', 'qrcode.js'), '--minify',
                 '--target=es2017', '--log-level=warning', '--outfile=' + os.path.join(OUT, 'assets', 'qrcode.js')], check=True)
 _qr = os.path.join(OUT, 'assets', 'qrcode.js')
 _qrs = open(_qr, encoding='utf8').read()
-open(_qr, 'w', encoding='utf8').write('/*! QR Code Generator for JavaScript (qrcode-generator 2.0.4) · Copyright (c) 2009 Kazuhiko Arase · MIT license · '
+if DONG_GOI: open(_qr, 'w', encoding='utf8').write('/*! QR Code Generator for JavaScript (qrcode-generator 2.0.4) · Copyright (c) 2009 Kazuhiko Arase · MIT license · '
                                     'http://www.opensource.org/licenses/mit-license.php · QR Code is a registered trademark of DENSO WAVE INCORPORATED */\n' + _qrs)
 # bản tiếng Anh, Nhật, Trung trong /en /ja /zh, dịch theo từ điển art/i18n (24/11/2026)
 import i18n
@@ -390,6 +403,10 @@ open(os.path.join(OUT, 'tim-kiem.json'), 'w', encoding='utf8').write(cuahang.sea
 open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf8').write(cuahang.sitemap(OUT))
 open(os.path.join(OUT, 'robots.txt'), 'w', encoding='utf8').write(cuahang.ROBOTS)
 open(os.path.join(HERE, '_new_pages.txt'), 'w').write('\n'.join(sorted(NEW)))
+# số điện thoại, Zalo, Facebook, email, giờ trả lời Zalo đổi ở trang quản trị: thay trên mọi trang đã dựng, cả bản dịch
+_n = caidat.apply_out([OUT, os.path.join(AM, 'index.html')])
+if _n:
+    print('thông tin liên hệ mới:', _n, 'tệp')
 tot = 0
 for f in sorted(os.listdir(OUT)):
     n = os.path.getsize(os.path.join(OUT, f)); tot += n

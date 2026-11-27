@@ -10,6 +10,7 @@
 import json, os, re, html as H, unicodedata
 from kit import *
 from pages_a import head
+import sanpham
 
 SITE = 'https://www.medili.vn/'
 GREENFIX = {'#2F6B4A': '#B5832F', '#3F7F5A': '#C9A15B'}   # giống bản Phòng chọn mua trên web
@@ -178,6 +179,7 @@ def products(P):
         x.setdefault('grinds', None)
         x['slug'] = slug
         x['file'] = f'sp-{slug}.html'
+        sanpham.catalog(x, 'ngu' if i in NGU else 'sap' if i in NEW6 else 'core' if i in sanpham.TG_ID else 'le')   # trang quản trị (27/11/2026)
         out.append(x)
     assert len(out) == len(ORDER) and len({x['file'] for x in out}) == len(ORDER)
     return out
@@ -207,15 +209,20 @@ def bag(x, cls=''):
             f'<span class="sb-l"><b>MeDili</b><i>{esc(x["n"])}</i><small>{esc(x["sub"])}</small></span></div>')
 
 
+def badge_html(x):
+    return {'sap': '<span class="sh-bd">Sắp mở bán</span>', 'het': '<span class="sh-bd">Tạm hết hàng</span>'}.get(x['st'], '')
+
+
 def card(x):
-    badge = '<span class="sh-bd">Sắp mở bán</span>' if x['st'] == 'sap' else ''
+    badge = badge_html(x)
     add = 'Thêm vào giỏ' if x['st'] == 'ban' else 'Hỏi giá'
     return (f'<article class="sh-card" data-id="{x["id"]}"><a class="sh-img" href="{x["file"]}" tabindex="-1" aria-hidden="true">{bag(x)}</a>'
             f'<div class="sh-b">{badge}<p class="sh-k">{esc(x["kline"])}</p>'
             f'<h3 class="sh-h"><a href="{x["file"]}">{esc(x["n"])}</a></h3>'
             f'<p class="sh-t">{esc(x["taste"])}</p><p class="sh-u">{" · ".join(BREW[b] for b in x["brews"])}</p>'
             f'<div class="sh-f"><b class="sh-p">{price_html(x)}</b><div class="sh-a">'
-            f'<button type="button" class="btn small main" data-add="{x["id"]}">{add}</button>'
+            + (f'<a class="btn small main" href="{ZALO}" target="_blank" rel="noopener">Hỏi qua Zalo</a>' if x['st'] == 'het' else
+               f'<button type="button" class="btn small main" data-add="{x["id"]}">{add}</button>') +
             f'<button type="button" class="btn small ghost" data-quick="{x["id"]}">Xem nhanh</button></div></div></div></article>')
 
 
@@ -401,11 +408,11 @@ function buyHTML(x,k){
  <label class="pd-l">${x.grinds?'Bản và độ xay':'Độ xay'}<select name="g">${GR(x).map(g=>`<option>${g}</option>`).join('')}</select></label>
  <div class="pd-q"><span>Số lượng</span><div class="pd-st"><button type="button" data-d="-1" aria-label="Bớt một">−</button><output aria-live="polite">1</output><button type="button" data-d="1" aria-label="Thêm một">+</button></div></div>
  <p class="pd-sum" aria-live="polite"></p>
- <div class="cta" style="margin:0"><button type="button" class="btn main" data-act="add">${ban?'Thêm vào giỏ':'Thêm vào giỏ để hỏi giá'}</button><a class="btn" href="${ZALO}" target="_blank" rel="noopener" data-act="zalo">Hỏi qua Zalo</a></div></div>`}
+ <div class="cta" style="margin:0">${x.st==='het'?'<button type="button" class="btn main" data-act="add" disabled>Tạm hết hàng</button>':`<button type="button" class="btn main" data-act="add">${ban?'Thêm vào giỏ':'Thêm vào giỏ để hỏi giá'}</button>`}<a class="btn" href="${ZALO}" target="_blank" rel="noopener" data-act="zalo">Hỏi qua Zalo</a></div></div>`}
 function wireBuy(root){
  const f=root.querySelector('[data-buy]');if(!f)return;const x=byId[f.dataset.buy],out=f.querySelector('output');
  const st=()=>({w:+f.querySelector('input[type=radio]:checked').value,g:f.querySelector('select').value,q:+out.textContent});
- const sum=()=>{const s=st(),u=unitP(x,0);f.querySelector('.pd-sum').innerHTML=u?`Tạm tính: <b>${fmt(u*s.w*s.q)} đ</b><small>${tuiJ(x)?`Túi 250 g giá ${fmt(u*250)} đ`:`Giá lẻ ${fmt(u*1000)} đ/kg`}, chưa gồm 8% VAT và phí giao.${x.p[1]?' Đơn từ 5 kg được giá sỉ.':''}</small>`:`Giá: <b>Liên hệ</b><small>MeDili báo giá khi nhận đơn.</small>`};
+ const sum=()=>{const s=st(),u=unitP(x,0);f.querySelector('.pd-sum').innerHTML=x.st==='het'?`<b>Tạm hết hàng</b><small>Nhắn Zalo để MeDili báo khi có hàng lại.</small>`:u?`Tạm tính: <b>${fmt(u*s.w*s.q)} đ</b><small>${tuiJ(x)?`Túi 250 g giá ${fmt(u*250)} đ`:`Giá lẻ ${fmt(u*1000)} đ/kg`}, chưa gồm 8% VAT và phí giao.${x.p[1]?' Đơn từ 5 kg được giá sỉ.':''}</small>`:`Giá: <b>Liên hệ</b><small>MeDili báo giá khi nhận đơn.</small>`};
  f.addEventListener('change',sum);
  f.querySelectorAll('[data-d]').forEach(b=>b.addEventListener('click',()=>{out.textContent=Math.max(1,Math.min(99,+out.textContent+ +b.dataset.d));sum()}));
  f.querySelector('[data-act=add]').addEventListener('click',()=>{const s=st();addCart(x.id,s.w,s.g,s.q)});
@@ -480,7 +487,7 @@ CART_JS = r'''
   return L.join('\n')}
  function render(){const r=calc();$('ct-has').hidden=!r.c.length;$('ct-none').hidden=!!r.c.length;
   box.innerHTML=r.rows.map(({it,x,v},i)=>`<div class="ct-row" data-i="${i}"><i class="ct-sw" style="--c:${x.col}" aria-hidden="true"></i>
-  <div class="ct-n"><a href="${x.file}">${esc(x.n)}</a><small>${esc(x.kline)} · ${x.p?(tuiJ(x)?fmt(x.p[0]*250)+' đ/túi 250 g':fmt(unitP(x,r.tier)*1000)+' đ/kg'+(r.tier&&x.p[1]?' (sỉ)':'')):'Liên hệ'}</small>
+  <div class="ct-n"><a href="${x.file}">${esc(x.n)}</a><small>${esc(x.kline)} · ${x.p?(tuiJ(x)?fmt(x.p[0]*250)+' đ/túi 250 g':fmt(unitP(x,r.tier)*1000)+' đ/kg'+(r.tier&&x.p[1]?' (sỉ)':'')):'Liên hệ'}${x.st==='het'?' · Tạm hết hàng':''}</small>
   <select aria-label="Quy cách" data-k="w">${x.packs.map(w=>`<option value="${w}"${w===it.w?' selected':''}>${wlab(w)}</option>`).join('')}</select><select aria-label="Độ xay" data-k="g">${GR(x).map(g=>`<option${g===it.g?' selected':''}>${g}</option>`).join('')}</select></div>
   <div class="ct-r"><div class="pd-st"><button type="button" data-d="-1" aria-label="Bớt một">−</button><output>${it.q}</output><button type="button" data-d="1" aria-label="Thêm một">+</button></div>
   <b>${v?fmt(v)+' đ':'Hỏi giá'}</b><button type="button" class="ct-rm" data-rm>Bỏ khỏi giỏ</button></div></div>`).join('');
@@ -598,7 +605,7 @@ def _ld(x):
              category='Cà phê rang', url=SITE + x['file'])
     if x['p']:
         v, q, u = (x['p'][0] * 250, 250, 'GRM') if tui(x) else (x['p'][0] * 1000, 1, 'KGM')
-        d['offers'] = {'@type': 'Offer', 'priceCurrency': 'VND', 'price': v, 'availability': 'https://schema.org/InStock',
+        d['offers'] = {'@type': 'Offer', 'priceCurrency': 'VND', 'price': v, 'availability': 'https://schema.org/' + ('OutOfStock' if x['st'] == 'het' else 'InStock'),
                        'url': SITE + x['file'], 'priceSpecification': {'@type': 'UnitPriceSpecification', 'price': v,
                        'priceCurrency': 'VND', 'unitCode': u, 'referenceQuantity': {'@type': 'QuantitativeValue', 'value': q, 'unitCode': u}}}
     return '<script type="application/ld+json">' + json.dumps(d, ensure_ascii=False).replace('</', '<\\/') + '</script>'
@@ -610,7 +617,7 @@ def product_page(x, L):
           f'<b>{fm(x["p"][0] * 1000)} đ/kg</b><small>Giá lẻ, chưa gồm 8% VAT và phí giao.'
           + (f' Sỉ 5–20 kg/tháng: {fm(x["p"][1] * 1000)} đ/kg · trên 20 kg/tháng: {fm(x["p"][2] * 1000)} đ/kg.' if x['p'][1] else '') + '</small>'
           if x['p'] else '<b>Liên hệ</b><small>MeDili báo giá khi nhận đơn.</small>')
-    badge = '<span class="sh-bd">Sắp mở bán</span>' if x['st'] == 'sap' else ''
+    badge = badge_html(x)
     bars = ''.join(f'<div class="pd-bar"><span>{BARS[i]}</span><span class="pd-tr"><i style="width:{v}%"></i></span><b>{v}</b></div>' for i, v in enumerate(x['bars']))
     ngu = x['line'] == 'Ngũ Hành'
     tips = '' if ngu else ''.join(f'<li>{esc(t)}</li>' for t in x['tips'])
@@ -750,6 +757,8 @@ def search_index(out_dir):
         if not f.endswith('.html') or f in NOINDEX:
             continue
         s = open(os.path.join(out_dir, f), encoding='utf8').read()
+        if NOINDEX_META in s:   # trang bài tin đã ẩn hoặc đã gỡ (tintuc.py)
+            continue
         t = _plain(re.search(r'<title>(.*?)</title>', s, re.S).group(1))
         m = re.search(r'<meta name="description" content="([^"]*)"', s)
         d = _plain(m.group(1)) if m else ''
@@ -757,6 +766,7 @@ def search_index(out_dir):
         b = re.sub(r'<(script|style|svg|noscript|dialog|select|button)\b.*?</\1>', ' ', b, flags=re.S)
         b = re.sub(r'<div class="mh">.*?class="mh-go"[^>]*>[^<]*</a></div></div>', ' ', b, count=1, flags=re.S)
         b = re.sub(r'<footer class="mf">.*?</footer>', ' ', b, flags=re.S)
+        b = re.sub(r'<aside class="mdtb.*?</aside>', ' ', b, flags=re.S)   # thanh thông báo đầu trang (caidat.py)
         b = re.sub(r'<section class="contact".*?</section>', ' ', b, flags=re.S)
         hs = ' · '.join(dict.fromkeys(_plain(h) for h in re.findall(r'<h[1-3][^>]*>(.*?)</h[1-3]>', b, flags=re.S) if _plain(h)))
         x = _plain(b)
@@ -765,15 +775,20 @@ def search_index(out_dir):
     return json.dumps(items, ensure_ascii=False, separators=(',', ':'))
 
 
+def _in_map(d, f):
+    return (f.endswith('.html') and f not in ('gio-hang.html', 'thanh-toan.html')
+            and NOINDEX_META not in open(os.path.join(d, f), encoding='utf8').read())
+
+
 def sitemap(out_dir):
-    urls = [SITE if f == 'index.html' else SITE + f for f in sorted(os.listdir(out_dir)) if f.endswith('.html') and f not in ('gio-hang.html', 'thanh-toan.html')]
+    urls = [SITE if f == 'index.html' else SITE + f for f in sorted(os.listdir(out_dir)) if _in_map(out_dir, f)]
     for lang in ('en', 'ja', 'zh'):   # bản tiếng Anh, Nhật, Trung (24/11/2026)
         d = os.path.join(out_dir, lang)
         if os.path.isdir(d):
-            urls += [SITE + lang + '/' + ('' if f == 'index.html' else f) for f in sorted(os.listdir(d)) if f.endswith('.html') and f not in ('gio-hang.html', 'thanh-toan.html')]
+            urls += [SITE + lang + '/' + ('' if f == 'index.html' else f) for f in sorted(os.listdir(d)) if _in_map(d, f)]
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
             + ''.join(f'<url><loc>{u}</loc></url>\n' for u in urls) + '</urlset>\n')
 
 
-ROBOTS = ('User-agent: *\nAllow: /\n' + ''.join(f'Disallow: /{l}{f}\n' for f in ('gio-hang.html', 'thanh-toan.html') for l in ('', 'en/', 'ja/', 'zh/'))
+ROBOTS = ('User-agent: *\nAllow: /\nDisallow: /quan-tri/\n' + ''.join(f'Disallow: /{l}{f}\n' for f in ('gio-hang.html', 'thanh-toan.html') for l in ('', 'en/', 'ja/', 'zh/'))
           + f'\nSitemap: {SITE}sitemap.xml\n')

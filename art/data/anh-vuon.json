@@ -1,0 +1,482 @@
+{
+ "nhom": [
+  {
+   "ma": "vuon",
+   "ten": "Vườn",
+   "h2": "Vườn <em>vào mùa.</em>",
+   "lead": "Cà phê không chín cùng lúc. Trên một cành có trái xanh, trái ương và trái chín đỏ, vì thế mùa hái thường phải đi nhiều lượt.",
+   "links": [
+    [
+     "trai-chin.html",
+     "Cỗ máy Trái chín"
+    ],
+    [
+     "vuon.html",
+     "Vườn 12 tháng"
+    ]
+   ]
+  },
+  {
+   "ma": "hai",
+   "ten": "Hái",
+   "h2": "Hái <em>bằng tay.</em>",
+   "lead": "Trái chín được hái bằng tay rồi gom vào giỏ đeo, vào xô. Hái đúng độ chín là bước đầu của hương vị trong ly.",
+   "links": [
+    [
+     "trai-ca-phe.html",
+     "Cấu tạo trái cà phê"
+    ]
+   ]
+  },
+  {
+   "ma": "thu",
+   "ten": "Thu hoạch",
+   "h2": "Mùa thu hoạch <em>rời vườn.</em>",
+   "lead": "Cuối buổi hái, cà phê được đóng bao, chằng lên máy cày và chở theo đường lô ra khỏi vườn, về kho và sân phơi.",
+   "links": [
+    [
+     "vung-trong.html",
+     "Vùng trồng Di Linh"
+    ]
+   ]
+  },
+  {
+   "ma": "phoi",
+   "ten": "Phơi & xay",
+   "h2": "Phơi <em>và xay xát.</em>",
+   "lead": "Trái chín được phơi nguyên trái (Natural), phơi khi hạt còn lớp nhớt (Honey) hoặc xát tươi rồi mới phơi. Cà phê khô mới đem xay xát, tách vỏ để lấy nhân xanh.",
+   "links": [
+    [
+     "len-men-men-bia.html",
+     "Ba cách sơ chế"
+    ],
+    [
+     "nhan-xanh.html",
+     "Chọn nhân xanh"
+    ]
+   ]
+  },
+  {
+   "ma": "doi",
+   "ten": "Giữa đồi",
+   "h2": "Từ vườn đến ly, <em>giữa đồi.</em>",
+   "lead": "Trái cà phê chín, hạt rang MeDili và bàn pha nhìn ra đồi và hồ: một buổi pha cà phê ngoài trời.",
+   "links": [
+    [
+     "cong-thuc-pha.html",
+     "Công thức pha"
+    ],
+    [
+     "cua-hang.html",
+     "Chọn cà phê"
+    ]
+   ]
+  }
+ ],
+ "anh": [
+  {
+   "nhom": "vuon",
+   "ten": "vuon-chum-chin",
+   "nguon": "a9bfa20b",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Chùm cà phê có trái xanh, trái vàng và trái đỏ trên cùng một cành",
+   "cap": "Một chùm, nhiều độ chín."
+  },
+  {
+   "nhom": "vuon",
+   "ten": "vuon-trai-ung",
+   "nguon": "e7526603",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Trái cà phê chuyển màu dưới tán lá",
+   "cap": "Trái chuyển màu dưới tán lá."
+  },
+  {
+   "nhom": "vuon",
+   "ten": "vuon-robusta-canh",
+   "nguon": "10517b97",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Cành Robusta trĩu trái chín đỏ",
+   "cap": "Robusta chín đỏ trĩu cành."
+  },
+  {
+   "nhom": "vuon",
+   "ten": "vuon-canh-do",
+   "nguon": "aa8c978e",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Cành cà phê có những trái đã chín đỏ",
+   "cap": "Những trái chín đầu tiên."
+  },
+  {
+   "nhom": "vuon",
+   "ten": "vuon-tan-la",
+   "nguon": "508fdebf",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Trái cà phê non và trái chín xen giữa tán lá",
+   "cap": "Trái non, trái chín dưới tán lá."
+  },
+  {
+   "nhom": "vuon",
+   "ten": "vuon-robusta-chum",
+   "nguon": "8a31c288",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Những chùm Robusta chín dày trên cành",
+   "cap": "Chùm Robusta chín dày."
+  },
+  {
+   "nhom": "hai",
+   "ten": "hai-tay-hai",
+   "nguon": "src/IMG_0603.jpg",
+   "ty_le": 0.8,
+   "x": 0.5,
+   "y": 0.55,
+   "alt": "Bàn tay hái giữa những chùm cà phê chín",
+   "cap": "Bàn tay hái giữa chùm chín."
+  },
+  {
+   "nhom": "hai",
+   "ten": "hai-robusta",
+   "nguon": "3759dff3",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Hai bàn tay hái chùm Robusta chín đỏ",
+   "cap": "Hái chùm Robusta chín."
+  },
+  {
+   "nhom": "hai",
+   "ten": "hai-tung-trai",
+   "nguon": "381f5a09",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Bàn tay hái từng trái cà phê chín trên cành",
+   "cap": "Hái từng trái chín."
+  },
+  {
+   "nhom": "hai",
+   "ten": "hai-nam-tay",
+   "nguon": "b922b23f",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Trái cà phê chín gom trong lòng bàn tay người hái",
+   "cap": "Trái chín gom trong lòng tay."
+  },
+  {
+   "nhom": "hai",
+   "ten": "hai-vao-gio",
+   "nguon": "7d3bb1b2",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Người hái tuốt trái cà phê vào giỏ đeo bên hông",
+   "cap": "Hái vào giỏ đeo bên hông."
+  },
+  {
+   "nhom": "hai",
+   "ten": "hai-trai-chin",
+   "nguon": "c7aa0b06",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Trái cà phê chín đỏ trên tay người hái",
+   "cap": "Trái chín vừa hái."
+  },
+  {
+   "nhom": "thu",
+   "ten": "thu-xo-trai",
+   "nguon": "67b383a6",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Người hái bê xô đầy trái cà phê chín",
+   "cap": "Một xô trái chín sau buổi hái."
+  },
+  {
+   "nhom": "thu",
+   "ten": "thu-chat-bao",
+   "nguon": "work/H0550.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Hai người mặc áo MeDili chằng bao cà phê trên máy cày",
+   "cap": "Chằng bao cà phê lên máy cày."
+  },
+  {
+   "nhom": "thu",
+   "ten": "thu-noi-duoi",
+   "nguon": "work/H0547.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Máy cày chở bao cà phê nối đuôi trên đường lô",
+   "cap": "Máy cày nối đuôi rời vườn."
+  },
+  {
+   "nhom": "thu",
+   "ten": "thu-trong-kho",
+   "nguon": "b75910ab",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Xe xúc làm việc trong kho cà phê dưới ánh đèn vàng",
+   "cap": "Trong kho, mùa thu hoạch."
+  },
+  {
+   "nhom": "phoi",
+   "ten": "phoi-san-doi",
+   "nguon": "5c6c7a3b",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Cà phê phơi trên sân giữa đồi",
+   "cap": "Phơi trên sân giữa đồi."
+  },
+  {
+   "nhom": "phoi",
+   "ten": "phoi-natural",
+   "nguon": "caff86f5",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Trái cà phê phơi nguyên trái trên giàn",
+   "cap": "Natural: phơi nguyên trái."
+  },
+  {
+   "nhom": "phoi",
+   "ten": "phoi-honey",
+   "nguon": "ce2fd9de",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Hạt cà phê còn lớp nhớt phơi trên giàn",
+   "cap": "Honey: hạt còn lớp nhớt."
+  },
+  {
+   "nhom": "phoi",
+   "ten": "phoi-trai-kho",
+   "nguon": "0a3c5421",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Trái cà phê khô dần trên lưới phơi",
+   "cap": "Trái khô dần trên lưới phơi."
+  },
+  {
+   "nhom": "phoi",
+   "ten": "xay-xat-tuoi",
+   "nguon": "47fb57b2",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Máy xát tươi tách vỏ cà phê",
+   "cap": "Xát tươi: máy tách vỏ khỏi hạt."
+  },
+  {
+   "nhom": "phoi",
+   "ten": "xay-sang-nhan",
+   "nguon": "4653ff83",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Nhân cà phê chảy qua máng gỗ xuống rổ",
+   "cap": "Nhân chảy qua máng sàng."
+  },
+  {
+   "nhom": "phoi",
+   "ten": "xay-nhan-xanh",
+   "nguon": "2c197a7a",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Nhân xanh trong đĩa, đặt trên tấm thảm bánh xe hương vị",
+   "cap": "Nhân xanh sau xay xát."
+  },
+  {
+   "nhom": "vuon",
+   "ten": "vuon-chum-do-xen",
+   "nguon": "dot3/IMG_0582.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Nhiều chùm Robusta chín đỏ xen vài trái xanh trên cành",
+   "cap": "Chùm chín đỏ, xen trái xanh."
+  },
+  {
+   "nhom": "vuon",
+   "ten": "vuon-chum-can",
+   "nguon": "dot3/IMG_0585.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Cận cảnh chùm Robusta chín đỏ dưới tán lá",
+   "cap": "Cận cảnh chùm Robusta chín."
+  },
+  {
+   "nhom": "vuon",
+   "ten": "vuon-chin-khong-deu",
+   "nguon": "dot3/IMG_0239.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Bàn tay đỡ những cành cà phê có trái xanh, trái ương và trái chín đỏ",
+   "cap": "Trên một cành, trái chín không đều."
+  },
+  {
+   "nhom": "vuon",
+   "ten": "vuon-ba-mau",
+   "nguon": "dot3/IMG_0243.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Hai bàn tay nâng cành cà phê có trái xanh, trái cam và trái đỏ",
+   "cap": "Xanh, cam, đỏ trên cùng một cành."
+  },
+  {
+   "nhom": "vuon",
+   "ten": "vuon-doc-canh",
+   "nguon": "dot3/IMG_0240.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Những chùm cà phê chín dần dọc theo cành",
+   "cap": "Chùm trái chín dần dọc cành."
+  },
+  {
+   "nhom": "vuon",
+   "ten": "vuon-troi-xanh",
+   "nguon": "dot3/IMG_0251.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Cành cà phê trĩu trái xanh và trái đỏ dưới bầu trời xanh",
+   "cap": "Trái trĩu cành dưới trời xanh."
+  },
+  {
+   "nhom": "vuon",
+   "ten": "vuon-chin-sam",
+   "nguon": "dot3/IMG_0256.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Những chùm cà phê chín đỏ sẫm buông dài trên cành",
+   "cap": "Chùm chín đỏ sẫm buông dài."
+  },
+  {
+   "nhom": "hai",
+   "ten": "hai-nang-chum",
+   "nguon": "dot3/IMG_0614.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Bàn tay nâng chùm Robusta chín đỏ trên cành",
+   "cap": "Nâng chùm Robusta chín đỏ."
+  },
+  {
+   "nhom": "hai",
+   "ten": "hai-chum-xen",
+   "nguon": "dot3/IMG_0612.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Bàn tay đỡ chùm cà phê có trái chín đỏ xen trái vàng và trái xanh",
+   "cap": "Chùm chín đỏ xen trái vàng trên tay."
+  },
+  {
+   "nhom": "hai",
+   "ten": "hai-gio-trai",
+   "nguon": "dot3/IMG_0280.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Bàn tay xách giỏ đựng trái cà phê chín đỏ dưới gốc cây",
+   "cap": "Giỏ trái chín vừa hái."
+  },
+  {
+   "nhom": "hai",
+   "ten": "hai-ao-medili",
+   "nguon": "dot3/20261114_110252.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Người mặc áo MeDili đứng bên cây cà phê trĩu trái dưới trời xanh",
+   "cap": "Người vườn MeDili bên cây trĩu trái."
+  },
+  {
+   "nhom": "doi",
+   "ten": "doi-canh-trai",
+   "nguon": "dot3/IMG_0479.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Cành cà phê chín đỏ phía trước bàn pha nhìn ra đồi",
+   "cap": "Cành chín đỏ trước bàn pha."
+  },
+  {
+   "nhom": "doi",
+   "ten": "doi-ban-pha",
+   "nguon": "dot3/IMG_0490.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Bàn pha cà phê với hũ hạt MeDili, phía xa là đồi và hồ",
+   "cap": "Bàn pha nhìn ra đồi và hồ."
+  },
+  {
+   "nhom": "doi",
+   "ten": "doi-trai-tren-tay",
+   "nguon": "dot3/IMG_0493.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Bàn tay cầm trái cà phê chín trước bàn pha và đồi xa",
+   "cap": "Trái chín trên tay, đồi xa phía sau."
+  },
+  {
+   "nhom": "doi",
+   "ten": "doi-espresso",
+   "nguon": "dot3/IMG_0488.jpg",
+   "ty_le": null,
+   "x": 0.5,
+   "y": 0.5,
+   "alt": "Ly espresso vừa chiết cạnh khay trái cà phê chín",
+   "cap": "Espresso bên khay trái chín."
+  },
+  {
+   "nhom": "doi",
+   "ten": "doi-ly-nhieu-lop",
+   "nguon": "dot3/IMG_0638.jpg",
+   "ty_le": 1,
+   "x": 0.5,
+   "y": 0.64,
+   "alt": "Ly cà phê nhiều lớp trên bàn gỗ, cạnh hũ hạt MeDili và chùm trái chín",
+   "cap": "Ly cà phê bên chùm trái chín."
+  }
+ ],
+ "vung_trong": [
+  "hai-nang-chum",
+  "vuon-chin-khong-deu",
+  "thu-chat-bao",
+  "hai-ao-medili",
+  "vuon-ba-mau",
+  "hai-gio-trai",
+  "vuon-chum-do-xen",
+  "vuon-troi-xanh",
+  "thu-noi-duoi",
+  "doi-canh-trai",
+  "vuon-chum-chin",
+  "vuon-chin-sam"
+ ]
+}

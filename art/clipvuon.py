@@ -5,16 +5,40 @@
 # Cách chạy: clip tự chạy (tắt tiếng, lặp lại) khi cuộn tới hơn nửa khung, dừng khi cuộn qua; không tự chạy khi máy bật giảm
 # chuyển động hoặc tiết kiệm dữ liệu. Có nút Phát/Dừng và Toàn màn hình (WCAG 2.2.2). Màn hình rộng tải bản 1280×720,
 # điện thoại tải bản 854×480 để nhẹ dữ liệu.
+# Dữ liệu clip (tệp video, ảnh chờ, lời giới thiệu, tên và mốc giây từng cảnh) nằm trong art/data/clip-vuon.json (27/11/2026),
+# sửa được ở trang quản trị medili.vn/quan-tri. make_montage.py dựng lại clip thì ghi lại mốc cảnh vào file này.
 from kit import *
-from make_montage import chapters, NAME
 
-CAPS = {1: 'Hoa cà phê nở trắng trên cành.', 2: 'Nắng xuyên qua tán cà phê.', 3: 'Những chùm Robusta chín đỏ.',
-        4: 'Một chùm, nhiều độ chín.', 5: 'Nhặt cành lá lẫn trong trái trên bạt.', 6: 'Đồi cà phê, sương trên núi xa.'}
+DATA = os.path.join(HERE, 'data', 'clip-vuon.json')
+
+
+def _t(v, n):
+    return re.sub(r'\s+', ' ', re.sub(r'<[^<>]*>|[<>]', '', v)).strip()[:n] if isinstance(v, str) else ''
+
+
+def _f(v):
+    v = str(v or '')
+    return v if re.fullmatch(r'[a-z0-9-]+\.(mp4|jpg)', v) and os.path.isfile(os.path.join(OUT, 'assets', v)) else ''
+
+
+def load():
+    try:
+        d = json.load(open(DATA, encoding='utf8'))
+    except (FileNotFoundError, ValueError):
+        return None
+    if not isinstance(d, dict) or d.get('an') or not _f(d.get('hd')) or not _f(d.get('poster')):
+        return None
+    canh = []
+    for c in d.get('canh') or []:
+        if isinstance(c, dict) and isinstance(c.get('t'), (int, float)) and isinstance(c.get('s'), (int, float)) and _t(c.get('cap'), 90) and _f(c.get('anh')):
+            canh.append(dict(t=round(float(c['t']), 2), s=round(float(c['s']), 2), cap=_t(c['cap'], 90), anh=c['anh']))
+    return dict(hd=d['hd'], sd=_f(d.get('sd')) or d['hd'], poster=d['poster'], w=int(d.get('w') or 1280), h=int(d.get('h') or 720),
+                lead=_t(d.get('lead'), 400), label=_t(d.get('label'), 300) or 'Clip quay tại vườn MeDili', canh=sorted(canh, key=lambda c: c['s'])[:8])
 
 CSS = r'''
 /* Clip ghép từ vườn: khung 16:9 + danh sách cảnh. Nút tròn góc dưới trái (logo chìm nằm góc dưới phải). */
 .vcg-sec{display:grid;gap:14px;scroll-margin-top:80px}
-.vm{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;align-items:start}
+.vm{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;align-items:start}.vm.vm-1{grid-template-columns:minmax(0,1fr)}
 .vm-f{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#231812;border:1px solid var(--rule)}
 .vm-f video{display:block;width:100%;height:100%;object-fit:cover;cursor:pointer}
 .vm-bar{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,243,228,.22);pointer-events:none}
@@ -78,19 +102,25 @@ SVG_PA = '<svg class="i-pa" viewBox="0 0 24 24" aria-hidden="true"><path class="
 SVG_FS = '<svg viewBox="0 0 24 24" aria-hidden="true"><path class="st" d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg>'
 
 
+def _num(v):
+    return str(float(v))   # 0.0, 7.3 như bản dựng từ make_montage.chapters()
+
+
 def section():
-    items = ''.join(f'<li class="vm-c" data-t="{seek}" data-s="{start}"><img src="assets/{NAME}-c{ch}.jpg" alt="" width="384" height="216" loading="lazy" decoding="async">'
-                    f'<button type="button"><b>{ch:02d}</b><span>{CAPS[ch]}</span></button></li>' for ch, seek, start in chapters())
-    label = ('Clip ghép một mùa ở vườn MeDili: hoa cà phê nở, nắng qua tán, những chùm Robusta chín, người vườn nhặt cành lá trên bạt '
-             'và đồi cà phê trong sương')
+    d = load()
+    if not d:
+        return ''
+    items = ''.join(f'<li class="vm-c" data-t="{_num(c["t"])}" data-s="{_num(c["s"])}"><img src="assets/{c["anh"]}" alt="" width="384" height="216" loading="lazy" decoding="async">'
+                    f'<button type="button"><b>{k:02d}</b><span>{esc(c["cap"])}</span></button></li>' for k, c in enumerate(d['canh'], 1))
+    label = d['label']
+    chap = f'<ol class="vm-ch" aria-label="Các cảnh trong clip">{items}</ol>' if items else ''
     return (f'<section class="vcg-sec" id="clip-vuon" aria-labelledby="h-clip-vuon"><div class="gv-hd"><p class="eye">Clip quay tại vườn MeDili</p>'
             f'<h2 class="p-h2" id="h-clip-vuon" style="margin:0">Một mùa <em>ở vườn Di Linh.</em></h2>'
-            f'<p class="lead">Hoa nở trắng cành, chùm trái chín không đều, người vườn nhặt cành lá trên bạt và đồi cà phê trong sương. '
-            f'Một clip 40 giây ghép từ sáu cảnh quay tại vườn, không có tiếng. Bấm vào một cảnh để xem lại cảnh đó.</p></div>'
-            f'<div class="vm"><div class="vm-f">'
-            f'<video muted loop playsinline preload="none" poster="assets/{NAME}.jpg" width="1280" height="720" aria-label="{esc(label)}" '
-            f'data-hd="assets/{NAME}-720.mp4" data-sd="assets/{NAME}-480.mp4"><source src="assets/{NAME}-480.mp4" type="video/mp4"></video>'
+            + (f'<p class="lead">{esc(d["lead"])}</p>' if d['lead'] else '') + '</div>'
+            f'<div class="{"vm" if chap else "vm vm-1"}"><div class="vm-f">'
+            f'<video muted loop playsinline preload="none" poster="assets/{d["poster"]}" width="{d["w"]}" height="{d["h"]}" aria-label="{esc(label)}" '
+            f'data-hd="assets/{d["hd"]}" data-sd="assets/{d["sd"]}"><source src="assets/{d["sd"]}" type="video/mp4"></video>'
             f'<span class="vm-bar" aria-hidden="true"><i></i></span>'
             f'<button class="vc-b vc-p" type="button" aria-label="Phát clip" data-pl="Phát clip" data-pa="Dừng clip">{SVG_PL}{SVG_PA}</button>'
             f'<button class="vc-b vc-x" type="button" aria-label="Xem toàn màn hình">{SVG_FS}</button></div>'
-            f'<ol class="vm-ch" aria-label="Các cảnh trong clip">{items}</ol></div></section>')
+            f'{chap}</div></section>')

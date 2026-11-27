@@ -26588,6 +26588,41 @@
 ],
 "c": "Bản và độ xay"
 },
+"a8a705b39": {
+"s": "Tạm hết hàng",
+"k": "j",
+"f": [
+"cua-hang.html",
+"gio-hang.html",
+"sp-arabica-cau-dat.html",
+"sp-arabica-natural-cau-dat.html",
+"sp-arabica-washed-cau-dat.html",
+"sp-blend-medili.html",
+"sp-catimor.html",
+"sp-culi.html",
+"sp-fine-robusta-di-linh.html",
+"sp-fine-robusta-honey-di-linh.html",
+"sp-may-arabica-premium.html",
+"sp-may-blend-premium-5-5.html",
+"sp-may-blend-premium-7-3.html",
+"sp-may-blend-premium-8-2.html",
+"sp-may-blend-premium-9-1.html",
+"sp-may-robusta-classic.html",
+"sp-may-robusta-premium.html",
+"sp-may-robusta-specialty.html",
+"sp-ngu-hanh-may.html",
+"sp-ngu-hanh-nang.html",
+"sp-ngu-hanh-nui.html",
+"sp-ngu-hanh-rung.html",
+"sp-ngu-hanh-suoi.html",
+"sp-ngu-hanh-suong.html",
+"sp-phin-arabica-premium.html",
+"sp-phin-robusta-classic.html",
+"sp-phin-robusta-premium.html",
+"sp-signature-coffee.html"
+],
+"c": "Tạm hết hàng"
+},
 "5651f4847": {
 "s": "Thêm vào giỏ để hỏi giá",
 "k": "j",
@@ -26765,8 +26800,8 @@
 ],
 "c": ""
 },
-"ea3d4957a": {
-"s": "Hỏi qua Zalo",
+"85e270752": {
+"s": "{1}<1>Hỏi qua Zalo</1>",
 "k": "j",
 "f": [
 "cua-hang.html",
@@ -26798,7 +26833,42 @@
 "sp-phin-robusta-premium.html",
 "sp-signature-coffee.html"
 ],
-"c": "Hỏi qua Zalo"
+"c": "\u00005\u0000<a class=\"btn\" href=\"\u00006\u0000\" target=\"_blank\" rel=\"noopener\" data-act=\"zalo\">Hỏi "
+},
+"b56d8858b": {
+"s": "<1>Tạm hết hàng</1><2>Nhắn Zalo để MeDili báo khi có hàng lại.</2>",
+"k": "j",
+"f": [
+"cua-hang.html",
+"gio-hang.html",
+"sp-arabica-cau-dat.html",
+"sp-arabica-natural-cau-dat.html",
+"sp-arabica-washed-cau-dat.html",
+"sp-blend-medili.html",
+"sp-catimor.html",
+"sp-culi.html",
+"sp-fine-robusta-di-linh.html",
+"sp-fine-robusta-honey-di-linh.html",
+"sp-may-arabica-premium.html",
+"sp-may-blend-premium-5-5.html",
+"sp-may-blend-premium-7-3.html",
+"sp-may-blend-premium-8-2.html",
+"sp-may-blend-premium-9-1.html",
+"sp-may-robusta-classic.html",
+"sp-may-robusta-premium.html",
+"sp-may-robusta-specialty.html",
+"sp-ngu-hanh-may.html",
+"sp-ngu-hanh-nang.html",
+"sp-ngu-hanh-nui.html",
+"sp-ngu-hanh-rung.html",
+"sp-ngu-hanh-suoi.html",
+"sp-ngu-hanh-suong.html",
+"sp-phin-arabica-premium.html",
+"sp-phin-robusta-classic.html",
+"sp-phin-robusta-premium.html",
+"sp-signature-coffee.html"
+],
+"c": "<b>Tạm hết hàng</b><small>Nhắn Zalo để MeDili báo khi có hàng lại.</small>"
 },
 "08ddb7e39": {
 "s": "Túi 250 g giá {1} đ",
@@ -29553,6 +29623,14 @@
 "gio-hang.html"
 ],
 "c": " (sỉ)"
+},
+"989b587e1": {
+"s": "· Tạm hết hàng",
+"k": "j",
+"f": [
+"gio-hang.html"
+],
+"c": " · Tạm hết hàng"
 },
 "dc5331013": {
 "s": "Bỏ khỏi giỏ",

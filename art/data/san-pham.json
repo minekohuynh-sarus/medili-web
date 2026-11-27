@@ -1,0 +1,382 @@
+{
+ "pc": {
+  "ten": "Phin Robusta Classic",
+  "nhom": "Robusta",
+  "loai": "core",
+  "dv": "kg",
+  "p": [
+   280,
+   252,
+   235
+  ],
+  "st": "ban",
+  "taste": "Đậm đà, đắng rõ, hậu tròn, socola đen",
+  "use": "Phin truyền thống, đen đá, sữa đá",
+  "fit": "Quán nhỏ, gia đình uống đậm",
+  "head": "Đậm đen chuẩn gu Việt"
+ },
+ "pp": {
+  "ten": "Phin Robusta Premium",
+  "nhom": "Robusta",
+  "loai": "core",
+  "dv": "kg",
+  "p": [
+   320,
+   288,
+   265
+  ],
+  "st": "ban",
+  "taste": "Cân bằng, đường nâu, caramel, hậu ngọt",
+  "use": "Pha phin, đen đá, sữa đá, cold brew",
+  "fit": "Quán vừa, khách thích hậu ngọt",
+  "head": "Êm vị, hương caramel cho ly phin hiện đại"
+ },
+ "mc": {
+  "ten": "Máy Robusta Classic",
+  "nhom": "Robusta",
+  "loai": "core",
+  "dv": "kg",
+  "p": [
+   280,
+   252,
+   235
+  ],
+  "st": "ban",
+  "taste": "Đậm đà, đắng rõ, socola đen, hậu tròn",
+  "use": "Espresso, Americano, cà phê sữa máy",
+  "fit": "Quán nhỏ có máy",
+  "head": "Đậm mạnh, crema dày cho quầy pha máy"
+ },
+ "mp": {
+  "ten": "Máy Robusta Premium",
+  "nhom": "Robusta",
+  "loai": "core",
+  "dv": "kg",
+  "p": [
+   320,
+   288,
+   265
+  ],
+  "st": "ban",
+  "taste": "Cân bằng, êm dịu, hương đường nâu và caramel",
+  "use": "Espresso, Americano, Latte, Cappuccino",
+  "fit": "Quán vừa muốn nổi bật Robusta",
+  "head": "Đậm đà, ngọt hương caramel, êm vị cho espresso"
+ },
+ "ms": {
+  "ten": "Máy Robusta Specialty",
+  "nhom": "Robusta",
+  "loai": "core",
+  "dv": "kg",
+  "p": [
+   550,
+   495,
+   450
+  ],
+  "st": "ban",
+  "taste": "Xác nhận theo từng lô",
+  "use": "Espresso, pour-over thử lô",
+  "fit": "Quán cao cấp, thực đơn đặc sản",
+  "head": ""
+ },
+ "pa": {
+  "ten": "Phin Arabica Premium",
+  "nhom": "Arabica",
+  "loai": "core",
+  "dv": "kg",
+  "p": [
+   550,
+   495,
+   440
+  ],
+  "st": "ban",
+  "taste": "Socola, cam chanh, chua nhẹ, đắng vừa, ngọt hậu",
+  "use": "Pha phin",
+  "fit": "Khách thích thanh, ít đắng",
+  "head": "Tinh tế, chua nhẹ, hậu vị ngọt sâu"
+ },
+ "ma": {
+  "ten": "Máy Arabica Premium",
+  "nhom": "Arabica",
+  "loai": "core",
+  "dv": "kg",
+  "p": [
+   550,
+   495,
+   440
+  ],
+  "st": "ban",
+  "taste": "Cam chanh thanh mát, trái cây khô, ngọt hậu caramel",
+  "use": "Espresso, Americano, Latte, Cappuccino, Cold Brew",
+  "fit": "Khách sạn, quán cà phê đặc sản",
+  "head": "Sáng vị, thơm hương trái cây, tinh tế từ Cầu Đất"
+ },
+ "b91": {
+  "ten": "Máy Blend 9:1",
+  "nhom": "Blend",
+  "loai": "core",
+  "dv": "kg",
+  "p": [
+   345,
+   309,
+   283
+  ],
+  "st": "ban",
+  "taste": "Đậm đà, đường nâu, caramel, thoảng cam chanh",
+  "use": "Espresso, Americano, cà phê sữa máy",
+  "fit": "Quán nhỏ và vừa, khách quen vị đậm",
+  "head": "Đậm chất Robusta, thêm nét thơm Arabica"
+ },
+ "b82": {
+  "ten": "Máy Blend 8:2",
+  "nhom": "Blend",
+  "loai": "core",
+  "dv": "kg",
+  "p": [
+   365,
+   330,
+   300
+  ],
+  "st": "ban",
+  "taste": "Caramel, đường nâu, hậu ngọt, chua rất nhẹ",
+  "use": "Espresso, Americano, Latte, Cappuccino",
+  "fit": "Quán vừa, dễ uống",
+  "head": "Đậm mà êm, dễ uống mỗi ngày"
+ },
+ "b73": {
+  "ten": "Máy Blend 7:3",
+  "nhom": "Blend",
+  "loai": "core",
+  "dv": "kg",
+  "p": [
+   389,
+   350,
+   318
+  ],
+  "st": "ban",
+  "taste": "Cân bằng, caramel, trái cây khô, chua thanh nhẹ",
+  "use": "Espresso, Americano, Latte, Cappuccino",
+  "fit": "Quán vừa đến lớn",
+  "head": "Cân bằng giữa thân dày và hương thơm"
+ },
+ "b55": {
+  "ten": "Máy Blend 5:5",
+  "nhom": "Blend",
+  "loai": "core",
+  "dv": "kg",
+  "p": [
+   435,
+   392,
+   352
+  ],
+  "st": "ban",
+  "taste": "Cam chanh nhẹ, caramel, trái cây khô, thân vừa",
+  "use": "Espresso, Americano, Latte, Cappuccino, Cold Brew",
+  "fit": "Quán lớn, khách sạn",
+  "head": "Thanh thoát, thơm hương, vẫn đủ thân"
+ },
+ "bm": {
+  "ten": "Blend MeDili",
+  "nhom": "Blend",
+  "loai": "le",
+  "dv": "kg",
+  "p": [
+   400,
+   null,
+   null
+  ],
+  "st": "ban",
+  "taste": "Định hướng: đậm từ Culi và Robusta, thơm từ Arabica, hậu ngọt",
+  "use": "Espresso, Americano, Latte, Phin",
+  "fit": "Quán muốn dòng đặc trưng MeDili",
+  "head": "Dòng phối đặc trưng của MeDili"
+ },
+ "cat": {
+  "ten": "Catimor",
+  "nhom": "Đặc sản",
+  "loai": "le",
+  "dv": "kg",
+  "p": [
+   400,
+   null,
+   null
+  ],
+  "st": "ban",
+  "taste": "Định hướng: chua dịu, caramel, trái cây nhẹ",
+  "use": "Phin, pha máy, pour-over",
+  "fit": "Khách muốn Arabica dễ uống",
+  "head": "Giống Arabica lai, dễ uống, phù hợp với cao nguyên Việt Nam"
+ },
+ "cul": {
+  "ten": "Culi",
+  "nhom": "Đặc sản",
+  "loai": "le",
+  "dv": "kg",
+  "p": [
+   350,
+   null,
+   null
+  ],
+  "st": "ban",
+  "taste": "Định hướng: đậm, thơm, hậu ngọt",
+  "use": "Phin, pha máy",
+  "fit": "Khách thích ly đậm, thơm, khác lạ",
+  "head": "Mỗi trái một nhân tròn, chọn riêng từng lô"
+ },
+ "ng-suong": {
+  "ten": "Sương · Mist",
+  "nhom": "Ngũ Hành",
+  "loai": "ngu",
+  "dv": "tui",
+  "p": [
+   450
+  ],
+  "st": "ban",
+  "taste": "Socola, cam chanh, chua nhẹ, đắng vừa, ngọt hậu",
+  "use": "Bản phin: phin, đen đá, sữa đá. Bản máy: espresso, Americano, latte",
+  "fit": "Người thích Arabica thơm, chua nhẹ, ngọt hậu",
+  "head": "Một khoảng lặng giữa ngày"
+ },
+ "ng-rung": {
+  "ten": "Rừng · Forest",
+  "nhom": "Ngũ Hành",
+  "loai": "ngu",
+  "dv": "tui",
+  "p": [
+   350
+  ],
+  "st": "ban",
+  "taste": "Đậm, thơm, hậu ngọt",
+  "use": "Espresso, Americano, latte, phin",
+  "fit": "Người thích ly đậm, thơm, pha máy hoặc phin",
+  "head": "Ba hạt, một nhịp"
+ },
+ "ng-suoi": {
+  "ten": "Suối · Stream",
+  "nhom": "Ngũ Hành",
+  "loai": "ngu",
+  "dv": "tui",
+  "p": [
+   400
+  ],
+  "st": "ban",
+  "taste": "Đậm vừa, ngọt mật, thơm, hậu dài",
+  "use": "Phin, đen đá, sữa đá, cold brew",
+  "fit": "Người thích ly đậm vừa, ngọt mật, hậu dài",
+  "head": "Ba hạt chảy chung một dòng"
+ },
+ "ng-nang": {
+  "ten": "Nắng · Sunshine",
+  "nhom": "Ngũ Hành",
+  "loai": "ngu",
+  "dv": "tui",
+  "p": [
+   350
+  ],
+  "st": "ban",
+  "taste": "Cân bằng, đường nâu, caramel, hậu ngọt",
+  "use": "Phin, đen đá, sữa đá, cold brew",
+  "fit": "Người thích Robusta êm, hậu ngọt, pha phin hoặc cold brew",
+  "head": "Đắng đầu lưỡi, ngọt ở hậu vị"
+ },
+ "ng-nui": {
+  "ten": "Núi · Mountain",
+  "nhom": "Ngũ Hành",
+  "loai": "ngu",
+  "dv": "tui",
+  "p": [
+   400
+  ],
+  "st": "ban",
+  "taste": "Đậm đà, đắng rõ, hậu tròn, socola đen",
+  "use": "Phin truyền thống, đen đá, sữa đá",
+  "fit": "Người thích phin đậm, đen đá, sữa đá buổi sáng",
+  "head": "Đậm, đắng rõ, cho buổi sáng tỉnh táo"
+ },
+ "ng-may": {
+  "ten": "Mây · Cloud",
+  "nhom": "Ngũ Hành",
+  "loai": "ngu",
+  "dv": "tui",
+  "p": [
+   420
+  ],
+  "st": "ban",
+  "taste": "Đậm, thơm, hậu ngọt thanh",
+  "use": "Phin, espresso, Americano, latte",
+  "fit": "Người thích ly đậm mà thoáng, pha phin hoặc máy",
+  "head": "Vững như núi, thoáng như mây"
+ },
+ "frd": {
+  "ten": "Fine Robusta Di Linh",
+  "nhom": "Robusta",
+  "loai": "sap",
+  "dv": "kg",
+  "p": null,
+  "st": "sap",
+  "taste": "Định hướng: ca cao đen, caramel rang, hạt rang, hậu sạch",
+  "use": "",
+  "fit": "Quán và người pha cần một dòng Robusta cao cấp dễ lên công thức",
+  "head": "Robusta Di Linh thân rõ, ngọt rang"
+ },
+ "rh": {
+  "ten": "Robusta Honey Di Linh",
+  "nhom": "Robusta",
+  "loai": "sap",
+  "dv": "kg",
+  "p": null,
+  "st": "sap",
+  "taste": "Định hướng: ca cao, đường nâu, hạt rang, trái cây khô nhẹ",
+  "use": "",
+  "fit": "Người uống hằng ngày thích Robusta đậm, hậu ngọt",
+  "head": "Robusta sơ chế Honey, thân dày, hậu ngọt"
+ },
+ "acd": {
+  "ten": "Arabica Cầu Đất",
+  "nhom": "Arabica",
+  "loai": "sap",
+  "dv": "kg",
+  "p": null,
+  "st": "sap",
+  "taste": "Định hướng: trái cây sáng nhẹ, cam quýt, caramel, hậu sạch",
+  "use": "",
+  "fit": "Khách muốn Arabica Cầu Đất cân bằng, dễ đổi cách pha",
+  "head": "Arabica Cầu Đất chua thanh vừa, ngọt sạch"
+ },
+ "sig": {
+  "ten": "MeDili Signature",
+  "nhom": "Blend",
+  "loai": "sap",
+  "dv": "kg",
+  "p": null,
+  "st": "sap",
+  "taste": "Định hướng: ca cao, caramel, hạt rang, chua thấp, hậu gọn",
+  "use": "",
+  "fit": "Gia đình và quầy pha cần một blend linh hoạt từ phin đến espresso",
+  "head": "Blend đặc trưng của MeDili, đậm vừa, thân dày"
+ },
+ "an": {
+  "ten": "Arabica Natural Cầu Đất",
+  "nhom": "Arabica",
+  "loai": "sap",
+  "dv": "kg",
+  "p": null,
+  "st": "sap",
+  "taste": "Định hướng: trái chín nhẹ, caramel, đường nâu, hậu sạch",
+  "use": "",
+  "fit": "Khách muốn khám phá Arabica sơ chế Natural",
+  "head": "Arabica Natural, vị trái chín, ngọt"
+ },
+ "aw": {
+  "ten": "Arabica Washed Cầu Đất",
+  "nhom": "Arabica",
+  "loai": "sap",
+  "dv": "kg",
+  "p": null,
+  "st": "sap",
+  "taste": "Định hướng: thanh rõ, cam chanh nhẹ, đường mía, hậu sạch",
+  "use": "",
+  "fit": "Khách thích ly thanh, chua cân bằng",
+  "head": "Arabica Washed, thanh rõ, cân bằng"
+ }
+}

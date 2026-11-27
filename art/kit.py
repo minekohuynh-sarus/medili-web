@@ -9,6 +9,7 @@ LIVE = os.path.join(HERE, '..', 'site-live')
 OUT = os.path.join(HERE, '..', 'site-new4')
 
 esc = lambda s: H.escape(s, quote=True)
+NOINDEX_META = '<meta name="robots" content="noindex">'   # trang không đưa vào tìm kiếm, sơ đồ trang (bài tin đã ẩn/gỡ)
 
 # ---------- liên hệ (theo site Claude, chị Ngân chọn) ----------
 PHONE, PHONE_RAW = '0966 770 788', '0966770788'
@@ -93,10 +94,11 @@ def _prim(h, t, current):
 
 def header(current):
     from i18n import lang_menu   # nút chọn ngôn ngữ: Tiếng Việt, English, 日本語, 中文 (24/11/2026)
+    from caidat import notice    # thanh thông báo đầu trang, bật ở trang quản trị (27/11/2026)
     prim = ''.join(_prim(h, t, current) for h, t in PRIMARY)
     cols = ''.join('<div class="mh-c"><p class="mh-g">' + g + '</p><ul>' +
                    ''.join(f'<li><a href="{h}"{_cur(h, current)}>{t}</a></li>' for h, t in items) + '</ul></div>' for g, items in GROUPS)
-    return (f'<div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a>'
+    return (notice() + f'<div class="mh"><div class="mh-in"><a class="mh-b" href="./">MeDili Café</a>'
             f'<nav class="mh-p" aria-label="Mục chính">{prim}</nav>'
             f'<details class="mh-m" id="mhm"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></summary>'
             f'<nav class="mh-pan" aria-label="Tất cả trang"><div class="mh-grid">{cols}</div></nav></details>'

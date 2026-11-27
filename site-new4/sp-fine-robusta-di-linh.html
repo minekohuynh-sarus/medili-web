@@ -809,11 +809,11 @@ function buyHTML(x,k){
  <label class="pd-l">${x.grinds?'Bản và độ xay':'Độ xay'}<select name="g">${GR(x).map(g=>`<option>${g}</option>`).join('')}</select></label>
  <div class="pd-q"><span>Số lượng</span><div class="pd-st"><button type="button" data-d="-1" aria-label="Bớt một">−</button><output aria-live="polite">1</output><button type="button" data-d="1" aria-label="Thêm một">+</button></div></div>
  <p class="pd-sum" aria-live="polite"></p>
- <div class="cta" style="margin:0"><button type="button" class="btn main" data-act="add">${ban?'Thêm vào giỏ':'Thêm vào giỏ để hỏi giá'}</button><a class="btn" href="${ZALO}" target="_blank" rel="noopener" data-act="zalo">Hỏi qua Zalo</a></div></div>`}
+ <div class="cta" style="margin:0">${x.st==='het'?'<button type="button" class="btn main" data-act="add" disabled>Tạm hết hàng</button>':`<button type="button" class="btn main" data-act="add">${ban?'Thêm vào giỏ':'Thêm vào giỏ để hỏi giá'}</button>`}<a class="btn" href="${ZALO}" target="_blank" rel="noopener" data-act="zalo">Hỏi qua Zalo</a></div></div>`}
 function wireBuy(root){
  const f=root.querySelector('[data-buy]');if(!f)return;const x=byId[f.dataset.buy],out=f.querySelector('output');
  const st=()=>({w:+f.querySelector('input[type=radio]:checked').value,g:f.querySelector('select').value,q:+out.textContent});
- const sum=()=>{const s=st(),u=unitP(x,0);f.querySelector('.pd-sum').innerHTML=u?`Tạm tính: <b>${fmt(u*s.w*s.q)} đ</b><small>${tuiJ(x)?`Túi 250 g giá ${fmt(u*250)} đ`:`Giá lẻ ${fmt(u*1000)} đ/kg`}, chưa gồm 8% VAT và phí giao.${x.p[1]?' Đơn từ 5 kg được giá sỉ.':''}</small>`:`Giá: <b>Liên hệ</b><small>MeDili báo giá khi nhận đơn.</small>`};
+ const sum=()=>{const s=st(),u=unitP(x,0);f.querySelector('.pd-sum').innerHTML=x.st==='het'?`<b>Tạm hết hàng</b><small>Nhắn Zalo để MeDili báo khi có hàng lại.</small>`:u?`Tạm tính: <b>${fmt(u*s.w*s.q)} đ</b><small>${tuiJ(x)?`Túi 250 g giá ${fmt(u*250)} đ`:`Giá lẻ ${fmt(u*1000)} đ/kg`}, chưa gồm 8% VAT và phí giao.${x.p[1]?' Đơn từ 5 kg được giá sỉ.':''}</small>`:`Giá: <b>Liên hệ</b><small>MeDili báo giá khi nhận đơn.</small>`};
  f.addEventListener('change',sum);
  f.querySelectorAll('[data-d]').forEach(b=>b.addEventListener('click',()=>{out.textContent=Math.max(1,Math.min(99,+out.textContent+ +b.dataset.d));sum()}));
  f.querySelector('[data-act=add]').addEventListener('click',()=>{const s=st();addCart(x.id,s.w,s.g,s.q)});

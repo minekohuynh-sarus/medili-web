@@ -1,0 +1,82 @@
+{
+ "Tạm hết hàng": {
+  "en": "Out of stock",
+  "ja": "一時品切れ",
+  "zh": "暂时缺货"
+ },
+ "{1}<1>Hỏi qua Zalo</1>": {
+  "en": "{1}<1>Ask on Zalo</1>",
+  "ja": "{1}<1>Zaloで問い合わせる</1>",
+  "zh": "{1}<1>通过Zalo咨询</1>"
+ },
+ "<1>Tạm hết hàng</1><2>Nhắn Zalo để MeDili báo khi có hàng lại.</2>": {
+  "en": "<1>Out of stock</1><2>Message MeDili on Zalo and we will let you know when it is back.</2>",
+  "ja": "<1>一時品切れ</1><2>Zaloでご連絡いただければ、再入荷の際にMeDiliからお知らせします。</2>",
+  "zh": "<1>暂时缺货</1><2>请通过Zalo联系MeDili，到货后我们会通知您。</2>"
+ },
+ "· Tạm hết hàng": {
+  "en": "· Out of stock",
+  "ja": "· 一時品切れ",
+  "zh": "· 暂时缺货"
+ },
+ "280.000 đ/kg · tạm hết hàng": {
+  "en": "280,000 VND/kg · out of stock",
+  "ja": "280,000 VND/kg · 一時品切れ",
+  "zh": "280,000 VND/公斤 · 暂时缺货"
+ },
+ "112.500 đ/túi 250 g · tạm hết hàng": {
+  "en": "112,500 VND/250 g bag · out of stock",
+  "ja": "112,500 VND/250 g袋 · 一時品切れ",
+  "zh": "112,500 VND/250克袋 · 暂时缺货"
+ },
+ "Thông báo": {
+  "en": "Notice",
+  "ja": "お知らせ",
+  "zh": "通知"
+ },
+ "Đóng thông báo": {
+  "en": "Close notice",
+  "ja": "お知らせを閉じる",
+  "zh": "关闭通知"
+ },
+ "×": {
+  "en": "×",
+  "ja": "×",
+  "zh": "×"
+ },
+ "Xem chi tiết": {
+  "en": "See details",
+  "ja": "詳しく見る",
+  "zh": "查看详情"
+ },
+ "Bài viết không còn · MeDili Café": {
+  "en": "Article no longer available · MeDili Café",
+  "ja": "公開を終了した記事 · MeDili Café",
+  "zh": "文章已下线 · MeDili Café"
+ },
+ "MeDili đã gỡ hoặc tạm ẩn bài viết này. Mời bạn xem các tin mới hơn.": {
+  "en": "MeDili has removed or temporarily hidden this article. Please see our latest news.",
+  "ja": "この記事はMeDiliが削除したか、一時的に非公開にしています。新しいニュースをご覧ください。",
+  "zh": "MeDili已删除或暂时隐藏这篇文章。欢迎您阅读最新资讯。"
+ },
+ "Bài viết này <1>không còn trên web.</1>": {
+  "en": "This article is <1>no longer on our website.</1>",
+  "ja": "この記事は<1>現在公開されていません。</1>",
+  "zh": "这篇文章<1>已不在网站上。</1>"
+ },
+ "Bài viết này không còn trên web MeDili.": {
+  "en": "This article is no longer on the MeDili website.",
+  "ja": "この記事はMeDiliのウェブサイトで公開を終了しました。",
+  "zh": "这篇文章已不在MeDili网站上。"
+ },
+ "Giá theo từng lô, MeDili sẽ báo giá khi đặt hàng.": {
+  "en": "Priced by lot; MeDili will quote when you order.",
+  "ja": "価格はロットごとに決まります。ご注文時にMeDiliがお見積もりします。",
+  "zh": "价格按批次而定，下单时由MeDili报价。"
+ },
+ "Gói lẻ 250 g, 500 g: liên hệ MeDili. Giá theo từng lô, MeDili sẽ báo giá khi đặt hàng.": {
+  "en": "250 g and 500 g bags: contact MeDili. Priced by lot; MeDili will quote when you order.",
+  "ja": "250 g・500 gの袋：MeDiliにお問い合わせください。価格はロットごとに決まります。ご注文時にMeDiliがお見積もりします。",
+  "zh": "250克、500克袋装：请联系MeDili。价格按批次而定，下单时由MeDili报价。"
+ }
+}

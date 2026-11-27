@@ -179,8 +179,7 @@ def doi_ngu():
 # ---------- Vùng trồng ----------
 # 26/11/2026: chị Ngân bổ sung ảnh và video cho mục Vùng trồng Di Linh. Dải 3 ảnh "Vào mùa" thành lưới 12 ảnh xem lớn được
 # (gồm cả ba cảnh cũ: chùm chín, chằng bao lên máy cày, máy cày nối đuôi) và thêm khối 6 clip quay tại vườn (art/clipvuon.py).
-VT_MOSAIC = ['hai-nang-chum', 'vuon-chin-khong-deu', 'thu-chat-bao', 'hai-ao-medili', 'vuon-ba-mau', 'hai-gio-trai',
-             'vuon-chum-do-xen', 'vuon-troi-xanh', 'thu-noi-duoi', 'doi-canh-trai', 'vuon-chum-chin', 'vuon-chin-sam']
+VT_MOSAIC = anhvuon.VUNG_TRONG   # 12 ảnh, chọn ở trang quản trị (art/data/anh-vuon.json, mục vung_trong)
 
 
 def vung_trong():

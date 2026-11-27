@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /quan-tri/
 Disallow: /gio-hang.html
 Disallow: /en/gio-hang.html
 Disallow: /ja/gio-hang.html

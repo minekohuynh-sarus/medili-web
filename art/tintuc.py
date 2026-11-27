@@ -3,11 +3,16 @@
 # tác vụ "Đăng bài tin tức đã duyệt" ghi bài vào art/data/tin-tuc.json rồi dựng lại web.
 # Mỗi bài: {"slug","date":"YYYY-MM-DD","title","desc","keywords":[..],"body":[{"h":".."}|{"p":".."}],
 #           "cta":"..","sources":[{"name","url"}]}. Chữ trong bài là chữ thuần (không HTML), được thoát ký tự khi dựng.
+# Trang quản trị medili.vn/quan-tri (27/11/2026): chị và nhân viên viết, sửa, ẩn bài ("an": true), lưu bài nháp chưa đăng
+# ("nhap": true, chưa từng lên web nên không cần trang báo gỡ); chị xóa bài thì tên bài vào
+# art/data/tin-tuc-go.json. Hosting không xóa tệp cũ, nên bài đã ẩn hoặc đã xóa được thay bằng một trang ngắn báo bài không còn,
+# không đưa vào tìm kiếm và sơ đồ trang.
 import json, os, re
 from kit import *
 from pages_a import head
 
 DATA = os.path.join(HERE, 'data', 'tin-tuc.json')
+GONE = os.path.join(HERE, 'data', 'tin-tuc-go.json')
 LIST = 'tin-tuc.html'
 
 CSS = r'''
@@ -36,7 +41,7 @@ def load():
         posts = []
     ok = []
     for p in posts:
-        if not re.fullmatch(r'[a-z0-9-]{3,80}', p.get('slug', '')) or not p.get('title') or not p.get('body'):
+        if not isinstance(p, dict) or p.get('an') or p.get('nhap') or not re.fullmatch(r'[a-z0-9-]{3,80}', str(p.get('slug', ''))) or not p.get('title') or not p.get('body'):
             continue
         ok.append(p)
     return sorted(ok, key=lambda p: (p['date'], p['slug']), reverse=True)
@@ -94,9 +99,36 @@ def listing(posts):
                'Tin mới mỗi ngày về thị trường cà phê, ca cao và nông sản Di Linh, Lâm Đồng, kèm góc nhìn từ vườn MeDili.', body, css=CSS)
 
 
+def gone(posts):
+    """Tên bài đã ẩn hoặc đã xóa (không còn trong danh sách đang hiện)."""
+    names = set()
+    try:
+        names |= {p.get('slug') for p in json.load(open(DATA, encoding='utf8')) if isinstance(p, dict) and p.get('an')}
+    except (FileNotFoundError, ValueError):
+        pass
+    try:
+        names |= {x for x in json.load(open(GONE, encoding='utf8')) if isinstance(x, str)}
+    except (FileNotFoundError, ValueError):
+        pass
+    live = {p['slug'] for p in posts}
+    return sorted(n for n in names if isinstance(n, str) and re.fullmatch(r'[a-z0-9-]{3,80}', n) and n not in live)
+
+
+def stub(slug, posts):
+    more = posts[:3]
+    body = (head('Tin tức MeDili', 'Bài viết này <em>không còn trên web.</em>',
+                 'MeDili đã gỡ hoặc tạm ẩn bài viết này. Mời bạn xem các tin mới hơn.',
+                 f'<a class="btn main" href="{LIST}">Tất cả tin tức</a>')
+            + ('<div class="tt-list">' + ''.join(card(q) for q in more) + '</div>' if more else ''))
+    s = doc(f'tin-tuc-{slug}.html', 'Bài viết không còn · MeDili Café', 'Bài viết này không còn trên web MeDili.', body, css=CSS)
+    return s.replace('<meta charset="utf-8">', '<meta charset="utf-8">' + NOINDEX_META, 1)
+
+
 def pages():
     posts = load()
     out = {LIST: listing(posts)}
     for p in posts:
         out[fname(p)] = article(p, posts)
+    for n in gone(posts):
+        out[f'tin-tuc-{n}.html'] = stub(n, posts)
     return out

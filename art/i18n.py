@@ -420,6 +420,102 @@ def js_encode(s, q):
     return s.replace(q, '\\' + q)
 
 
+# ---------------------------------------------------------------- dịch theo mẫu số (27/11/2026)
+# Giá, số ảnh, số dòng cà phê đổi ở trang quản trị thì câu tiếng Việt đổi số. Câu chưa có trong từ điển được dịch theo câu đã dịch
+# giống hệt chỉ khác số: "300.000 đ<1>/kg</1>" dùng bản dịch của "280.000 đ<1>/kg</1>" -> "300,000 VND<1>/kg</1>".
+# Chỉ dùng khi mọi số trong câu tiếng Việt đều có mặt trong bản dịch cũ (ngày tháng đổi dạng như "24/11" -> "Nov 24" thì bỏ qua),
+# và mọi câu cùng mẫu đều cho một bản dịch. Số bắt đầu bằng 0 (số điện thoại) giữ nguyên.
+_PH = re.compile(r'</?\d+/?>|\{\d+\}')
+_NUM = re.compile(r'(?<![0-9A-Za-zÀ-ỹ.,])\d+(?:[.,]\d+)*(?![0-9A-Za-zÀ-ỹ])')   # chữ Nhật, Trung ngay sau số vẫn tách được (39枚, 39张)
+
+
+def _vi_num(t):
+    if re.fullmatch(r'0\d+', t):
+        return None
+    if re.fullmatch(r'\d{1,3}(?:\.\d{3})+', t):
+        return t.replace('.', ''), 'g'
+    if re.fullmatch(r'\d{1,3}(?:\.\d{3})*,\d+|\d+,\d+', t):
+        return t.replace('.', '').replace(',', '.'), 'd'
+    if re.fullmatch(r'\d+', t):
+        return t, 'p'
+    return None
+
+
+def _tr_num(t):
+    if re.fullmatch(r'\d{1,3}(?:,\d{3})+(?:\.\d+)?', t):
+        return t.replace(',', '')
+    if re.fullmatch(r'\d+(?:\.\d+)?', t):
+        return t
+    return None
+
+
+def _tokens(text, parse):
+    """Các số trong câu (bỏ qua chỗ trống <1>, {1}): [(đầu, cuối, giá trị, dạng)]."""
+    hole = [(m.start(), m.end()) for m in _PH.finditer(text)]
+    out = []
+    for m in _NUM.finditer(text):
+        if any(a <= m.start() < b for a, b in hole):
+            continue
+        v = parse(m.group(0))
+        if v is not None:
+            out.append((m.start(), m.end()) + (v if isinstance(v, tuple) else (v, '')))
+    return out
+
+
+def _sub(text, toks, vals):
+    for (a, b, *_), v in sorted(zip(toks, vals), key=lambda x: -x[0][0]):
+        text = text[:a] + v + text[b:]
+    return text
+
+
+def _fmt(v, shape):
+    """Số theo kiểu quốc tế: 300000 -> 300,000; 12.5 giữ nguyên."""
+    if shape == 'p':
+        return v
+    i, _, f = v.partition('.')
+    return f'{int(i):,}' + ('.' + f if f else '')
+
+
+def masked(dic):
+    """{câu tiếng Việt đã thay số bằng chỗ trống: bản dịch đã thay số} từ từ điển; mẫu có hai bản dịch khác nhau thì bỏ."""
+    out = {}
+    for k, t in dic.items():
+        if '::' in k or not isinstance(t, str):
+            continue
+        vt = _tokens(k, _vi_num)
+        if not vt:
+            continue
+        tt = _tokens(t, _tr_num)
+        used, m = set(), []
+        for a, b, v, sh in vt:
+            j = next((j for j, x in enumerate(tt) if j not in used and x[2] == v), None)
+            if j is None:
+                break
+            used.add(j); m.append(j)
+        if len(m) != len(vt):
+            continue
+        mk = _sub(k, vt, [f'\x00{i}\x00' for i in range(len(vt))])
+        mt = _sub(t, [tt[j] for j in m], [f'\x00{i}\x00' for i in range(len(vt))])
+        out[mk] = mt if out.get(mk, mt) == mt else None
+    return out
+
+
+def by_mask(mdic, key):
+    vt = _tokens(key, _vi_num)
+    if not vt:
+        return None
+    t = mdic.get(_sub(key, vt, [f'\x00{i}\x00' for i in range(len(vt))]))
+    if not t:
+        return None
+    for i, (a, b, v, sh) in enumerate(vt):
+        t = t.replace(f'\x00{i}\x00', _fmt(v, sh))
+    return t if '\x00' not in t else None
+
+
+def known(dic, mdic, key):
+    return key in dic or by_mask(mdic, key) is not None
+
+
 # ---------------------------------------------------------------- tra từ điển
 class Tr:
     """Bộ dịch: mode 'collect' (gom khóa), 'apply' (dịch theo từ điển), 'pseudo' (dịch giả)."""
@@ -429,6 +525,7 @@ class Tr:
         self.keys = {}       # khóa -> {'k': loại, 'f': set tệp, 'c': ngữ cảnh}
         self.missing = {}
         self.file = ''
+        self.mdic = None
 
     def forced(self, key):
         return key in FORCE or key in FILE_FORCE.get(self.file, ())
@@ -451,6 +548,10 @@ class Tr:
         if self.mode == 'pseudo':
             return pseudo(key)
         t = self.dic.get(self.file + '::' + key, self.dic.get(key))
+        if t is None:
+            if self.mdic is None:
+                self.mdic = masked(self.dic)
+            t = by_mask(self.mdic, key)
         if t is None:
             self.missing.setdefault(key, set()).add(self.file)
         return t
@@ -588,9 +689,10 @@ def save(lang, d):
 
 def extract():
     tr = Tr('collect')
+    import caidat
     for f in pages():
         tr.file = f
-        tr.html(open(os.path.join(OUT, f), encoding='utf8').read())
+        tr.html(caidat.canon(open(os.path.join(OUT, f), encoding='utf8').read()))   # số điện thoại… như trong mã (caidat.py)
     segs = {}
     for k, e in tr.keys.items():
         segs[sid(k)] = {'s': k, 'k': e['k'], 'f': sorted(e['f']), 'c': e['c']}
@@ -605,7 +707,8 @@ def status():
     print('đoạn', len(segs), 'ký tự', tot)
     for l in LANGS:
         d = load(l)
-        done = [v for v in segs.values() if v['s'] in d]
+        md = masked(d)
+        done = [v for v in segs.values() if known(d, md, v['s'])]
         print(l, 'đã dịch', len(done), '/', len(segs), '| ký tự còn', tot - sum(len(v['s']) for v in done))
 
 
@@ -662,11 +765,29 @@ def addtsv(path):
     os.remove(tmp)
 
 
+def addvi(path):
+    """Nạp bản dịch theo câu tiếng Việt: {câu: {en, ja, zh}}. Dùng cho chữ chỉ hiện khi bật một tính năng
+    (vd. "Tạm hết hàng" khi có dòng tạm hết hàng), chưa có trong segments.json."""
+    data = json.load(open(path, encoding='utf8'))
+    dicts = {l: load(l) for l in LANGS}
+    bad = 0
+    for src, v in data.items():
+        for l in LANGS:
+            e = check(src, v.get(l, ''))
+            if e or not v.get(l):
+                print(l, e or 'thiếu', '|', src[:70]); bad += 1; continue
+            dicts[l][src] = v[l]
+    for l in LANGS:
+        save(l, dicts[l])
+    print('đã nạp', len(data), 'câu, lỗi', bad)
+
+
 def nxt(limit=5000):
     segs = json.load(open(os.path.join(DD, 'segments.json'), encoding='utf8'))
     dicts = {l: load(l) for l in LANGS}
+    mds = {l: masked(dicts[l]) for l in LANGS}
     order = {f: i for i, f in enumerate(pages())}
-    todo = [(order.get(v['f'][0], 0), i, v) for i, v in segs.items() if any(v['s'] not in dicts[l] for l in LANGS)]
+    todo = [(order.get(v['f'][0], 0), i, v) for i, v in segs.items() if any(not known(dicts[l], mds[l], v['s']) for l in LANGS)]
     todo.sort(key=lambda x: (x[0], x[1]))
     n = 0
     for _, i, v in todo:
@@ -788,7 +909,7 @@ def localize(page, s, lang, tr):
 
 def build(mode='apply', langs=None):
     """Ráp trang dịch. Trả về {lang: {khóa thiếu: tệp}}."""
-    import cuahang
+    import cuahang, caidat
     langs = langs or LANGS
     report = {}
     for f in pages():
@@ -802,7 +923,7 @@ def build(mode='apply', langs=None):
         d = os.path.join(OUT, lang if mode == 'apply' else 'xx')
         os.makedirs(d, exist_ok=True)
         for f in pages():
-            s = open(os.path.join(OUT, f), encoding='utf8').read()
+            s = caidat.canon(open(os.path.join(OUT, f), encoding='utf8').read())
             open(os.path.join(d, f), 'w', encoding='utf8').write(localize(f, s, lang, tr))
         idx = json.loads(cuahang.search_index(d))
         if mode == 'apply':   # nhãn loại kết quả tìm kiếm theo ngôn ngữ; 'Sản phẩm' phải khớp chuỗi so sánh trong tim-kiem.html
@@ -829,8 +950,12 @@ if __name__ == '__main__':
         add(sys.argv[2])
     elif cmd == 'addtsv':
         addtsv(sys.argv[2])
+    elif cmd == 'addvi':
+        addvi(sys.argv[2])
     elif cmd == 'build':
+        import caidat
         r = build()
+        caidat.apply_out([OUT])
         for l, m in r.items():
             print(l, 'thiếu', len(m), 'đoạn')
     elif cmd == 'pseudo':

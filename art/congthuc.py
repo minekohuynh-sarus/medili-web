@@ -327,7 +327,7 @@ def page(catalog):
     for x in catalog:
         price = (f'{fm(x["p"][0] * 250)} đ/túi 250 g' if x['packs'] == [250] else f'{fm(x["p"][0] * 1000)} đ/kg') if x['p'] else 'Liên hệ'
         sp.append(dict(id=x['id'], n=x['n'], file=x['file'], col=x['col'], pk=x['pk'], rk=_rk(x['roast']), m=_method(x),
-                       st=x['st'], price=price + (' · sắp mở bán' if x['st'] == 'sap' else '')))
+                       st=x['st'], price=price + {'sap': ' · sắp mở bán', 'het': ' · tạm hết hàng'}.get(x['st'], '')))
     ids = {x['id'] for x in sp}
     assert all(i in ids for L in PICK.values() for i in L), 'mã dòng trong PICK không có trong Cửa hàng'
     js = (JS.replace('__PICK__', json.dumps(PICK, separators=(',', ':')))

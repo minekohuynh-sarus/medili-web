@@ -1,0 +1,49 @@
+{
+ "an": false,
+ "hd": "v-mua-vuon-720.mp4",
+ "sd": "v-mua-vuon-480.mp4",
+ "poster": "v-mua-vuon.jpg",
+ "w": 1280,
+ "h": 720,
+ "dai": 40.8,
+ "lead": "Hoa nở trắng cành, chùm trái chín không đều, người vườn nhặt cành lá trên bạt và đồi cà phê trong sương. Một clip 40 giây ghép từ sáu cảnh quay tại vườn, không có tiếng. Bấm vào một cảnh để xem lại cảnh đó.",
+ "label": "Clip ghép một mùa ở vườn MeDili: hoa cà phê nở, nắng qua tán, những chùm Robusta chín, người vườn nhặt cành lá trên bạt và đồi cà phê trong sương",
+ "canh": [
+  {
+   "t": 0.0,
+   "s": 0.0,
+   "cap": "Hoa cà phê nở trắng trên cành.",
+   "anh": "v-mua-vuon-c1.jpg"
+  },
+  {
+   "t": 7.3,
+   "s": 6.95,
+   "cap": "Nắng xuyên qua tán cà phê.",
+   "anh": "v-mua-vuon-c2.jpg"
+  },
+  {
+   "t": 11.1,
+   "s": 10.75,
+   "cap": "Những chùm Robusta chín đỏ.",
+   "anh": "v-mua-vuon-c3.jpg"
+  },
+  {
+   "t": 18.2,
+   "s": 17.85,
+   "cap": "Một chùm, nhiều độ chín.",
+   "anh": "v-mua-vuon-c4.jpg"
+  },
+  {
+   "t": 23.0,
+   "s": 22.65,
+   "cap": "Nhặt cành lá lẫn trong trái trên bạt.",
+   "anh": "v-mua-vuon-c5.jpg"
+  },
+  {
+   "t": 28.3,
+   "s": 27.95,
+   "cap": "Đồi cà phê, sương trên núi xa.",
+   "anh": "v-mua-vuon-c6.jpg"
+  }
+ ]
+}
