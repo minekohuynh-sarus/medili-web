@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-26T13:38:00+07:00",
+ "updated": "2026-11-27T13:38:00+07:00",
  "days": [
   {
    "date": "2026-10-31",
@@ -546,6 +546,32 @@
     {
      "name": "Báo Lâm Đồng",
      "url": "https://baolamdong.vn/gia-ca-phe/tinh-lam-dong"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-27",
+   "time": "13:38",
+   "vn": {
+    "lamdong": 69800,
+    "daklak": 70400,
+    "gialai": 70400,
+    "daknong": 70500
+   },
+   "world": {
+    "robusta": 2857,
+    "robustaChg": 59,
+    "robustaPct": 2.11,
+    "robustaTerm": "01/2027",
+    "arabica": 270.0,
+    "arabicaChg": 0.0,
+    "arabicaPct": 0.0,
+    "arabicaTerm": "03/2027"
+   },
+   "src": [
+    {
+     "name": "VietNamNet (Dân tộc & Phát triển)",
+     "url": "https://dantocphattrien.vietnamnet.vn/gia-ca-phe"
     }
    ]
   }
