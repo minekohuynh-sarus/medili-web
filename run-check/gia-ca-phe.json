@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-27T13:38:00+07:00",
+ "updated": "2026-11-28T13:45:00+07:00",
  "days": [
   {
    "date": "2026-10-31",
@@ -572,6 +572,36 @@
     {
      "name": "VietNamNet (Dân tộc & Phát triển)",
      "url": "https://dantocphattrien.vietnamnet.vn/gia-ca-phe"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "vn": {
+    "lamdong": 72000,
+    "daklak": 72700,
+    "gialai": 72700,
+    "daknong": 73000
+   },
+   "time": "13:45",
+   "world": {
+    "robusta": 2946,
+    "robustaChg": 89,
+    "robustaPct": 3.12,
+    "robustaTerm": "01/2027",
+    "arabica": 275.55,
+    "arabicaChg": 5.55,
+    "arabicaPct": 2.06,
+    "arabicaTerm": "03/2027"
+   },
+   "src": [
+    {
+     "name": "Báo Lâm Đồng",
+     "url": "https://baolamdong.vn/gia-ca-phe/tinh-lam-dong"
+    },
+    {
+     "name": "Báo Lào Cai",
+     "url": "https://baolaocai.vn/gia-ca-phe-hom-nay-28112026-trong-nuoc-bat-tang-robusta-tien-sat-moc-3000-usdtan-post915662.html"
     }
    ]
   }
